@@ -30,7 +30,7 @@
 // Private methods
 @interface FindViewController()
 
-- (void)populateDatabaseFromFile;
+- (void)loadGreenLeagueDataFromFile;
 
 @end
 
@@ -48,7 +48,7 @@
     [super viewDidLoad];
 	greenLeagueUniversityData = [[NSMutableArray alloc] initWithCapacity:0];
 	
-    [self populateDatabaseFromFile];
+    [self loadGreenLeagueDataFromFile];
 }
 
 
@@ -275,7 +275,7 @@
 }
 
 // Populate the database from kDataSourceFile csv file
-- (void)populateDatabaseFromFile {	
+- (void)loadGreenLeagueDataFromFile {	
 	NSString *filePath = [[NSBundle mainBundle] pathForResource:@kDataSourceFile ofType:@"csv"];
 	NSString *fileContents = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
 	

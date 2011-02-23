@@ -16,7 +16,7 @@
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 3DB0D92413151192006FC601 /* GreenLeague */;
-		activeSDKPreference = iphoneos4.2;
+		activeSDKPreference = iphonesimulator4.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* GreenLeague */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* GreenLeague */,
@@ -63,6 +63,12 @@
 			3DB0D95713152233006FC601 = 3DB0D95713152233006FC601 /* PlistBookmark */;
 			3DB0D97713152CD8006FC601 = 3DB0D97713152CD8006FC601 /* PBXTextBookmark */;
 			3DB0D97813152CD8006FC601 = 3DB0D97813152CD8006FC601 /* PBXTextBookmark */;
+			3DBF93631315874800255C35 /* PlistBookmark */ = 3DBF93631315874800255C35 /* PlistBookmark */;
+			3DBF93641315874800255C35 /* PBXTextBookmark */ = 3DBF93641315874800255C35 /* PBXTextBookmark */;
+			3DBF93651315874800255C35 /* PBXTextBookmark */ = 3DBF93651315874800255C35 /* PBXTextBookmark */;
+			3DBF93661315874800255C35 /* PBXTextBookmark */ = 3DBF93661315874800255C35 /* PBXTextBookmark */;
+			3DBF9375131587A500255C35 /* PBXTextBookmark */ = 3DBF9375131587A500255C35 /* PBXTextBookmark */;
+			3DBF9376131587A500255C35 /* PBXTextBookmark */ = 3DBF9376131587A500255C35 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 3DB0D93313151196006FC601 /* Source Control */;
 		userBuildSettings = {
@@ -107,7 +113,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 281";
 		rLen = 0;
-		rLoc = 9128;
+		rLoc = 9137;
 		rType = 0;
 		vrLen = 1361;
 		vrLoc = 8829;
@@ -199,10 +205,10 @@
 	};
 	3DB0D9471315206D006FC601 /* FindViewController.m */ = {
 		uiCtxt = {
-			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{4293, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{4344, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{4394, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 10877}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {1033, 4069}}";
-			sepNavSelRange = "{315, 0}";
-			sepNavVisRange = "{86, 458}";
+			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{4299, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{4350, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{4400, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 10886}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {1033, 4485}}";
+			sepNavSelRange = "{480, 0}";
+			sepNavVisRange = "{47, 368}";
 			sepNavWindowFrame = "{{38, 50}, {1228, 982}}";
 		};
 	};
@@ -244,5 +250,67 @@
 		rType = 0;
 		vrLen = 710;
 		vrLoc = 0;
+	};
+	3DBF93631315874800255C35 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* GreenLeague-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundleIdentifier,
+		);
+		name = "/Users/ttt/Work/Dev/GreenLeague/GreenLeague-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	3DBF93641315874800255C35 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 33";
+		rLen = 0;
+		rLoc = 818;
+		rType = 0;
+		vrLen = 698;
+		vrLoc = 445;
+	};
+	3DBF93651315874800255C35 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 19";
+		rLen = 0;
+		rLoc = 480;
+		rType = 0;
+		vrLen = 496;
+		vrLoc = 47;
+	};
+	3DBF93661315874800255C35 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 19";
+		rLen = 0;
+		rLoc = 480;
+		rType = 0;
+		vrLen = 368;
+		vrLoc = 47;
+	};
+	3DBF9375131587A500255C35 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 51";
+		rLen = 0;
+		rLoc = 1180;
+		rType = 0;
+		vrLen = 574;
+		vrLoc = 695;
+	};
+	3DBF9376131587A500255C35 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 19";
+		rLen = 0;
+		rLoc = 480;
+		rType = 0;
+		vrLen = 368;
+		vrLoc = 47;
 	};
 }
