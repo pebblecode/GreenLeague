@@ -313,7 +313,7 @@
 			[glDataItem release];
 		}
 	}
-	NSLog(@"%@", greenLeagueUniversityData);
+	//NSLog(@"%@", greenLeagueUniversityData);
 }
 
 
