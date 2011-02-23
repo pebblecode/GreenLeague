@@ -1,16 +1,33 @@
 // !$*UTF8*$!
 {
+	1D3623250D0F684500981E51 /* GreenLeagueAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1030, 1443}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{282, 1589}";
+		};
+	};
 	1D6058900D05DD3D006BFB54 /* GreenLeague */ = {
 		activeExec = 0;
 		executables = (
 			3DB0D92413151192006FC601 /* GreenLeague */,
 		);
 	};
+	28216C960DB411BC00E5133A /* FirstViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1169, 846}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1462}";
+		};
+	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 3DB0D92413151192006FC601 /* GreenLeague */;
 		activeSDKPreference = iphonesimulator4.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* GreenLeague */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* GreenLeague */,
+		);
 		codeSenseManager = 3DB0D93413151196006FC601 /* Code sense */;
 		executables = (
 			3DB0D92413151192006FC601 /* GreenLeague */,
@@ -21,7 +38,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					341,
+					852,
 					20,
 					48.16259765625,
 					43,
@@ -40,6 +57,20 @@
 			};
 			PBXPerProjectTemplateStateSaveDate = 320147858;
 			PBXWorkspaceStateSaveDate = 320147858;
+		};
+		perUserProjectItems = {
+			3DB0D94B13152073006FC601 /* PBXBookmark */ = 3DB0D94B13152073006FC601 /* PBXBookmark */;
+			3DB0D95713152233006FC601 /* PlistBookmark */ = 3DB0D95713152233006FC601 /* PlistBookmark */;
+			3DB0D95813152233006FC601 /* PBXTextBookmark */ = 3DB0D95813152233006FC601 /* PBXTextBookmark */;
+			3DB0D95913152233006FC601 /* PBXTextBookmark */ = 3DB0D95913152233006FC601 /* PBXTextBookmark */;
+			3DB0D95A13152233006FC601 /* PBXTextBookmark */ = 3DB0D95A13152233006FC601 /* PBXTextBookmark */;
+			3DB0D95B13152233006FC601 /* PBXTextBookmark */ = 3DB0D95B13152233006FC601 /* PBXTextBookmark */;
+			3DB0D95C13152233006FC601 /* PBXTextBookmark */ = 3DB0D95C13152233006FC601 /* PBXTextBookmark */;
+			3DB0D95F13152233006FC601 /* PBXTextBookmark */ = 3DB0D95F13152233006FC601 /* PBXTextBookmark */;
+			3DB0D96B1315225B006FC601 /* XCBuildMessageTextBookmark */ = 3DB0D96B1315225B006FC601 /* XCBuildMessageTextBookmark */;
+			3DB0D96C1315225B006FC601 /* PBXTextBookmark */ = 3DB0D96C1315225B006FC601 /* PBXTextBookmark */;
+			3DB0D96D13152264006FC601 /* PBXTextBookmark */ = 3DB0D96D13152264006FC601 /* PBXTextBookmark */;
+			3DB0D96E13152264006FC601 /* PBXTextBookmark */ = 3DB0D96E13152264006FC601 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 3DB0D93313151196006FC601 /* Source Control */;
 		userBuildSettings = {
@@ -61,6 +92,7 @@
 		dataTipSortType = 0;
 		debuggerPlugin = GDBDebugging;
 		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
 		enableDebugStr = 1;
 		environmentEntries = (
 		);
@@ -85,5 +117,136 @@
 	3DB0D93413151196006FC601 /* Code sense */ = {
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
+	};
+	3DB0D9461315206D006FC601 /* FindViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1030, 495}}";
+			sepNavSelRange = "{174, 0}";
+			sepNavVisRange = "{0, 240}";
+		};
+	};
+	3DB0D9471315206D006FC601 /* FindViewController.m */ = {
+		uiCtxt = {
+			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{3640, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{3691, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{3741, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 4442}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {1030, 2288}}";
+			sepNavSelRange = "{1539, 0}";
+			sepNavVisRange = "{571, 1427}";
+			sepNavWindowFrame = "{{38, 50}, {1228, 982}}";
+		};
+	};
+	3DB0D94B13152073006FC601 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 28216C960DB411BC00E5133A /* FirstViewController.m */;
+	};
+	3DB0D95713152233006FC601 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* GreenLeague-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			LSRequiresIPhoneOS,
+		);
+		name = "/Users/ttt/Work/Dev/GreenLeague/GreenLeague-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	3DB0D95813152233006FC601 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28216C960DB411BC00E5133A /* FirstViewController.m */;
+		name = "FirstViewController.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 821;
+		vrLoc = 0;
+	};
+	3DB0D95913152233006FC601 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9461315206D006FC601 /* FindViewController.h */;
+		name = "FindViewController.h: 11";
+		rLen = 0;
+		rLoc = 174;
+		rType = 0;
+		vrLen = 240;
+		vrLoc = 0;
+	};
+	3DB0D95A13152233006FC601 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* GreenLeagueAppDelegate.m */;
+		name = "GreenLeagueAppDelegate.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1589;
+		vrLoc = 282;
+	};
+	3DB0D95B13152233006FC601 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 70";
+		rLen = 0;
+		rLoc = 1539;
+		rType = 0;
+		vrLen = 1427;
+		vrLoc = 571;
+	};
+	3DB0D95C13152233006FC601 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 70";
+		rLen = 0;
+		rLoc = 1539;
+		rType = 0;
+		vrLen = 1427;
+		vrLoc = 571;
+	};
+	3DB0D95F13152233006FC601 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28216C960DB411BC00E5133A /* FirstViewController.m */;
+		name = "FirstViewController.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1462;
+		vrLoc = 0;
+	};
+	3DB0D96B1315225B006FC601 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Expected expression before '<' token";
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 63;
+		rType = 1;
+	};
+	3DB0D96C1315225B006FC601 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 64";
+		rLen = 0;
+		rLoc = 1353;
+		rType = 0;
+		vrLen = 331;
+		vrLoc = 1052;
+	};
+	3DB0D96D13152264006FC601 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 70";
+		rLen = 0;
+		rLoc = 1539;
+		rType = 0;
+		vrLen = 1427;
+		vrLoc = 571;
+	};
+	3DB0D96E13152264006FC601 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28216C960DB411BC00E5133A /* FirstViewController.m */;
+		name = "FirstViewController.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1462;
+		vrLoc = 0;
 	};
 }
