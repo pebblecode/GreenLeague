@@ -18,6 +18,8 @@
 		3DB0D94A1315206D006FC601 /* FindViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DB0D9481315206D006FC601 /* FindViewController.xib */; };
 		3DB0D9551315222C006FC601 /* 06-magnify.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB0D9531315222C006FC601 /* 06-magnify.png */; };
 		3DB0D9561315222C006FC601 /* 06-magnify@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB0D9541315222C006FC601 /* 06-magnify@2x.png */; };
+		3DB0D97213152B60006FC601 /* gl2010.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3DB0D97113152B60006FC601 /* gl2010.csv */; };
+		3DB0D9941315422C006FC601 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB0D9931315422C006FC601 /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		3DB0D9481315206D006FC601 /* FindViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FindViewController.xib; sourceTree = "<group>"; };
 		3DB0D9531315222C006FC601 /* 06-magnify.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "06-magnify.png"; sourceTree = "<group>"; };
 		3DB0D9541315222C006FC601 /* 06-magnify@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "06-magnify@2x.png"; sourceTree = "<group>"; };
+		3DB0D97113152B60006FC601 /* gl2010.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gl2010.csv; sourceTree = "<group>"; };
+		3DB0D9931315422C006FC601 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		8D1107310486CEB800E47090 /* GreenLeague-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GreenLeague-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -47,6 +51,7 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */,
+				3DB0D9941315422C006FC601 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +102,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3DB0D97313152B63006FC601 /* Data */,
 				3DB0D95213152221006FC601 /* Images */,
 				282CCBFD0DB6C98000C4EA27 /* SecondView.xib */,
 				28AD73870D9D96C1002E5188 /* MainWindow.xib */,
@@ -111,6 +117,7 @@
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765070DF74369002DB57D /* CoreGraphics.framework */,
+				3DB0D9931315422C006FC601 /* CoreData.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -122,6 +129,14 @@
 				3DB0D9541315222C006FC601 /* 06-magnify@2x.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		3DB0D97313152B63006FC601 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3DB0D97113152B60006FC601 /* gl2010.csv */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +193,7 @@
 				3DB0D94A1315206D006FC601 /* FindViewController.xib in Resources */,
 				3DB0D9551315222C006FC601 /* 06-magnify.png in Resources */,
 				3DB0D9561315222C006FC601 /* 06-magnify@2x.png in Resources */,
+				3DB0D97213152B60006FC601 /* gl2010.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
