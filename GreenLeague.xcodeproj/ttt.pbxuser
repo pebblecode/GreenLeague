@@ -14,10 +14,17 @@
 		);
 	};
 	28216C960DB411BC00E5133A /* FirstViewController.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = FirstViewController.m;
+		path = /Users/ttt/Work/Dev/GreenLeague/Classes/FirstViewController.m;
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1169, 846}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 1462}";
+			sepNavWindowFrame = "{{15, 71}, {1228, 982}}";
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
@@ -128,9 +135,9 @@
 	3DB0D9471315206D006FC601 /* FindViewController.m */ = {
 		uiCtxt = {
 			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{3640, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{3691, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{3741, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 4442}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {1030, 2288}}";
-			sepNavSelRange = "{1539, 0}";
-			sepNavVisRange = "{571, 1427}";
+			sepNavIntBoundsRect = "{{0, 0}, {439, 2392}}";
+			sepNavSelRange = "{1353, 0}";
+			sepNavVisRange = "{1052, 331}";
 			sepNavWindowFrame = "{{38, 50}, {1228, 982}}";
 		};
 	};
