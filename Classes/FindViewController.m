@@ -11,7 +11,7 @@
 #define kNumberOfSections 6
 // Data source file minus the file extension
 #define kDataSourceFile "gl2010"
-#define kStartIndexForData 3
+#define kStartIndexForData 4
 #define kDatabaseSqliteFile "green_league.sqlite"
 
 // Index for the fields in the data source file
@@ -46,7 +46,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+	greenLeagueUniversityData = [[NSMutableArray alloc] initWithCapacity:0];
+	
     [self populateDatabaseFromFile];
 }
 
@@ -278,15 +279,16 @@
 	NSString *filePath = [[NSBundle mainBundle] pathForResource:@kDataSourceFile ofType:@"csv"];
 	NSString *fileContents = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
 	
-	NSLog(@"kDataSourceFile: %@", @kDataSourceFile);
-	NSLog(@"fileContents: %@", fileContents);
 	// Parse CSV file
 	if (fileContents) {
 		NSArray *lines = [fileContents componentsSeparatedByString:@"\n"];
-		NSLog(@"lines: %@", lines);		
-		NSMutableDictionary *glDataItem = [[NSMutableDictionary alloc] initWithCapacity:0];		
+		//NSLog(@"lines: %@", lines);		
+		
 		for (int i = kStartIndexForData; i < lines.count; i++) {
+			NSMutableDictionary *glDataItem = [[NSMutableDictionary alloc] initWithCapacity:0];		
 			NSArray *dataItem = [[lines objectAtIndex:i] componentsSeparatedByString:@","];
+			
+			//NSLog(@"dataItem: %@", dataItem);
 			
 			if ([dataItem count] > kDataFieldIndexRank) {
 				[glDataItem setObject:[dataItem objectAtIndex:kDataFieldIndexRank] forKey:@kDataFieldKeyRank];
@@ -300,9 +302,16 @@
 			if ([dataItem count] > kDataFieldIndexAward) {
 				[glDataItem setObject:[dataItem objectAtIndex:kDataFieldIndexAward] forKey:@kDataFieldKeyAward];
 			}
+			
+			// Only add the data item if it has a university
+			if ([glDataItem objectForKey:@kDataFieldKeyUniversity]) {
+				[greenLeagueUniversityData addObject:glDataItem];
+			} else {
+				NSLog(@"Did not add line, because there was no university name: '%@'", [lines objectAtIndex:i]);
+			}
+			
+			[glDataItem release];
 		}
-		[greenLeagueUniversityData addObject:glDataItem];
-		[glDataItem release];
 	}
 	NSLog(@"%@", greenLeagueUniversityData);
 }
