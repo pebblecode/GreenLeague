@@ -111,7 +111,6 @@
 				3D308E16131658B800D37010 /* Rakefile */,
 				3D308E091316552A00D37010 /* NSString+Helper.h */,
 				3D308E0A1316552A00D37010 /* NSString+Helper.m */,
-				3DB0D97113152B60006FC601 /* gl2010.csv */,
 				3DB0D97313152B63006FC601 /* Data */,
 				3DB0D95213152221006FC601 /* Images */,
 				282CCBFD0DB6C98000C4EA27 /* SecondView.xib */,
@@ -145,6 +144,7 @@
 		3DB0D97313152B63006FC601 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				3DB0D97113152B60006FC601 /* gl2010.csv */,
 			);
 			name = Data;
 			sourceTree = "<group>";

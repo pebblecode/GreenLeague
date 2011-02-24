@@ -16,7 +16,7 @@
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 3DB0D92413151192006FC601 /* GreenLeague */;
-		activeSDKPreference = iphoneos4.2;
+		activeSDKPreference = iphonesimulator4.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* GreenLeague */;
 		addToTargets = (
 		);
@@ -124,6 +124,12 @@
 			3D308E3D13165BE800D37010 /* PBXTextBookmark */ = 3D308E3D13165BE800D37010 /* PBXTextBookmark */;
 			3D308E3E13165CEB00D37010 /* PBXTextBookmark */ = 3D308E3E13165CEB00D37010 /* PBXTextBookmark */;
 			3D308E3F13165CEB00D37010 /* PBXTextBookmark */ = 3D308E3F13165CEB00D37010 /* PBXTextBookmark */;
+			3D308E4E1316B99800D37010 /* PBXTextBookmark */ = 3D308E4E1316B99800D37010 /* PBXTextBookmark */;
+			3D308E4F1316B99800D37010 /* PBXTextBookmark */ = 3D308E4F1316B99800D37010 /* PBXTextBookmark */;
+			3D308E501316B99800D37010 /* PBXTextBookmark */ = 3D308E501316B99800D37010 /* PBXTextBookmark */;
+			3D308E511316B99800D37010 /* PBXTextBookmark */ = 3D308E511316B99800D37010 /* PBXTextBookmark */;
+			3D308E521316B99800D37010 /* PBXTextBookmark */ = 3D308E521316B99800D37010 /* PBXTextBookmark */;
+			3D308E531316B99800D37010 /* PBXTextBookmark */ = 3D308E531316B99800D37010 /* PBXTextBookmark */;
 			3DB0D95713152233006FC601 = 3DB0D95713152233006FC601 /* PlistBookmark */;
 			3DB0D97713152CD8006FC601 = 3DB0D97713152CD8006FC601 /* PBXTextBookmark */;
 			3DB0D97813152CD8006FC601 = 3DB0D97813152CD8006FC601 /* PBXTextBookmark */;
@@ -584,7 +590,7 @@
 	};
 	3D308E0A1316552A00D37010 /* NSString+Helper.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1033, 546}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1033, 559}}";
 			sepNavSelRange = "{313, 0}";
 			sepNavVisRange = "{193, 418}";
 		};
@@ -658,9 +664,9 @@
 	};
 	3D308E191316590100D37010 /* README.markdown */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1033, 354}}";
-			sepNavSelRange = "{317, 0}";
-			sepNavVisRange = "{0, 317}";
+			sepNavIntBoundsRect = "{{0, 0}, {1033, 377}}";
+			sepNavSelRange = "{308, 0}";
+			sepNavVisRange = "{0, 326}";
 		};
 	};
 	3D308E1E1316599C00D37010 /* PBXTextBookmark */ = {
@@ -883,6 +889,66 @@
 		vrLen = 418;
 		vrLoc = 193;
 	};
+	3D308E4E1316B99800D37010 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D308E16131658B800D37010 /* Rakefile */;
+		name = "Rakefile: 4";
+		rLen = 0;
+		rLoc = 76;
+		rType = 0;
+		vrLen = 376;
+		vrLoc = 0;
+	};
+	3D308E4F1316B99800D37010 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D97113152B60006FC601 /* gl2010.csv */;
+		name = "gl2010.csv: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 3643;
+		vrLoc = 0;
+	};
+	3D308E501316B99800D37010 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D308E191316590100D37010 /* README.markdown */;
+		name = "README.markdown: 14";
+		rLen = 0;
+		rLoc = 308;
+		rType = 0;
+		vrLen = 326;
+		vrLoc = 0;
+	};
+	3D308E511316B99800D37010 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 305";
+		rLen = 0;
+		rLoc = 10567;
+		rType = 0;
+		vrLen = 1169;
+		vrLoc = 10121;
+	};
+	3D308E521316B99800D37010 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 314";
+		rLen = 0;
+		rLoc = 10946;
+		rType = 0;
+		vrLen = 1086;
+		vrLoc = 10204;
+	};
+	3D308E531316B99800D37010 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D308E0A1316552A00D37010 /* NSString+Helper.m */;
+		name = "NSString+Helper.m: 15";
+		rLen = 0;
+		rLoc = 313;
+		rType = 0;
+		vrLen = 418;
+		vrLoc = 193;
+	};
 	3DB0D92413151192006FC601 /* GreenLeague */ = {
 		isa = PBXExecutable;
 		activeArgIndices = (
@@ -937,9 +1003,9 @@
 	3DB0D9471315206D006FC601 /* FindViewController.m */ = {
 		uiCtxt = {
 			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{4988, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{5039, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{5089, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 11608}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {1033, 4108}}";
-			sepNavSelRange = "{10510, 0}";
-			sepNavVisRange = "{10064, 1169}";
+			sepNavIntBoundsRect = "{{0, 0}, {1033, 4069}}";
+			sepNavSelRange = "{10889, 0}";
+			sepNavVisRange = "{10147, 1086}";
 			sepNavWindowFrame = "{{38, 46}, {1228, 832}}";
 		};
 	};
@@ -957,9 +1023,9 @@
 	};
 	3DB0D97113152B60006FC601 /* gl2010.csv */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1033, 1937}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1033, 1924}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 3528}";
+			sepNavVisRange = "{0, 3643}";
 		};
 	};
 	3DB0D97713152CD8006FC601 /* PBXTextBookmark */ = {
