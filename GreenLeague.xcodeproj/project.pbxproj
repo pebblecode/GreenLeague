@@ -16,6 +16,14 @@
 		28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD73870D9D96C1002E5188 /* MainWindow.xib */; };
 		3D308E0B1316552A00D37010 /* NSString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D308E0A1316552A00D37010 /* NSString+Helper.m */; };
 		3D308E17131658B800D37010 /* Rakefile in Resources */ = {isa = PBXBuildFile; fileRef = 3D308E16131658B800D37010 /* Rakefile */; };
+		3D308E5B1316BB8C00D37010 /* CompareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D308E591316BB8C00D37010 /* CompareViewController.m */; };
+		3D308E5C1316BB8C00D37010 /* CompareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D308E5A1316BB8C00D37010 /* CompareViewController.xib */; };
+		3D308E631316BBC600D37010 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D308E611316BBC600D37010 /* AboutViewController.m */; };
+		3D308E641316BBC600D37010 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D308E621316BBC600D37010 /* AboutViewController.xib */; };
+		3D308E6E1316BC9F00D37010 /* 189-plant.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D308E6C1316BC9F00D37010 /* 189-plant.png */; };
+		3D308E6F1316BC9F00D37010 /* 189-plant@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D308E6D1316BC9F00D37010 /* 189-plant@2x.png */; };
+		3D308E721316BCAA00D37010 /* 12-eye.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D308E701316BCAA00D37010 /* 12-eye.png */; };
+		3D308E731316BCAA00D37010 /* 12-eye@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D308E711316BCAA00D37010 /* 12-eye@2x.png */; };
 		3DB0D9491315206D006FC601 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB0D9471315206D006FC601 /* FindViewController.m */; };
 		3DB0D94A1315206D006FC601 /* FindViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DB0D9481315206D006FC601 /* FindViewController.xib */; };
 		3DB0D9551315222C006FC601 /* 06-magnify.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB0D9531315222C006FC601 /* 06-magnify.png */; };
@@ -39,6 +47,16 @@
 		3D308E0A1316552A00D37010 /* NSString+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Helper.m"; sourceTree = "<group>"; };
 		3D308E16131658B800D37010 /* Rakefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
 		3D308E191316590100D37010 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
+		3D308E581316BB8C00D37010 /* CompareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompareViewController.h; sourceTree = "<group>"; };
+		3D308E591316BB8C00D37010 /* CompareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompareViewController.m; sourceTree = "<group>"; };
+		3D308E5A1316BB8C00D37010 /* CompareViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompareViewController.xib; sourceTree = "<group>"; };
+		3D308E601316BBC600D37010 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		3D308E611316BBC600D37010 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		3D308E621316BBC600D37010 /* AboutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
+		3D308E6C1316BC9F00D37010 /* 189-plant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "189-plant.png"; sourceTree = "<group>"; };
+		3D308E6D1316BC9F00D37010 /* 189-plant@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "189-plant@2x.png"; sourceTree = "<group>"; };
+		3D308E701316BCAA00D37010 /* 12-eye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "12-eye.png"; sourceTree = "<group>"; };
+		3D308E711316BCAA00D37010 /* 12-eye@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "12-eye@2x.png"; sourceTree = "<group>"; };
 		3DB0D9461315206D006FC601 /* FindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindViewController.h; sourceTree = "<group>"; };
 		3DB0D9471315206D006FC601 /* FindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindViewController.m; sourceTree = "<group>"; };
 		3DB0D9481315206D006FC601 /* FindViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FindViewController.xib; sourceTree = "<group>"; };
@@ -72,6 +90,12 @@
 				3DB0D9461315206D006FC601 /* FindViewController.h */,
 				3DB0D9471315206D006FC601 /* FindViewController.m */,
 				3DB0D9481315206D006FC601 /* FindViewController.xib */,
+				3D308E581316BB8C00D37010 /* CompareViewController.h */,
+				3D308E591316BB8C00D37010 /* CompareViewController.m */,
+				3D308E5A1316BB8C00D37010 /* CompareViewController.xib */,
+				3D308E601316BBC600D37010 /* AboutViewController.h */,
+				3D308E611316BBC600D37010 /* AboutViewController.m */,
+				3D308E621316BBC600D37010 /* AboutViewController.xib */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -135,6 +159,10 @@
 		3DB0D95213152221006FC601 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3D308E701316BCAA00D37010 /* 12-eye.png */,
+				3D308E711316BCAA00D37010 /* 12-eye@2x.png */,
+				3D308E6C1316BC9F00D37010 /* 189-plant.png */,
+				3D308E6D1316BC9F00D37010 /* 189-plant@2x.png */,
 				3DB0D9531315222C006FC601 /* 06-magnify.png */,
 				3DB0D9541315222C006FC601 /* 06-magnify@2x.png */,
 			);
@@ -205,6 +233,12 @@
 				3DB0D9561315222C006FC601 /* 06-magnify@2x.png in Resources */,
 				3DB0D97213152B60006FC601 /* gl2010.csv in Resources */,
 				3D308E17131658B800D37010 /* Rakefile in Resources */,
+				3D308E5C1316BB8C00D37010 /* CompareViewController.xib in Resources */,
+				3D308E641316BBC600D37010 /* AboutViewController.xib in Resources */,
+				3D308E6E1316BC9F00D37010 /* 189-plant.png in Resources */,
+				3D308E6F1316BC9F00D37010 /* 189-plant@2x.png in Resources */,
+				3D308E721316BCAA00D37010 /* 12-eye.png in Resources */,
+				3D308E731316BCAA00D37010 /* 12-eye@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +253,8 @@
 				1D3623260D0F684500981E51 /* GreenLeagueAppDelegate.m in Sources */,
 				3DB0D9491315206D006FC601 /* FindViewController.m in Sources */,
 				3D308E0B1316552A00D37010 /* NSString+Helper.m in Sources */,
+				3D308E5B1316BB8C00D37010 /* CompareViewController.m in Sources */,
+				3D308E631316BBC600D37010 /* AboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -229,6 +229,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -275,13 +277,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>5</integer>
-									<integer>1</integer>
+									<integer>26</integer>
+									<integer>16</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 5}, {186, 622}}</string>
+							<string>{{0, 0}, {186, 622}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -311,14 +313,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>FindViewController.m</string>
+								<string>AboutViewController.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -326,11 +326,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>FindViewController.m</string>
+										<string>AboutViewController.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3D308E521316B99800D37010</string>
+										<string>3D308E6A1316BBCE00D37010</string>
 										<key>history</key>
 										<array>
 											<string>3D272A31131570C700D689AA</string>
@@ -339,7 +339,10 @@
 											<string>3D308E4E1316B99800D37010</string>
 											<string>3D308E4F1316B99800D37010</string>
 											<string>3D308E501316B99800D37010</string>
-											<string>3D308E511316B99800D37010</string>
+											<string>3D308E661316BBCE00D37010</string>
+											<string>3D308E671316BBCE00D37010</string>
+											<string>3D308E681316BBCE00D37010</string>
+											<string>3D308E691316BBCE00D37010</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -378,7 +381,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3D308E531316B99800D37010</string>
+										<string>3D308E6B1316BBCE00D37010</string>
 										<key>history</key>
 										<array>
 											<string>3DB0D95713152233006FC601</string>

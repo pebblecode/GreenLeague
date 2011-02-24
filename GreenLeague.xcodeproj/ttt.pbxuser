@@ -19,6 +19,7 @@
 		activeSDKPreference = iphonesimulator4.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* GreenLeague */;
 		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* GreenLeague */,
 		);
 		codeSenseManager = 3DB0D93413151196006FC601 /* Code sense */;
 		executables = (
@@ -130,6 +131,12 @@
 			3D308E511316B99800D37010 /* PBXTextBookmark */ = 3D308E511316B99800D37010 /* PBXTextBookmark */;
 			3D308E521316B99800D37010 /* PBXTextBookmark */ = 3D308E521316B99800D37010 /* PBXTextBookmark */;
 			3D308E531316B99800D37010 /* PBXTextBookmark */ = 3D308E531316B99800D37010 /* PBXTextBookmark */;
+			3D308E661316BBCE00D37010 /* PBXTextBookmark */ = 3D308E661316BBCE00D37010 /* PBXTextBookmark */;
+			3D308E671316BBCE00D37010 /* PBXTextBookmark */ = 3D308E671316BBCE00D37010 /* PBXTextBookmark */;
+			3D308E681316BBCE00D37010 /* PBXTextBookmark */ = 3D308E681316BBCE00D37010 /* PBXTextBookmark */;
+			3D308E691316BBCE00D37010 /* PBXTextBookmark */ = 3D308E691316BBCE00D37010 /* PBXTextBookmark */;
+			3D308E6A1316BBCE00D37010 /* PBXTextBookmark */ = 3D308E6A1316BBCE00D37010 /* PBXTextBookmark */;
+			3D308E6B1316BBCE00D37010 /* PBXTextBookmark */ = 3D308E6B1316BBCE00D37010 /* PBXTextBookmark */;
 			3DB0D95713152233006FC601 = 3DB0D95713152233006FC601 /* PlistBookmark */;
 			3DB0D97713152CD8006FC601 = 3DB0D97713152CD8006FC601 /* PBXTextBookmark */;
 			3DB0D97813152CD8006FC601 = 3DB0D97813152CD8006FC601 /* PBXTextBookmark */;
@@ -949,6 +956,84 @@
 		vrLen = 418;
 		vrLoc = 193;
 	};
+	3D308E581316BB8C00D37010 /* CompareViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1033, 354}}";
+			sepNavSelRange = "{234, 0}";
+			sepNavVisRange = "{0, 234}";
+		};
+	};
+	3D308E591316BB8C00D37010 /* CompareViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1033, 793}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{595, 722}";
+		};
+	};
+	3D308E601316BBC600D37010 /* AboutViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1033, 354}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 230}";
+		};
+	};
+	3D308E661316BBCE00D37010 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 314";
+		rLen = 0;
+		rLoc = 10946;
+		rType = 0;
+		vrLen = 1211;
+		vrLoc = 10032;
+	};
+	3D308E671316BBCE00D37010 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D308E591316BB8C00D37010 /* CompareViewController.m */;
+		name = "CompareViewController.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 722;
+		vrLoc = 595;
+	};
+	3D308E681316BBCE00D37010 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D308E581316BB8C00D37010 /* CompareViewController.h */;
+		name = "CompareViewController.h: 17";
+		rLen = 0;
+		rLoc = 234;
+		rType = 0;
+		vrLen = 234;
+		vrLoc = 0;
+	};
+	3D308E691316BBCE00D37010 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D308E601316BBC600D37010 /* AboutViewController.h */;
+		rLen = 0;
+		rLoc = 9223372036854775807;
+		rType = 0;
+	};
+	3D308E6A1316BBCE00D37010 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D308E601316BBC600D37010 /* AboutViewController.h */;
+		name = "AboutViewController.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 230;
+		vrLoc = 0;
+	};
+	3D308E6B1316BBCE00D37010 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D308E0A1316552A00D37010 /* NSString+Helper.m */;
+		name = "NSString+Helper.m: 15";
+		rLen = 0;
+		rLoc = 313;
+		rType = 0;
+		vrLen = 418;
+		vrLoc = 193;
+	};
 	3DB0D92413151192006FC601 /* GreenLeague */ = {
 		isa = PBXExecutable;
 		activeArgIndices = (
@@ -1003,9 +1088,9 @@
 	3DB0D9471315206D006FC601 /* FindViewController.m */ = {
 		uiCtxt = {
 			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{4988, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{5039, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{5089, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 11608}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {1033, 4069}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1033, 4082}}";
 			sepNavSelRange = "{10889, 0}";
-			sepNavVisRange = "{10147, 1086}";
+			sepNavVisRange = "{9975, 1211}";
 			sepNavWindowFrame = "{{38, 46}, {1228, 832}}";
 		};
 	};
