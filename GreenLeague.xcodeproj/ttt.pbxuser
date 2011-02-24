@@ -973,7 +973,7 @@
 	3D308E601316BBC600D37010 /* AboutViewController.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1033, 354}}";
-			sepNavSelRange = "{0, 0}";
+			sepNavSelRange = "{168, 0}";
 			sepNavVisRange = "{0, 230}";
 		};
 	};
