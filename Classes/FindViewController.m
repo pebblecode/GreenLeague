@@ -111,7 +111,8 @@
 	NSMutableDictionary *glDataItem = [greenLeagueUniversityData objectAtIndex:glDataIndex];
 	
 	// Text: Rank. University
-	cell.textLabel.text = [NSString stringWithFormat:@"%@. %@", [glDataItem objectForKey:@kDataFieldKeyRank], [glDataItem objectForKey:@kDataFieldKeyUniversity]];	
+	NSString *rankString = [[glDataItem objectForKey:@kDataFieldKeyRank] isEqualToString:@"0"] ? @"(No rank) " : [NSString stringWithFormat:@"%@. ", [glDataItem objectForKey:@kDataFieldKeyRank]];
+	cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, [glDataItem objectForKey:@kDataFieldKeyUniversity]];	
 	// Detailed text: Scored: Score
 	cell.detailTextLabel.text = [NSString stringWithFormat:@"Scored: %@", [glDataItem objectForKey:@kDataFieldKeyScore]];
 	
