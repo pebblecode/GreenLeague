@@ -46,7 +46,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	NSLog(@"view did load");
 	greenLeagueUniversityData = [[NSMutableArray alloc] initWithCapacity:0];
 	
     [self loadGreenLeagueDataFromFile];
@@ -88,14 +87,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-	NSLog(@"Number of sections: %d", kNumberOfSections);
     return kNumberOfSections;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-	NSLog(@"Number of rows in section: %d", [greenLeagueUniversityData count]);
     return [greenLeagueUniversityData count];
 }
 
@@ -114,11 +111,9 @@
 	NSMutableDictionary *glDataItem = [greenLeagueUniversityData objectAtIndex:glDataIndex];
 	
 	// Text: Rank. University
-	cell.textLabel.text = [NSString stringWithFormat:@"%@. %@", [glDataItem objectForKey:@kDataFieldKeyRank], [glDataItem objectForKey:@kDataFieldKeyUniversity]];
-	NSLog(@"Cell: %@", cell.textLabel.text);
+	cell.textLabel.text = [NSString stringWithFormat:@"%@. %@", [glDataItem objectForKey:@kDataFieldKeyRank], [glDataItem objectForKey:@kDataFieldKeyUniversity]];	
 	// Detailed text: Scored: Score
 	cell.detailTextLabel.text = [NSString stringWithFormat:@"Scored: %@", [glDataItem objectForKey:@kDataFieldKeyScore]];
-    NSLog(@"Detail: %@ (%@)", cell.detailTextLabel.text, [NSString stringWithFormat:@"Scored: %@", [glDataItem objectForKey:@kDataFieldKeyScore]]);
 	
     return cell;
 }
