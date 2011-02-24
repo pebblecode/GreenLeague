@@ -7,6 +7,7 @@
 //
 
 #import "FindViewController.h"
+#import "NSString+Helper.h"
 
 #define kNumberOfSections 1
 // Data source file minus the file extension
@@ -301,7 +302,7 @@
 				[glDataItem setObject:[dataItem objectAtIndex:kDataFieldIndexRank] forKey:@kDataFieldKeyRank];
 			}
 			if ([dataItem count] > kDataFieldIndexUniversity) {
-				[glDataItem setObject:[dataItem objectAtIndex:kDataFieldIndexUniversity] forKey:@kDataFieldKeyUniversity];
+				[glDataItem setObject:[[dataItem objectAtIndex:kDataFieldIndexUniversity] stringByRemovingQuotationMarks] forKey:@kDataFieldKeyUniversity];
 			}	
 			if ([dataItem count] > kDataFieldIndexScore) {
 				[glDataItem setObject:[dataItem objectAtIndex:kDataFieldIndexScore] forKey:@kDataFieldKeyScore];
