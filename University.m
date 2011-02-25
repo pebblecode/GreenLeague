@@ -97,7 +97,7 @@
 		
 	}
 	//NSLog(@"universityFromCSVLine uni: %@", uni);
-	return [uni autorelease];
+	return uni;
 }
 
 @end

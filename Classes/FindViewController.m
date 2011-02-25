@@ -92,7 +92,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return [greenLeagueUniversityData count];
+    return [self.greenLeagueUniversityData count];
 }
 
 
@@ -107,14 +107,14 @@
     }
     
 	int glDataIndex = [indexPath indexAtPosition:[indexPath length] - 1];
-	University *uni = [greenLeagueUniversityData objectAtIndex:glDataIndex];
-	
-	// Text: Rank. University
-	NSString *rankString = [uni.rank2010 isEqualToString:@"0"] ? @"(No rank) " : [NSString stringWithFormat:@"%@. ", uni.rank2010];
-	cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, uni.name];	
-	// Detailed text: Scored: Score
-	cell.detailTextLabel.text = [NSString stringWithFormat:@"Scored: %@", uni.totalScore];
-	
+	if (glDataIndex < [self.greenLeagueUniversityData count]) {
+		University *uni = [self.greenLeagueUniversityData objectAtIndex:glDataIndex];
+		// Text: Rank. University
+		NSString *rankString = [[uni rank2010] isEqualToString:@"0"] ? @"(No rank) " : [NSString stringWithFormat:@"%@. ", uni.rank2010];
+		cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, uni.name];	
+		// Detailed text: Scored: Score
+		cell.detailTextLabel.text = [NSString stringWithFormat:@"Scored: %@", uni.totalScore];
+	}
     return cell;
 }
 
@@ -171,6 +171,8 @@
     [self.navigationController pushViewController:detailViewController animated:YES];
     [detailViewController release];
     */
+	
+	NSLog(@"selected row (%@): %@", indexPath, self.greenLeagueUniversityData);
 }
 
 
@@ -246,6 +248,14 @@
         return persistentStoreCoordinator;
     }
     
+	// HACK: Removing db all the time
+//	NSFileManager *filemgr = [NSFileManager defaultManager];	
+//	if ([filemgr removeItemAtPath:[[self applicationDocumentsDirectory] stringByAppendingPathComponent:@kDatabaseSqliteFile] error: NULL]  == YES) {
+//        NSLog (@"Remove sqlite file successful");
+//	} else {
+//        NSLog (@"Remove sqlite file failed");
+//	}
+	
 	// This is used to create the db in the application documents directory in the app - once it's created, it can be transferred to the Resources directory in xcode
     NSURL *storeUrl = [NSURL fileURLWithPath:[[self applicationDocumentsDirectory] stringByAppendingPathComponent:@kDatabaseSqliteFile]];
 	
@@ -327,7 +337,8 @@
 		NSArray *lines = [fileContents componentsSeparatedByString:@"\n"];
 		//NSLog(@"lines: %@", lines);
 		
-		for (int i = kStartIndexForData; i < lines.count; i++) {
+		// Not sure why it's lines.count - 1
+		for (int i = kStartIndexForData; i < (lines.count - 1); i++) {
 			University *uni = [University universityFromCSVLine:[lines objectAtIndex:i] withManagedContext:[self managedObjectContext]];
 			//NSLog(@"post csv uni: %@", uni);
 			
@@ -340,6 +351,7 @@
 			
 			//[uni release];
 		}
+		//NSLog(@"unis: %@", self.greenLeagueUniversityData);
 	}
 	
 }
