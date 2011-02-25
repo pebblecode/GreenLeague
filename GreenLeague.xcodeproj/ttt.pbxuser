@@ -1179,8 +1179,8 @@
 	3DB0D9461315206D006FC601 /* FindViewController.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1033, 390}}";
-			sepNavSelRange = "{818, 0}";
-			sepNavVisRange = "{3, 867}";
+			sepNavSelRange = "{147, 0}";
+			sepNavVisRange = "{28, 842}";
 		};
 	};
 	3DB0D9471315206D006FC601 /* FindViewController.m */ = {

@@ -23,6 +23,7 @@
 		3D308E6F1316BC9F00D37010 /* 189-plant@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D308E6D1316BC9F00D37010 /* 189-plant@2x.png */; };
 		3D308E721316BCAA00D37010 /* 12-eye.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D308E701316BCAA00D37010 /* 12-eye.png */; };
 		3D308E731316BCAA00D37010 /* 12-eye@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D308E711316BCAA00D37010 /* 12-eye@2x.png */; };
+		3D308E891316C5BF00D37010 /* green_league.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 3D308E881316C5BF00D37010 /* green_league.xcdatamodel */; };
 		3DB0D9491315206D006FC601 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB0D9471315206D006FC601 /* FindViewController.m */; };
 		3DB0D94A1315206D006FC601 /* FindViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DB0D9481315206D006FC601 /* FindViewController.xib */; };
 		3DB0D9551315222C006FC601 /* 06-magnify.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB0D9531315222C006FC601 /* 06-magnify.png */; };
@@ -55,6 +56,7 @@
 		3D308E6D1316BC9F00D37010 /* 189-plant@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "189-plant@2x.png"; sourceTree = "<group>"; };
 		3D308E701316BCAA00D37010 /* 12-eye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "12-eye.png"; sourceTree = "<group>"; };
 		3D308E711316BCAA00D37010 /* 12-eye@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "12-eye@2x.png"; sourceTree = "<group>"; };
+		3D308E881316C5BF00D37010 /* green_league.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; name = green_league.xcdatamodel; path = Classes/green_league.xcdatamodel; sourceTree = "<group>"; };
 		3DB0D9461315206D006FC601 /* FindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindViewController.h; sourceTree = "<group>"; };
 		3DB0D9471315206D006FC601 /* FindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindViewController.m; sourceTree = "<group>"; };
 		3DB0D9481315206D006FC601 /* FindViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FindViewController.xib; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
+				3D308E8A1316C5D500D37010 /* Models */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
@@ -151,6 +154,14 @@
 				3DB0D9931315422C006FC601 /* CoreData.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3D308E8A1316C5D500D37010 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3D308E881316C5BF00D37010 /* green_league.xcdatamodel */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		3DB0D95213152221006FC601 /* Images */ = {
@@ -251,6 +262,7 @@
 				3D308E0B1316552A00D37010 /* NSString+Helper.m in Sources */,
 				3D308E5B1316BB8C00D37010 /* CompareViewController.m in Sources */,
 				3D308E631316BBC600D37010 /* AboutViewController.m in Sources */,
+				3D308E891316C5BF00D37010 /* green_league.xcdatamodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
