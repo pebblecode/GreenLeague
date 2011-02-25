@@ -7,7 +7,7 @@
 //
 
 #import "FindViewController.h"
-#import "NSString+Helper.h"
+#import "University.h"
 
 #define kNumberOfSections 1
 // Data source file minus the file extension
@@ -15,18 +15,14 @@
 #define kStartIndexForData 4
 #define kDatabaseSqliteFile "green_league.sqlite"
 
-// Index for the fields in the data source file
-#define kDataFieldIndexRank 0
-#define kDataFieldIndexUniversity 1
-#define kDataFieldIndexScore 2
-#define kDataFieldIndexAward 3
+
 
 // Data source field dictionary keys
 
-#define kDataFieldKeyRank "rank"
-#define kDataFieldKeyUniversity "university"
-#define kDataFieldKeyScore "score"
-#define kDataFieldKeyAward "award"
+//#define kDataFieldNameRank "rank2010"
+//#define kDataFieldNameUniversity "university"
+//#define kDataFieldNameScore "score"
+//#define kDataFieldNameAward "award"
 
 // Private methods
 @interface FindViewController()
@@ -49,7 +45,9 @@
     [super viewDidLoad];
 	greenLeagueUniversityData = [[NSMutableArray alloc] initWithCapacity:0];
 	
-    [self loadGreenLeagueDataFromFile];
+    //[self loadGreenLeagueDataFromFile];
+	[self fetchUniversitiesSortBy:@"rank2010"];
+	//[self fetchUniversitiesSortBy:@"name"];
 }
 
 
@@ -109,13 +107,13 @@
     }
     
 	int glDataIndex = [indexPath indexAtPosition:[indexPath length] - 1];
-	NSMutableDictionary *glDataItem = [greenLeagueUniversityData objectAtIndex:glDataIndex];
+	University *uni = [greenLeagueUniversityData objectAtIndex:glDataIndex];
 	
 	// Text: Rank. University
-	NSString *rankString = [[glDataItem objectForKey:@kDataFieldKeyRank] isEqualToString:@"0"] ? @"(No rank) " : [NSString stringWithFormat:@"%@. ", [glDataItem objectForKey:@kDataFieldKeyRank]];
-	cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, [glDataItem objectForKey:@kDataFieldKeyUniversity]];	
+	NSString *rankString = [uni.rank2010 isEqualToString:@"0"] ? @"(No rank) " : [NSString stringWithFormat:@"%@. ", uni.rank2010];
+	cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, uni.name];	
 	// Detailed text: Scored: Score
-	cell.detailTextLabel.text = [NSString stringWithFormat:@"Scored: %@", [glDataItem objectForKey:@kDataFieldKeyScore]];
+	cell.detailTextLabel.text = [NSString stringWithFormat:@"Scored: %@", uni.totalScore];
 	
     return cell;
 }
@@ -282,6 +280,43 @@
     return persistentStoreCoordinator;
 }
 
+- (void)fetchUniversitiesSortBy:(NSString *)sortField {
+	NSEntityDescription *entity = [NSEntityDescription entityForName:[University entityName] inManagedObjectContext:[self managedObjectContext]]; 
+	
+	// Setup the fetch request
+	NSFetchRequest *request = [[NSFetchRequest alloc] init];
+	[request setEntity:entity]; 
+	
+	// Define how we will sort the records
+	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:sortField ascending:NO];
+	NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+	[request setSortDescriptors:sortDescriptors];
+	[sortDescriptor release]; 
+	
+	// Fetch the records and handle an error
+	NSError *error;
+	NSMutableArray *mutableFetchResults = [[[self managedObjectContext] executeFetchRequest:request error:&error] mutableCopy]; 
+	//NSLog(@"mutableFetchResults: %@", mutableFetchResults);
+	
+	if (!mutableFetchResults) {
+		// Handle the error.
+		// This is a serious error and should advise the user to restart the application
+		NSLog(@"mutableFetchResults error: %@", error);
+	} 
+	
+	// Save our fetched data to an array
+	[self setGreenLeagueUniversityData:mutableFetchResults];
+	[mutableFetchResults release];
+	[request release];
+	
+	if (self.greenLeagueUniversityData.count <= 0) {
+		NSLog(@"No green league data");
+		[self loadGreenLeagueDataFromFile];
+		// TODO: Loaded data is not sorted
+	}
+	//NSLog(@"Loaded: %@", greenLeagueUniversityData);
+}
+
 // Populate the database from kDataSourceFile csv file
 - (void)loadGreenLeagueDataFromFile {	
 	NSString *filePath = [[NSBundle mainBundle] pathForResource:@kDataSourceFile ofType:@"csv"];
@@ -290,38 +325,23 @@
 	// Parse CSV file
 	if (fileContents) {
 		NSArray *lines = [fileContents componentsSeparatedByString:@"\n"];
-		//NSLog(@"lines: %@", lines);		
+		//NSLog(@"lines: %@", lines);
 		
 		for (int i = kStartIndexForData; i < lines.count; i++) {
-			NSMutableDictionary *glDataItem = [[NSMutableDictionary alloc] initWithCapacity:0];		
-			NSArray *dataItem = [[lines objectAtIndex:i] componentsSeparatedByString:@","];
+			University *uni = [University universityFromCSVLine:[lines objectAtIndex:i] withManagedContext:[self managedObjectContext]];
+			//NSLog(@"post csv uni: %@", uni);
 			
-			//NSLog(@"dataItem: %@", dataItem);
-			
-			if ([dataItem count] > kDataFieldIndexRank) {
-				[glDataItem setObject:[dataItem objectAtIndex:kDataFieldIndexRank] forKey:@kDataFieldKeyRank];
-			}
-			if ([dataItem count] > kDataFieldIndexUniversity) {
-				[glDataItem setObject:[[dataItem objectAtIndex:kDataFieldIndexUniversity] stringByRemovingQuotationMarks] forKey:@kDataFieldKeyUniversity];
-			}	
-			if ([dataItem count] > kDataFieldIndexScore) {
-				[glDataItem setObject:[dataItem objectAtIndex:kDataFieldIndexScore] forKey:@kDataFieldKeyScore];
-			}
-			if ([dataItem count] > kDataFieldIndexAward) {
-				[glDataItem setObject:[dataItem objectAtIndex:kDataFieldIndexAward] forKey:@kDataFieldKeyAward];
-			}
-			
-			// Only add the data item if it has a university
-			if ([glDataItem objectForKey:@kDataFieldKeyUniversity]) {
-				[greenLeagueUniversityData addObject:glDataItem];
+			// Only add the data item if university is valid
+			if (uni) {				
+				[self.greenLeagueUniversityData addObject:uni];
 			} else {
-				NSLog(@"Did not add line, because there was no university name: '%@'", [lines objectAtIndex:i]);
+				NSLog(@"Did not add line, because the university was not valid: '%@'", [lines objectAtIndex:i]);
 			}
 			
-			[glDataItem release];
+			//[uni release];
 		}
 	}
-	//NSLog(@"%@", greenLeagueUniversityData);
+	
 }
 
 

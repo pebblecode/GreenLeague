@@ -14,4 +14,6 @@
 
 - (NSString *)stringByTrimmingSpaces;
 
+- (NSNumber *)numberFromString;
+
 @end

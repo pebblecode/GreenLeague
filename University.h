@@ -50,6 +50,9 @@
 @property (nonatomic, retain) NSNumber * performance10_1Data;
 @property (nonatomic, retain) NSNumber * performance8_3Score;
 
++ (NSString *)entityName;
++ (University *)universityFromCSVLine:(NSString *)csvLine withManagedContext:(NSManagedObjectContext *)managedObjectContext;
+
 @end
 
 
