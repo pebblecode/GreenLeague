@@ -202,6 +202,47 @@
 			<key>Content</key>
 			<dict>
 				<key>PBXProjectModuleGUID</key>
+				<string>3D03A01A131BB2B900F6B225</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>University.m</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>3D03A01B131BB2B900F6B225</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>University.m</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>3D03A02D131BB39200F6B225</string>
+						<key>history</key>
+						<array>
+							<string>3D03A02C131BB39200F6B225</string>
+							<string>3D03A022131BB2F900F6B225</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {1228, 885}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>94 111 1228 926 0 0 1920 1058 </string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
 				<string>3D039FCA131BA3EF00F6B225</string>
 				<key>PBXProjectModuleLabel</key>
 				<string>green_league.xcdatamodel</string>
@@ -216,7 +257,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>3D03A014131BB17400F6B225</string>
+						<string>3D03A02E131BB39200F6B225</string>
 						<key>history</key>
 						<array>
 							<string>3D039FC4131BA34000F6B225</string>
@@ -317,13 +358,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>5</integer>
-									<integer>1</integer>
+									<integer>34</integer>
+									<integer>32</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 48}, {186, 675}}</string>
+							<string>{{0, 175}, {186, 675}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -372,7 +413,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3D03A012131BB17400F6B225</string>
+										<string>3D03A02A131BB39200F6B225</string>
 										<key>history</key>
 										<array>
 											<string>3DB0D95713152233006FC601</string>
@@ -423,7 +464,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3D03A013131BB17400F6B225</string>
+										<string>3D03A02B131BB39200F6B225</string>
 										<key>history</key>
 										<array>
 											<string>3DB0D95713152233006FC601</string>
@@ -637,6 +678,7 @@
 		<string>3DB0D93113151196006FC601</string>
 		<string>3D039FCA131BA3EF00F6B225</string>
 		<string>1C78EAAD065D492600B07095</string>
+		<string>3D03A01A131BB2B900F6B225</string>
 		<string>/Users/ttt/Work/Dev/GreenLeague/GreenLeague.xcodeproj</string>
 	</array>
 	<key>WindowString</key>

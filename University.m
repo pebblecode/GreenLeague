@@ -67,7 +67,7 @@
 }
 
 // Returns nil if there is no name
-+ (University *)universityFromCSVLine:(NSString *)csvLine withManagedContext:(NSManagedObjectContext *)managedObjectContext {
++ (void)addUniversityFromCSVLine:(NSString *)csvLine toDBWithManagedContext:(NSManagedObjectContext *)managedObjectContext {
 	University *uni;
 	
 	//NSLog(@"csvLine: %@", csvLine);
@@ -96,8 +96,6 @@
 		} // Else, don't do anything - only valid university if it has a name
 		
 	}
-	//NSLog(@"universityFromCSVLine uni: %@", uni);
-	return uni;
 }
 
 @end

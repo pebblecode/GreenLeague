@@ -51,7 +51,7 @@
 @property (nonatomic, retain) NSNumber * performance8_3Score;
 
 + (NSString *)entityName;
-+ (University *)universityFromCSVLine:(NSString *)csvLine withManagedContext:(NSManagedObjectContext *)managedObjectContext;
++ (void)addUniversityFromCSVLine:(NSString *)csvLine toDBWithManagedContext:(NSManagedObjectContext *)managedObjectContext;
 
 @end
 

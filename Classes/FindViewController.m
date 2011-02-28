@@ -353,23 +353,11 @@
 	// Parse CSV file
 	if (fileContents) {
 		NSArray *lines = [fileContents componentsSeparatedByString:@"\n"];
-		//NSLog(@"lines: %@", lines);
 		
 		// Not sure why it's lines.count - 1
 		for (int i = kStartIndexForData; i < (lines.count - 1); i++) {
-			University *uni = [University universityFromCSVLine:[lines objectAtIndex:i] withManagedContext:[self managedObjectContext]];
-			//NSLog(@"post csv uni: %@", uni);
-			
-//			// Only add the data item if university is valid
-//			if (uni) {				
-//				[self.greenLeagueUniversityData addObject:uni];
-//			} else {
-//				NSLog(@"Did not add line, because the university was not valid: '%@'", [lines objectAtIndex:i]);
-//			}
-			
-			//[uni release];
+			[University addUniversityFromCSVLine:[lines objectAtIndex:i] toDBWithManagedContext:[self managedObjectContext]];
 		}
-		//NSLog(@"unis: %@", self.greenLeagueUniversityData);
 	}	
 }
 
