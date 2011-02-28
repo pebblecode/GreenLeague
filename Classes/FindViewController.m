@@ -28,7 +28,8 @@
 @interface FindViewController()
 
 - (void)deleteDB;
-- (void)loadGreenLeagueDataFromFile;
+- (void)fetchRankedUniversitiesFromDBSortBy:(NSString *)sortField;
+- (void)loadGreenLeagueDataFromFileToDB;
 
 @end
 
@@ -297,6 +298,18 @@
 }
 
 - (void)fetchRankedUniversitiesSortBy:(NSString *)sortField {
+
+	[self fetchRankedUniversitiesFromDBSortBy:sortField];
+	
+	if (self.greenLeagueUniversityData.count <= 0) {
+		NSLog(@"No green league data");
+		[self loadGreenLeagueDataFromFileToDB];
+		[self fetchRankedUniversitiesFromDBSortBy:sortField];
+	}
+	//NSLog(@"Loaded: %@", greenLeagueUniversityData);
+}
+
+- (void)fetchRankedUniversitiesFromDBSortBy:(NSString *)sortField {
 	NSEntityDescription *entity = [NSEntityDescription entityForName:[University entityName] inManagedObjectContext:[self managedObjectContext]]; 
 	
 	// Setup the fetch request
@@ -329,16 +342,11 @@
 	[mutableFetchResults release];
 	[request release];
 	
-	if (self.greenLeagueUniversityData.count <= 0) {
-		NSLog(@"No green league data");
-		[self loadGreenLeagueDataFromFile];
-		// TODO: Loaded data is not sorted
-	}
-	//NSLog(@"Loaded: %@", greenLeagueUniversityData);		
 }
 
+
 // Populate the database from kDataSourceFile csv file
-- (void)loadGreenLeagueDataFromFile {	
+- (void)loadGreenLeagueDataFromFileToDB {	
 	NSString *filePath = [[NSBundle mainBundle] pathForResource:@kDataSourceFile ofType:@"csv"];
 	NSString *fileContents = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
 	
@@ -352,18 +360,17 @@
 			University *uni = [University universityFromCSVLine:[lines objectAtIndex:i] withManagedContext:[self managedObjectContext]];
 			//NSLog(@"post csv uni: %@", uni);
 			
-			// Only add the data item if university is valid
-			if (uni) {				
-				[self.greenLeagueUniversityData addObject:uni];
-			} else {
-				NSLog(@"Did not add line, because the university was not valid: '%@'", [lines objectAtIndex:i]);
-			}
+//			// Only add the data item if university is valid
+//			if (uni) {				
+//				[self.greenLeagueUniversityData addObject:uni];
+//			} else {
+//				NSLog(@"Did not add line, because the university was not valid: '%@'", [lines objectAtIndex:i]);
+//			}
 			
 			//[uni release];
 		}
 		//NSLog(@"unis: %@", self.greenLeagueUniversityData);
-	}
-	
+	}	
 }
 
 
