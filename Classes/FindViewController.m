@@ -172,7 +172,7 @@
     [detailViewController release];
     */
 	
-	NSLog(@"selected row (%@): %@", indexPath, self.greenLeagueUniversityData);
+	//NSLog(@"selected row (%@): %@", indexPath, self.greenLeagueUniversityData);
 }
 
 
