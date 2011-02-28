@@ -18,6 +18,8 @@
     NSManagedObjectContext *managedObjectContext;
     NSManagedObjectModel *managedObjectModel;
     NSPersistentStoreCoordinator *persistentStoreCoordinator;
+	
+	UISegmentedControl *sortControl;
 }
 
 @property (nonatomic, retain) NSMutableArray *universities;
@@ -25,6 +27,8 @@
 @property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;
 @property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
+@property (nonatomic, retain, readonly) UISegmentedControl *sortControl;
 
 - (void)fetchRankedUniversitiesSortBy:(NSString *)sortField;
 - (NSString *)applicationDocumentsDirectory;

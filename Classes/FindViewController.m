@@ -40,11 +40,19 @@
 
 @implementation FindViewController
 
-@synthesize universities, awardClasses, collation, managedObjectContext, managedObjectModel, persistentStoreCoordinator;
+@synthesize universities, awardClasses, collation, managedObjectContext, managedObjectModel, persistentStoreCoordinator, sortControl;
 
 #pragma mark -
 #pragma mark View lifecycle
 
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+	if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {			
+		//self.title = @"Green League Universities";
+		self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Find" image:[UIImage imageNamed:@"06-magnify.png"] tag:1];	
+	}
+	return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -53,6 +61,11 @@
     //[self loadGreenLeagueDataFromFile];
 	[self fetchRankedUniversitiesSortBy:@"rank2010"];
 	//[self fetchRankedUniversitiesSortBy:@"name"];
+	
+	sortControl = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Rank", @"A-Z", nil]];
+	sortControl.frame = CGRectMake(76, 4, 150, 34);
+	sortControl.selectedSegmentIndex = 0; // Select rank by default
+	[self.navigationController.navigationBar addSubview:sortControl];
 }
 
 

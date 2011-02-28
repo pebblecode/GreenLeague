@@ -7,7 +7,9 @@
 //
 
 #import "GreenLeagueAppDelegate.h"
-
+#import "FindViewController.h"
+#import "CompareViewController.h"
+#import "AboutViewController.h"
 
 @implementation GreenLeagueAppDelegate
 
@@ -19,8 +21,20 @@
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
+    	
+    FindViewController *findVC = [[FindViewController alloc] init];
+	UINavigationController *findNavController = [[UINavigationController alloc] initWithRootViewController:findVC];
+	[findVC release];
+	
+	CompareViewController *compareVC = [[CompareViewController alloc] init];	
+	AboutViewController *aboutVC = [[AboutViewController alloc] init];
     
-    // Override point for customization after application launch.
+    NSArray *tabVCs = [NSArray arrayWithObjects:findNavController, compareVC, aboutVC, nil];
+    [tabBarController setViewControllers:tabVCs animated:YES]; // Doesn't seem to animate	
+	
+	[findNavController release];
+	[compareVC release];
+	[aboutVC release];
 
     // Add the tab bar controller's view to the window and display.
     [self.window addSubview:tabBarController.view];
