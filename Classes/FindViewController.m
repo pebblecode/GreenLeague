@@ -128,7 +128,7 @@
 	
 	// Text: Rank. University
 	NSString *rankString = ([[uni rank2010] intValue] == 0) ? @"(none) " : [NSString stringWithFormat:@"%@. ", uni.rank2010];
-	cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, uni.name];	
+	cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, uni.sortName];	
 	// Detailed text: Scored: Score
 	cell.detailTextLabel.text = [NSString stringWithFormat:@"Scored: %@", uni.totalScore];
 	
@@ -281,7 +281,7 @@
     }
     
 	// To remove the db all the time (for debugging only)
-	//[self deleteDB];
+	[self deleteDB];
 	
 	// This is used to create the db in the application documents directory in the app - once it's created, it can be transferred to the Resources directory in xcode
     NSURL *storeUrl = [NSURL fileURLWithPath:[[self applicationDocumentsDirectory] stringByAppendingPathComponent:@kDatabaseSqliteFile]];
@@ -369,7 +369,7 @@
 	
 	for (University *uni in universities) {
 		// Ask the collation which section number the time zone belongs in, based on its locale name.
-		NSInteger sectionNumber = [collation sectionForObject:uni collationStringSelector:@selector(name)];
+		NSInteger sectionNumber = [collation sectionForObject:uni collationStringSelector:@selector(sortName)];
 		
 		// Get the array for the section.
 		NSMutableArray *awardUniversities = [newAwardsArray objectAtIndex:sectionNumber];

@@ -39,6 +39,7 @@
 @dynamic performance11_1Score;
 @dynamic performance10_2Score;
 @dynamic name;
+@dynamic sortName;
 @dynamic performance10_1Score;
 @dynamic totalScore;
 @dynamic performance9Score;
@@ -66,6 +67,25 @@
 	return [NSString stringWithString:@kUniversityEntityName];
 }
 
+// Sort name removes "University of" from the front of the name, and appends it to the back as '(University of)'
++ (NSString *)getSortName:(NSString *)aName {
+	NSString *sortNameStr = aName;
+	NSString *prefixToRemove = @"University of ";
+	NSString *suffixToAppend = @" (University of)";
+	
+	int prefixSubstrIndex = [prefixToRemove length];
+	if ([aName length] >= prefixSubstrIndex) {
+		NSString *nameSubStr = [aName substringToIndex:prefixSubstrIndex];
+		if ([nameSubStr isEqualToString:prefixToRemove]) {
+			sortNameStr = [aName substringFromIndex:prefixSubstrIndex];
+			sortNameStr = [sortNameStr stringByAppendingFormat:@"%@", suffixToAppend];
+		}
+	}
+	
+	return sortNameStr;
+	
+}
+
 // Returns nil if there is no name
 + (void)addUniversityFromCSVLine:(NSString *)csvLine toDBWithManagedContext:(NSManagedObjectContext *)managedObjectContext {
 	University *uni;
@@ -76,8 +96,9 @@
 		NSString *uniName = [[dataItem objectAtIndex:kDataFieldIndexUniversityName] stringByRemovingQuotationMarks];
 		if (uniName.length > 0) {
 			uni = (University *)[NSEntityDescription insertNewObjectForEntityForName:[University entityName] inManagedObjectContext:managedObjectContext];
-			[uni setName:uniName];			
-			
+			[uni setName:uniName];
+			[uni setSortName:[University getSortName:uniName]];
+
 			// Add other database fields
 			if ([dataItem count] > kDataFieldIndexRank2010) [uni setRank2010:[[dataItem objectAtIndex:kDataFieldIndexRank2010] numberFromString]];
 			if ([dataItem count] > kDataFieldIndexTotalScore) [uni setTotalScore:[[dataItem objectAtIndex:kDataFieldIndexTotalScore] numberFromString]];

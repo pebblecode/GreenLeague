@@ -32,6 +32,7 @@
 @property (nonatomic, retain) NSNumber * performance11_1Score;
 @property (nonatomic, retain) NSNumber * performance10_2Score;
 @property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSString * sortName;
 @property (nonatomic, retain) NSNumber * performance10_1Score;
 @property (nonatomic, retain) NSNumber * totalScore;
 @property (nonatomic, retain) NSNumber * performance9Score;
