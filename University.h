@@ -15,7 +15,7 @@
 
 @property (nonatomic, retain) NSNumber * performance11_1Data;
 @property (nonatomic, retain) NSNumber * performance8_2Score;
-@property (nonatomic, retain) NSString * rank2010;
+@property (nonatomic, retain) NSNumber * rank2010;
 @property (nonatomic, retain) NSNumber * performance8_1Score;
 @property (nonatomic, retain) NSNumber * performance10_2Data;
 @property (nonatomic, retain) NSNumber * performance11_2Data;
@@ -28,7 +28,7 @@
 @property (nonatomic, retain) NSNumber * performance9_1Score;
 @property (nonatomic, retain) NSNumber * performance11_2Score;
 @property (nonatomic, retain) NSNumber * performance9_2Data;
-@property (nonatomic, retain) NSString * rank2009;
+@property (nonatomic, retain) NSNumber * rank2009;
 @property (nonatomic, retain) NSNumber * performance11_1Score;
 @property (nonatomic, retain) NSNumber * performance10_2Score;
 @property (nonatomic, retain) NSString * name;

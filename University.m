@@ -79,7 +79,7 @@
 			[uni setName:uniName];			
 			
 			// Add other database fields
-			if ([dataItem count] > kDataFieldIndexRank2010) [uni setRank2010:[dataItem objectAtIndex:kDataFieldIndexRank2010]];
+			if ([dataItem count] > kDataFieldIndexRank2010) [uni setRank2010:[[dataItem objectAtIndex:kDataFieldIndexRank2010] numberFromString]];
 			if ([dataItem count] > kDataFieldIndexTotalScore) [uni setTotalScore:[[dataItem objectAtIndex:kDataFieldIndexTotalScore] numberFromString]];
 			if ([dataItem count] > kDataFieldIndexAwardClass) [uni setAwardClass:[dataItem objectAtIndex:kDataFieldIndexAwardClass]];
 			

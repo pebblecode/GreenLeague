@@ -27,6 +27,7 @@
 // Private methods
 @interface FindViewController()
 
+- (void)deleteDB;
 - (void)loadGreenLeagueDataFromFile;
 
 @end
@@ -110,7 +111,7 @@
 	if (glDataIndex < [self.greenLeagueUniversityData count]) {
 		University *uni = [self.greenLeagueUniversityData objectAtIndex:glDataIndex];
 		// Text: Rank. University
-		NSString *rankString = [[uni rank2010] isEqualToString:@"0"] ? @"(No rank) " : [NSString stringWithFormat:@"%@. ", uni.rank2010];
+		NSString *rankString = ([[uni rank2010] intValue] == 0) ? @"(none) " : [NSString stringWithFormat:@"%@. ", uni.rank2010];
 		cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, uni.name];	
 		// Detailed text: Scored: Score
 		cell.detailTextLabel.text = [NSString stringWithFormat:@"Scored: %@", uni.totalScore];
@@ -248,13 +249,8 @@
         return persistentStoreCoordinator;
     }
     
-	// HACK: Removing db all the time
-//	NSFileManager *filemgr = [NSFileManager defaultManager];	
-//	if ([filemgr removeItemAtPath:[[self applicationDocumentsDirectory] stringByAppendingPathComponent:@kDatabaseSqliteFile] error: NULL]  == YES) {
-//        NSLog (@"Remove sqlite file successful");
-//	} else {
-//        NSLog (@"Remove sqlite file failed");
-//	}
+	// To remove the db all the time (for debugging only)
+	[self deleteDB];
 	
 	// This is used to create the db in the application documents directory in the app - once it's created, it can be transferred to the Resources directory in xcode
     NSURL *storeUrl = [NSURL fileURLWithPath:[[self applicationDocumentsDirectory] stringByAppendingPathComponent:@kDatabaseSqliteFile]];
@@ -288,6 +284,16 @@
 	NSLog(@"storeUrl(%@) exists? %@", storeUrl, ([[NSFileManager defaultManager] fileExistsAtPath:storeUrl.path] ? @"YES" : @"NO"));
 	
     return persistentStoreCoordinator;
+}
+
+- (void)deleteDB {
+	NSFileManager *filemgr = [NSFileManager defaultManager];
+	
+	if ([filemgr removeItemAtPath:[[self applicationDocumentsDirectory] stringByAppendingPathComponent:@kDatabaseSqliteFile] error: NULL]  == YES) {
+        NSLog (@"Remove sqlite file successful");
+	} else {
+        NSLog (@"Remove sqlite file failed");
+	}
 }
 
 - (void)fetchUniversitiesSortBy:(NSString *)sortField {
