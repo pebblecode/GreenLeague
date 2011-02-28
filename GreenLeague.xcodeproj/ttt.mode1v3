@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>3D03A02D131BB39200F6B225</string>
+						<string>3D03A0BA131BEB9000F6B225</string>
 						<key>history</key>
 						<array>
 							<string>3D03A02C131BB39200F6B225</string>
@@ -257,7 +257,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>3D03A02E131BB39200F6B225</string>
+						<string>3D03A0BB131BEB9000F6B225</string>
 						<key>history</key>
 						<array>
 							<string>3D039FC4131BA34000F6B225</string>
@@ -358,8 +358,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>34</integer>
-									<integer>32</integer>
+									<integer>29</integer>
+									<integer>16</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -413,19 +413,19 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3D03A02A131BB39200F6B225</string>
+										<string>3D03A0B8131BEB9000F6B225</string>
 										<key>history</key>
 										<array>
 											<string>3DB0D95713152233006FC601</string>
 											<string>3DB0D97713152CD8006FC601</string>
-											<string>3DB0D97813152CD8006FC601</string>
 											<string>3DB0D9DF1317B117006FC601</string>
 											<string>3DB0DA7C1318036D006FC601</string>
 											<string>3DB0DA7D1318036D006FC601</string>
 											<string>3D039FC5131BA3EF00F6B225</string>
 											<string>3D039FDC131BA6FE00F6B225</string>
 											<string>3D039FF3131BA8A700F6B225</string>
-											<string>3D039FF4131BA8A700F6B225</string>
+											<string>3D03A081131BDE2B00F6B225</string>
+											<string>3D03A09A131BEAD800F6B225</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -464,7 +464,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3D03A02B131BB39200F6B225</string>
+										<string>3D03A0B9131BEB9000F6B225</string>
 										<key>history</key>
 										<array>
 											<string>3DB0D95713152233006FC601</string>
@@ -473,8 +473,8 @@
 											<string>3DB0DA331317E0C5006FC601</string>
 											<string>3DB0DA351317E0C5006FC601</string>
 											<string>3D039FF6131BA8A700F6B225</string>
-											<string>3D03A00F131BB16600F6B225</string>
-											<string>3D03A002131BAE4000F6B225</string>
+											<string>3D03A0B0131BEAFB00F6B225</string>
+											<string>3D03A08F131BEA9E00F6B225</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -703,7 +703,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>FindViewController.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -720,6 +720,8 @@
 							<string>218pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>

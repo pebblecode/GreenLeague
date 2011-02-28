@@ -11,14 +11,16 @@
 
 
 @interface FindViewController : UITableViewController {
-	NSMutableArray *greenLeagueUniversityData;
+	NSMutableArray *universities; 
+	NSMutableArray *awardClasses;
+	UILocalizedIndexedCollation *collation;
 	
     NSManagedObjectContext *managedObjectContext;
     NSManagedObjectModel *managedObjectModel;
     NSPersistentStoreCoordinator *persistentStoreCoordinator;
 }
 
-@property (nonatomic, retain) NSMutableArray *greenLeagueUniversityData;
+@property (nonatomic, retain) NSMutableArray *universities;
 
 @property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;

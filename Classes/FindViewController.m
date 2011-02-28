@@ -9,7 +9,6 @@
 #import "FindViewController.h"
 #import "University.h"
 
-#define kNumberOfSections 1
 // Data source file minus the file extension
 #define kDataSourceFile "gl2010"
 #define kStartIndexForData 4
@@ -27,9 +26,13 @@
 // Private methods
 @interface FindViewController()
 
+@property (nonatomic, retain) NSMutableArray *awardClasses;
+@property (nonatomic, retain) UILocalizedIndexedCollation *collation;
+
 - (void)deleteDB;
 - (void)fetchRankedUniversitiesFromDBSortBy:(NSString *)sortField;
 - (void)loadGreenLeagueDataFromFileToDB;
+- (void)configureAwardClasses;
 
 @end
 
@@ -37,7 +40,7 @@
 
 @implementation FindViewController
 
-@synthesize greenLeagueUniversityData, managedObjectContext, managedObjectModel, persistentStoreCoordinator;
+@synthesize universities, awardClasses, collation, managedObjectContext, managedObjectModel, persistentStoreCoordinator;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -45,7 +48,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	greenLeagueUniversityData = [[NSMutableArray alloc] initWithCapacity:0];
+	universities = [[NSMutableArray alloc] initWithCapacity:0];
 	
     //[self loadGreenLeagueDataFromFile];
 	[self fetchRankedUniversitiesSortBy:@"rank2010"];
@@ -88,13 +91,15 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return kNumberOfSections;
+    return [[collation sectionTitles] count];
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    // Return the number of rows in the section.
-    return [self.greenLeagueUniversityData count];
+	// The number of time zones in the section is the count of the array associated with the section in the sections array.
+	NSArray *universitiesInAwardClass = [awardClasses objectAtIndex:section];
+	
+    return [universitiesInAwardClass count];
 }
 
 
@@ -108,18 +113,40 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
     
-	int glDataIndex = [indexPath indexAtPosition:[indexPath length] - 1];
-	if (glDataIndex < [self.greenLeagueUniversityData count]) {
-		University *uni = [self.greenLeagueUniversityData objectAtIndex:glDataIndex];
-		// Text: Rank. University
-		NSString *rankString = ([[uni rank2010] intValue] == 0) ? @"(none) " : [NSString stringWithFormat:@"%@. ", uni.rank2010];
-		cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, uni.name];	
-		// Detailed text: Scored: Score
-		cell.detailTextLabel.text = [NSString stringWithFormat:@"Scored: %@", uni.totalScore];
-	}
+//	int glDataIndex = [indexPath indexAtPosition:[indexPath length] - 1];
+//	if (glDataIndex < [self.universities count]) {
+//		University *uni = [self.universities objectAtIndex:glDataIndex];
+//		// Text: Rank. University
+//		NSString *rankString = ([[uni rank2010] intValue] == 0) ? @"(none) " : [NSString stringWithFormat:@"%@. ", uni.rank2010];
+//		cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, uni.name];	
+//		// Detailed text: Scored: Score
+//		cell.detailTextLabel.text = [NSString stringWithFormat:@"Scored: %@", uni.totalScore];
+//	}
+	
+	NSArray *universitiesInAwardClass = [awardClasses objectAtIndex:indexPath.section];	
+	University *uni = [universitiesInAwardClass objectAtIndex:indexPath.row];
+	
+	// Text: Rank. University
+	NSString *rankString = ([[uni rank2010] intValue] == 0) ? @"(none) " : [NSString stringWithFormat:@"%@. ", uni.rank2010];
+	cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, uni.name];	
+	// Detailed text: Scored: Score
+	cell.detailTextLabel.text = [NSString stringWithFormat:@"Scored: %@", uni.totalScore];
+	
     return cell;
 }
 
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {	
+    return [[collation sectionTitles] objectAtIndex:section];
+}
+
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+    return [collation sectionIndexTitles];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
+    return [collation sectionForSectionIndexTitleAtIndex:index];
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -174,7 +201,8 @@
     [detailViewController release];
     */
 	
-	//NSLog(@"selected row (%@): %@", indexPath, self.greenLeagueUniversityData);
+	//NSLog(@"selected row (%@): %@", indexPath, self.universities);
+	[tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 
@@ -195,7 +223,9 @@
 
 
 - (void)dealloc {
-	[greenLeagueUniversityData release];
+	[universities release];
+	[awardClasses release];
+	[collation release];
 	
 	[managedObjectContext release];
 	[managedObjectModel release];
@@ -301,13 +331,59 @@
 
 	[self fetchRankedUniversitiesFromDBSortBy:sortField];
 	
-	if (self.greenLeagueUniversityData.count <= 0) {
+	if (self.universities.count <= 0) {
 		NSLog(@"No green league data");
 		[self loadGreenLeagueDataFromFileToDB];
 		[self fetchRankedUniversitiesFromDBSortBy:sortField];
 	}
-	//NSLog(@"Loaded: %@", greenLeagueUniversityData);
+	//NSLog(@"Loaded: %@", universities);
+	[self configureAwardClasses];
 }
+
+- (void)setUniversities:(NSMutableArray *)newDataArray {
+	if (newDataArray != universities) {
+		[universities release];
+		universities = [newDataArray retain];
+	}
+	if (universities == nil) {
+		self.awardClasses = nil;
+	} else {
+		[self configureAwardClasses];
+	}
+}
+			
+- (void)configureAwardClasses {
+	// Get the current collation and keep a reference to it.
+	self.collation = [UILocalizedIndexedCollation currentCollation];
+	
+	NSInteger awardTitlesCount = [[collation sectionTitles] count];
+	
+	NSMutableArray *newAwardsArray = [[NSMutableArray alloc] initWithCapacity:awardTitlesCount];
+	
+	// Set up the awards array with empty arrays
+	for (int i = 0; i < awardTitlesCount; i++) {
+		NSMutableArray *array = [[NSMutableArray alloc] init];
+		[newAwardsArray addObject:array];
+		[array release];
+	}
+	
+	for (University *uni in universities) {
+		// Ask the collation which section number the time zone belongs in, based on its locale name.
+		NSInteger sectionNumber = [collation sectionForObject:uni collationStringSelector:@selector(name)];
+		
+		// Get the array for the section.
+		NSMutableArray *awardUniversities = [newAwardsArray objectAtIndex:sectionNumber];
+		
+		//  Add the time zone to the section.
+		[awardUniversities addObject:uni];		
+	}
+	
+	// Sort array?
+	
+	self.awardClasses = newAwardsArray;
+	[newAwardsArray release];		
+		
+}			
 
 - (void)fetchRankedUniversitiesFromDBSortBy:(NSString *)sortField {
 	NSEntityDescription *entity = [NSEntityDescription entityForName:[University entityName] inManagedObjectContext:[self managedObjectContext]]; 
@@ -338,7 +414,7 @@
 	} 
 	
 	// Save our fetched data to an array
-	[self setGreenLeagueUniversityData:mutableFetchResults];
+	[self setUniversities:mutableFetchResults];
 	[mutableFetchResults release];
 	[request release];
 	
