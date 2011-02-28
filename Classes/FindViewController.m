@@ -47,8 +47,8 @@
 	greenLeagueUniversityData = [[NSMutableArray alloc] initWithCapacity:0];
 	
     //[self loadGreenLeagueDataFromFile];
-	[self fetchUniversitiesSortBy:@"rank2010"];
-	//[self fetchUniversitiesSortBy:@"name"];
+	[self fetchRankedUniversitiesSortBy:@"rank2010"];
+	//[self fetchRankedUniversitiesSortBy:@"name"];
 }
 
 
@@ -250,7 +250,7 @@
     }
     
 	// To remove the db all the time (for debugging only)
-	[self deleteDB];
+	//[self deleteDB];
 	
 	// This is used to create the db in the application documents directory in the app - once it's created, it can be transferred to the Resources directory in xcode
     NSURL *storeUrl = [NSURL fileURLWithPath:[[self applicationDocumentsDirectory] stringByAppendingPathComponent:@kDatabaseSqliteFile]];
@@ -296,18 +296,22 @@
 	}
 }
 
-- (void)fetchUniversitiesSortBy:(NSString *)sortField {
+- (void)fetchRankedUniversitiesSortBy:(NSString *)sortField {
 	NSEntityDescription *entity = [NSEntityDescription entityForName:[University entityName] inManagedObjectContext:[self managedObjectContext]]; 
 	
 	// Setup the fetch request
 	NSFetchRequest *request = [[NSFetchRequest alloc] init];
 	[request setEntity:entity]; 
 	
-	// Define how we will sort the records
-	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:sortField ascending:NO];
+	// Sort by given sortField
+	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:sortField ascending:YES];
 	NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
 	[request setSortDescriptors:sortDescriptors];
 	[sortDescriptor release]; 
+	
+	// Set predicate of university being ranked ie, not rank of 0
+	NSPredicate *rankPredicate = [NSPredicate predicateWithFormat:@"rank2010 != 0"];
+	[request setPredicate:rankPredicate];	
 	
 	// Fetch the records and handle an error
 	NSError *error;
@@ -330,7 +334,7 @@
 		[self loadGreenLeagueDataFromFile];
 		// TODO: Loaded data is not sorted
 	}
-	//NSLog(@"Loaded: %@", greenLeagueUniversityData);
+	//NSLog(@"Loaded: %@", greenLeagueUniversityData);		
 }
 
 // Populate the database from kDataSourceFile csv file

@@ -24,7 +24,7 @@
 @property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;
 @property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
-- (void)fetchUniversitiesSortBy:(NSString *)sortField;
+- (void)fetchRankedUniversitiesSortBy:(NSString *)sortField;
 - (NSString *)applicationDocumentsDirectory;
 
 @end
