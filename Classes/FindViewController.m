@@ -186,7 +186,7 @@
 		NSString *rankString = ([[uni rank2010] intValue] == 0) ? @"(none) " : [NSString stringWithFormat:@"%@. ", uni.rank2010];
 		cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, uni.sortName];	
 		// Detailed text: Scored: Score
-		cell.detailTextLabel.text = [NSString stringWithFormat:@"Scored: %@", uni.totalScore];		
+		cell.detailTextLabel.text = [NSString stringWithFormat:@"Scored: %.1f", [uni.totalScore floatValue]];		
 		
 	} else if ([self isNameSort]) {		
 		NSArray *universitiesInAwardClass = [awardClasses objectAtIndex:indexPath.section];	

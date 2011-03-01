@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>3D03A515131D436600F6B225</string>
+						<string>3D03A534131D462D00F6B225</string>
 						<key>history</key>
 						<array>
 							<string>3D03A4ED131D3EEE00F6B225</string>
@@ -257,7 +257,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>3D03A516131D436600F6B225</string>
+						<string>3D03A535131D462D00F6B225</string>
 						<key>history</key>
 						<array>
 							<string>3D03A4AB131D351300F6B225</string>
@@ -414,7 +414,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3D03A513131D436600F6B225</string>
+										<string>3D03A532131D462D00F6B225</string>
 										<key>history</key>
 										<array>
 											<string>3DB0D95713152233006FC601</string>
@@ -456,7 +456,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>FindViewController.m</string>
+								<string>FindViewController.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -464,11 +464,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>FindViewController.m</string>
+										<string>FindViewController.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3D03A514131D436600F6B225</string>
+										<string>3D03A533131D462D00F6B225</string>
 										<key>history</key>
 										<array>
 											<string>3DB0D95713152233006FC601</string>
@@ -478,8 +478,8 @@
 											<string>3D039FF6131BA8A700F6B225</string>
 											<string>3D03A286131C109F00F6B225</string>
 											<string>3D03A2CA131C1C6600F6B225</string>
+											<string>3D03A51E131D45D000F6B225</string>
 											<string>3D03A50C131D434F00F6B225</string>
-											<string>3D03A50D131D434F00F6B225</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
