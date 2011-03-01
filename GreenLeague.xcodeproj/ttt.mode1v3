@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>3D03A63E131D6CD700F6B225</string>
+						<string>3D03A647131D6DA200F6B225</string>
 						<key>history</key>
 						<array>
 							<string>3D03A567131D49C400F6B225</string>
@@ -371,7 +371,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3D03A63C131D6CD700F6B225</string>
+										<string>3D03A645131D6DA200F6B225</string>
 										<key>history</key>
 										<array>
 											<string>3DB0D95713152233006FC601</string>
@@ -426,7 +426,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3D03A63D131D6CD700F6B225</string>
+										<string>3D03A646131D6DA200F6B225</string>
 										<key>history</key>
 										<array>
 											<string>3DB0D95713152233006FC601</string>
@@ -643,8 +643,8 @@
 		<string>3DB0D93113151196006FC601</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>3D03A301131CF90600F6B225</string>
-		<string>3D03A32F131D043F00F6B225</string>
 		<string>/Users/ttt/Work/Dev/GreenLeague/GreenLeague.xcodeproj</string>
+		<string>3D03A32F131D043F00F6B225</string>
 	</array>
 	<key>WindowString</key>
 	<string>381 -756 1333 734 294 -900 1440 900 </string>
@@ -1209,7 +1209,6 @@
 									<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 									<array>
 										<array>
-											<integer>1</integer>
 											<integer>0</integer>
 										</array>
 									</array>

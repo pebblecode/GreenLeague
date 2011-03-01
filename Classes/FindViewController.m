@@ -170,17 +170,7 @@
     }
     
 	University *uni;
-	if ([self isRankSort]) {
-//		int glDataIndex = [indexPath indexAtPosition:[indexPath length] - 1];
-//		if (glDataIndex < [self.universities count]) {
-//			University *uni = [self.universities objectAtIndex:glDataIndex];
-//			// Text: Rank. University
-//			NSString *rankString = ([[uni rank2010] intValue] == 0) ? @"(none) " : [NSString stringWithFormat:@"%@. ", uni.rank2010];
-//			cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, uni.name];	
-//			// Detailed text: Scored: Score
-//			cell.detailTextLabel.text = [NSString stringWithFormat:@"Scored: %@", uni.totalScore];
-//		}
-		
+	if ([self isRankSort]) {		
 		NSArray *universitiesInAwardClass = [self.awardClasses objectAtIndex:indexPath.section];	
 		uni = [universitiesInAwardClass objectAtIndex:indexPath.row];
 	} else if ([self isNameSort]) {		
@@ -418,69 +408,6 @@
     return persistentStoreCoordinator;
 }
 
-//- (void)fetchRankedUniversitiesSortBy:(NSString *)sortField {
-//
-//	[self fetchRankedUniversitiesFromDBSortBy:sortField];
-//	
-//	if (self.universities.count <= 0) {
-//		NSLog(@"No green league data");
-//		[self loadGreenLeagueDataFromFileToDB];
-//		[self fetchRankedUniversitiesFromDBSortBy:sortField];
-//	}
-//	//NSLog(@"Loaded: %@", universities);
-//	
-//	if (self.sortControl.selectedSegmentIndex == kSortByAlphabetIndex) {
-//		[self configureAwardClasses];
-//	}
-//	
-//}
-//
-//- (void)setUniversities:(NSMutableArray *)newDataArray {
-//	if (newDataArray != universities) {
-//		[universities release];
-//		universities = [newDataArray retain];
-//	}
-//	if (universities == nil) {
-//		self.awardClasses = nil;
-//	} else {
-//		//[self configureAwardClasses];
-//	}
-//}
-//			
-//- (void)configureAwardClasses {
-//	// Get the current collation and keep a reference to it.
-//	self.collation = [UILocalizedIndexedCollation currentCollation];
-//	
-//	NSInteger awardTitlesCount = [[collation sectionTitles] count];
-//	
-//	NSMutableArray *newAwardsArray = [[NSMutableArray alloc] initWithCapacity:awardTitlesCount];
-//	
-//	// Set up the awards array with empty arrays
-//	for (int i = 0; i < awardTitlesCount; i++) {
-//		NSMutableArray *array = [[NSMutableArray alloc] init];
-//		[newAwardsArray addObject:array];
-//		[array release];
-//	}
-//	
-//	for (University *uni in universities) {
-//		// Ask the collation which section number the time zone belongs in, based on its locale name.
-//		NSInteger sectionNumber = [collation sectionForObject:uni collationStringSelector:@selector(sortName)];
-//		
-//		// Get the array for the section.
-//		NSMutableArray *awardUniversities = [newAwardsArray objectAtIndex:sectionNumber];
-//		
-//		//  Add the time zone to the section.
-//		[awardUniversities addObject:uni];		
-//	}
-//	
-//	// Sort array?
-//	
-//	self.awardClasses = newAwardsArray;
-//	[newAwardsArray release];		
-//		
-//}			
-//
-
 // Fetch the results from the database and sort by the value of the sort control
 - (void)fetchUniversitiesBySortControl {
 	
@@ -530,7 +457,6 @@
 			} 
 			
 			// Save our fetched data to an array
-			//[self setUniversities:mutableFetchResults];
 			[self.awardClasses addObject:mutableFetchResults];		
 			
 			[mutableFetchResults release];
