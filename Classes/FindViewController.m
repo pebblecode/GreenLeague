@@ -600,9 +600,23 @@
 			
 			[alphabetSectionUniversities addObject:uni];		
 		}
+		
+		// Sort universities using collation
+		for (int i = 0; i < alphabetTitlesCount; i++) {
+			
+			NSMutableArray *alphabetSectionUniversities = [newUniArray objectAtIndex:i];
+			
+			// If the table view or its contents were editable, you would make a mutable copy here.
+			NSArray *sortedUniversitiesForSection = [collation sortedArrayFromArray:alphabetSectionUniversities collationStringSelector:@selector(sortName)];
+			
+			// Replace the existing array with the sorted array.
+			[newUniArray replaceObjectAtIndex:i withObject:sortedUniversitiesForSection];
+		}
 			
 		self.sortedUniversities = newUniArray;
 		[newUniArray release];	
+		
+		
 	}
 }
 

@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>3D03A635131D688900F6B225</string>
+						<string>3D03A63E131D6CD700F6B225</string>
 						<key>history</key>
 						<array>
 							<string>3D03A567131D49C400F6B225</string>
@@ -236,7 +236,7 @@
 				<key>PBXModuleWindowStatusBarHidden2</key>
 				<false/>
 				<key>RubberWindowFrame</key>
-				<string>126 128 1228 776 0 0 1920 1058 </string>
+				<string>329 148 1228 776 0 0 1920 1058 </string>
 			</dict>
 		</dict>
 	</array>
@@ -318,13 +318,11 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>5</integer>
-									<integer>1</integer>
-									<integer>0</integer>
+									<integer>46</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {186, 675}}</string>
+							<string>{{0, 124}, {186, 675}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -354,6 +352,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -371,7 +371,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3D03A632131D688900F6B225</string>
+										<string>3D03A63C131D6CD700F6B225</string>
 										<key>history</key>
 										<array>
 											<string>3DB0D95713152233006FC601</string>
@@ -426,7 +426,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3D03A633131D688900F6B225</string>
+										<string>3D03A63D131D6CD700F6B225</string>
 										<key>history</key>
 										<array>
 											<string>3DB0D95713152233006FC601</string>
@@ -643,8 +643,8 @@
 		<string>3DB0D93113151196006FC601</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>3D03A301131CF90600F6B225</string>
-		<string>/Users/ttt/Work/Dev/GreenLeague/GreenLeague.xcodeproj</string>
 		<string>3D03A32F131D043F00F6B225</string>
+		<string>/Users/ttt/Work/Dev/GreenLeague/GreenLeague.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>381 -756 1333 734 294 -900 1440 900 </string>
