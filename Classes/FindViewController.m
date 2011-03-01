@@ -20,17 +20,14 @@
 
 // Data source field dictionary keys
 
-//#define kDataFieldNameRank "rank2010"
-//#define kDataFieldNameUniversity "university"
-//#define kDataFieldNameScore "score"
-//#define kDataFieldNameAward "award"
-
-static int hasLoaded;
+#define kDataFieldNameRank "rank2010"
+#define kDataFieldNameUniversity "university"
+#define kDataFieldNameScore "score"
+#define kDataFieldNameAward "awardClass"
 
 // Private methods
 @interface FindViewController()
 
-@property (nonatomic, retain) NSMutableArray *awardClasses;
 @property (nonatomic, retain) UILocalizedIndexedCollation *collation;
 
 - (void)deleteDB;
@@ -39,6 +36,7 @@ static int hasLoaded;
 //- (void)configureAwardClasses;
 
 - (void)fetchUniversitiesBySortControl;
+- (void)fetchRankedUniversitiesFromDB;
 
 - (void)loadGreenLeagueDataFromFileToDB;
 - (NSString *)dbPath;
@@ -53,7 +51,7 @@ static int hasLoaded;
 
 @implementation FindViewController
 
-@synthesize universities, awardClasses, collation, managedObjectContext, managedObjectModel, persistentStoreCoordinator, sortControl;
+@synthesize awardClasses, awardClassNames, collation, managedObjectContext, managedObjectModel, persistentStoreCoordinator, sortControl;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -67,6 +65,7 @@ static int hasLoaded;
 	return self;
 }
 
+// TODO: viewDidLoad gets called twice for some reason
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
@@ -78,17 +77,19 @@ static int hasLoaded;
 	[self.navigationController.navigationBar addSubview:sortControl];	
 	
 	// Fetch the results from the database and sort by the value of the sort control
-	if (!hasLoaded) {	
-		universities = [[NSMutableArray alloc] initWithCapacity:0];
-				
-		// Set up the database, and get the data from the file if necessary
-		[self setupDB];	
-		
-		[self fetchUniversitiesBySortControl];
-		hasLoaded = YES;
-	}
+	self.awardClasses = [[NSMutableArray alloc] initWithCapacity:0];
 	
+	self.awardClassNames = [NSArray arrayWithObjects:@"1st", @"2:1", @"2:2", @"3rd", @"Fail", @"Did not sit exam", nil];
 	
+	//universities = [[NSMutableArray alloc] initWithCapacity:0];
+	
+	// To remove the db all the time (for debugging only)
+	//[self deleteDB];		
+	
+	// Set up the database, and get the data from the file if necessary		
+	[self setupDB];
+	
+	[self fetchUniversitiesBySortControl];	
 }
 
 - (Boolean)dbExists {
@@ -119,13 +120,12 @@ static int hasLoaded;
 	// Only fetch new sort if value has changed
 	if (self.sortControl.selectedSegmentIndex != universitySortIndex) {	
 		if ([self isRankSort]) {
-			NSLog(@"Rank sort");
+			[self fetchRankedUniversitiesFromDB];
 		} else if ([self isNameSort]) {
 			NSLog(@"Name sort");
 		}
 	}
 	universitySortIndex = self.sortControl.selectedSegmentIndex;
-	
 }
 
 
@@ -164,9 +164,9 @@ static int hasLoaded;
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     int sections;
-
+	
 	if ([self isRankSort]) {
-		sections = 1;
+		sections = [self.awardClasses count];
 	} else if ([self isNameSort]) {
 		sections = [[collation sectionTitles] count];
 	}	
@@ -177,16 +177,15 @@ static int hasLoaded;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 	// The number of time zones in the section is the count of the array associated with the section in the sections array.
-	NSArray *universitiesInAwardClass = [awardClasses objectAtIndex:section];	
     int sections;
 	
 	if ([self isRankSort]) {
-		sections = [self.universities count];
+		sections = [[awardClasses objectAtIndex:section] count];
 	} else if ([self isNameSort]) {
-		sections = [[collation sectionTitles] count];
+		sections = [[collation sectionTitles] count]; // TODO: WRONG???
 	}		
 	
-    return [universitiesInAwardClass count];
+    return sections;
 }
 
 
@@ -201,15 +200,25 @@ static int hasLoaded;
     }
     
 	if ([self isRankSort]) {
-		int glDataIndex = [indexPath indexAtPosition:[indexPath length] - 1];
-		if (glDataIndex < [self.universities count]) {
-			University *uni = [self.universities objectAtIndex:glDataIndex];
-			// Text: Rank. University
-			NSString *rankString = ([[uni rank2010] intValue] == 0) ? @"(none) " : [NSString stringWithFormat:@"%@. ", uni.rank2010];
-			cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, uni.name];	
-			// Detailed text: Scored: Score
-			cell.detailTextLabel.text = [NSString stringWithFormat:@"Scored: %@", uni.totalScore];
-		}
+//		int glDataIndex = [indexPath indexAtPosition:[indexPath length] - 1];
+//		if (glDataIndex < [self.universities count]) {
+//			University *uni = [self.universities objectAtIndex:glDataIndex];
+//			// Text: Rank. University
+//			NSString *rankString = ([[uni rank2010] intValue] == 0) ? @"(none) " : [NSString stringWithFormat:@"%@. ", uni.rank2010];
+//			cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, uni.name];	
+//			// Detailed text: Scored: Score
+//			cell.detailTextLabel.text = [NSString stringWithFormat:@"Scored: %@", uni.totalScore];
+//		}
+		
+		NSArray *universitiesInAwardClass = [awardClasses objectAtIndex:indexPath.section];	
+		University *uni = [universitiesInAwardClass objectAtIndex:indexPath.row];
+		
+		// Text: Rank. University
+		NSString *rankString = ([[uni rank2010] intValue] == 0) ? @"(none) " : [NSString stringWithFormat:@"%@. ", uni.rank2010];
+		cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, uni.sortName];	
+		// Detailed text: Scored: Score
+		cell.detailTextLabel.text = [NSString stringWithFormat:@"Scored: %@", uni.totalScore];		
+		
 	} else if ([self isNameSort]) {		
 		NSArray *universitiesInAwardClass = [awardClasses objectAtIndex:indexPath.section];	
 		University *uni = [universitiesInAwardClass objectAtIndex:indexPath.row];
@@ -229,7 +238,7 @@ static int hasLoaded;
 	NSString *headerTitle;
 	
 	if ([self isRankSort]) {
-		headerTitle = @"Rank title";
+		headerTitle = [awardClassNames objectAtIndex:section];
 	} else if ([self isNameSort]) {
 		headerTitle = [[collation sectionTitles] objectAtIndex:section];
 	}
@@ -239,7 +248,7 @@ static int hasLoaded;
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
 	NSArray *indexTitles;
 	if ([self isRankSort]) {
-		indexTitles = [[NSArray alloc] initWithObjects:@"Rank title", nil];
+		indexTitles = awardClassNames;
 	} else if ([self isNameSort]) {
 		indexTitles = [collation sectionIndexTitles];
 	}
@@ -250,7 +259,7 @@ static int hasLoaded;
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
 	NSInteger section;
 	if ([self isRankSort]) {
-		section = 0;
+		section = index; // Same as index?? //[awardClassNames indexOfObject:title];
 	} else if ([self isNameSort]) {
 		section = [collation sectionForSectionIndexTitleAtIndex:index];
 	}    
@@ -332,8 +341,9 @@ static int hasLoaded;
 
 
 - (void)dealloc {
-	[universities release];
+	//[universities release];
 	[awardClasses release];
+	[awardClassNames release];
 	[collation release];
 	
 	[managedObjectContext release];
@@ -387,10 +397,7 @@ static int hasLoaded;
     
     if (persistentStoreCoordinator) {
         return persistentStoreCoordinator;
-    }
-    
-	// To remove the db all the time (for debugging only)
-	[self deleteDB];
+    }    
 	
 	// This is used to create the db in the application documents directory in the app - once it's created, it can be transferred to the Resources directory in xcode
     NSURL *storeUrl = [NSURL fileURLWithPath:[self dbPath]];
@@ -498,40 +505,46 @@ static int hasLoaded;
 //		
 //}			
 //
-//- (void)fetchRankedUniversitiesFromDBSortBy:(NSString *)sortField {
-//	NSEntityDescription *entity = [NSEntityDescription entityForName:[University entityName] inManagedObjectContext:[self managedObjectContext]]; 
-//	
-//	// Setup the fetch request
-//	NSFetchRequest *request = [[NSFetchRequest alloc] init];
-//	[request setEntity:entity]; 
-//	
-//	// Sort by given sortField
-//	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:sortField ascending:YES];
-//	NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
-//	[request setSortDescriptors:sortDescriptors];
-//	[sortDescriptor release]; 
-//	
-//	// Set predicate of university being ranked ie, not rank of 0
-//	NSPredicate *rankPredicate = [NSPredicate predicateWithFormat:@"rank2010 != 0"];
-//	[request setPredicate:rankPredicate];	
-//	
-//	// Fetch the records and handle an error
-//	NSError *error;
-//	NSMutableArray *mutableFetchResults = [[[self managedObjectContext] executeFetchRequest:request error:&error] mutableCopy]; 
-//	//NSLog(@"mutableFetchResults: %@", mutableFetchResults);
-//	
-//	if (!mutableFetchResults) {
-//		// Handle the error.
-//		// This is a serious error and should advise the user to restart the application
-//		NSLog(@"mutableFetchResults error: %@", error);
-//	} 
-//	
-//	// Save our fetched data to an array
-//	[self setUniversities:mutableFetchResults];
-//	[mutableFetchResults release];
-//	[request release];
-//	
-//}
+
+- (void)fetchRankedUniversitiesFromDB {
+	NSEntityDescription *entity = [NSEntityDescription entityForName:[University entityName] inManagedObjectContext:[self managedObjectContext]]; 	
+	
+	for (NSString *awardName in awardClassNames) {
+		// Setup the fetch request
+		NSFetchRequest *request = [[NSFetchRequest alloc] init];
+		[request setEntity:entity]; 
+		
+		// Sort by given rank
+		NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@kDataFieldNameRank ascending:YES];
+		NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+		[request setSortDescriptors:sortDescriptors];
+		[sortDescriptor release]; 
+		
+		// Set predicate of university award class
+		NSString *predicate = [NSString stringWithFormat:@"%@ == '%@'", @kDataFieldNameAward, awardName];
+		NSPredicate *rankPredicate = [NSPredicate predicateWithFormat:predicate];
+		[request setPredicate:rankPredicate];	
+		
+		// Fetch the records and handle an error
+		NSError *error;
+		NSMutableArray *mutableFetchResults = [[[self managedObjectContext] executeFetchRequest:request error:&error] mutableCopy]; 
+		//NSLog(@"mutableFetchResults: %@", mutableFetchResults);
+		
+		if (!mutableFetchResults) {
+			// Handle the error.
+			// This is a serious error and should advise the user to restart the application
+			NSLog(@"mutableFetchResults error: %@", error);
+		} 
+		
+		// Save our fetched data to an array
+		//[self setUniversities:mutableFetchResults];
+		[self.awardClasses addObject:mutableFetchResults];		
+		
+		[mutableFetchResults release];
+		[request release];
+	}
+	
+}
 
 
 // Populate the database from kDataSourceFile csv file
