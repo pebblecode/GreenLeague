@@ -518,13 +518,17 @@
 		}
 		
 		for (University *uni in self.universities) {
+			NSAutoreleasePool * pool = [NSAutoreleasePool new];
+			
 			// Ask the collation which section number the university belongs in, based on its sortName.
 			NSInteger sectionNumber = [collation sectionForObject:uni collationStringSelector:@selector(sortName)];
 			
 			// Get the array for the section.
 			NSMutableArray *alphabetSectionUniversities = [newUniArray objectAtIndex:sectionNumber];
 			
-			[alphabetSectionUniversities addObject:uni];		
+			[alphabetSectionUniversities addObject:uni];
+			
+			[pool drain]; pool = nil;
 		}
 		
 		// Sort universities using collation

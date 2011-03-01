@@ -63,6 +63,8 @@
     NSScanner *scanner = [NSScanner scannerWithString:self];
     [scanner setCharactersToBeSkipped:nil];
     while ( ![scanner isAtEnd] ) {        
+		NSAutoreleasePool * pool = [NSAutoreleasePool new];
+		
         BOOL insideQuotes = NO;
         BOOL finishedRow = NO;
         NSMutableArray *columns = [NSMutableArray arrayWithCapacity:10];
@@ -111,6 +113,8 @@
             }
         }
         if ( [columns count] > 0 ) [rows addObject:columns];
+		
+		[pool drain]; pool = nil;
     }
 	
     return rows;
