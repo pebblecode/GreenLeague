@@ -197,7 +197,48 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array/>
+	<array>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
+				<string>3D03A32F131D043F00F6B225</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>FindViewController.m</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>3D03A330131D043F00F6B225</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>FindViewController.m</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>3D03A3AC131D1A5E00F6B225</string>
+						<key>history</key>
+						<array>
+							<string>3D03A32B131D023200F6B225</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {1228, 735}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>38 102 1228 776 0 0 1920 1058 </string>
+			</dict>
+		</dict>
+	</array>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>-1</integer>
@@ -331,7 +372,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3D03A321131CFA2100F6B225</string>
+										<string>3D03A3AA131D1A5E00F6B225</string>
 										<key>history</key>
 										<array>
 											<string>3DB0D95713152233006FC601</string>
@@ -345,7 +386,8 @@
 											<string>3D03A2D5131C1F6500F6B225</string>
 											<string>3D03A2F1131C207F00F6B225</string>
 											<string>3D03A315131CF97200F6B225</string>
-											<string>3D03A312131CF96700F6B225</string>
+											<string>3D03A392131D173800F6B225</string>
+											<string>3D03A393131D173800F6B225</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -384,7 +426,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3D03A322131CFA2100F6B225</string>
+										<string>3D03A3AB131D1A5E00F6B225</string>
 										<key>history</key>
 										<array>
 											<string>3DB0D95713152233006FC601</string>
@@ -394,8 +436,8 @@
 											<string>3D039FF6131BA8A700F6B225</string>
 											<string>3D03A286131C109F00F6B225</string>
 											<string>3D03A2CA131C1C6600F6B225</string>
-											<string>3D03A2D8131C1F6500F6B225</string>
-											<string>3D03A2D9131C1F6500F6B225</string>
+											<string>3D03A39C131D179D00F6B225</string>
+											<string>3D03A39D131D179D00F6B225</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -595,12 +637,13 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>3D03A301131CF90600F6B225</string>
 		<string>3D03A2ED131C202F00F6B225</string>
 		<string>3D03A2EE131C202F00F6B225</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>3DB0D93113151196006FC601</string>
+		<string>3D03A32F131D043F00F6B225</string>
 		<string>1C78EAAD065D492600B07095</string>
-		<string>3D03A301131CF90600F6B225</string>
 		<string>/Users/ttt/Work/Dev/GreenLeague/GreenLeague.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -620,26 +663,28 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>FindViewController.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {500, 218}}</string>
+								<string>{{0, 0}, {1021, 342}}</string>
 								<key>RubberWindowFrame</key>
-								<string>587 410 500 500 0 0 1920 1058 </string>
+								<string>587 286 1021 624 0 0 1920 1058 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>218pt</string>
+							<string>342pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -656,9 +701,9 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 223}, {500, 236}}</string>
+								<string>{{0, 347}, {1021, 236}}</string>
 								<key>RubberWindowFrame</key>
-								<string>587 410 500 500 0 0 1920 1058 </string>
+								<string>587 286 1021 624 0 0 1920 1058 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXBuildResultsModule</string>
@@ -667,7 +712,7 @@
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>459pt</string>
+					<string>583pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -690,7 +735,7 @@
 			<key>WindowContentMinSize</key>
 			<string>486 300</string>
 			<key>WindowString</key>
-			<string>587 410 500 500 0 0 1920 1058 </string>
+			<string>587 286 1021 624 0 0 1920 1058 </string>
 			<key>WindowToolGUID</key>
 			<string>3DB0D93113151196006FC601</string>
 			<key>WindowToolIsVisible</key>
@@ -950,7 +995,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1213, 442}}</string>
 								<key>RubberWindowFrame</key>
-								<string>599 74 1213 483 0 0 1920 1058 </string>
+								<string>438 67 1213 483 0 0 1920 1058 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXDebugCLIModule</string>
@@ -979,7 +1024,7 @@
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.consoleV3</string>
 			<key>WindowString</key>
-			<string>599 74 1213 483 0 0 1920 1058 </string>
+			<string>438 67 1213 483 0 0 1920 1058 </string>
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
@@ -1246,7 +1291,7 @@
 			<key>WindowToolGUID</key>
 			<string>3D03A301131CF90600F6B225</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

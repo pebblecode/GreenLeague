@@ -20,6 +20,7 @@
     NSPersistentStoreCoordinator *persistentStoreCoordinator;
 	
 	UISegmentedControl *sortControl;
+	int universitySortIndex;	
 }
 
 @property (nonatomic, retain) NSMutableArray *universities;
@@ -30,7 +31,7 @@
 
 @property (nonatomic, retain, readonly) UISegmentedControl *sortControl;
 
-- (void)fetchRankedUniversitiesSortBy:(NSString *)sortField;
+//- (void)fetchRankedUniversitiesSortBy:(NSString *)sortField;
 - (NSString *)applicationDocumentsDirectory;
 
 @end

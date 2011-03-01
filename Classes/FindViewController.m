@@ -14,8 +14,9 @@
 #define kStartIndexForData 4
 #define kDatabaseSqliteFile "green_league.sqlite"
 
-#define kSortByRankIndex 0 
-#define kSortByAlphabetIndex 1
+#define kInvalidSortByControlIndex -100
+#define kSortByRankControlIndex 0
+#define kSortByNameControlIndex 1
 
 // Data source field dictionary keys
 
@@ -24,6 +25,8 @@
 //#define kDataFieldNameScore "score"
 //#define kDataFieldNameAward "award"
 
+static int hasLoaded;
+
 // Private methods
 @interface FindViewController()
 
@@ -31,9 +34,18 @@
 @property (nonatomic, retain) UILocalizedIndexedCollation *collation;
 
 - (void)deleteDB;
-- (void)fetchRankedUniversitiesFromDBSortBy:(NSString *)sortField;
+
+//- (void)fetchRankedUniversitiesFromDBSortBy:(NSString *)sortField;
+//- (void)configureAwardClasses;
+
+- (void)fetchUniversitiesBySortControl;
+
 - (void)loadGreenLeagueDataFromFileToDB;
-- (void)configureAwardClasses;
+- (NSString *)dbPath;
+- (Boolean)dbExists;
+- (void)setupDB;
+- (Boolean)isRankSort;
+- (Boolean)isNameSort;
 
 @end
 
@@ -57,16 +69,63 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	universities = [[NSMutableArray alloc] initWithCapacity:0];
 	
-    //[self loadGreenLeagueDataFromFile];
-	[self fetchRankedUniversitiesSortBy:@"rank2010"];
-	//[self fetchRankedUniversitiesSortBy:@"name"];
-	
+	universitySortIndex = kInvalidSortByControlIndex; // Set to invalid, so that results are fetched the first time
 	sortControl = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Rank", @"A-Z", nil]];
 	sortControl.frame = CGRectMake(76, 4, 150, 34);
-	sortControl.selectedSegmentIndex = kSortByRankIndex; // Select rank by default
-	[self.navigationController.navigationBar addSubview:sortControl];
+	sortControl.selectedSegmentIndex = kSortByRankControlIndex; // Select rank by default
+	[sortControl addTarget:self action:@selector(fetchUniversitiesBySortControl) forControlEvents:UIControlEventValueChanged];
+	[self.navigationController.navigationBar addSubview:sortControl];	
+	
+	// Fetch the results from the database and sort by the value of the sort control
+	if (!hasLoaded) {	
+		universities = [[NSMutableArray alloc] initWithCapacity:0];
+				
+		// Set up the database, and get the data from the file if necessary
+		[self setupDB];	
+		
+		[self fetchUniversitiesBySortControl];
+		hasLoaded = YES;
+	}
+	
+	
+}
+
+- (Boolean)dbExists {
+	NSFileManager *filemgr = [NSFileManager defaultManager];
+	
+	return [filemgr fileExistsAtPath:[self dbPath]];
+}
+
+// Set up the database, and get the data from a file if necessary
+- (void)setupDB {
+	// Check if there are any universities in the DB
+	if (![self dbExists]) { // If none, load it from file
+		[self loadGreenLeagueDataFromFileToDB];
+	}
+}
+
+- (Boolean)isRankSort {
+	return (self.sortControl.selectedSegmentIndex == kSortByRankControlIndex);
+}
+
+- (Boolean)isNameSort {
+	return (self.sortControl.selectedSegmentIndex == kSortByNameControlIndex);
+}
+
+// Fetch the results from the database and sort by the value of the sort control
+- (void)fetchUniversitiesBySortControl {
+	
+	// Only fetch new sort if value has changed
+	if (self.sortControl.selectedSegmentIndex != universitySortIndex) {	
+		if ([self isRankSort]) {
+			NSLog(@"Rank sort");
+		} else if ([self isNameSort]) {
+			NSLog(@"Name sort");
+		}
+	}
+	universitySortIndex = self.sortControl.selectedSegmentIndex;
+	
 }
 
 
@@ -105,11 +164,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     int sections;
-	if (self.sortControl.selectedSegmentIndex == kSortByRankIndex) {
+
+	if ([self isRankSort]) {
 		sections = 1;
-	} else {
+	} else if ([self isNameSort]) {
 		sections = [[collation sectionTitles] count];
-	}
+	}	
 
     return sections;
 }
@@ -117,14 +177,14 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 	// The number of time zones in the section is the count of the array associated with the section in the sections array.
-	NSArray *universitiesInAwardClass = [awardClasses objectAtIndex:section];
-	
+	NSArray *universitiesInAwardClass = [awardClasses objectAtIndex:section];	
     int sections;
-	if (self.sortControl.selectedSegmentIndex == kSortByRankIndex) {
+	
+	if ([self isRankSort]) {
 		sections = [self.universities count];
-	} else {
+	} else if ([self isNameSort]) {
 		sections = [[collation sectionTitles] count];
-	}	
+	}		
 	
     return [universitiesInAwardClass count];
 }
@@ -140,7 +200,7 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
     
-	if (self.sortControl.selectedSegmentIndex == kSortByRankIndex) {
+	if ([self isRankSort]) {
 		int glDataIndex = [indexPath indexAtPosition:[indexPath length] - 1];
 		if (glDataIndex < [self.universities count]) {
 			University *uni = [self.universities objectAtIndex:glDataIndex];
@@ -150,7 +210,7 @@
 			// Detailed text: Scored: Score
 			cell.detailTextLabel.text = [NSString stringWithFormat:@"Scored: %@", uni.totalScore];
 		}
-	} else {			
+	} else if ([self isNameSort]) {		
 		NSArray *universitiesInAwardClass = [awardClasses objectAtIndex:indexPath.section];	
 		University *uni = [universitiesInAwardClass objectAtIndex:indexPath.row];
 		
@@ -167,9 +227,10 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {	
 	NSString *headerTitle;
-	if (self.sortControl.selectedSegmentIndex == kSortByRankIndex) {
+	
+	if ([self isRankSort]) {
 		headerTitle = @"Rank title";
-	} else {
+	} else if ([self isNameSort]) {
 		headerTitle = [[collation sectionTitles] objectAtIndex:section];
 	}
     return headerTitle;
@@ -177,9 +238,9 @@
 
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
 	NSArray *indexTitles;
-	if (self.sortControl.selectedSegmentIndex == kSortByRankIndex) {
+	if ([self isRankSort]) {
 		indexTitles = [[NSArray alloc] initWithObjects:@"Rank title", nil];
-	} else {
+	} else if ([self isNameSort]) {
 		indexTitles = [collation sectionIndexTitles];
 	}
     
@@ -188,9 +249,9 @@
 
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
 	NSInteger section;
-	if (self.sortControl.selectedSegmentIndex == kSortByRankIndex) {
+	if ([self isRankSort]) {
 		section = 0;
-	} else {
+	} else if ([self isNameSort]) {
 		section = [collation sectionForSectionIndexTitleAtIndex:index];
 	}    
 	return section;
@@ -332,7 +393,7 @@
 	[self deleteDB];
 	
 	// This is used to create the db in the application documents directory in the app - once it's created, it can be transferred to the Resources directory in xcode
-    NSURL *storeUrl = [NSURL fileURLWithPath:[[self applicationDocumentsDirectory] stringByAppendingPathComponent:@kDatabaseSqliteFile]];
+    NSURL *storeUrl = [NSURL fileURLWithPath:[self dbPath]];
 	
 	// To load the db from the application directory (in Resources in xcode). For when the database has been created already. 
 	//	NSString *dbFilePath = [[NSBundle mainBundle] pathForResource:@"random_db" ofType:@"sqlite"];
@@ -368,109 +429,109 @@
 - (void)deleteDB {
 	NSFileManager *filemgr = [NSFileManager defaultManager];
 	
-	if ([filemgr removeItemAtPath:[[self applicationDocumentsDirectory] stringByAppendingPathComponent:@kDatabaseSqliteFile] error: NULL]  == YES) {
+	if ([filemgr removeItemAtPath:[self dbPath] error: NULL]  == YES) {
         NSLog (@"Remove sqlite file successful");
 	} else {
         NSLog (@"Remove sqlite file failed");
 	}
 }
 
-- (void)fetchRankedUniversitiesSortBy:(NSString *)sortField {
-
-	[self fetchRankedUniversitiesFromDBSortBy:sortField];
-	
-	if (self.universities.count <= 0) {
-		NSLog(@"No green league data");
-		[self loadGreenLeagueDataFromFileToDB];
-		[self fetchRankedUniversitiesFromDBSortBy:sortField];
-	}
-	//NSLog(@"Loaded: %@", universities);
-	
-	if (self.sortControl.selectedSegmentIndex == kSortByAlphabetIndex) {
-		[self configureAwardClasses];
-	}
-	
-}
-
-- (void)setUniversities:(NSMutableArray *)newDataArray {
-	if (newDataArray != universities) {
-		[universities release];
-		universities = [newDataArray retain];
-	}
-	if (universities == nil) {
-		self.awardClasses = nil;
-	} else {
-		[self configureAwardClasses];
-	}
-}
-			
-- (void)configureAwardClasses {
-	// Get the current collation and keep a reference to it.
-	self.collation = [UILocalizedIndexedCollation currentCollation];
-	
-	NSInteger awardTitlesCount = [[collation sectionTitles] count];
-	
-	NSMutableArray *newAwardsArray = [[NSMutableArray alloc] initWithCapacity:awardTitlesCount];
-	
-	// Set up the awards array with empty arrays
-	for (int i = 0; i < awardTitlesCount; i++) {
-		NSMutableArray *array = [[NSMutableArray alloc] init];
-		[newAwardsArray addObject:array];
-		[array release];
-	}
-	
-	for (University *uni in universities) {
-		// Ask the collation which section number the time zone belongs in, based on its locale name.
-		NSInteger sectionNumber = [collation sectionForObject:uni collationStringSelector:@selector(sortName)];
-		
-		// Get the array for the section.
-		NSMutableArray *awardUniversities = [newAwardsArray objectAtIndex:sectionNumber];
-		
-		//  Add the time zone to the section.
-		[awardUniversities addObject:uni];		
-	}
-	
-	// Sort array?
-	
-	self.awardClasses = newAwardsArray;
-	[newAwardsArray release];		
-		
-}			
-
-- (void)fetchRankedUniversitiesFromDBSortBy:(NSString *)sortField {
-	NSEntityDescription *entity = [NSEntityDescription entityForName:[University entityName] inManagedObjectContext:[self managedObjectContext]]; 
-	
-	// Setup the fetch request
-	NSFetchRequest *request = [[NSFetchRequest alloc] init];
-	[request setEntity:entity]; 
-	
-	// Sort by given sortField
-	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:sortField ascending:YES];
-	NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
-	[request setSortDescriptors:sortDescriptors];
-	[sortDescriptor release]; 
-	
-	// Set predicate of university being ranked ie, not rank of 0
-	NSPredicate *rankPredicate = [NSPredicate predicateWithFormat:@"rank2010 != 0"];
-	[request setPredicate:rankPredicate];	
-	
-	// Fetch the records and handle an error
-	NSError *error;
-	NSMutableArray *mutableFetchResults = [[[self managedObjectContext] executeFetchRequest:request error:&error] mutableCopy]; 
-	//NSLog(@"mutableFetchResults: %@", mutableFetchResults);
-	
-	if (!mutableFetchResults) {
-		// Handle the error.
-		// This is a serious error and should advise the user to restart the application
-		NSLog(@"mutableFetchResults error: %@", error);
-	} 
-	
-	// Save our fetched data to an array
-	[self setUniversities:mutableFetchResults];
-	[mutableFetchResults release];
-	[request release];
-	
-}
+//- (void)fetchRankedUniversitiesSortBy:(NSString *)sortField {
+//
+//	[self fetchRankedUniversitiesFromDBSortBy:sortField];
+//	
+//	if (self.universities.count <= 0) {
+//		NSLog(@"No green league data");
+//		[self loadGreenLeagueDataFromFileToDB];
+//		[self fetchRankedUniversitiesFromDBSortBy:sortField];
+//	}
+//	//NSLog(@"Loaded: %@", universities);
+//	
+//	if (self.sortControl.selectedSegmentIndex == kSortByAlphabetIndex) {
+//		[self configureAwardClasses];
+//	}
+//	
+//}
+//
+//- (void)setUniversities:(NSMutableArray *)newDataArray {
+//	if (newDataArray != universities) {
+//		[universities release];
+//		universities = [newDataArray retain];
+//	}
+//	if (universities == nil) {
+//		self.awardClasses = nil;
+//	} else {
+//		//[self configureAwardClasses];
+//	}
+//}
+//			
+//- (void)configureAwardClasses {
+//	// Get the current collation and keep a reference to it.
+//	self.collation = [UILocalizedIndexedCollation currentCollation];
+//	
+//	NSInteger awardTitlesCount = [[collation sectionTitles] count];
+//	
+//	NSMutableArray *newAwardsArray = [[NSMutableArray alloc] initWithCapacity:awardTitlesCount];
+//	
+//	// Set up the awards array with empty arrays
+//	for (int i = 0; i < awardTitlesCount; i++) {
+//		NSMutableArray *array = [[NSMutableArray alloc] init];
+//		[newAwardsArray addObject:array];
+//		[array release];
+//	}
+//	
+//	for (University *uni in universities) {
+//		// Ask the collation which section number the time zone belongs in, based on its locale name.
+//		NSInteger sectionNumber = [collation sectionForObject:uni collationStringSelector:@selector(sortName)];
+//		
+//		// Get the array for the section.
+//		NSMutableArray *awardUniversities = [newAwardsArray objectAtIndex:sectionNumber];
+//		
+//		//  Add the time zone to the section.
+//		[awardUniversities addObject:uni];		
+//	}
+//	
+//	// Sort array?
+//	
+//	self.awardClasses = newAwardsArray;
+//	[newAwardsArray release];		
+//		
+//}			
+//
+//- (void)fetchRankedUniversitiesFromDBSortBy:(NSString *)sortField {
+//	NSEntityDescription *entity = [NSEntityDescription entityForName:[University entityName] inManagedObjectContext:[self managedObjectContext]]; 
+//	
+//	// Setup the fetch request
+//	NSFetchRequest *request = [[NSFetchRequest alloc] init];
+//	[request setEntity:entity]; 
+//	
+//	// Sort by given sortField
+//	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:sortField ascending:YES];
+//	NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+//	[request setSortDescriptors:sortDescriptors];
+//	[sortDescriptor release]; 
+//	
+//	// Set predicate of university being ranked ie, not rank of 0
+//	NSPredicate *rankPredicate = [NSPredicate predicateWithFormat:@"rank2010 != 0"];
+//	[request setPredicate:rankPredicate];	
+//	
+//	// Fetch the records and handle an error
+//	NSError *error;
+//	NSMutableArray *mutableFetchResults = [[[self managedObjectContext] executeFetchRequest:request error:&error] mutableCopy]; 
+//	//NSLog(@"mutableFetchResults: %@", mutableFetchResults);
+//	
+//	if (!mutableFetchResults) {
+//		// Handle the error.
+//		// This is a serious error and should advise the user to restart the application
+//		NSLog(@"mutableFetchResults error: %@", error);
+//	} 
+//	
+//	// Save our fetched data to an array
+//	[self setUniversities:mutableFetchResults];
+//	[mutableFetchResults release];
+//	[request release];
+//	
+//}
 
 
 // Populate the database from kDataSourceFile csv file
@@ -491,7 +552,7 @@
 
 
 #pragma mark -
-#pragma mark === Application's Documents directory ===
+#pragma mark === Application paths ===
 #pragma mark
 
 /**
@@ -501,6 +562,9 @@
     return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
 }
 
+- (NSString *)dbPath {
+	return [[self applicationDocumentsDirectory] stringByAppendingPathComponent:@kDatabaseSqliteFile];
+}
 
 
 @end
