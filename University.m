@@ -10,7 +10,6 @@
 #import "NSString+Helper.h"
 
 #define kUniversityEntityName "University"
-#define kCSVDelimiter ","
 
 // Index for the fields in the data source file
 #define kDataFieldIndexRank2010 0
