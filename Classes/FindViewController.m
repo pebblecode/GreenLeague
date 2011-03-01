@@ -416,7 +416,9 @@
 			[self fetchUniversitiesFromDBSortedByName];
 		}
 		
+		// Reload data and scroll to the top
 		[self.tableView reloadData];
+		[self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
 	}
 	universitySortIndex = self.sortControl.selectedSegmentIndex;
 }
