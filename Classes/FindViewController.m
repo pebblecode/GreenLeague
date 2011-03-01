@@ -51,7 +51,7 @@
 
 @implementation FindViewController
 
-@synthesize awardClasses, awardClassNames, collation, managedObjectContext, managedObjectModel, persistentStoreCoordinator, sortControl;
+@synthesize awardClasses, awardClassNames, awardClassDBNames, collation, managedObjectContext, managedObjectModel, persistentStoreCoordinator, sortControl;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -79,7 +79,8 @@
 	// Fetch the results from the database and sort by the value of the sort control
 	self.awardClasses = [[NSMutableArray alloc] initWithCapacity:0];
 	
-	self.awardClassNames = [NSArray arrayWithObjects:@"1st", @"2:1", @"2:2", @"3rd", @"Fail", @"Did not sit exam", nil];
+	self.awardClassDBNames = [NSArray arrayWithObjects:@"1st", @"2:1", @"2:2", @"3rd", @"Fail", @"Did not sit exam", nil];
+	self.awardClassNames = [NSArray arrayWithObjects:@"1st", @"Upper 2nd", @"Lower 2nd", @"3rd", @"Failed", @"No award", nil];
 	
 	//universities = [[NSMutableArray alloc] initWithCapacity:0];
 	
@@ -238,7 +239,7 @@
 	NSString *headerTitle;
 	
 	if ([self isRankSort]) {
-		headerTitle = [awardClassNames objectAtIndex:section];
+		headerTitle = [self.awardClassNames objectAtIndex:section];
 	} else if ([self isNameSort]) {
 		headerTitle = [[collation sectionTitles] objectAtIndex:section];
 	}
@@ -248,7 +249,7 @@
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
 	NSArray *indexTitles;
 	if ([self isRankSort]) {
-		indexTitles = awardClassNames;
+		indexTitles = self.awardClassNames;
 	} else if ([self isNameSort]) {
 		indexTitles = [collation sectionIndexTitles];
 	}
@@ -259,7 +260,7 @@
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
 	NSInteger section;
 	if ([self isRankSort]) {
-		section = index; // Same as index?? //[awardClassNames indexOfObject:title];
+		section = index; // Same as index
 	} else if ([self isNameSort]) {
 		section = [collation sectionForSectionIndexTitleAtIndex:index];
 	}    
@@ -344,6 +345,7 @@
 	//[universities release];
 	[awardClasses release];
 	[awardClassNames release];
+	[awardClassDBNames release];
 	[collation release];
 	
 	[managedObjectContext release];
@@ -509,7 +511,7 @@
 - (void)fetchRankedUniversitiesFromDB {
 	NSEntityDescription *entity = [NSEntityDescription entityForName:[University entityName] inManagedObjectContext:[self managedObjectContext]]; 	
 	
-	for (NSString *awardName in awardClassNames) {
+	for (NSString *awardName in self.awardClassDBNames) {
 		// Setup the fetch request
 		NSFetchRequest *request = [[NSFetchRequest alloc] init];
 		[request setEntity:entity]; 
@@ -521,7 +523,7 @@
 		[sortDescriptor release]; 
 		
 		// Set predicate of university award class
-		NSString *predicate = [NSString stringWithFormat:@"%@ == '%@'", @kDataFieldNameAward, awardName];
+		NSString *predicate = [NSString stringWithFormat:@"%@ == '%@'", @kDataFieldNameAward, awardName]; // Doesn't work if it is put straight into predicateWithFormat for some reason
 		NSPredicate *rankPredicate = [NSPredicate predicateWithFormat:predicate];
 		[request setPredicate:rankPredicate];	
 		
