@@ -96,42 +96,6 @@
 	[self fetchUniversitiesBySortControl];	
 }
 
-- (Boolean)dbExists {
-	NSFileManager *filemgr = [NSFileManager defaultManager];
-	
-	return [filemgr fileExistsAtPath:[self dbPath]];
-}
-
-// Set up the database, and get the data from a file if necessary
-- (void)setupDB {
-	// Check if there are any universities in the DB
-	if (![self dbExists]) { // If none, load it from file
-		[self loadGreenLeagueDataFromFileToDB];
-	}
-}
-
-- (Boolean)isRankSort {
-	return (self.sortControl.selectedSegmentIndex == kSortByRankControlIndex);
-}
-
-- (Boolean)isNameSort {
-	return (self.sortControl.selectedSegmentIndex == kSortByNameControlIndex);
-}
-
-// Fetch the results from the database and sort by the value of the sort control
-- (void)fetchUniversitiesBySortControl {
-	
-	// Only fetch new sort if value has changed
-	if (self.sortControl.selectedSegmentIndex != universitySortIndex) {	
-		if ([self isRankSort]) {
-			[self fetchRankedUniversitiesFromDB];
-		} else if ([self isNameSort]) {
-			NSLog(@"Name sort");
-		}
-	}
-	universitySortIndex = self.sortControl.selectedSegmentIndex;
-}
-
 
 /*
 - (void)viewWillAppear:(BOOL)animated {
@@ -358,6 +322,17 @@
     [super dealloc];
 }
 
+#pragma mark -
+#pragma mark === Sort control helper methods ===
+#pragma mark
+
+- (Boolean)isRankSort {
+	return (self.sortControl.selectedSegmentIndex == kSortByRankControlIndex);
+}
+
+- (Boolean)isNameSort {
+	return (self.sortControl.selectedSegmentIndex == kSortByNameControlIndex);
+}
 
 #pragma mark -
 #pragma mark === Database methods ===
@@ -438,16 +413,6 @@
     return persistentStoreCoordinator;
 }
 
-- (void)deleteDB {
-	NSFileManager *filemgr = [NSFileManager defaultManager];
-	
-	if ([filemgr removeItemAtPath:[self dbPath] error: NULL]  == YES) {
-        NSLog (@"Remove sqlite file successful");
-	} else {
-        NSLog (@"Remove sqlite file failed");
-	}
-}
-
 //- (void)fetchRankedUniversitiesSortBy:(NSString *)sortField {
 //
 //	[self fetchRankedUniversitiesFromDBSortBy:sortField];
@@ -511,6 +476,20 @@
 //}			
 //
 
+// Fetch the results from the database and sort by the value of the sort control
+- (void)fetchUniversitiesBySortControl {
+	
+	// Only fetch new sort if value has changed
+	if (self.sortControl.selectedSegmentIndex != universitySortIndex) {	
+		if ([self isRankSort]) {
+			[self fetchRankedUniversitiesFromDB];
+		} else if ([self isNameSort]) {
+			NSLog(@"Name sort");
+		}
+	}
+	universitySortIndex = self.sortControl.selectedSegmentIndex;
+}
+
 - (void)fetchRankedUniversitiesFromDB {
 	NSEntityDescription *entity = [NSEntityDescription entityForName:[University entityName] inManagedObjectContext:[self managedObjectContext]]; 	
 	
@@ -563,6 +542,34 @@
 	}	
 }
 
+#pragma mark -
+#pragma mark === Database helpers ===
+#pragma mark
+
+- (Boolean)dbExists {
+	NSFileManager *filemgr = [NSFileManager defaultManager];
+	
+	return [filemgr fileExistsAtPath:[self dbPath]];
+}
+
+// Set up the database, and get the data from a file if necessary
+- (void)setupDB {
+	// Check if there are any universities in the DB
+	if (![self dbExists]) { // If none, load it from file
+		[self loadGreenLeagueDataFromFileToDB];
+	}
+}
+
+
+- (void)deleteDB {
+	NSFileManager *filemgr = [NSFileManager defaultManager];
+	
+	if ([filemgr removeItemAtPath:[self dbPath] error: NULL]  == YES) {
+        NSLog (@"Remove sqlite file successful");
+	} else {
+        NSLog (@"Remove sqlite file failed");
+	}
+}
 
 #pragma mark -
 #pragma mark === Application paths ===
