@@ -14,7 +14,8 @@
 #define kStartIndexForData 4
 #define kDatabaseSqliteFile "green_league.sqlite"
 
-
+#define kSortByRankIndex 0 
+#define kSortByAlphabetIndex 1
 
 // Data source field dictionary keys
 
@@ -64,7 +65,7 @@
 	
 	sortControl = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Rank", @"A-Z", nil]];
 	sortControl.frame = CGRectMake(76, 4, 150, 34);
-	sortControl.selectedSegmentIndex = 0; // Select rank by default
+	sortControl.selectedSegmentIndex = kSortByRankIndex; // Select rank by default
 	[self.navigationController.navigationBar addSubview:sortControl];
 }
 
@@ -103,14 +104,27 @@
 #pragma mark
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // Return the number of sections.
-    return [[collation sectionTitles] count];
+    int sections;
+	if (self.sortControl.selectedSegmentIndex == kSortByRankIndex) {
+		sections = 1;
+	} else {
+		sections = [[collation sectionTitles] count];
+	}
+
+    return sections;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 	// The number of time zones in the section is the count of the array associated with the section in the sections array.
 	NSArray *universitiesInAwardClass = [awardClasses objectAtIndex:section];
+	
+    int sections;
+	if (self.sortControl.selectedSegmentIndex == kSortByRankIndex) {
+		sections = [self.universities count];
+	} else {
+		sections = [[collation sectionTitles] count];
+	}	
 	
     return [universitiesInAwardClass count];
 }
@@ -126,39 +140,60 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
     
-//	int glDataIndex = [indexPath indexAtPosition:[indexPath length] - 1];
-//	if (glDataIndex < [self.universities count]) {
-//		University *uni = [self.universities objectAtIndex:glDataIndex];
-//		// Text: Rank. University
-//		NSString *rankString = ([[uni rank2010] intValue] == 0) ? @"(none) " : [NSString stringWithFormat:@"%@. ", uni.rank2010];
-//		cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, uni.name];	
-//		// Detailed text: Scored: Score
-//		cell.detailTextLabel.text = [NSString stringWithFormat:@"Scored: %@", uni.totalScore];
-//	}
-	
-	NSArray *universitiesInAwardClass = [awardClasses objectAtIndex:indexPath.section];	
-	University *uni = [universitiesInAwardClass objectAtIndex:indexPath.row];
-	
-	// Text: Rank. University
-	NSString *rankString = ([[uni rank2010] intValue] == 0) ? @"(none) " : [NSString stringWithFormat:@"%@. ", uni.rank2010];
-	cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, uni.sortName];	
-	// Detailed text: Scored: Score
-	cell.detailTextLabel.text = [NSString stringWithFormat:@"Scored: %@", uni.totalScore];
+	if (self.sortControl.selectedSegmentIndex == kSortByRankIndex) {
+		int glDataIndex = [indexPath indexAtPosition:[indexPath length] - 1];
+		if (glDataIndex < [self.universities count]) {
+			University *uni = [self.universities objectAtIndex:glDataIndex];
+			// Text: Rank. University
+			NSString *rankString = ([[uni rank2010] intValue] == 0) ? @"(none) " : [NSString stringWithFormat:@"%@. ", uni.rank2010];
+			cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, uni.name];	
+			// Detailed text: Scored: Score
+			cell.detailTextLabel.text = [NSString stringWithFormat:@"Scored: %@", uni.totalScore];
+		}
+	} else {			
+		NSArray *universitiesInAwardClass = [awardClasses objectAtIndex:indexPath.section];	
+		University *uni = [universitiesInAwardClass objectAtIndex:indexPath.row];
+		
+		// Text: Rank. University
+		NSString *rankString = ([[uni rank2010] intValue] == 0) ? @"(none) " : [NSString stringWithFormat:@"%@. ", uni.rank2010];
+		cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, uni.sortName];	
+		// Detailed text: Scored: Score
+		cell.detailTextLabel.text = [NSString stringWithFormat:@"Scored: %@", uni.totalScore];
+	}
 	
     return cell;
 }
 
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {	
-    return [[collation sectionTitles] objectAtIndex:section];
+	NSString *headerTitle;
+	if (self.sortControl.selectedSegmentIndex == kSortByRankIndex) {
+		headerTitle = @"Rank title";
+	} else {
+		headerTitle = [[collation sectionTitles] objectAtIndex:section];
+	}
+    return headerTitle;
 }
 
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
-    return [collation sectionIndexTitles];
+	NSArray *indexTitles;
+	if (self.sortControl.selectedSegmentIndex == kSortByRankIndex) {
+		indexTitles = [[NSArray alloc] initWithObjects:@"Rank title", nil];
+	} else {
+		indexTitles = [collation sectionIndexTitles];
+	}
+    
+	return indexTitles;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
-    return [collation sectionForSectionIndexTitleAtIndex:index];
+	NSInteger section;
+	if (self.sortControl.selectedSegmentIndex == kSortByRankIndex) {
+		section = 0;
+	} else {
+		section = [collation sectionForSectionIndexTitleAtIndex:index];
+	}    
+	return section;
 }
 
 /*
@@ -350,7 +385,11 @@
 		[self fetchRankedUniversitiesFromDBSortBy:sortField];
 	}
 	//NSLog(@"Loaded: %@", universities);
-	[self configureAwardClasses];
+	
+	if (self.sortControl.selectedSegmentIndex == kSortByAlphabetIndex) {
+		[self configureAwardClasses];
+	}
+	
 }
 
 - (void)setUniversities:(NSMutableArray *)newDataArray {
