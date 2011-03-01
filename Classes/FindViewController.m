@@ -19,12 +19,12 @@
 #define kSortByRankControlIndex 0
 #define kSortByNameControlIndex 1
 
-// Data source field dictionary keys
-
-#define kDataFieldNameRank "rank2010"
-#define kDataFieldNameUniversity "university"
-#define kDataFieldNameScore "score"
-#define kDataFieldNameAward "awardClass"
+// Database field names
+#define kDBFieldRank "rank2010"
+#define kDBFieldName "name"
+#define kDBFieldSortName "sortName"
+#define kDBFieldScore "score"
+#define kDBFieldAwardClass "awardClass"
 
 // Private methods
 @interface FindViewController()
@@ -38,6 +38,7 @@
 
 - (void)fetchUniversitiesBySortControl;
 - (void)fetchUniversitiesFromDBSortedByRank;
+- (void)fetchUniversitiesFromDBSortedByName;
 
 - (void)sortControlValueChange;
 
@@ -54,7 +55,7 @@
 
 @implementation FindViewController
 
-@synthesize awardClasses, awardClassNames, awardClassIndexTitles, awardClassDBNames, collation, managedObjectContext, managedObjectModel, persistentStoreCoordinator, sortControl, universityTableView;
+@synthesize universities, sortedUniversities, awardClasses, awardClassNames, awardClassIndexTitles, awardClassDBNames, collation, managedObjectContext, managedObjectModel, persistentStoreCoordinator, sortControl;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -151,7 +152,7 @@
 	if ([self isRankSort]) {
 		sections = [[self.awardClasses objectAtIndex:section] count];
 	} else if ([self isNameSort]) {
-		sections = [[collation sectionTitles] count]; // TODO: WRONG???
+		sections = [[self.sortedUniversities objectAtIndex:section] count];		
 	}		
 	
     return sections;
@@ -168,6 +169,7 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
     
+	University *uni;
 	if ([self isRankSort]) {
 //		int glDataIndex = [indexPath indexAtPosition:[indexPath length] - 1];
 //		if (glDataIndex < [self.universities count]) {
@@ -180,24 +182,17 @@
 //		}
 		
 		NSArray *universitiesInAwardClass = [self.awardClasses objectAtIndex:indexPath.section];	
-		University *uni = [universitiesInAwardClass objectAtIndex:indexPath.row];
-		
-		// Text: Rank. University
-		NSString *rankString = ([[uni rank2010] intValue] == 0) ? @"(none) " : [NSString stringWithFormat:@"%@. ", uni.rank2010];
-		cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, uni.sortName];	
-		// Detailed text: Scored: Score
-		cell.detailTextLabel.text = [NSString stringWithFormat:@"Scored: %.1f", [uni.totalScore floatValue]];		
-		
+		uni = [universitiesInAwardClass objectAtIndex:indexPath.row];
 	} else if ([self isNameSort]) {		
-		NSArray *universitiesInAwardClass = [self.awardClasses objectAtIndex:indexPath.section];	
-		University *uni = [universitiesInAwardClass objectAtIndex:indexPath.row];
-		
-		// Text: Rank. University
-		NSString *rankString = ([[uni rank2010] intValue] == 0) ? @"(none) " : [NSString stringWithFormat:@"%@. ", uni.rank2010];
-		cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, uni.sortName];	
-		// Detailed text: Scored: Score
-		cell.detailTextLabel.text = [NSString stringWithFormat:@"Scored: %@", uni.totalScore];
+		NSArray *alphabetSectionUniversities = [self.sortedUniversities objectAtIndex:indexPath.section];	
+		uni = [alphabetSectionUniversities objectAtIndex:indexPath.row];		
 	}
+	
+	// Text: Rank. University
+	NSString *rankString = ([[uni rank2010] intValue] == 0) ? @"(none) " : [NSString stringWithFormat:@"%@. ", uni.rank2010];
+	cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, uni.sortName];	
+	// Detailed text: Scored: Score
+	cell.detailTextLabel.text = [NSString stringWithFormat:@"Scored: %.1f", [uni.totalScore floatValue]];		
 	
     return cell;
 }
@@ -310,7 +305,9 @@
 
 
 - (void)dealloc {
-	//[universities release];
+	[universities release];
+	[sortedUniversities release];
+	
 	[awardClasses release];
 	[awardClassNames release];
 	[awardClassDBNames release];
@@ -322,7 +319,6 @@
 	[persistentStoreCoordinator release];
 	
 	[sortControl release];
-	[universityTableView release];	
 	
     [super dealloc];
 }
@@ -331,8 +327,7 @@
 #pragma mark === Sort control helper methods ===
 #pragma mark
 
-- (void)sortControlValueChange {
-	[self.universityTableView reloadData];
+- (void)sortControlValueChange {	
 	[self fetchUniversitiesBySortControl];
 }
 
@@ -491,11 +486,14 @@
 	
 	// Only fetch new sort if value has changed
 	if (self.sortControl.selectedSegmentIndex != universitySortIndex) {	
+				
 		if ([self isRankSort]) {
 			[self fetchUniversitiesFromDBSortedByRank];
 		} else if ([self isNameSort]) {
-			NSLog(@"Name sort");
+			[self fetchUniversitiesFromDBSortedByName];
 		}
+		
+		[self.tableView reloadData];
 	}
 	universitySortIndex = self.sortControl.selectedSegmentIndex;
 }
@@ -509,13 +507,13 @@
 		[request setEntity:entity]; 
 		
 		// Sort by given rank
-		NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@kDataFieldNameRank ascending:YES];
+		NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@kDBFieldRank ascending:YES];
 		NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
 		[request setSortDescriptors:sortDescriptors];
 		[sortDescriptor release]; 
 		
 		// Set predicate of university award class
-		NSString *predicate = [NSString stringWithFormat:@"%@ == '%@'", @kDataFieldNameAward, awardName]; // Doesn't work if it is put straight into predicateWithFormat for some reason
+		NSString *predicate = [NSString stringWithFormat:@"%@ == '%@'", @kDBFieldAwardClass, awardName]; // Doesn't work if it is put straight into predicateWithFormat for some reason
 		NSPredicate *rankPredicate = [NSPredicate predicateWithFormat:predicate];
 		[request setPredicate:rankPredicate];	
 		
@@ -540,6 +538,71 @@
 	
 }
 
+- (void)fetchUniversitiesFromDBSortedByName {
+	
+	// ------------------------------------------------
+	// Get all universities
+	// ------------------------------------------------
+	NSEntityDescription *entity = [NSEntityDescription entityForName:[University entityName] inManagedObjectContext:[self managedObjectContext]]; 	
+	
+	// Setup the fetch request
+	NSFetchRequest *request = [[NSFetchRequest alloc] init];
+	[request setEntity:entity]; 
+	
+	// Sort by given rank
+	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@kDBFieldName ascending:YES];
+	NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+	[request setSortDescriptors:sortDescriptors];
+	[sortDescriptor release];	
+	
+	// Fetch the records and handle an error
+	NSError *error;
+	NSMutableArray *mutableFetchResults = [[[self managedObjectContext] executeFetchRequest:request error:&error] mutableCopy]; 
+	//NSLog(@"mutableFetchResults: %@", mutableFetchResults);
+	
+	if (!mutableFetchResults) {
+		// Handle the error.
+		// This is a serious error and should advise the user to restart the application
+		NSLog(@"mutableFetchResults error: %@", error);
+	} 
+	
+	// Save our fetched data to an array
+	[self setUniversities:mutableFetchResults];
+	
+	[mutableFetchResults release];
+	[request release];
+
+	// ------------------------------------------------
+	// Sort universities using collation
+	// ------------------------------------------------
+	
+	// Get the current collation and keep a reference to it.
+	self.collation = [UILocalizedIndexedCollation currentCollation];
+	
+	NSInteger alphabetTitlesCount = [[collation sectionTitles] count];	
+	NSMutableArray *newUniArray = [[NSMutableArray alloc] initWithCapacity:alphabetTitlesCount];
+	
+	// Set up the sorted university array with empty arrays
+	for (int i = 0; i < alphabetTitlesCount; i++) {
+		NSMutableArray *array = [[NSMutableArray alloc] init];
+		[newUniArray addObject:array];
+		[array release];
+	}
+	
+	for (University *uni in self.universities) {
+		// Ask the collation which section number the university belongs in, based on its sortName.
+		NSInteger sectionNumber = [collation sectionForObject:uni collationStringSelector:@selector(sortName)];
+		
+		// Get the array for the section.
+		NSMutableArray *alphabetSectionUniversities = [newUniArray objectAtIndex:sectionNumber];
+		
+		[alphabetSectionUniversities addObject:uni];		
+	}
+		
+	self.sortedUniversities = newUniArray;
+	[newUniArray release];	
+	
+}
 
 // Populate the database from kDataSourceFile csv file
 - (void)loadGreenLeagueDataFromFileToDB {	
@@ -564,6 +627,14 @@
 	}
 	
 	return awardClasses;
+}
+
+- (NSMutableArray *)sortedUniversities {
+	if (!sortedUniversities) {
+		sortedUniversities = [[NSMutableArray alloc] initWithCapacity:0];		
+	}
+	
+	return sortedUniversities;
 }
 
 - (Boolean)dbExists {

@@ -11,7 +11,9 @@
 
 
 @interface FindViewController : UITableViewController {
-	//NSMutableArray *universities; 
+	NSMutableArray *universities; // For sorting by university
+	NSMutableArray *sortedUniversities;
+	
 	NSMutableArray *awardClasses;
 	NSMutableArray *awardClassIndexTitles;
 	NSMutableArray *awardClassDBNames;
@@ -25,12 +27,13 @@
     NSPersistentStoreCoordinator *persistentStoreCoordinator;
 	
 	UISegmentedControl *sortControl;
-	UITableView *universityTableView;
 	
 	int universitySortIndex;	
 }
 
-//@property (nonatomic, retain) NSMutableArray *universities;
+@property (nonatomic, retain) NSMutableArray *universities;
+@property (nonatomic, retain) NSMutableArray *sortedUniversities;
+
 @property (nonatomic, retain) NSMutableArray *awardClasses;
 @property (nonatomic, retain) NSMutableArray *awardClassNames;
 @property (nonatomic, retain) NSMutableArray *awardClassIndexTitles;
@@ -41,7 +44,6 @@
 @property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 @property (nonatomic, retain) UISegmentedControl *sortControl;
-@property (nonatomic, retain) IBOutlet UITableView *universityTableView;
 
 //- (void)fetchRankedUniversitiesSortBy:(NSString *)sortField;
 - (NSString *)applicationDocumentsDirectory;
