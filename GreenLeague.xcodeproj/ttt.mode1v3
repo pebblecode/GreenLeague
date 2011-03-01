@@ -276,7 +276,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>5</integer>
+									<integer>4</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -301,7 +301,7 @@
 							<real>186</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>382 -756 1333 734 294 -900 1440 900 </string>
+						<string>382 -757 1333 734 294 -900 1440 900 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -331,7 +331,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3D03A678131D71E900F6B225</string>
+										<string>3D03A685131D73D400F6B225</string>
 										<key>history</key>
 										<array>
 											<string>3DB0D95713152233006FC601</string>
@@ -347,7 +347,7 @@
 											<string>3D03A5E5131D5E2900F6B225</string>
 											<string>3D03A630131D688900F6B225</string>
 											<string>3D03A66C131D71C800F6B225</string>
-											<string>3D03A66D131D71C800F6B225</string>
+											<string>3D03A684131D73D400F6B225</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -361,7 +361,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1125, 436}}</string>
 								<key>RubberWindowFrame</key>
-								<string>382 -756 1333 734 294 -900 1440 900 </string>
+								<string>382 -757 1333 734 294 -900 1440 900 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -374,7 +374,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>NSString+Helper.m</string>
+								<string>FindViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -382,11 +382,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>NSString+Helper.m</string>
+										<string>FindViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3D03A679131D71E900F6B225</string>
+										<string>3D03A688131D73D400F6B225</string>
 										<key>history</key>
 										<array>
 											<string>3DB0DA321317E0C5006FC601</string>
@@ -395,11 +395,11 @@
 											<string>3D039FF6131BA8A700F6B225</string>
 											<string>3D03A286131C109F00F6B225</string>
 											<string>3D03A2CA131C1C6600F6B225</string>
-											<string>3D03A5E8131D5E2900F6B225</string>
-											<string>3D03A5E9131D5E2900F6B225</string>
 											<string>3D03A66F131D71C800F6B225</string>
 											<string>3D03A670131D71C800F6B225</string>
-											<string>3D03A671131D71C800F6B225</string>
+											<string>3D03A686131D73D400F6B225</string>
+											<string>3D03A687131D73D400F6B225</string>
+											<string>3D03A5E9131D5E2900F6B225</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -413,7 +413,7 @@
 								<key>Frame</key>
 								<string>{{0, 441}, {1125, 247}}</string>
 								<key>RubberWindowFrame</key>
-								<string>382 -756 1333 734 294 -900 1440 900 </string>
+								<string>382 -757 1333 734 294 -900 1440 900 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -433,7 +433,7 @@
 								<key>Frame</key>
 								<string>{{0, 693}, {1125, 0}}</string>
 								<key>RubberWindowFrame</key>
-								<string>382 -756 1333 734 294 -900 1440 900 </string>
+								<string>382 -757 1333 734 294 -900 1440 900 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -607,7 +607,7 @@
 		<string>/Users/ttt/Work/Dev/GreenLeague/GreenLeague.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>382 -756 1333 734 294 -900 1440 900 </string>
+	<string>382 -757 1333 734 294 -900 1440 900 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>

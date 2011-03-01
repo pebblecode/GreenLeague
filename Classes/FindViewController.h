@@ -11,7 +11,6 @@
 
 
 @interface FindViewController : UITableViewController {
-	NSMutableArray *universities; // For sorting by university
 	NSMutableArray *sortedUniversities;
 	
 	NSMutableArray *awardClasses;
@@ -31,7 +30,6 @@
 	int universitySortIndex;	
 }
 
-@property (nonatomic, retain) NSMutableArray *universities;
 @property (nonatomic, retain) NSMutableArray *sortedUniversities;
 
 @property (nonatomic, retain) NSMutableArray *awardClasses;

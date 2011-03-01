@@ -33,9 +33,6 @@
 
 - (void)deleteDB;
 
-//- (void)fetchRankedUniversitiesFromDBSortBy:(NSString *)sortField;
-//- (void)configureAwardClasses;
-
 - (void)fetchUniversitiesBySortControl;
 - (void)fetchUniversitiesFromDBSortedByRank;
 - (void)fetchUniversitiesFromDBSortedByName;
@@ -55,7 +52,7 @@
 
 @implementation FindViewController
 
-@synthesize universities, sortedUniversities, awardClasses, awardClassNames, awardClassIndexTitles, awardClassDBNames, collation, managedObjectContext, managedObjectModel, persistentStoreCoordinator, sortControl;
+@synthesize sortedUniversities, awardClasses, awardClassNames, awardClassIndexTitles, awardClassDBNames, collation, managedObjectContext, managedObjectModel, persistentStoreCoordinator, sortControl;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -273,7 +270,6 @@
     [detailViewController release];
     */
 	
-	//NSLog(@"selected row (%@): %@", indexPath, self.universities);
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
@@ -286,6 +282,7 @@
     [super didReceiveMemoryWarning];
     
     // Relinquish ownership any cached data, images, etc. that aren't in use.
+	NSLog(@"didReceiveMemoryWarning");
 }
 
 - (void)viewDidUnload {
@@ -295,7 +292,6 @@
 
 
 - (void)dealloc {
-	[universities release];
 	[sortedUniversities release];
 	
 	[awardClasses release];
@@ -485,19 +481,14 @@
 		
 		// Fetch the records and handle an error
 		NSError *error;
-		NSMutableArray *mutableFetchResults = [[[self managedObjectContext] executeFetchRequest:request error:&error] mutableCopy]; 
-		//NSLog(@"mutableFetchResults: %@", mutableFetchResults);
+		NSMutableArray *universities = [[[self managedObjectContext] executeFetchRequest:request error:&error] mutableCopy];
 		
-		if (!mutableFetchResults) {
+		if (!universities) {
 			// Handle the error.
 			// This is a serious error and should advise the user to restart the application
 			NSLog(@"mutableFetchResults error: %@", error);
-		} 
+		}
 		
-		// Save our fetched data to an array
-		[self setUniversities:mutableFetchResults];
-		
-		[mutableFetchResults release];
 		[request release];
 
 		// ------------------------------------------------
@@ -517,7 +508,7 @@
 			[array release];
 		}
 		
-		for (University *uni in self.universities) {
+		for (University *uni in universities) {
 			NSAutoreleasePool * pool = [NSAutoreleasePool new];
 			
 			// Ask the collation which section number the university belongs in, based on its sortName.
