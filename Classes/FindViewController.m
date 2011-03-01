@@ -37,7 +37,9 @@
 //- (void)configureAwardClasses;
 
 - (void)fetchUniversitiesBySortControl;
-- (void)fetchRankedUniversitiesFromDB;
+- (void)fetchUniversitiesFromDBSortedByRank;
+
+- (void)sortControlValueChange;
 
 - (void)loadGreenLeagueDataFromFileToDB;
 - (NSString *)dbPath;
@@ -52,7 +54,7 @@
 
 @implementation FindViewController
 
-@synthesize awardClasses, awardClassNames, awardClassIndexTitles, awardClassDBNames, collation, managedObjectContext, managedObjectModel, persistentStoreCoordinator, sortControl;
+@synthesize awardClasses, awardClassNames, awardClassIndexTitles, awardClassDBNames, collation, managedObjectContext, managedObjectModel, persistentStoreCoordinator, sortControl, universityTableView;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -74,7 +76,7 @@
 	sortControl = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Rank", @"A-Z", nil]];
 	sortControl.frame = CGRectMake(76, 4, 150, 34);
 	sortControl.selectedSegmentIndex = kSortByRankControlIndex; // Select rank by default
-	[sortControl addTarget:self action:@selector(fetchUniversitiesBySortControl) forControlEvents:UIControlEventValueChanged];
+	[sortControl addTarget:self action:@selector(sortControlValueChange) forControlEvents:UIControlEventValueChanged];
 	[self.navigationController.navigationBar addSubview:sortControl];	
 	
 	// Fetch the results from the database and sort by the value of the sort control
@@ -321,12 +323,20 @@
 	[managedObjectModel release];
 	[persistentStoreCoordinator release];
 	
+	[sortControl release];
+	[universityTableView release];	
+	
     [super dealloc];
 }
 
 #pragma mark -
 #pragma mark === Sort control helper methods ===
 #pragma mark
+
+- (void)sortControlValueChange {
+	[self.universityTableView reloadData];
+	[self fetchUniversitiesBySortControl];
+}
 
 - (Boolean)isRankSort {
 	return (self.sortControl.selectedSegmentIndex == kSortByRankControlIndex);
@@ -484,7 +494,7 @@
 	// Only fetch new sort if value has changed
 	if (self.sortControl.selectedSegmentIndex != universitySortIndex) {	
 		if ([self isRankSort]) {
-			[self fetchRankedUniversitiesFromDB];
+			[self fetchUniversitiesFromDBSortedByRank];
 		} else if ([self isNameSort]) {
 			NSLog(@"Name sort");
 		}
@@ -492,7 +502,7 @@
 	universitySortIndex = self.sortControl.selectedSegmentIndex;
 }
 
-- (void)fetchRankedUniversitiesFromDB {
+- (void)fetchUniversitiesFromDBSortedByRank {
 	NSEntityDescription *entity = [NSEntityDescription entityForName:[University entityName] inManagedObjectContext:[self managedObjectContext]]; 	
 	
 	for (NSString *awardName in self.awardClassDBNames) {

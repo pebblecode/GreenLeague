@@ -25,6 +25,8 @@
     NSPersistentStoreCoordinator *persistentStoreCoordinator;
 	
 	UISegmentedControl *sortControl;
+	UITableView *universityTableView;
+	
 	int universitySortIndex;	
 }
 
@@ -38,8 +40,8 @@
 @property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;
 @property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
-@property (nonatomic, retain, readonly) UISegmentedControl *sortControl;
-
+@property (nonatomic, retain) UISegmentedControl *sortControl;
+@property (nonatomic, retain) IBOutlet UITableView *universityTableView;
 
 //- (void)fetchRankedUniversitiesSortBy:(NSString *)sortField;
 - (NSString *)applicationDocumentsDirectory;
