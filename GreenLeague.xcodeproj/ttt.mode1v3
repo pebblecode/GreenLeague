@@ -216,11 +216,11 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>3D03A562131D47FD00F6B225</string>
+						<string>3D03A579131D4B2200F6B225</string>
 						<key>history</key>
 						<array>
-							<string>3D03A55B131D47F700F6B225</string>
-							<string>3D03A55C131D47F700F6B225</string>
+							<string>3D03A567131D49C400F6B225</string>
+							<string>3D03A568131D49C400F6B225</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -373,7 +373,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3D03A560131D47FD00F6B225</string>
+										<string>3D03A577131D4B2200F6B225</string>
 										<key>history</key>
 										<array>
 											<string>3DB0D95713152233006FC601</string>
@@ -427,7 +427,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3D03A561131D47FD00F6B225</string>
+										<string>3D03A578131D4B2200F6B225</string>
 										<key>history</key>
 										<array>
 											<string>3DB0D95713152233006FC601</string>
@@ -642,10 +642,10 @@
 		<string>3D03A2ED131C202F00F6B225</string>
 		<string>3D03A2EE131C202F00F6B225</string>
 		<string>1CD10A99069EF8BA00B06720</string>
+		<string>3DB0D93113151196006FC601</string>
+		<string>3D03A32F131D043F00F6B225</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/ttt/Work/Dev/GreenLeague/GreenLeague.xcodeproj</string>
-		<string>3D03A32F131D043F00F6B225</string>
-		<string>3DB0D93113151196006FC601</string>
 	</array>
 	<key>WindowString</key>
 	<string>381 -756 1333 734 294 -900 1440 900 </string>
@@ -740,7 +740,7 @@
 			<key>WindowToolGUID</key>
 			<string>3DB0D93113151196006FC601</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>

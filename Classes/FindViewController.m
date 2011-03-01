@@ -77,10 +77,7 @@
 	sortControl.frame = CGRectMake(76, 4, 150, 34);
 	sortControl.selectedSegmentIndex = kSortByRankControlIndex; // Select rank by default
 	[sortControl addTarget:self action:@selector(sortControlValueChange) forControlEvents:UIControlEventValueChanged];
-	[self.navigationController.navigationBar addSubview:sortControl];	
-	
-	// Fetch the results from the database and sort by the value of the sort control
-	self.awardClasses = [[NSMutableArray alloc] initWithCapacity:0];
+	[self.navigationController.navigationBar addSubview:sortControl];
 	
 	self.awardClassDBNames = [NSArray arrayWithObjects:@"1st", @"2:1", @"2:2", @"3rd", @"Fail", @"Did not sit exam", nil];
 	self.awardClassIndexTitles = [NSArray arrayWithObjects:@"1st", @"Upper 2nd", @"Lower 2nd", @"3rd", @"Failed", @"N/A", nil];	
@@ -96,7 +93,8 @@
 	// Set up the database, and get the data from the file if necessary		
 	[self setupDB];
 	
-	[self fetchUniversitiesBySortControl];	
+	// Not needed as it is called when awardClasses is used
+	//[self fetchUniversitiesBySortControl];
 }
 
 
@@ -151,7 +149,7 @@
     int sections;
 	
 	if ([self isRankSort]) {
-		sections = [[awardClasses objectAtIndex:section] count];
+		sections = [[self.awardClasses objectAtIndex:section] count];
 	} else if ([self isNameSort]) {
 		sections = [[collation sectionTitles] count]; // TODO: WRONG???
 	}		
@@ -181,7 +179,7 @@
 //			cell.detailTextLabel.text = [NSString stringWithFormat:@"Scored: %@", uni.totalScore];
 //		}
 		
-		NSArray *universitiesInAwardClass = [awardClasses objectAtIndex:indexPath.section];	
+		NSArray *universitiesInAwardClass = [self.awardClasses objectAtIndex:indexPath.section];	
 		University *uni = [universitiesInAwardClass objectAtIndex:indexPath.row];
 		
 		// Text: Rank. University
@@ -191,7 +189,7 @@
 		cell.detailTextLabel.text = [NSString stringWithFormat:@"Scored: %.1f", [uni.totalScore floatValue]];		
 		
 	} else if ([self isNameSort]) {		
-		NSArray *universitiesInAwardClass = [awardClasses objectAtIndex:indexPath.section];	
+		NSArray *universitiesInAwardClass = [self.awardClasses objectAtIndex:indexPath.section];	
 		University *uni = [universitiesInAwardClass objectAtIndex:indexPath.row];
 		
 		// Text: Rank. University
@@ -557,6 +555,16 @@
 #pragma mark -
 #pragma mark === Database helpers ===
 #pragma mark
+
+- (NSMutableArray *)awardClasses {
+	if (!awardClasses) {
+		// Fetch the results from the database and sort by the value of the sort control
+		awardClasses = [[NSMutableArray alloc] initWithCapacity:0];
+		[self fetchUniversitiesBySortControl];
+	}
+	
+	return awardClasses;
+}
 
 - (Boolean)dbExists {
 	NSFileManager *filemgr = [NSFileManager defaultManager];
