@@ -8,6 +8,7 @@
 
 #import "FindViewController.h"
 #import "University.h"
+#import "NSString+Helper.h"
 
 // Data source file minus the file extension
 #define kDataSourceFile "gl2010"
@@ -84,8 +85,10 @@
 	
 	//universities = [[NSMutableArray alloc] initWithCapacity:0];
 	
+	// --------------------------------------------------
 	// To remove the db all the time (for debugging only)
 	//[self deleteDB];		
+	// --------------------------------------------------
 	
 	// Set up the database, and get the data from the file if necessary		
 	[self setupDB];
@@ -553,15 +556,10 @@
 - (void)loadGreenLeagueDataFromFileToDB {	
 	NSString *filePath = [[NSBundle mainBundle] pathForResource:@kDataSourceFile ofType:@"csv"];
 	NSString *fileContents = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
-	
+	NSArray *csvRows = [fileContents csvRows];
 	// Parse CSV file
-	if (fileContents) {
-		NSArray *lines = [fileContents componentsSeparatedByString:@"\n"];
-		
-		// Not sure why it's lines.count - 1
-		for (int i = kStartIndexForData; i < (lines.count - 1); i++) {
-			[University addUniversityFromCSVLine:[lines objectAtIndex:i] toDBWithManagedContext:[self managedObjectContext]];
-		}
+	for (NSArray *row in csvRows) {		
+		[University addUniversityFromRowArray:row toDBWithManagedContext:[self managedObjectContext]];
 	}	
 }
 

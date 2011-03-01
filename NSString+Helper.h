@@ -16,4 +16,6 @@
 
 - (NSNumber *)numberFromString;
 
+- (NSArray *)csvRows;
+
 @end

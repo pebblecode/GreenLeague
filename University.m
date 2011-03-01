@@ -87,22 +87,21 @@
 }
 
 // Returns nil if there is no name
-+ (void)addUniversityFromCSVLine:(NSString *)csvLine toDBWithManagedContext:(NSManagedObjectContext *)managedObjectContext {
++ (void)addUniversityFromRowArray:(NSArray *)rowArray toDBWithManagedContext:(NSManagedObjectContext *)managedObjectContext {
 	University *uni;
 	
 	//NSLog(@"csvLine: %@", csvLine);
-	NSArray *dataItem = [csvLine componentsSeparatedByString:@kCSVDelimiter];	
-	if ([dataItem count] > kDataFieldIndexUniversityName) {
-		NSString *uniName = [[dataItem objectAtIndex:kDataFieldIndexUniversityName] stringByRemovingQuotationMarks];
+	if ([rowArray count] > kDataFieldIndexUniversityName) {
+		NSString *uniName = [[rowArray objectAtIndex:kDataFieldIndexUniversityName] stringByRemovingQuotationMarks];
 		if (uniName.length > 0) {
 			uni = (University *)[NSEntityDescription insertNewObjectForEntityForName:[University entityName] inManagedObjectContext:managedObjectContext];
 			[uni setName:uniName];
 			[uni setSortName:[University getSortName:uniName]];
 
 			// Add other database fields
-			if ([dataItem count] > kDataFieldIndexRank2010) [uni setRank2010:[[dataItem objectAtIndex:kDataFieldIndexRank2010] numberFromString]];
-			if ([dataItem count] > kDataFieldIndexTotalScore) [uni setTotalScore:[[dataItem objectAtIndex:kDataFieldIndexTotalScore] numberFromString]];
-			if ([dataItem count] > kDataFieldIndexAwardClass) [uni setAwardClass:[dataItem objectAtIndex:kDataFieldIndexAwardClass]];
+			if ([rowArray count] > kDataFieldIndexRank2010) [uni setRank2010:[[rowArray objectAtIndex:kDataFieldIndexRank2010] numberFromString]];
+			if ([rowArray count] > kDataFieldIndexTotalScore) [uni setTotalScore:[[rowArray objectAtIndex:kDataFieldIndexTotalScore] numberFromString]];
+			if ([rowArray count] > kDataFieldIndexAwardClass) [uni setAwardClass:[rowArray objectAtIndex:kDataFieldIndexAwardClass]];
 			
 			// ... TODO
 			
