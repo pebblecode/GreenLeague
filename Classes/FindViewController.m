@@ -52,7 +52,7 @@
 
 @implementation FindViewController
 
-@synthesize awardClasses, awardClassNames, awardClassDBNames, collation, managedObjectContext, managedObjectModel, persistentStoreCoordinator, sortControl;
+@synthesize awardClasses, awardClassNames, awardClassIndexTitles, awardClassDBNames, collation, managedObjectContext, managedObjectModel, persistentStoreCoordinator, sortControl;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -81,7 +81,8 @@
 	self.awardClasses = [[NSMutableArray alloc] initWithCapacity:0];
 	
 	self.awardClassDBNames = [NSArray arrayWithObjects:@"1st", @"2:1", @"2:2", @"3rd", @"Fail", @"Did not sit exam", nil];
-	self.awardClassNames = [NSArray arrayWithObjects:@"1st", @"Upper 2nd", @"Lower 2nd", @"3rd", @"Failed", @"No award", nil];
+	self.awardClassIndexTitles = [NSArray arrayWithObjects:@"1st", @"Upper 2nd", @"Lower 2nd", @"3rd", @"Failed", @"N/A", nil];	
+	self.awardClassNames = [NSArray arrayWithObjects:@"1st Class award", @"Upper 2nd Class award", @"Lower 2nd Class award", @"3rd Class award", @"Failed. No award", @"Did not sit exam. No award", nil];
 	
 	//universities = [[NSMutableArray alloc] initWithCapacity:0];
 	
@@ -216,7 +217,7 @@
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
 	NSArray *indexTitles;
 	if ([self isRankSort]) {
-		indexTitles = self.awardClassNames;
+		indexTitles = self.awardClassIndexTitles;
 	} else if ([self isNameSort]) {
 		indexTitles = [collation sectionIndexTitles];
 	}
@@ -313,6 +314,7 @@
 	[awardClasses release];
 	[awardClassNames release];
 	[awardClassDBNames release];
+	[awardClassIndexTitles release];
 	[collation release];
 	
 	[managedObjectContext release];

@@ -13,6 +13,7 @@
 @interface FindViewController : UITableViewController {
 	//NSMutableArray *universities; 
 	NSMutableArray *awardClasses;
+	NSMutableArray *awardClassIndexTitles;
 	NSMutableArray *awardClassDBNames;
 	
 	UILocalizedIndexedCollation *collation;
@@ -30,6 +31,7 @@
 //@property (nonatomic, retain) NSMutableArray *universities;
 @property (nonatomic, retain) NSMutableArray *awardClasses;
 @property (nonatomic, retain) NSMutableArray *awardClassNames;
+@property (nonatomic, retain) NSMutableArray *awardClassIndexTitles;
 @property (nonatomic, retain) NSMutableArray *awardClassDBNames;
 
 @property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
