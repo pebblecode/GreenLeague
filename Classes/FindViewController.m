@@ -499,23 +499,63 @@
 }
 
 - (void)fetchUniversitiesFromDBSortedByRank {
-	NSEntityDescription *entity = [NSEntityDescription entityForName:[University entityName] inManagedObjectContext:[self managedObjectContext]]; 	
+	if ([self.awardClasses count] <= 0) {
+		NSEntityDescription *entity = [NSEntityDescription entityForName:[University entityName] inManagedObjectContext:[self managedObjectContext]]; 	
+		
+		for (NSString *awardName in self.awardClassDBNames) {
+			// Setup the fetch request
+			NSFetchRequest *request = [[NSFetchRequest alloc] init];
+			[request setEntity:entity]; 
+			
+			// Sort by given rank
+			NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@kDBFieldRank ascending:YES];
+			NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+			[request setSortDescriptors:sortDescriptors];
+			[sortDescriptor release]; 
+			
+			// Set predicate of university award class
+			NSString *predicate = [NSString stringWithFormat:@"%@ == '%@'", @kDBFieldAwardClass, awardName]; // Doesn't work if it is put straight into predicateWithFormat for some reason
+			NSPredicate *rankPredicate = [NSPredicate predicateWithFormat:predicate];
+			[request setPredicate:rankPredicate];	
+			
+			// Fetch the records and handle an error
+			NSError *error;
+			NSMutableArray *mutableFetchResults = [[[self managedObjectContext] executeFetchRequest:request error:&error] mutableCopy]; 
+			//NSLog(@"mutableFetchResults: %@", mutableFetchResults);
+			
+			if (!mutableFetchResults) {
+				// Handle the error.
+				// This is a serious error and should advise the user to restart the application
+				NSLog(@"mutableFetchResults error: %@", error);
+			} 
+			
+			// Save our fetched data to an array
+			//[self setUniversities:mutableFetchResults];
+			[self.awardClasses addObject:mutableFetchResults];		
+			
+			[mutableFetchResults release];
+			[request release];
+		}
+	}	
+}
+
+- (void)fetchUniversitiesFromDBSortedByName {
 	
-	for (NSString *awardName in self.awardClassDBNames) {
+	if ([self.sortedUniversities count] <= 0) {
+		// ------------------------------------------------
+		// Get all universities
+		// ------------------------------------------------
+		NSEntityDescription *entity = [NSEntityDescription entityForName:[University entityName] inManagedObjectContext:[self managedObjectContext]]; 	
+		
 		// Setup the fetch request
 		NSFetchRequest *request = [[NSFetchRequest alloc] init];
 		[request setEntity:entity]; 
 		
 		// Sort by given rank
-		NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@kDBFieldRank ascending:YES];
+		NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@kDBFieldName ascending:YES];
 		NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
 		[request setSortDescriptors:sortDescriptors];
-		[sortDescriptor release]; 
-		
-		// Set predicate of university award class
-		NSString *predicate = [NSString stringWithFormat:@"%@ == '%@'", @kDBFieldAwardClass, awardName]; // Doesn't work if it is put straight into predicateWithFormat for some reason
-		NSPredicate *rankPredicate = [NSPredicate predicateWithFormat:predicate];
-		[request setPredicate:rankPredicate];	
+		[sortDescriptor release];	
 		
 		// Fetch the records and handle an error
 		NSError *error;
@@ -529,79 +569,41 @@
 		} 
 		
 		// Save our fetched data to an array
-		//[self setUniversities:mutableFetchResults];
-		[self.awardClasses addObject:mutableFetchResults];		
+		[self setUniversities:mutableFetchResults];
 		
 		[mutableFetchResults release];
 		[request release];
-	}
-	
-}
 
-- (void)fetchUniversitiesFromDBSortedByName {
-	
-	// ------------------------------------------------
-	// Get all universities
-	// ------------------------------------------------
-	NSEntityDescription *entity = [NSEntityDescription entityForName:[University entityName] inManagedObjectContext:[self managedObjectContext]]; 	
-	
-	// Setup the fetch request
-	NSFetchRequest *request = [[NSFetchRequest alloc] init];
-	[request setEntity:entity]; 
-	
-	// Sort by given rank
-	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@kDBFieldName ascending:YES];
-	NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
-	[request setSortDescriptors:sortDescriptors];
-	[sortDescriptor release];	
-	
-	// Fetch the records and handle an error
-	NSError *error;
-	NSMutableArray *mutableFetchResults = [[[self managedObjectContext] executeFetchRequest:request error:&error] mutableCopy]; 
-	//NSLog(@"mutableFetchResults: %@", mutableFetchResults);
-	
-	if (!mutableFetchResults) {
-		// Handle the error.
-		// This is a serious error and should advise the user to restart the application
-		NSLog(@"mutableFetchResults error: %@", error);
-	} 
-	
-	// Save our fetched data to an array
-	[self setUniversities:mutableFetchResults];
-	
-	[mutableFetchResults release];
-	[request release];
-
-	// ------------------------------------------------
-	// Sort universities using collation
-	// ------------------------------------------------
-	
-	// Get the current collation and keep a reference to it.
-	self.collation = [UILocalizedIndexedCollation currentCollation];
-	
-	NSInteger alphabetTitlesCount = [[collation sectionTitles] count];	
-	NSMutableArray *newUniArray = [[NSMutableArray alloc] initWithCapacity:alphabetTitlesCount];
-	
-	// Set up the sorted university array with empty arrays
-	for (int i = 0; i < alphabetTitlesCount; i++) {
-		NSMutableArray *array = [[NSMutableArray alloc] init];
-		[newUniArray addObject:array];
-		[array release];
+		// ------------------------------------------------
+		// Sort universities using collation
+		// ------------------------------------------------
+		
+		// Get the current collation and keep a reference to it.
+		self.collation = [UILocalizedIndexedCollation currentCollation];
+		
+		NSInteger alphabetTitlesCount = [[collation sectionTitles] count];	
+		NSMutableArray *newUniArray = [[NSMutableArray alloc] initWithCapacity:alphabetTitlesCount];
+		
+		// Set up the sorted university array with empty arrays
+		for (int i = 0; i < alphabetTitlesCount; i++) {
+			NSMutableArray *array = [[NSMutableArray alloc] init];
+			[newUniArray addObject:array];
+			[array release];
+		}
+		
+		for (University *uni in self.universities) {
+			// Ask the collation which section number the university belongs in, based on its sortName.
+			NSInteger sectionNumber = [collation sectionForObject:uni collationStringSelector:@selector(sortName)];
+			
+			// Get the array for the section.
+			NSMutableArray *alphabetSectionUniversities = [newUniArray objectAtIndex:sectionNumber];
+			
+			[alphabetSectionUniversities addObject:uni];		
+		}
+			
+		self.sortedUniversities = newUniArray;
+		[newUniArray release];	
 	}
-	
-	for (University *uni in self.universities) {
-		// Ask the collation which section number the university belongs in, based on its sortName.
-		NSInteger sectionNumber = [collation sectionForObject:uni collationStringSelector:@selector(sortName)];
-		
-		// Get the array for the section.
-		NSMutableArray *alphabetSectionUniversities = [newUniArray objectAtIndex:sectionNumber];
-		
-		[alphabetSectionUniversities addObject:uni];		
-	}
-		
-	self.sortedUniversities = newUniArray;
-	[newUniArray release];	
-	
 }
 
 // Populate the database from kDataSourceFile csv file

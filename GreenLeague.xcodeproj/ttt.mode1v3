@@ -216,11 +216,11 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>3D03A5FD131D603700F6B225</string>
+						<string>3D03A635131D688900F6B225</string>
 						<key>history</key>
 						<array>
 							<string>3D03A567131D49C400F6B225</string>
-							<string>3D03A5C0131D54F100F6B225</string>
+							<string>3D03A634131D688900F6B225</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -354,8 +354,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -373,7 +371,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3D03A5FB131D603700F6B225</string>
+										<string>3D03A632131D688900F6B225</string>
 										<key>history</key>
 										<array>
 											<string>3DB0D95713152233006FC601</string>
@@ -386,10 +384,10 @@
 											<string>3D03A4E5131D3EEE00F6B225</string>
 											<string>3D03A4E6131D3EEE00F6B225</string>
 											<string>3D03A4E7131D3EEE00F6B225</string>
-											<string>3D03A547131D477E00F6B225</string>
 											<string>3D03A58A131D51D500F6B225</string>
 											<string>3D03A5E5131D5E2900F6B225</string>
-											<string>3D03A5E6131D5E2900F6B225</string>
+											<string>3D03A630131D688900F6B225</string>
+											<string>3D03A631131D688900F6B225</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -428,7 +426,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3D03A5FC131D603700F6B225</string>
+										<string>3D03A633131D688900F6B225</string>
 										<key>history</key>
 										<array>
 											<string>3DB0D95713152233006FC601</string>
@@ -639,12 +637,12 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>3D03A301131CF90600F6B225</string>
 		<string>3D03A2ED131C202F00F6B225</string>
 		<string>3D03A2EE131C202F00F6B225</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>3DB0D93113151196006FC601</string>
 		<string>1C78EAAD065D492600B07095</string>
+		<string>3D03A301131CF90600F6B225</string>
 		<string>/Users/ttt/Work/Dev/GreenLeague/GreenLeague.xcodeproj</string>
 		<string>3D03A32F131D043F00F6B225</string>
 	</array>
@@ -1211,6 +1209,7 @@
 									<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 									<array>
 										<array>
+											<integer>1</integer>
 											<integer>0</integer>
 										</array>
 									</array>
@@ -1293,7 +1292,7 @@
 			<key>WindowToolGUID</key>
 			<string>3D03A301131CF90600F6B225</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
