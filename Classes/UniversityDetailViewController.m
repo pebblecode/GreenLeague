@@ -9,6 +9,24 @@
 #import "UniversityDetailViewController.h"
 #import "NSNumber+Helper.h"
 
+@interface UniversityDetailViewController()
+
+NSString *nameStr;
+NSString *rank2010Str;
+NSString *rank2009Str;
+NSString *awardClassStr;
+NSString *totalScoreStr;
+
+@property (nonatomic, retain) NSString *nameStr;
+@property (nonatomic, retain) NSString *rank2010Str;
+@property (nonatomic, retain) NSString *rank2009Str;
+@property (nonatomic, retain) NSString *awardClassStr;
+@property (nonatomic, retain) NSString *totalScoreStr;
+
+@end
+
+
+
 @implementation UniversityDetailViewController
 
 @synthesize nameStr, rank2010Str, rank2009Str, awardClassStr, totalScoreStr, nameLabel, rank2010Label, rank2009Label, awardClassLabel, totalScoreLabel;

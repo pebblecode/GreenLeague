@@ -9,25 +9,13 @@
 #import <UIKit/UIKit.h>
 
 
-@interface UniversityDetailViewController : UIViewController {
-	NSString *nameStr;
-	NSString *rank2010Str;
-	NSString *rank2009Str;
-	NSString *awardClassStr;
-	NSString *totalScoreStr;
-	
+@interface UniversityDetailViewController : UIViewController {	
 	UILabel *nameLabel;
 	UILabel *rank2010Label;
 	UILabel *rank2009Label;
 	UILabel *awardClassLabel;
 	UILabel *totalScoreLabel;
 }
-
-@property (nonatomic, retain) NSString *nameStr;
-@property (nonatomic, retain) NSString *rank2010Str;
-@property (nonatomic, retain) NSString *rank2009Str;
-@property (nonatomic, retain) NSString *awardClassStr;
-@property (nonatomic, retain) NSString *totalScoreStr;
 
 @property (nonatomic, retain) IBOutlet UILabel *nameLabel;
 @property (nonatomic, retain) IBOutlet UILabel *rank2010Label;
