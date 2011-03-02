@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>3D03A9BD131E973500F6B225</string>
+						<string>3D03AA1D131E9FFF00F6B225</string>
 						<key>history</key>
 						<array>
 							<string>3D03A730131E5E4900F6B225</string>
@@ -257,7 +257,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>3D03A9BE131E973500F6B225</string>
+						<string>3D03AA1E131E9FFF00F6B225</string>
 						<key>history</key>
 						<array>
 							<string>3D03A6FF131E5C1C00F6B225</string>
@@ -395,8 +395,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -414,7 +412,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3D03A9BB131E973500F6B225</string>
+										<string>3D03AA1B131E9FFF00F6B225</string>
 										<key>history</key>
 										<array>
 											<string>3D039FDC131BA6FE00F6B225</string>
@@ -434,10 +432,10 @@
 											<string>3D03A84E131E6CD800F6B225</string>
 											<string>3D03A84F131E6CD800F6B225</string>
 											<string>3D03A88A131E742D00F6B225</string>
-											<string>3D03A90B131E8D0500F6B225</string>
 											<string>3D03A90C131E8D0500F6B225</string>
 											<string>3D03A988131E938100F6B225</string>
-											<string>3D03A9AE131E968900F6B225</string>
+											<string>3D03A9C1131E9AE200F6B225</string>
+											<string>3D03A9C2131E9AE200F6B225</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -459,6 +457,8 @@
 							<string>436pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -476,7 +476,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3D03A9BC131E973500F6B225</string>
+										<string>3D03AA1C131E9FFF00F6B225</string>
 										<key>history</key>
 										<array>
 											<string>3DB0DA321317E0C5006FC601</string>
@@ -491,7 +491,7 @@
 											<string>3D03A88D131E742D00F6B225</string>
 											<string>3D03A88E131E742D00F6B225</string>
 											<string>3D03A88F131E742D00F6B225</string>
-											<string>3D03A99B131E93FE00F6B225</string>
+											<string>3D03A9CE131E9B2500F6B225</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -1293,6 +1293,8 @@
 							<string>185pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>

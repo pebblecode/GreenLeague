@@ -14,7 +14,7 @@
 
 // Data source file minus the file extension
 #define kDataSourceFile "gl2010"
-#define kStartIndexForData 4
+#define kDataCSVRowsToIgnore 4
 #define kDatabaseSqliteFile "green_league.sqlite"
 
 #define kInvalidSortByControlIndex -100
@@ -375,6 +375,10 @@
 
 - (void)sortControlValueChange {	
 	[self fetchUniversitiesBySortControl];
+	
+	// Reload data and scroll to the top
+	[self.tableView reloadData];	
+	[self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];	
 }
 
 - (Boolean)isRankSort {
@@ -474,11 +478,8 @@
 			[self fetchUniversitiesFromDBSortedByRank];
 		} else if ([self isNameSort]) {
 			[self fetchUniversitiesFromDBSortedByName];
-		}
+		}		
 		
-		// Reload data and scroll to the top
-		[self.tableView reloadData];
-		[self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
 	}
 	universitySortIndex = self.sortControl.selectedSegmentIndex;
 }
@@ -607,7 +608,14 @@
 - (void)loadGreenLeagueDataFromFileToDB {	
 	NSString *filePath = [[NSBundle mainBundle] pathForResource:@kDataSourceFile ofType:@"csv"];
 	NSString *fileContents = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+	
+	// Get csv rows as an array while ignoring kDataCSVRowsToIgnore rows
 	NSArray *csvRows = [fileContents csvRows];
+	NSRange rowRangeExcludingIgnoredRows;
+	rowRangeExcludingIgnoredRows.location = kDataCSVRowsToIgnore; 
+	rowRangeExcludingIgnoredRows.length = [csvRows count] - kDataCSVRowsToIgnore;	
+	csvRows = [csvRows subarrayWithRange:rowRangeExcludingIgnoredRows];
+	
 	// Parse CSV file
 	for (NSArray *row in csvRows) {		
 		[University addUniversityFromRowArray:row toDBWithManagedContext:[self managedObjectContext]];
