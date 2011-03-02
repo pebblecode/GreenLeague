@@ -16,6 +16,7 @@
 #define kDataFieldIndexUniversityName 1
 #define kDataFieldIndexTotalScore 2
 #define kDataFieldIndexAwardClass 3
+#define kDataFieldIndexRank2009 5
 
 @implementation University 
 
@@ -101,8 +102,10 @@
 			if ([rowArray count] > kDataFieldIndexRank2010) [uni setRank2010:[[rowArray objectAtIndex:kDataFieldIndexRank2010] numberFromString]];
 			if ([rowArray count] > kDataFieldIndexTotalScore) [uni setTotalScore:[[rowArray objectAtIndex:kDataFieldIndexTotalScore] numberFromString]];
 			if ([rowArray count] > kDataFieldIndexAwardClass) [uni setAwardClass:[rowArray objectAtIndex:kDataFieldIndexAwardClass]];
+			if ([rowArray count] > kDataFieldIndexRank2009) [uni setRank2009:[[rowArray objectAtIndex:kDataFieldIndexRank2009]numberFromString]];
 			
-			// ... TODO
+			// ... TODO: add the rest
+			// if ([rowArray count] > ) [uni set:[rowArray objectAtIndex:]];
 			
 			NSError *error;					
 			if(![managedObjectContext save:&error]){  						
