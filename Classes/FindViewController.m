@@ -210,7 +210,12 @@
 								  [UIColor colorWithHexString:@"#DDDDDD"], // Light gray
 								  nil];
 	
-	cell.textLabel.textColor = [UIColor colorWithHexString:@"#6F8A00"];
+	if ([[uni awardClass] isEqualToString:@"Did not sit exam"]) {
+		cell.textLabel.textColor = [UIColor colorWithHexString:@"#666666"]; // Black
+	} else {
+		cell.textLabel.textColor = [UIColor colorWithHexString:@"#6F8A00"]; // Green
+	}
+	
 	int awardClassColourIndex = [self.awardClassDBNames indexOfObject:[uni awardClass]];
 	if (awardClassColourIndex != NSNotFound) {
 		cell.backgroundColor = [awardClassColours objectAtIndex:awardClassColourIndex];	

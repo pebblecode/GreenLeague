@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>3D03AA1D131E9FFF00F6B225</string>
+						<string>3D03AA29131EA14D00F6B225</string>
 						<key>history</key>
 						<array>
 							<string>3D03A730131E5E4900F6B225</string>
@@ -257,7 +257,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>3D03AA1E131E9FFF00F6B225</string>
+						<string>3D03AA2A131EA14D00F6B225</string>
 						<key>history</key>
 						<array>
 							<string>3D03A6FF131E5C1C00F6B225</string>
@@ -395,6 +395,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -412,7 +414,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3D03AA1B131E9FFF00F6B225</string>
+										<string>3D03AA27131EA14D00F6B225</string>
 										<key>history</key>
 										<array>
 											<string>3D039FDC131BA6FE00F6B225</string>
@@ -457,8 +459,6 @@
 							<string>436pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -476,7 +476,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3D03AA1C131E9FFF00F6B225</string>
+										<string>3D03AA28131EA14D00F6B225</string>
 										<key>history</key>
 										<array>
 											<string>3DB0DA321317E0C5006FC601</string>
