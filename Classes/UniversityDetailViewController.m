@@ -7,21 +7,14 @@
 //
 
 #import "UniversityDetailViewController.h"
+#import "UniversityMoreDetailViewController.h"
 #import "NSNumber+Helper.h"
 
 @interface UniversityDetailViewController()
 
-NSString *nameStr;
-NSString *rank2010Str;
-NSString *rank2009Str;
-NSString *awardClassStr;
-NSString *totalScoreStr;
+University *university;
 
-@property (nonatomic, retain) NSString *nameStr;
-@property (nonatomic, retain) NSString *rank2010Str;
-@property (nonatomic, retain) NSString *rank2009Str;
-@property (nonatomic, retain) NSString *awardClassStr;
-@property (nonatomic, retain) NSString *totalScoreStr;
+@property (nonatomic, retain) NSString *university;
 
 @end
 
@@ -29,30 +22,26 @@ NSString *totalScoreStr;
 
 @implementation UniversityDetailViewController
 
-@synthesize nameStr, rank2010Str, rank2009Str, awardClassStr, totalScoreStr, nameLabel, rank2010Label, rank2009Label, awardClassLabel, totalScoreLabel;
+@synthesize university, nameLabel, rank2010Label, rank2009Label, awardClassLabel, totalScoreLabel;
 
 
 
-- (id)initWithName:(NSString *)name rank2010:(NSNumber *)rank2010 rank2009:(NSNumber *)rank2009 awardClass:(NSString *)awardClass totalScore:(NSNumber *)totalScore {
+- (id)initWithUniversity:(University *)uni {
     self = [super initWithNibName:nil bundle:nil]; // Load default nib
     if (self) {
-		nameStr = name;
-		rank2010Str= ([rank2010 intValue] == 0) ? @"(none)" : [NSString stringWithFormat:@"%@", [rank2010 ordinalString]] ;
-		rank2009Str = ([rank2009 intValue] == 0) ? @"(none)" : [NSString stringWithFormat:@"%@", [rank2009 ordinalString]];
-		awardClassStr = [awardClass copy];
-		totalScoreStr = [NSString stringWithFormat:@"%.1f", [totalScore floatValue]];			
+		university = uni;		
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	
-	self.nameLabel.text = nameStr;
-	self.rank2010Label.text = rank2010Str;
-	self.rank2009Label.text = rank2009Str;
-	self.awardClassLabel.text = awardClassStr;
-	self.totalScoreLabel.text = totalScoreStr;	
+		
+	self.nameLabel.text = [self.university name];
+	self.rank2010Label.text = ([[self.university rank2010] intValue] == 0) ? @"(none)" : [NSString stringWithFormat:@"%@", [[self.university rank2010] ordinalString]];
+	self.rank2009Label.text = ([[self.university rank2009] intValue] == 0) ? @"(none)" : [NSString stringWithFormat:@"%@", [[self.university rank2009] ordinalString]];
+	self.awardClassLabel.text = [self.university awardClass];
+	self.totalScoreLabel.text = [NSString stringWithFormat:@"%.1f", [[self.university totalScore] floatValue]];
 }
 
 
@@ -79,12 +68,7 @@ NSString *totalScoreStr;
 
 
 - (void)dealloc {
-	[nameStr release];
-	[rank2010Str release];
-	[rank2009Str release];
-	[awardClassStr release];
-	[totalScoreStr release];
-	
+
 	[nameLabel release];
 	[rank2010Label release];
 	[rank2009Label release];
@@ -99,8 +83,7 @@ NSString *totalScoreStr;
 #pragma mark
 
 - (IBAction)detailButtonPressed {
-	UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Not implemented yet" message:@"Detail view not implemented yet" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease];
-	[alert show];
+	
 }
 
 @end

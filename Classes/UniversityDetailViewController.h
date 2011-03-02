@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "University.h"
 
 @interface UniversityDetailViewController : UIViewController {	
 	UILabel *nameLabel;
@@ -23,7 +23,7 @@
 @property (nonatomic, retain) IBOutlet UILabel *awardClassLabel;
 @property (nonatomic, retain) IBOutlet UILabel *totalScoreLabel;
 
-- (id)initWithName:(NSString *)name rank2010:(NSNumber *)rank2010 rank2009:(NSNumber *)rank2009 awardClass:(NSString *)awardClass totalScore:(NSNumber *)totalScore;
+- (id)initWithUniversity:(University *)uni;
 - (IBAction)detailButtonPressed;
 
 @end

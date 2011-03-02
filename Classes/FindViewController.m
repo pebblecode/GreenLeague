@@ -306,8 +306,7 @@
 	University *uni = [self universityFromIndexPath:indexPath];
 	int awardClassIndex = [self.awardClassDBNames indexOfObject:[uni awardClass]];
 	if (awardClassIndex != NSNotFound) {
-		NSString *awardClassTitle = [self.awardClassNames objectAtIndex:awardClassIndex]; // Find title using db name titles
-		UniversityDetailViewController *uniDetailVC = [[UniversityDetailViewController alloc] initWithName:[uni name] rank2010:[uni rank2010] rank2009:[uni rank2009] awardClass:awardClassTitle totalScore:[uni totalScore]];				
+		UniversityDetailViewController *uniDetailVC = [[UniversityDetailViewController alloc] initWithUniversity:uni];
 		[self.navigationController pushViewController:uniDetailVC animated:YES];
 		
 		// Set colours of rank and award class - need to wait for view to be loaded before this can be set.
