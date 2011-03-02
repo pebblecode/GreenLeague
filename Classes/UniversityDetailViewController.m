@@ -11,7 +11,7 @@
 
 @implementation UniversityDetailViewController
 
-@synthesize nameStr, rank2010Str, rank2009Str, awardClassStr, totalScoreStr, nameLabel, rank2010Label, rank2009Label, awardClassLabel, totalScoreLabel, infoButton;
+@synthesize nameStr, rank2010Str, rank2009Str, awardClassStr, totalScoreStr, nameLabel, rank2010Label, rank2009Label, awardClassLabel, totalScoreLabel;
 
 
 
@@ -72,10 +72,17 @@
 	[rank2009Label release];
 	[awardClassLabel release];
 	[totalScoreLabel release];
-	[infoButton release];
 	
     [super dealloc];
 }
 
+#pragma mark -
+#pragma mark === Action methods ===
+#pragma mark
+
+- (IBAction)detailButtonPressed {
+	UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Not implemented yet" message:@"Detail view not implemented yet" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease];
+	[alert show];
+}
 
 @end

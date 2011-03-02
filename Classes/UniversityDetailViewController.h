@@ -21,8 +21,6 @@
 	UILabel *rank2009Label;
 	UILabel *awardClassLabel;
 	UILabel *totalScoreLabel;
-	
-	UIButton *infoButton;
 }
 
 @property (nonatomic, retain) NSString *nameStr;
@@ -36,8 +34,8 @@
 @property (nonatomic, retain) IBOutlet UILabel *rank2009Label;
 @property (nonatomic, retain) IBOutlet UILabel *awardClassLabel;
 @property (nonatomic, retain) IBOutlet UILabel *totalScoreLabel;
-@property (nonatomic, retain) IBOutlet UIButton *infoButton;
 
 - (id)initWithName:(NSString *)name rank2010:(NSNumber *)rank2010 rank2009:(NSNumber *)rank2009 awardClass:(NSString *)awardClass totalScore:(NSNumber *)totalScore;
+- (IBAction)detailButtonPressed;
 
 @end

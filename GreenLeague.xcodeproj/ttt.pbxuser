@@ -1127,6 +1127,23 @@
 			3D03A85A131E6CD800F6B225 /* PBXTextBookmark */ = 3D03A85A131E6CD800F6B225 /* PBXTextBookmark */;
 			3D03A85B131E6CD800F6B225 /* PBXTextBookmark */ = 3D03A85B131E6CD800F6B225 /* PBXTextBookmark */;
 			3D03A85C131E6CD800F6B225 /* PBXTextBookmark */ = 3D03A85C131E6CD800F6B225 /* PBXTextBookmark */;
+			3D03A865131E6F3900F6B225 /* PBXTextBookmark */ = 3D03A865131E6F3900F6B225 /* PBXTextBookmark */;
+			3D03A866131E6F3900F6B225 /* PBXTextBookmark */ = 3D03A866131E6F3900F6B225 /* PBXTextBookmark */;
+			3D03A867131E6F3900F6B225 /* PBXTextBookmark */ = 3D03A867131E6F3900F6B225 /* PBXTextBookmark */;
+			3D03A868131E6F3900F6B225 /* PBXTextBookmark */ = 3D03A868131E6F3900F6B225 /* PBXTextBookmark */;
+			3D03A869131E6F3900F6B225 /* PBXTextBookmark */ = 3D03A869131E6F3900F6B225 /* PBXTextBookmark */;
+			3D03A86A131E6F3900F6B225 /* PBXTextBookmark */ = 3D03A86A131E6F3900F6B225 /* PBXTextBookmark */;
+			3D03A86B131E6F3900F6B225 /* PBXTextBookmark */ = 3D03A86B131E6F3900F6B225 /* PBXTextBookmark */;
+			3D03A878131E6FAA00F6B225 /* PBXTextBookmark */ = 3D03A878131E6FAA00F6B225 /* PBXTextBookmark */;
+			3D03A879131E6FAA00F6B225 /* PBXTextBookmark */ = 3D03A879131E6FAA00F6B225 /* PBXTextBookmark */;
+			3D03A87A131E6FAA00F6B225 /* PBXTextBookmark */ = 3D03A87A131E6FAA00F6B225 /* PBXTextBookmark */;
+			3D03A87B131E6FAA00F6B225 /* PBXTextBookmark */ = 3D03A87B131E6FAA00F6B225 /* PBXTextBookmark */;
+			3D03A87C131E6FAA00F6B225 /* PBXTextBookmark */ = 3D03A87C131E6FAA00F6B225 /* PBXTextBookmark */;
+			3D03A881131E700F00F6B225 /* PBXTextBookmark */ = 3D03A881131E700F00F6B225 /* PBXTextBookmark */;
+			3D03A882131E700F00F6B225 /* PBXTextBookmark */ = 3D03A882131E700F00F6B225 /* PBXTextBookmark */;
+			3D03A883131E700F00F6B225 /* PBXTextBookmark */ = 3D03A883131E700F00F6B225 /* PBXTextBookmark */;
+			3D03A884131E700F00F6B225 /* PBXTextBookmark */ = 3D03A884131E700F00F6B225 /* PBXTextBookmark */;
+			3D03A885131E700F00F6B225 /* PBXTextBookmark */ = 3D03A885131E700F00F6B225 /* PBXTextBookmark */;
 			3DB0D95713152233006FC601 = 3DB0D95713152233006FC601 /* PlistBookmark */;
 			3DB0D97713152CD8006FC601 = 3DB0D97713152CD8006FC601 /* PBXTextBookmark */;
 			3DB0D97813152CD8006FC601 = 3DB0D97813152CD8006FC601 /* PBXTextBookmark */;
@@ -8441,16 +8458,17 @@
 	};
 	3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1157, 650}}";
-			sepNavSelRange = "{498, 0}";
-			sepNavVisRange = "{0, 1339}";
+			sepNavIntBoundsRect = "{{0, 0}, {1064, 585}}";
+			sepNavSelRange = "{496, 0}";
+			sepNavVisRange = "{393, 558}";
+			sepNavWindowFrame = "{{199, 99}, {1216, 786}}";
 		};
 	};
 	3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 1092}}";
-			sepNavSelRange = "{2057, 0}";
-			sepNavVisRange = "{1850, 471}";
+			sepNavIntBoundsRect = "{{0, 0}, {1064, 1131}}";
+			sepNavSelRange = "{231, 0}";
+			sepNavVisRange = "{3, 1086}";
 		};
 	};
 	3D03A6B4131E55B800F6B225 /* PBXTextBookmark */ = {
@@ -8468,7 +8486,7 @@
 		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
 		name = "UniversityDetailViewController.h: 21";
 		rLen = 255;
-		rLoc = 850;
+		rLoc = 825;
 		rType = 0;
 		vrLen = 704;
 		vrLoc = 0;
@@ -8478,7 +8496,7 @@
 		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
 		name = "UniversityDetailViewController.m: 18";
 		rLen = 163;
-		rLoc = 448;
+		rLoc = 436;
 		rType = 0;
 		vrLen = 1000;
 		vrLoc = 98;
@@ -8488,7 +8506,7 @@
 		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
 		name = "UniversityDetailViewController.m: 18";
 		rLen = 0;
-		rLoc = 611;
+		rLoc = 599;
 		rType = 0;
 		vrLen = 944;
 		vrLoc = 157;
@@ -8508,7 +8526,7 @@
 		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
 		name = "UniversityDetailViewController.m: 16";
 		rLen = 0;
-		rLoc = 446;
+		rLoc = 434;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 157;
@@ -8517,8 +8535,8 @@
 		isa = PBXTextBookmark;
 		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
 		name = "UniversityDetailViewController.h: 25";
-		rLen = 10;
-		rLoc = 1155;
+		rLen = 0;
+		rLoc = 1080;
 		rType = 0;
 		vrLen = 518;
 		vrLoc = 186;
@@ -8528,7 +8546,7 @@
 		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
 		name = "UniversityDetailViewController.h: 27";
 		rLen = 163;
-		rLoc = 1168;
+		rLoc = 1082;
 		rType = 0;
 		vrLen = 599;
 		vrLoc = 250;
@@ -8558,7 +8576,7 @@
 		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
 		name = "UniversityDetailViewController.m: 18";
 		rLen = 0;
-		rLoc = 611;
+		rLoc = 599;
 		rType = 0;
 		vrLen = 1022;
 		vrLoc = 161;
@@ -8568,7 +8586,7 @@
 		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
 		name = "UniversityDetailViewController.h: 27";
 		rLen = 163;
-		rLoc = 1168;
+		rLoc = 1082;
 		rType = 0;
 		vrLen = 599;
 		vrLoc = 250;
@@ -8608,7 +8626,7 @@
 		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
 		name = "UniversityDetailViewController.m: 24";
 		rLen = 0;
-		rLoc = 718;
+		rLoc = 706;
 		rType = 0;
 		vrLen = 1065;
 		vrLoc = 3;
@@ -8618,7 +8636,7 @@
 		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
 		name = "UniversityDetailViewController.h: 27";
 		rLen = 163;
-		rLoc = 1168;
+		rLoc = 1082;
 		rType = 0;
 		vrLen = 599;
 		vrLoc = 250;
@@ -8638,7 +8656,7 @@
 		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
 		name = "UniversityDetailViewController.m: 24";
 		rLen = 0;
-		rLoc = 718;
+		rLoc = 706;
 		rType = 0;
 		vrLen = 1065;
 		vrLoc = 3;
@@ -8648,7 +8666,7 @@
 		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
 		name = "UniversityDetailViewController.h: 27";
 		rLen = 163;
-		rLoc = 1168;
+		rLoc = 1082;
 		rType = 0;
 		vrLen = 599;
 		vrLoc = 250;
@@ -8668,7 +8686,7 @@
 		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
 		name = "UniversityDetailViewController.m: 23";
 		rLen = 0;
-		rLoc = 718;
+		rLoc = 706;
 		rType = 0;
 		vrLen = 954;
 		vrLoc = 160;
@@ -8678,7 +8696,7 @@
 		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
 		name = "UniversityDetailViewController.h: 27";
 		rLen = 163;
-		rLoc = 1168;
+		rLoc = 1082;
 		rType = 0;
 		vrLen = 599;
 		vrLoc = 250;
@@ -8698,7 +8716,7 @@
 		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
 		name = "UniversityDetailViewController.m: 65";
 		rLen = 0;
-		rLoc = 2133;
+		rLoc = 2121;
 		rType = 0;
 		vrLen = 1005;
 		vrLoc = 616;
@@ -8708,7 +8726,7 @@
 		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
 		name = "UniversityDetailViewController.h: 26";
 		rLen = 175;
-		rLoc = 614;
+		rLoc = 589;
 		rType = 0;
 		vrLen = 605;
 		vrLoc = 352;
@@ -8728,7 +8746,7 @@
 		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
 		name = "UniversityDetailViewController.m: 23";
 		rLen = 0;
-		rLoc = 990;
+		rLoc = 978;
 		rType = 0;
 		vrLen = 1126;
 		vrLoc = 253;
@@ -8738,7 +8756,7 @@
 		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
 		name = "UniversityDetailViewController.h: 26";
 		rLen = 175;
-		rLoc = 614;
+		rLoc = 589;
 		rType = 0;
 		vrLen = 605;
 		vrLoc = 352;
@@ -8768,7 +8786,7 @@
 		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
 		name = "UniversityDetailViewController.h: 26";
 		rLen = 175;
-		rLoc = 614;
+		rLoc = 589;
 		rType = 0;
 		vrLen = 605;
 		vrLoc = 352;
@@ -8832,7 +8850,7 @@
 		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
 		name = "UniversityDetailViewController.m: 23";
 		rLen = 0;
-		rLoc = 991;
+		rLoc = 979;
 		rType = 0;
 		vrLen = 1042;
 		vrLoc = 157;
@@ -8842,7 +8860,7 @@
 		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
 		name = "UniversityDetailViewController.m: 22";
 		rLen = 0;
-		rLoc = 953;
+		rLoc = 941;
 		rType = 0;
 		vrLen = 1131;
 		vrLoc = 428;
@@ -8852,7 +8870,7 @@
 		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
 		name = "UniversityDetailViewController.h: 29";
 		rLen = 0;
-		rLoc = 789;
+		rLoc = 764;
 		rType = 0;
 		vrLen = 605;
 		vrLoc = 352;
@@ -8927,7 +8945,7 @@
 		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
 		name = "UniversityDetailViewController.h: 31";
 		rLen = 255;
-		rLoc = 850;
+		rLoc = 825;
 		rType = 0;
 		vrLen = 1002;
 		vrLoc = 161;
@@ -8937,7 +8955,7 @@
 		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
 		name = "UniversityDetailViewController.h: 29";
 		rLen = 0;
-		rLoc = 789;
+		rLoc = 764;
 		rType = 0;
 		vrLen = 605;
 		vrLoc = 352;
@@ -8997,7 +9015,7 @@
 		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
 		name = "UniversityDetailViewController.h: 31";
 		rLen = 255;
-		rLoc = 850;
+		rLoc = 825;
 		rType = 0;
 		vrLen = 1002;
 		vrLoc = 161;
@@ -9017,7 +9035,7 @@
 		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
 		name = "UniversityDetailViewController.h: 29";
 		rLen = 0;
-		rLoc = 789;
+		rLoc = 764;
 		rType = 0;
 		vrLen = 605;
 		vrLoc = 352;
@@ -9077,7 +9095,7 @@
 		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
 		name = "UniversityDetailViewController.m: 22";
 		rLen = 0;
-		rLoc = 952;
+		rLoc = 940;
 		rType = 0;
 		vrLen = 1102;
 		vrLoc = 157;
@@ -9087,7 +9105,7 @@
 		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
 		name = "UniversityDetailViewController.h: 29";
 		rLen = 0;
-		rLoc = 789;
+		rLoc = 764;
 		rType = 0;
 		vrLen = 605;
 		vrLoc = 352;
@@ -9121,7 +9139,7 @@
 		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
 		name = "UniversityDetailViewController.m: 22";
 		rLen = 0;
-		rLoc = 952;
+		rLoc = 940;
 		rType = 0;
 		vrLen = 1062;
 		vrLoc = 204;
@@ -9131,7 +9149,7 @@
 		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
 		name = "UniversityDetailViewController.h: 29";
 		rLen = 0;
-		rLoc = 789;
+		rLoc = 764;
 		rType = 0;
 		vrLen = 350;
 		vrLoc = 0;
@@ -9181,7 +9199,7 @@
 		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
 		name = "UniversityDetailViewController.m: 22";
 		rLen = 0;
-		rLoc = 952;
+		rLoc = 940;
 		rType = 0;
 		vrLen = 1206;
 		vrLoc = 233;
@@ -9191,7 +9209,7 @@
 		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
 		name = "UniversityDetailViewController.h: 29";
 		rLen = 0;
-		rLoc = 789;
+		rLoc = 764;
 		rType = 0;
 		vrLen = 350;
 		vrLoc = 0;
@@ -9251,7 +9269,7 @@
 		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
 		name = "UniversityDetailViewController.m: 22";
 		rLen = 0;
-		rLoc = 952;
+		rLoc = 940;
 		rType = 0;
 		vrLen = 1204;
 		vrLoc = 281;
@@ -9261,7 +9279,7 @@
 		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
 		name = "UniversityDetailViewController.h: 29";
 		rLen = 0;
-		rLoc = 789;
+		rLoc = 764;
 		rType = 0;
 		vrLen = 350;
 		vrLoc = 0;
@@ -9301,7 +9319,7 @@
 		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
 		name = "UniversityDetailViewController.m: 22";
 		rLen = 0;
-		rLoc = 952;
+		rLoc = 940;
 		rType = 0;
 		vrLen = 1204;
 		vrLoc = 281;
@@ -9311,7 +9329,7 @@
 		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
 		name = "UniversityDetailViewController.h: 29";
 		rLen = 0;
-		rLoc = 789;
+		rLoc = 764;
 		rType = 0;
 		vrLen = 350;
 		vrLoc = 0;
@@ -9351,7 +9369,7 @@
 		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
 		name = "UniversityDetailViewController.m: 25";
 		rLen = 0;
-		rLoc = 1080;
+		rLoc = 1068;
 		rType = 0;
 		vrLen = 1275;
 		vrLoc = 281;
@@ -9381,7 +9399,7 @@
 		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
 		name = "UniversityDetailViewController.h: 29";
 		rLen = 0;
-		rLoc = 789;
+		rLoc = 764;
 		rType = 0;
 		vrLen = 377;
 		vrLoc = 0;
@@ -9431,7 +9449,7 @@
 		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
 		name = "UniversityDetailViewController.h: 29";
 		rLen = 0;
-		rLoc = 789;
+		rLoc = 764;
 		rType = 0;
 		vrLen = 350;
 		vrLoc = 0;
@@ -9481,7 +9499,7 @@
 		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
 		name = "UniversityDetailViewController.h: 29";
 		rLen = 0;
-		rLoc = 789;
+		rLoc = 764;
 		rType = 0;
 		vrLen = 350;
 		vrLoc = 0;
@@ -9531,7 +9549,7 @@
 		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
 		name = "UniversityDetailViewController.h: 29";
 		rLen = 0;
-		rLoc = 789;
+		rLoc = 764;
 		rType = 0;
 		vrLen = 350;
 		vrLoc = 0;
@@ -9581,7 +9599,7 @@
 		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
 		name = "UniversityDetailViewController.h: 29";
 		rLen = 0;
-		rLoc = 789;
+		rLoc = 764;
 		rType = 0;
 		vrLen = 350;
 		vrLoc = 0;
@@ -9631,7 +9649,7 @@
 		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
 		name = "UniversityDetailViewController.h: 29";
 		rLen = 0;
-		rLoc = 789;
+		rLoc = 764;
 		rType = 0;
 		vrLen = 377;
 		vrLoc = 0;
@@ -9681,7 +9699,7 @@
 		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
 		name = "UniversityDetailViewController.h: 29";
 		rLen = 0;
-		rLoc = 789;
+		rLoc = 764;
 		rType = 0;
 		vrLen = 377;
 		vrLoc = 0;
@@ -9731,7 +9749,7 @@
 		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
 		name = "UniversityDetailViewController.h: 29";
 		rLen = 0;
-		rLoc = 789;
+		rLoc = 764;
 		rType = 0;
 		vrLen = 377;
 		vrLoc = 0;
@@ -9781,7 +9799,7 @@
 		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
 		name = "UniversityDetailViewController.h: 29";
 		rLen = 0;
-		rLoc = 789;
+		rLoc = 764;
 		rType = 0;
 		vrLen = 350;
 		vrLoc = 0;
@@ -9831,7 +9849,7 @@
 		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
 		name = "UniversityDetailViewController.h: 29";
 		rLen = 0;
-		rLoc = 789;
+		rLoc = 764;
 		rType = 0;
 		vrLen = 350;
 		vrLoc = 0;
@@ -9881,7 +9899,7 @@
 		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
 		name = "UniversityDetailViewController.h: 29";
 		rLen = 0;
-		rLoc = 789;
+		rLoc = 764;
 		rType = 0;
 		vrLen = 350;
 		vrLoc = 0;
@@ -9931,7 +9949,7 @@
 		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
 		name = "UniversityDetailViewController.h: 29";
 		rLen = 0;
-		rLoc = 789;
+		rLoc = 764;
 		rType = 0;
 		vrLen = 350;
 		vrLoc = 0;
@@ -10001,7 +10019,7 @@
 		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
 		name = "UniversityDetailViewController.h: 22";
 		rLen = 0;
-		rLoc = 498;
+		rLoc = 496;
 		rType = 0;
 		vrLen = 514;
 		vrLoc = 250;
@@ -11033,7 +11051,7 @@
 		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
 		name = "UniversityDetailViewController.m: 18";
 		rLen = 163;
-		rLoc = 448;
+		rLoc = 436;
 		rType = 0;
 		vrLen = 972;
 		vrLoc = 424;
@@ -11043,7 +11061,7 @@
 		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
 		name = "UniversityDetailViewController.m: 65";
 		rLen = 0;
-		rLoc = 2057;
+		rLoc = 2045;
 		rType = 0;
 		vrLen = 471;
 		vrLoc = 1850;
@@ -11063,7 +11081,7 @@
 		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
 		name = "UniversityDetailViewController.m: 17";
 		rLen = 0;
-		rLoc = 447;
+		rLoc = 435;
 		rType = 0;
 		vrLen = 535;
 		vrLoc = 157;
@@ -11073,7 +11091,7 @@
 		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
 		name = "UniversityDetailViewController.h: 23";
 		rLen = 0;
-		rLoc = 498;
+		rLoc = 496;
 		rType = 0;
 		vrLen = 319;
 		vrLoc = 185;
@@ -11083,7 +11101,7 @@
 		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
 		name = "UniversityDetailViewController.h: 27";
 		rLen = 0;
-		rLoc = 524;
+		rLoc = 499;
 		rType = 0;
 		vrLen = 604;
 		vrLoc = 735;
@@ -11093,7 +11111,7 @@
 		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
 		name = "UniversityDetailViewController.h: 24";
 		rLen = 0;
-		rLoc = 498;
+		rLoc = 496;
 		rType = 0;
 		vrLen = 1339;
 		vrLoc = 0;
@@ -11119,6 +11137,176 @@
 		vrLoc = 1263;
 	};
 	3D03A85C131E6CD800F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6E5131E5A8B00F6B225 /* NSNumber+Helper.m */;
+		name = "NSNumber+Helper.m: 14";
+		rLen = 0;
+		rLoc = 293;
+		rType = 0;
+		vrLen = 788;
+		vrLoc = 0;
+	};
+	3D03A865131E6F3900F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
+		name = "UniversityDetailViewController.m: 60";
+		rLen = 0;
+		rLoc = 1981;
+		rType = 0;
+		vrLen = 536;
+		vrLoc = 1785;
+	};
+	3D03A866131E6F3900F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
+		name = "UniversityDetailViewController.m: 85";
+		rLen = 0;
+		rLoc = 2592;
+		rType = 0;
+		vrLen = 462;
+		vrLoc = 1994;
+	};
+	3D03A867131E6F3900F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
+		name = "UniversityDetailViewController.h: 39";
+		rLen = 0;
+		rLoc = 1080;
+		rType = 0;
+		vrLen = 604;
+		vrLoc = 735;
+	};
+	3D03A868131E6F3900F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
+		name = "UniversityDetailViewController.h: 42";
+		rLen = 31;
+		rLoc = 1247;
+		rType = 0;
+		vrLen = 637;
+		vrLoc = 735;
+	};
+	3D03A869131E6F3900F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9EF1317BD4F006FC601 /* University.m */;
+		name = "University.m: 62";
+		rLen = 62;
+		rLoc = 1475;
+		rType = 0;
+		vrLen = 2652;
+		vrLoc = 1263;
+	};
+	3D03A86A131E6F3900F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 86";
+		rLen = 0;
+		rLoc = 2655;
+		rType = 0;
+		vrLen = 2431;
+		vrLoc = 1341;
+	};
+	3D03A86B131E6F3900F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6E5131E5A8B00F6B225 /* NSNumber+Helper.m */;
+		name = "NSNumber+Helper.m: 14";
+		rLen = 0;
+		rLoc = 293;
+		rType = 0;
+		vrLen = 788;
+		vrLoc = 0;
+	};
+	3D03A878131E6FAA00F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
+		name = "UniversityDetailViewController.m: 85";
+		rLen = 0;
+		rLoc = 2577;
+		rType = 0;
+		vrLen = 640;
+		vrLoc = 1996;
+	};
+	3D03A879131E6FAA00F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
+		name = "UniversityDetailViewController.h: 42";
+		rLen = 31;
+		rLoc = 1247;
+		rType = 0;
+		vrLen = 582;
+		vrLoc = 790;
+	};
+	3D03A87A131E6FAA00F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9EF1317BD4F006FC601 /* University.m */;
+		name = "University.m: 62";
+		rLen = 62;
+		rLoc = 1475;
+		rType = 0;
+		vrLen = 2652;
+		vrLoc = 1263;
+	};
+	3D03A87B131E6FAA00F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 86";
+		rLen = 0;
+		rLoc = 2655;
+		rType = 0;
+		vrLen = 2431;
+		vrLoc = 1341;
+	};
+	3D03A87C131E6FAA00F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6E5131E5A8B00F6B225 /* NSNumber+Helper.m */;
+		name = "NSNumber+Helper.m: 14";
+		rLen = 0;
+		rLoc = 293;
+		rType = 0;
+		vrLen = 788;
+		vrLoc = 0;
+	};
+	3D03A881131E700F00F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
+		name = "UniversityDetailViewController.m: 10";
+		rLen = 0;
+		rLoc = 231;
+		rType = 0;
+		vrLen = 1086;
+		vrLoc = 3;
+	};
+	3D03A882131E700F00F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
+		name = "UniversityDetailViewController.h: 23";
+		rLen = 0;
+		rLoc = 496;
+		rType = 0;
+		vrLen = 558;
+		vrLoc = 393;
+	};
+	3D03A883131E700F00F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9EF1317BD4F006FC601 /* University.m */;
+		name = "University.m: 62";
+		rLen = 62;
+		rLoc = 1475;
+		rType = 0;
+		vrLen = 2652;
+		vrLoc = 1263;
+	};
+	3D03A884131E700F00F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 86";
+		rLen = 0;
+		rLoc = 2655;
+		rType = 0;
+		vrLen = 2431;
+		vrLoc = 1341;
+	};
+	3D03A885131E700F00F6B225 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 3D03A6E5131E5A8B00F6B225 /* NSNumber+Helper.m */;
 		name = "NSNumber+Helper.m: 14";
@@ -11466,7 +11654,7 @@
 	3DB0D9EF1317BD4F006FC601 /* University.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1169, 1586}}";
-			sepNavSelRange = "{3523, 0}";
+			sepNavSelRange = "{1475, 62}";
 			sepNavVisRange = "{1263, 2652}";
 			sepNavWindowFrame = "{{94, 55}, {1228, 982}}";
 		};
