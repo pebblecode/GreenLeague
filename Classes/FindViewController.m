@@ -66,7 +66,7 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 	if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {			
-		self.title = @"Universities";
+		self.title = @"Find Universities";
 		self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Find" image:[UIImage imageNamed:@"06-magnify.png"] tag:1];	
 	}
 	return self;
@@ -78,28 +78,15 @@
 	
 	universitySortIndex = kInvalidSortByControlIndex; // Set to invalid, so that results are fetched the first time
 	
-	
+	// Create sort control
 	sortControl = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Rank", @"A-Z", nil]];
 	sortControl.frame = CGRectMake(0, 0, kSortControlWidth, kSortControlHeight);
 	sortControl.selectedSegmentIndex = kSortByRankControlIndex; // Select rank by default
 	sortControl.segmentedControlStyle = UISegmentedControlStyleBar;
 	[sortControl addTarget:self action:@selector(sortControlValueChange) forControlEvents:UIControlEventValueChanged];
-	//[self.navigationController.navigationBar addSubview:sortControl];
-		
-	// Add sort to toolbar
-//	UIBarButtonItem *sortBarButton = [[UIBarButtonItem alloc] initWithCustomView:sortControl];
-//	self.navigationController.toolbarItems = [NSArray arrayWithObjects:sortBarButton, nil];
-//	self.navigationController.toolbarHidden = NO;
 	
-//	universitySortIndex = kInvalidSortByControlIndex; // Set to invalid, so that results are fetched the first time
-//	sortControl = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects: @"Rank", @"A-Z", nil]];
-//	[sortControl addTarget:self action:@selector(sortControlValueChange) forControlEvents:UIControlEventValueChanged];
-//	sortControl.frame = CGRectMake(76, 4, 100, 30);
-//	sortControl.segmentedControlStyle = UISegmentedControlStyleBar;
-//	//sortControl.selectedSegmentIndex = kSortByRankControlIndex; // Select rank by default
-	
-	UIBarButtonItem *segmentBarItem = [[UIBarButtonItem alloc] initWithCustomView:sortControl];
-    
+	// Add sort control to nav bar
+	UIBarButtonItem *segmentBarItem = [[UIBarButtonItem alloc] initWithCustomView:sortControl];    
 	self.navigationItem.rightBarButtonItem = segmentBarItem;	
 	[segmentBarItem release];
 	
