@@ -11,13 +11,14 @@
 
 @implementation UniversityDetailViewController
 
-@synthesize rank2010Str, rank2009Str, awardClassStr, totalScoreStr, rank2010Label, rank2009Label, awardClassLabel, totalScoreLabel, infoButton;
+@synthesize nameStr, rank2010Str, rank2009Str, awardClassStr, totalScoreStr, nameLabel, rank2010Label, rank2009Label, awardClassLabel, totalScoreLabel, infoButton;
 
 
 
-- (id)initWithRank2010:(NSNumber *)rank2010 rank2009:(NSNumber *)rank2009 awardClass:(NSString *)awardClass totalScore:(NSNumber *)totalScore {
+- (id)initWithName:(NSString *)name rank2010:(NSNumber *)rank2010 rank2009:(NSNumber *)rank2009 awardClass:(NSString *)awardClass totalScore:(NSNumber *)totalScore {
     self = [super initWithNibName:nil bundle:nil]; // Load default nib
     if (self) {
+		nameStr = name;
 		rank2010Str= ([rank2010 intValue] == 0) ? @"(none)" : [NSString stringWithFormat:@"%@", [rank2010 ordinalString]] ;
 		rank2009Str = ([rank2009 intValue] == 0) ? @"(none)" : [NSString stringWithFormat:@"%@", [rank2009 ordinalString]];
 		awardClassStr = [awardClass copy];
@@ -29,6 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
+	self.nameLabel.text = nameStr;
 	self.rank2010Label.text = rank2010Str;
 	self.rank2009Label.text = rank2009Str;
 	self.awardClassLabel.text = awardClassStr;
@@ -59,11 +61,13 @@
 
 
 - (void)dealloc {
+	[nameStr release];
 	[rank2010Str release];
 	[rank2009Str release];
 	[awardClassStr release];
 	[totalScoreStr release];
 	
+	[nameLabel release];
 	[rank2010Label release];
 	[rank2009Label release];
 	[awardClassLabel release];
