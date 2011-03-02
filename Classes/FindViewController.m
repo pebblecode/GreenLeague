@@ -10,6 +10,7 @@
 #import "UniversityDetailViewController.h"
 #import "University.h"
 #import "NSString+Helper.h"
+#import "UIColor+Helper.h"
 
 // Data source file minus the file extension
 #define kDataSourceFile "gl2010"
@@ -30,6 +31,7 @@
 // Sort control
 #define kSortControlWidth 90.0
 #define kSortControlHeight 30.0
+
 
 // Private methods
 @interface FindViewController()
@@ -188,9 +190,31 @@
 	cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, uni.sortName];	
 	// Detailed text: Scored: Score
 	cell.detailTextLabel.text = [NSString stringWithFormat:@"Scored: %.1f", [uni.totalScore floatValue]];		
+		
 	
     return cell;
 }
+
+// Note that colour must be changed in this method rather than tableView:cellForRowAtIndexPath:
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+	
+	University *uni = [self universityFromIndexPath:indexPath];
+	
+	// Colour code university based on award class
+	NSArray *awardClassColours = [NSArray arrayWithObjects:
+								  [UIColor colorWithHexString:@"#DFFAD8"], // Light green
+								  [UIColor colorWithHexString:@"#F8F8CF"], // Light yellow
+								  [UIColor colorWithHexString:@"#FFEFDF"], // Light orange
+								  [UIColor colorWithHexString:@"#F0E0E0"], // Pink
+								  [UIColor colorWithHexString:@"#EEB8B8"], // Light Red
+								  [UIColor colorWithHexString:@"#DDDDDD"], // Light gray
+								  nil];
+	
+	cell.textLabel.textColor = [UIColor colorWithHexString:@"#6F8A00"];
+	cell.backgroundColor = [awardClassColours objectAtIndex:[self.awardClassDBNames indexOfObject:[uni awardClass]]];	
+	
+}
+
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {	
 	NSString *headerTitle;
