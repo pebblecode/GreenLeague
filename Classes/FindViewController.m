@@ -307,9 +307,24 @@
 	int awardClassIndex = [self.awardClassDBNames indexOfObject:[uni awardClass]];
 	if (awardClassIndex != NSNotFound) {
 		NSString *awardClassTitle = [self.awardClassNames objectAtIndex:awardClassIndex]; // Find title using db name titles
-		UniversityDetailViewController *uniDetailVC = [[UniversityDetailViewController alloc] initWithName:[uni name] rank2010:[uni rank2010] rank2009:[uni rank2009] awardClass:awardClassTitle totalScore:[uni totalScore]];
-		
+		UniversityDetailViewController *uniDetailVC = [[UniversityDetailViewController alloc] initWithName:[uni name] rank2010:[uni rank2010] rank2009:[uni rank2009] awardClass:awardClassTitle totalScore:[uni totalScore]];				
 		[self.navigationController pushViewController:uniDetailVC animated:YES];
+		
+		// Set colours of rank and award class - need to wait for view to be loaded before this can be set.
+		if ([[uni awardClass] isEqualToString:@"Did not sit exam"]) {
+			uniDetailVC.awardClassLabel.textColor = [UIColor colorWithHexString:@"#666666"]; // Black
+			
+		} else {
+			uniDetailVC.awardClassLabel.textColor = [UIColor colorWithHexString:@"#6F8A00"]; // Green
+		}
+		
+		int awardClassColourIndex = [self.awardClassDBNames indexOfObject:[uni awardClass]];
+		if (awardClassColourIndex != NSNotFound) {
+			uniDetailVC.awardClassLabel.backgroundColor = [self.awardClassColours objectAtIndex:awardClassColourIndex];
+			uniDetailVC.rank2010Label.backgroundColor = [self.awardClassColours objectAtIndex:awardClassColourIndex];
+		} else {
+			NSLog(@"tableView:didSelectRowAtIndexPath: Could not find colour for '%@' of award class '%@'", [uni name], [uni awardClass]);
+		}		
 		
 		//[uniDetailVC release]; // Crashes if released for some reason
 	} else {
