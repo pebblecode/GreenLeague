@@ -22,15 +22,12 @@
 			1D6058900D05DD3D006BFB54 /* GreenLeague */,
 		);
 		breakpoints = (
-			3DB0DB6013182268006FC601 /* FindViewController.m:265 */,
-			3D03A3C9131D1FC200F6B225 /* FindViewController.m:416 */,
-			3D03A5BA131D54EA00F6B225 /* FindViewController.m:412 */,
-			3D03A5DF131D5E2100F6B225 /* FindViewController.m:516 */,
-			3D03A610131D627F00F6B225 /* FindViewController.m:207 */,
-			3D03A612131D628300F6B225 /* FindViewController.m:196 */,
-			3D03A614131D628C00F6B225 /* FindViewController.m:155 */,
-			3D03A616131D629100F6B225 /* FindViewController.m:141 */,
-			3D03A62C131D672600F6B225 /* FindViewController.m:464 */,
+			3D03A5DF131D5E2100F6B225 /* FindViewController.m:527 */,
+			3D03A610131D627F00F6B225 /* FindViewController.m:201 */,
+			3D03A612131D628300F6B225 /* FindViewController.m:190 */,
+			3D03A614131D628C00F6B225 /* FindViewController.m:157 */,
+			3D03A616131D629100F6B225 /* FindViewController.m:143 */,
+			3D03A6F6131E5C1900F6B225 /* NSNumber+Helper.m:16 */,
 		);
 		codeSenseManager = 3DB0D93413151196006FC601 /* Code sense */;
 		executables = (
@@ -834,6 +831,7 @@
 			3D03A645131D6DA200F6B225 = 3D03A645131D6DA200F6B225 /* PBXTextBookmark */;
 			3D03A646131D6DA200F6B225 = 3D03A646131D6DA200F6B225 /* PBXTextBookmark */;
 			3D03A647131D6DA200F6B225 = 3D03A647131D6DA200F6B225 /* PBXTextBookmark */;
+			3D03A64F131D6DC800F6B225 /* PBXTextBookmark */ = 3D03A64F131D6DC800F6B225 /* PBXTextBookmark */;
 			3D03A66C131D71C800F6B225 /* PBXTextBookmark */ = 3D03A66C131D71C800F6B225 /* PBXTextBookmark */;
 			3D03A66D131D71C800F6B225 /* PBXTextBookmark */ = 3D03A66D131D71C800F6B225 /* PBXTextBookmark */;
 			3D03A66E131D71C800F6B225 /* PBXTextBookmark */ = 3D03A66E131D71C800F6B225 /* PBXTextBookmark */;
@@ -864,6 +862,69 @@
 			3D03A69A131D775900F6B225 /* PBXTextBookmark */ = 3D03A69A131D775900F6B225 /* PBXTextBookmark */;
 			3D03A69D131D777100F6B225 /* PBXTextBookmark */ = 3D03A69D131D777100F6B225 /* PBXTextBookmark */;
 			3D03A69E131D777100F6B225 /* PBXTextBookmark */ = 3D03A69E131D777100F6B225 /* PBXTextBookmark */;
+			3D03A6B4131E55B800F6B225 /* PBXTextBookmark */ = 3D03A6B4131E55B800F6B225 /* PBXTextBookmark */;
+			3D03A6B5131E55B800F6B225 /* PBXTextBookmark */ = 3D03A6B5131E55B800F6B225 /* PBXTextBookmark */;
+			3D03A6B6131E55B800F6B225 /* PBXTextBookmark */ = 3D03A6B6131E55B800F6B225 /* PBXTextBookmark */;
+			3D03A6B7131E55B800F6B225 /* PBXTextBookmark */ = 3D03A6B7131E55B800F6B225 /* PBXTextBookmark */;
+			3D03A6B8131E55B800F6B225 /* PBXTextBookmark */ = 3D03A6B8131E55B800F6B225 /* PBXTextBookmark */;
+			3D03A6B9131E55B800F6B225 /* PBXTextBookmark */ = 3D03A6B9131E55B800F6B225 /* PBXTextBookmark */;
+			3D03A6BA131E55B800F6B225 /* PBXTextBookmark */ = 3D03A6BA131E55B800F6B225 /* PBXTextBookmark */;
+			3D03A6BB131E55B800F6B225 /* PBXTextBookmark */ = 3D03A6BB131E55B800F6B225 /* PBXTextBookmark */;
+			3D03A6BE131E55B800F6B225 /* PBXTextBookmark */ = 3D03A6BE131E55B800F6B225 /* PBXTextBookmark */;
+			3D03A6BF131E55B800F6B225 /* PBXTextBookmark */ = 3D03A6BF131E55B800F6B225 /* PBXTextBookmark */;
+			3D03A6C2131E55E600F6B225 /* PBXTextBookmark */ = 3D03A6C2131E55E600F6B225 /* PBXTextBookmark */;
+			3D03A6C3131E55E600F6B225 /* PBXTextBookmark */ = 3D03A6C3131E55E600F6B225 /* PBXTextBookmark */;
+			3D03A6C4131E55E600F6B225 /* PBXTextBookmark */ = 3D03A6C4131E55E600F6B225 /* PBXTextBookmark */;
+			3D03A6C5131E55E600F6B225 /* PBXTextBookmark */ = 3D03A6C5131E55E600F6B225 /* PBXTextBookmark */;
+			3D03A6C6131E55E600F6B225 /* PBXTextBookmark */ = 3D03A6C6131E55E600F6B225 /* PBXTextBookmark */;
+			3D03A6C9131E564E00F6B225 /* PBXTextBookmark */ = 3D03A6C9131E564E00F6B225 /* PBXTextBookmark */;
+			3D03A6CA131E564E00F6B225 /* PBXTextBookmark */ = 3D03A6CA131E564E00F6B225 /* PBXTextBookmark */;
+			3D03A6CB131E564E00F6B225 /* PBXTextBookmark */ = 3D03A6CB131E564E00F6B225 /* PBXTextBookmark */;
+			3D03A6CC131E570700F6B225 /* PBXTextBookmark */ = 3D03A6CC131E570700F6B225 /* PBXTextBookmark */;
+			3D03A6CD131E570700F6B225 /* PBXTextBookmark */ = 3D03A6CD131E570700F6B225 /* PBXTextBookmark */;
+			3D03A6CE131E570700F6B225 /* PBXTextBookmark */ = 3D03A6CE131E570700F6B225 /* PBXTextBookmark */;
+			3D03A6CF131E572200F6B225 /* PBXTextBookmark */ = 3D03A6CF131E572200F6B225 /* PBXTextBookmark */;
+			3D03A6D0131E572200F6B225 /* PBXTextBookmark */ = 3D03A6D0131E572200F6B225 /* PBXTextBookmark */;
+			3D03A6D1131E572200F6B225 /* PBXTextBookmark */ = 3D03A6D1131E572200F6B225 /* PBXTextBookmark */;
+			3D03A6D4131E57FF00F6B225 /* PBXTextBookmark */ = 3D03A6D4131E57FF00F6B225 /* PBXTextBookmark */;
+			3D03A6D5131E57FF00F6B225 /* PBXTextBookmark */ = 3D03A6D5131E57FF00F6B225 /* PBXTextBookmark */;
+			3D03A6D6131E57FF00F6B225 /* PBXTextBookmark */ = 3D03A6D6131E57FF00F6B225 /* PBXTextBookmark */;
+			3D03A6DB131E58F600F6B225 /* PBXTextBookmark */ = 3D03A6DB131E58F600F6B225 /* PBXTextBookmark */;
+			3D03A6DC131E58F600F6B225 /* PBXTextBookmark */ = 3D03A6DC131E58F600F6B225 /* PBXTextBookmark */;
+			3D03A6DD131E58F600F6B225 /* PBXTextBookmark */ = 3D03A6DD131E58F600F6B225 /* PBXTextBookmark */;
+			3D03A6E0131E593800F6B225 /* PBXTextBookmark */ = 3D03A6E0131E593800F6B225 /* PBXTextBookmark */;
+			3D03A6E1131E593800F6B225 /* PBXTextBookmark */ = 3D03A6E1131E593800F6B225 /* PBXTextBookmark */;
+			3D03A6E2131E593800F6B225 /* PBXTextBookmark */ = 3D03A6E2131E593800F6B225 /* PBXTextBookmark */;
+			3D03A6E9131E5BED00F6B225 /* PBXTextBookmark */ = 3D03A6E9131E5BED00F6B225 /* PBXTextBookmark */;
+			3D03A6EA131E5BED00F6B225 /* PBXTextBookmark */ = 3D03A6EA131E5BED00F6B225 /* PBXTextBookmark */;
+			3D03A6EB131E5BED00F6B225 /* PBXTextBookmark */ = 3D03A6EB131E5BED00F6B225 /* PBXTextBookmark */;
+			3D03A6EC131E5BED00F6B225 /* PBXTextBookmark */ = 3D03A6EC131E5BED00F6B225 /* PBXTextBookmark */;
+			3D03A6ED131E5BED00F6B225 /* PBXTextBookmark */ = 3D03A6ED131E5BED00F6B225 /* PBXTextBookmark */;
+			3D03A6EE131E5BED00F6B225 /* PBXTextBookmark */ = 3D03A6EE131E5BED00F6B225 /* PBXTextBookmark */;
+			3D03A6F1131E5BED00F6B225 /* PBXTextBookmark */ = 3D03A6F1131E5BED00F6B225 /* PBXTextBookmark */;
+			3D03A6F2131E5BED00F6B225 /* PBXTextBookmark */ = 3D03A6F2131E5BED00F6B225 /* PBXTextBookmark */;
+			3D03A6F3131E5BED00F6B225 /* PBXTextBookmark */ = 3D03A6F3131E5BED00F6B225 /* PBXTextBookmark */;
+			3D03A6F4131E5BED00F6B225 /* PBXTextBookmark */ = 3D03A6F4131E5BED00F6B225 /* PBXTextBookmark */;
+			3D03A6FA131E5C1C00F6B225 /* PBXTextBookmark */ = 3D03A6FA131E5C1C00F6B225 /* PBXTextBookmark */;
+			3D03A6FB131E5C1C00F6B225 /* PBXTextBookmark */ = 3D03A6FB131E5C1C00F6B225 /* PBXTextBookmark */;
+			3D03A6FC131E5C1C00F6B225 /* PBXTextBookmark */ = 3D03A6FC131E5C1C00F6B225 /* PBXTextBookmark */;
+			3D03A6FF131E5C1C00F6B225 /* PBXTextBookmark */ = 3D03A6FF131E5C1C00F6B225 /* PBXTextBookmark */;
+			3D03A700131E5C1C00F6B225 /* PBXTextBookmark */ = 3D03A700131E5C1C00F6B225 /* PBXTextBookmark */;
+			3D03A701131E5C1C00F6B225 /* PBXTextBookmark */ = 3D03A701131E5C1C00F6B225 /* PBXTextBookmark */;
+			3D03A702131E5C1C00F6B225 /* PBXTextBookmark */ = 3D03A702131E5C1C00F6B225 /* PBXTextBookmark */;
+			3D03A703131E5C1C00F6B225 /* PBXTextBookmark */ = 3D03A703131E5C1C00F6B225 /* PBXTextBookmark */;
+			3D03A706131E5C4600F6B225 /* PBXTextBookmark */ = 3D03A706131E5C4600F6B225 /* PBXTextBookmark */;
+			3D03A707131E5C4600F6B225 /* PBXTextBookmark */ = 3D03A707131E5C4600F6B225 /* PBXTextBookmark */;
+			3D03A708131E5C4600F6B225 /* PBXTextBookmark */ = 3D03A708131E5C4600F6B225 /* PBXTextBookmark */;
+			3D03A709131E5C4600F6B225 /* PBXTextBookmark */ = 3D03A709131E5C4600F6B225 /* PBXTextBookmark */;
+			3D03A70A131E5C4600F6B225 /* PBXTextBookmark */ = 3D03A70A131E5C4600F6B225 /* PBXTextBookmark */;
+			3D03A70B131E5C4600F6B225 /* PBXTextBookmark */ = 3D03A70B131E5C4600F6B225 /* PBXTextBookmark */;
+			3D03A714131E5CA700F6B225 /* PBXTextBookmark */ = 3D03A714131E5CA700F6B225 /* PBXTextBookmark */;
+			3D03A715131E5CA700F6B225 /* PBXTextBookmark */ = 3D03A715131E5CA700F6B225 /* PBXTextBookmark */;
+			3D03A716131E5CA700F6B225 /* PBXTextBookmark */ = 3D03A716131E5CA700F6B225 /* PBXTextBookmark */;
+			3D03A717131E5CA700F6B225 /* PBXTextBookmark */ = 3D03A717131E5CA700F6B225 /* PBXTextBookmark */;
+			3D03A718131E5CA700F6B225 /* PBXTextBookmark */ = 3D03A718131E5CA700F6B225 /* PBXTextBookmark */;
+			3D03A719131E5CA700F6B225 /* PBXTextBookmark */ = 3D03A719131E5CA700F6B225 /* PBXTextBookmark */;
 			3DB0D95713152233006FC601 = 3DB0D95713152233006FC601 /* PlistBookmark */;
 			3DB0D97713152CD8006FC601 = 3DB0D97713152CD8006FC601 /* PBXTextBookmark */;
 			3DB0D97813152CD8006FC601 = 3DB0D97813152CD8006FC601 /* PBXTextBookmark */;
@@ -892,7 +953,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 165";
 		rLen = 0;
-		rLoc = 7873;
+		rLoc = 7632;
 		rType = 0;
 		vrLen = 991;
 		vrLoc = 4519;
@@ -921,7 +982,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 165";
 		rLen = 0;
-		rLoc = 7873;
+		rLoc = 7632;
 		rType = 0;
 		vrLen = 780;
 		vrLoc = 4519;
@@ -931,7 +992,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 235";
 		rLen = 0;
-		rLoc = 10480;
+		rLoc = 10805;
 		rType = 0;
 		vrLen = 1235;
 		vrLoc = 6980;
@@ -941,7 +1002,7 @@
 		fRef = 3DB0D9461315206D006FC601 /* FindViewController.h */;
 		name = "FindViewController.h: 27";
 		rLen = 0;
-		rLoc = 1423;
+		rLoc = 1369;
 		rType = 0;
 		vrLen = 712;
 		vrLoc = 203;
@@ -951,7 +1012,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 30";
 		rLen = 0;
-		rLoc = 830;
+		rLoc = 873;
 		rType = 0;
 		vrLen = 407;
 		vrLoc = 339;
@@ -966,7 +1027,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 235";
 		rLen = 0;
-		rLoc = 10480;
+		rLoc = 10805;
 		rType = 0;
 		vrLen = 1235;
 		vrLoc = 6980;
@@ -996,7 +1057,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 114";
 		rLen = 0;
-		rLoc = 5271;
+		rLoc = 5397;
 		rType = 0;
 		vrLen = 1058;
 		vrLoc = 2213;
@@ -1021,7 +1082,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 114";
 		rLen = 0;
-		rLoc = 5271;
+		rLoc = 5397;
 		rType = 0;
 		vrLen = 1054;
 		vrLoc = 2213;
@@ -1046,7 +1107,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 114";
 		rLen = 0;
-		rLoc = 5271;
+		rLoc = 5397;
 		rType = 0;
 		vrLen = 916;
 		vrLoc = 2419;
@@ -1071,7 +1132,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 114";
 		rLen = 0;
-		rLoc = 5271;
+		rLoc = 5397;
 		rType = 0;
 		vrLen = 919;
 		vrLoc = 2419;
@@ -1096,7 +1157,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 235";
 		rLen = 0;
-		rLoc = 10480;
+		rLoc = 10805;
 		rType = 0;
 		vrLen = 1386;
 		vrLoc = 6973;
@@ -1106,7 +1167,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 253";
 		rLen = 0;
-		rLoc = 10972;
+		rLoc = 11297;
 		rType = 0;
 		vrLen = 1358;
 		vrLoc = 7040;
@@ -1126,7 +1187,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 114";
 		rLen = 0;
-		rLoc = 5271;
+		rLoc = 5397;
 		rType = 0;
 		vrLen = 836;
 		vrLoc = 3338;
@@ -1136,7 +1197,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 114";
 		rLen = 0;
-		rLoc = 5271;
+		rLoc = 5397;
 		rType = 0;
 		vrLen = 836;
 		vrLoc = 3338;
@@ -1151,7 +1212,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 307";
 		rLen = 0;
-		rLoc = 13063;
+		rLoc = 13388;
 		rType = 0;
 		vrLen = 1419;
 		vrLoc = 9544;
@@ -1161,7 +1222,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 114";
 		rLen = 0;
-		rLoc = 5271;
+		rLoc = 5397;
 		rType = 0;
 		vrLen = 532;
 		vrLoc = 3430;
@@ -1176,7 +1237,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 338";
 		rLen = 0;
-		rLoc = 13063;
+		rLoc = 13388;
 		rType = 0;
 		vrLen = 1257;
 		vrLoc = 10557;
@@ -1186,7 +1247,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 135";
 		rLen = 0;
-		rLoc = 6862;
+		rLoc = 6621;
 		rType = 0;
 		vrLen = 532;
 		vrLoc = 3442;
@@ -1196,7 +1257,7 @@
 		fRef = 3DB0D9461315206D006FC601 /* FindViewController.h */;
 		name = "FindViewController.h: 27";
 		rLen = 0;
-		rLoc = 1432;
+		rLoc = 1369;
 		rType = 0;
 		vrLen = 518;
 		vrLoc = 403;
@@ -1211,7 +1272,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 314";
 		rLen = 0;
-		rLoc = 13063;
+		rLoc = 13388;
 		rType = 0;
 		vrLen = 1240;
 		vrLoc = 10247;
@@ -1221,7 +1282,7 @@
 		fRef = 3DB0D9461315206D006FC601 /* FindViewController.h */;
 		name = "FindViewController.h: 27";
 		rLen = 0;
-		rLoc = 1432;
+		rLoc = 1369;
 		rType = 0;
 		vrLen = 518;
 		vrLoc = 403;
@@ -1236,7 +1297,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 254";
 		rLen = 0;
-		rLoc = 10972;
+		rLoc = 11297;
 		rType = 0;
 		vrLen = 1459;
 		vrLoc = 6857;
@@ -1246,7 +1307,7 @@
 		fRef = 3DB0D9461315206D006FC601 /* FindViewController.h */;
 		name = "FindViewController.h: 27";
 		rLen = 0;
-		rLoc = 1422;
+		rLoc = 1369;
 		rType = 0;
 		vrLen = 518;
 		vrLoc = 403;
@@ -1256,7 +1317,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 31";
 		rLen = 0;
-		rLoc = 830;
+		rLoc = 873;
 		rType = 0;
 		vrLen = 310;
 		vrLoc = 470;
@@ -1271,7 +1332,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 254";
 		rLen = 0;
-		rLoc = 10972;
+		rLoc = 11297;
 		rType = 0;
 		vrLen = 1461;
 		vrLoc = 6857;
@@ -1281,7 +1342,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 31";
 		rLen = 0;
-		rLoc = 830;
+		rLoc = 873;
 		rType = 0;
 		vrLen = 310;
 		vrLoc = 470;
@@ -1300,7 +1361,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 254";
 		rLen = 0;
-		rLoc = 10972;
+		rLoc = 11297;
 		rType = 0;
 		vrLen = 1953;
 		vrLoc = 7060;
@@ -1310,7 +1371,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 31";
 		rLen = 0;
-		rLoc = 830;
+		rLoc = 873;
 		rType = 0;
 		vrLen = 310;
 		vrLoc = 470;
@@ -1335,7 +1396,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 254";
 		rLen = 0;
-		rLoc = 10972;
+		rLoc = 11297;
 		rType = 0;
 		vrLen = 1847;
 		vrLoc = 7221;
@@ -1345,7 +1406,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 31";
 		rLen = 0;
-		rLoc = 830;
+		rLoc = 873;
 		rType = 0;
 		vrLen = 310;
 		vrLoc = 470;
@@ -1387,7 +1448,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 254";
 		rLen = 0;
-		rLoc = 10972;
+		rLoc = 11297;
 		rType = 0;
 		vrLen = 1897;
 		vrLoc = 7225;
@@ -1397,7 +1458,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 31";
 		rLen = 0;
-		rLoc = 830;
+		rLoc = 873;
 		rType = 0;
 		vrLen = 310;
 		vrLoc = 470;
@@ -1432,7 +1493,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 114";
 		rLen = 0;
-		rLoc = 5271;
+		rLoc = 5397;
 		rType = 0;
 		vrLen = 1312;
 		vrLoc = 2345;
@@ -1442,7 +1503,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 31";
 		rLen = 0;
-		rLoc = 830;
+		rLoc = 873;
 		rType = 0;
 		vrLen = 310;
 		vrLoc = 470;
@@ -1467,7 +1528,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 102";
 		rLen = 21;
-		rLoc = 4868;
+		rLoc = 4977;
 		rType = 0;
 		vrLen = 836;
 		vrLoc = 1405;
@@ -1477,7 +1538,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 12";
 		rLen = 0;
-		rLoc = 231;
+		rLoc = 274;
 		rType = 0;
 		vrLen = 343;
 		vrLoc = 47;
@@ -1502,7 +1563,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 313";
 		rLen = 0;
-		rLoc = 13063;
+		rLoc = 13388;
 		rType = 0;
 		vrLen = 1148;
 		vrLoc = 10062;
@@ -1512,7 +1573,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 39";
 		rLen = 0;
-		rLoc = 1304;
+		rLoc = 1413;
 		rType = 0;
 		vrLen = 266;
 		vrLoc = 704;
@@ -1567,7 +1628,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 203";
 		rLen = 0;
-		rLoc = 8442;
+		rLoc = 8201;
 		rType = 0;
 		vrLen = 1150;
 		vrLoc = 5412;
@@ -1577,7 +1638,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 206";
 		rLen = 0;
-		rLoc = 8442;
+		rLoc = 8201;
 		rType = 0;
 		vrLen = 1206;
 		vrLoc = 5333;
@@ -1597,7 +1658,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 29";
 		rLen = 0;
-		rLoc = 741;
+		rLoc = 784;
 		rType = 0;
 		vrLen = 424;
 		vrLoc = 618;
@@ -1607,7 +1668,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 29";
 		rLen = 0;
-		rLoc = 741;
+		rLoc = 784;
 		rType = 0;
 		vrLen = 319;
 		vrLoc = 566;
@@ -1632,7 +1693,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 227";
 		rLen = 0;
-		rLoc = 8982;
+		rLoc = 9307;
 		rType = 0;
 		vrLen = 808;
 		vrLoc = 6770;
@@ -1642,7 +1703,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 49";
 		rLen = 0;
-		rLoc = 2422;
+		rLoc = 2531;
 		rType = 0;
 		vrLen = 407;
 		vrLoc = 884;
@@ -1677,7 +1738,7 @@
 		comments = "'newSectionsArray' undeclared (first use in this function)";
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		rLen = 0;
-		rLoc = 404;
+		rLoc = 415;
 		rType = 1;
 	};
 	3D03A097131BEAD000F6B225 /* PBXTextBookmark */ = {
@@ -1685,7 +1746,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 382";
 		rLen = 0;
-		rLoc = 13063;
+		rLoc = 13388;
 		rType = 0;
 		vrLen = 327;
 		vrLoc = 12670;
@@ -1695,7 +1756,7 @@
 		comments = "'newSectionsArray' undeclared (first use in this function)";
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		rLen = 0;
-		rLoc = 404;
+		rLoc = 415;
 		rType = 1;
 	};
 	3D03A09B131BEAD800F6B225 /* PBXTextBookmark */ = {
@@ -1703,7 +1764,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 382";
 		rLen = 0;
-		rLoc = 13063;
+		rLoc = 13388;
 		rType = 0;
 		vrLen = 1078;
 		vrLoc = 11913;
@@ -1738,7 +1799,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 355";
 		rLen = 0;
-		rLoc = 13063;
+		rLoc = 13388;
 		rType = 0;
 		vrLen = 1061;
 		vrLoc = 11872;
@@ -1758,7 +1819,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 35";
 		rLen = 0;
-		rLoc = 1142;
+		rLoc = 1251;
 		rType = 0;
 		vrLen = 237;
 		vrLoc = 679;
@@ -1783,7 +1844,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 372";
 		rLen = 0;
-		rLoc = 13063;
+		rLoc = 13388;
 		rType = 0;
 		vrLen = 984;
 		vrLoc = 12106;
@@ -1793,7 +1854,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 35";
 		rLen = 0;
-		rLoc = 1142;
+		rLoc = 1251;
 		rType = 0;
 		vrLen = 202;
 		vrLoc = 750;
@@ -1818,7 +1879,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 383";
 		rLen = 0;
-		rLoc = 13063;
+		rLoc = 13388;
 		rType = 0;
 		vrLen = 467;
 		vrLoc = 12476;
@@ -1846,7 +1907,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 284";
 		rLen = 0;
-		rLoc = 10972;
+		rLoc = 11297;
 		rType = 0;
 		vrLen = 1554;
 		vrLoc = 8279;
@@ -1856,7 +1917,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 284";
 		rLen = 0;
-		rLoc = 10972;
+		rLoc = 11297;
 		rType = 0;
 		vrLen = 899;
 		vrLoc = 7084;
@@ -1866,7 +1927,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 40";
 		rLen = 0;
-		rLoc = 1151;
+		rLoc = 1260;
 		rType = 0;
 		vrLen = 306;
 		vrLoc = 768;
@@ -1928,7 +1989,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 284";
 		rLen = 0;
-		rLoc = 10972;
+		rLoc = 11297;
 		rType = 0;
 		vrLen = 899;
 		vrLoc = 7084;
@@ -1948,7 +2009,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 40";
 		rLen = 0;
-		rLoc = 1151;
+		rLoc = 1260;
 		rType = 0;
 		vrLen = 213;
 		vrLoc = 876;
@@ -1983,7 +2044,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 332";
 		rLen = 0;
-		rLoc = 13063;
+		rLoc = 13388;
 		rType = 0;
 		vrLen = 937;
 		vrLoc = 10933;
@@ -2010,7 +2071,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 40";
 		rLen = 0;
-		rLoc = 1151;
+		rLoc = 1260;
 		rType = 0;
 		vrLen = 210;
 		vrLoc = 908;
@@ -2045,7 +2106,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 40";
 		rLen = 0;
-		rLoc = 1151;
+		rLoc = 1260;
 		rType = 0;
 		vrLen = 227;
 		vrLoc = 914;
@@ -2075,7 +2136,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 40";
 		rLen = 0;
-		rLoc = 1151;
+		rLoc = 1260;
 		rType = 0;
 		vrLen = 312;
 		vrLoc = 915;
@@ -2105,7 +2166,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 40";
 		rLen = 0;
-		rLoc = 1151;
+		rLoc = 1260;
 		rType = 0;
 		vrLen = 278;
 		vrLoc = 951;
@@ -2135,7 +2196,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 284";
 		rLen = 0;
-		rLoc = 10972;
+		rLoc = 11297;
 		rType = 0;
 		vrLen = 1688;
 		vrLoc = 8285;
@@ -2145,7 +2206,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 40";
 		rLen = 0;
-		rLoc = 1151;
+		rLoc = 1260;
 		rType = 0;
 		vrLen = 278;
 		vrLoc = 951;
@@ -2165,7 +2226,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 284";
 		rLen = 0;
-		rLoc = 10972;
+		rLoc = 11297;
 		rType = 0;
 		vrLen = 1661;
 		vrLoc = 8405;
@@ -2175,7 +2236,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 40";
 		rLen = 0;
-		rLoc = 1151;
+		rLoc = 1260;
 		rType = 0;
 		vrLen = 249;
 		vrLoc = 1073;
@@ -2205,7 +2266,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 284";
 		rLen = 0;
-		rLoc = 10972;
+		rLoc = 11297;
 		rType = 0;
 		vrLen = 1819;
 		vrLoc = 8408;
@@ -2215,7 +2276,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 40";
 		rLen = 0;
-		rLoc = 1151;
+		rLoc = 1260;
 		rType = 0;
 		vrLen = 284;
 		vrLoc = 1089;
@@ -2235,7 +2296,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 284";
 		rLen = 0;
-		rLoc = 10972;
+		rLoc = 11297;
 		rType = 0;
 		vrLen = 1935;
 		vrLoc = 8475;
@@ -2245,7 +2306,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 40";
 		rLen = 0;
-		rLoc = 1151;
+		rLoc = 1260;
 		rType = 0;
 		vrLen = 257;
 		vrLoc = 1118;
@@ -2265,7 +2326,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 372";
 		rLen = 0;
-		rLoc = 13063;
+		rLoc = 13388;
 		rType = 0;
 		vrLen = 1181;
 		vrLoc = 12173;
@@ -2275,7 +2336,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 40";
 		rLen = 0;
-		rLoc = 1151;
+		rLoc = 1260;
 		rType = 0;
 		vrLen = 259;
 		vrLoc = 1119;
@@ -2295,7 +2356,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 372";
 		rLen = 0;
-		rLoc = 13063;
+		rLoc = 13388;
 		rType = 0;
 		vrLen = 1117;
 		vrLoc = 12267;
@@ -2305,7 +2366,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 40";
 		rLen = 0;
-		rLoc = 1151;
+		rLoc = 1260;
 		rType = 0;
 		vrLen = 289;
 		vrLoc = 1166;
@@ -2335,7 +2396,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 420";
 		rLen = 0;
-		rLoc = 13063;
+		rLoc = 13388;
 		rType = 0;
 		vrLen = 1170;
 		vrLoc = 13877;
@@ -2345,7 +2406,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 131";
 		rLen = 0;
-		rLoc = 5271;
+		rLoc = 5397;
 		rType = 0;
 		vrLen = 1580;
 		vrLoc = 3048;
@@ -2355,7 +2416,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 61";
 		rLen = 0;
-		rLoc = 3391;
+		rLoc = 3500;
 		rType = 0;
 		vrLen = 231;
 		vrLoc = 1229;
@@ -2375,7 +2436,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 131";
 		rLen = 0;
-		rLoc = 5271;
+		rLoc = 5397;
 		rType = 0;
 		vrLen = 1504;
 		vrLoc = 3126;
@@ -2385,7 +2446,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 61";
 		rLen = 0;
-		rLoc = 3391;
+		rLoc = 3500;
 		rType = 0;
 		vrLen = 180;
 		vrLoc = 1322;
@@ -2445,7 +2506,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 61";
 		rLen = 0;
-		rLoc = 3391;
+		rLoc = 3500;
 		rType = 0;
 		vrLen = 674;
 		vrLoc = 915;
@@ -2455,7 +2516,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 51";
 		rLen = 0;
-		rLoc = 1593;
+		rLoc = 1702;
 		rType = 0;
 		vrLen = 948;
 		vrLoc = 768;
@@ -2495,7 +2556,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 52";
 		rLen = 0;
-		rLoc = 1759;
+		rLoc = 1868;
 		rType = 0;
 		vrLen = 950;
 		vrLoc = 768;
@@ -2515,7 +2576,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 51";
 		rLen = 0;
-		rLoc = 1599;
+		rLoc = 1708;
 		rType = 0;
 		vrLen = 952;
 		vrLoc = 768;
@@ -2535,7 +2596,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 59";
 		rLen = 0;
-		rLoc = 2422;
+		rLoc = 2531;
 		rType = 0;
 		vrLen = 892;
 		vrLoc = 915;
@@ -2545,7 +2606,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 65";
 		rLen = 0;
-		rLoc = 3315;
+		rLoc = 3424;
 		rType = 0;
 		vrLen = 943;
 		vrLoc = 915;
@@ -2565,7 +2626,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 67";
 		rLen = 0;
-		rLoc = 3315;
+		rLoc = 3424;
 		rType = 0;
 		vrLen = 1024;
 		vrLoc = 915;
@@ -2585,7 +2646,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 67";
 		rLen = 0;
-		rLoc = 3315;
+		rLoc = 3424;
 		rType = 0;
 		vrLen = 1063;
 		vrLoc = 915;
@@ -2605,7 +2666,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 67";
 		rLen = 0;
-		rLoc = 3315;
+		rLoc = 3424;
 		rType = 0;
 		vrLen = 1054;
 		vrLoc = 915;
@@ -2625,7 +2686,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 66";
 		rLen = 0;
-		rLoc = 3315;
+		rLoc = 3424;
 		rType = 0;
 		vrLen = 1005;
 		vrLoc = 1089;
@@ -2645,7 +2706,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 66";
 		rLen = 0;
-		rLoc = 3315;
+		rLoc = 3424;
 		rType = 0;
 		vrLen = 1005;
 		vrLoc = 1089;
@@ -2665,7 +2726,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 66";
 		rLen = 0;
-		rLoc = 3315;
+		rLoc = 3424;
 		rType = 0;
 		vrLen = 1005;
 		vrLoc = 1089;
@@ -2685,7 +2746,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 66";
 		rLen = 0;
-		rLoc = 3315;
+		rLoc = 3424;
 		rType = 0;
 		vrLen = 1005;
 		vrLoc = 1089;
@@ -2705,7 +2766,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 66";
 		rLen = 0;
-		rLoc = 3315;
+		rLoc = 3424;
 		rType = 0;
 		vrLen = 1005;
 		vrLoc = 1089;
@@ -2725,7 +2786,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 67";
 		rLen = 0;
-		rLoc = 3315;
+		rLoc = 3424;
 		rType = 0;
 		vrLen = 1117;
 		vrLoc = 951;
@@ -2765,7 +2826,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 67";
 		rLen = 0;
-		rLoc = 3315;
+		rLoc = 3424;
 		rType = 0;
 		vrLen = 1117;
 		vrLoc = 951;
@@ -2815,7 +2876,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 67";
 		rLen = 0;
-		rLoc = 3315;
+		rLoc = 3424;
 		rType = 0;
 		vrLen = 1116;
 		vrLoc = 952;
@@ -2825,7 +2886,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 175";
 		rLen = 0;
-		rLoc = 5634;
+		rLoc = 5397;
 		rType = 0;
 		vrLen = 851;
 		vrLoc = 5190;
@@ -2844,7 +2905,7 @@
 		isa = PBXTextBookmark;
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		rLen = 0;
-		rLoc = 21099;
+		rLoc = 21424;
 		rType = 0;
 	};
 	3D03A2DA131C1F6500F6B225 /* PBXTextBookmark */ = {
@@ -2852,7 +2913,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 18";
 		rLen = 23;
-		rLoc = 472;
+		rLoc = 515;
 		rType = 0;
 		vrLen = 440;
 		vrLoc = 204;
@@ -2862,7 +2923,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 190";
 		rLen = 0;
-		rLoc = 6211;
+		rLoc = 5970;
 		rType = 0;
 		vrLen = 901;
 		vrLoc = 5706;
@@ -2872,7 +2933,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 18";
 		rLen = 23;
-		rLoc = 472;
+		rLoc = 515;
 		rType = 0;
 		vrLen = 440;
 		vrLoc = 204;
@@ -2882,7 +2943,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 390";
 		rLen = 0;
-		rLoc = 13063;
+		rLoc = 13388;
 		rType = 0;
 		vrLen = 742;
 		vrLoc = 12792;
@@ -2892,7 +2953,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 18";
 		rLen = 23;
-		rLoc = 472;
+		rLoc = 515;
 		rType = 0;
 		vrLen = 440;
 		vrLoc = 204;
@@ -2902,7 +2963,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 389";
 		rLen = 0;
-		rLoc = 13063;
+		rLoc = 13388;
 		rType = 0;
 		vrLen = 733;
 		vrLoc = 12611;
@@ -2912,7 +2973,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 387";
 		rLen = 0;
-		rLoc = 13063;
+		rLoc = 13388;
 		rType = 0;
 		vrLen = 733;
 		vrLoc = 12668;
@@ -2922,7 +2983,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 18";
 		rLen = 23;
-		rLoc = 472;
+		rLoc = 515;
 		rType = 0;
 		vrLen = 440;
 		vrLoc = 204;
@@ -2941,7 +3002,7 @@
 		isa = PBXTextBookmark;
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		rLen = 0;
-		rLoc = 163;
+		rLoc = 165;
 		rType = 1;
 	};
 	3D03A2F3131C207F00F6B225 /* PBXTextBookmark */ = {
@@ -2949,7 +3010,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 167";
 		rLen = 0;
-		rLoc = 5444;
+		rLoc = 5397;
 		rType = 0;
 		vrLen = 954;
 		vrLoc = 4865;
@@ -2959,7 +3020,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 18";
 		rLen = 23;
-		rLoc = 472;
+		rLoc = 515;
 		rType = 0;
 		vrLen = 440;
 		vrLoc = 204;
@@ -2968,7 +3029,7 @@
 		isa = PBXTextBookmark;
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		rLen = 1;
-		rLoc = 94;
+		rLoc = 96;
 		rType = 1;
 	};
 	3D03A2FF131CF90600F6B225 /* PBXTextBookmark */ = {
@@ -2976,7 +3037,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 63";
 		rLen = 0;
-		rLoc = 3315;
+		rLoc = 3424;
 		rType = 0;
 		vrLen = 746;
 		vrLoc = 1520;
@@ -2986,7 +3047,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 18";
 		rLen = 23;
-		rLoc = 472;
+		rLoc = 515;
 		rType = 0;
 		vrLen = 440;
 		vrLoc = 204;
@@ -2995,7 +3056,7 @@
 		isa = PBXTextBookmark;
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		rLen = 1;
-		rLoc = 201;
+		rLoc = 195;
 		rType = 1;
 	};
 	3D03A315131CF97200F6B225 /* PBXTextBookmark */ = {
@@ -3020,7 +3081,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 190";
 		rLen = 20;
-		rLoc = 6200;
+		rLoc = 5959;
 		rType = 0;
 		vrLen = 877;
 		vrLoc = 7508;
@@ -3030,7 +3091,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 18";
 		rLen = 23;
-		rLoc = 472;
+		rLoc = 515;
 		rType = 0;
 		vrLen = 440;
 		vrLoc = 204;
@@ -3040,7 +3101,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 192";
 		rLen = 0;
-		rLoc = 6281;
+		rLoc = 6040;
 		rType = 0;
 		vrLen = 832;
 		vrLoc = 5547;
@@ -3050,7 +3111,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 18";
 		rLen = 23;
-		rLoc = 472;
+		rLoc = 515;
 		rType = 0;
 		vrLen = 446;
 		vrLoc = 361;
@@ -3060,7 +3121,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 403";
 		rLen = 0;
-		rLoc = 13063;
+		rLoc = 13388;
 		rType = 0;
 		vrLen = 817;
 		vrLoc = 13029;
@@ -3070,7 +3131,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 18";
 		rLen = 23;
-		rLoc = 472;
+		rLoc = 515;
 		rType = 0;
 		vrLen = 446;
 		vrLoc = 361;
@@ -3080,7 +3141,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 61";
 		rLen = 0;
-		rLoc = 2422;
+		rLoc = 2531;
 		rType = 0;
 		vrLen = 753;
 		vrLoc = 1517;
@@ -3090,7 +3151,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 18";
 		rLen = 23;
-		rLoc = 472;
+		rLoc = 515;
 		rType = 0;
 		vrLen = 446;
 		vrLoc = 361;
@@ -3104,7 +3165,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 84";
 		rLen = 0;
-		rLoc = 3317;
+		rLoc = 3426;
 		rType = 0;
 		vrLen = 850;
 		vrLoc = 1537;
@@ -3114,7 +3175,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 18";
 		rLen = 23;
-		rLoc = 472;
+		rLoc = 515;
 		rType = 0;
 		vrLen = 446;
 		vrLoc = 361;
@@ -3124,7 +3185,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 491";
 		rLen = 0;
-		rLoc = 15998;
+		rLoc = 16323;
 		rType = 0;
 		vrLen = 1966;
 		vrLoc = 15345;
@@ -3134,7 +3195,7 @@
 		comments = "'kSortByRankIndex' undeclared (first use in this function)";
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		rLen = 0;
-		rLoc = 94;
+		rLoc = 96;
 		rType = 1;
 	};
 	3D03A335131D087300F6B225 /* PBXTextBookmark */ = {
@@ -3142,7 +3203,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 67";
 		rLen = 0;
-		rLoc = 2422;
+		rLoc = 2531;
 		rType = 0;
 		vrLen = 1058;
 		vrLoc = 1228;
@@ -3152,7 +3213,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 106";
 		rLen = 0;
-		rLoc = 3317;
+		rLoc = 3426;
 		rType = 0;
 		vrLen = 611;
 		vrLoc = 2703;
@@ -3162,7 +3223,7 @@
 		comments = "'kSortByRankIndex' undeclared (first use in this function)";
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		rLen = 0;
-		rLoc = 94;
+		rLoc = 96;
 		rType = 1;
 	};
 	3D03A33C131D08B400F6B225 /* PBXTextBookmark */ = {
@@ -3170,7 +3231,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 42";
 		rLen = 0;
-		rLoc = 1069;
+		rLoc = 1178;
 		rType = 0;
 		vrLen = 382;
 		vrLoc = 747;
@@ -3180,7 +3241,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 422";
 		rLen = 2935;
-		rLoc = 13063;
+		rLoc = 13388;
 		rType = 0;
 		vrLen = 1548;
 		vrLoc = 13163;
@@ -3190,7 +3251,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 106";
 		rLen = 0;
-		rLoc = 3317;
+		rLoc = 3426;
 		rType = 0;
 		vrLen = 612;
 		vrLoc = 2705;
@@ -3200,7 +3261,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 42";
 		rLen = 0;
-		rLoc = 1069;
+		rLoc = 1178;
 		rType = 0;
 		vrLen = 382;
 		vrLoc = 747;
@@ -3210,7 +3271,7 @@
 		fRef = 3DB0D9461315206D006FC601 /* FindViewController.h */;
 		name = "FindViewController.h: 33";
 		rLen = 0;
-		rLoc = 1372;
+		rLoc = 1369;
 		rType = 0;
 		vrLen = 617;
 		vrLoc = 463;
@@ -3220,7 +3281,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 422";
 		rLen = 2935;
-		rLoc = 13063;
+		rLoc = 13388;
 		rType = 0;
 		vrLen = 1548;
 		vrLoc = 13163;
@@ -3230,7 +3291,7 @@
 		comments = "Method definition for '-fetchRankedUniversitiesSortBy:' not found";
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		rLen = 1;
-		rLoc = 610;
+		rLoc = 621;
 		rType = 1;
 	};
 	3D03A345131D0D1300F6B225 /* PBXTextBookmark */ = {
@@ -3238,7 +3299,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 539";
 		rLen = 0;
-		rLoc = 20167;
+		rLoc = 20492;
 		rType = 0;
 		vrLen = 552;
 		vrLoc = 17582;
@@ -3248,7 +3309,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 75";
 		rLen = 0;
-		rLoc = 2422;
+		rLoc = 2531;
 		rType = 0;
 		vrLen = 1093;
 		vrLoc = 1323;
@@ -3258,7 +3319,7 @@
 		fRef = 3DB0D9461315206D006FC601 /* FindViewController.h */;
 		name = "FindViewController.h: 33";
 		rLen = 0;
-		rLoc = 1372;
+		rLoc = 1369;
 		rType = 0;
 		vrLen = 617;
 		vrLoc = 463;
@@ -3268,7 +3329,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 422";
 		rLen = 2935;
-		rLoc = 13063;
+		rLoc = 13388;
 		rType = 0;
 		vrLen = 1548;
 		vrLoc = 13163;
@@ -3278,7 +3339,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 74";
 		rLen = 0;
-		rLoc = 2422;
+		rLoc = 2531;
 		rType = 0;
 		vrLen = 1047;
 		vrLoc = 1680;
@@ -3288,7 +3349,7 @@
 		fRef = 3DB0D9461315206D006FC601 /* FindViewController.h */;
 		name = "FindViewController.h: 33";
 		rLen = 0;
-		rLoc = 1372;
+		rLoc = 1369;
 		rType = 0;
 		vrLen = 617;
 		vrLoc = 463;
@@ -3298,7 +3359,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 423";
 		rLen = 2935;
-		rLoc = 13063;
+		rLoc = 13388;
 		rType = 0;
 		vrLen = 1631;
 		vrLoc = 13065;
@@ -3308,7 +3369,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 74";
 		rLen = 0;
-		rLoc = 2422;
+		rLoc = 2531;
 		rType = 0;
 		vrLen = 1229;
 		vrLoc = 1772;
@@ -3328,7 +3389,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 17";
 		rLen = 26;
-		rLoc = 398;
+		rLoc = 441;
 		rType = 0;
 		vrLen = 448;
 		vrLoc = 149;
@@ -3338,7 +3399,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 435";
 		rLen = 2935;
-		rLoc = 13063;
+		rLoc = 13388;
 		rType = 0;
 		vrLen = 1758;
 		vrLoc = 13258;
@@ -3348,7 +3409,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 98";
 		rLen = 0;
-		rLoc = 3317;
+		rLoc = 3426;
 		rType = 0;
 		vrLen = 811;
 		vrLoc = 2786;
@@ -3358,7 +3419,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 17";
 		rLen = 26;
-		rLoc = 398;
+		rLoc = 441;
 		rType = 0;
 		vrLen = 494;
 		vrLoc = 362;
@@ -3368,7 +3429,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 439";
 		rLen = 2935;
-		rLoc = 13063;
+		rLoc = 13388;
 		rType = 0;
 		vrLen = 1892;
 		vrLoc = 13282;
@@ -3378,7 +3439,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 89";
 		rLen = 0;
-		rLoc = 3315;
+		rLoc = 3424;
 		rType = 0;
 		vrLen = 966;
 		vrLoc = 2440;
@@ -3388,7 +3449,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 17";
 		rLen = 26;
-		rLoc = 398;
+		rLoc = 441;
 		rType = 0;
 		vrLen = 494;
 		vrLoc = 362;
@@ -3398,7 +3459,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 439";
 		rLen = 2935;
-		rLoc = 13063;
+		rLoc = 13388;
 		rType = 0;
 		vrLen = 1892;
 		vrLoc = 13280;
@@ -3408,7 +3469,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 116";
 		rLen = 0;
-		rLoc = 3317;
+		rLoc = 3426;
 		rType = 0;
 		vrLen = 894;
 		vrLoc = 2911;
@@ -3418,7 +3479,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 116";
 		rLen = 0;
-		rLoc = 3317;
+		rLoc = 3426;
 		rType = 0;
 		vrLen = 898;
 		vrLoc = 2963;
@@ -3428,7 +3489,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 17";
 		rLen = 26;
-		rLoc = 398;
+		rLoc = 441;
 		rType = 0;
 		vrLen = 494;
 		vrLoc = 362;
@@ -3438,7 +3499,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 439";
 		rLen = 2935;
-		rLoc = 13063;
+		rLoc = 13388;
 		rType = 0;
 		vrLen = 1892;
 		vrLoc = 13280;
@@ -3448,7 +3509,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 76";
 		rLen = 0;
-		rLoc = 2422;
+		rLoc = 2531;
 		rType = 0;
 		vrLen = 1220;
 		vrLoc = 1719;
@@ -3458,7 +3519,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 44";
 		rLen = 0;
-		rLoc = 1096;
+		rLoc = 1205;
 		rType = 0;
 		vrLen = 336;
 		vrLoc = 875;
@@ -3488,7 +3549,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 435";
 		rLen = 2935;
-		rLoc = 13063;
+		rLoc = 13388;
 		rType = 0;
 		vrLen = 1599;
 		vrLoc = 13541;
@@ -3498,7 +3559,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 76";
 		rLen = 0;
-		rLoc = 2422;
+		rLoc = 2531;
 		rType = 0;
 		vrLen = 1204;
 		vrLoc = 1847;
@@ -3518,7 +3579,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 439";
 		rLen = 2935;
-		rLoc = 13063;
+		rLoc = 13388;
 		rType = 0;
 		vrLen = 1610;
 		vrLoc = 13567;
@@ -3528,7 +3589,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 76";
 		rLen = 0;
-		rLoc = 2422;
+		rLoc = 2531;
 		rType = 0;
 		vrLen = 1197;
 		vrLoc = 1786;
@@ -3548,7 +3609,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 439";
 		rLen = 2935;
-		rLoc = 13063;
+		rLoc = 13388;
 		rType = 0;
 		vrLen = 1610;
 		vrLoc = 13565;
@@ -3568,7 +3629,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 76";
 		rLen = 0;
-		rLoc = 2422;
+		rLoc = 2531;
 		rType = 0;
 		vrLen = 1221;
 		vrLoc = 1761;
@@ -3578,7 +3639,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 76";
 		rLen = 0;
-		rLoc = 2422;
+		rLoc = 2531;
 		rType = 0;
 		vrLen = 1205;
 		vrLoc = 1847;
@@ -3598,7 +3659,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 17";
 		rLen = 26;
-		rLoc = 398;
+		rLoc = 441;
 		rType = 0;
 		vrLen = 424;
 		vrLoc = 47;
@@ -3608,7 +3669,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 439";
 		rLen = 2935;
-		rLoc = 13063;
+		rLoc = 13388;
 		rType = 0;
 		vrLen = 1758;
 		vrLoc = 13416;
@@ -3617,7 +3678,7 @@
 		isa = PBXTextBookmark;
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		rLen = 1;
-		rLoc = 94;
+		rLoc = 96;
 		rType = 1;
 	};
 	3D03A38A131D147700F6B225 /* PBXTextBookmark */ = {
@@ -3625,7 +3686,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 88";
 		rLen = 0;
-		rLoc = 3315;
+		rLoc = 3424;
 		rType = 0;
 		vrLen = 1065;
 		vrLoc = 2158;
@@ -3635,7 +3696,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 17";
 		rLen = 26;
-		rLoc = 398;
+		rLoc = 441;
 		rType = 0;
 		vrLen = 424;
 		vrLoc = 47;
@@ -3645,7 +3706,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 439";
 		rLen = 2935;
-		rLoc = 13063;
+		rLoc = 13388;
 		rType = 0;
 		vrLen = 1758;
 		vrLoc = 13416;
@@ -3655,7 +3716,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 556";
 		rLen = 0;
-		rLoc = 20167;
+		rLoc = 20492;
 		rType = 0;
 		vrLen = 840;
 		vrLoc = 16925;
@@ -3675,7 +3736,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 84";
 		rLen = 0;
-		rLoc = 3315;
+		rLoc = 3424;
 		rType = 0;
 		vrLen = 1302;
 		vrLoc = 1392;
@@ -3685,7 +3746,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 84";
 		rLen = 0;
-		rLoc = 3315;
+		rLoc = 3424;
 		rType = 0;
 		vrLen = 1302;
 		vrLoc = 1392;
@@ -3695,7 +3756,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 17";
 		rLen = 26;
-		rLoc = 398;
+		rLoc = 441;
 		rType = 0;
 		vrLen = 342;
 		vrLoc = 1020;
@@ -3705,7 +3766,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 434";
 		rLen = 2935;
-		rLoc = 13063;
+		rLoc = 13388;
 		rType = 0;
 		vrLen = 1631;
 		vrLoc = 13468;
@@ -3715,7 +3776,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 67";
 		rLen = 0;
-		rLoc = 1776;
+		rLoc = 1885;
 		rType = 0;
 		vrLen = 796;
 		vrLoc = 1167;
@@ -3735,7 +3796,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 30";
 		rLen = 0;
-		rLoc = 741;
+		rLoc = 784;
 		rType = 0;
 		vrLen = 474;
 		vrLoc = 471;
@@ -3745,7 +3806,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 28";
 		rLen = 0;
-		rLoc = 688;
+		rLoc = 731;
 		rType = 0;
 		vrLen = 387;
 		vrLoc = 362;
@@ -3755,7 +3816,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 440";
 		rLen = 2935;
-		rLoc = 13063;
+		rLoc = 13388;
 		rType = 0;
 		vrLen = 1599;
 		vrLoc = 13473;
@@ -3765,7 +3826,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 85";
 		rLen = 0;
-		rLoc = 2422;
+		rLoc = 2531;
 		rType = 0;
 		vrLen = 698;
 		vrLoc = 716;
@@ -3775,7 +3836,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 28";
 		rLen = 0;
-		rLoc = 688;
+		rLoc = 731;
 		rType = 0;
 		vrLen = 387;
 		vrLoc = 362;
@@ -3785,7 +3846,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 439";
 		rLen = 2935;
-		rLoc = 13063;
+		rLoc = 13388;
 		rType = 0;
 		vrLen = 1623;
 		vrLoc = 13427;
@@ -3795,7 +3856,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 74";
 		rLen = 0;
-		rLoc = 2422;
+		rLoc = 2531;
 		rType = 0;
 		vrLen = 1120;
 		vrLoc = 1577;
@@ -3805,7 +3866,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 28";
 		rLen = 0;
-		rLoc = 688;
+		rLoc = 731;
 		rType = 0;
 		vrLen = 387;
 		vrLoc = 362;
@@ -3815,7 +3876,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 440";
 		rLen = 2935;
-		rLoc = 13063;
+		rLoc = 13388;
 		rType = 0;
 		vrLen = 1599;
 		vrLoc = 13432;
@@ -3825,7 +3886,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 78";
 		rLen = 0;
-		rLoc = 2422;
+		rLoc = 2531;
 		rType = 0;
 		vrLen = 1090;
 		vrLoc = 1624;
@@ -3835,7 +3896,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 28";
 		rLen = 0;
-		rLoc = 688;
+		rLoc = 731;
 		rType = 0;
 		vrLen = 387;
 		vrLoc = 362;
@@ -3845,7 +3906,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 439";
 		rLen = 2935;
-		rLoc = 13063;
+		rLoc = 13388;
 		rType = 0;
 		vrLen = 1599;
 		vrLoc = 13426;
@@ -3855,7 +3916,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 78";
 		rLen = 0;
-		rLoc = 2422;
+		rLoc = 2531;
 		rType = 0;
 		vrLen = 678;
 		vrLoc = 3269;
@@ -3865,7 +3926,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 28";
 		rLen = 0;
-		rLoc = 688;
+		rLoc = 731;
 		rType = 0;
 		vrLen = 387;
 		vrLoc = 362;
@@ -3875,7 +3936,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 439";
 		rLen = 473;
-		rLoc = 13063;
+		rLoc = 13388;
 		rType = 0;
 		vrLen = 1609;
 		vrLoc = 13817;
@@ -3885,7 +3946,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 79";
 		rLen = 0;
-		rLoc = 2422;
+		rLoc = 2531;
 		rType = 0;
 		vrLen = 640;
 		vrLoc = 3306;
@@ -3905,7 +3966,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 43";
 		rLen = 0;
-		rLoc = 995;
+		rLoc = 1104;
 		rType = 0;
 		vrLen = 435;
 		vrLoc = 748;
@@ -3915,7 +3976,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 23";
 		rLen = 165;
-		rLoc = 523;
+		rLoc = 566;
 		rType = 0;
 		vrLen = 415;
 		vrLoc = 282;
@@ -3925,7 +3986,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 505";
 		rLen = 0;
-		rLoc = 13684;
+		rLoc = 14009;
 		rType = 0;
 		vrLen = 2095;
 		vrLoc = 16206;
@@ -3935,7 +3996,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 79";
 		rLen = 0;
-		rLoc = 2422;
+		rLoc = 2531;
 		rType = 0;
 		vrLen = 640;
 		vrLoc = 3306;
@@ -3945,7 +4006,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 23";
 		rLen = 165;
-		rLoc = 523;
+		rLoc = 566;
 		rType = 0;
 		vrLen = 415;
 		vrLoc = 282;
@@ -3955,7 +4016,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 505";
 		rLen = 0;
-		rLoc = 13684;
+		rLoc = 14009;
 		rType = 0;
 		vrLen = 2098;
 		vrLoc = 16206;
@@ -3965,7 +4026,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 79";
 		rLen = 0;
-		rLoc = 2422;
+		rLoc = 2531;
 		rType = 0;
 		vrLen = 640;
 		vrLoc = 3306;
@@ -3975,7 +4036,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 23";
 		rLen = 165;
-		rLoc = 523;
+		rLoc = 566;
 		rType = 0;
 		vrLen = 415;
 		vrLoc = 282;
@@ -3985,7 +4046,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 518";
 		rLen = 0;
-		rLoc = 15998;
+		rLoc = 16323;
 		rType = 0;
 		vrLen = 1863;
 		vrLoc = 15916;
@@ -3995,7 +4056,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 79";
 		rLen = 0;
-		rLoc = 2422;
+		rLoc = 2531;
 		rType = 0;
 		vrLen = 640;
 		vrLoc = 3306;
@@ -4005,7 +4066,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 23";
 		rLen = 165;
-		rLoc = 523;
+		rLoc = 566;
 		rType = 0;
 		vrLen = 415;
 		vrLoc = 282;
@@ -4015,7 +4076,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 518";
 		rLen = 0;
-		rLoc = 15998;
+		rLoc = 16323;
 		rType = 0;
 		vrLen = 1793;
 		vrLoc = 16007;
@@ -4025,7 +4086,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 85";
 		rLen = 0;
-		rLoc = 2422;
+		rLoc = 2531;
 		rType = 0;
 		vrLen = 1295;
 		vrLoc = 1608;
@@ -4035,7 +4096,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 38";
 		rLen = 0;
-		rLoc = 830;
+		rLoc = 873;
 		rType = 0;
 		vrLen = 427;
 		vrLoc = 688;
@@ -4055,7 +4116,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 542";
 		rLen = 0;
-		rLoc = 15998;
+		rLoc = 16323;
 		rType = 0;
 		vrLen = 1722;
 		vrLoc = 16179;
@@ -4065,7 +4126,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 126";
 		rLen = 0;
-		rLoc = 3317;
+		rLoc = 3426;
 		rType = 0;
 		vrLen = 737;
 		vrLoc = 3232;
@@ -4085,34 +4146,16 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 506";
 		rLen = 0;
-		rLoc = 13636;
+		rLoc = 13961;
 		rType = 0;
 		vrLen = 1722;
 		vrLoc = 16196;
-	};
-	3D03A3C9131D1FC200F6B225 /* FindViewController.m:416 */ = {
-		isa = PBXFileBreakpoint;
-		actions = (
-		);
-		breakpointStyle = 0;
-		continueAfterActions = 0;
-		countType = 0;
-		delayBeforeContinue = 0;
-		fileReference = 3DB0D9471315206D006FC601 /* FindViewController.m */;
-		functionName = "-fetchRankedUniversitiesFromDB";
-		hitCount = 0;
-		ignoreCount = 0;
-		lineNumber = 416;
-		location = GreenLeague;
-		modificationTime = 320693870.073104;
-		originalNumberOfMultipleMatches = 1;
-		state = 1;
 	};
 	3D03A3CA131D1FC200F6B225 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		rLen = 1;
-		rLoc = 415;
+		rLoc = 426;
 		rType = 1;
 	};
 	3D03A3CD131D1FCD00F6B225 /* PBXTextBookmark */ = {
@@ -4120,7 +4163,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 509";
 		rLen = 55;
-		rLoc = 13687;
+		rLoc = 14012;
 		rType = 0;
 		vrLen = 1044;
 		vrLoc = 16196;
@@ -4140,7 +4183,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 506";
 		rLen = 0;
-		rLoc = 13636;
+		rLoc = 13961;
 		rType = 0;
 		vrLen = 1820;
 		vrLoc = 16139;
@@ -4150,7 +4193,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 500";
 		rLen = 0;
-		rLoc = 13636;
+		rLoc = 13961;
 		rType = 0;
 		vrLen = 1808;
 		vrLoc = 16110;
@@ -4160,7 +4203,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 509";
 		rLen = 55;
-		rLoc = 13687;
+		rLoc = 14012;
 		rType = 0;
 		vrLen = 1143;
 		vrLoc = 16289;
@@ -4180,7 +4223,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 542";
 		rLen = 0;
-		rLoc = 15998;
+		rLoc = 16323;
 		rType = 0;
 		vrLen = 1791;
 		vrLoc = 16201;
@@ -4190,7 +4233,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 509";
 		rLen = 55;
-		rLoc = 13687;
+		rLoc = 14012;
 		rType = 0;
 		vrLen = 1199;
 		vrLoc = 16293;
@@ -4210,7 +4253,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 542";
 		rLen = 0;
-		rLoc = 15998;
+		rLoc = 16323;
 		rType = 0;
 		vrLen = 1801;
 		vrLoc = 16201;
@@ -4220,7 +4263,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 82";
 		rLen = 0;
-		rLoc = 2422;
+		rLoc = 2531;
 		rType = 0;
 		vrLen = 1240;
 		vrLoc = 1793;
@@ -4240,7 +4283,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 536";
 		rLen = 0;
-		rLoc = 15998;
+		rLoc = 16323;
 		rType = 0;
 		vrLen = 1801;
 		vrLoc = 16194;
@@ -4250,7 +4293,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 84";
 		rLen = 0;
-		rLoc = 2422;
+		rLoc = 2531;
 		rType = 0;
 		vrLen = 1214;
 		vrLoc = 1840;
@@ -4270,7 +4313,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 539";
 		rLen = 0;
-		rLoc = 15998;
+		rLoc = 16323;
 		rType = 0;
 		vrLen = 1751;
 		vrLoc = 16260;
@@ -4280,7 +4323,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 84";
 		rLen = 0;
-		rLoc = 2422;
+		rLoc = 2531;
 		rType = 0;
 		vrLen = 1151;
 		vrLoc = 1955;
@@ -4300,7 +4343,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 540";
 		rLen = 0;
-		rLoc = 15998;
+		rLoc = 16323;
 		rType = 0;
 		vrLen = 1807;
 		vrLoc = 16260;
@@ -4310,7 +4353,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 84";
 		rLen = 0;
-		rLoc = 2422;
+		rLoc = 2531;
 		rType = 0;
 		vrLen = 1151;
 		vrLoc = 1955;
@@ -4340,7 +4383,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 26";
 		rLen = 0;
-		rLoc = 676;
+		rLoc = 719;
 		rType = 0;
 		vrLen = 434;
 		vrLoc = 311;
@@ -4350,7 +4393,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 540";
 		rLen = 0;
-		rLoc = 15998;
+		rLoc = 16323;
 		rType = 0;
 		vrLen = 1807;
 		vrLoc = 16265;
@@ -4365,7 +4408,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 83";
 		rLen = 0;
-		rLoc = 2422;
+		rLoc = 2531;
 		rType = 0;
 		vrLen = 1257;
 		vrLoc = 1793;
@@ -4375,7 +4418,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 84";
 		rLen = 0;
-		rLoc = 2422;
+		rLoc = 2531;
 		rType = 0;
 		vrLen = 1262;
 		vrLoc = 1847;
@@ -4385,7 +4428,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 26";
 		rLen = 0;
-		rLoc = 676;
+		rLoc = 719;
 		rType = 0;
 		vrLen = 434;
 		vrLoc = 311;
@@ -4395,7 +4438,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 523";
 		rLen = 0;
-		rLoc = 15998;
+		rLoc = 16323;
 		rType = 0;
 		vrLen = 1809;
 		vrLoc = 16265;
@@ -4405,7 +4448,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 399";
 		rLen = 0;
-		rLoc = 10972;
+		rLoc = 11297;
 		rType = 0;
 		vrLen = 1351;
 		vrLoc = 11800;
@@ -4415,7 +4458,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 26";
 		rLen = 0;
-		rLoc = 676;
+		rLoc = 719;
 		rType = 0;
 		vrLen = 434;
 		vrLoc = 311;
@@ -4425,7 +4468,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 528";
 		rLen = 0;
-		rLoc = 15998;
+		rLoc = 16323;
 		rType = 0;
 		vrLen = 1998;
 		vrLoc = 16425;
@@ -4435,7 +4478,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 399";
 		rLen = 0;
-		rLoc = 10972;
+		rLoc = 11297;
 		rType = 0;
 		vrLen = 957;
 		vrLoc = 9359;
@@ -4445,7 +4488,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 26";
 		rLen = 0;
-		rLoc = 676;
+		rLoc = 719;
 		rType = 0;
 		vrLen = 434;
 		vrLoc = 311;
@@ -4455,7 +4498,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 522";
 		rLen = 0;
-		rLoc = 15998;
+		rLoc = 16323;
 		rType = 0;
 		vrLen = 2004;
 		vrLoc = 16425;
@@ -4469,7 +4512,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 399";
 		rLen = 0;
-		rLoc = 10972;
+		rLoc = 11297;
 		rType = 0;
 		vrLen = 955;
 		vrLoc = 9364;
@@ -4479,7 +4522,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 26";
 		rLen = 0;
-		rLoc = 666;
+		rLoc = 709;
 		rType = 0;
 		vrLen = 434;
 		vrLoc = 311;
@@ -4489,7 +4532,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 524";
 		rLen = 0;
-		rLoc = 15998;
+		rLoc = 16323;
 		rType = 0;
 		vrLen = 2082;
 		vrLoc = 16425;
@@ -4504,7 +4547,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 399";
 		rLen = 0;
-		rLoc = 10972;
+		rLoc = 11297;
 		rType = 0;
 		vrLen = 1068;
 		vrLoc = 9366;
@@ -4514,7 +4557,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 26";
 		rLen = 0;
-		rLoc = 666;
+		rLoc = 709;
 		rType = 0;
 		vrLen = 434;
 		vrLoc = 311;
@@ -4524,7 +4567,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 524";
 		rLen = 0;
-		rLoc = 15998;
+		rLoc = 16323;
 		rType = 0;
 		vrLen = 2090;
 		vrLoc = 16425;
@@ -4539,7 +4582,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 399";
 		rLen = 0;
-		rLoc = 10972;
+		rLoc = 11297;
 		rType = 0;
 		vrLen = 1094;
 		vrLoc = 9381;
@@ -4549,7 +4592,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 26";
 		rLen = 0;
-		rLoc = 676;
+		rLoc = 719;
 		rType = 0;
 		vrLen = 404;
 		vrLoc = 402;
@@ -4559,7 +4602,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 524";
 		rLen = 0;
-		rLoc = 15998;
+		rLoc = 16323;
 		rType = 0;
 		vrLen = 2082;
 		vrLoc = 16425;
@@ -4574,7 +4617,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 399";
 		rLen = 0;
-		rLoc = 10972;
+		rLoc = 11297;
 		rType = 0;
 		vrLen = 1063;
 		vrLoc = 9415;
@@ -4584,7 +4627,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 26";
 		rLen = 0;
-		rLoc = 676;
+		rLoc = 719;
 		rType = 0;
 		vrLen = 404;
 		vrLoc = 402;
@@ -4594,7 +4637,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 524";
 		rLen = 0;
-		rLoc = 15998;
+		rLoc = 16323;
 		rType = 0;
 		vrLen = 2100;
 		vrLoc = 16425;
@@ -4609,7 +4652,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 399";
 		rLen = 0;
-		rLoc = 10972;
+		rLoc = 11297;
 		rType = 0;
 		vrLen = 910;
 		vrLoc = 9587;
@@ -4619,7 +4662,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 26";
 		rLen = 0;
-		rLoc = 676;
+		rLoc = 719;
 		rType = 0;
 		vrLen = 404;
 		vrLoc = 402;
@@ -4629,7 +4672,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 524";
 		rLen = 0;
-		rLoc = 15998;
+		rLoc = 16323;
 		rType = 0;
 		vrLen = 2101;
 		vrLoc = 16425;
@@ -4644,7 +4687,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 399";
 		rLen = 0;
-		rLoc = 10972;
+		rLoc = 11297;
 		rType = 0;
 		vrLen = 832;
 		vrLoc = 9737;
@@ -4654,7 +4697,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 26";
 		rLen = 0;
-		rLoc = 676;
+		rLoc = 719;
 		rType = 0;
 		vrLen = 404;
 		vrLoc = 402;
@@ -4664,7 +4707,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 524";
 		rLen = 0;
-		rLoc = 15998;
+		rLoc = 16323;
 		rType = 0;
 		vrLen = 2103;
 		vrLoc = 16425;
@@ -4679,7 +4722,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 399";
 		rLen = 0;
-		rLoc = 10972;
+		rLoc = 11297;
 		rType = 0;
 		vrLen = 721;
 		vrLoc = 9883;
@@ -4689,7 +4732,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 26";
 		rLen = 0;
-		rLoc = 688;
+		rLoc = 731;
 		rType = 0;
 		vrLen = 404;
 		vrLoc = 402;
@@ -4699,7 +4742,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 524";
 		rLen = 0;
-		rLoc = 15998;
+		rLoc = 16323;
 		rType = 0;
 		vrLen = 2091;
 		vrLoc = 16456;
@@ -4714,7 +4757,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 399";
 		rLen = 0;
-		rLoc = 10972;
+		rLoc = 11297;
 		rType = 0;
 		vrLen = 716;
 		vrLoc = 9919;
@@ -4724,7 +4767,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 26";
 		rLen = 0;
-		rLoc = 688;
+		rLoc = 731;
 		rType = 0;
 		vrLen = 404;
 		vrLoc = 402;
@@ -4734,7 +4777,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 525";
 		rLen = 0;
-		rLoc = 15998;
+		rLoc = 16323;
 		rType = 0;
 		vrLen = 2084;
 		vrLoc = 16456;
@@ -4749,7 +4792,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 399";
 		rLen = 0;
-		rLoc = 10972;
+		rLoc = 11297;
 		rType = 0;
 		vrLen = 748;
 		vrLoc = 9928;
@@ -4759,7 +4802,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 26";
 		rLen = 0;
-		rLoc = 688;
+		rLoc = 731;
 		rType = 0;
 		vrLen = 404;
 		vrLoc = 402;
@@ -4769,7 +4812,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 526";
 		rLen = 0;
-		rLoc = 15998;
+		rLoc = 16323;
 		rType = 0;
 		vrLen = 2164;
 		vrLoc = 16456;
@@ -4784,7 +4827,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 399";
 		rLen = 0;
-		rLoc = 10972;
+		rLoc = 11297;
 		rType = 0;
 		vrLen = 716;
 		vrLoc = 9919;
@@ -4794,7 +4837,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 26";
 		rLen = 0;
-		rLoc = 688;
+		rLoc = 731;
 		rType = 0;
 		vrLen = 404;
 		vrLoc = 402;
@@ -4804,7 +4847,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 525";
 		rLen = 0;
-		rLoc = 15998;
+		rLoc = 16323;
 		rType = 0;
 		vrLen = 2171;
 		vrLoc = 16456;
@@ -4819,7 +4862,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 399";
 		rLen = 0;
-		rLoc = 10972;
+		rLoc = 11297;
 		rType = 0;
 		vrLen = 748;
 		vrLoc = 9928;
@@ -4829,7 +4872,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 26";
 		rLen = 0;
-		rLoc = 688;
+		rLoc = 731;
 		rType = 0;
 		vrLen = 404;
 		vrLoc = 402;
@@ -4839,7 +4882,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 525";
 		rLen = 0;
-		rLoc = 15998;
+		rLoc = 16323;
 		rType = 0;
 		vrLen = 2181;
 		vrLoc = 16456;
@@ -4854,7 +4897,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 399";
 		rLen = 0;
-		rLoc = 10972;
+		rLoc = 11297;
 		rType = 0;
 		vrLen = 721;
 		vrLoc = 9883;
@@ -4864,7 +4907,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 26";
 		rLen = 0;
-		rLoc = 688;
+		rLoc = 731;
 		rType = 0;
 		vrLen = 404;
 		vrLoc = 402;
@@ -4874,7 +4917,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 522";
 		rLen = 0;
-		rLoc = 15998;
+		rLoc = 16323;
 		rType = 0;
 		vrLen = 2030;
 		vrLoc = 16456;
@@ -4889,7 +4932,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 408";
 		rLen = 0;
-		rLoc = 10972;
+		rLoc = 11297;
 		rType = 0;
 		vrLen = 717;
 		vrLoc = 11126;
@@ -4899,7 +4942,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 26";
 		rLen = 0;
-		rLoc = 688;
+		rLoc = 731;
 		rType = 0;
 		vrLen = 404;
 		vrLoc = 402;
@@ -4909,7 +4952,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 271";
 		rLen = 0;
-		rLoc = 6281;
+		rLoc = 6040;
 		rType = 0;
 		vrLen = 1811;
 		vrLoc = 7105;
@@ -4924,7 +4967,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 407";
 		rLen = 0;
-		rLoc = 10972;
+		rLoc = 11297;
 		rType = 0;
 		vrLen = 717;
 		vrLoc = 11124;
@@ -4934,7 +4977,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 26";
 		rLen = 0;
-		rLoc = 688;
+		rLoc = 731;
 		rType = 0;
 		vrLen = 404;
 		vrLoc = 402;
@@ -4944,7 +4987,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 136";
 		rLen = 0;
-		rLoc = 3317;
+		rLoc = 3426;
 		rType = 0;
 		vrLen = 1379;
 		vrLoc = 4120;
@@ -4958,7 +5001,7 @@
 		isa = PBXTextBookmark;
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		rLen = 0;
-		rLoc = 169;
+		rLoc = 170;
 		rType = 1;
 	};
 	3D03A464131D327400F6B225 /* PBXTextBookmark */ = {
@@ -4966,7 +5009,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 407";
 		rLen = 0;
-		rLoc = 10972;
+		rLoc = 11297;
 		rType = 0;
 		vrLen = 786;
 		vrLoc = 11125;
@@ -4976,7 +5019,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 222";
 		rLen = 0;
-		rLoc = 5271;
+		rLoc = 5397;
 		rType = 0;
 		vrLen = 957;
 		vrLoc = 6347;
@@ -4986,7 +5029,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 136";
 		rLen = 0;
-		rLoc = 3317;
+		rLoc = 3426;
 		rType = 0;
 		vrLen = 2410;
 		vrLoc = 5285;
@@ -4996,7 +5039,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 136";
 		rLen = 0;
-		rLoc = 3317;
+		rLoc = 3426;
 		rType = 0;
 		vrLen = 2409;
 		vrLoc = 5285;
@@ -5010,7 +5053,7 @@
 		isa = PBXTextBookmark;
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		rLen = 1;
-		rLoc = 146;
+		rLoc = 148;
 		rType = 1;
 	};
 	3D03A470131D328600F6B225 /* PBXTextBookmark */ = {
@@ -5018,7 +5061,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 407";
 		rLen = 0;
-		rLoc = 10972;
+		rLoc = 11297;
 		rType = 0;
 		vrLen = 823;
 		vrLoc = 11168;
@@ -5028,7 +5071,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 222";
 		rLen = 0;
-		rLoc = 5271;
+		rLoc = 5397;
 		rType = 0;
 		vrLen = 957;
 		vrLoc = 6347;
@@ -5038,7 +5081,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 136";
 		rLen = 0;
-		rLoc = 3317;
+		rLoc = 3426;
 		rType = 0;
 		vrLen = 1764;
 		vrLoc = 4425;
@@ -5048,7 +5091,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 136";
 		rLen = 0;
-		rLoc = 3317;
+		rLoc = 3426;
 		rType = 0;
 		vrLen = 1764;
 		vrLoc = 4425;
@@ -5062,7 +5105,7 @@
 		isa = PBXTextBookmark;
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		rLen = 1;
-		rLoc = 81;
+		rLoc = 83;
 		rType = 1;
 	};
 	3D03A484131D333700F6B225 /* PBXTextBookmark */ = {
@@ -5070,7 +5113,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 407";
 		rLen = 0;
-		rLoc = 10972;
+		rLoc = 11297;
 		rType = 0;
 		vrLen = 811;
 		vrLoc = 11215;
@@ -5080,7 +5123,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 222";
 		rLen = 0;
-		rLoc = 5271;
+		rLoc = 5397;
 		rType = 0;
 		vrLen = 957;
 		vrLoc = 6347;
@@ -5090,7 +5133,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 519";
 		rLen = 0;
-		rLoc = 13636;
+		rLoc = 13961;
 		rType = 0;
 		vrLen = 1875;
 		vrLoc = 1660;
@@ -5100,7 +5143,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 517";
 		rLen = 0;
-		rLoc = 13636;
+		rLoc = 13961;
 		rType = 0;
 		vrLen = 1875;
 		vrLoc = 1660;
@@ -5110,7 +5153,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 408";
 		rLen = 0;
-		rLoc = 10972;
+		rLoc = 11297;
 		rType = 0;
 		vrLen = 805;
 		vrLoc = 11341;
@@ -5120,7 +5163,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 223";
 		rLen = 0;
-		rLoc = 5271;
+		rLoc = 5397;
 		rType = 0;
 		vrLen = 873;
 		vrLoc = 6494;
@@ -5130,7 +5173,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 98";
 		rLen = 0;
-		rLoc = 3315;
+		rLoc = 3424;
 		rType = 0;
 		vrLen = 1980;
 		vrLoc = 1405;
@@ -5140,7 +5183,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 408";
 		rLen = 0;
-		rLoc = 10972;
+		rLoc = 11297;
 		rType = 0;
 		vrLen = 881;
 		vrLoc = 11382;
@@ -5150,7 +5193,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 86";
 		rLen = 0;
-		rLoc = 2422;
+		rLoc = 2531;
 		rType = 0;
 		vrLen = 785;
 		vrLoc = 2203;
@@ -5160,7 +5203,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 98";
 		rLen = 0;
-		rLoc = 3315;
+		rLoc = 3424;
 		rType = 0;
 		vrLen = 1980;
 		vrLoc = 1405;
@@ -5170,7 +5213,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 408";
 		rLen = 0;
-		rLoc = 10972;
+		rLoc = 11297;
 		rType = 0;
 		vrLen = 907;
 		vrLoc = 11456;
@@ -5180,7 +5223,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 86";
 		rLen = 0;
-		rLoc = 2422;
+		rLoc = 2531;
 		rType = 0;
 		vrLen = 785;
 		vrLoc = 2203;
@@ -5190,7 +5233,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 176";
 		rLen = 0;
-		rLoc = 4126;
+		rLoc = 4235;
 		rType = 0;
 		vrLen = 1452;
 		vrLoc = 4132;
@@ -5200,7 +5243,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 374";
 		rLen = 0;
-		rLoc = 9773;
+		rLoc = 10098;
 		rType = 0;
 		vrLen = 1015;
 		vrLoc = 11498;
@@ -5210,7 +5253,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 85";
 		rLen = 0;
-		rLoc = 2422;
+		rLoc = 2531;
 		rType = 0;
 		vrLen = 863;
 		vrLoc = 1477;
@@ -5230,7 +5273,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 32";
 		rLen = 0;
-		rLoc = 741;
+		rLoc = 784;
 		rType = 0;
 		vrLen = 1383;
 		vrLoc = 402;
@@ -5240,7 +5283,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 56";
 		rLen = 0;
-		rLoc = 1220;
+		rLoc = 1329;
 		rType = 0;
 		vrLen = 1946;
 		vrLoc = 1060;
@@ -5250,7 +5293,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 374";
 		rLen = 0;
-		rLoc = 9773;
+		rLoc = 10098;
 		rType = 0;
 		vrLen = 1033;
 		vrLoc = 11515;
@@ -5260,7 +5303,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 85";
 		rLen = 0;
-		rLoc = 2422;
+		rLoc = 2531;
 		rType = 0;
 		vrLen = 863;
 		vrLoc = 1477;
@@ -5270,7 +5313,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 98";
 		rLen = 0;
-		rLoc = 3315;
+		rLoc = 3424;
 		rType = 0;
 		vrLen = 1982;
 		vrLoc = 1175;
@@ -5280,7 +5323,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 373";
 		rLen = 0;
-		rLoc = 9773;
+		rLoc = 10098;
 		rType = 0;
 		vrLen = 921;
 		vrLoc = 11709;
@@ -5290,7 +5333,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 98";
 		rLen = 0;
-		rLoc = 3315;
+		rLoc = 3424;
 		rType = 0;
 		vrLen = 916;
 		vrLoc = 1477;
@@ -5300,7 +5343,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 84";
 		rLen = 0;
-		rLoc = 2677;
+		rLoc = 2786;
 		rType = 0;
 		vrLen = 1922;
 		vrLoc = 1740;
@@ -5310,7 +5353,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 552";
 		rLen = 0;
-		rLoc = 15998;
+		rLoc = 16323;
 		rType = 0;
 		vrLen = 1180;
 		vrLoc = 17844;
@@ -5320,7 +5363,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 98";
 		rLen = 0;
-		rLoc = 3315;
+		rLoc = 3424;
 		rType = 0;
 		vrLen = 916;
 		vrLoc = 1477;
@@ -5330,7 +5373,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 84";
 		rLen = 0;
-		rLoc = 2677;
+		rLoc = 2786;
 		rType = 0;
 		vrLen = 1868;
 		vrLoc = 1796;
@@ -5340,7 +5383,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 26";
 		rLen = 0;
-		rLoc = 688;
+		rLoc = 731;
 		rType = 0;
 		vrLen = 793;
 		vrLoc = 203;
@@ -5350,7 +5393,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 93";
 		rLen = 0;
-		rLoc = 3315;
+		rLoc = 3424;
 		rType = 0;
 		vrLen = 839;
 		vrLoc = 1533;
@@ -5360,7 +5403,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 82";
 		rLen = 0;
-		rLoc = 2677;
+		rLoc = 2786;
 		rType = 0;
 		vrLen = 1841;
 		vrLoc = 2091;
@@ -5370,7 +5413,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 80";
 		rLen = 0;
-		rLoc = 2422;
+		rLoc = 2531;
 		rType = 0;
 		vrLen = 1166;
 		vrLoc = 2042;
@@ -5380,7 +5423,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 93";
 		rLen = 0;
-		rLoc = 3315;
+		rLoc = 3424;
 		rType = 0;
 		vrLen = 839;
 		vrLoc = 1533;
@@ -5390,7 +5433,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 82";
 		rLen = 0;
-		rLoc = 2677;
+		rLoc = 2786;
 		rType = 0;
 		vrLen = 1761;
 		vrLoc = 2178;
@@ -5400,7 +5443,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 82";
 		rLen = 0;
-		rLoc = 2677;
+		rLoc = 2786;
 		rType = 0;
 		vrLen = 1307;
 		vrLoc = 1822;
@@ -5410,7 +5453,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 93";
 		rLen = 0;
-		rLoc = 3315;
+		rLoc = 3424;
 		rType = 0;
 		vrLen = 839;
 		vrLoc = 1533;
@@ -5420,7 +5463,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 82";
 		rLen = 0;
-		rLoc = 2677;
+		rLoc = 2786;
 		rType = 0;
 		vrLen = 1638;
 		vrLoc = 2370;
@@ -5430,7 +5473,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 82";
 		rLen = 0;
-		rLoc = 2870;
+		rLoc = 2979;
 		rType = 0;
 		vrLen = 1299;
 		vrLoc = 1822;
@@ -5440,7 +5483,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 92";
 		rLen = 0;
-		rLoc = 3315;
+		rLoc = 3424;
 		rType = 0;
 		vrLen = 839;
 		vrLoc = 1533;
@@ -5450,7 +5493,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 82";
 		rLen = 0;
-		rLoc = 2677;
+		rLoc = 2786;
 		rType = 0;
 		vrLen = 1485;
 		vrLoc = 2454;
@@ -5460,7 +5503,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 83";
 		rLen = 0;
-		rLoc = 2743;
+		rLoc = 2852;
 		rType = 0;
 		vrLen = 1353;
 		vrLoc = 1822;
@@ -5470,7 +5513,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 93";
 		rLen = 0;
-		rLoc = 3315;
+		rLoc = 3424;
 		rType = 0;
 		vrLen = 839;
 		vrLoc = 1533;
@@ -5480,7 +5523,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 83";
 		rLen = 0;
-		rLoc = 2677;
+		rLoc = 2786;
 		rType = 0;
 		vrLen = 1602;
 		vrLoc = 2454;
@@ -5490,7 +5533,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 514";
 		rLen = 17;
-		rLoc = 13721;
+		rLoc = 14046;
 		rType = 0;
 		vrLen = 1073;
 		vrLoc = 16921;
@@ -5510,7 +5553,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 72";
 		rLen = 0;
-		rLoc = 1990;
+		rLoc = 2099;
 		rType = 0;
 		vrLen = 479;
 		vrLoc = 436;
@@ -5520,7 +5563,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 348";
 		rLen = 0;
-		rLoc = 8960;
+		rLoc = 9285;
 		rType = 0;
 		vrLen = 281;
 		vrLoc = 11101;
@@ -5530,7 +5573,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 83";
 		rLen = 0;
-		rLoc = 2677;
+		rLoc = 2786;
 		rType = 0;
 		vrLen = 1688;
 		vrLoc = 2389;
@@ -5540,7 +5583,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 526";
 		rLen = 0;
-		rLoc = 15998;
+		rLoc = 16323;
 		rType = 0;
 		vrLen = 1400;
 		vrLoc = 17266;
@@ -5550,7 +5593,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 348";
 		rLen = 0;
-		rLoc = 8960;
+		rLoc = 9285;
 		rType = 0;
 		vrLen = 261;
 		vrLoc = 11098;
@@ -5560,7 +5603,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 83";
 		rLen = 0;
-		rLoc = 2677;
+		rLoc = 2786;
 		rType = 0;
 		vrLen = 1688;
 		vrLoc = 2389;
@@ -5595,7 +5638,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 526";
 		rLen = 0;
-		rLoc = 15998;
+		rLoc = 16323;
 		rType = 0;
 		vrLen = 1354;
 		vrLoc = 17266;
@@ -5605,7 +5648,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 559";
 		rLen = 0;
-		rLoc = 15998;
+		rLoc = 16323;
 		rType = 0;
 		vrLen = 965;
 		vrLoc = 18588;
@@ -5615,7 +5658,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 11";
 		rLen = 0;
-		rLoc = 230;
+		rLoc = 273;
 		rType = 0;
 		vrLen = 378;
 		vrLoc = 86;
@@ -5655,7 +5698,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 84";
 		rLen = 0;
-		rLoc = 2677;
+		rLoc = 2786;
 		rType = 0;
 		vrLen = 1607;
 		vrLoc = 2501;
@@ -5665,7 +5708,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 92";
 		rLen = 0;
-		rLoc = 3126;
+		rLoc = 3235;
 		rType = 0;
 		vrLen = 1516;
 		vrLoc = 1765;
@@ -5675,7 +5718,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 11";
 		rLen = 0;
-		rLoc = 230;
+		rLoc = 273;
 		rType = 0;
 		vrLen = 351;
 		vrLoc = 148;
@@ -5695,7 +5738,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 84";
 		rLen = 0;
-		rLoc = 2677;
+		rLoc = 2786;
 		rType = 0;
 		vrLen = 1649;
 		vrLoc = 2567;
@@ -5705,7 +5748,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 90";
 		rLen = 0;
-		rLoc = 3051;
+		rLoc = 3160;
 		rType = 0;
 		vrLen = 1518;
 		vrLoc = 1765;
@@ -5715,7 +5758,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 11";
 		rLen = 0;
-		rLoc = 230;
+		rLoc = 273;
 		rType = 0;
 		vrLen = 357;
 		vrLoc = 180;
@@ -5735,7 +5778,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 84";
 		rLen = 0;
-		rLoc = 2677;
+		rLoc = 2786;
 		rType = 0;
 		vrLen = 1533;
 		vrLoc = 2689;
@@ -5745,7 +5788,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 355";
 		rLen = 0;
-		rLoc = 10186;
+		rLoc = 10511;
 		rType = 0;
 		vrLen = 1017;
 		vrLoc = 10711;
@@ -5755,7 +5798,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 11";
 		rLen = 0;
-		rLoc = 230;
+		rLoc = 273;
 		rType = 0;
 		vrLen = 369;
 		vrLoc = 575;
@@ -5775,7 +5818,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 84";
 		rLen = 0;
-		rLoc = 2677;
+		rLoc = 2786;
 		rType = 0;
 		vrLen = 1262;
 		vrLoc = 2815;
@@ -5785,7 +5828,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 84";
 		rLen = 0;
-		rLoc = 2854;
+		rLoc = 2963;
 		rType = 0;
 		vrLen = 1515;
 		vrLoc = 1765;
@@ -5795,7 +5838,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 11";
 		rLen = 0;
-		rLoc = 230;
+		rLoc = 273;
 		rType = 0;
 		vrLen = 366;
 		vrLoc = 657;
@@ -5815,7 +5858,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 84";
 		rLen = 0;
-		rLoc = 2677;
+		rLoc = 2786;
 		rType = 0;
 		vrLen = 1261;
 		vrLoc = 2852;
@@ -5825,7 +5868,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 84";
 		rLen = 21;
-		rLoc = 2551;
+		rLoc = 2660;
 		rType = 0;
 		vrLen = 1613;
 		vrLoc = 1771;
@@ -5845,7 +5888,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 55";
 		rLen = 0;
-		rLoc = 1274;
+		rLoc = 1383;
 		rType = 0;
 		vrLen = 292;
 		vrLoc = 1148;
@@ -5855,7 +5898,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 317";
 		rLen = 0;
-		rLoc = 8960;
+		rLoc = 9285;
 		rType = 0;
 		vrLen = 295;
 		vrLoc = 10446;
@@ -5875,7 +5918,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 85";
 		rLen = 0;
-		rLoc = 2677;
+		rLoc = 2786;
 		rType = 0;
 		vrLen = 1648;
 		vrLoc = 2442;
@@ -5885,7 +5928,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 220";
 		rLen = 0;
-		rLoc = 5634;
+		rLoc = 5397;
 		rType = 0;
 		vrLen = 945;
 		vrLoc = 7053;
@@ -5895,7 +5938,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 317";
 		rLen = 0;
-		rLoc = 8960;
+		rLoc = 9285;
 		rType = 0;
 		vrLen = 313;
 		vrLoc = 10455;
@@ -5915,7 +5958,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 85";
 		rLen = 0;
-		rLoc = 2677;
+		rLoc = 2786;
 		rType = 0;
 		vrLen = 1623;
 		vrLoc = 2524;
@@ -5925,7 +5968,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 172";
 		rLen = 0;
-		rLoc = 5271;
+		rLoc = 5397;
 		rType = 0;
 		vrLen = 1455;
 		vrLoc = 5020;
@@ -5935,7 +5978,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 308";
 		rLen = 0;
-		rLoc = 8960;
+		rLoc = 9285;
 		rType = 0;
 		vrLen = 335;
 		vrLoc = 10211;
@@ -5955,7 +5998,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 85";
 		rLen = 0;
-		rLoc = 2677;
+		rLoc = 2786;
 		rType = 0;
 		vrLen = 1623;
 		vrLoc = 2524;
@@ -5965,7 +6008,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 189";
 		rLen = 0;
-		rLoc = 5429;
+		rLoc = 5397;
 		rType = 0;
 		vrLen = 1711;
 		vrLoc = 5352;
@@ -5975,7 +6018,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 301";
 		rLen = 0;
-		rLoc = 9127;
+		rLoc = 9452;
 		rType = 0;
 		vrLen = 289;
 		vrLoc = 10031;
@@ -6005,7 +6048,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 594";
 		rLen = 0;
-		rLoc = 21099;
+		rLoc = 21424;
 		rType = 0;
 		vrLen = 1398;
 		vrLoc = 2838;
@@ -6015,7 +6058,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 189";
 		rLen = 0;
-		rLoc = 5429;
+		rLoc = 5397;
 		rType = 0;
 		vrLen = 1605;
 		vrLoc = 5477;
@@ -6045,7 +6088,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 594";
 		rLen = 0;
-		rLoc = 21099;
+		rLoc = 21424;
 		rType = 0;
 		vrLen = 1264;
 		vrLoc = 3038;
@@ -6055,7 +6098,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 189";
 		rLen = 0;
-		rLoc = 5429;
+		rLoc = 5397;
 		rType = 0;
 		vrLen = 1519;
 		vrLoc = 5547;
@@ -6085,7 +6128,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 594";
 		rLen = 0;
-		rLoc = 21099;
+		rLoc = 21424;
 		rType = 0;
 		vrLen = 1232;
 		vrLoc = 3103;
@@ -6095,7 +6138,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 189";
 		rLen = 0;
-		rLoc = 5429;
+		rLoc = 5397;
 		rType = 0;
 		vrLen = 1459;
 		vrLoc = 5705;
@@ -6125,7 +6168,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 594";
 		rLen = 0;
-		rLoc = 21099;
+		rLoc = 21424;
 		rType = 0;
 		vrLen = 1227;
 		vrLoc = 3160;
@@ -6135,7 +6178,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 189";
 		rLen = 0;
-		rLoc = 5429;
+		rLoc = 5397;
 		rType = 0;
 		vrLen = 1459;
 		vrLoc = 5705;
@@ -6175,7 +6218,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 594";
 		rLen = 0;
-		rLoc = 21099;
+		rLoc = 21424;
 		rType = 0;
 		vrLen = 1227;
 		vrLoc = 3160;
@@ -6215,7 +6258,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 324";
 		rLen = 0;
-		rLoc = 9730;
+		rLoc = 10055;
 		rType = 0;
 		vrLen = 261;
 		vrLoc = 10620;
@@ -6225,7 +6268,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 596";
 		rLen = 0;
-		rLoc = 21099;
+		rLoc = 21424;
 		rType = 0;
 		vrLen = 1235;
 		vrLoc = 3022;
@@ -6255,7 +6298,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 189";
 		rLen = 0;
-		rLoc = 5429;
+		rLoc = 5397;
 		rType = 0;
 		vrLen = 1459;
 		vrLoc = 5726;
@@ -6265,7 +6308,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 336";
 		rLen = 30;
-		rLoc = 9835;
+		rLoc = 10160;
 		rType = 0;
 		vrLen = 636;
 		vrLoc = 10615;
@@ -6275,7 +6318,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 325";
 		rLen = 0;
-		rLoc = 9730;
+		rLoc = 10055;
 		rType = 0;
 		vrLen = 281;
 		vrLoc = 10562;
@@ -6285,7 +6328,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 327";
 		rLen = 0;
-		rLoc = 9730;
+		rLoc = 10055;
 		rType = 0;
 		vrLen = 289;
 		vrLoc = 10679;
@@ -6305,7 +6348,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 42";
 		rLen = 0;
-		rLoc = 994;
+		rLoc = 1103;
 		rType = 0;
 		vrLen = 1380;
 		vrLoc = 277;
@@ -6315,7 +6358,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 603";
 		rLen = 0;
-		rLoc = 21099;
+		rLoc = 21424;
 		rType = 0;
 		vrLen = 1506;
 		vrLoc = 12907;
@@ -6325,7 +6368,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 336";
 		rLen = 30;
-		rLoc = 9835;
+		rLoc = 10160;
 		rType = 0;
 		vrLen = 636;
 		vrLoc = 10615;
@@ -6335,7 +6378,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 327";
 		rLen = 0;
-		rLoc = 9730;
+		rLoc = 10055;
 		rType = 0;
 		vrLen = 289;
 		vrLoc = 10679;
@@ -6345,7 +6388,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 42";
 		rLen = 0;
-		rLoc = 994;
+		rLoc = 1103;
 		rType = 0;
 		vrLen = 1380;
 		vrLoc = 277;
@@ -6355,7 +6398,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 337";
 		rLen = 0;
-		rLoc = 9868;
+		rLoc = 10193;
 		rType = 0;
 		vrLen = 627;
 		vrLoc = 10679;
@@ -6365,7 +6408,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 327";
 		rLen = 0;
-		rLoc = 9730;
+		rLoc = 10055;
 		rType = 0;
 		vrLen = 266;
 		vrLoc = 10703;
@@ -6375,7 +6418,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 42";
 		rLen = 0;
-		rLoc = 994;
+		rLoc = 1103;
 		rType = 0;
 		vrLen = 1512;
 		vrLoc = 310;
@@ -6385,7 +6428,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 337";
 		rLen = 0;
-		rLoc = 9868;
+		rLoc = 10193;
 		rType = 0;
 		vrLen = 851;
 		vrLoc = 4268;
@@ -6395,7 +6438,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 327";
 		rLen = 0;
-		rLoc = 9730;
+		rLoc = 10055;
 		rType = 0;
 		vrLen = 275;
 		vrLoc = 10773;
@@ -6415,7 +6458,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 505";
 		rLen = 35;
-		rLoc = 14335;
+		rLoc = 14660;
 		rType = 0;
 		vrLen = 1940;
 		vrLoc = 16284;
@@ -6425,7 +6468,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 40";
 		rLen = 0;
-		rLoc = 915;
+		rLoc = 958;
 		rType = 0;
 		vrLen = 1489;
 		vrLoc = 339;
@@ -6435,7 +6478,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 337";
 		rLen = 0;
-		rLoc = 9868;
+		rLoc = 10193;
 		rType = 0;
 		vrLen = 926;
 		vrLoc = 4288;
@@ -6445,7 +6488,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 327";
 		rLen = 0;
-		rLoc = 9730;
+		rLoc = 10055;
 		rType = 0;
 		vrLen = 276;
 		vrLoc = 10814;
@@ -6455,7 +6498,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 40";
 		rLen = 0;
-		rLoc = 915;
+		rLoc = 958;
 		rType = 0;
 		vrLen = 1455;
 		vrLoc = 390;
@@ -6465,7 +6508,7 @@
 		comments = "'FindViewController' may not respond to '-fetchRankedUniversitiesFromDB'";
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		rLen = 1;
-		rLoc = 413;
+		rLoc = 424;
 		rType = 1;
 	};
 	3D03A564131D480000F6B225 /* PBXTextBookmark */ = {
@@ -6473,7 +6516,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 497";
 		rLen = 0;
-		rLoc = 13953;
+		rLoc = 14278;
 		rType = 0;
 		vrLen = 716;
 		vrLoc = 16624;
@@ -6483,7 +6526,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 562";
 		rLen = 0;
-		rLoc = 19864;
+		rLoc = 20189;
 		rType = 0;
 		vrLen = 886;
 		vrLoc = 18929;
@@ -6493,7 +6536,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 327";
 		rLen = 0;
-		rLoc = 9730;
+		rLoc = 10055;
 		rType = 0;
 		vrLen = 276;
 		vrLoc = 10814;
@@ -6513,7 +6556,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 40";
 		rLen = 0;
-		rLoc = 915;
+		rLoc = 958;
 		rType = 0;
 		vrLen = 1455;
 		vrLoc = 390;
@@ -6523,7 +6566,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 514";
 		rLen = 0;
-		rLoc = 15998;
+		rLoc = 16323;
 		rType = 0;
 		vrLen = 1696;
 		vrLoc = 15020;
@@ -6533,7 +6576,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 561";
 		rLen = 0;
-		rLoc = 19796;
+		rLoc = 20121;
 		rType = 0;
 		vrLen = 759;
 		vrLoc = 19082;
@@ -6543,7 +6586,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 324";
 		rLen = 0;
-		rLoc = 9730;
+		rLoc = 10055;
 		rType = 0;
 		vrLen = 299;
 		vrLoc = 10743;
@@ -6553,7 +6596,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 80";
 		rLen = 0;
-		rLoc = 2422;
+		rLoc = 2531;
 		rType = 0;
 		vrLen = 2195;
 		vrLoc = 1217;
@@ -6563,7 +6606,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 445";
 		rLen = 0;
-		rLoc = 13636;
+		rLoc = 13961;
 		rType = 0;
 		vrLen = 999;
 		vrLoc = 15155;
@@ -6573,7 +6616,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 324";
 		rLen = 0;
-		rLoc = 9730;
+		rLoc = 10055;
 		rType = 0;
 		vrLen = 322;
 		vrLoc = 10760;
@@ -6583,7 +6626,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 489";
 		rLen = 30;
-		rLoc = 13727;
+		rLoc = 14052;
 		rType = 0;
 		vrLen = 2095;
 		vrLoc = 16967;
@@ -6593,7 +6636,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 94";
 		rLen = 0;
-		rLoc = 3199;
+		rLoc = 3308;
 		rType = 0;
 		vrLen = 1485;
 		vrLoc = 1845;
@@ -6603,7 +6646,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 324";
 		rLen = 0;
-		rLoc = 9730;
+		rLoc = 10055;
 		rType = 0;
 		vrLen = 384;
 		vrLoc = 10778;
@@ -6613,7 +6656,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 489";
 		rLen = 30;
-		rLoc = 13727;
+		rLoc = 14052;
 		rType = 0;
 		vrLen = 2123;
 		vrLoc = 16976;
@@ -6623,7 +6666,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 96";
 		rLen = 0;
-		rLoc = 3273;
+		rLoc = 3382;
 		rType = 0;
 		vrLen = 1485;
 		vrLoc = 1903;
@@ -6633,7 +6676,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 325";
 		rLen = 0;
-		rLoc = 9730;
+		rLoc = 10055;
 		rType = 0;
 		vrLen = 384;
 		vrLoc = 10834;
@@ -6643,7 +6686,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 490";
 		rLen = 30;
-		rLoc = 13727;
+		rLoc = 14052;
 		rType = 0;
 		vrLen = 2158;
 		vrLoc = 17094;
@@ -6657,7 +6700,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 96";
 		rLen = 0;
-		rLoc = 3273;
+		rLoc = 3382;
 		rType = 0;
 		vrLen = 1273;
 		vrLoc = 16841;
@@ -6677,7 +6720,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 314";
 		rLen = 0;
-		rLoc = 9485;
+		rLoc = 9810;
 		rType = 0;
 		vrLen = 291;
 		vrLoc = 10457;
@@ -6687,7 +6730,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 25";
 		rLen = 0;
-		rLoc = 618;
+		rLoc = 661;
 		rType = 0;
 		vrLen = 392;
 		vrLoc = 430;
@@ -6707,7 +6750,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 556";
 		rLen = 0;
-		rLoc = 16097;
+		rLoc = 16422;
 		rType = 0;
 		vrLen = 1790;
 		vrLoc = 18751;
@@ -6717,7 +6760,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 621";
 		rLen = 0;
-		rLoc = 19527;
+		rLoc = 19852;
 		rType = 0;
 		vrLen = 0;
 		vrLoc = 21199;
@@ -6727,7 +6770,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 27";
 		rLen = 0;
-		rLoc = 675;
+		rLoc = 718;
 		rType = 0;
 		vrLen = 389;
 		vrLoc = 430;
@@ -6737,7 +6780,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 560";
 		rLen = 0;
-		rLoc = 16097;
+		rLoc = 16422;
 		rType = 0;
 		vrLen = 1243;
 		vrLoc = 19956;
@@ -6764,7 +6807,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 144";
 		rLen = 0;
-		rLoc = 4301;
+		rLoc = 4410;
 		rType = 0;
 		vrLen = 774;
 		vrLoc = 4080;
@@ -6774,7 +6817,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 154";
 		rLen = 0;
-		rLoc = 4669;
+		rLoc = 4778;
 		rType = 0;
 		vrLen = 771;
 		vrLoc = 4138;
@@ -6784,7 +6827,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 27";
 		rLen = 0;
-		rLoc = 675;
+		rLoc = 718;
 		rType = 0;
 		vrLen = 389;
 		vrLoc = 430;
@@ -6794,7 +6837,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 27";
 		rLen = 0;
-		rLoc = 675;
+		rLoc = 718;
 		rType = 0;
 		vrLen = 352;
 		vrLoc = 589;
@@ -6804,7 +6847,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 560";
 		rLen = 0;
-		rLoc = 16097;
+		rLoc = 16422;
 		rType = 0;
 		vrLen = 1239;
 		vrLoc = 19960;
@@ -6814,7 +6857,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 154";
 		rLen = 0;
-		rLoc = 4728;
+		rLoc = 4837;
 		rType = 0;
 		vrLen = 821;
 		vrLoc = 4252;
@@ -6824,7 +6867,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 27";
 		rLen = 0;
-		rLoc = 675;
+		rLoc = 718;
 		rType = 0;
 		vrLen = 352;
 		vrLoc = 589;
@@ -6834,7 +6877,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 560";
 		rLen = 0;
-		rLoc = 16097;
+		rLoc = 16422;
 		rType = 0;
 		vrLen = 1287;
 		vrLoc = 19912;
@@ -6854,7 +6897,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 492";
 		rLen = 43;
-		rLoc = 13993;
+		rLoc = 14318;
 		rType = 0;
 		vrLen = 958;
 		vrLoc = 16339;
@@ -6864,7 +6907,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 188";
 		rLen = 0;
-		rLoc = 5568;
+		rLoc = 5397;
 		rType = 0;
 		vrLen = 1387;
 		vrLoc = 5361;
@@ -6874,7 +6917,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 41";
 		rLen = 0;
-		rLoc = 961;
+		rLoc = 1004;
 		rType = 0;
 		vrLen = 414;
 		vrLoc = 838;
@@ -6884,7 +6927,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 555";
 		rLen = 0;
-		rLoc = 16097;
+		rLoc = 16422;
 		rType = 0;
 		vrLen = 1254;
 		vrLoc = 19945;
@@ -6894,7 +6937,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 188";
 		rLen = 0;
-		rLoc = 5568;
+		rLoc = 5397;
 		rType = 0;
 		vrLen = 1379;
 		vrLoc = 5366;
@@ -6914,7 +6957,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 44";
 		rLen = 0;
-		rLoc = 995;
+		rLoc = 1104;
 		rType = 0;
 		vrLen = 415;
 		vrLoc = 838;
@@ -6924,7 +6967,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 24";
 		rLen = 0;
-		rLoc = 581;
+		rLoc = 624;
 		rType = 0;
 		vrLen = 370;
 		vrLoc = 339;
@@ -6934,7 +6977,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 555";
 		rLen = 0;
-		rLoc = 16097;
+		rLoc = 16422;
 		rType = 0;
 		vrLen = 1200;
 		vrLoc = 19999;
@@ -6944,7 +6987,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 332";
 		rLen = 0;
-		rLoc = 9868;
+		rLoc = 10193;
 		rType = 0;
 		vrLen = 713;
 		vrLoc = 10630;
@@ -6954,7 +6997,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 24";
 		rLen = 0;
-		rLoc = 581;
+		rLoc = 624;
 		rType = 0;
 		vrLen = 382;
 		vrLoc = 430;
@@ -6964,7 +7007,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 555";
 		rLen = 0;
-		rLoc = 16097;
+		rLoc = 16422;
 		rType = 0;
 		vrLen = 967;
 		vrLoc = 20232;
@@ -6974,7 +7017,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 494";
 		rLen = 0;
-		rLoc = 13993;
+		rLoc = 14318;
 		rType = 0;
 		vrLen = 1090;
 		vrLoc = 16384;
@@ -6984,7 +7027,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 24";
 		rLen = 0;
-		rLoc = 581;
+		rLoc = 624;
 		rType = 0;
 		vrLen = 333;
 		vrLoc = 498;
@@ -6994,7 +7037,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 555";
 		rLen = 0;
-		rLoc = 16097;
+		rLoc = 16422;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 18442;
@@ -7004,7 +7047,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 494";
 		rLen = 0;
-		rLoc = 13993;
+		rLoc = 14318;
 		rType = 0;
 		vrLen = 857;
 		vrLoc = 16276;
@@ -7014,7 +7057,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 24";
 		rLen = 0;
-		rLoc = 581;
+		rLoc = 624;
 		rType = 0;
 		vrLen = 378;
 		vrLoc = 523;
@@ -7024,7 +7067,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 509";
 		rLen = 0;
-		rLoc = 15998;
+		rLoc = 16323;
 		rType = 0;
 		vrLen = 1734;
 		vrLoc = 18154;
@@ -7034,7 +7077,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 333";
 		rLen = 30;
-		rLoc = 9876;
+		rLoc = 10201;
 		rType = 0;
 		vrLen = 861;
 		vrLoc = 10771;
@@ -7044,7 +7087,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 24";
 		rLen = 0;
-		rLoc = 581;
+		rLoc = 624;
 		rType = 0;
 		vrLen = 380;
 		vrLoc = 555;
@@ -7054,35 +7097,17 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 494";
 		rLen = 0;
-		rLoc = 13993;
+		rLoc = 14318;
 		rType = 0;
 		vrLen = 1794;
 		vrLoc = 15678;
-	};
-	3D03A5BA131D54EA00F6B225 /* FindViewController.m:412 */ = {
-		isa = PBXFileBreakpoint;
-		actions = (
-		);
-		breakpointStyle = 0;
-		continueAfterActions = 0;
-		countType = 0;
-		delayBeforeContinue = 0;
-		fileReference = 3DB0D9471315206D006FC601 /* FindViewController.m */;
-		functionName = "-fetchUniversitiesBySortControl";
-		hitCount = 2;
-		ignoreCount = 0;
-		lineNumber = 412;
-		location = GreenLeague;
-		modificationTime = 320693871.903256;
-		originalNumberOfMultipleMatches = 1;
-		state = 1;
 	};
 	3D03A5BE131D54F100F6B225 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 331";
 		rLen = 0;
-		rLoc = 9867;
+		rLoc = 10192;
 		rType = 0;
 		vrLen = 729;
 		vrLoc = 10568;
@@ -7092,7 +7117,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 24";
 		rLen = 0;
-		rLoc = 581;
+		rLoc = 624;
 		rType = 0;
 		vrLen = 401;
 		vrLoc = 619;
@@ -7102,7 +7127,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 491";
 		rLen = 0;
-		rLoc = 13863;
+		rLoc = 14188;
 		rType = 0;
 		vrLen = 1752;
 		vrLoc = 15243;
@@ -7112,7 +7137,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 489";
 		rLen = 0;
-		rLoc = 13863;
+		rLoc = 14188;
 		rType = 0;
 		vrLen = 1739;
 		vrLoc = 15368;
@@ -7122,7 +7147,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 331";
 		rLen = 0;
-		rLoc = 9867;
+		rLoc = 10192;
 		rType = 0;
 		vrLen = 729;
 		vrLoc = 10568;
@@ -7132,7 +7157,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 24";
 		rLen = 0;
-		rLoc = 581;
+		rLoc = 624;
 		rType = 0;
 		vrLen = 401;
 		vrLoc = 619;
@@ -7142,7 +7167,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 489";
 		rLen = 0;
-		rLoc = 13863;
+		rLoc = 14188;
 		rType = 0;
 		vrLen = 2185;
 		vrLoc = 4899;
@@ -7152,7 +7177,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 490";
 		rLen = 0;
-		rLoc = 13879;
+		rLoc = 14204;
 		rType = 0;
 		vrLen = 1015;
 		vrLoc = 16345;
@@ -7162,7 +7187,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 24";
 		rLen = 0;
-		rLoc = 581;
+		rLoc = 624;
 		rType = 0;
 		vrLen = 376;
 		vrLoc = 689;
@@ -7172,7 +7197,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 489";
 		rLen = 0;
-		rLoc = 13863;
+		rLoc = 14188;
 		rType = 0;
 		vrLen = 1530;
 		vrLoc = 6725;
@@ -7182,7 +7207,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 498";
 		rLen = 0;
-		rLoc = 14258;
+		rLoc = 14583;
 		rType = 0;
 		vrLen = 1117;
 		vrLoc = 16349;
@@ -7192,7 +7217,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 24";
 		rLen = 0;
-		rLoc = 581;
+		rLoc = 624;
 		rType = 0;
 		vrLen = 389;
 		vrLoc = 709;
@@ -7202,7 +7227,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 489";
 		rLen = 0;
-		rLoc = 13863;
+		rLoc = 14188;
 		rType = 0;
 		vrLen = 1636;
 		vrLoc = 6744;
@@ -7212,7 +7237,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 496";
 		rLen = 0;
-		rLoc = 14082;
+		rLoc = 14407;
 		rType = 0;
 		vrLen = 1145;
 		vrLoc = 16430;
@@ -7222,7 +7247,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 24";
 		rLen = 0;
-		rLoc = 581;
+		rLoc = 624;
 		rType = 0;
 		vrLen = 399;
 		vrLoc = 741;
@@ -7232,7 +7257,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 489";
 		rLen = 0;
-		rLoc = 13863;
+		rLoc = 14188;
 		rType = 0;
 		vrLen = 1710;
 		vrLoc = 6745;
@@ -7242,7 +7267,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 497";
 		rLen = 0;
-		rLoc = 14100;
+		rLoc = 14425;
 		rType = 0;
 		vrLen = 1121;
 		vrLoc = 16473;
@@ -7252,7 +7277,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 24";
 		rLen = 0;
-		rLoc = 581;
+		rLoc = 624;
 		rType = 0;
 		vrLen = 371;
 		vrLoc = 812;
@@ -7262,7 +7287,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 489";
 		rLen = 0;
-		rLoc = 13863;
+		rLoc = 14188;
 		rType = 0;
 		vrLen = 1745;
 		vrLoc = 6841;
@@ -7272,7 +7297,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 321";
 		rLen = 0;
-		rLoc = 9730;
+		rLoc = 10055;
 		rType = 0;
 		vrLen = 611;
 		vrLoc = 10145;
@@ -7292,7 +7317,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 24";
 		rLen = 0;
-		rLoc = 581;
+		rLoc = 624;
 		rType = 0;
 		vrLen = 371;
 		vrLoc = 812;
@@ -7302,12 +7327,12 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 488";
 		rLen = 0;
-		rLoc = 13863;
+		rLoc = 14188;
 		rType = 0;
 		vrLen = 1723;
 		vrLoc = 6844;
 	};
-	3D03A5DF131D5E2100F6B225 /* FindViewController.m:516 */ = {
+	3D03A5DF131D5E2100F6B225 /* FindViewController.m:527 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -7319,11 +7344,11 @@
 		functionName = "-fetchUniversitiesFromDBSortedByName";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 516;
+		lineNumber = 527;
 		location = GreenLeague;
-		modificationTime = 320693868.946186;
+		modificationTime = 320756841.720185;
 		originalNumberOfMultipleMatches = 1;
-		state = 1;
+		state = 2;
 	};
 	3D03A5E5131D5E2900F6B225 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -7340,7 +7365,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 155";
 		rLen = 18;
-		rLoc = 4679;
+		rLoc = 4788;
 		rType = 0;
 		vrLen = 1203;
 		vrLoc = 19584;
@@ -7350,7 +7375,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 155";
 		rLen = 18;
-		rLoc = 4679;
+		rLoc = 4788;
 		rType = 0;
 		vrLen = 1162;
 		vrLoc = 19688;
@@ -7370,7 +7395,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 41";
 		rLen = 0;
-		rLoc = 961;
+		rLoc = 1004;
 		rType = 0;
 		vrLen = 349;
 		vrLoc = 1200;
@@ -7380,7 +7405,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 41";
 		rLen = 0;
-		rLoc = 961;
+		rLoc = 1004;
 		rType = 0;
 		vrLen = 327;
 		vrLoc = 1223;
@@ -7390,7 +7415,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 488";
 		rLen = 0;
-		rLoc = 13863;
+		rLoc = 14188;
 		rType = 0;
 		vrLen = 1699;
 		vrLoc = 6872;
@@ -7400,7 +7425,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 598";
 		rLen = 0;
-		rLoc = 16097;
+		rLoc = 16422;
 		rType = 0;
 		vrLen = 1117;
 		vrLoc = 20082;
@@ -7410,7 +7435,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 41";
 		rLen = 0;
-		rLoc = 961;
+		rLoc = 1004;
 		rType = 0;
 		vrLen = 386;
 		vrLoc = 1247;
@@ -7420,7 +7445,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 488";
 		rLen = 0;
-		rLoc = 13863;
+		rLoc = 14188;
 		rType = 0;
 		vrLen = 1605;
 		vrLoc = 6967;
@@ -7430,7 +7455,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 596";
 		rLen = 0;
-		rLoc = 16097;
+		rLoc = 16422;
 		rType = 0;
 		vrLen = 1188;
 		vrLoc = 20011;
@@ -7440,7 +7465,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 41";
 		rLen = 0;
-		rLoc = 961;
+		rLoc = 1004;
 		rType = 0;
 		vrLen = 506;
 		vrLoc = 1253;
@@ -7450,7 +7475,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 488";
 		rLen = 0;
-		rLoc = 13863;
+		rLoc = 14188;
 		rType = 0;
 		vrLen = 1592;
 		vrLoc = 7034;
@@ -7460,7 +7485,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 603";
 		rLen = 0;
-		rLoc = 19015;
+		rLoc = 19340;
 		rType = 0;
 		vrLen = 1105;
 		vrLoc = 11543;
@@ -7470,7 +7495,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 41";
 		rLen = 0;
-		rLoc = 961;
+		rLoc = 1004;
 		rType = 0;
 		vrLen = 606;
 		vrLoc = 1290;
@@ -7480,7 +7505,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 187";
 		rLen = 0;
-		rLoc = 5530;
+		rLoc = 5397;
 		rType = 0;
 		vrLen = 2125;
 		vrLoc = 4848;
@@ -7490,7 +7515,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 552";
 		rLen = 0;
-		rLoc = 16097;
+		rLoc = 16422;
 		rType = 0;
 		vrLen = 876;
 		vrLoc = 3867;
@@ -7500,7 +7525,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 41";
 		rLen = 0;
-		rLoc = 961;
+		rLoc = 1004;
 		rType = 0;
 		vrLen = 672;
 		vrLoc = 1549;
@@ -7510,7 +7535,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 187";
 		rLen = 0;
-		rLoc = 5530;
+		rLoc = 5397;
 		rType = 0;
 		vrLen = 2006;
 		vrLoc = 5340;
@@ -7520,7 +7545,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 150";
 		rLen = 18;
-		rLoc = 4516;
+		rLoc = 4625;
 		rType = 0;
 		vrLen = 934;
 		vrLoc = 4270;
@@ -7530,7 +7555,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 41";
 		rLen = 0;
-		rLoc = 961;
+		rLoc = 1004;
 		rType = 0;
 		vrLen = 672;
 		vrLoc = 1549;
@@ -7540,12 +7565,12 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 187";
 		rLen = 0;
-		rLoc = 5530;
+		rLoc = 5397;
 		rType = 0;
 		vrLen = 2006;
 		vrLoc = 5340;
 	};
-	3D03A610131D627F00F6B225 /* FindViewController.m:207 */ = {
+	3D03A610131D627F00F6B225 /* FindViewController.m:201 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -7557,20 +7582,20 @@
 		functionName = "-sectionIndexTitlesForTableView:";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 207;
+		lineNumber = 201;
 		location = GreenLeague;
-		modificationTime = 320693868.777119;
+		modificationTime = 320756841.72364;
 		originalNumberOfMultipleMatches = 1;
-		state = 1;
+		state = 2;
 	};
 	3D03A611131D627F00F6B225 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		rLen = 1;
-		rLoc = 206;
+		rLoc = 200;
 		rType = 1;
 	};
-	3D03A612131D628300F6B225 /* FindViewController.m:196 */ = {
+	3D03A612131D628300F6B225 /* FindViewController.m:190 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -7580,15 +7605,15 @@
 		delayBeforeContinue = 0;
 		fileReference = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		functionName = "-tableView:titleForHeaderInSection:";
-		hitCount = 2;
+		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 196;
+		lineNumber = 190;
 		location = GreenLeague;
-		modificationTime = 320693869.225479;
+		modificationTime = 320756841.727321;
 		originalNumberOfMultipleMatches = 1;
-		state = 1;
+		state = 2;
 	};
-	3D03A614131D628C00F6B225 /* FindViewController.m:155 */ = {
+	3D03A614131D628C00F6B225 /* FindViewController.m:157 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -7598,15 +7623,15 @@
 		delayBeforeContinue = 0;
 		fileReference = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		functionName = "-tableView:numberOfRowsInSection:";
-		hitCount = 2;
+		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 155;
+		lineNumber = 157;
 		location = GreenLeague;
-		modificationTime = 320693869.568847;
+		modificationTime = 320756841.729638;
 		originalNumberOfMultipleMatches = 1;
-		state = 1;
+		state = 2;
 	};
-	3D03A616131D629100F6B225 /* FindViewController.m:141 */ = {
+	3D03A616131D629100F6B225 /* FindViewController.m:143 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -7616,20 +7641,20 @@
 		delayBeforeContinue = 0;
 		fileReference = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		functionName = "-numberOfSectionsInTableView:";
-		hitCount = 2;
+		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 141;
+		lineNumber = 143;
 		location = GreenLeague;
-		modificationTime = 320694078.224852;
+		modificationTime = 320756841.731809;
 		originalNumberOfMultipleMatches = 1;
-		state = 1;
+		state = 2;
 	};
 	3D03A61A131D629E00F6B225 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 220";
 		rLen = 21;
-		rLoc = 6630;
+		rLoc = 6389;
 		rType = 0;
 		vrLen = 893;
 		vrLoc = 6940;
@@ -7639,7 +7664,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 41";
 		rLen = 0;
-		rLoc = 961;
+		rLoc = 1004;
 		rType = 0;
 		vrLen = 724;
 		vrLoc = 1633;
@@ -7649,7 +7674,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 204";
 		rLen = 0;
-		rLoc = 6180;
+		rLoc = 5939;
 		rType = 0;
 		vrLen = 1661;
 		vrLoc = 4081;
@@ -7659,7 +7684,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 204";
 		rLen = 0;
-		rLoc = 6180;
+		rLoc = 5939;
 		rType = 0;
 		vrLen = 1784;
 		vrLoc = 4082;
@@ -7669,7 +7694,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 85";
 		rLen = 200;
-		rLoc = 2671;
+		rLoc = 2780;
 		rType = 0;
 		vrLen = 1539;
 		vrLoc = 1897;
@@ -7679,7 +7704,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 41";
 		rLen = 0;
-		rLoc = 961;
+		rLoc = 1004;
 		rType = 0;
 		vrLen = 714;
 		vrLoc = 1759;
@@ -7689,7 +7714,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 204";
 		rLen = 0;
-		rLoc = 6180;
+		rLoc = 5939;
 		rType = 0;
 		vrLen = 1781;
 		vrLoc = 6123;
@@ -7699,7 +7724,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 85";
 		rLen = 200;
-		rLoc = 2671;
+		rLoc = 2780;
 		rType = 0;
 		vrLen = 1539;
 		vrLoc = 1897;
@@ -7709,7 +7734,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 41";
 		rLen = 0;
-		rLoc = 961;
+		rLoc = 1004;
 		rType = 0;
 		vrLen = 714;
 		vrLoc = 1759;
@@ -7719,7 +7744,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 204";
 		rLen = 0;
-		rLoc = 6180;
+		rLoc = 5939;
 		rType = 0;
 		vrLen = 1825;
 		vrLoc = 4142;
@@ -7729,7 +7754,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 85";
 		rLen = 200;
-		rLoc = 2671;
+		rLoc = 2780;
 		rType = 0;
 		vrLen = 1539;
 		vrLoc = 1897;
@@ -7739,7 +7764,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 41";
 		rLen = 0;
-		rLoc = 961;
+		rLoc = 1004;
 		rType = 0;
 		vrLen = 714;
 		vrLoc = 1759;
@@ -7749,28 +7774,10 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 204";
 		rLen = 0;
-		rLoc = 6180;
+		rLoc = 5939;
 		rType = 0;
 		vrLen = 1825;
 		vrLoc = 4142;
-	};
-	3D03A62C131D672600F6B225 /* FindViewController.m:464 */ = {
-		isa = PBXFileBreakpoint;
-		actions = (
-		);
-		breakpointStyle = 0;
-		continueAfterActions = 0;
-		countType = 0;
-		delayBeforeContinue = 0;
-		fileReference = 3DB0D9471315206D006FC601 /* FindViewController.m */;
-		functionName = "-fetchUniversitiesFromDBSortedByRank";
-		hitCount = 1;
-		ignoreCount = 0;
-		lineNumber = 464;
-		location = GreenLeague;
-		modificationTime = 320694059.670766;
-		originalNumberOfMultipleMatches = 1;
-		state = 1;
 	};
 	3D03A630131D688900F6B225 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -7786,7 +7793,7 @@
 		isa = PBXTextBookmark;
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		rLen = 0;
-		rLoc = 462;
+		rLoc = 473;
 		rType = 1;
 	};
 	3D03A632131D688900F6B225 /* PBXTextBookmark */ = {
@@ -7794,7 +7801,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 539";
 		rLen = 0;
-		rLoc = 15998;
+		rLoc = 16323;
 		rType = 0;
 		vrLen = 1238;
 		vrLoc = 16572;
@@ -7804,7 +7811,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 41";
 		rLen = 0;
-		rLoc = 961;
+		rLoc = 1004;
 		rType = 0;
 		vrLen = 662;
 		vrLoc = 1880;
@@ -7814,7 +7821,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 204";
 		rLen = 0;
-		rLoc = 6180;
+		rLoc = 5939;
 		rType = 0;
 		vrLen = 1847;
 		vrLoc = 16596;
@@ -7824,7 +7831,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 545";
 		rLen = 2913;
-		rLoc = 16096;
+		rLoc = 16421;
 		rType = 0;
 		vrLen = 1794;
 		vrLoc = 18315;
@@ -7834,7 +7841,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 604";
 		rLen = 0;
-		rLoc = 18415;
+		rLoc = 18740;
 		rType = 0;
 		vrLen = 1172;
 		vrLoc = 19842;
@@ -7844,7 +7851,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 41";
 		rLen = 0;
-		rLoc = 961;
+		rLoc = 1004;
 		rType = 0;
 		vrLen = 662;
 		vrLoc = 1880;
@@ -7854,7 +7861,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 223";
 		rLen = 27;
-		rLoc = 6702;
+		rLoc = 6461;
 		rType = 0;
 		vrLen = 2236;
 		vrLoc = 11249;
@@ -7864,7 +7871,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 604";
 		rLen = 0;
-		rLoc = 18415;
+		rLoc = 18740;
 		rType = 0;
 		vrLen = 625;
 		vrLoc = 20574;
@@ -7874,7 +7881,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 41";
 		rLen = 0;
-		rLoc = 961;
+		rLoc = 1004;
 		rType = 0;
 		vrLen = 892;
 		vrLoc = 1896;
@@ -7884,7 +7891,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 223";
 		rLen = 27;
-		rLoc = 6702;
+		rLoc = 6461;
 		rType = 0;
 		vrLen = 2548;
 		vrLoc = 11254;
@@ -7894,7 +7901,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 530";
 		rLen = 0;
-		rLoc = 18415;
+		rLoc = 18740;
 		rType = 0;
 		vrLen = 1201;
 		vrLoc = 17453;
@@ -7904,7 +7911,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 41";
 		rLen = 0;
-		rLoc = 961;
+		rLoc = 1004;
 		rType = 0;
 		vrLen = 768;
 		vrLoc = 1894;
@@ -7914,10 +7921,17 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 459";
 		rLen = 0;
-		rLoc = 15875;
+		rLoc = 16200;
 		rType = 0;
 		vrLen = 2055;
 		vrLoc = 935;
+	};
+	3D03A64F131D6DC800F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		rLen = 1;
+		rLoc = 189;
+		rType = 1;
 	};
 	3D03A66C131D71C800F6B225 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -7934,7 +7948,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 465";
 		rLen = 0;
-		rLoc = 15996;
+		rLoc = 16321;
 		rType = 0;
 		vrLen = 1061;
 		vrLoc = 15428;
@@ -7944,7 +7958,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 528";
 		rLen = 0;
-		rLoc = 18336;
+		rLoc = 18661;
 		rType = 0;
 		vrLen = 1280;
 		vrLoc = 17636;
@@ -7996,7 +8010,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 522";
 		rLen = 0;
-		rLoc = 17949;
+		rLoc = 18274;
 		rType = 0;
 		vrLen = 1859;
 		vrLoc = 11948;
@@ -8016,7 +8030,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 287";
 		rLen = 0;
-		rLoc = 9132;
+		rLoc = 9457;
 		rType = 0;
 		vrLen = 714;
 		vrLoc = 9072;
@@ -8036,7 +8050,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 289";
 		rLen = 0;
-		rLoc = 9246;
+		rLoc = 9571;
 		rType = 0;
 		vrLen = 774;
 		vrLoc = 4081;
@@ -8046,7 +8060,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 291";
 		rLen = 0;
-		rLoc = 9407;
+		rLoc = 9732;
 		rType = 0;
 		vrLen = 629;
 		vrLoc = 9128;
@@ -8076,7 +8090,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 294";
 		rLen = 0;
-		rLoc = 9427;
+		rLoc = 9752;
 		rType = 0;
 		vrLen = 325;
 		vrLoc = 9406;
@@ -8118,7 +8132,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 291";
 		rLen = 0;
-		rLoc = 9407;
+		rLoc = 9732;
 		rType = 0;
 		vrLen = 665;
 		vrLoc = 9091;
@@ -8128,7 +8142,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 420";
 		rLen = 0;
-		rLoc = 14258;
+		rLoc = 14583;
 		rType = 0;
 		vrLen = 920;
 		vrLoc = 13594;
@@ -8138,7 +8152,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 294";
 		rLen = 0;
-		rLoc = 9427;
+		rLoc = 9752;
 		rType = 0;
 		vrLen = 325;
 		vrLoc = 9406;
@@ -8148,7 +8162,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 420";
 		rLen = 0;
-		rLoc = 14258;
+		rLoc = 14583;
 		rType = 0;
 		vrLen = 1034;
 		vrLoc = 13635;
@@ -8158,7 +8172,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 294";
 		rLen = 0;
-		rLoc = 9427;
+		rLoc = 9752;
 		rType = 0;
 		vrLen = 325;
 		vrLoc = 9406;
@@ -8168,7 +8182,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 421";
 		rLen = 0;
-		rLoc = 14256;
+		rLoc = 14581;
 		rType = 0;
 		vrLen = 1103;
 		vrLoc = 13638;
@@ -8178,7 +8192,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 294";
 		rLen = 0;
-		rLoc = 9427;
+		rLoc = 9752;
 		rType = 0;
 		vrLen = 325;
 		vrLoc = 9406;
@@ -8188,7 +8202,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 421";
 		rLen = 0;
-		rLoc = 14258;
+		rLoc = 14583;
 		rType = 0;
 		vrLen = 1102;
 		vrLoc = 13638;
@@ -8198,7 +8212,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 294";
 		rLen = 0;
-		rLoc = 9427;
+		rLoc = 9752;
 		rType = 0;
 		vrLen = 325;
 		vrLoc = 9406;
@@ -8208,7 +8222,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 421";
 		rLen = 0;
-		rLoc = 14256;
+		rLoc = 14581;
 		rType = 0;
 		vrLen = 1155;
 		vrLoc = 13719;
@@ -8218,24 +8232,697 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 294";
 		rLen = 0;
-		rLoc = 9427;
+		rLoc = 9752;
 		rType = 0;
 		vrLen = 325;
 		vrLoc = 9406;
 	};
+	3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1064, 520}}";
+			sepNavSelRange = "{699, 0}";
+			sepNavVisRange = "{352, 605}";
+		};
+	};
+	3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1064, 923}}";
+			sepNavSelRange = "{892, 0}";
+			sepNavVisRange = "{157, 1102}";
+		};
+	};
+	3D03A6B4131E55B800F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 421";
+		rLen = 0;
+		rLoc = 14581;
+		rType = 0;
+		vrLen = 1111;
+		vrLoc = 13596;
+	};
+	3D03A6B5131E55B800F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
+		name = "UniversityDetailViewController.h: 21";
+		rLen = 255;
+		rLoc = 701;
+		rType = 0;
+		vrLen = 704;
+		vrLoc = 0;
+	};
+	3D03A6B6131E55B800F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
+		name = "UniversityDetailViewController.m: 18";
+		rLen = 141;
+		rLoc = 428;
+		rType = 0;
+		vrLen = 1000;
+		vrLoc = 98;
+	};
+	3D03A6B7131E55B800F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
+		name = "UniversityDetailViewController.m: 18";
+		rLen = 0;
+		rLoc = 569;
+		rType = 0;
+		vrLen = 944;
+		vrLoc = 157;
+	};
+	3D03A6B8131E55B800F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 308";
+		rLen = 0;
+		rLoc = 10057;
+		rType = 0;
+		vrLen = 329;
+		vrLoc = 9428;
+	};
+	3D03A6B9131E55B800F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
+		name = "UniversityDetailViewController.m: 16";
+		rLen = 0;
+		rLoc = 426;
+		rType = 0;
+		vrLen = 681;
+		vrLoc = 157;
+	};
+	3D03A6BA131E55B800F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
+		name = "UniversityDetailViewController.h: 25";
+		rLen = 10;
+		rLoc = 1006;
+		rType = 0;
+		vrLen = 518;
+		vrLoc = 186;
+	};
+	3D03A6BB131E55B800F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
+		name = "UniversityDetailViewController.h: 27";
+		rLen = 141;
+		rLoc = 1019;
+		rType = 0;
+		vrLen = 599;
+		vrLoc = 250;
+	};
+	3D03A6BE131E55B800F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 265";
+		rLen = 0;
+		rLoc = 8293;
+		rType = 0;
+		vrLen = 1541;
+		vrLoc = 7884;
+	};
+	3D03A6BF131E55B800F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 265";
+		rLen = 0;
+		rLoc = 8646;
+		rType = 0;
+		vrLen = 1696;
+		vrLoc = 7771;
+	};
+	3D03A6C2131E55E600F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
+		name = "UniversityDetailViewController.m: 18";
+		rLen = 0;
+		rLoc = 569;
+		rType = 0;
+		vrLen = 1022;
+		vrLoc = 161;
+	};
+	3D03A6C3131E55E600F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
+		name = "UniversityDetailViewController.h: 27";
+		rLen = 141;
+		rLoc = 1019;
+		rType = 0;
+		vrLen = 599;
+		vrLoc = 250;
+	};
+	3D03A6C4131E55E600F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9461315206D006FC601 /* FindViewController.h */;
+		name = "FindViewController.h: 45";
+		rLen = 0;
+		rLoc = 1369;
+		rType = 0;
+		vrLen = 1421;
+		vrLoc = 0;
+	};
+	3D03A6C5131E55E600F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 273";
+		rLen = 64;
+		rLoc = 8781;
+		rType = 0;
+		vrLen = 1695;
+		vrLoc = 7770;
+	};
+	3D03A6C6131E55E600F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 40";
+		rLen = 0;
+		rLoc = 1070;
+		rType = 0;
+		vrLen = 1484;
+		vrLoc = 507;
+	};
+	3D03A6C9131E564E00F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
+		name = "UniversityDetailViewController.m: 24";
+		rLen = 0;
+		rLoc = 658;
+		rType = 0;
+		vrLen = 1065;
+		vrLoc = 3;
+	};
+	3D03A6CA131E564E00F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
+		name = "UniversityDetailViewController.h: 27";
+		rLen = 141;
+		rLoc = 1019;
+		rType = 0;
+		vrLen = 599;
+		vrLoc = 250;
+	};
+	3D03A6CB131E564E00F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 40";
+		rLen = 0;
+		rLoc = 1070;
+		rType = 0;
+		vrLen = 1484;
+		vrLoc = 507;
+	};
+	3D03A6CC131E570700F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
+		name = "UniversityDetailViewController.m: 24";
+		rLen = 0;
+		rLoc = 658;
+		rType = 0;
+		vrLen = 1065;
+		vrLoc = 3;
+	};
+	3D03A6CD131E570700F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
+		name = "UniversityDetailViewController.h: 27";
+		rLen = 141;
+		rLoc = 1019;
+		rType = 0;
+		vrLen = 599;
+		vrLoc = 250;
+	};
+	3D03A6CE131E570700F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 40";
+		rLen = 0;
+		rLoc = 1070;
+		rType = 0;
+		vrLen = 1484;
+		vrLoc = 507;
+	};
+	3D03A6CF131E572200F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
+		name = "UniversityDetailViewController.m: 23";
+		rLen = 0;
+		rLoc = 658;
+		rType = 0;
+		vrLen = 954;
+		vrLoc = 160;
+	};
+	3D03A6D0131E572200F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
+		name = "UniversityDetailViewController.h: 27";
+		rLen = 141;
+		rLoc = 1019;
+		rType = 0;
+		vrLen = 599;
+		vrLoc = 250;
+	};
+	3D03A6D1131E572200F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 40";
+		rLen = 0;
+		rLoc = 1070;
+		rType = 0;
+		vrLen = 1484;
+		vrLoc = 507;
+	};
+	3D03A6D4131E57FF00F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
+		name = "UniversityDetailViewController.m: 65";
+		rLen = 0;
+		rLoc = 2021;
+		rType = 0;
+		vrLen = 1005;
+		vrLoc = 616;
+	};
+	3D03A6D5131E57FF00F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
+		name = "UniversityDetailViewController.h: 26";
+		rLen = 175;
+		rLoc = 524;
+		rType = 0;
+		vrLen = 605;
+		vrLoc = 352;
+	};
+	3D03A6D6131E57FF00F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 40";
+		rLen = 0;
+		rLoc = 1070;
+		rType = 0;
+		vrLen = 1484;
+		vrLoc = 507;
+	};
+	3D03A6DB131E58F600F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
+		name = "UniversityDetailViewController.m: 23";
+		rLen = 0;
+		rLoc = 930;
+		rType = 0;
+		vrLen = 1126;
+		vrLoc = 253;
+	};
+	3D03A6DC131E58F600F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
+		name = "UniversityDetailViewController.h: 26";
+		rLen = 175;
+		rLoc = 524;
+		rType = 0;
+		vrLen = 605;
+		vrLoc = 352;
+	};
+	3D03A6DD131E58F600F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 40";
+		rLen = 0;
+		rLoc = 1070;
+		rType = 0;
+		vrLen = 1484;
+		vrLoc = 507;
+	};
+	3D03A6E0131E593800F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
+		name = "UniversityDetailViewController.m: 13";
+		rLen = 0;
+		rLoc = 280;
+		rType = 0;
+		vrLen = 1101;
+		vrLoc = 98;
+	};
+	3D03A6E1131E593800F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
+		name = "UniversityDetailViewController.h: 26";
+		rLen = 175;
+		rLoc = 524;
+		rType = 0;
+		vrLen = 605;
+		vrLoc = 352;
+	};
+	3D03A6E2131E593800F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 264";
+		rLen = 0;
+		rLoc = 8582;
+		rType = 0;
+		vrLen = 1642;
+		vrLoc = 7644;
+	};
+	3D03A6E4131E5A8B00F6B225 /* NSNumber+Helper.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1157, 673}}";
+			sepNavSelRange = "{194, 0}";
+			sepNavVisRange = "{0, 230}";
+		};
+	};
+	3D03A6E5131E5A8B00F6B225 /* NSNumber+Helper.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1157, 650}}";
+			sepNavSelRange = "{293, 0}";
+			sepNavVisRange = "{0, 788}";
+		};
+	};
+	3D03A6E9131E5BED00F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D308E0A1316552A00D37010 /* NSString+Helper.m */;
+		name = "NSString+Helper.m: 117";
+		rLen = 0;
+		rLoc = 4332;
+		rType = 0;
+		vrLen = 1056;
+		vrLoc = 3305;
+	};
+	3D03A6EA131E5BED00F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6E4131E5A8B00F6B225 /* NSNumber+Helper.h */;
+		name = "NSNumber+Helper.h: 13";
+		rLen = 28;
+		rLoc = 195;
+		rType = 0;
+		vrLen = 230;
+		vrLoc = 0;
+	};
+	3D03A6EB131E5BED00F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6E5131E5A8B00F6B225 /* NSNumber+Helper.m */;
+		name = "NSNumber+Helper.m: 14";
+		rLen = 0;
+		rLoc = 293;
+		rType = 0;
+		vrLen = 780;
+		vrLoc = 0;
+	};
+	3D03A6EC131E5BED00F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
+		name = "UniversityDetailViewController.m: 23";
+		rLen = 0;
+		rLoc = 931;
+		rType = 0;
+		vrLen = 1042;
+		vrLoc = 157;
+	};
+	3D03A6ED131E5BED00F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
+		name = "UniversityDetailViewController.m: 22";
+		rLen = 0;
+		rLoc = 893;
+		rType = 0;
+		vrLen = 1131;
+		vrLoc = 428;
+	};
+	3D03A6EE131E5BED00F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
+		name = "UniversityDetailViewController.h: 29";
+		rLen = 0;
+		rLoc = 699;
+		rType = 0;
+		vrLen = 605;
+		vrLoc = 352;
+	};
+	3D03A6F1131E5BED00F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D308E091316552A00D37010 /* NSString+Helper.h */;
+		name = "NSString+Helper.h: 19";
+		rLen = 0;
+		rLoc = 397;
+		rType = 0;
+		vrLen = 404;
+		vrLoc = 0;
+	};
+	3D03A6F2131E5BED00F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D308E0A1316552A00D37010 /* NSString+Helper.m */;
+		rLen = 0;
+		rLoc = 9223372036854775807;
+		rType = 0;
+	};
+	3D03A6F3131E5BED00F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D308E0A1316552A00D37010 /* NSString+Helper.m */;
+		name = "NSString+Helper.m: 11";
+		rLen = 15;
+		rLoc = 177;
+		rType = 0;
+		vrLen = 1275;
+		vrLoc = 0;
+	};
+	3D03A6F4131E5BED00F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 264";
+		rLen = 0;
+		rLoc = 8643;
+		rType = 0;
+		vrLen = 1681;
+		vrLoc = 7644;
+	};
+	3D03A6F6131E5C1900F6B225 /* NSNumber+Helper.m:16 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 3D03A6E5131E5A8B00F6B225 /* NSNumber+Helper.m */;
+		functionName = "-ordinalString";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 16;
+		location = GreenLeague;
+		modificationTime = 320756841.73369;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	3D03A6FA131E5C1C00F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
+		name = "UniversityDetailViewController.m: 11";
+		rLen = 0;
+		rLoc = 232;
+		rType = 0;
+		vrLen = 1157;
+		vrLoc = 56;
+	};
+	3D03A6FB131E5C1C00F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
+		name = "UniversityDetailViewController.h: 31";
+		rLen = 255;
+		rLoc = 701;
+		rType = 0;
+		vrLen = 1002;
+		vrLoc = 161;
+	};
+	3D03A6FC131E5C1C00F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
+		name = "UniversityDetailViewController.h: 29";
+		rLen = 0;
+		rLoc = 699;
+		rType = 0;
+		vrLen = 605;
+		vrLoc = 352;
+	};
+	3D03A6FF131E5C1C00F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6E4131E5A8B00F6B225 /* NSNumber+Helper.h */;
+		name = "NSNumber+Helper.h: 12";
+		rLen = 0;
+		rLoc = 194;
+		rType = 0;
+		vrLen = 230;
+		vrLoc = 0;
+	};
+	3D03A700131E5C1C00F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6E5131E5A8B00F6B225 /* NSNumber+Helper.m */;
+		name = "NSNumber+Helper.m: 14";
+		rLen = 0;
+		rLoc = 293;
+		rType = 0;
+		vrLen = 788;
+		vrLoc = 0;
+	};
+	3D03A701131E5C1C00F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6E5131E5A8B00F6B225 /* NSNumber+Helper.m */;
+		name = "NSNumber+Helper.m: 14";
+		rLen = 0;
+		rLoc = 293;
+		rType = 0;
+		vrLen = 788;
+		vrLoc = 0;
+	};
+	3D03A702131E5C1C00F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D308E0A1316552A00D37010 /* NSString+Helper.m */;
+		name = "NSString+Helper.m: 11";
+		rLen = 15;
+		rLoc = 177;
+		rType = 0;
+		vrLen = 1275;
+		vrLoc = 0;
+	};
+	3D03A703131E5C1C00F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 264";
+		rLen = 0;
+		rLoc = 8643;
+		rType = 0;
+		vrLen = 1681;
+		vrLoc = 7644;
+	};
+	3D03A706131E5C4600F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
+		name = "UniversityDetailViewController.h: 31";
+		rLen = 255;
+		rLoc = 701;
+		rType = 0;
+		vrLen = 1002;
+		vrLoc = 161;
+	};
+	3D03A707131E5C4600F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 190";
+		rLen = 24;
+		rLoc = 6109;
+		rType = 0;
+		vrLen = 884;
+		vrLoc = 5670;
+	};
+	3D03A708131E5C4600F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
+		name = "UniversityDetailViewController.h: 29";
+		rLen = 0;
+		rLoc = 699;
+		rType = 0;
+		vrLen = 605;
+		vrLoc = 352;
+	};
+	3D03A709131E5C4600F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 264";
+		rLen = 0;
+		rLoc = 8643;
+		rType = 0;
+		vrLen = 1649;
+		vrLoc = 3688;
+	};
+	3D03A70A131E5C4600F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6E5131E5A8B00F6B225 /* NSNumber+Helper.m */;
+		name = "NSNumber+Helper.m: 14";
+		rLen = 0;
+		rLoc = 293;
+		rType = 0;
+		vrLen = 788;
+		vrLoc = 0;
+	};
+	3D03A70B131E5C4600F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D308E0A1316552A00D37010 /* NSString+Helper.m */;
+		name = "NSString+Helper.m: 11";
+		rLen = 15;
+		rLoc = 177;
+		rType = 0;
+		vrLen = 1275;
+		vrLoc = 0;
+	};
+	3D03A714131E5CA700F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 190";
+		rLen = 24;
+		rLoc = 6109;
+		rType = 0;
+		vrLen = 1212;
+		vrLoc = 1253;
+	};
+	3D03A715131E5CA700F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
+		name = "UniversityDetailViewController.m: 11";
+		rLen = 0;
+		rLoc = 232;
+		rType = 0;
+		vrLen = 1073;
+		vrLoc = 56;
+	};
+	3D03A716131E5CA700F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
+		name = "UniversityDetailViewController.m: 22";
+		rLen = 0;
+		rLoc = 892;
+		rType = 0;
+		vrLen = 1102;
+		vrLoc = 157;
+	};
+	3D03A717131E5CA700F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */;
+		name = "UniversityDetailViewController.h: 29";
+		rLen = 0;
+		rLoc = 699;
+		rType = 0;
+		vrLen = 605;
+		vrLoc = 352;
+	};
+	3D03A718131E5CA700F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6E5131E5A8B00F6B225 /* NSNumber+Helper.m */;
+		name = "NSNumber+Helper.m: 14";
+		rLen = 0;
+		rLoc = 293;
+		rType = 0;
+		vrLen = 788;
+		vrLoc = 0;
+	};
+	3D03A719131E5CA700F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 264";
+		rLen = 0;
+		rLoc = 8643;
+		rType = 0;
+		vrLen = 1726;
+		vrLoc = 4070;
+	};
 	3D308E091316552A00D37010 /* NSString+Helper.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 286}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1157, 650}}";
 			sepNavSelRange = "{397, 0}";
-			sepNavVisRange = "{126, 278}";
+			sepNavVisRange = "{0, 404}";
 		};
 	};
 	3D308E0A1316552A00D37010 /* NSString+Helper.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 1768}}";
-			sepNavSelRange = "{716, 0}";
-			sepNavVisRange = "{604, 351}";
-			sepNavWindowFrame = "{{243, 163}, {1216, 786}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1157, 1612}}";
+			sepNavSelRange = "{177, 15}";
+			sepNavVisRange = "{0, 1349}";
+			sepNavWindowFrame = "{{153, 141}, {1216, 786}}";
 		};
 	};
 	3D308E16131658B800D37010 /* Rakefile */ = {
@@ -8488,17 +9175,16 @@
 	};
 	3DB0D9461315206D006FC601 /* FindViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 650}}";
-			sepNavSelRange = "{681, 0}";
-			sepNavVisRange = "{450, 1034}";
+			sepNavIntBoundsRect = "{{0, 0}, {1169, 696}}";
+			sepNavSelRange = "{1369, 0}";
+			sepNavVisRange = "{0, 1421}";
 		};
 	};
 	3DB0D9471315206D006FC601 /* FindViewController.m */ = {
 		uiCtxt = {
-			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{8559, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{8610, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{8660, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 21099}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 8255}}";
-			sepNavSelRange = "{9370, 0}";
-			sepNavVisRange = "{9349, 325}";
+			sepNavIntBoundsRect = "{{0, 0}, {1169, 8099}}";
+			sepNavSelRange = "{8643, 0}";
+			sepNavVisRange = "{4070, 1726}";
 			sepNavWindowFrame = "{{38, 46}, {1228, 832}}";
 		};
 	};
@@ -8553,9 +9239,10 @@
 	};
 	3DB0D9EE1317BD4F006FC601 /* University.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1169, 846}}";
-			sepNavSelRange = "{2532, 0}";
-			sepNavVisRange = "{0, 2543}";
+			sepNavIntBoundsRect = "{{0, 0}, {1157, 793}}";
+			sepNavSelRange = "{1455, 0}";
+			sepNavVisRange = "{171, 2371}";
+			sepNavWindowFrame = "{{130, 162}, {1216, 786}}";
 		};
 	};
 	3DB0D9EF1317BD4F006FC601 /* University.m */ = {
@@ -8651,7 +9338,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 10";
 		rLen = 1;
-		rLoc = 230;
+		rLoc = 273;
 		rType = 0;
 		vrLen = 322;
 		vrLoc = 685;
@@ -8666,30 +9353,12 @@
 		vrLen = 610;
 		vrLoc = 305;
 	};
-	3DB0DB6013182268006FC601 /* FindViewController.m:265 */ = {
-		isa = PBXFileBreakpoint;
-		actions = (
-		);
-		breakpointStyle = 0;
-		continueAfterActions = 0;
-		countType = 0;
-		delayBeforeContinue = 0;
-		fileReference = 3DB0D9471315206D006FC601 /* FindViewController.m */;
-		functionName = "-tableView:didSelectRowAtIndexPath:";
-		hitCount = 0;
-		ignoreCount = 0;
-		lineNumber = 265;
-		location = GreenLeague;
-		modificationTime = 320693869.088771;
-		originalNumberOfMultipleMatches = 1;
-		state = 0;
-	};
 	3DB0DB641318226E006FC601 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 181";
 		rLen = 0;
-		rLoc = 8329;
+		rLoc = 8088;
 		rType = 0;
 		vrLen = 875;
 		vrLoc = 4527;
@@ -8699,7 +9368,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 250";
 		rLen = 0;
-		rLoc = 10972;
+		rLoc = 11297;
 		rType = 0;
 		vrLen = 1707;
 		vrLoc = 6965;

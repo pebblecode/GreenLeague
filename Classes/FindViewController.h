@@ -43,7 +43,6 @@
 
 @property (nonatomic, retain) UISegmentedControl *sortControl;
 
-//- (void)fetchRankedUniversitiesSortBy:(NSString *)sortField;
 - (NSString *)applicationDocumentsDirectory;
 
 @end

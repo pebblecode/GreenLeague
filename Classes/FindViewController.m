@@ -7,6 +7,7 @@
 //
 
 #import "FindViewController.h"
+#import "UniversityDetailViewController.h"
 #import "University.h"
 #import "NSString+Helper.h"
 
@@ -36,6 +37,7 @@
 - (void)fetchUniversitiesBySortControl;
 - (void)fetchUniversitiesFromDBSortedByRank;
 - (void)fetchUniversitiesFromDBSortedByName;
+- (University *)universityFromIndexPath:(NSIndexPath *)indexPath;
 
 - (void)sortControlValueChange;
 
@@ -166,14 +168,7 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
     
-	University *uni;
-	if ([self isRankSort]) {		
-		NSArray *universitiesInAwardClass = [self.awardClasses objectAtIndex:indexPath.section];	
-		uni = [universitiesInAwardClass objectAtIndex:indexPath.row];
-	} else if ([self isNameSort]) {		
-		NSArray *alphabetSectionUniversities = [self.sortedUniversities objectAtIndex:indexPath.section];	
-		uni = [alphabetSectionUniversities objectAtIndex:indexPath.row];		
-	}
+	University *uni = [self universityFromIndexPath:indexPath];
 	
 	// Text: Rank. University
 	NSString *rankString = ([[uni rank2010] intValue] == 0) ? @"(none) " : [NSString stringWithFormat:@"%@. ", uni.rank2010];
@@ -183,7 +178,6 @@
 	
     return cell;
 }
-
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {	
 	NSString *headerTitle;
@@ -261,18 +255,35 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-    // ...
-    // Pass the selected object to the new view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
-    [detailViewController release];
-    */
+	
+	University *uni = [self universityFromIndexPath:indexPath];
+	
+    UniversityDetailViewController *uniDetailVC = [[UniversityDetailViewController alloc] initWithRank2010:[uni rank2010] rank2009:[uni rank2009] awardClass:[uni awardClass] totalScore:[uni totalScore]];
+
+    [self.navigationController pushViewController:uniDetailVC animated:YES];
+    //[uniDetailVC release]; // Crashes if released for some reason
 	
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
+	
 }
 
+#pragma mark -
+#pragma mark === Table view helpers ===
+#pragma mark 
+
+- (University *)universityFromIndexPath:(NSIndexPath *)indexPath {
+	University *uni;
+	
+	if ([self isRankSort]) {		
+		NSArray *universitiesInAwardClass = [self.awardClasses objectAtIndex:indexPath.section];	
+		uni = [universitiesInAwardClass objectAtIndex:indexPath.row];
+	} else if ([self isNameSort]) {		
+		NSArray *alphabetSectionUniversities = [self.sortedUniversities objectAtIndex:indexPath.section];	
+		uni = [alphabetSectionUniversities objectAtIndex:indexPath.row];		
+	}
+	
+	return uni;
+}
 
 #pragma mark -
 #pragma mark Memory management
