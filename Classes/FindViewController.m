@@ -257,8 +257,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	
 	University *uni = [self universityFromIndexPath:indexPath];
-	
-    UniversityDetailViewController *uniDetailVC = [[UniversityDetailViewController alloc] initWithRank2010:[uni rank2010] rank2009:[uni rank2009] awardClass:[uni awardClass] totalScore:[uni totalScore]];
+	NSString *awardClassTitle = [self.awardClassNames objectAtIndex:[self.awardClassDBNames indexOfObject:[uni awardClass]]]; // Find title using db name titles
+    UniversityDetailViewController *uniDetailVC = [[UniversityDetailViewController alloc] initWithRank2010:[uni rank2010] rank2009:[uni rank2009] awardClass:awardClassTitle totalScore:[uni totalScore]];
 
     [self.navigationController pushViewController:uniDetailVC animated:YES];
     //[uniDetailVC release]; // Crashes if released for some reason
