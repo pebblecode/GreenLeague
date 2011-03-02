@@ -60,7 +60,7 @@
 
 @implementation FindViewController
 
-@synthesize sortedUniversities, awardClasses, awardClassNames, awardClassIndexTitles, awardClassDBNames, collation, managedObjectContext, managedObjectModel, persistentStoreCoordinator, sortControl;
+@synthesize sortedUniversities, awardClasses, awardClassNames, awardClassIndexTitles, awardClassDBNames, awardClassColours, collation, managedObjectContext, managedObjectModel, persistentStoreCoordinator, sortControl;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -97,6 +97,15 @@
 	self.awardClassDBNames = [NSArray arrayWithObjects:@"1st", @"2:1", @"2:2", @"3rd", @"Fail", @"Did not sit exam", nil];
 	self.awardClassIndexTitles = [NSArray arrayWithObjects:@"1st", @"Upper 2nd", @"Lower 2nd", @"3rd", @"Failed", @"N/A", nil];	
 	self.awardClassNames = [NSArray arrayWithObjects:@"1st Class award", @"Upper 2nd Class award", @"Lower 2nd Class award", @"3rd Class award", @"Failed. No award", @"Did not sit exam. No award", nil];
+	// Colour code university based on award class
+	self.awardClassColours = [NSArray arrayWithObjects:
+								  [UIColor colorWithHexString:@"#DFFAD8"], // Light green
+								  [UIColor colorWithHexString:@"#F8F8CF"], // Light yellow
+								  [UIColor colorWithHexString:@"#FFEFDF"], // Light orange
+								  [UIColor colorWithHexString:@"#F0E0E0"], // Pink
+								  [UIColor colorWithHexString:@"#EEB8B8"], // Light Red
+								  [UIColor colorWithHexString:@"#DDDDDD"], // Light gray
+								  nil];	
 	
 	//universities = [[NSMutableArray alloc] initWithCapacity:0];
 	
@@ -199,17 +208,7 @@
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
 	
 	University *uni = [self universityFromIndexPath:indexPath];
-	
-	// Colour code university based on award class
-	NSArray *awardClassColours = [NSArray arrayWithObjects:
-								  [UIColor colorWithHexString:@"#DFFAD8"], // Light green
-								  [UIColor colorWithHexString:@"#F8F8CF"], // Light yellow
-								  [UIColor colorWithHexString:@"#FFEFDF"], // Light orange
-								  [UIColor colorWithHexString:@"#F0E0E0"], // Pink
-								  [UIColor colorWithHexString:@"#EEB8B8"], // Light Red
-								  [UIColor colorWithHexString:@"#DDDDDD"], // Light gray
-								  nil];
-	
+		
 	if ([[uni awardClass] isEqualToString:@"Did not sit exam"]) {
 		cell.textLabel.textColor = [UIColor colorWithHexString:@"#666666"]; // Black
 	} else {
@@ -218,7 +217,7 @@
 	
 	int awardClassColourIndex = [self.awardClassDBNames indexOfObject:[uni awardClass]];
 	if (awardClassColourIndex != NSNotFound) {
-		cell.backgroundColor = [awardClassColours objectAtIndex:awardClassColourIndex];	
+		cell.backgroundColor = [self.awardClassColours objectAtIndex:awardClassColourIndex];	
 	} else {
 		NSLog(@"Could not find colour for '%@' of award class '%@'", [uni name], [uni awardClass]);
 	}
@@ -363,6 +362,7 @@
 	[awardClassNames release];
 	[awardClassDBNames release];
 	[awardClassIndexTitles release];
+	[awardClassColours release];
 	[collation release];
 	
 	[managedObjectContext release];
