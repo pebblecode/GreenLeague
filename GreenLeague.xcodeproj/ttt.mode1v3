@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>3D03A95A131E8FA500F6B225</string>
+						<string>3D03A9BD131E973500F6B225</string>
 						<key>history</key>
 						<array>
 							<string>3D03A730131E5E4900F6B225</string>
@@ -257,7 +257,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>3D03A95B131E8FA500F6B225</string>
+						<string>3D03A9BE131E973500F6B225</string>
 						<key>history</key>
 						<array>
 							<string>3D03A6FF131E5C1C00F6B225</string>
@@ -414,7 +414,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3D03A958131E8FA500F6B225</string>
+										<string>3D03A9BB131E973500F6B225</string>
 										<key>history</key>
 										<array>
 											<string>3D039FDC131BA6FE00F6B225</string>
@@ -436,8 +436,8 @@
 											<string>3D03A88A131E742D00F6B225</string>
 											<string>3D03A90B131E8D0500F6B225</string>
 											<string>3D03A90C131E8D0500F6B225</string>
-											<string>3D03A915131E8D7900F6B225</string>
-											<string>3D03A92F131E8E3900F6B225</string>
+											<string>3D03A988131E938100F6B225</string>
+											<string>3D03A9AE131E968900F6B225</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -476,7 +476,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3D03A959131E8FA500F6B225</string>
+										<string>3D03A9BC131E973500F6B225</string>
 										<key>history</key>
 										<array>
 											<string>3DB0DA321317E0C5006FC601</string>
@@ -491,7 +491,7 @@
 											<string>3D03A88D131E742D00F6B225</string>
 											<string>3D03A88E131E742D00F6B225</string>
 											<string>3D03A88F131E742D00F6B225</string>
-											<string>3D03A890131E742D00F6B225</string>
+											<string>3D03A99B131E93FE00F6B225</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -691,13 +691,13 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>3D03A70C131E5C4600F6B225</string>
 		<string>3D03A674131D71C800F6B225</string>
 		<string>3D03A675131D71C800F6B225</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>3DB0D93113151196006FC601</string>
 		<string>3D03A6FD131E5C1C00F6B225</string>
 		<string>3D03A728131E5E0800F6B225</string>
+		<string>3D03A70C131E5C4600F6B225</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/ttt/Work/Dev/GreenLeague/GreenLeague.xcodeproj</string>
 	</array>
@@ -1293,8 +1293,6 @@
 							<string>185pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -1346,7 +1344,7 @@
 			<key>WindowToolGUID</key>
 			<string>3D03A70C131E5C4600F6B225</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

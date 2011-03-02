@@ -211,7 +211,13 @@
 								  nil];
 	
 	cell.textLabel.textColor = [UIColor colorWithHexString:@"#6F8A00"];
-	cell.backgroundColor = [awardClassColours objectAtIndex:[self.awardClassDBNames indexOfObject:[uni awardClass]]];	
+	int awardClassColourIndex = [self.awardClassDBNames indexOfObject:[uni awardClass]];
+	if (awardClassColourIndex != NSNotFound) {
+		cell.backgroundColor = [awardClassColours objectAtIndex:awardClassColourIndex];	
+	} else {
+		NSLog(@"Could not find colour for '%@' of award class '%@'", [uni name], [uni awardClass]);
+	}
+	
 	
 }
 
@@ -294,11 +300,17 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	
 	University *uni = [self universityFromIndexPath:indexPath];
-	NSString *awardClassTitle = [self.awardClassNames objectAtIndex:[self.awardClassDBNames indexOfObject:[uni awardClass]]]; // Find title using db name titles
-    UniversityDetailViewController *uniDetailVC = [[UniversityDetailViewController alloc] initWithName:[uni name] rank2010:[uni rank2010] rank2009:[uni rank2009] awardClass:awardClassTitle totalScore:[uni totalScore]];
-
-    [self.navigationController pushViewController:uniDetailVC animated:YES];
-    //[uniDetailVC release]; // Crashes if released for some reason
+	int awardClassIndex = [self.awardClassDBNames indexOfObject:[uni awardClass]];
+	if (awardClassIndex != NSNotFound) {
+		NSString *awardClassTitle = [self.awardClassNames objectAtIndex:awardClassIndex]; // Find title using db name titles
+		UniversityDetailViewController *uniDetailVC = [[UniversityDetailViewController alloc] initWithName:[uni name] rank2010:[uni rank2010] rank2009:[uni rank2009] awardClass:awardClassTitle totalScore:[uni totalScore]];
+		
+		[self.navigationController pushViewController:uniDetailVC animated:YES];
+		
+		//[uniDetailVC release]; // Crashes if released for some reason
+	} else {
+		NSLog(@"Could not find award class for '%@' of award class '%@'", [uni name], [uni awardClass]);
+	}
 	
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
 	
