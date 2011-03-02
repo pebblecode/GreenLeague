@@ -105,9 +105,7 @@
 								  [UIColor colorWithHexString:@"#F0E0E0"], // Pink
 								  [UIColor colorWithHexString:@"#EEB8B8"], // Light Red
 								  [UIColor colorWithHexString:@"#DDDDDD"], // Light gray
-								  nil];	
-	
-	//universities = [[NSMutableArray alloc] initWithCapacity:0];
+								  nil];
 	
 	// --------------------------------------------------
 	// To remove the db all the time (for debugging only)
