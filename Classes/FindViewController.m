@@ -62,7 +62,7 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 	if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {			
-		//self.title = @"Green League Universities";
+		self.title = @"Universities";
 		self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Find" image:[UIImage imageNamed:@"06-magnify.png"] tag:1];	
 	}
 	return self;
@@ -70,14 +70,36 @@
 
 // TODO: viewDidLoad gets called twice for some reason
 - (void)viewDidLoad {
-    [super viewDidLoad];
+    [super viewDidLoad];	
 	
 	universitySortIndex = kInvalidSortByControlIndex; // Set to invalid, so that results are fetched the first time
+	
+	
 	sortControl = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Rank", @"A-Z", nil]];
 	sortControl.frame = CGRectMake(76, 4, 150, 34);
 	sortControl.selectedSegmentIndex = kSortByRankControlIndex; // Select rank by default
 	[sortControl addTarget:self action:@selector(sortControlValueChange) forControlEvents:UIControlEventValueChanged];
-	[self.navigationController.navigationBar addSubview:sortControl];
+	//[self.navigationController.navigationBar addSubview:sortControl];
+		
+	// Add sort to toolbar
+//	UIBarButtonItem *sortBarButton = [[UIBarButtonItem alloc] initWithCustomView:sortControl];
+//	self.navigationController.toolbarItems = [NSArray arrayWithObjects:sortBarButton, nil];
+//	self.navigationController.toolbarHidden = NO;
+	
+//	universitySortIndex = kInvalidSortByControlIndex; // Set to invalid, so that results are fetched the first time
+//	sortControl = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects: @"Rank", @"A-Z", nil]];
+//	[sortControl addTarget:self action:@selector(sortControlValueChange) forControlEvents:UIControlEventValueChanged];
+//	sortControl.frame = CGRectMake(76, 4, 100, 30);
+//	sortControl.segmentedControlStyle = UISegmentedControlStyleBar;
+//	//sortControl.selectedSegmentIndex = kSortByRankControlIndex; // Select rank by default
+	
+	UIBarButtonItem *segmentBarItem = [[UIBarButtonItem alloc] initWithCustomView:sortControl];
+    //[sortControl release];
+    
+	self.navigationItem.rightBarButtonItem = segmentBarItem;	
+	[segmentBarItem release];
+	
+	
 	
 	self.awardClassDBNames = [NSArray arrayWithObjects:@"1st", @"2:1", @"2:2", @"3rd", @"Fail", @"Did not sit exam", nil];
 	self.awardClassIndexTitles = [NSArray arrayWithObjects:@"1st", @"Upper 2nd", @"Lower 2nd", @"3rd", @"Failed", @"N/A", nil];	

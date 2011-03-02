@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>3D03A73E131E5F6B00F6B225</string>
+						<string>3D03A801131E692600F6B225</string>
 						<key>history</key>
 						<array>
 							<string>3D03A6C4131E55E600F6B225</string>
@@ -257,7 +257,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>3D03A73F131E5F6B00F6B225</string>
+						<string>3D03A802131E692600F6B225</string>
 						<key>history</key>
 						<array>
 							<string>3D03A730131E5E4900F6B225</string>
@@ -298,7 +298,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>3D03A740131E5F6B00F6B225</string>
+						<string>3D03A803131E692600F6B225</string>
 						<key>history</key>
 						<array>
 							<string>3D03A6FF131E5C1C00F6B225</string>
@@ -353,8 +353,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -402,7 +400,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>5</integer>
+									<integer>4</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -427,7 +425,7 @@
 							<real>186</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>370 -764 1333 734 294 -900 1440 900 </string>
+						<string>357 -750 1333 734 294 -900 1440 900 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -438,12 +436,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>UniversityDetailViewController.m</string>
+								<string>FindViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -451,11 +451,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>UniversityDetailViewController.m</string>
+										<string>FindViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3D03A73C131E5F6B00F6B225</string>
+										<string>3D03A7FF131E692600F6B225</string>
 										<key>history</key>
 										<array>
 											<string>3D039FDC131BA6FE00F6B225</string>
@@ -468,15 +468,15 @@
 											<string>3D03A4E7131D3EEE00F6B225</string>
 											<string>3D03A58A131D51D500F6B225</string>
 											<string>3D03A630131D688900F6B225</string>
-											<string>3D03A68B131D770200F6B225</string>
 											<string>3D03A68C131D770200F6B225</string>
 											<string>3D03A68D131D770200F6B225</string>
 											<string>3D03A6E9131E5BED00F6B225</string>
 											<string>3D03A6EA131E5BED00F6B225</string>
 											<string>3D03A6EB131E5BED00F6B225</string>
 											<string>3D03A706131E5C4600F6B225</string>
-											<string>3D03A714131E5CA700F6B225</string>
-											<string>3D03A715131E5CA700F6B225</string>
+											<string>3D03A74D131E618700F6B225</string>
+											<string>3D03A7B3131E669500F6B225</string>
+											<string>3D03A7CE131E66DC00F6B225</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -490,7 +490,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1125, 436}}</string>
 								<key>RubberWindowFrame</key>
-								<string>370 -764 1333 734 294 -900 1440 900 </string>
+								<string>357 -750 1333 734 294 -900 1440 900 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -503,7 +503,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>UniversityDetailViewController.h</string>
+								<string>FindViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -511,11 +511,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>UniversityDetailViewController.h</string>
+										<string>FindViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3D03A73D131E5F6B00F6B225</string>
+										<string>3D03A800131E692600F6B225</string>
 										<key>history</key>
 										<array>
 											<string>3DB0DA321317E0C5006FC601</string>
@@ -527,10 +527,10 @@
 											<string>3D03A66F131D71C800F6B225</string>
 											<string>3D03A670131D71C800F6B225</string>
 											<string>3D03A686131D73D400F6B225</string>
-											<string>3D03A687131D73D400F6B225</string>
-											<string>3D03A6B8131E55B800F6B225</string>
 											<string>3D03A6B9131E55B800F6B225</string>
-											<string>3D03A6BA131E55B800F6B225</string>
+											<string>3D03A7B6131E669500F6B225</string>
+											<string>3D03A7DC131E677000F6B225</string>
+											<string>3D03A6B8131E55B800F6B225</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -544,7 +544,7 @@
 								<key>Frame</key>
 								<string>{{0, 441}, {1125, 247}}</string>
 								<key>RubberWindowFrame</key>
-								<string>370 -764 1333 734 294 -900 1440 900 </string>
+								<string>357 -750 1333 734 294 -900 1440 900 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -564,7 +564,7 @@
 								<key>Frame</key>
 								<string>{{0, 693}, {1125, 0}}</string>
 								<key>RubberWindowFrame</key>
-								<string>370 -764 1333 734 294 -900 1440 900 </string>
+								<string>357 -750 1333 734 294 -900 1440 900 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -736,13 +736,13 @@
 		<string>3DB0D93113151196006FC601</string>
 		<string>3D03A70C131E5C4600F6B225</string>
 		<string>3D03A6FD131E5C1C00F6B225</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>3D03A728131E5E0800F6B225</string>
-		<string>/Users/ttt/Work/Dev/GreenLeague/GreenLeague.xcodeproj</string>
 		<string>3D03A6BC131E55B800F6B225</string>
+		<string>1C78EAAD065D492600B07095</string>
+		<string>/Users/ttt/Work/Dev/GreenLeague/GreenLeague.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>370 -764 1333 734 294 -900 1440 900 </string>
+	<string>357 -750 1333 734 294 -900 1440 900 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -1090,7 +1090,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1213, 442}}</string>
 								<key>RubberWindowFrame</key>
-								<string>277 56 1213 483 0 0 1920 1058 </string>
+								<string>367 73 1213 483 0 0 1920 1058 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXDebugCLIModule</string>
@@ -1119,7 +1119,7 @@
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.consoleV3</string>
 			<key>WindowString</key>
-			<string>277 56 1213 483 0 0 1920 1058 </string>
+			<string>367 73 1213 483 0 0 1920 1058 </string>
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
