@@ -27,6 +27,10 @@
 #define kDBFieldScore "score"
 #define kDBFieldAwardClass "awardClass"
 
+// Sort control
+#define kSortControlWidth 90.0
+#define kSortControlHeight 30.0
+
 // Private methods
 @interface FindViewController()
 
@@ -76,8 +80,9 @@
 	
 	
 	sortControl = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Rank", @"A-Z", nil]];
-	sortControl.frame = CGRectMake(76, 4, 150, 34);
+	sortControl.frame = CGRectMake(0, 0, kSortControlWidth, kSortControlHeight);
 	sortControl.selectedSegmentIndex = kSortByRankControlIndex; // Select rank by default
+	sortControl.segmentedControlStyle = UISegmentedControlStyleBar;
 	[sortControl addTarget:self action:@selector(sortControlValueChange) forControlEvents:UIControlEventValueChanged];
 	//[self.navigationController.navigationBar addSubview:sortControl];
 		
@@ -94,7 +99,6 @@
 //	//sortControl.selectedSegmentIndex = kSortByRankControlIndex; // Select rank by default
 	
 	UIBarButtonItem *segmentBarItem = [[UIBarButtonItem alloc] initWithCustomView:sortControl];
-    //[sortControl release];
     
 	self.navigationItem.rightBarButtonItem = segmentBarItem;	
 	[segmentBarItem release];
