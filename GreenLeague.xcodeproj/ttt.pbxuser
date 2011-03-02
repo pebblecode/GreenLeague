@@ -16,7 +16,7 @@
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 3DB0D92413151192006FC601 /* GreenLeague */;
-		activeSDKPreference = iphonesimulator4.2;
+		activeSDKPreference = iphoneos4.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* GreenLeague */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* GreenLeague */,
@@ -1422,6 +1422,15 @@
 			3D03AA5B131EA4FA00F6B225 /* PBXTextBookmark */ = 3D03AA5B131EA4FA00F6B225 /* PBXTextBookmark */;
 			3D03AA5C131EA4FA00F6B225 /* PBXTextBookmark */ = 3D03AA5C131EA4FA00F6B225 /* PBXTextBookmark */;
 			3D03AA5D131EA4FA00F6B225 /* PBXTextBookmark */ = 3D03AA5D131EA4FA00F6B225 /* PBXTextBookmark */;
+			3D03AA62131EA5F200F6B225 /* PBXTextBookmark */ = 3D03AA62131EA5F200F6B225 /* PBXTextBookmark */;
+			3D03AA63131EA5F200F6B225 /* PlistBookmark */ = 3D03AA63131EA5F200F6B225 /* PlistBookmark */;
+			3D03AA64131EA5F200F6B225 /* PBXTextBookmark */ = 3D03AA64131EA5F200F6B225 /* PBXTextBookmark */;
+			3D03AA65131EA5F200F6B225 /* PBXTextBookmark */ = 3D03AA65131EA5F200F6B225 /* PBXTextBookmark */;
+			3D03AA66131EA5F200F6B225 /* PBXTextBookmark */ = 3D03AA66131EA5F200F6B225 /* PBXTextBookmark */;
+			3D03AA67131EA5F200F6B225 /* PBXTextBookmark */ = 3D03AA67131EA5F200F6B225 /* PBXTextBookmark */;
+			3D03AA68131EA5F200F6B225 /* PBXTextBookmark */ = 3D03AA68131EA5F200F6B225 /* PBXTextBookmark */;
+			3D03AA69131EA5F200F6B225 /* PBXTextBookmark */ = 3D03AA69131EA5F200F6B225 /* PBXTextBookmark */;
+			3D03AA6A131EA5F200F6B225 /* PBXTextBookmark */ = 3D03AA6A131EA5F200F6B225 /* PBXTextBookmark */;
 			3DB0D95713152233006FC601 = 3DB0D95713152233006FC601 /* PlistBookmark */;
 			3DB0D97713152CD8006FC601 = 3DB0D97713152CD8006FC601 /* PBXTextBookmark */;
 			3DB0D97813152CD8006FC601 = 3DB0D97813152CD8006FC601 /* PBXTextBookmark */;
@@ -14398,6 +14407,97 @@
 		vrLen = 788;
 		vrLoc = 0;
 	};
+	3D03AA62131EA5F200F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 313";
+		rLen = 0;
+		rLoc = 10691;
+		rType = 0;
+		vrLen = 1577;
+		vrLoc = 10134;
+	};
+	3D03AA63131EA5F200F6B225 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* GreenLeague-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/ttt/Work/Dev/GreenLeague/GreenLeague-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	3D03AA64131EA5F200F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
+		name = "UniversityDetailViewController.m: 33";
+		rLen = 0;
+		rLoc = 868;
+		rType = 0;
+		vrLen = 668;
+		vrLoc = 0;
+	};
+	3D03AA65131EA5F200F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9461315206D006FC601 /* FindViewController.h */;
+		name = "FindViewController.h: 36";
+		rLen = 0;
+		rLoc = 790;
+		rType = 0;
+		vrLen = 473;
+		vrLoc = 496;
+	};
+	3D03AA66131EA5F200F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
+		name = "UniversityDetailViewController.m: 35";
+		rLen = 0;
+		rLoc = 870;
+		rType = 0;
+		vrLen = 372;
+		vrLoc = 343;
+	};
+	3D03AA67131EA5F200F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
+		name = "UniversityDetailViewController.m: 35";
+		rLen = 0;
+		rLoc = 870;
+		rType = 0;
+		vrLen = 372;
+		vrLoc = 343;
+	};
+	3D03AA68131EA5F200F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
+		name = "UniversityDetailViewController.m: 24";
+		rLen = 0;
+		rLoc = 658;
+		rType = 0;
+		vrLen = 1571;
+		vrLoc = 0;
+	};
+	3D03AA69131EA5F200F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9EF1317BD4F006FC601 /* University.m */;
+		name = "University.m: 62";
+		rLen = 62;
+		rLoc = 1475;
+		rType = 0;
+		vrLen = 2652;
+		vrLoc = 1263;
+	};
+	3D03AA6A131EA5F200F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6E5131E5A8B00F6B225 /* NSNumber+Helper.m */;
+		name = "NSNumber+Helper.m: 14";
+		rLen = 0;
+		rLoc = 293;
+		rType = 0;
+		vrLen = 788;
+		vrLoc = 0;
+	};
 	3D308E091316552A00D37010 /* NSString+Helper.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1157, 650}}";
@@ -14663,16 +14763,16 @@
 	};
 	3DB0D9461315206D006FC601 /* FindViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 780}}";
-			sepNavSelRange = "{419, 0}";
-			sepNavVisRange = "{452, 339}";
+			sepNavIntBoundsRect = "{{0, 0}, {1064, 715}}";
+			sepNavSelRange = "{790, 0}";
+			sepNavVisRange = "{496, 473}";
 		};
 	};
 	3DB0D9471315206D006FC601 /* FindViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1064, 9295}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1064, 9334}}";
 			sepNavSelRange = "{10691, 0}";
-			sepNavVisRange = "{9993, 1713}";
+			sepNavVisRange = "{10134, 1577}";
 			sepNavWindowFrame = "{{336, 54}, {1228, 832}}";
 		};
 	};

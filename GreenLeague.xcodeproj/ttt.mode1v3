@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>3D03AA5B131EA4FA00F6B225</string>
+						<string>3D03AA68131EA5F200F6B225</string>
 						<key>history</key>
 						<array>
 							<string>3D03AA59131EA4FA00F6B225</string>
@@ -257,7 +257,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>3D03AA5C131EA4FA00F6B225</string>
+						<string>3D03AA69131EA5F200F6B225</string>
 						<key>history</key>
 						<array>
 							<string>3D03A730131E5E4900F6B225</string>
@@ -298,7 +298,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>3D03AA5D131EA4FA00F6B225</string>
+						<string>3D03AA6A131EA5F200F6B225</string>
 						<key>history</key>
 						<array>
 							<string>3D03A6FF131E5C1C00F6B225</string>
@@ -353,8 +353,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -408,7 +406,7 @@
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {186, 675}}</string>
+							<string>{{0, 135}, {186, 675}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -438,12 +436,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>FindViewController.m</string>
+								<string>UniversityDetailViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -451,11 +451,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>FindViewController.m</string>
+										<string>UniversityDetailViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3D03AA55131EA4FA00F6B225</string>
+										<string>3D03AA64131EA5F200F6B225</string>
 										<key>history</key>
 										<array>
 											<string>3D039FDC131BA6FE00F6B225</string>
@@ -468,17 +468,17 @@
 											<string>3D03A4E7131D3EEE00F6B225</string>
 											<string>3D03A58A131D51D500F6B225</string>
 											<string>3D03A630131D688900F6B225</string>
-											<string>3D03A68C131D770200F6B225</string>
 											<string>3D03A68D131D770200F6B225</string>
 											<string>3D03A6EA131E5BED00F6B225</string>
 											<string>3D03A6EB131E5BED00F6B225</string>
 											<string>3D03A84E131E6CD800F6B225</string>
 											<string>3D03A84F131E6CD800F6B225</string>
-											<string>3D03A88A131E742D00F6B225</string>
 											<string>3D03A90C131E8D0500F6B225</string>
 											<string>3D03A988131E938100F6B225</string>
 											<string>3D03A9C1131E9AE200F6B225</string>
-											<string>3D03A9C2131E9AE200F6B225</string>
+											<string>3D03AA62131EA5F200F6B225</string>
+											<string>3D03AA63131EA5F200F6B225</string>
+											<string>3D03A88A131E742D00F6B225</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -505,7 +505,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>FindViewController.h</string>
+								<string>UniversityDetailViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -513,11 +513,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>FindViewController.h</string>
+										<string>UniversityDetailViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3D03AA56131EA4FA00F6B225</string>
+										<string>3D03AA67131EA5F200F6B225</string>
 										<key>history</key>
 										<array>
 											<string>3DB0DA321317E0C5006FC601</string>
@@ -530,9 +530,9 @@
 											<string>3D03A670131D71C800F6B225</string>
 											<string>3D03A686131D73D400F6B225</string>
 											<string>3D03A88D131E742D00F6B225</string>
-											<string>3D03A88E131E742D00F6B225</string>
 											<string>3D03AA2E131EA21D00F6B225</string>
-											<string>3D03A88F131E742D00F6B225</string>
+											<string>3D03AA65131EA5F200F6B225</string>
+											<string>3D03AA66131EA5F200F6B225</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
