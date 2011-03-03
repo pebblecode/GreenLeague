@@ -284,8 +284,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	
 	University *uni = [self universityFromIndexPath:indexPath];
-	int awardClassIndex = [[AwardClassHelper awardClassDBNames] indexOfObject:[uni awardClass]];
-	if (awardClassIndex != NSNotFound) {
+
+	if ([uni isValidAwardClass]) {
 		UniversityDetailViewController *uniDetailVC = [[UniversityDetailViewController alloc] initWithUniversity:uni];
 		[self.navigationController pushViewController:uniDetailVC animated:YES];
 		

@@ -55,6 +55,7 @@
 + (void)addUniversityFromRowArray:(NSArray *)rowArray toDBWithManagedContext:(NSManagedObjectContext *)managedObjectContext;
 
 // Convenience methods
+- (Boolean)isValidAwardClass;
 - (NSString *)awardClassName;
 - (UIColor *)awardClassColour;
 

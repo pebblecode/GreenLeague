@@ -73,6 +73,10 @@
 #pragma mark === Convenience methods ===
 #pragma mark
 
+- (Boolean)isValidAwardClass {
+	return ([self awardClassIndex] != NSNotFound);
+}
+
 // Returns nil, if the award class is invalid
 - (NSString *)awardClassName {
 	NSString *awardClassNameStr = nil;
