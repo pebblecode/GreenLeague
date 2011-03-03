@@ -85,7 +85,8 @@ University *university;
 #pragma mark
 
 - (IBAction)detailButtonPressed {
-	
+	UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"TODO" message:@"Not implemented yet" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease];
+	[alert show];	
 }
 
 @end

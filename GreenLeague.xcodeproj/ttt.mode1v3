@@ -197,89 +197,7 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
-				<string>3DF05243131FE5DD00AC430F</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>University.m</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>3DF05244131FE5DD00AC430F</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>University.m</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>3DF05263131FEE4400AC430F</string>
-						<key>history</key>
-						<array>
-							<string>3DF05261131FEE4400AC430F</string>
-							<string>3DF05262131FEE4400AC430F</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {1228, 735}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>94 102 1228 776 0 0 1440 878 </string>
-			</dict>
-		</dict>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
-				<string>3D03AB09131EB94100F6B225</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>FindViewController.m</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>3D03AB0A131EB94100F6B225</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>FindViewController.m</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>3DF05264131FEE4400AC430F</string>
-						<key>history</key>
-						<array>
-							<string>3DF051DF131FD72800AC430F</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {1228, 735}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>180 98 1228 776 0 0 1440 878 </string>
-			</dict>
-		</dict>
-	</array>
+	<array/>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>-1</integer>
@@ -359,7 +277,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>12</integer>
+									<integer>15</integer>
 									<integer>10</integer>
 									<integer>1</integer>
 									<integer>0</integer>
@@ -403,7 +321,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>FindViewController.m</string>
+								<string>UniversityDetailViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -411,11 +329,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>FindViewController.m</string>
+										<string>UniversityDetailViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3DF0525F131FEE4400AC430F</string>
+										<string>3DF0527B131FF05A00AC430F</string>
 										<key>history</key>
 										<array>
 											<string>3D039FDC131BA6FE00F6B225</string>
@@ -435,13 +353,13 @@
 											<string>3D03AA63131EA5F200F6B225</string>
 											<string>3D03AA83131EA8D400F6B225</string>
 											<string>3D03AAFF131EB94100F6B225</string>
-											<string>3D03AB00131EB94100F6B225</string>
 											<string>3DF051D6131FD72800AC430F</string>
 											<string>3DF05203131FDEBE00AC430F</string>
 											<string>3DF0523A131FE5DD00AC430F</string>
 											<string>3DF0523B131FE5DD00AC430F</string>
-											<string>3DF0523C131FE5DD00AC430F</string>
-											<string>3DF0524A131FED3700AC430F</string>
+											<string>3DF0526E131FF00200AC430F</string>
+											<string>3DF0526F131FF00200AC430F</string>
+											<string>3DF05275131FF02400AC430F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -480,7 +398,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3DF05260131FEE4400AC430F</string>
+										<string>3DF0527C131FF05A00AC430F</string>
 										<key>history</key>
 										<array>
 											<string>3DB0DA321317E0C5006FC601</string>
@@ -705,10 +623,8 @@
 		<string>3DF05201131FDEBA00AC430F</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>3DB0D93113151196006FC601</string>
-		<string>3D03AB09131EB94100F6B225</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/ttt/Work/Dev/GreenLeague/GreenLeague.xcodeproj</string>
-		<string>3DF05243131FE5DD00AC430F</string>
 	</array>
 	<key>WindowString</key>
 	<string>79 167 1325 689 0 0 1440 878 </string>
