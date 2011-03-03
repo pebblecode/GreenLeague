@@ -54,7 +54,9 @@
 + (NSString *)entityName;
 + (void)addUniversityFromRowArray:(NSArray *)rowArray toDBWithManagedContext:(NSManagedObjectContext *)managedObjectContext;
 
+// Convenience methods
 - (NSString *)awardClassName;
+- (UIColor *)awardClassColour;
 
 @end
 

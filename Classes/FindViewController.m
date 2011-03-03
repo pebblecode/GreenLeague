@@ -199,14 +199,10 @@
 		cell.textLabel.textColor = [UIColor colorWithHexString:@"#6F8A00"]; // Green
 	}
 	
-	int awardClassColourIndex = [[AwardClassHelper awardClassDBNames] indexOfObject:[uni awardClass]];
-	if (awardClassColourIndex != NSNotFound) {
-		cell.backgroundColor = [[AwardClassHelper awardClassColours] objectAtIndex:awardClassColourIndex];	
-	} else {
-		NSLog(@"Could not find colour for '%@' of award class '%@'", [uni name], [uni awardClass]);
-	}
-	
-	
+	UIColor *awardClassColour = [uni awardClassColour];
+	if (awardClassColour) {
+		cell.backgroundColor = awardClassColour;	
+	}	
 }
 
 
@@ -293,7 +289,6 @@
 		UniversityDetailViewController *uniDetailVC = [[UniversityDetailViewController alloc] initWithUniversity:uni];
 		[self.navigationController pushViewController:uniDetailVC animated:YES];
 		
-		// Set colours of rank and award class [AwardClassHelper awardClassNames]- need to wait for view to be loaded before this can be set.
 		if ([[uni awardClass] isEqualToString:@"Did not sit exam"]) {
 			uniDetailVC.awardClassLabel.textColor = [UIColor colorWithHexString:@"#666666"]; // Black
 			
@@ -301,13 +296,11 @@
 			uniDetailVC.awardClassLabel.textColor = [UIColor colorWithHexString:@"#6F8A00"]; // Green
 		}
 		
-		int awardClassColourIndex = [[AwardClassHelper awardClassDBNames] indexOfObject:[uni awardClass]];
-		if (awardClassColourIndex != NSNotFound) {
-			uniDetailVC.awardClassLabel.backgroundColor = [[AwardClassHelper awardClassColours] objectAtIndex:awardClassColourIndex];
-			uniDetailVC.rank2010Label.backgroundColor = [[AwardClassHelper awardClassColours] objectAtIndex:awardClassColourIndex];
-		} else {
-			NSLog(@"tableView:didSelectRowAtIndexPath: Could not find colour for '%@' of award class '%@'", [uni name], [uni awardClass]);
-		}		
+		UIColor *awardClassColour = [uni awardClassColour];
+		if (awardClassColour) {
+			uniDetailVC.awardClassLabel.backgroundColor = awardClassColour;
+			uniDetailVC.rank2010Label.backgroundColor = awardClassColour;
+		}
 		
 		//[uniDetailVC release]; // Crashes if released for some reason
 	} else {

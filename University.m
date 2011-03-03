@@ -73,20 +73,38 @@
 #pragma mark === Convenience methods ===
 #pragma mark
 
-// Get the award class index for award class arrays based on the database award class value
-- (int)awardClassIndex {
-	return [[AwardClassHelper awardClassDBNames] indexOfObject:self.awardClass];
-}
-
+// Returns nil, if the award class is invalid
 - (NSString *)awardClassName {
-	NSString *awardClassNameStr;
-	
-	if ([self awardClassIndex] != NSNotFound) {	
-		awardClassNameStr = [[AwardClassHelper awardClassNames] objectAtIndex:[self awardClassIndex]];
+	NSString *awardClassNameStr = nil;
+	int awardClassNameIndex = [self awardClassIndex];
+	if (awardClassNameIndex != NSNotFound) {	
+		awardClassNameStr = [[AwardClassHelper awardClassNames] objectAtIndex:awardClassNameIndex];
 	} else {
 		NSLog(@"awardClassName: Could not find award class name for '%@' of award class '%@'", self.name, self.awardClass);
 	}
 	return awardClassNameStr;
+}
+
+// Returns nil, if the award class is invalid
+- (UIColor *)awardClassColour {
+	UIColor *colour = nil;
+	int awardClassColourIndex = [self awardClassIndex];
+	
+	if (awardClassColourIndex != NSNotFound) {
+		colour = [[AwardClassHelper awardClassColours] objectAtIndex:awardClassColourIndex];
+	} else {
+		NSLog(@"awardClassColour: Could not find colour for '%@' of award class '%@'", self.name, self.awardClass);
+	}
+	return colour;
+}
+
+#pragma mark -
+#pragma mark === Helper methods ===
+#pragma mark
+
+// Get the award class index for award class arrays based on the database award class value
+- (int)awardClassIndex {
+	return [[AwardClassHelper awardClassDBNames] indexOfObject:self.awardClass];
 }
 
 #pragma mark -
