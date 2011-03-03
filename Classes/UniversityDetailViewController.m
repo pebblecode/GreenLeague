@@ -92,8 +92,10 @@ University *university;
 #pragma mark
 
 - (IBAction)detailButtonPressed {
-	UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"TODO" message:@"Not implemented yet" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease];
-	[alert show];	
+	UniversityMoreDetailViewController *uniMoreDetailVC = [[UniversityMoreDetailViewController alloc] initWithUniversity:self.university];
+	[self.navigationController pushViewController:uniMoreDetailVC animated:YES];
+	
+	[uniMoreDetailVC release];
 }
 
 @end
