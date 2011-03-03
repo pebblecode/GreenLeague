@@ -38,6 +38,7 @@
 		3DB0D9941315422C006FC601 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB0D9931315422C006FC601 /* CoreData.framework */; };
 		3DB0D9F01317BD4F006FC601 /* University.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB0D9EF1317BD4F006FC601 /* University.m */; };
 		3DF051C2131FA15700AC430F /* AwardClassHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF051C1131FA15700AC430F /* AwardClassHelper.m */; };
+		3DF052E5132010C300AC430F /* pnpgl2011_64px_square_avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DF052E4132010C300AC430F /* pnpgl2011_64px_square_avatar.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		3DB0D9EF1317BD4F006FC601 /* University.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = University.m; sourceTree = "<group>"; };
 		3DF051C0131FA15700AC430F /* AwardClassHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwardClassHelper.h; sourceTree = "<group>"; };
 		3DF051C1131FA15700AC430F /* AwardClassHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwardClassHelper.m; sourceTree = "<group>"; };
+		3DF052E4132010C300AC430F /* pnpgl2011_64px_square_avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pnpgl2011_64px_square_avatar.png; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* GreenLeague-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GreenLeague-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -211,6 +213,7 @@
 		3DB0D95213152221006FC601 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3DF052E4132010C300AC430F /* pnpgl2011_64px_square_avatar.png */,
 				3D308E701316BCAA00D37010 /* 12-eye.png */,
 				3D308E711316BCAA00D37010 /* 12-eye@2x.png */,
 				3D308E6C1316BC9F00D37010 /* 189-plant.png */,
@@ -292,6 +295,7 @@
 				3D308E731316BCAA00D37010 /* 12-eye@2x.png in Resources */,
 				3D03A6AC131E457900F6B225 /* UniversityDetailViewController.xib in Resources */,
 				3D03AA8E131EAA9400F6B225 /* UniversityMoreDetailViewController.xib in Resources */,
+				3DF052E5132010C300AC430F /* pnpgl2011_64px_square_avatar.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

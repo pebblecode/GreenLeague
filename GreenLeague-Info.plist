@@ -9,7 +9,7 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
-	<string></string>
+	<string>pnpgl2011_64px_square_avatar.png</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.pebbleit.greenleague</string>
 	<key>CFBundleInfoDictionaryVersion</key>
