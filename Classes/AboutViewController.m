@@ -51,5 +51,15 @@
     [super dealloc];
 }
 
+#pragma mark -
+#pragma mark === Button methods ===
+#pragma mark 
+
+- (IBAction)greenLeagueButtonPress {
+	NSString *urlAddress = @"http://peopleandplanet.org/greenleague";
+	NSURL *url = [NSURL URLWithString:urlAddress];		
+	[[UIApplication sharedApplication] openURL:url];		
+}
+
 
 @end
