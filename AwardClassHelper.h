@@ -20,4 +20,7 @@
 + (NSArray *)awardClassNames;
 + (NSArray *)awardClassColours;
 
++ (UIColor *)backgroundColourForAwardClassDBName:(NSString *)awardClass;
++ (UIColor *)textColourForAwardClassDBName:(NSString *)awardClass;
+
 @end

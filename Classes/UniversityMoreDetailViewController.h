@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "University.h"
 
 @interface UniversityMoreDetailViewController : UITableViewController {
-	NSArray *dataSourceArray;
+	//NSArray *dataSourceArray;
 }
 
-@property (nonatomic, retain) NSArray *dataSourceArray;
+//@property (nonatomic, retain) NSArray *dataSourceArray;
+
+- (id)initWithUniversity:(University *)uni;
 
 @end

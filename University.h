@@ -57,7 +57,9 @@
 // Convenience methods
 - (Boolean)isValidAwardClass;
 - (NSString *)awardClassName;
-- (UIColor *)awardClassColour;
+
+- (UIColor *)awardClassBackgroundColour;
+- (UIColor *)awardClassTextColour;
 
 @end
 

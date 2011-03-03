@@ -10,7 +10,6 @@
 #import "UniversityDetailViewController.h"
 #import "University.h"
 #import "NSString+Helper.h"
-#import "UIColor+Helper.h"
 #import "AwardClassHelper.h"
 
 // Data source file minus the file extension
@@ -193,16 +192,8 @@
 	
 	University *uni = [self universityFromIndexPath:indexPath];
 		
-	if ([[uni awardClass] isEqualToString:@"Did not sit exam"]) {
-		cell.textLabel.textColor = [UIColor colorWithHexString:@"#666666"]; // Black
-	} else {
-		cell.textLabel.textColor = [UIColor colorWithHexString:@"#6F8A00"]; // Green
-	}
-	
-	UIColor *awardClassColour = [uni awardClassColour];
-	if (awardClassColour) {
-		cell.backgroundColor = awardClassColour;	
-	}	
+	cell.textLabel.textColor = [uni awardClassTextColour];
+	cell.backgroundColor = [uni awardClassBackgroundColour];
 }
 
 
@@ -288,20 +279,7 @@
 	if ([uni isValidAwardClass]) {
 		UniversityDetailViewController *uniDetailVC = [[UniversityDetailViewController alloc] initWithUniversity:uni];
 		[self.navigationController pushViewController:uniDetailVC animated:YES];
-		
-		if ([[uni awardClass] isEqualToString:@"Did not sit exam"]) {
-			uniDetailVC.awardClassLabel.textColor = [UIColor colorWithHexString:@"#666666"]; // Black
-			
-		} else {
-			uniDetailVC.awardClassLabel.textColor = [UIColor colorWithHexString:@"#6F8A00"]; // Green
-		}
-		
-		UIColor *awardClassColour = [uni awardClassColour];
-		if (awardClassColour) {
-			uniDetailVC.awardClassLabel.backgroundColor = awardClassColour;
-			uniDetailVC.rank2010Label.backgroundColor = awardClassColour;
-		}
-		
+				
 		//[uniDetailVC release]; // Crashes if released for some reason
 	} else {
 		NSLog(@"Could not find award class for '%@' of award class '%@'", [uni name], [uni awardClass]);

@@ -197,7 +197,89 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array/>
+	<array>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
+				<string>3DF0529B1320082F00AC430F</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>FindViewController.m</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>3DF0529C1320082F00AC430F</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>FindViewController.m</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>3DF052A81320084800AC430F</string>
+						<key>history</key>
+						<array>
+							<string>3DF0529D1320082F00AC430F</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {1228, 735}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>180 102 1228 776 0 0 1440 878 </string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
+				<string>3DF0529F1320082F00AC430F</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>UniversityDetailViewController.m</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>3DF052A01320082F00AC430F</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>UniversityDetailViewController.m</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>3DF052A91320084800AC430F</string>
+						<key>history</key>
+						<array>
+							<string>3DF052A11320082F00AC430F</string>
+							<string>3DF052A21320082F00AC430F</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {1216, 689}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>199 148 1216 730 0 0 1440 878 </string>
+			</dict>
+		</dict>
+	</array>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>-1</integer>
@@ -277,14 +359,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>15</integer>
-									<integer>10</integer>
-									<integer>1</integer>
+									<integer>26</integer>
+									<integer>23</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 121}, {258, 630}}</string>
+							<string>{{0, 190}, {258, 630}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -321,7 +402,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>UniversityDetailViewController.m</string>
+								<string>AwardClassHelper.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -329,11 +410,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>UniversityDetailViewController.m</string>
+										<string>AwardClassHelper.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3DF0527B131FF05A00AC430F</string>
+										<string>3DF052A61320084800AC430F</string>
 										<key>history</key>
 										<array>
 											<string>3D039FDC131BA6FE00F6B225</string>
@@ -351,15 +432,16 @@
 											<string>3D03A988131E938100F6B225</string>
 											<string>3D03A9C1131E9AE200F6B225</string>
 											<string>3D03AA63131EA5F200F6B225</string>
-											<string>3D03AA83131EA8D400F6B225</string>
-											<string>3D03AAFF131EB94100F6B225</string>
 											<string>3DF051D6131FD72800AC430F</string>
 											<string>3DF05203131FDEBE00AC430F</string>
-											<string>3DF0523A131FE5DD00AC430F</string>
-											<string>3DF0523B131FE5DD00AC430F</string>
-											<string>3DF0526E131FF00200AC430F</string>
-											<string>3DF0526F131FF00200AC430F</string>
-											<string>3DF05275131FF02400AC430F</string>
+											<string>3DF0528E1320082F00AC430F</string>
+											<string>3DF0528F1320082F00AC430F</string>
+											<string>3DF052901320082F00AC430F</string>
+											<string>3DF052921320082F00AC430F</string>
+											<string>3DF052931320082F00AC430F</string>
+											<string>3DF052941320082F00AC430F</string>
+											<string>3DF052A41320084800AC430F</string>
+											<string>3DF052A51320084800AC430F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -386,7 +468,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>FindViewController.m</string>
+								<string>University.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -394,17 +476,15 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>FindViewController.m</string>
+										<string>University.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3DF0527C131FF05A00AC430F</string>
+										<string>3DF052A71320084800AC430F</string>
 										<key>history</key>
 										<array>
 											<string>3DB0DA321317E0C5006FC601</string>
 											<string>3DB0DA331317E0C5006FC601</string>
-											<string>3DB0DA351317E0C5006FC601</string>
-											<string>3D039FF6131BA8A700F6B225</string>
 											<string>3D03A286131C109F00F6B225</string>
 											<string>3D03A2CA131C1C6600F6B225</string>
 											<string>3D03A66F131D71C800F6B225</string>
@@ -418,7 +498,9 @@
 											<string>3DF051F3131FDC7400AC430F</string>
 											<string>3DF05205131FDEBE00AC430F</string>
 											<string>3DF0523F131FE5DD00AC430F</string>
-											<string>3DF05240131FE5DD00AC430F</string>
+											<string>3DF052971320082F00AC430F</string>
+											<string>3DF052981320082F00AC430F</string>
+											<string>3DF052991320082F00AC430F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -624,6 +706,8 @@
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>3DB0D93113151196006FC601</string>
 		<string>1C78EAAD065D492600B07095</string>
+		<string>3DF0529F1320082F00AC430F</string>
+		<string>3DF0529B1320082F00AC430F</string>
 		<string>/Users/ttt/Work/Dev/GreenLeague/GreenLeague.xcodeproj</string>
 	</array>
 	<key>WindowString</key>

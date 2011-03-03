@@ -79,4 +79,31 @@
 	
 	return colours;
 }
+
+// Find colour from awardClassColours. If not found, then use white.
++ (UIColor *)backgroundColourForAwardClassDBName:(NSString *)awardClassDBName {
+	UIColor *colour = nil;
+	
+	int awardClassColourIndex = [[AwardClassHelper awardClassDBNames] indexOfObject:awardClassDBName];	
+	if (awardClassColourIndex != NSNotFound) {
+		colour = [[AwardClassHelper awardClassColours] objectAtIndex:awardClassColourIndex];
+	} else {
+		colour = [UIColor whiteColor]; // Default colour is white
+	}
+	return colour;
+}
+
+// Green for everything except for "Did not sit exam", which is black
++ (UIColor *)textColourForAwardClassDBName:(NSString *)awardClassDBName {
+	UIColor *colour;
+	if ([awardClassDBName isEqualToString:@"Did not sit exam"]) {
+		colour = [UIColor colorWithHexString:@"#666666"]; // Black
+	} else {
+		colour = [UIColor colorWithHexString:@"#6F8A00"]; // Green
+	}
+	
+	return colour;
+}
+ 
+
 @end

@@ -44,6 +44,13 @@ University *university;
 	self.rank2009Label.text = ([[self.university rank2009] intValue] == 0) ? @"(none)" : [NSString stringWithFormat:@"%@", [[self.university rank2009] ordinalString]];
 	self.awardClassLabel.text = [self.university awardClassName];
 	self.totalScoreLabel.text = [NSString stringWithFormat:@"%.1f", [[self.university totalScore] floatValue]];
+
+	// Change colours to award class colours
+	self.awardClassLabel.textColor = [self.university awardClassTextColour];
+	
+	self.awardClassLabel.backgroundColor = [self.university awardClassBackgroundColour];
+	self.rank2010Label.backgroundColor = [self.university awardClassBackgroundColour];
+	
 }
 
 

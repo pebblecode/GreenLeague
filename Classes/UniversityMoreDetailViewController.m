@@ -16,18 +16,34 @@
 #define kNumberRowsForPolicy 7
 #define kNumberRowsForPerformance 4
 
+@interface UniversityMoreDetailViewController()
+
+University *university;
+
+@property (nonatomic, retain) University *university;
+
+@end
+
+
+
 @implementation UniversityMoreDetailViewController
 
-@synthesize dataSourceArray;
+@synthesize university;
 
 #pragma mark -
 #pragma mark View lifecycle
 
 
+- (id)initWithUniversity:(University *)uni {
+    self = [super initWithNibName:nil bundle:nil]; // Load default nib
+    if (self) {
+		university = uni;		
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-	//self.dataSourceArray;
 }
 
 

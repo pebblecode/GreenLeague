@@ -89,17 +89,12 @@
 	return awardClassNameStr;
 }
 
-// Returns nil, if the award class is invalid
-- (UIColor *)awardClassColour {
-	UIColor *colour = nil;
-	int awardClassColourIndex = [self awardClassIndex];
-	
-	if (awardClassColourIndex != NSNotFound) {
-		colour = [[AwardClassHelper awardClassColours] objectAtIndex:awardClassColourIndex];
-	} else {
-		NSLog(@"awardClassColour: Could not find colour for '%@' of award class '%@'", self.name, self.awardClass);
-	}
-	return colour;
+- (UIColor *)awardClassBackgroundColour {	
+	return [AwardClassHelper backgroundColourForAwardClassDBName:self.awardClass];
+}
+
+- (UIColor *)awardClassTextColour {
+	return [AwardClassHelper textColourForAwardClassDBName:self.awardClass];	
 }
 
 #pragma mark -
