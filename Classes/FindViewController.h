@@ -14,10 +14,6 @@
 	NSMutableArray *sortedUniversities;
 	
 	NSMutableArray *awardClasses;
-	NSArray *awardClassIndexTitles;
-	NSArray *awardClassDBNames;
-	NSArray *awardClassNames;	
-	NSArray *awardClassColours;
 	
 	UILocalizedIndexedCollation *collation;
 	
@@ -35,10 +31,6 @@
 @property (nonatomic, retain) NSMutableArray *sortedUniversities;
 
 @property (nonatomic, retain) NSMutableArray *awardClasses;
-@property (nonatomic, retain) NSArray *awardClassNames;
-@property (nonatomic, retain) NSArray *awardClassIndexTitles;
-@property (nonatomic, retain) NSArray *awardClassDBNames;
-@property (nonatomic, retain) NSArray *awardClassColours;
 
 @property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;

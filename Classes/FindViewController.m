@@ -11,6 +11,7 @@
 #import "University.h"
 #import "NSString+Helper.h"
 #import "UIColor+Helper.h"
+#import "AwardClassHelper.h"
 
 // Data source file minus the file extension
 #define kDataSourceFile "gl2010"
@@ -60,7 +61,7 @@
 
 @implementation FindViewController
 
-@synthesize sortedUniversities, awardClasses, awardClassNames, awardClassIndexTitles, awardClassDBNames, awardClassColours, collation, managedObjectContext, managedObjectModel, persistentStoreCoordinator, sortControl;
+@synthesize sortedUniversities, awardClasses, collation, managedObjectContext, managedObjectModel, persistentStoreCoordinator, sortControl;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -91,21 +92,6 @@
 	UIBarButtonItem *segmentBarItem = [[UIBarButtonItem alloc] initWithCustomView:sortControl];    
 	self.navigationItem.rightBarButtonItem = segmentBarItem;	
 	[segmentBarItem release];
-	
-	
-	
-	self.awardClassDBNames = [NSArray arrayWithObjects:@"1st", @"2:1", @"2:2", @"3rd", @"Fail", @"Did not sit exam", nil];
-	self.awardClassIndexTitles = [NSArray arrayWithObjects:@"1st", @"Upper 2nd", @"Lower 2nd", @"3rd", @"Failed", @"N/A", nil];	
-	self.awardClassNames = [NSArray arrayWithObjects:@"1st Class award", @"Upper 2nd Class award", @"Lower 2nd Class award", @"3rd Class award", @"Failed. No award", @"Did not sit exam. No award", nil];
-	// Colour code university based on award class
-	self.awardClassColours = [NSArray arrayWithObjects:
-								  [UIColor colorWithHexString:@"#DFFAD8"], // Light green
-								  [UIColor colorWithHexString:@"#F8F8CF"], // Light yellow
-								  [UIColor colorWithHexString:@"#FFEFDF"], // Light orange
-								  [UIColor colorWithHexString:@"#F0E0E0"], // Pink
-								  [UIColor colorWithHexString:@"#EEB8B8"], // Light Red
-								  [UIColor colorWithHexString:@"#DDDDDD"], // Light gray
-								  nil];
 	
 	// --------------------------------------------------
 	// To remove the db all the time (for debugging only)
@@ -213,9 +199,9 @@
 		cell.textLabel.textColor = [UIColor colorWithHexString:@"#6F8A00"]; // Green
 	}
 	
-	int awardClassColourIndex = [self.awardClassDBNames indexOfObject:[uni awardClass]];
+	int awardClassColourIndex = [[AwardClassHelper awardClassDBNames] indexOfObject:[uni awardClass]];
 	if (awardClassColourIndex != NSNotFound) {
-		cell.backgroundColor = [self.awardClassColours objectAtIndex:awardClassColourIndex];	
+		cell.backgroundColor = [[AwardClassHelper awardClassColours] objectAtIndex:awardClassColourIndex];	
 	} else {
 		NSLog(@"Could not find colour for '%@' of award class '%@'", [uni name], [uni awardClass]);
 	}
@@ -228,7 +214,7 @@
 	NSString *headerTitle;
 	
 	if ([self isRankSort]) {
-		headerTitle = [self.awardClassNames objectAtIndex:section];
+		headerTitle = [[AwardClassHelper awardClassNames] objectAtIndex:section];
 	} else if ([self isNameSort]) {
 		headerTitle = [[collation sectionTitles] objectAtIndex:section];
 	}
@@ -238,7 +224,7 @@
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
 	NSArray *indexTitles;
 	if ([self isRankSort]) {
-		indexTitles = self.awardClassIndexTitles;
+		indexTitles = [AwardClassHelper awardClassIndexTitles];
 	} else if ([self isNameSort]) {
 		indexTitles = [collation sectionIndexTitles];
 	}
@@ -302,12 +288,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	
 	University *uni = [self universityFromIndexPath:indexPath];
-	int awardClassIndex = [self.awardClassDBNames indexOfObject:[uni awardClass]];
+	int awardClassIndex = [[AwardClassHelper awardClassDBNames] indexOfObject:[uni awardClass]];
 	if (awardClassIndex != NSNotFound) {
 		UniversityDetailViewController *uniDetailVC = [[UniversityDetailViewController alloc] initWithUniversity:uni];
 		[self.navigationController pushViewController:uniDetailVC animated:YES];
 		
-		// Set colours of rank and award class - need to wait for view to be loaded before this can be set.
+		// Set colours of rank and award class [AwardClassHelper awardClassNames]- need to wait for view to be loaded before this can be set.
 		if ([[uni awardClass] isEqualToString:@"Did not sit exam"]) {
 			uniDetailVC.awardClassLabel.textColor = [UIColor colorWithHexString:@"#666666"]; // Black
 			
@@ -315,10 +301,10 @@
 			uniDetailVC.awardClassLabel.textColor = [UIColor colorWithHexString:@"#6F8A00"]; // Green
 		}
 		
-		int awardClassColourIndex = [self.awardClassDBNames indexOfObject:[uni awardClass]];
+		int awardClassColourIndex = [[AwardClassHelper awardClassDBNames] indexOfObject:[uni awardClass]];
 		if (awardClassColourIndex != NSNotFound) {
-			uniDetailVC.awardClassLabel.backgroundColor = [self.awardClassColours objectAtIndex:awardClassColourIndex];
-			uniDetailVC.rank2010Label.backgroundColor = [self.awardClassColours objectAtIndex:awardClassColourIndex];
+			uniDetailVC.awardClassLabel.backgroundColor = [[AwardClassHelper awardClassColours] objectAtIndex:awardClassColourIndex];
+			uniDetailVC.rank2010Label.backgroundColor = [[AwardClassHelper awardClassColours] objectAtIndex:awardClassColourIndex];
 		} else {
 			NSLog(@"tableView:didSelectRowAtIndexPath: Could not find colour for '%@' of award class '%@'", [uni name], [uni awardClass]);
 		}		
@@ -371,10 +357,6 @@
 	[sortedUniversities release];
 	
 	[awardClasses release];
-	[awardClassNames release];
-	[awardClassDBNames release];
-	[awardClassIndexTitles release];
-	[awardClassColours release];
 	[collation release];
 	
 	[managedObjectContext release];
@@ -505,7 +487,7 @@
 	if ([self.awardClasses count] <= 0) {
 		NSEntityDescription *entity = [NSEntityDescription entityForName:[University entityName] inManagedObjectContext:[self managedObjectContext]]; 	
 		
-		for (NSString *awardName in self.awardClassDBNames) {
+		for (NSString *awardName in [AwardClassHelper awardClassDBNames]) {
 			// Setup the fetch request
 			NSFetchRequest *request = [[NSFetchRequest alloc] init];
 			[request setEntity:entity]; 
