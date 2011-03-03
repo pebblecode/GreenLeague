@@ -9,12 +9,13 @@
 #import "UniversityDetailViewController.h"
 #import "UniversityMoreDetailViewController.h"
 #import "NSNumber+Helper.h"
+#import "University.h"
 
 @interface UniversityDetailViewController()
 
 University *university;
 
-@property (nonatomic, retain) NSString *university;
+@property (nonatomic, retain) University *university;
 
 @end
 
