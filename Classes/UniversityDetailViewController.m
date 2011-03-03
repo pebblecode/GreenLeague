@@ -9,6 +9,7 @@
 #import "UniversityDetailViewController.h"
 #import "UniversityMoreDetailViewController.h"
 #import "NSNumber+Helper.h"
+#import "AwardClassHelper.h"
 #import "University.h"
 
 @interface UniversityDetailViewController()
@@ -41,7 +42,7 @@ University *university;
 	self.nameLabel.text = [self.university name];
 	self.rank2010Label.text = ([[self.university rank2010] intValue] == 0) ? @"(none)" : [NSString stringWithFormat:@"%@", [[self.university rank2010] ordinalString]];
 	self.rank2009Label.text = ([[self.university rank2009] intValue] == 0) ? @"(none)" : [NSString stringWithFormat:@"%@", [[self.university rank2009] ordinalString]];
-	self.awardClassLabel.text = [self.university awardClass];
+	self.awardClassLabel.text = [self.university awardClassName];
 	self.totalScoreLabel.text = [NSString stringWithFormat:@"%.1f", [[self.university totalScore] floatValue]];
 }
 

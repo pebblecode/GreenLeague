@@ -7,6 +7,7 @@
 //
 
 #import "University.h"
+#import "AwardClassHelper.h"
 #import "NSString+Helper.h"
 
 #define kUniversityEntityName "University"
@@ -17,6 +18,15 @@
 #define kDataFieldIndexTotalScore 2
 #define kDataFieldIndexAwardClass 3
 #define kDataFieldIndexRank2009 5
+
+
+// Private methods
+@interface University()
+
+- (int)awardClassIndex;
+
+@end
+
 
 @implementation University 
 
@@ -58,6 +68,26 @@
 @dynamic performance10_1Data;
 @dynamic performance8_3Score;
 
+
+#pragma mark -
+#pragma mark === Convenience methods ===
+#pragma mark
+
+// Get the award class index for award class arrays based on the database award class value
+- (int)awardClassIndex {
+	return [[AwardClassHelper awardClassDBNames] indexOfObject:self.awardClass];
+}
+
+- (NSString *)awardClassName {
+	NSString *awardClassNameStr;
+	
+	if ([self awardClassIndex] != NSNotFound) {	
+		awardClassNameStr = [[AwardClassHelper awardClassNames] objectAtIndex:[self awardClassIndex]];
+	} else {
+		NSLog(@"awardClassName: Could not find award class name for '%@' of award class '%@'", self.name, self.awardClass);
+	}
+	return awardClassNameStr;
+}
 
 #pragma mark -
 #pragma mark === Class methods ===

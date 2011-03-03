@@ -54,6 +54,8 @@
 + (NSString *)entityName;
 + (void)addUniversityFromRowArray:(NSArray *)rowArray toDBWithManagedContext:(NSManagedObjectContext *)managedObjectContext;
 
+- (NSString *)awardClassName;
+
 @end
 
 
