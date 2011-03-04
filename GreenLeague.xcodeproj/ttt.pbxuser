@@ -705,9 +705,9 @@
 	3D03AA8B131EAA9400F6B225 /* UniversityMoreDetailViewController.m */ = {
 		uiCtxt = {
 			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{8559, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{8610, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{8660, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 9931}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {992, 3770}}";
+			sepNavIntBoundsRect = "{{0, 0}, {992, 3783}}";
 			sepNavSelRange = "{4545, 0}";
-			sepNavVisRange = "{3708, 1077}";
+			sepNavVisRange = "{3775, 1015}";
 			sepNavWindowFrame = "{{291, 15}, {1216, 786}}";
 		};
 	};
@@ -2584,9 +2584,9 @@
 	};
 	3DB0D9471315206D006FC601 /* FindViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {992, 8814}}";
+			sepNavIntBoundsRect = "{{0, 0}, {992, 8723}}";
 			sepNavSelRange = "{5985, 56}";
-			sepNavVisRange = "{5694, 940}";
+			sepNavVisRange = "{5694, 1021}";
 			sepNavWindowFrame = "{{180, 42}, {1228, 832}}";
 		};
 	};

@@ -96,7 +96,8 @@
 // Green for everything except for "Did not sit exam", which is black
 + (UIColor *)textColourForAwardClassDBName:(NSString *)awardClassDBName {
 	UIColor *colour;
-	if ([awardClassDBName isEqualToString:@"Did not sit exam"]) {
+	if ([awardClassDBName isEqualToString:@"Did not sit exam"] || 
+		[awardClassDBName isEqualToString:@"Fail"]) {
 		colour = [UIColor colorWithHexString:@"#666666"]; // Black
 	} else {
 		colour = [UIColor colorWithHexString:@"#6F8A00"]; // Green
