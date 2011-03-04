@@ -11,33 +11,37 @@
 
 
 @interface FindViewController : UITableViewController {
-	NSMutableArray *sortedUniversities;
-	
-	NSMutableArray *awardClasses;
-	
-	UILocalizedIndexedCollation *collation;
-	
-
-	
-    NSManagedObjectContext *managedObjectContext;
-    NSManagedObjectModel *managedObjectModel;
-    NSPersistentStoreCoordinator *persistentStoreCoordinator;
+//	NSMutableArray *sortedUniversities;
+//	
+//	NSMutableArray *awardClasses;
+//	
+//	UILocalizedIndexedCollation *collation;
+//	
+//
+//	
+//    NSManagedObjectContext *managedObjectContext;
+//    NSManagedObjectModel *managedObjectModel;
+//    NSPersistentStoreCoordinator *persistentStoreCoordinator;
+	UniversitiesModel *universitiesModel;
 	
 	UISegmentedControl *sortControl;
 	
 	int universitySortIndex;	
 }
 
-@property (nonatomic, retain) NSMutableArray *sortedUniversities;
+//@property (nonatomic, retain) NSMutableArray *sortedUniversities;
+//
+//@property (nonatomic, retain) NSMutableArray *awardClasses;
+//
+//@property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
+//@property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;
+//@property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
-@property (nonatomic, retain) NSMutableArray *awardClasses;
-
-@property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
-@property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;
-@property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
-
+@property (nonatomic, retain) UniversitiesModel *universitiesModel;
 @property (nonatomic, retain) UISegmentedControl *sortControl;
 
-- (NSString *)applicationDocumentsDirectory;
+//- (NSString *)applicationDocumentsDirectory;
+
+- (id)initWithUniversitiesModel:(UniversitiesModel *)unisModel;
 
 @end

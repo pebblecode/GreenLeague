@@ -10,6 +10,7 @@
 #import "FindViewController.h"
 #import "CompareViewController.h"
 #import "AboutViewController.h"
+#import	"UniversitiesModel.h"
 
 @implementation GreenLeagueAppDelegate
 
@@ -21,11 +22,14 @@
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-    	
-    FindViewController *findVC = [[FindViewController alloc] init];
+    
+	UniversitiesModel *universitiesModel = [[UniversitiesModel alloc] init];
+	
+    FindViewController *findVC = [[FindViewController alloc] initWithUniversitiesModel:universitiesModel];
 	UINavigationController *findNavController = [[UINavigationController alloc] initWithRootViewController:findVC];
 	[findVC release];
 	
+	//CompareViewController *compareVC = [[CompareViewController alloc] initWithUniversitiesModel:universitiesModel];	
 	CompareViewController *compareVC = [[CompareViewController alloc] init];	
 	AboutViewController *aboutVC = [[AboutViewController alloc] init];
     
@@ -35,6 +39,7 @@
 	[findNavController release];
 	[compareVC release];
 	[aboutVC release];
+	[universitiesModel release];
 
     // Add the tab bar controller's view to the window and display.
     [self.window addSubview:tabBarController.view];

@@ -28,6 +28,7 @@
 		3D03ACAD13212D6100F6B225 /* star4_excellent.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D03ACA913212D6100F6B225 /* star4_excellent.png */; };
 		3D03ACAE13212D6100F6B225 /* star4_ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D03ACAA13212D6100F6B225 /* star4_ok.png */; };
 		3D03ACAF13212D6100F6B225 /* star4_poor.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D03ACAB13212D6100F6B225 /* star4_poor.png */; };
+		3D03AD511321676A00F6B225 /* UniversitiesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */; };
 		3D308E0B1316552A00D37010 /* NSString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D308E0A1316552A00D37010 /* NSString+Helper.m */; };
 		3D308E17131658B800D37010 /* Rakefile in Resources */ = {isa = PBXBuildFile; fileRef = 3D308E16131658B800D37010 /* Rakefile */; };
 		3D308E5B1316BB8C00D37010 /* CompareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D308E591316BB8C00D37010 /* CompareViewController.m */; };
@@ -80,6 +81,8 @@
 		3D03ACA913212D6100F6B225 /* star4_excellent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star4_excellent.png; sourceTree = "<group>"; };
 		3D03ACAA13212D6100F6B225 /* star4_ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star4_ok.png; sourceTree = "<group>"; };
 		3D03ACAB13212D6100F6B225 /* star4_poor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star4_poor.png; sourceTree = "<group>"; };
+		3D03AD4F1321676A00F6B225 /* UniversitiesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniversitiesModel.h; sourceTree = "<group>"; };
+		3D03AD501321676A00F6B225 /* UniversitiesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniversitiesModel.m; sourceTree = "<group>"; };
 		3D308E091316552A00D37010 /* NSString+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Helper.h"; sourceTree = "<group>"; };
 		3D308E0A1316552A00D37010 /* NSString+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Helper.m"; sourceTree = "<group>"; };
 		3D308E16131658B800D37010 /* Rakefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
@@ -231,6 +234,8 @@
 		3D308E8A1316C5D500D37010 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3D03AD4F1321676A00F6B225 /* UniversitiesModel.h */,
+				3D03AD501321676A00F6B225 /* UniversitiesModel.m */,
 				3DB0D9EE1317BD4F006FC601 /* University.h */,
 				3DB0D9EF1317BD4F006FC601 /* University.m */,
 				3D308E881316C5BF00D37010 /* green_league.xcdatamodel */,
@@ -367,6 +372,7 @@
 				3D03A8FE131E8CA700F6B225 /* UIColor+Helper.m in Sources */,
 				3D03AA8D131EAA9400F6B225 /* UniversityMoreDetailViewController.m in Sources */,
 				3DF051C2131FA15700AC430F /* AwardClassHelper.m in Sources */,
+				3D03AD511321676A00F6B225 /* UniversitiesModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
