@@ -17,6 +17,39 @@
 #define kDataFieldIndexAwardClass 3
 #define kDataFieldIndexRank2009 5
 
+#define kDataFieldPolicyScore 7
+#define kDataFieldPolicy1Score 10
+#define kDataFieldPolicy2Score 11
+#define kDataFieldPolicy3Score 12
+#define kDataFieldPolicy4Score 13
+#define kDataFieldPolicy5Score 14
+#define kDataFieldPolicy6Score 15
+#define kDataFieldPolicy7Score 16
+
+#define kDataFieldPerformanceScore 8
+#define kDataFieldPerformance8Score 18
+#define kDataFieldPerformance8_1Data 23
+#define kDataFieldPerformance8_1Score 24
+#define kDataFieldPerformance8_2Data 25
+#define kDataFieldPerformance8_2Score 26
+#define kDataFieldPerformance8_3Data 27
+#define kDataFieldPerformance8_3Score 28
+#define kDataFieldPerformance9Score 19
+#define kDataFieldPerformance9_1Data 29
+#define kDataFieldPerformance9_1Score 30
+#define kDataFieldPerformance9_2Data 31
+#define kDataFieldPerformance9_2Score 32
+#define kDataFieldPerformance10Score 20
+#define kDataFieldPerformance10_1Data 33
+#define kDataFieldPerformance10_1Score 34
+#define kDataFieldPerformance10_2Data 35
+#define kDataFieldPerformance10_2Score 36
+#define kDataFieldPerformance11Score 21
+#define kDataFieldPerformance11_1Data 37
+#define kDataFieldPerformance11_1Score 38
+#define kDataFieldPerformance11_2Data 39
+#define kDataFieldPerformance11_2Score 40
+
 static NSString *kUniversityEntityName = @"University";
 
 
@@ -30,43 +63,45 @@ static NSString *kUniversityEntityName = @"University";
 
 @implementation University 
 
-@dynamic performance11_1Data;
-@dynamic performance8_2Score;
-@dynamic rank2010;
-@dynamic performance8_1Score;
-@dynamic performance10_2Data;
-@dynamic performance11_2Data;
-@dynamic performanceScore;
-@dynamic performance11Score;
-@dynamic performance9_1Data;
-@dynamic awardClass;
-@dynamic performance9_2Score;
-@dynamic policyScore;
-@dynamic performance9_1Score;
-@dynamic performance11_2Score;
-@dynamic performance9_2Data;
-@dynamic rank2009;
-@dynamic performance11_1Score;
-@dynamic performance10_2Score;
 @dynamic name;
 @dynamic sortName;
-@dynamic performance10_1Score;
+@dynamic rank2009;
+@dynamic rank2010;
+@dynamic awardClass;
 @dynamic totalScore;
-@dynamic performance9Score;
-@dynamic performance8Score;
+
+@dynamic policyScore;
 @dynamic policy1Score;
-@dynamic performance8_1Data;
 @dynamic policy2Score;
 @dynamic policy3Score;
-@dynamic performance8_2Data;
 @dynamic policy4Score;
 @dynamic policy5Score;
-@dynamic performance10Score;
-@dynamic performance8_3Data;
 @dynamic policy6Score;
 @dynamic policy7Score;
-@dynamic performance10_1Data;
+
+@dynamic performanceScore;
+@dynamic performance8Score;
+@dynamic performance8_1Data;
+@dynamic performance8_1Score;
+@dynamic performance8_2Data;
+@dynamic performance8_2Score;
+@dynamic performance8_3Data;
 @dynamic performance8_3Score;
+@dynamic performance9Score;
+@dynamic performance9_1Data;
+@dynamic performance9_1Score;
+@dynamic performance9_2Data;
+@dynamic performance9_2Score;
+@dynamic performance10Score;
+@dynamic performance10_1Data;
+@dynamic performance10_1Score;
+@dynamic performance10_2Data;
+@dynamic performance10_2Score;
+@dynamic performance11Score;
+@dynamic performance11_1Data;
+@dynamic performance11_1Score;
+@dynamic performance11_2Data;
+@dynamic performance11_2Score;
 
 
 #pragma mark -
@@ -151,11 +186,41 @@ static NSString *kUniversityEntityName = @"University";
 			if ([rowArray count] > kDataFieldIndexAwardClass) [uni setAwardClass:[rowArray objectAtIndex:kDataFieldIndexAwardClass]];
 			if ([rowArray count] > kDataFieldIndexRank2009) [uni setRank2009:[[rowArray objectAtIndex:kDataFieldIndexRank2009]numberFromString]];
 			
-			// ... TODO: add the rest
-			// if ([rowArray count] > ) [uni set:[rowArray objectAtIndex:]];
+			if ([rowArray count] > kDataFieldPolicyScore) [uni setPolicyScore:[[rowArray objectAtIndex:kDataFieldPolicyScore] numberFromString]];
+			if ([rowArray count] > kDataFieldPolicy1Score) [uni setPolicy1Score:[[rowArray objectAtIndex:kDataFieldPolicy1Score] numberFromString]];
+			if ([rowArray count] > kDataFieldPolicy2Score) [uni setPolicy2Score:[[rowArray objectAtIndex:kDataFieldPolicy2Score] numberFromString]];
+			if ([rowArray count] > kDataFieldPolicy3Score) [uni setPolicy3Score:[[rowArray objectAtIndex:kDataFieldPolicy3Score] numberFromString]];
+			if ([rowArray count] > kDataFieldPolicy4Score) [uni setPolicy4Score:[[rowArray objectAtIndex:kDataFieldPolicy4Score] numberFromString]];
+			if ([rowArray count] > kDataFieldPolicy5Score) [uni setPolicy5Score:[[rowArray objectAtIndex:kDataFieldPolicy5Score] numberFromString]];
+			if ([rowArray count] > kDataFieldPolicy6Score) [uni setPolicy6Score:[[rowArray objectAtIndex:kDataFieldPolicy6Score] numberFromString]];
+			if ([rowArray count] > kDataFieldPolicy7Score) [uni setPolicy7Score:[[rowArray objectAtIndex:kDataFieldPolicy7Score] numberFromString]];
+						
+			if ([rowArray count] > kDataFieldPerformanceScore) [uni setPerformanceScore:[[rowArray objectAtIndex:kDataFieldPerformanceScore] numberFromString]];
+			if ([rowArray count] > kDataFieldPerformance8Score) [uni setPerformance8Score:[[rowArray objectAtIndex:kDataFieldPerformance8Score] numberFromString]];
+			if ([rowArray count] > kDataFieldPerformance8_1Data) [uni setPerformance8_1Data:[[rowArray objectAtIndex:kDataFieldPerformance8_1Data] numberFromString]];
+			if ([rowArray count] > kDataFieldPerformance8_1Score) [uni setPerformance8_1Score:[[rowArray objectAtIndex:kDataFieldPerformance8_1Score] numberFromString]];
+			if ([rowArray count] > kDataFieldPerformance8_2Data) [uni setPerformance8_2Data:[[rowArray objectAtIndex:kDataFieldPerformance8_2Data] numberFromString]];
+			if ([rowArray count] > kDataFieldPerformance8_2Score) [uni setPerformance8_2Score:[[rowArray objectAtIndex:kDataFieldPerformance8_2Score] numberFromString]];
+			if ([rowArray count] > kDataFieldPerformance8_3Data) [uni setPerformance8_3Data:[[rowArray objectAtIndex:kDataFieldPerformance8_3Data] numberFromString]];
+			if ([rowArray count] > kDataFieldPerformance8_3Score) [uni setPerformance8_3Score:[[rowArray objectAtIndex:kDataFieldPerformance8_3Score] numberFromString]];
+			if ([rowArray count] > kDataFieldPerformance9Score) [uni setPerformance9Score:[[rowArray objectAtIndex:kDataFieldPerformance9Score] numberFromString]];
+			if ([rowArray count] > kDataFieldPerformance9_1Data) [uni setPerformance9_1Data:[[rowArray objectAtIndex:kDataFieldPerformance9_1Data] numberFromString]];
+			if ([rowArray count] > kDataFieldPerformance9_1Score) [uni setPerformance9_1Score:[[rowArray objectAtIndex:kDataFieldPerformance9_1Score] numberFromString]];
+			if ([rowArray count] > kDataFieldPerformance9_2Data) [uni setPerformance9_2Data:[[rowArray objectAtIndex:kDataFieldPerformance9_2Data] numberFromString]];
+			if ([rowArray count] > kDataFieldPerformance9_2Score) [uni setPerformance9_2Score:[[rowArray objectAtIndex:kDataFieldPerformance9_2Score] numberFromString]];
+			if ([rowArray count] > kDataFieldPerformance10Score) [uni setPerformance10Score:[[rowArray objectAtIndex:kDataFieldPerformance10Score] numberFromString]];
+			if ([rowArray count] > kDataFieldPerformance10_1Data) [uni setPerformance10_1Data:[[rowArray objectAtIndex:kDataFieldPerformance10_1Data] numberFromString]];
+			if ([rowArray count] > kDataFieldPerformance10_1Score) [uni setPerformance10_1Score:[[rowArray objectAtIndex:kDataFieldPerformance10_1Score] numberFromString]];
+			if ([rowArray count] > kDataFieldPerformance10_2Data) [uni setPerformance10_2Data:[[rowArray objectAtIndex:kDataFieldPerformance10_2Data] numberFromString]];
+			if ([rowArray count] > kDataFieldPerformance10_2Score) [uni setPerformance10_2Score:[[rowArray objectAtIndex:kDataFieldPerformance10_2Score] numberFromString]];
+			if ([rowArray count] > kDataFieldPerformance11Score) [uni setPerformance11Score:[[rowArray objectAtIndex:kDataFieldPerformance11Score] numberFromString]];
+			if ([rowArray count] > kDataFieldPerformance11_1Data) [uni setPerformance11_1Data:[[rowArray objectAtIndex:kDataFieldPerformance11_1Data] numberFromString]];
+			if ([rowArray count] > kDataFieldPerformance11_1Score) [uni setPerformance11_1Score:[[rowArray objectAtIndex:kDataFieldPerformance11_1Score] numberFromString]];
+			if ([rowArray count] > kDataFieldPerformance11_2Data) [uni setPerformance11_2Data:[[rowArray objectAtIndex:kDataFieldPerformance11_2Data] numberFromString]];
+			if ([rowArray count] > kDataFieldPerformance11_2Score) [uni setPerformance11_2Score:[[rowArray objectAtIndex:kDataFieldPerformance11_2Score] numberFromString]];
 			
 			NSError *error;					
-			if(![managedObjectContext save:&error]){  						
+			if(![managedObjectContext save:&error]) {
 				//This is a serious error saying the record  
 				//could not be saved. Advise the user to  
 				//try again or restart the application.   

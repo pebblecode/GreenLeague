@@ -126,7 +126,7 @@ University *university;
 									  nil],
 									 [NSDictionary dictionaryWithObjectsAndKeys:								 
 									  @"11. Water consumption per head", kDataSourceTitleKey,
-									  self.university.performance10Score, kDataSourceScoreKey,
+									  self.university.performance11Score, kDataSourceScoreKey,
 									  [NSNumber numberWithInt:8], kDataSourceTotalScoreKey,
 									  nil],
 								 nil],							 
@@ -208,8 +208,8 @@ University *university;
     
 	NSDictionary *cellData = [self findDataForIndexPath:indexPath];
 	if (cellData) {
-		cell.textLabel.text = [NSString stringWithFormat:@"%@ [%@]", [cellData valueForKey:kDataSourceTitleKey], [cellData valueForKey:kDataSourceScoreKey]];
-		cell.detailTextLabel.text = [NSString stringWithFormat:@"Out of %@", [cellData valueForKey:kDataSourceTotalScoreKey]];
+		cell.textLabel.text = [NSString stringWithFormat:@"%@", [cellData valueForKey:kDataSourceTitleKey]];
+		cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ / %@", [cellData valueForKey:kDataSourceScoreKey], [cellData valueForKey:kDataSourceTotalScoreKey]];
 	}
 	
     return cell;

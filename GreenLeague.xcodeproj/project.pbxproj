@@ -19,6 +19,15 @@
 		3D03A8FE131E8CA700F6B225 /* UIColor+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D03A8FD131E8CA700F6B225 /* UIColor+Helper.m */; };
 		3D03AA8D131EAA9400F6B225 /* UniversityMoreDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D03AA8B131EAA9400F6B225 /* UniversityMoreDetailViewController.m */; };
 		3D03AA8E131EAA9400F6B225 /* UniversityMoreDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D03AA8C131EAA9400F6B225 /* UniversityMoreDetailViewController.xib */; };
+		3D03AC671321252900F6B225 /* badge_1st.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D03AC621321252900F6B225 /* badge_1st.png */; };
+		3D03AC681321252900F6B225 /* badge_3rd.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D03AC631321252900F6B225 /* badge_3rd.png */; };
+		3D03AC691321252900F6B225 /* badge_21.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D03AC641321252900F6B225 /* badge_21.png */; };
+		3D03AC6A1321252900F6B225 /* badge_22.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D03AC651321252900F6B225 /* badge_22.png */; };
+		3D03AC6B1321252900F6B225 /* badge_fail.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D03AC661321252900F6B225 /* badge_fail.png */; };
+		3D03ACAC13212D6100F6B225 /* star4_awful.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D03ACA813212D6100F6B225 /* star4_awful.png */; };
+		3D03ACAD13212D6100F6B225 /* star4_excellent.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D03ACA913212D6100F6B225 /* star4_excellent.png */; };
+		3D03ACAE13212D6100F6B225 /* star4_ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D03ACAA13212D6100F6B225 /* star4_ok.png */; };
+		3D03ACAF13212D6100F6B225 /* star4_poor.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D03ACAB13212D6100F6B225 /* star4_poor.png */; };
 		3D308E0B1316552A00D37010 /* NSString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D308E0A1316552A00D37010 /* NSString+Helper.m */; };
 		3D308E17131658B800D37010 /* Rakefile in Resources */ = {isa = PBXBuildFile; fileRef = 3D308E16131658B800D37010 /* Rakefile */; };
 		3D308E5B1316BB8C00D37010 /* CompareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D308E591316BB8C00D37010 /* CompareViewController.m */; };
@@ -62,6 +71,15 @@
 		3D03AA8A131EAA9400F6B225 /* UniversityMoreDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniversityMoreDetailViewController.h; sourceTree = "<group>"; };
 		3D03AA8B131EAA9400F6B225 /* UniversityMoreDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniversityMoreDetailViewController.m; sourceTree = "<group>"; };
 		3D03AA8C131EAA9400F6B225 /* UniversityMoreDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UniversityMoreDetailViewController.xib; sourceTree = "<group>"; };
+		3D03AC621321252900F6B225 /* badge_1st.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = badge_1st.png; sourceTree = "<group>"; };
+		3D03AC631321252900F6B225 /* badge_3rd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = badge_3rd.png; sourceTree = "<group>"; };
+		3D03AC641321252900F6B225 /* badge_21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = badge_21.png; sourceTree = "<group>"; };
+		3D03AC651321252900F6B225 /* badge_22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = badge_22.png; sourceTree = "<group>"; };
+		3D03AC661321252900F6B225 /* badge_fail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = badge_fail.png; sourceTree = "<group>"; };
+		3D03ACA813212D6100F6B225 /* star4_awful.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star4_awful.png; sourceTree = "<group>"; };
+		3D03ACA913212D6100F6B225 /* star4_excellent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star4_excellent.png; sourceTree = "<group>"; };
+		3D03ACAA13212D6100F6B225 /* star4_ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star4_ok.png; sourceTree = "<group>"; };
+		3D03ACAB13212D6100F6B225 /* star4_poor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star4_poor.png; sourceTree = "<group>"; };
 		3D308E091316552A00D37010 /* NSString+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Helper.h"; sourceTree = "<group>"; };
 		3D308E0A1316552A00D37010 /* NSString+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Helper.m"; sourceTree = "<group>"; };
 		3D308E16131658B800D37010 /* Rakefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
@@ -215,6 +233,15 @@
 		3DB0D95213152221006FC601 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3D03ACA813212D6100F6B225 /* star4_awful.png */,
+				3D03ACA913212D6100F6B225 /* star4_excellent.png */,
+				3D03ACAA13212D6100F6B225 /* star4_ok.png */,
+				3D03ACAB13212D6100F6B225 /* star4_poor.png */,
+				3D03AC621321252900F6B225 /* badge_1st.png */,
+				3D03AC631321252900F6B225 /* badge_3rd.png */,
+				3D03AC641321252900F6B225 /* badge_21.png */,
+				3D03AC651321252900F6B225 /* badge_22.png */,
+				3D03AC661321252900F6B225 /* badge_fail.png */,
 				3DF052E91320113000AC430F /* pnpgl2011_400px.png */,
 				3DF052E4132010C300AC430F /* pnpgl2011_64px_square_avatar.png */,
 				3D308E701316BCAA00D37010 /* 12-eye.png */,
@@ -300,6 +327,15 @@
 				3D03AA8E131EAA9400F6B225 /* UniversityMoreDetailViewController.xib in Resources */,
 				3DF052E5132010C300AC430F /* pnpgl2011_64px_square_avatar.png in Resources */,
 				3DF052EA1320113000AC430F /* pnpgl2011_400px.png in Resources */,
+				3D03AC671321252900F6B225 /* badge_1st.png in Resources */,
+				3D03AC681321252900F6B225 /* badge_3rd.png in Resources */,
+				3D03AC691321252900F6B225 /* badge_21.png in Resources */,
+				3D03AC6A1321252900F6B225 /* badge_22.png in Resources */,
+				3D03AC6B1321252900F6B225 /* badge_fail.png in Resources */,
+				3D03ACAC13212D6100F6B225 /* star4_awful.png in Resources */,
+				3D03ACAD13212D6100F6B225 /* star4_excellent.png in Resources */,
+				3D03ACAE13212D6100F6B225 /* star4_ok.png in Resources */,
+				3D03ACAF13212D6100F6B225 /* star4_poor.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
