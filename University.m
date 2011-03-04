@@ -10,14 +10,14 @@
 #import "AwardClassHelper.h"
 #import "NSString+Helper.h"
 
-#define kUniversityEntityName "University"
-
 // Index for the fields in the data source file
 #define kDataFieldIndexRank2010 0
 #define kDataFieldIndexUniversityName 1
 #define kDataFieldIndexTotalScore 2
 #define kDataFieldIndexAwardClass 3
 #define kDataFieldIndexRank2009 5
+
+static NSString *kUniversityEntityName = @"University";
 
 
 // Private methods
@@ -111,7 +111,7 @@
 #pragma mark
 
 + (NSString *)entityName {
-	return [NSString stringWithString:@kUniversityEntityName];
+	return [NSString stringWithString:kUniversityEntityName];
 }
 
 // Sort name removes "University of" from the front of the name, and appends it to the back as '(University of)'

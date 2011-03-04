@@ -197,7 +197,48 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array/>
+	<array>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
+				<string>3D03AB731320F42A00F6B225</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>University.m</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>3D03AB741320F42A00F6B225</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>University.m</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>3D03AB7B1320F59F00F6B225</string>
+						<key>history</key>
+						<array>
+							<string>3D03AB581320F1DA00F6B225</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {1228, 735}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>94 102 1228 776 0 0 1920 1058 </string>
+			</dict>
+		</dict>
+	</array>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>-1</integer>
@@ -279,14 +320,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>12</integer>
+									<integer>18</integer>
 									<integer>10</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 61}, {258, 675}}</string>
+							<string>{{0, 0}, {258, 675}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -330,29 +371,38 @@
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
 										<string>FindViewController.m</string>
+										<key>_historyCapacity</key>
+										<integer>0</integer>
+										<key>bookmark</key>
+										<string>3D03AB791320F59F00F6B225</string>
 										<key>history</key>
 										<array>
 											<string>3D039FDC131BA6FE00F6B225</string>
 											<string>3D03A281131C109F00F6B225</string>
-											<string>3D03A282131C109F00F6B225</string>
-											<string>3D03A283131C109F00F6B225</string>
-											<string>3D03A2D5131C1F6500F6B225</string>
 											<string>3D03A315131CF97200F6B225</string>
 											<string>3D03A4E5131D3EEE00F6B225</string>
 											<string>3D03A4E7131D3EEE00F6B225</string>
 											<string>3D03A58A131D51D500F6B225</string>
-											<string>3D03A630131D688900F6B225</string>
 											<string>3D03A68D131D770200F6B225</string>
 											<string>3D03A6EA131E5BED00F6B225</string>
-											<string>3D03A6EB131E5BED00F6B225</string>
 											<string>3D03A90C131E8D0500F6B225</string>
-											<string>3D03A988131E938100F6B225</string>
-											<string>3D03A9C1131E9AE200F6B225</string>
 											<string>3D03AA63131EA5F200F6B225</string>
 											<string>3D03AA83131EA8D400F6B225</string>
 											<string>3D03AAFE131EB94100F6B225</string>
 											<string>3D03AAFF131EB94100F6B225</string>
-											<string>3D03AB00131EB94100F6B225</string>
+											<string>3D03AB631320F42A00F6B225</string>
+											<string>3D03AB641320F42A00F6B225</string>
+											<string>3D03AB651320F42A00F6B225</string>
+											<string>3D03AB661320F42A00F6B225</string>
+											<string>3D03AB671320F42A00F6B225</string>
+											<string>3D03AB681320F42A00F6B225</string>
+											<string>3D03AB6A1320F42A00F6B225</string>
+											<string>3D03AB6C1320F42A00F6B225</string>
+											<string>3D03AB6D1320F42A00F6B225</string>
+											<string>3D03AB6E1320F42A00F6B225</string>
+											<string>3D03AB761320F59F00F6B225</string>
+											<string>3D03AB771320F59F00F6B225</string>
+											<string>3D03AB781320F59F00F6B225</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -379,7 +429,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>AwardClassHelper.h</string>
+								<string>UniversityMoreDetailViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -387,7 +437,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>AwardClassHelper.h</string>
+										<string>UniversityMoreDetailViewController.m</string>
+										<key>_historyCapacity</key>
+										<integer>0</integer>
+										<key>bookmark</key>
+										<string>3D03AB7A1320F59F00F6B225</string>
 										<key>history</key>
 										<array>
 											<string>3DB0DA321317E0C5006FC601</string>
@@ -401,8 +455,8 @@
 											<string>3D03A686131D73D400F6B225</string>
 											<string>3D03AA2E131EA21D00F6B225</string>
 											<string>3D03AA65131EA5F200F6B225</string>
-											<string>3D03AB04131EB94100F6B225</string>
 											<string>3D03AB05131EB94100F6B225</string>
+											<string>3D03AB711320F42A00F6B225</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -604,8 +658,9 @@
 	<array>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>3DB0D93113151196006FC601</string>
+		<string>3D03AB731320F42A00F6B225</string>
 		<string>/Users/ttt/Work/Dev/GreenLeague/GreenLeague.xcodeproj</string>
+		<string>3DB0D93113151196006FC601</string>
 	</array>
 	<key>WindowString</key>
 	<string>373 -762 1333 734 294 -900 1440 900 </string>
@@ -624,12 +679,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>FindViewController.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -698,7 +755,7 @@
 			<key>WindowToolGUID</key>
 			<string>3DB0D93113151196006FC601</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>

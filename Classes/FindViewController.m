@@ -13,25 +13,24 @@
 #import "AwardClassHelper.h"
 
 // Data source file minus the file extension
-#define kDataSourceFile "gl2010"
+static NSString *kDataSourceFile = @"gl2010";
+static NSString *kDatabaseSqliteFile = @"green_league.sqlite";
 #define kDataCSVRowsToIgnore 4
-#define kDatabaseSqliteFile "green_league.sqlite"
 
 #define kInvalidSortByControlIndex -100
 #define kSortByRankControlIndex 0
 #define kSortByNameControlIndex 1
 
-// Database field names
-#define kDBFieldRank "rank2010"
-#define kDBFieldName "name"
-#define kDBFieldSortName "sortName"
-#define kDBFieldScore "score"
-#define kDBFieldAwardClass "awardClass"
-
 // Sort control
 #define kSortControlWidth 90.0
 #define kSortControlHeight 30.0
 
+// Database field names
+static NSString *kDBFieldRank = @"rank2010";
+static NSString *kDBFieldName = @"name";
+//static NSString *kDBFieldSortName = @"sortName";
+//static NSString *kDBFieldScore = @"score";
+static NSString *kDBFieldAwardClass = @"awardClass";
 
 // Private methods
 @interface FindViewController()
@@ -464,13 +463,13 @@
 			[request setEntity:entity]; 
 			
 			// Sort by given rank
-			NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@kDBFieldRank ascending:YES];
+			NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:kDBFieldRank ascending:YES];
 			NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
 			[request setSortDescriptors:sortDescriptors];
 			[sortDescriptor release]; 
 			
 			// Set predicate of university award class
-			NSString *predicate = [NSString stringWithFormat:@"%@ == '%@'", @kDBFieldAwardClass, awardName]; // Doesn't work if it is put straight into predicateWithFormat for some reason
+			NSString *predicate = [NSString stringWithFormat:@"%@ == '%@'", kDBFieldAwardClass, awardName]; // Doesn't work if it is put straight into predicateWithFormat for some reason
 			NSPredicate *rankPredicate = [NSPredicate predicateWithFormat:predicate];
 			[request setPredicate:rankPredicate];	
 			
@@ -507,7 +506,7 @@
 		[request setEntity:entity]; 
 		
 		// Sort by given rank
-		NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@kDBFieldName ascending:YES];
+		NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:kDBFieldName ascending:YES];
 		NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
 		[request setSortDescriptors:sortDescriptors];
 		[sortDescriptor release];	
@@ -576,7 +575,7 @@
 
 // Populate the database from kDataSourceFile csv file
 - (void)loadGreenLeagueDataFromFileToDB {	
-	NSString *filePath = [[NSBundle mainBundle] pathForResource:@kDataSourceFile ofType:@"csv"];
+	NSString *filePath = [[NSBundle mainBundle] pathForResource:kDataSourceFile ofType:@"csv"];
 	NSString *fileContents = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
 	
 	// Get csv rows as an array while ignoring kDataCSVRowsToIgnore rows
@@ -651,7 +650,7 @@
 }
 
 - (NSString *)dbPath {
-	return [[self applicationDocumentsDirectory] stringByAppendingPathComponent:@kDatabaseSqliteFile];
+	return [[self applicationDocumentsDirectory] stringByAppendingPathComponent:kDatabaseSqliteFile];
 }
 
 
