@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>3D03ACA713212D0800F6B225</string>
+						<string>3D03ACBF13212F1D00F6B225</string>
 						<key>history</key>
 						<array>
 							<string>3D03AC74132125BD00F6B225</string>
@@ -318,14 +318,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>18</integer>
-									<integer>10</integer>
-									<integer>1</integer>
+									<integer>54</integer>
+									<integer>23</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 114}, {258, 675}}</string>
+							<string>{{0, 583}, {258, 675}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -355,14 +354,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>UniversityMoreDetailViewController.m</string>
+								<string>GreenLeague-Info.plist</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -370,11 +367,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>UniversityMoreDetailViewController.m</string>
+										<string>GreenLeague-Info.plist</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3D03ACA513212D0800F6B225</string>
+										<string>3D03ACBD13212F1D00F6B225</string>
 										<key>history</key>
 										<array>
 											<string>3D039FDC131BA6FE00F6B225</string>
@@ -386,7 +383,6 @@
 											<string>3D03A68D131D770200F6B225</string>
 											<string>3D03A6EA131E5BED00F6B225</string>
 											<string>3D03A90C131E8D0500F6B225</string>
-											<string>3D03AA63131EA5F200F6B225</string>
 											<string>3D03AA83131EA8D400F6B225</string>
 											<string>3D03AAFE131EB94100F6B225</string>
 											<string>3D03AB641320F42A00F6B225</string>
@@ -402,7 +398,8 @@
 											<string>3D03ABB21320FC7100F6B225</string>
 											<string>3D03ACA213212D0800F6B225</string>
 											<string>3D03ACA313212D0800F6B225</string>
-											<string>3D03ACA413212D0800F6B225</string>
+											<string>3D03ACBB13212F1D00F6B225</string>
+											<string>3D03ACBC13212F1D00F6B225</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -441,7 +438,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3D03ACA613212D0800F6B225</string>
+										<string>3D03ACBE13212F1D00F6B225</string>
 										<key>history</key>
 										<array>
 											<string>3DB0DA321317E0C5006FC601</string>
@@ -662,8 +659,8 @@
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>3D03AC2013210ABF00F6B225</string>
 		<string>3D03ABF71321055E00F6B225</string>
-		<string>3DB0D93113151196006FC601</string>
 		<string>1C78EAAD065D492600B07095</string>
+		<string>3DB0D93113151196006FC601</string>
 		<string>/Users/ttt/Work/Dev/GreenLeague/GreenLeague.xcodeproj</string>
 	</array>
 	<key>WindowString</key>

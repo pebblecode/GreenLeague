@@ -16,7 +16,7 @@
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 3DB0D92413151192006FC601 /* GreenLeague */;
-		activeSDKPreference = iphonesimulator4.2;
+		activeSDKPreference = iphoneos4.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* GreenLeague */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* GreenLeague */,
@@ -288,6 +288,14 @@
 			3D03ACA513212D0800F6B225 /* PBXTextBookmark */ = 3D03ACA513212D0800F6B225 /* PBXTextBookmark */;
 			3D03ACA613212D0800F6B225 /* PBXTextBookmark */ = 3D03ACA613212D0800F6B225 /* PBXTextBookmark */;
 			3D03ACA713212D0800F6B225 /* PBXTextBookmark */ = 3D03ACA713212D0800F6B225 /* PBXTextBookmark */;
+			3D03ACB213212D9800F6B225 /* PBXTextBookmark */ = 3D03ACB213212D9800F6B225 /* PBXTextBookmark */;
+			3D03ACB313212D9800F6B225 /* PBXTextBookmark */ = 3D03ACB313212D9800F6B225 /* PBXTextBookmark */;
+			3D03ACB413212D9800F6B225 /* PBXTextBookmark */ = 3D03ACB413212D9800F6B225 /* PBXTextBookmark */;
+			3D03ACBB13212F1D00F6B225 /* PBXTextBookmark */ = 3D03ACBB13212F1D00F6B225 /* PBXTextBookmark */;
+			3D03ACBC13212F1D00F6B225 /* PlistBookmark */ = 3D03ACBC13212F1D00F6B225 /* PlistBookmark */;
+			3D03ACBD13212F1D00F6B225 /* PlistBookmark */ = 3D03ACBD13212F1D00F6B225 /* PlistBookmark */;
+			3D03ACBE13212F1D00F6B225 /* PBXTextBookmark */ = 3D03ACBE13212F1D00F6B225 /* PBXTextBookmark */;
+			3D03ACBF13212F1D00F6B225 /* PBXTextBookmark */ = 3D03ACBF13212F1D00F6B225 /* PBXTextBookmark */;
 			3DB0DA321317E0C5006FC601 = 3DB0DA321317E0C5006FC601 /* PBXTextBookmark */;
 			3DB0DA331317E0C5006FC601 = 3DB0DA331317E0C5006FC601 /* XDModelBookmark */;
 			3DB0DA351317E0C5006FC601 = 3DB0DA351317E0C5006FC601 /* PBXTextBookmark */;
@@ -699,7 +707,7 @@
 			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{8559, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{8610, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{8660, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 9931}\";\n    s = 0;\n}";
 			sepNavIntBoundsRect = "{{0, 0}, {992, 3770}}";
 			sepNavSelRange = "{4545, 0}";
-			sepNavVisRange = "{3600, 1108}";
+			sepNavVisRange = "{3708, 1077}";
 			sepNavWindowFrame = "{{291, 15}, {1216, 786}}";
 		};
 	};
@@ -2222,6 +2230,88 @@
 		vrLen = 1610;
 		vrLoc = 2799;
 	};
+	3D03ACB213212D9800F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03AA8B131EAA9400F6B225 /* UniversityMoreDetailViewController.m */;
+		name = "UniversityMoreDetailViewController.m: 129";
+		rLen = 0;
+		rLoc = 4545;
+		rType = 0;
+		vrLen = 1185;
+		vrLoc = 3600;
+	};
+	3D03ACB313212D9800F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9EE1317BD4F006FC601 /* University.h */;
+		name = "University.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1141;
+		vrLoc = 1393;
+	};
+	3D03ACB413212D9800F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9EF1317BD4F006FC601 /* University.m */;
+		name = "University.m: 107";
+		rLen = 68;
+		rLoc = 2800;
+		rType = 0;
+		vrLen = 1654;
+		vrLoc = 2799;
+	};
+	3D03ACBB13212F1D00F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03AA8B131EAA9400F6B225 /* UniversityMoreDetailViewController.m */;
+		name = "UniversityMoreDetailViewController.m: 129";
+		rLen = 0;
+		rLoc = 4545;
+		rType = 0;
+		vrLen = 1077;
+		vrLoc = 3708;
+	};
+	3D03ACBC13212F1D00F6B225 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* GreenLeague-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/ttt/Work/Dev/GreenLeague/GreenLeague-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	3D03ACBD13212F1D00F6B225 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* GreenLeague-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/ttt/Work/Dev/GreenLeague/GreenLeague-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	3D03ACBE13212F1D00F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9EE1317BD4F006FC601 /* University.h */;
+		name = "University.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 990;
+		vrLoc = 1393;
+	};
+	3D03ACBF13212F1D00F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9EF1317BD4F006FC601 /* University.m */;
+		name = "University.m: 107";
+		rLen = 68;
+		rLoc = 2800;
+		rType = 0;
+		vrLen = 1706;
+		vrLoc = 2869;
+	};
 	3D308E091316552A00D37010 /* NSString+Helper.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {992, 286}}";
@@ -2517,9 +2607,9 @@
 	};
 	3DB0D9EF1317BD4F006FC601 /* University.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1169, 4875}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1169, 4836}}";
 			sepNavSelRange = "{2800, 68}";
-			sepNavVisRange = "{2799, 1610}";
+			sepNavVisRange = "{2869, 1706}";
 			sepNavWindowFrame = "{{221, 96}, {1228, 832}}";
 		};
 	};
