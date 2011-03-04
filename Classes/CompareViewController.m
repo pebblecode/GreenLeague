@@ -28,6 +28,7 @@
 	UIButton *compareButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 	compareButton.frame = CGRectMake(60, 10, 200, 40);
 	[compareButton setTitle:@"Compare" forState:UIControlStateNormal];
+	[compareButton addTarget:self action:@selector(compareButtonPress) forControlEvents:UIControlEventTouchUpInside];
 	
 	[compareButtonView addSubview:compareButton];		
 	self.tableView.tableFooterView = compareButtonView;
@@ -108,6 +109,16 @@
 	 [self.navigationController pushViewController:detailViewController animated:YES];
 	 [detailViewController release];
 	 */
+}
+
+
+#pragma mark -
+#pragma mark === Action methods ===
+#pragma mark
+
+- (IBAction)compareButtonPress {
+	UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"TODO" message:@"Not implemented yet" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease];
+	[alert show];
 }
 
 
