@@ -11,6 +11,8 @@
 
 @implementation CompareViewController
 
+@synthesize universitiesToCompare;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 	if ((self = [super initWithNibName:@"CompareViewController" bundle:nibBundleOrNil])) {
 		self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Compare" image:[UIImage imageNamed:@"12-eye.png"] tag:1];		
@@ -34,6 +36,12 @@
 	self.tableView.tableFooterView = compareButtonView;
 
 	[compareButtonView release];
+	
+	// Set editing mode
+	[self.tableView setEditing:YES animated:NO];
+	
+	// Populate table with universities
+	
 	
 }
 
@@ -61,6 +69,8 @@
 
 
 - (void)dealloc {
+	[universitiesToCompare release];
+	
     [super dealloc];
 }
 
@@ -76,9 +86,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    int numRows = 2;
-	
-    return numRows;
+    return [universitiesToCompare count];
 }
 
 
@@ -92,10 +100,28 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
+	
+	// TODO: get university
 	cell.textLabel.text = @"hello";
 	
     return cell;
 }
+
+
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+		
+	if (editingStyle == UITableViewCellEditingStyleDelete) {
+		// Delete the row from the data source.
+		[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+		
+		int rowToRemove = [indexPath row];
+		[universitiesToCompare removeObjectAtIndex:rowToRemove];
+	} else if (editingStyle == UITableViewCellEditingStyleInsert) {
+		// Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+	}   
+}
+
 
 #pragma mark -
 #pragma mark Table view delegate

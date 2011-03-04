@@ -10,8 +10,10 @@
 
 
 @interface CompareViewController : UITableViewController {
-
+	NSMutableArray *universitiesToCompare;
 }
+
+@property (nonatomic, retain) NSMutableArray *universitiesToCompare;
 
 - (IBAction)compareButtonPress;
 
