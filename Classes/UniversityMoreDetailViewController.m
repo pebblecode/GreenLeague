@@ -16,11 +16,18 @@
 #define kNumberRowsForPolicy 7
 #define kNumberRowsForPerformance 4
 
+// Data source keys
+static NSString *kDataSourceTitleKey = @"title";
+static NSString *kDataSourceScoreKey = @"score";
+static NSString *kDataSourceTotalScoreKey = @"score";
+
 @interface UniversityMoreDetailViewController()
 
 University *university;
 
 @property (nonatomic, retain) University *university;
+
+- (NSDictionary *)findDataForIndexPath:(NSIndexPath *)indexPath;
 
 @end
 
@@ -28,7 +35,7 @@ University *university;
 
 @implementation UniversityMoreDetailViewController
 
-@synthesize university;
+@synthesize university, dataSoruceArray;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -45,6 +52,46 @@ University *university;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+	
+	// Structure:
+	//		dataSoruceArray
+	//			- [0] Policy
+	//				- [0] Dictionary
+	//					- [title] "1. Publicly Available Environmental Policy"
+	//					- [uniScore] 4
+	//					- [scoreTotal] 6
+	//				- [1] Dictionary
+	//				- ...
+	//			- [1] Performance
+	//				- [0] Dictionary
+	//					- [title] "8. Energy sources"
+	//					- ...
+	//				- ...	
+	self.dataSoruceArray = [NSArray arrayWithObjects:
+								// Policy
+								[NSArray arrayWithObjects:
+									[NSDictionary dictionaryWithObjectsAndKeys:
+										@"1. Publicly Available Environmental Policy", kDataSourceTitleKey,
+										self.university.policy1Score, kDataSourceScoreKey,
+										[NSNumber numberWithInt:6], kDataSourceTotalScoreKey,
+									 nil],
+									 [NSDictionary dictionaryWithObjectsAndKeys:
+									  @"2. Staff", kDataSourceTitleKey,
+									  self.university.policy2Score, kDataSourceScoreKey,
+									  [NSNumber numberWithInt:8], kDataSourceTotalScoreKey,
+									  nil],
+								nil],
+							 
+								// Performance
+								[NSArray arrayWithObjects:
+									 [NSDictionary dictionaryWithObjectsAndKeys:
+									  @"8. Energy sources", kDataSourceTitleKey,
+									  self.university.performance8Score, kDataSourceScoreKey,
+									  [NSNumber numberWithInt:6], kDataSourceTotalScoreKey,
+									  nil],
+								nil],							 
+							 nil];
+								
 }
 
 
@@ -119,8 +166,12 @@ University *university;
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%d: %d", indexPath.section, indexPath.row];
-    
+	NSDictionary *cellData = [self findDataForIndexPath:indexPath];
+	if (cellData) {
+		cell.textLabel.text = [NSString stringWithFormat:@"%@ [%@]", [cellData valueForKey:kDataSourceTitleKey], [cellData valueForKey:kDataSourceScoreKey]];
+		cell.detailTextLabel.text = [NSString stringWithFormat:@"Out of %@", [cellData valueForKey:kDataSourceTotalScoreKey]];
+	}
+	
     return cell;
 }
 
@@ -179,6 +230,23 @@ University *university;
     */
 }
 
+#pragma mark -
+#pragma mark === Helper methods ===
+#pragma mark
+
+- (NSDictionary *)findDataForIndexPath:(NSIndexPath *)indexPath {
+	NSDictionary *dataDictionary = nil;
+	
+	NSArray *sectionDataDictionaries = [self.dataSoruceArray objectAtIndex:[indexPath section]];
+	
+	if (sectionDataDictionaries) {
+		if ([indexPath row] < [sectionDataDictionaries count]) { // Check if valid index
+			dataDictionary = [sectionDataDictionaries objectAtIndex:[indexPath row]];
+		}		
+	}	
+	
+	return dataDictionary;
+}
 
 #pragma mark -
 #pragma mark Memory management
@@ -197,9 +265,11 @@ University *university;
 
 
 - (void)dealloc {
+	[dataSoruceArray release];
+	//[univerity release]; // TODO: Release?
+	 	 
     [super dealloc];
 }
-
 
 @end
 

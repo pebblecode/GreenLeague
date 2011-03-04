@@ -10,10 +10,10 @@
 #import "University.h"
 
 @interface UniversityMoreDetailViewController : UITableViewController {
-	//NSArray *dataSourceArray;
+	NSArray *dataSoruceArray;
 }
 
-//@property (nonatomic, retain) NSArray *dataSourceArray;
+@property (nonatomic, retain) NSArray *dataSoruceArray;
 
 - (id)initWithUniversity:(University *)uni;
 
