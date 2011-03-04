@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>3D03AC2E13210B4600F6B225</string>
+						<string>3D03AC611321121700F6B225</string>
 						<key>history</key>
 						<array>
 							<string>3D03ABF21321046E00F6B225</string>
@@ -318,13 +318,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>49</integer>
-									<integer>47</integer>
+									<integer>12</integer>
+									<integer>10</integer>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 372}, {258, 675}}</string>
+							<string>{{0, 0}, {258, 675}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -373,7 +374,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3D03AC2C13210B4600F6B225</string>
+										<string>3D03AC5F1321121700F6B225</string>
 										<key>history</key>
 										<array>
 											<string>3D039FDC131BA6FE00F6B225</string>
@@ -440,7 +441,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3D03AC2D13210B4600F6B225</string>
+										<string>3D03AC601321121700F6B225</string>
 										<key>history</key>
 										<array>
 											<string>3DB0DA321317E0C5006FC601</string>
@@ -658,11 +659,11 @@
 	<array>
 		<string>3D03AC2213210ABF00F6B225</string>
 		<string>3D03AC1A13210AA100F6B225</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>3DB0D93113151196006FC601</string>
 		<string>3D03ABF71321055E00F6B225</string>
 		<string>3D03AC2013210ABF00F6B225</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/ttt/Work/Dev/GreenLeague/GreenLeague.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -998,6 +999,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -1043,7 +1046,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
