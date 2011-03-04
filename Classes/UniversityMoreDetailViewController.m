@@ -85,6 +85,17 @@ University *university;
     return kNumberSections;
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+	NSString *sectionTitle;
+	
+	if (section == kPolicySectionIndex) {
+		sectionTitle = @"Policy";
+	} else if (section == kPerformaceSectionIndex) {
+		sectionTitle = @"Performance";
+	}
+	
+	return sectionTitle;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     int numRows = 0;
