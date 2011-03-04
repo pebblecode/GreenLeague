@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>3D03ACBF13212F1D00F6B225</string>
+						<string>3D03ACD313214BF700F6B225</string>
 						<key>history</key>
 						<array>
 							<string>3D03AC74132125BD00F6B225</string>
@@ -270,6 +270,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -306,7 +308,7 @@
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>080E96DDFE201D6D7F000001</string>
-								<string>3D03AA81131EA8C100F6B225</string>
+								<string>3D03ACCE13214BC800F6B225</string>
 								<string>29B97315FDCFA39411CA2CEA</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
 								<string>3DB0D97313152B63006FC601</string>
@@ -318,13 +320,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>54</integer>
-									<integer>23</integer>
+									<integer>8</integer>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 583}, {258, 675}}</string>
+							<string>{{0, 6}, {258, 675}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -359,7 +361,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GreenLeague-Info.plist</string>
+								<string>CompareViewController.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -367,11 +369,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>GreenLeague-Info.plist</string>
+										<string>CompareViewController.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3D03ACBD13212F1D00F6B225</string>
+										<string>3D03ACD113214BF700F6B225</string>
 										<key>history</key>
 										<array>
 											<string>3D039FDC131BA6FE00F6B225</string>
@@ -388,18 +390,18 @@
 											<string>3D03AB641320F42A00F6B225</string>
 											<string>3D03AB651320F42A00F6B225</string>
 											<string>3D03AB661320F42A00F6B225</string>
-											<string>3D03AB671320F42A00F6B225</string>
 											<string>3D03AB681320F42A00F6B225</string>
 											<string>3D03AB6C1320F42A00F6B225</string>
-											<string>3D03AB6D1320F42A00F6B225</string>
 											<string>3D03AB6E1320F42A00F6B225</string>
 											<string>3D03AB761320F59F00F6B225</string>
 											<string>3D03ABB11320FC7100F6B225</string>
 											<string>3D03ABB21320FC7100F6B225</string>
-											<string>3D03ACA213212D0800F6B225</string>
 											<string>3D03ACA313212D0800F6B225</string>
-											<string>3D03ACBB13212F1D00F6B225</string>
-											<string>3D03ACBC13212F1D00F6B225</string>
+											<string>3D03ACC613214A6300F6B225</string>
+											<string>3D03ACC713214A6300F6B225</string>
+											<string>3D03ACC813214A6300F6B225</string>
+											<string>3D03ACCF13214BF700F6B225</string>
+											<string>3D03ACD013214BF700F6B225</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -438,7 +440,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3D03ACBE13212F1D00F6B225</string>
+										<string>3D03ACD213214BF700F6B225</string>
 										<key>history</key>
 										<array>
 											<string>3DB0DA321317E0C5006FC601</string>

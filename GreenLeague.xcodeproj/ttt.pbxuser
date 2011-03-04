@@ -16,7 +16,7 @@
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 3DB0D92413151192006FC601 /* GreenLeague */;
-		activeSDKPreference = iphoneos4.2;
+		activeSDKPreference = iphonesimulator4.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* GreenLeague */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* GreenLeague */,
@@ -296,6 +296,18 @@
 			3D03ACBD13212F1D00F6B225 /* PlistBookmark */ = 3D03ACBD13212F1D00F6B225 /* PlistBookmark */;
 			3D03ACBE13212F1D00F6B225 /* PBXTextBookmark */ = 3D03ACBE13212F1D00F6B225 /* PBXTextBookmark */;
 			3D03ACBF13212F1D00F6B225 /* PBXTextBookmark */ = 3D03ACBF13212F1D00F6B225 /* PBXTextBookmark */;
+			3D03ACC613214A6300F6B225 /* PlistBookmark */ = 3D03ACC613214A6300F6B225 /* PlistBookmark */;
+			3D03ACC713214A6300F6B225 /* PBXTextBookmark */ = 3D03ACC713214A6300F6B225 /* PBXTextBookmark */;
+			3D03ACC813214A6300F6B225 /* PBXTextBookmark */ = 3D03ACC813214A6300F6B225 /* PBXTextBookmark */;
+			3D03ACC913214A6300F6B225 /* PBXTextBookmark */ = 3D03ACC913214A6300F6B225 /* PBXTextBookmark */;
+			3D03ACCA13214A6300F6B225 /* PBXTextBookmark */ = 3D03ACCA13214A6300F6B225 /* PBXTextBookmark */;
+			3D03ACCB13214A6300F6B225 /* PBXTextBookmark */ = 3D03ACCB13214A6300F6B225 /* PBXTextBookmark */;
+			3D03ACCC13214A6300F6B225 /* PBXTextBookmark */ = 3D03ACCC13214A6300F6B225 /* PBXTextBookmark */;
+			3D03ACCF13214BF700F6B225 /* PBXTextBookmark */ = 3D03ACCF13214BF700F6B225 /* PBXTextBookmark */;
+			3D03ACD013214BF700F6B225 /* PBXTextBookmark */ = 3D03ACD013214BF700F6B225 /* PBXTextBookmark */;
+			3D03ACD113214BF700F6B225 /* PBXTextBookmark */ = 3D03ACD113214BF700F6B225 /* PBXTextBookmark */;
+			3D03ACD213214BF700F6B225 /* PBXTextBookmark */ = 3D03ACD213214BF700F6B225 /* PBXTextBookmark */;
+			3D03ACD313214BF700F6B225 /* PBXTextBookmark */ = 3D03ACD313214BF700F6B225 /* PBXTextBookmark */;
 			3DB0DA321317E0C5006FC601 = 3DB0DA321317E0C5006FC601 /* PBXTextBookmark */;
 			3DB0DA331317E0C5006FC601 = 3DB0DA331317E0C5006FC601 /* XDModelBookmark */;
 			3DB0DA351317E0C5006FC601 = 3DB0DA351317E0C5006FC601 /* PBXTextBookmark */;
@@ -697,17 +709,17 @@
 	};
 	3D03AA8A131EAA9400F6B225 /* UniversityMoreDetailViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {992, 273}}";
-			sepNavSelRange = "{369, 0}";
-			sepNavVisRange = "{60, 362}";
+			sepNavIntBoundsRect = "{{0, 0}, {1157, 650}}";
+			sepNavSelRange = "{258, 24}";
+			sepNavVisRange = "{0, 422}";
 		};
 	};
 	3D03AA8B131EAA9400F6B225 /* UniversityMoreDetailViewController.m */ = {
 		uiCtxt = {
 			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{8559, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{8610, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{8660, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 9931}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {992, 3783}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1157, 4108}}";
 			sepNavSelRange = "{4545, 0}";
-			sepNavVisRange = "{3775, 1015}";
+			sepNavVisRange = "{824, 1600}";
 			sepNavWindowFrame = "{{291, 15}, {1216, 786}}";
 		};
 	};
@@ -2312,6 +2324,127 @@
 		vrLen = 1706;
 		vrLoc = 2869;
 	};
+	3D03ACC613214A6300F6B225 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* GreenLeague-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/ttt/Work/Dev/GreenLeague/GreenLeague-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	3D03ACC713214A6300F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03AA8B131EAA9400F6B225 /* UniversityMoreDetailViewController.m */;
+		name = "UniversityMoreDetailViewController.m: 129";
+		rLen = 0;
+		rLoc = 4545;
+		rType = 0;
+		vrLen = 1015;
+		vrLoc = 3775;
+	};
+	3D03ACC813214A6300F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 194";
+		rLen = 56;
+		rLoc = 5985;
+		rType = 0;
+		vrLen = 1021;
+		vrLoc = 5694;
+	};
+	3D03ACC913214A6300F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DF051C1131FA15700AC430F /* AwardClassHelper.m */;
+		name = "AwardClassHelper.m: 95";
+		rLen = 0;
+		rLoc = 2254;
+		rType = 0;
+		vrLen = 468;
+		vrLoc = 26;
+	};
+	3D03ACCA13214A6300F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DF051C1131FA15700AC430F /* AwardClassHelper.m */;
+		name = "AwardClassHelper.m: 100";
+		rLen = 0;
+		rLoc = 2523;
+		rType = 0;
+		vrLen = 763;
+		vrLoc = 1929;
+	};
+	3D03ACCB13214A6300F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9EE1317BD4F006FC601 /* University.h */;
+		name = "University.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 990;
+		vrLoc = 1393;
+	};
+	3D03ACCC13214A6300F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9EF1317BD4F006FC601 /* University.m */;
+		name = "University.m: 107";
+		rLen = 68;
+		rLoc = 2800;
+		rType = 0;
+		vrLen = 1794;
+		vrLoc = 2952;
+	};
+	3D03ACCF13214BF700F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DF051C1131FA15700AC430F /* AwardClassHelper.m */;
+		name = "AwardClassHelper.m: 100";
+		rLen = 0;
+		rLoc = 2523;
+		rType = 0;
+		vrLen = 787;
+		vrLoc = 1905;
+	};
+	3D03ACD013214BF700F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D308E581316BB8C00D37010 /* CompareViewController.h */;
+		name = "CompareViewController.h: 9";
+		rLen = 0;
+		rLoc = 164;
+		rType = 0;
+		vrLen = 234;
+		vrLoc = 0;
+	};
+	3D03ACD113214BF700F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D308E581316BB8C00D37010 /* CompareViewController.h */;
+		name = "CompareViewController.h: 9";
+		rLen = 0;
+		rLoc = 164;
+		rType = 0;
+		vrLen = 234;
+		vrLoc = 0;
+	};
+	3D03ACD213214BF700F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9EE1317BD4F006FC601 /* University.h */;
+		name = "University.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 990;
+		vrLoc = 1393;
+	};
+	3D03ACD313214BF700F6B225 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9EF1317BD4F006FC601 /* University.m */;
+		name = "University.m: 107";
+		rLen = 68;
+		rLoc = 2800;
+		rType = 0;
+		vrLen = 1794;
+		vrLoc = 2952;
+	};
 	3D308E091316552A00D37010 /* NSString+Helper.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {992, 286}}";
@@ -2343,17 +2476,17 @@
 	};
 	3D308E581316BB8C00D37010 /* CompareViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {992, 363}}";
-			sepNavSelRange = "{164, 0}";
-			sepNavVisRange = "{0, 234}";
+			sepNavIntBoundsRect = "{{0, 0}, {992, 332}}";
+			sepNavSelRange = "{229, 0}";
+			sepNavVisRange = "{0, 239}";
 			sepNavWindowFrame = "{{84, 204}, {1216, 786}}";
 		};
 	};
 	3D308E591316BB8C00D37010 /* CompareViewController.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {992, 676}}";
-			sepNavSelRange = "{220, 295}";
-			sepNavVisRange = "{31, 812}";
+			sepNavSelRange = "{516, 0}";
+			sepNavVisRange = "{145, 819}";
 		};
 	};
 	3D308E601316BBC600D37010 /* AboutViewController.h */ = {
@@ -2607,9 +2740,9 @@
 	};
 	3DB0D9EF1317BD4F006FC601 /* University.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1169, 4836}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1169, 4888}}";
 			sepNavSelRange = "{2800, 68}";
-			sepNavVisRange = "{2869, 1706}";
+			sepNavVisRange = "{2952, 1794}";
 			sepNavWindowFrame = "{{221, 96}, {1228, 832}}";
 		};
 	};
@@ -2647,9 +2780,9 @@
 	};
 	3DF051C1131FA15700AC430F /* AwardClassHelper.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {992, 1430}}";
-			sepNavSelRange = "{2254, 0}";
-			sepNavVisRange = "{0, 494}";
+			sepNavIntBoundsRect = "{{0, 0}, {992, 1326}}";
+			sepNavSelRange = "{2523, 0}";
+			sepNavVisRange = "{1905, 787}";
 		};
 	};
 	3DF051FB131FDEB600AC430F /* FindViewController.m:194 */ = {

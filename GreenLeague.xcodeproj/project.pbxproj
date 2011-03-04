@@ -131,13 +131,11 @@
 			children = (
 				1D3623240D0F684500981E51 /* GreenLeagueAppDelegate.h */,
 				1D3623250D0F684500981E51 /* GreenLeagueAppDelegate.m */,
-				3D308E581316BB8C00D37010 /* CompareViewController.h */,
-				3D308E591316BB8C00D37010 /* CompareViewController.m */,
-				3D308E5A1316BB8C00D37010 /* CompareViewController.xib */,
 				3D308E601316BBC600D37010 /* AboutViewController.h */,
 				3D308E611316BBC600D37010 /* AboutViewController.m */,
 				3D308E621316BBC600D37010 /* AboutViewController.xib */,
 				3D03AA81131EA8C100F6B225 /* Find */,
+				3D03ACCE13214BC800F6B225 /* Compare */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -218,6 +216,16 @@
 				3D03AA8C131EAA9400F6B225 /* UniversityMoreDetailViewController.xib */,
 			);
 			name = Find;
+			sourceTree = "<group>";
+		};
+		3D03ACCE13214BC800F6B225 /* Compare */ = {
+			isa = PBXGroup;
+			children = (
+				3D308E581316BB8C00D37010 /* CompareViewController.h */,
+				3D308E591316BB8C00D37010 /* CompareViewController.m */,
+				3D308E5A1316BB8C00D37010 /* CompareViewController.xib */,
+			);
+			name = Compare;
 			sourceTree = "<group>";
 		};
 		3D308E8A1316C5D500D37010 /* Models */ = {
