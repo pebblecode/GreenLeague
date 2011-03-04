@@ -277,7 +277,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>18</integer>
+									<integer>15</integer>
 									<integer>10</integer>
 									<integer>1</integer>
 									<integer>0</integer>
@@ -333,7 +333,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3D03ABDC1320FD0C00F6B225</string>
+										<string>3D03ABE41320FEF800F6B225</string>
 										<key>history</key>
 										<array>
 											<string>3D039FDC131BA6FE00F6B225</string>
@@ -388,7 +388,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>UniversityMoreDetailViewController.h</string>
+								<string>UniversityDetailViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -396,11 +396,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>UniversityMoreDetailViewController.h</string>
+										<string>UniversityDetailViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3D03ABDD1320FD0C00F6B225</string>
+										<string>3D03ABE71320FEF800F6B225</string>
 										<key>history</key>
 										<array>
 											<string>3DB0DA321317E0C5006FC601</string>
@@ -415,7 +415,8 @@
 											<string>3D03AA2E131EA21D00F6B225</string>
 											<string>3D03AA65131EA5F200F6B225</string>
 											<string>3D03ABAB1320FC3100F6B225</string>
-											<string>3D03ABB81320FC8200F6B225</string>
+											<string>3D03ABE51320FEF800F6B225</string>
+											<string>3D03ABE61320FEF800F6B225</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>

@@ -35,7 +35,7 @@ University *university;
 
 
 - (id)initWithUniversity:(University *)uni {
-    self = [super initWithNibName:nil bundle:nil]; // Load default nib
+    self = [super initWithNibName:@"UniversityMoreDetailViewController" bundle:nil];
     if (self) {
 		university = uni;
 		self.title = uni.sortName;
