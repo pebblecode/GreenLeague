@@ -37,7 +37,8 @@ University *university;
 - (id)initWithUniversity:(University *)uni {
     self = [super initWithNibName:nil bundle:nil]; // Load default nib
     if (self) {
-		university = uni;		
+		university = uni;
+		self.title = uni.sortName;
     }
     return self;
 }
