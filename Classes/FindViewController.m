@@ -275,8 +275,7 @@
 	if ([uni isValidAwardClass]) {
 		UniversityDetailViewController *uniDetailVC = [[UniversityDetailViewController alloc] initWithUniversity:uni];
 		[self.navigationController pushViewController:uniDetailVC animated:YES];
-				
-		//[uniDetailVC release]; // Crashes if released for some reason
+		[uniDetailVC release];
 	} else {
 		NSLog(@"Could not find award class for '%@' of award class '%@'", [uni name], [uni awardClass]);
 	}

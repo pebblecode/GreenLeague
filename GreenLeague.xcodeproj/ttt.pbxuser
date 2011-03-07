@@ -37,7 +37,7 @@
 			3D6572201324F30500F229FB /* FindViewController.m:152 */,
 			3D6572221324F30700F229FB /* FindViewController.m:167 */,
 			3D6572241324F31600F229FB /* FindViewController.m:219 */,
-			3D65723E1324F40700F229FB /* FindViewController.m:293 */,
+			3D65723E1324F40700F229FB /* FindViewController.m:292 */,
 			3D65725A1324F8BE00F229FB /* UniversitiesModel.m:52 */,
 			3D6572721324FA4500F229FB /* FindViewController.m:53 */,
 			3D65727D1324FA6900F229FB /* GreenLeagueAppDelegate.m:28 */,
@@ -313,6 +313,38 @@
 			3D6572F113250BB900F229FB /* PBXTextBookmark */ = 3D6572F113250BB900F229FB /* PBXTextBookmark */;
 			3D6572F213250BB900F229FB /* PBXTextBookmark */ = 3D6572F213250BB900F229FB /* PBXTextBookmark */;
 			3D6572F313250BB900F229FB /* PBXTextBookmark */ = 3D6572F313250BB900F229FB /* PBXTextBookmark */;
+			3D6572F613250C5500F229FB /* PBXTextBookmark */ = 3D6572F613250C5500F229FB /* PBXTextBookmark */;
+			3D6572F713250C5500F229FB /* PBXTextBookmark */ = 3D6572F713250C5500F229FB /* PBXTextBookmark */;
+			3D6572F813250C5500F229FB /* PBXTextBookmark */ = 3D6572F813250C5500F229FB /* PBXTextBookmark */;
+			3D6572FB132511D100F229FB /* PBXTextBookmark */ = 3D6572FB132511D100F229FB /* PBXTextBookmark */;
+			3D6572FC132511D100F229FB /* PBXTextBookmark */ = 3D6572FC132511D100F229FB /* PBXTextBookmark */;
+			3D6572FD132511D100F229FB /* PBXTextBookmark */ = 3D6572FD132511D100F229FB /* PBXTextBookmark */;
+			3D6572FE132511D100F229FB /* PBXTextBookmark */ = 3D6572FE132511D100F229FB /* PBXTextBookmark */;
+			3D6572FF132511D100F229FB /* PBXTextBookmark */ = 3D6572FF132511D100F229FB /* PBXTextBookmark */;
+			3D657300132511D100F229FB /* PBXTextBookmark */ = 3D657300132511D100F229FB /* PBXTextBookmark */;
+			3D6573031325121800F229FB /* PBXTextBookmark */ = 3D6573031325121800F229FB /* PBXTextBookmark */;
+			3D6573041325121800F229FB /* PBXTextBookmark */ = 3D6573041325121800F229FB /* PBXTextBookmark */;
+			3D6573051325121800F229FB /* PBXTextBookmark */ = 3D6573051325121800F229FB /* PBXTextBookmark */;
+			3D6573061325121800F229FB /* PBXTextBookmark */ = 3D6573061325121800F229FB /* PBXTextBookmark */;
+			3D6573071325121800F229FB /* PBXTextBookmark */ = 3D6573071325121800F229FB /* PBXTextBookmark */;
+			3D6573081325121800F229FB /* PBXTextBookmark */ = 3D6573081325121800F229FB /* PBXTextBookmark */;
+			3D65730B1325122D00F229FB /* PBXTextBookmark */ = 3D65730B1325122D00F229FB /* PBXTextBookmark */;
+			3D65730C1325122D00F229FB /* PBXTextBookmark */ = 3D65730C1325122D00F229FB /* PBXTextBookmark */;
+			3D65730D1325122D00F229FB /* PBXTextBookmark */ = 3D65730D1325122D00F229FB /* PBXTextBookmark */;
+			3D6573121325124D00F229FB /* PBXTextBookmark */ = 3D6573121325124D00F229FB /* PBXTextBookmark */;
+			3D6573131325124D00F229FB /* PBXTextBookmark */ = 3D6573131325124D00F229FB /* PBXTextBookmark */;
+			3D6573141325124D00F229FB /* PBXTextBookmark */ = 3D6573141325124D00F229FB /* PBXTextBookmark */;
+			3D6573171325133200F229FB /* PBXTextBookmark */ = 3D6573171325133200F229FB /* PBXTextBookmark */;
+			3D6573181325133200F229FB /* PBXTextBookmark */ = 3D6573181325133200F229FB /* PBXTextBookmark */;
+			3D65731B1325133A00F229FB /* PBXTextBookmark */ = 3D65731B1325133A00F229FB /* PBXTextBookmark */;
+			3D65731C1325133A00F229FB /* PBXTextBookmark */ = 3D65731C1325133A00F229FB /* PBXTextBookmark */;
+			3D65731D1325133A00F229FB /* PBXTextBookmark */ = 3D65731D1325133A00F229FB /* PBXTextBookmark */;
+			3D6573201325135400F229FB /* PBXTextBookmark */ = 3D6573201325135400F229FB /* PBXTextBookmark */;
+			3D6573211325135400F229FB /* PBXTextBookmark */ = 3D6573211325135400F229FB /* PBXTextBookmark */;
+			3D6573221325135400F229FB /* PBXTextBookmark */ = 3D6573221325135400F229FB /* PBXTextBookmark */;
+			3D6573231325138C00F229FB /* PBXTextBookmark */ = 3D6573231325138C00F229FB /* PBXTextBookmark */;
+			3D6573241325138C00F229FB /* PBXTextBookmark */ = 3D6573241325138C00F229FB /* PBXTextBookmark */;
+			3D6573251325138C00F229FB /* PBXTextBookmark */ = 3D6573251325138C00F229FB /* PBXTextBookmark */;
 			3DB0DA331317E0C5006FC601 = 3DB0DA331317E0C5006FC601 /* XDModelBookmark */;
 		};
 		sourceControlManager = 3DB0D93313151196006FC601 /* Source Control */;
@@ -477,8 +509,8 @@
 	3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {992, 1391}}";
-			sepNavSelRange = "{2569, 0}";
-			sepNavVisRange = "{2397, 454}";
+			sepNavSelRange = "{813, 0}";
+			sepNavVisRange = "{377, 863}";
 			sepNavWindowFrame = "{{199, 92}, {1216, 786}}";
 		};
 	};
@@ -704,7 +736,7 @@
 		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
 		name = "UniversityDetailViewController.m: 94";
 		rLen = 0;
-		rLoc = 2603;
+		rLoc = 2672;
 		rType = 0;
 		vrLen = 563;
 		vrLoc = 2293;
@@ -714,7 +746,7 @@
 		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
 		name = "UniversityDetailViewController.m: 93";
 		rLen = 0;
-		rLoc = 2569;
+		rLoc = 2638;
 		rType = 0;
 		vrLen = 454;
 		vrLoc = 2397;
@@ -871,9 +903,9 @@
 	};
 	3D03AD501321676A00F6B225 /* UniversitiesModel.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {992, 4914}}";
-			sepNavSelRange = "{1279, 0}";
-			sepNavVisRange = "{948, 703}";
+			sepNavIntBoundsRect = "{{0, 0}, {720, 4641}}";
+			sepNavSelRange = "{10810, 0}";
+			sepNavVisRange = "{10492, 475}";
 			sepNavWindowFrame = "{{15, 267}, {1216, 786}}";
 		};
 	};
@@ -971,7 +1003,7 @@
 		isa = PBXTextBookmark;
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 1";
-		rLen = 9993;
+		rLen = 9947;
 		rLoc = 0;
 		rType = 0;
 		vrLen = 1250;
@@ -1261,7 +1293,7 @@
 		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
 		name = "UniversitiesModel.m: 30";
 		rLen = 0;
-		rLoc = 1553;
+		rLoc = 1555;
 		rType = 0;
 		vrLen = 1231;
 		vrLoc = 0;
@@ -1291,7 +1323,7 @@
 		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
 		name = "UniversitiesModel.m: 30";
 		rLen = 0;
-		rLoc = 1553;
+		rLoc = 1555;
 		rType = 0;
 		vrLen = 1231;
 		vrLoc = 0;
@@ -1321,7 +1353,7 @@
 		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
 		name = "UniversitiesModel.m: 30";
 		rLen = 0;
-		rLoc = 1553;
+		rLoc = 1555;
 		rType = 0;
 		vrLen = 1231;
 		vrLoc = 0;
@@ -1401,7 +1433,7 @@
 		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
 		name = "UniversitiesModel.m: 30";
 		rLen = 0;
-		rLoc = 1553;
+		rLoc = 1555;
 		rType = 0;
 		vrLen = 1231;
 		vrLoc = 0;
@@ -1461,7 +1493,7 @@
 		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
 		name = "UniversitiesModel.m: 314";
 		rLen = 0;
-		rLoc = 11704;
+		rLoc = 11706;
 		rType = 0;
 		vrLen = 1298;
 		vrLoc = 10773;
@@ -1491,7 +1523,7 @@
 		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
 		name = "UniversitiesModel.m: 50";
 		rLen = 94;
-		rLoc = 1459;
+		rLoc = 1461;
 		rType = 0;
 		vrLen = 1199;
 		vrLoc = 869;
@@ -1551,7 +1583,7 @@
 		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
 		name = "UniversitiesModel.m: 50";
 		rLen = 94;
-		rLoc = 1459;
+		rLoc = 1461;
 		rType = 0;
 		vrLen = 1195;
 		vrLoc = 869;
@@ -1598,7 +1630,7 @@
 		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
 		name = "UniversitiesModel.m: 50";
 		rLen = 94;
-		rLoc = 1459;
+		rLoc = 1461;
 		rType = 0;
 		vrLen = 1109;
 		vrLoc = 555;
@@ -1618,7 +1650,7 @@
 		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
 		name = "UniversitiesModel.m: 52";
 		rLen = 0;
-		rLoc = 1556;
+		rLoc = 1558;
 		rType = 0;
 		vrLen = 655;
 		vrLoc = 938;
@@ -1658,7 +1690,7 @@
 		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
 		name = "UniversitiesModel.m: 313";
 		rLen = 0;
-		rLoc = 11557;
+		rLoc = 11559;
 		rType = 0;
 		vrLen = 678;
 		vrLoc = 11150;
@@ -1708,7 +1740,7 @@
 		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
 		name = "UniversitiesModel.m: 49";
 		rLen = 0;
-		rLoc = 1353;
+		rLoc = 1355;
 		rType = 0;
 		vrLen = 1182;
 		vrLoc = 606;
@@ -1758,7 +1790,7 @@
 		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
 		name = "UniversitiesModel.m: 49";
 		rLen = 0;
-		rLoc = 1353;
+		rLoc = 1355;
 		rType = 0;
 		vrLen = 1182;
 		vrLoc = 606;
@@ -1808,7 +1840,7 @@
 		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
 		name = "UniversitiesModel.m: 49";
 		rLen = 0;
-		rLoc = 1353;
+		rLoc = 1355;
 		rType = 0;
 		vrLen = 1182;
 		vrLoc = 606;
@@ -1920,7 +1952,7 @@
 		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
 		name = "UniversitiesModel.m: 49";
 		rLen = 0;
-		rLoc = 1353;
+		rLoc = 1355;
 		rType = 0;
 		vrLen = 1182;
 		vrLoc = 606;
@@ -1950,7 +1982,7 @@
 		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
 		name = "UniversitiesModel.m: 49";
 		rLen = 0;
-		rLoc = 1353;
+		rLoc = 1355;
 		rType = 0;
 		vrLen = 1182;
 		vrLoc = 606;
@@ -1980,12 +2012,12 @@
 		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
 		name = "UniversitiesModel.m: 49";
 		rLen = 0;
-		rLoc = 1353;
+		rLoc = 1355;
 		rType = 0;
 		vrLen = 1182;
 		vrLoc = 606;
 	};
-	3D65723E1324F40700F229FB /* FindViewController.m:293 */ = {
+	3D65723E1324F40700F229FB /* FindViewController.m:292 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -1997,7 +2029,7 @@
 		functionName = "-universityFromIndexPath:";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 293;
+		lineNumber = 292;
 		location = GreenLeague;
 		modificationTime = 321190515.547563;
 		originalNumberOfMultipleMatches = 1;
@@ -2038,7 +2070,7 @@
 		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
 		name = "UniversitiesModel.m: 49";
 		rLen = 0;
-		rLoc = 1353;
+		rLoc = 1355;
 		rType = 0;
 		vrLen = 1237;
 		vrLoc = 891;
@@ -2068,7 +2100,7 @@
 		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
 		name = "UniversitiesModel.m: 49";
 		rLen = 0;
-		rLoc = 1353;
+		rLoc = 1355;
 		rType = 0;
 		vrLen = 1237;
 		vrLoc = 891;
@@ -2098,7 +2130,7 @@
 		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
 		name = "UniversitiesModel.m: 49";
 		rLen = 0;
-		rLoc = 1353;
+		rLoc = 1355;
 		rType = 0;
 		vrLen = 1237;
 		vrLoc = 891;
@@ -2146,7 +2178,7 @@
 		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
 		name = "UniversitiesModel.m: 49";
 		rLen = 0;
-		rLoc = 1353;
+		rLoc = 1355;
 		rType = 0;
 		vrLen = 1233;
 		vrLoc = 555;
@@ -2156,7 +2188,7 @@
 		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
 		name = "UniversitiesModel.m: 60";
 		rLen = 0;
-		rLoc = 1551;
+		rLoc = 1553;
 		rType = 0;
 		vrLen = 1269;
 		vrLoc = 555;
@@ -2186,7 +2218,7 @@
 		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
 		name = "UniversitiesModel.m: 48";
 		rLen = 0;
-		rLoc = 1279;
+		rLoc = 1281;
 		rType = 0;
 		vrLen = 1267;
 		vrLoc = 555;
@@ -2294,7 +2326,7 @@
 		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
 		name = "UniversitiesModel.m: 60";
 		rLen = 0;
-		rLoc = 1551;
+		rLoc = 1553;
 		rType = 0;
 		vrLen = 1121;
 		vrLoc = 891;
@@ -2362,7 +2394,7 @@
 		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
 		name = "UniversitiesModel.m: 60";
 		rLen = 0;
-		rLoc = 1551;
+		rLoc = 1553;
 		rType = 0;
 		vrLen = 1121;
 		vrLoc = 891;
@@ -2410,7 +2442,7 @@
 		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
 		name = "UniversitiesModel.m: 310";
 		rLen = 0;
-		rLoc = 11205;
+		rLoc = 11207;
 		rType = 0;
 		vrLen = 335;
 		vrLoc = 11275;
@@ -2447,7 +2479,7 @@
 		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
 		name = "UniversitiesModel.m: 60";
 		rLen = 0;
-		rLoc = 1551;
+		rLoc = 1553;
 		rType = 0;
 		vrLen = 1121;
 		vrLoc = 891;
@@ -2466,7 +2498,7 @@
 		isa = PBXTextBookmark;
 		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
 		rLen = 0;
-		rLoc = 1551;
+		rLoc = 1553;
 		rType = 0;
 	};
 	3D65729A1324FCC300F229FB /* PBXTextBookmark */ = {
@@ -2474,7 +2506,7 @@
 		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
 		name = "UniversitiesModel.m: 58";
 		rLen = 0;
-		rLoc = 1551;
+		rLoc = 1553;
 		rType = 0;
 		vrLen = 297;
 		vrLoc = 1378;
@@ -2511,7 +2543,7 @@
 		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
 		name = "UniversitiesModel.m: 58";
 		rLen = 0;
-		rLoc = 1551;
+		rLoc = 1553;
 		rType = 0;
 		vrLen = 1217;
 		vrLoc = 891;
@@ -2541,7 +2573,7 @@
 		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
 		name = "UniversitiesModel.m: 58";
 		rLen = 0;
-		rLoc = 1551;
+		rLoc = 1553;
 		rType = 0;
 		vrLen = 2232;
 		vrLoc = 2182;
@@ -2571,7 +2603,7 @@
 		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
 		name = "UniversitiesModel.m: 49";
 		rLen = 0;
-		rLoc = 1279;
+		rLoc = 1281;
 		rType = 0;
 		vrLen = 1190;
 		vrLoc = 11207;
@@ -2581,7 +2613,7 @@
 		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
 		name = "FindViewController.m: 325";
 		rLen = 0;
-		rLoc = 9984;
+		rLoc = 9938;
 		rType = 0;
 		vrLen = 585;
 		vrLoc = 0;
@@ -2611,7 +2643,7 @@
 		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
 		name = "UniversitiesModel.m: 49";
 		rLen = 0;
-		rLoc = 1279;
+		rLoc = 1281;
 		rType = 0;
 		vrLen = 1190;
 		vrLoc = 11207;
@@ -2641,7 +2673,7 @@
 		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
 		name = "UniversitiesModel.m: 49";
 		rLen = 0;
-		rLoc = 1279;
+		rLoc = 1281;
 		rType = 0;
 		vrLen = 1347;
 		vrLoc = 304;
@@ -2671,7 +2703,7 @@
 		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
 		name = "UniversitiesModel.m: 49";
 		rLen = 0;
-		rLoc = 1279;
+		rLoc = 1281;
 		rType = 0;
 		vrLen = 1349;
 		vrLoc = 304;
@@ -2711,7 +2743,7 @@
 		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
 		name = "UniversitiesModel.m: 288";
 		rLen = 0;
-		rLoc = 10853;
+		rLoc = 10855;
 		rType = 0;
 		vrLen = 1141;
 		vrLoc = 8242;
@@ -2721,7 +2753,7 @@
 		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
 		name = "UniversitiesModel.m: 49";
 		rLen = 0;
-		rLoc = 1279;
+		rLoc = 1281;
 		rType = 0;
 		vrLen = 703;
 		vrLoc = 948;
@@ -2775,6 +2807,323 @@
 		rType = 0;
 		vrLen = 1569;
 		vrLoc = 3391;
+	};
+	3D6572F613250C5500F229FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
+		name = "UniversitiesModel.m: 49";
+		rLen = 0;
+		rLoc = 1281;
+		rType = 0;
+		vrLen = 705;
+		vrLoc = 948;
+	};
+	3D6572F713250C5500F229FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 55";
+		rLen = 0;
+		rLoc = 1318;
+		rType = 0;
+		vrLen = 322;
+		vrLoc = 386;
+	};
+	3D6572F813250C5500F229FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9EF1317BD4F006FC601 /* University.m */;
+		name = "University.m: 160";
+		rLen = 0;
+		rLoc = 4105;
+		rType = 0;
+		vrLen = 1569;
+		vrLoc = 3391;
+	};
+	3D6572FB132511D100F229FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
+		name = "UniversitiesModel.m: 49";
+		rLen = 0;
+		rLoc = 1281;
+		rType = 0;
+		vrLen = 705;
+		vrLoc = 948;
+	};
+	3D6572FC132511D100F229FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
+		name = "UniversityDetailViewController.m: 95";
+		rLen = 0;
+		rLoc = 2672;
+		rType = 0;
+		vrLen = 685;
+		vrLoc = 2221;
+	};
+	3D6572FD132511D100F229FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 279";
+		rLen = 0;
+		rLoc = 8482;
+		rType = 0;
+		vrLen = 836;
+		vrLoc = 8051;
+	};
+	3D6572FE132511D100F229FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 279";
+		rLen = 0;
+		rLoc = 8504;
+		rType = 0;
+		vrLen = 836;
+		vrLoc = 8052;
+	};
+	3D6572FF132511D100F229FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 55";
+		rLen = 0;
+		rLoc = 1318;
+		rType = 0;
+		vrLen = 322;
+		vrLoc = 386;
+	};
+	3D657300132511D100F229FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9EF1317BD4F006FC601 /* University.m */;
+		name = "University.m: 160";
+		rLen = 0;
+		rLoc = 4105;
+		rType = 0;
+		vrLen = 1517;
+		vrLoc = 3458;
+	};
+	3D6573031325121800F229FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 53";
+		rLen = 0;
+		rLoc = 1275;
+		rType = 0;
+		vrLen = 1100;
+		vrLoc = 752;
+	};
+	3D6573041325121800F229FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
+		name = "UniversityDetailViewController.m: 95";
+		rLen = 0;
+		rLoc = 2672;
+		rType = 0;
+		vrLen = 685;
+		vrLoc = 2221;
+	};
+	3D6573051325121800F229FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
+		name = "UniversityDetailViewController.m: 34";
+		rLen = 0;
+		rLoc = 749;
+		rType = 0;
+		vrLen = 852;
+		vrLoc = 377;
+	};
+	3D6573061325121800F229FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 30";
+		rLen = 0;
+		rLoc = 662;
+		rType = 0;
+		vrLen = 322;
+		vrLoc = 385;
+	};
+	3D6573071325121800F229FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 30";
+		rLen = 0;
+		rLoc = 662;
+		rType = 0;
+		vrLen = 676;
+		vrLoc = 8052;
+	};
+	3D6573081325121800F229FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9EF1317BD4F006FC601 /* University.m */;
+		name = "University.m: 160";
+		rLen = 0;
+		rLoc = 4105;
+		rType = 0;
+		vrLen = 1533;
+		vrLoc = 3491;
+	};
+	3D65730B1325122D00F229FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
+		name = "UniversityDetailViewController.m: 35";
+		rLen = 0;
+		rLoc = 813;
+		rType = 0;
+		vrLen = 736;
+		vrLoc = 377;
+	};
+	3D65730C1325122D00F229FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 30";
+		rLen = 0;
+		rLoc = 662;
+		rType = 0;
+		vrLen = 676;
+		vrLoc = 8052;
+	};
+	3D65730D1325122D00F229FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9EF1317BD4F006FC601 /* University.m */;
+		name = "University.m: 160";
+		rLen = 0;
+		rLoc = 4105;
+		rType = 0;
+		vrLen = 1559;
+		vrLoc = 3558;
+	};
+	3D6573121325124D00F229FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
+		name = "UniversityDetailViewController.m: 28";
+		rLen = 0;
+		rLoc = 612;
+		rType = 0;
+		vrLen = 901;
+		vrLoc = 377;
+	};
+	3D6573131325124D00F229FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 30";
+		rLen = 0;
+		rLoc = 662;
+		rType = 0;
+		vrLen = 679;
+		vrLoc = 8052;
+	};
+	3D6573141325124D00F229FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9EF1317BD4F006FC601 /* University.m */;
+		name = "University.m: 160";
+		rLen = 0;
+		rLoc = 4105;
+		rType = 0;
+		vrLen = 1662;
+		vrLoc = 3558;
+	};
+	3D6573171325133200F229FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
+		rLen = 35;
+		rLoc = 10775;
+		rType = 0;
+	};
+	3D6573181325133200F229FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */;
+		name = "UniversitiesModel.m: 288";
+		rLen = 0;
+		rLoc = 10810;
+		rType = 0;
+		vrLen = 475;
+		vrLoc = 10492;
+	};
+	3D65731B1325133A00F229FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
+		name = "UniversityDetailViewController.m: 32";
+		rLen = 0;
+		rLoc = 718;
+		rType = 0;
+		vrLen = 901;
+		vrLoc = 377;
+	};
+	3D65731C1325133A00F229FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 30";
+		rLen = 0;
+		rLoc = 662;
+		rType = 0;
+		vrLen = 679;
+		vrLoc = 8052;
+	};
+	3D65731D1325133A00F229FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9EF1317BD4F006FC601 /* University.m */;
+		name = "University.m: 160";
+		rLen = 0;
+		rLoc = 4105;
+		rType = 0;
+		vrLen = 1662;
+		vrLoc = 3558;
+	};
+	3D6573201325135400F229FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
+		name = "UniversityDetailViewController.m: 34";
+		rLen = 0;
+		rLoc = 813;
+		rType = 0;
+		vrLen = 747;
+		vrLoc = 377;
+	};
+	3D6573211325135400F229FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 30";
+		rLen = 0;
+		rLoc = 662;
+		rType = 0;
+		vrLen = 676;
+		vrLoc = 8052;
+	};
+	3D6573221325135400F229FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9EF1317BD4F006FC601 /* University.m */;
+		name = "University.m: 160";
+		rLen = 0;
+		rLoc = 4105;
+		rType = 0;
+		vrLen = 1532;
+		vrLoc = 3691;
+	};
+	3D6573231325138C00F229FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */;
+		name = "UniversityDetailViewController.m: 34";
+		rLen = 0;
+		rLoc = 813;
+		rType = 0;
+		vrLen = 863;
+		vrLoc = 377;
+	};
+	3D6573241325138C00F229FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9471315206D006FC601 /* FindViewController.m */;
+		name = "FindViewController.m: 278";
+		rLen = 0;
+		rLoc = 8504;
+		rType = 0;
+		vrLen = 631;
+		vrLoc = 8068;
+	};
+	3D6573251325138C00F229FB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3DB0D9EF1317BD4F006FC601 /* University.m */;
+		name = "University.m: 160";
+		rLen = 0;
+		rLoc = 4105;
+		rType = 0;
+		vrLen = 1532;
+		vrLoc = 3691;
 	};
 	3DB0D92413151192006FC601 /* GreenLeague */ = {
 		isa = PBXExecutable;
@@ -2831,9 +3180,9 @@
 	};
 	3DB0D9471315206D006FC601 /* FindViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {992, 4394}}";
-			sepNavSelRange = "{1318, 0}";
-			sepNavVisRange = "{386, 322}";
+			sepNavIntBoundsRect = "{{0, 0}, {992, 4264}}";
+			sepNavSelRange = "{8504, 0}";
+			sepNavVisRange = "{8068, 631}";
 			sepNavWindowFrame = "{{180, 42}, {1228, 832}}";
 		};
 	};
@@ -2856,7 +3205,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1169, 4602}}";
 			sepNavSelRange = "{4105, 0}";
-			sepNavVisRange = "{3391, 1569}";
+			sepNavVisRange = "{3691, 1532}";
 			sepNavWindowFrame = "{{221, 96}, {1228, 832}}";
 		};
 	};

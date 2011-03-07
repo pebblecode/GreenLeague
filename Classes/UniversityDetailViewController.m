@@ -31,7 +31,7 @@ University *university;
 - (id)initWithUniversity:(University *)uni {
     self = [super initWithNibName:nil bundle:nil]; // Load default nib
     if (self) {
-		university = uni;		
+		university = [uni retain]; // Keep a reference to the university
     }
     return self;
 }
@@ -77,7 +77,8 @@ University *university;
 
 
 - (void)dealloc {
-
+	[university release];
+	
 	[nameLabel release];
 	[rank2010Label release];
 	[rank2009Label release];
