@@ -9,7 +9,6 @@
 #import "FindViewController.h"
 #import "UniversityDetailViewController.h"
 #import "University.h"
-//#import "NSString+Helper.h"
 #import "AwardClassHelper.h"
 
 
@@ -24,20 +23,9 @@
 // Private methods
 @interface FindViewController()
 
-//- (void)deleteDB;
-
-// Not needed anymore - handled by UniversitiesModel
-//- (void)fetchUniversitiesBySortControl;
-//- (void)fetchUniversitiesFromDBSortedByRank;
-//- (void)fetchUniversitiesFromDBSortedByName;
 - (University *)universityFromIndexPath:(NSIndexPath *)indexPath;
 
 - (void)sortControlValueChange;
-
-//- (void)loadGreenLeagueDataFromFileToDB;
-//- (NSString *)dbPath;
-//- (Boolean)dbExists;
-//- (void)setupDB;
 - (Boolean)isRankSort;
 - (Boolean)isNameSort;
 
@@ -84,14 +72,7 @@
 	UIBarButtonItem *segmentBarItem = [[UIBarButtonItem alloc] initWithCustomView:sortControl];    
 	self.navigationItem.rightBarButtonItem = segmentBarItem;
 	[segmentBarItem release];
-	
-	// --------------------------------------------------
-	// To remove the db all the time (for debugging only)
-	//[self deleteDB];		
-	// --------------------------------------------------	
-	
-	// Not needed as it is called when awardClasses is used
-	//[self fetchUniversitiesBySortControl];
+
 }
 
 
@@ -141,13 +122,7 @@
 }
 
 
-- (void)dealloc {
-	//	[sortedUniversities release];
-	//	
-	//	[managedObjectContext release];
-	//	[managedObjectModel release];
-	//	[persistentStoreCoordinator release];
-	
+- (void)dealloc {	
 	[sortControl release];
 	[universitiesModel release];
 	
@@ -334,9 +309,7 @@
 #pragma mark
 
 - (void)sortControlValueChange {	
-	//[self fetchUniversitiesBySortControl];
-
-	// Table methods should handle all sort changes - just need to reload the data to run all the table methods
+	// Table methods should handle all sort changes - just need to reload the data to run all the table methods again
 	
 	// Reload data and scroll to the top
 	[self.tableView reloadData];	
@@ -350,22 +323,6 @@
 - (Boolean)isNameSort {
 	return (self.sortControl.selectedSegmentIndex == kSortByNameControlIndex);
 }
-
-// Fetch the results from the database and sort by the value of the sort control
-//- (void)fetchUniversitiesBySortControl {
-//	
-//	// Only fetch new sort if value has changed
-//	if (self.sortControl.selectedSegmentIndex != universitySortIndex) {	
-//		
-//		if ([self isRankSort]) {
-//			[self fetchUniversitiesFromDBSortedByRank];
-//		} else if ([self isNameSort]) {
-//			[self fetchUniversitiesFromDBSortedByName];
-//		}		
-//		
-//	}
-//	universitySortIndex = self.sortControl.selectedSegmentIndex;
-//}
 
 
 @end
