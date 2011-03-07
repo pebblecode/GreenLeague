@@ -9,7 +9,7 @@
 #import "FindViewController.h"
 #import "UniversityDetailViewController.h"
 #import "University.h"
-#import "NSString+Helper.h"
+//#import "NSString+Helper.h"
 #import "AwardClassHelper.h"
 
 
@@ -24,11 +24,10 @@
 // Private methods
 @interface FindViewController()
 
-@property (nonatomic, retain) UILocalizedIndexedCollation *collation;
-
 //- (void)deleteDB;
 
-- (void)fetchUniversitiesBySortControl;
+// Not needed anymore - handled by UniversitiesModel
+//- (void)fetchUniversitiesBySortControl;
 //- (void)fetchUniversitiesFromDBSortedByRank;
 //- (void)fetchUniversitiesFromDBSortedByName;
 - (University *)universityFromIndexPath:(NSIndexPath *)indexPath;
@@ -62,8 +61,8 @@
 }
 
 - (id)initWithUniversitiesModel:(UniversitiesModel *)unisModel {	
-	if ((self = [self initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {			
-		universitiesModel = unisModel;
+	if ((self = [self initWithNibName:@"FindViewController" bundle:nil])) {
+		universitiesModel = [unisModel retain];
 	}
 	return self;	
 }
@@ -83,7 +82,7 @@
 	
 	// Add sort control to nav bar
 	UIBarButtonItem *segmentBarItem = [[UIBarButtonItem alloc] initWithCustomView:sortControl];    
-	self.navigationItem.rightBarButtonItem = segmentBarItem;	
+	self.navigationItem.rightBarButtonItem = segmentBarItem;
 	[segmentBarItem release];
 	
 	// --------------------------------------------------
@@ -93,8 +92,6 @@
 	
 	// Not needed as it is called when awardClasses is used
 	//[self fetchUniversitiesBySortControl];
-	
-	TODO: Remove all references to university model!@!!RFDQW@£$R
 }
 
 
@@ -128,6 +125,37 @@
 
 
 #pragma mark -
+#pragma mark Memory management
+
+- (void)didReceiveMemoryWarning {
+    // Releases the view if it doesn't have a superview.
+    [super didReceiveMemoryWarning];
+    
+    // Relinquish ownership any cached data, images, etc. that aren't in use.
+	NSLog(@"didReceiveMemoryWarning");
+}
+
+- (void)viewDidUnload {
+    // Relinquish ownership of anything that can be recreated in viewDidLoad or on demand.
+    // For example: self.myOutlet = nil;
+}
+
+
+- (void)dealloc {
+	//	[sortedUniversities release];
+	//	
+	//	[managedObjectContext release];
+	//	[managedObjectModel release];
+	//	[persistentStoreCoordinator release];
+	
+	[sortControl release];
+	[universitiesModel release];
+	
+    [super dealloc];
+}
+
+
+#pragma mark -
 #pragma mark === Table view data source ===
 #pragma mark
 
@@ -135,9 +163,9 @@
     int sections;
 	
 	if ([self isRankSort]) {
-		sections = [self.awardClasses count];
+		sections = [self.universitiesModel.awardClasses count];
 	} else if ([self isNameSort]) {
-		sections = [[collation sectionTitles] count];
+		sections = [[self.universitiesModel.collation sectionTitles] count];
 	}	
 
     return sections;
@@ -149,9 +177,9 @@
     int sections;
 	
 	if ([self isRankSort]) {
-		sections = [[self.awardClasses objectAtIndex:section] count];
+		sections = [[self.universitiesModel.awardClasses objectAtIndex:section] count];
 	} else if ([self isNameSort]) {
-		sections = [[self.sortedUniversities objectAtIndex:section] count];		
+		sections = [[self.universitiesModel.sortedUniversities objectAtIndex:section] count];		
 	}		
 	
     return sections;
@@ -196,7 +224,7 @@
 	if ([self isRankSort]) {
 		headerTitle = [[AwardClassHelper awardClassNames] objectAtIndex:section];
 	} else if ([self isNameSort]) {
-		headerTitle = [[collation sectionTitles] objectAtIndex:section];
+		headerTitle = [[self.universitiesModel.collation sectionTitles] objectAtIndex:section];
 	}
     return headerTitle;
 }
@@ -206,7 +234,7 @@
 	if ([self isRankSort]) {
 		indexTitles = [AwardClassHelper awardClassIndexTitles];
 	} else if ([self isNameSort]) {
-		indexTitles = [collation sectionIndexTitles];
+		indexTitles = [self.universitiesModel.collation sectionIndexTitles];
 	}
     
 	return indexTitles;
@@ -217,7 +245,7 @@
 	if ([self isRankSort]) {
 		section = index; // Same as index
 	} else if ([self isNameSort]) {
-		section = [collation sectionForSectionIndexTitleAtIndex:index];
+		section = [self.universitiesModel.collation sectionForSectionIndexTitleAtIndex:index];
 	}    
 	return section;
 }
@@ -290,54 +318,25 @@
 	University *uni;
 	
 	if ([self isRankSort]) {		
-		NSArray *universitiesInAwardClass = [self.awardClasses objectAtIndex:indexPath.section];	
+		NSArray *universitiesInAwardClass = [self.universitiesModel.awardClasses objectAtIndex:indexPath.section];	
 		uni = [universitiesInAwardClass objectAtIndex:indexPath.row];
 	} else if ([self isNameSort]) {		
-		NSArray *alphabetSectionUniversities = [self.sortedUniversities objectAtIndex:indexPath.section];	
+		NSArray *alphabetSectionUniversities = [self.universitiesModel.sortedUniversities objectAtIndex:indexPath.section];	
 		uni = [alphabetSectionUniversities objectAtIndex:indexPath.row];		
 	}
 	
 	return uni;
 }
 
-#pragma mark -
-#pragma mark Memory management
-
-- (void)didReceiveMemoryWarning {
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Relinquish ownership any cached data, images, etc. that aren't in use.
-	NSLog(@"didReceiveMemoryWarning");
-}
-
-- (void)viewDidUnload {
-    // Relinquish ownership of anything that can be recreated in viewDidLoad or on demand.
-    // For example: self.myOutlet = nil;
-}
-
-
-- (void)dealloc {
-//	[sortedUniversities release];
-//	
-//	[awardClasses release];
-//	[collation release];
-//	
-//	[managedObjectContext release];
-//	[managedObjectModel release];
-//	[persistentStoreCoordinator release];
-	
-	[sortControl release];
-	
-    [super dealloc];
-}
 
 #pragma mark -
 #pragma mark === Sort control helper methods ===
 #pragma mark
 
 - (void)sortControlValueChange {	
-	[self fetchUniversitiesBySortControl];
+	//[self fetchUniversitiesBySortControl];
+
+	// Table methods should handle all sort changes - just need to reload the data to run all the table methods
 	
 	// Reload data and scroll to the top
 	[self.tableView reloadData];	
@@ -353,20 +352,20 @@
 }
 
 // Fetch the results from the database and sort by the value of the sort control
-- (void)fetchUniversitiesBySortControl {
-	
-	// Only fetch new sort if value has changed
-	if (self.sortControl.selectedSegmentIndex != universitySortIndex) {	
-		
-		if ([self isRankSort]) {
-			[self fetchUniversitiesFromDBSortedByRank];
-		} else if ([self isNameSort]) {
-			[self fetchUniversitiesFromDBSortedByName];
-		}		
-		
-	}
-	universitySortIndex = self.sortControl.selectedSegmentIndex;
-}
+//- (void)fetchUniversitiesBySortControl {
+//	
+//	// Only fetch new sort if value has changed
+//	if (self.sortControl.selectedSegmentIndex != universitySortIndex) {	
+//		
+//		if ([self isRankSort]) {
+//			[self fetchUniversitiesFromDBSortedByRank];
+//		} else if ([self isNameSort]) {
+//			[self fetchUniversitiesFromDBSortedByName];
+//		}		
+//		
+//	}
+//	universitySortIndex = self.sortControl.selectedSegmentIndex;
+//}
 
 
 @end

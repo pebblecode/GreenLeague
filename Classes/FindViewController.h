@@ -8,6 +8,7 @@
 
 #import <CoreData/CoreData.h>
 #import <UIKit/UIKit.h>
+#import "UniversitiesModel.h"
 
 
 @interface FindViewController : UITableViewController {

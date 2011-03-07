@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
 
 @interface UniversitiesModel : NSObject {
@@ -20,8 +21,8 @@
 }
 
 @property (nonatomic, retain) NSMutableArray *sortedUniversities;
-
 @property (nonatomic, retain) NSMutableArray *awardClasses;
+@property (nonatomic, retain) UILocalizedIndexedCollation *collation;
 
 @property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;

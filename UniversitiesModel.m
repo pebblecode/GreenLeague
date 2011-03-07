@@ -7,6 +7,9 @@
 //
 
 #import "UniversitiesModel.h"
+#import "University.h"
+#import "AwardClassHelper.h"
+#import "NSString+Helper.h"
 
 // Data source file minus the file extension
 static NSString *kDataSourceFile = @"gl2010";
@@ -20,14 +23,39 @@ static NSString *kDBFieldName = @"name";
 //static NSString *kDBFieldScore = @"score";
 static NSString *kDBFieldAwardClass = @"awardClass";
 
+@interface UniversitiesModel()
+
+- (void)fetchUniversitiesFromDBSortedByRank;
+- (void)fetchUniversitiesFromDBSortedByName;
+
+- (void)loadGreenLeagueDataFromFileToDB;
+- (NSString *)dbPath;
+- (Boolean)dbExists;
+- (void)setupDB;
+- (void)deleteDB;
+
+@end
+
+
 
 @implementation UniversitiesModel
 
 @synthesize sortedUniversities, awardClasses, collation, managedObjectContext, managedObjectModel, persistentStoreCoordinator;
 
 - (id)init {
-	if ((self = [self init])) {			
+	if ((self = [super init])) {			
+		// --------------------------------------------------
+		// To remove the db all the time (for debugging only)
+		[self deleteDB];		
+		// --------------------------------------------------
+		
 		[self setupDB];
+		
+		// Get both types of sort for the time being
+		// TODO: make this more elegant
+		[self fetchUniversitiesFromDBSortedByRank];
+		[self fetchUniversitiesFromDBSortedByName];
+		
 	}
 	return self;		
 }
@@ -268,8 +296,7 @@ static NSString *kDBFieldAwardClass = @"awardClass";
 - (NSMutableArray *)awardClasses {
 	if (!awardClasses) {
 		// Fetch the results from the database and sort by the value of the sort control
-		awardClasses = [[NSMutableArray alloc] initWithCapacity:0];
-		[self fetchUniversitiesBySortControl];
+		awardClasses = [[NSMutableArray alloc] initWithCapacity:0];		
 	}
 	
 	return awardClasses;
