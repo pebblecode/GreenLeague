@@ -21,11 +21,8 @@ static NSString *kDataSourceTitleKey = @"title";
 static NSString *kDataSourceScoreKey = @"score";
 static NSString *kDataSourceTotalScoreKey = @"totalScore";
 
+// Private
 @interface UniversityMoreDetailViewController()
-
-University *university;
-
-@property (nonatomic, retain) University *university;
 
 - (NSDictionary *)findDataForIndexPath:(NSIndexPath *)indexPath;
 

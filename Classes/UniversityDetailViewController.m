@@ -14,10 +14,6 @@
 
 @interface UniversityDetailViewController()
 
-University *university;
-
-@property (nonatomic, retain) University *university;
-
 @end
 
 

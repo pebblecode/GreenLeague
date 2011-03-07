@@ -7,14 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "UniversitiesModel.h"
 
 @interface CompareViewController : UITableViewController {
 	NSMutableArray *universitiesToCompare;
+	UniversitiesModel *universitiesModel;
 }
 
 @property (nonatomic, retain) NSMutableArray *universitiesToCompare;
+@property (nonatomic, retain) UniversitiesModel *universitiesModel;
 
+- (id)initWithUniversitiesModel:(UniversitiesModel *)unisModel;
+
+- (IBAction)addButtonPress;
 - (IBAction)compareButtonPress;
 
 @end

@@ -7,18 +7,36 @@
 //
 
 #import "CompareViewController.h"
-
+#import "University.h"
 
 @implementation CompareViewController
 
-@synthesize universitiesToCompare;
+@synthesize universitiesToCompare, universitiesModel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 	if ((self = [super initWithNibName:@"CompareViewController" bundle:nibBundleOrNil])) {
-		self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Compare" image:[UIImage imageNamed:@"12-eye.png"] tag:1];		
+		self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Compare" image:[UIImage imageNamed:@"12-eye.png"] tag:1];
+        
+        // TODO: Set up universities to compare from memory
+        self.universitiesToCompare = [NSMutableArray arrayWithCapacity:0];
 	}
 	return self;
 } 
+
+- (id)initWithUniversitiesModel:(UniversitiesModel *)unisModel {
+	if ((self = [self initWithNibName:@"CompareViewController" bundle:nil])) {
+		universitiesModel = [unisModel retain];                
+        
+        if ([self.universitiesToCompare count] <= 0) {            
+            // Add top ranked uni
+            University *uni = [universitiesModel topRankedUniversity];          
+            if (uni) {
+                [self.universitiesToCompare addObject:uni];
+            }          
+        }
+	}
+	return self;	
+}
 
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -26,23 +44,28 @@
     [super viewDidLoad];
 	
 	// Add button to the bottom of the table
-	UIView *compareButtonView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
-	UIButton *compareButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-	compareButton.frame = CGRectMake(60, 10, 200, 40);
-	[compareButton setTitle:@"Compare" forState:UIControlStateNormal];
-	[compareButton addTarget:self action:@selector(compareButtonPress) forControlEvents:UIControlEventTouchUpInside];
-	
-	[compareButtonView addSubview:compareButton];		
-	self.tableView.tableFooterView = compareButtonView;
+	UIView *compareTableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
+    {
+        UIButton *compareButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        compareButton.frame = CGRectMake(80, 10, 200, 40);
+        [compareButton setTitle:@"Compare" forState:UIControlStateNormal];
+        [compareButton addTarget:self action:@selector(compareButtonPress) forControlEvents:UIControlEventTouchUpInside];	
+        [compareTableFooterView addSubview:compareButton];		
+	}
+    {
+        UIButton *addButton = [UIButton buttonWithType:UIButtonTypeContactAdd];
+        addButton.frame = CGRectMake(30, 10, 40, 40);
+        [addButton setTitle:@"Add University" forState:UIControlStateNormal];
+        [addButton addTarget:self action:@selector(addButtonPress) forControlEvents:UIControlEventTouchUpInside];	
+        [compareTableFooterView addSubview:addButton];		
+	}
+	self.tableView.tableFooterView = compareTableFooterView;
 
-	[compareButtonView release];
+	[compareTableFooterView release];
 	
 	// Set editing mode
 	[self.tableView setEditing:YES animated:NO];
-	
-	// Populate table with universities
-	
-	
+
 }
 
 
@@ -70,6 +93,7 @@
 
 - (void)dealloc {
 	[universitiesToCompare release];
+	[universitiesModel release];
 	
     [super dealloc];
 }
@@ -86,7 +110,8 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [universitiesToCompare count];
+    NSLog(@"unis to compare: %d", [self.universitiesToCompare count]);
+    return [self.universitiesToCompare count];
 }
 
 
@@ -101,8 +126,13 @@
     }
     
 	
-	// TODO: get university
-	cell.textLabel.text = @"hello";
+	// Find universities based on rank
+    NSArray *universitiesInAwardClass = [self.universitiesModel.awardClasses objectAtIndex:indexPath.section];
+    University *uni = [universitiesInAwardClass objectAtIndex:indexPath.row];
+    
+	// Text: Rank. University
+	NSString *rankString = ([[uni rank2010] intValue] == 0) ? @"(none) " : [NSString stringWithFormat:@"%@. ", uni.rank2010];
+	cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, uni.sortName];    
 	
     return cell;
 }
@@ -116,7 +146,7 @@
 		[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
 		
 		int rowToRemove = [indexPath row];
-		[universitiesToCompare removeObjectAtIndex:rowToRemove];
+		[self.universitiesToCompare removeObjectAtIndex:rowToRemove];
 	} else if (editingStyle == UITableViewCellEditingStyleInsert) {
 		// Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
 	}   
@@ -142,8 +172,13 @@
 #pragma mark === Action methods ===
 #pragma mark
 
+- (IBAction)addButtonPress {
+	UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"TODO" message:@"Add not implemented yet" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease];
+	[alert show];    
+}
+
 - (IBAction)compareButtonPress {
-	UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"TODO" message:@"Not implemented yet" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease];
+	UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"TODO" message:@"Compare not implemented yet" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease];
 	[alert show];
 }
 

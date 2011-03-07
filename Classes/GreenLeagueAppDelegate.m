@@ -29,9 +29,9 @@
 	UINavigationController *findNavController = [[UINavigationController alloc] initWithRootViewController:findVC];
 	[findVC release];
 	
-	//CompareViewController *compareVC = [[CompareViewController alloc] initWithUniversitiesModel:universitiesModel];	
-	CompareViewController *compareVC = [[CompareViewController alloc] init];	
-	AboutViewController *aboutVC = [[AboutViewController alloc] init];
+	CompareViewController *compareVC = [[CompareViewController alloc] initWithUniversitiesModel:universitiesModel];    
+    
+	AboutViewController *aboutVC = [[AboutViewController alloc] init];    
     
     NSArray *tabVCs = [NSArray arrayWithObjects:findNavController, compareVC, aboutVC, nil];
     [tabBarController setViewControllers:tabVCs animated:YES]; // Doesn't seem to animate	

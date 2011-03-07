@@ -15,6 +15,8 @@
 	UILabel *rank2009Label;
 	UILabel *awardClassLabel;
 	UILabel *totalScoreLabel;
+    
+    University *university;
 }
 
 @property (nonatomic, retain) IBOutlet UILabel *nameLabel;
@@ -22,6 +24,8 @@
 @property (nonatomic, retain) IBOutlet UILabel *rank2009Label;
 @property (nonatomic, retain) IBOutlet UILabel *awardClassLabel;
 @property (nonatomic, retain) IBOutlet UILabel *totalScoreLabel;
+
+@property (nonatomic, retain) University *university;
 
 - (id)initWithUniversity:(University *)uni;
 - (IBAction)detailButtonPressed;

@@ -108,12 +108,12 @@ static NSString *kUniversityEntityName = @"University";
 #pragma mark === Init/Dealloc ===
 #pragma mark
 
-- (id)init {
-	if (self = [super init]) {			
-
-	}
-	return self;
-}
+//- (id)init {
+//	if (self = [super init]) {			
+//
+//	}
+//	return self;
+//}
 
 // Is this needed?
 //- (void)dealloc {

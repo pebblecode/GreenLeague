@@ -7,7 +7,6 @@
 //
 
 #import "UniversitiesModel.h"
-#import "University.h"
 #import "AwardClassHelper.h"
 #import "NSString+Helper.h"
 
@@ -33,6 +32,7 @@ static NSString *kDBFieldAwardClass = @"awardClass";
 - (Boolean)dbExists;
 - (void)setupDB;
 - (void)deleteDB;
+- (NSString *)applicationDocumentsDirectory;
 
 @end
 
@@ -335,6 +335,7 @@ static NSString *kDBFieldAwardClass = @"awardClass";
 	}
 }
 
+
 #pragma mark -
 #pragma mark === Application paths ===
 #pragma mark
@@ -348,6 +349,20 @@ static NSString *kDBFieldAwardClass = @"awardClass";
 
 - (NSString *)dbPath {
 	return [[self applicationDocumentsDirectory] stringByAppendingPathComponent:kDatabaseSqliteFile];
+}
+
+
+#pragma mark -
+#pragma mark === Instance paths ===
+#pragma mark
+
+// Return an autoreleased university
+- (University *)topRankedUniversity {
+    University *uni = nil;
+    if ([self.awardClasses count] > 0) {
+        uni = [self.awardClasses objectAtIndex:0];
+    }
+    return [uni autorelease];
 }
 
 
