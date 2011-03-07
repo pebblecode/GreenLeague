@@ -46,7 +46,7 @@ static NSString *kDBFieldAwardClass = @"awardClass";
 	if ((self = [super init])) {			
 		// --------------------------------------------------
 		// To remove the db all the time (for debugging only)
-		//[self deleteDB];		
+		[self deleteDB];		
 		// --------------------------------------------------
 		
 		[self setupDB];
@@ -285,7 +285,7 @@ static NSString *kDBFieldAwardClass = @"awardClass";
 	
 	// Parse CSV file
 	for (NSArray *row in csvRows) {		
-		[University addUniversityFromRowArray:row toDBWithManagedContext:[self managedObjectContext]];
+		[University addUniversityToDBWithManagedContext:[self managedObjectContext] fromRowArray:row];
 	}	
 }
 

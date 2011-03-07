@@ -105,6 +105,60 @@ static NSString *kUniversityEntityName = @"University";
 
 
 #pragma mark -
+#pragma mark === Init/Dealloc ===
+#pragma mark
+
+- (id)init {
+	if (self = [super init]) {			
+
+	}
+	return self;
+}
+
+// Is this needed?
+//- (void)dealloc {
+//	[name release];
+//	[sortName release];
+//	[rank2009 release];
+//	[rank2010 release];
+//	[awardClass release];
+//	[totalScore release];
+//	
+//	[policyScore release];
+//	[policy1Score release];
+//	[policy2Score release];
+//	[policy3Score release];
+//	[policy4Score release];
+//	[policy5Score release];
+//	[policy6Score release];
+//	[policy7Score release];
+//	
+//	[performanceScore release];
+//	[performance8Score release];
+//	[performance8_1Data release];
+//	[performance8_1Score release];
+//	[performance8_2Data release];
+//	[performance8_2Score release];
+//	[performance8_3Data release];
+//	[performance8_3Score release];
+//	[performance9Score release];
+//	[performance9_1Data release];
+//	[performance9_1Score release];
+//	[performance9_2Data release];
+//	[performance9_2Score release];
+//	[performance10Score release];
+//	[performance10_1Data release];
+//	[performance10_1Score release];
+//	[performance10_2Data release];
+//	[performance10_2Score release];
+//	[performance11Score release];
+//	[performance11_1Data release];
+//	[performance11_1Score release];
+//	[performance11_2Data release];
+//	[performance11_2Score release];	
+//}
+
+#pragma mark -
 #pragma mark === Convenience methods ===
 #pragma mark
 
@@ -169,7 +223,7 @@ static NSString *kUniversityEntityName = @"University";
 }
 
 // Returns nil if there is no name
-+ (void)addUniversityFromRowArray:(NSArray *)rowArray toDBWithManagedContext:(NSManagedObjectContext *)managedObjectContext {
++ (void)addUniversityToDBWithManagedContext:(NSManagedObjectContext *)managedObjectContext fromRowArray:(NSArray *)rowArray {
 	University *uni;
 	
 	//NSLog(@"csvLine: %@", csvLine);

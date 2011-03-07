@@ -52,7 +52,7 @@
 @property (nonatomic, retain) NSNumber * performance8_3Score;
 
 + (NSString *)entityName;
-+ (void)addUniversityFromRowArray:(NSArray *)rowArray toDBWithManagedContext:(NSManagedObjectContext *)managedObjectContext;
++ (void)addUniversityToDBWithManagedContext:(NSManagedObjectContext *)managedObjectContext fromRowArray:(NSArray *)rowArray;
 
 // Convenience methods
 - (Boolean)isValidAwardClass;
