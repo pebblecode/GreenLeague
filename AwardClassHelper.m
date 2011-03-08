@@ -35,10 +35,10 @@
 	if (!indexTitles) {
 		indexTitles = [[NSArray alloc] initWithObjects:
 					   @"1st", 
-					   @"Upper 2nd", 
-					   @"Lower 2nd", 
+					   @"2:1", 
+					   @"2:2", 
 					   @"3rd", 
-					   @"Failed", 
+					   @"Fail", 
 					   @"N/A", 
 					   nil];		
 	}
