@@ -216,6 +216,9 @@
 				3DB0D9461315206D006FC601 /* FindViewController.h */,
 				3DB0D9471315206D006FC601 /* FindViewController.m */,
 				3DB0D9481315206D006FC601 /* FindViewController.xib */,
+				3DCA7323132659E5009D3505 /* FindSelectorViewController.h */,
+				3DCA7324132659E5009D3505 /* FindSelectorViewController.m */,
+				3DCA7325132659E6009D3505 /* FindSelectorViewController.xib */,
 				3D03A6A8131E457900F6B225 /* UniversityDetailViewController.h */,
 				3D03A6A9131E457900F6B225 /* UniversityDetailViewController.m */,
 				3D03A6AA131E457900F6B225 /* UniversityDetailViewController.xib */,
@@ -229,9 +232,6 @@
 		3D03ACCE13214BC800F6B225 /* Compare */ = {
 			isa = PBXGroup;
 			children = (
-				3DCA7323132659E5009D3505 /* FindSelectorViewController.h */,
-				3DCA7324132659E5009D3505 /* FindSelectorViewController.m */,
-				3DCA7325132659E6009D3505 /* FindSelectorViewController.xib */,
 				3D308E581316BB8C00D37010 /* CompareViewController.h */,
 				3D308E591316BB8C00D37010 /* CompareViewController.m */,
 				3D308E5A1316BB8C00D37010 /* CompareViewController.xib */,

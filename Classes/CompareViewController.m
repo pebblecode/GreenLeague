@@ -176,10 +176,13 @@
 - (IBAction)addButtonPress {
 //	UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"TODO" message:@"Add not implemented yet" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease];
 //	[alert show];    
+        
+    FindSelectorViewController *findVC = [[FindSelectorViewController alloc] initWithUniversitiesModel:universitiesModel];
+	UINavigationController *findNavController = [[UINavigationController alloc] initWithRootViewController:findVC];
+	[findVC release];    
     
-    FindSelectorViewController *findSelectorVC = [[FindSelectorViewController alloc] initWithUniversitiesModel:self.universitiesModel];
-    [self presentModalViewController:findSelectorVC animated:YES];
-    [findSelectorVC release];
+    [self presentModalViewController:findNavController animated:YES];        
+    [findNavController release];
 }
 
 - (IBAction)compareButtonPress {
