@@ -8,6 +8,7 @@
 
 #import "CompareViewController.h"
 #import "University.h"
+#import "FindSelectorViewController.h"
 
 @implementation CompareViewController
 
@@ -173,8 +174,12 @@
 #pragma mark
 
 - (IBAction)addButtonPress {
-	UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"TODO" message:@"Add not implemented yet" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease];
-	[alert show];    
+//	UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"TODO" message:@"Add not implemented yet" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease];
+//	[alert show];    
+    
+    FindSelectorViewController *findSelectorVC = [[FindSelectorViewController alloc] initWithUniversitiesModel:self.universitiesModel];
+    [self presentModalViewController:findSelectorVC animated:YES];
+    [findSelectorVC release];
 }
 
 - (IBAction)compareButtonPress {

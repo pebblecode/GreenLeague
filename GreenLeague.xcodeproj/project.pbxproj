@@ -47,6 +47,8 @@
 		3DB0D97213152B60006FC601 /* gl2010.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3DB0D97113152B60006FC601 /* gl2010.csv */; };
 		3DB0D9941315422C006FC601 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB0D9931315422C006FC601 /* CoreData.framework */; };
 		3DB0D9F01317BD4F006FC601 /* University.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB0D9EF1317BD4F006FC601 /* University.m */; };
+		3DCA7326132659E6009D3505 /* FindSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCA7324132659E5009D3505 /* FindSelectorViewController.m */; };
+		3DCA7327132659E6009D3505 /* FindSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DCA7325132659E6009D3505 /* FindSelectorViewController.xib */; };
 		3DF051C2131FA15700AC430F /* AwardClassHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF051C1131FA15700AC430F /* AwardClassHelper.m */; };
 		3DF052E5132010C300AC430F /* pnpgl2011_64px_square_avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DF052E4132010C300AC430F /* pnpgl2011_64px_square_avatar.png */; };
 		3DF052EA1320113000AC430F /* pnpgl2011_400px.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DF052E91320113000AC430F /* pnpgl2011_400px.png */; };
@@ -107,6 +109,9 @@
 		3DB0D9931315422C006FC601 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3DB0D9EE1317BD4F006FC601 /* University.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = University.h; sourceTree = "<group>"; };
 		3DB0D9EF1317BD4F006FC601 /* University.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = University.m; sourceTree = "<group>"; };
+		3DCA7323132659E5009D3505 /* FindSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindSelectorViewController.h; sourceTree = "<group>"; };
+		3DCA7324132659E5009D3505 /* FindSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindSelectorViewController.m; sourceTree = "<group>"; };
+		3DCA7325132659E6009D3505 /* FindSelectorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindSelectorViewController.xib; sourceTree = "<group>"; };
 		3DF051C0131FA15700AC430F /* AwardClassHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwardClassHelper.h; sourceTree = "<group>"; };
 		3DF051C1131FA15700AC430F /* AwardClassHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwardClassHelper.m; sourceTree = "<group>"; };
 		3DF052E4132010C300AC430F /* pnpgl2011_64px_square_avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pnpgl2011_64px_square_avatar.png; sourceTree = "<group>"; };
@@ -224,6 +229,9 @@
 		3D03ACCE13214BC800F6B225 /* Compare */ = {
 			isa = PBXGroup;
 			children = (
+				3DCA7323132659E5009D3505 /* FindSelectorViewController.h */,
+				3DCA7324132659E5009D3505 /* FindSelectorViewController.m */,
+				3DCA7325132659E6009D3505 /* FindSelectorViewController.xib */,
 				3D308E581316BB8C00D37010 /* CompareViewController.h */,
 				3D308E591316BB8C00D37010 /* CompareViewController.m */,
 				3D308E5A1316BB8C00D37010 /* CompareViewController.xib */,
@@ -349,6 +357,7 @@
 				3D03ACAD13212D6100F6B225 /* star4_excellent.png in Resources */,
 				3D03ACAE13212D6100F6B225 /* star4_ok.png in Resources */,
 				3D03ACAF13212D6100F6B225 /* star4_poor.png in Resources */,
+				3DCA7327132659E6009D3505 /* FindSelectorViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +382,7 @@
 				3D03AA8D131EAA9400F6B225 /* UniversityMoreDetailViewController.m in Sources */,
 				3DF051C2131FA15700AC430F /* AwardClassHelper.m in Sources */,
 				3D03AD511321676A00F6B225 /* UniversitiesModel.m in Sources */,
+				3DCA7326132659E6009D3505 /* FindSelectorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
