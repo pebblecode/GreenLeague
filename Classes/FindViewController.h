@@ -22,5 +22,6 @@
 @property (nonatomic, retain) UISegmentedControl *sortControl;
 
 - (id)initWithUniversitiesModel:(UniversitiesModel *)unisModel;
+- (University *)universityFromIndexPath:(NSIndexPath *)indexPath;
 
 @end

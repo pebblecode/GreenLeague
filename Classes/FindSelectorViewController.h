@@ -13,8 +13,9 @@
 #import "FindViewController.h"
 
 @interface FindSelectorViewController : FindViewController {
-
+    NSMutableSet *selectedUniversities;
 }
 
+@property (nonatomic, retain) NSMutableSet *selectedUniversities;
 
 @end

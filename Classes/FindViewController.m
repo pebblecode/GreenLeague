@@ -23,8 +23,6 @@
 // Private methods
 @interface FindViewController()
 
-- (University *)universityFromIndexPath:(NSIndexPath *)indexPath;
-
 - (void)sortControlValueChange;
 - (Boolean)isRankSort;
 - (Boolean)isNameSort;
