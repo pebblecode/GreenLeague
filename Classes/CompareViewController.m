@@ -12,14 +12,13 @@
 
 @implementation CompareViewController
 
-@synthesize universitiesToCompare, universitiesModel;
+@dynamic universitiesToCompare;
+@synthesize universitiesModel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 	if ((self = [super initWithNibName:@"CompareViewController" bundle:nibBundleOrNil])) {
 		self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Compare" image:[UIImage imageNamed:@"12-eye.png"] tag:1];
         
-        // TODO: Set up universities to compare from memory
-        self.universitiesToCompare = [NSMutableArray arrayWithCapacity:0];
 	}
 	return self;
 } 
@@ -29,11 +28,12 @@
 		universitiesModel = [unisModel retain];                
         
         if ([self.universitiesToCompare count] <= 0) {            
-            // Add top ranked uni
-            University *uni = [universitiesModel topRankedUniversity];          
-            if (uni) {
-                [self.universitiesToCompare addObject:uni];
-            }          
+//            // Add top ranked uni
+//            University *uni = [universitiesModel topRankedUniversity];          
+//            if (uni) {
+//                [self setUniversitiesToCompare:[NSMutableSet setWithObject:uni]];                
+//            }   
+            [self setUniversitiesToCompare:[NSMutableArray array]];
         }
 	}
 	return self;	
@@ -66,6 +66,9 @@
 	
 	// Set editing mode
 	[self.tableView setEditing:YES animated:NO];
+    
+    // Handle universities selected on modal form
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setUniversitiesToCompareWithNotification:) name:@"selectedUniversitiesSet" object:nil];
 
 }
 
@@ -100,6 +103,38 @@
 }
 
 #pragma mark -
+#pragma mark === Getters/Setters ===
+#pragma mark
+
+- (NSMutableArray *)universitiesToCompare {
+    return universitiesToCompare;
+}
+
+- (void)setUniversitiesToCompare:(NSMutableArray *)unisToCompare {
+    if (universitiesToCompare != unisToCompare) {
+        [universitiesToCompare release];
+        universitiesToCompare = [unisToCompare retain]; // Keep a retain of the new set
+        
+        // Reload table
+        [self.tableView reloadData];
+    }
+}
+
+- (void)setUniversitiesToCompareWithNotification:(NSNotification *)notification {
+    
+    // Can't get this to work
+//    [self setUniversitiesToCompare:[NSMutableArray arrayWithArray:[unisToCompareSet sortedArrayUsingDescriptors:[NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES]]]]];
+
+    //    NSLog(@"compare: %@", unisToCompareSet);
+//    NSMutableArray *newUnis = [NSMutableArray array];
+//    for (University *uni in unisToCompareSet) {
+//        [newUnis addObject:uni];
+//    }
+    
+    [self setUniversitiesToCompare:[NSMutableArray arrayWithArray:[notification.object allObjects]]];
+}
+
+#pragma mark -
 #pragma mark Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -126,10 +161,9 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
-	
-	// Find universities based on rank
-    NSArray *universitiesInAwardClass = [self.universitiesModel.awardClasses objectAtIndex:indexPath.section];
-    University *uni = [universitiesInAwardClass objectAtIndex:indexPath.row];
+    NSLog(@"self.universitiesToCompare: %@", self.universitiesToCompare);
+    NSLog(@"indexPath: %@", indexPath);
+    University *uni = [self.universitiesToCompare objectAtIndex:indexPath.row];
     
 	// Text: Rank. University
 	NSString *rankString = ([[uni rank2010] intValue] == 0) ? @"(none) " : [NSString stringWithFormat:@"%@. ", uni.rank2010];

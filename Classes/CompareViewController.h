@@ -18,6 +18,7 @@
 @property (nonatomic, retain) UniversitiesModel *universitiesModel;
 
 - (id)initWithUniversitiesModel:(UniversitiesModel *)unisModel;
+- (void)setUniversitiesToCompareWithNotification:(NSNotification *)notification;
 
 - (IBAction)addButtonPress;
 - (IBAction)compareButtonPress;

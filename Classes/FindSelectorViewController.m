@@ -104,7 +104,15 @@
 
 }
 
+#pragma mark -
+#pragma mark === Buttons ===
+#pragma mark
+
+
 - (void)doneButtonPressed {
+    // Send a retained object
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"selectedUniversitiesSet" object:self.selectedUniversities];
+    
     [self.parentViewController dismissModalViewControllerAnimated:YES];
 }
 
