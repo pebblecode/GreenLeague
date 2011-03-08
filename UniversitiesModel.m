@@ -40,7 +40,7 @@ static NSString *kDBFieldAwardClass = @"awardClass";
 
 @implementation UniversitiesModel
 
-@synthesize sortedUniversities, awardClasses, rankedUniversities, collation, managedObjectContext, managedObjectModel, persistentStoreCoordinator;
+@synthesize sortedUniversities, awardClasses, collation, managedObjectContext, managedObjectModel, persistentStoreCoordinator;
 
 - (id)init {
 	if ((self = [super init])) {			
@@ -63,7 +63,6 @@ static NSString *kDBFieldAwardClass = @"awardClass";
 - (void)dealloc {
 	[sortedUniversities release];	
 	[awardClasses release];
-    [rankedUniversities release];
 	[collation release];
 	
 	[managedObjectContext release];
@@ -184,16 +183,11 @@ static NSString *kDBFieldAwardClass = @"awardClass";
 			} 
 			
 			// Save our fetched data to an array
-			[self.awardClasses addObject:mutableFetchResults];	
+			[self.awardClasses addObject:mutableFetchResults];		
 			
 			[mutableFetchResults release];
 			[request release];
-            
-            // Add all award class universities to ranked universities list - award names should be ordered by rank already
-            for (University *uni in self.awardClasses) {
-                [self.rankedUniversities addObject:uni];
-            }
-		}        
+		}
 	}	
 }
 
@@ -301,18 +295,11 @@ static NSString *kDBFieldAwardClass = @"awardClass";
 
 - (NSMutableArray *)awardClasses {
 	if (!awardClasses) {
-		awardClasses = [[NSMutableArray alloc] initWithCapacity:0];
+		// Fetch the results from the database and sort by the value of the sort control
+		awardClasses = [[NSMutableArray alloc] initWithCapacity:0];		
 	}
 	
 	return awardClasses;
-}
-
-- (NSMutableArray *)rankedUniversities {
-	if (!rankedUniversities) {
-		rankedUniversities = [[NSMutableArray alloc] initWithCapacity:0];
-	}
-	
-	return rankedUniversities;
 }
 
 - (NSMutableArray *)sortedUniversities {
@@ -372,8 +359,8 @@ static NSString *kDBFieldAwardClass = @"awardClass";
 // Return an autoreleased university
 - (University *)topRankedUniversity {
     University *uni = nil;
-    if ([self.rankedUniversities count] > 0) {
-        uni = [self.rankedUniversities objectAtIndex:0];
+    if ([self.awardClasses count] > 0) {
+        uni = [self.awardClasses objectAtIndex:0];
     }
     return [uni autorelease];
 }
