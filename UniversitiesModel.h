@@ -12,7 +12,9 @@
 
 @interface UniversitiesModel : NSObject {
 	NSMutableArray *sortedUniversities;	
-	NSMutableArray *awardClasses;	
+	NSMutableArray *awardClasses;
+    NSMutableArray *rankedUniversities;
+    
 	UILocalizedIndexedCollation *collation;
 			
     NSManagedObjectContext *managedObjectContext;
@@ -20,8 +22,10 @@
     NSPersistentStoreCoordinator *persistentStoreCoordinator;
 }
 
-@property (nonatomic, retain) NSMutableArray *sortedUniversities;
-@property (nonatomic, retain) NSMutableArray *awardClasses;
+@property (nonatomic, retain) NSMutableArray *sortedUniversities; // Alphabetically sorted list of universities, based on the sort name
+@property (nonatomic, retain) NSMutableArray *awardClasses; // Ranked universities categorised into an array of award classes
+@property (nonatomic, retain) NSMutableArray *rankedUniversities; // Rank sorted universities
+
 @property (nonatomic, retain) UILocalizedIndexedCollation *collation;
 
 @property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
