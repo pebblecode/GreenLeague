@@ -7,7 +7,7 @@
 //
 
 #import "FindSelectorViewController.h"
-
+#import "UIColor+Helper.h"
 
 @implementation FindSelectorViewController
 
@@ -60,8 +60,21 @@
 	// Text: Rank. University
 	NSString *rankString = ([[uni rank2010] intValue] == 0) ? @"(none) " : [NSString stringWithFormat:@"%@. ", uni.rank2010];
 	cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, uni.sortName];    
-	
+    	
     return cell;
+}
+
+// Note that colour must be changed in this method rather than tableView:cellForRowAtIndexPath:
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+	
+	[super tableView:tableView willDisplayCell:cell forRowAtIndexPath:indexPath];
+    
+    // Override colours for selected universities
+    University *uni = [self universityFromIndexPath:indexPath];
+    if ([self.selectedUniversities containsObject:uni]) {
+        cell.textLabel.textColor = [UIColor colorWithHexString:@"#cccccc"];
+        cell.backgroundColor = [UIColor whiteColor];
+    }    
 }
 
 #pragma mark -
@@ -73,12 +86,20 @@
 	University *uni = [self universityFromIndexPath:indexPath];
     
 	if ([uni isValidAwardClass]) {
-		[self.selectedUniversities addObject:uni];
+        // Toggle whether uni is selected or not
+        if ([self.selectedUniversities containsObject:uni]) {
+            [self.selectedUniversities removeObject:uni];
+        } else {
+            [self.selectedUniversities addObject:uni];        
+        }
+		
 	} else {
 		NSLog(@"Could not find award class for '%@' of award class '%@'", [uni name], [uni awardClass]);
 	}
 	
-	[tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];  
+   
+
 }
 
 @end
