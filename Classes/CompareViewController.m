@@ -120,17 +120,7 @@
     }
 }
 
-- (void)setUniversitiesToCompareWithNotification:(NSNotification *)notification {
-    
-    // Can't get this to work
-//    [self setUniversitiesToCompare:[NSMutableArray arrayWithArray:[unisToCompareSet sortedArrayUsingDescriptors:[NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES]]]]];
-
-    //    NSLog(@"compare: %@", unisToCompareSet);
-//    NSMutableArray *newUnis = [NSMutableArray array];
-//    for (University *uni in unisToCompareSet) {
-//        [newUnis addObject:uni];
-//    }
-    
+- (void)setUniversitiesToCompareWithNotification:(NSNotification *)notification {    
     [self setUniversitiesToCompare:[NSMutableArray arrayWithArray:[notification.object allObjects]]];
 }
 
@@ -161,8 +151,6 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
-    NSLog(@"self.universitiesToCompare: %@", self.universitiesToCompare);
-    NSLog(@"indexPath: %@", indexPath);
     University *uni = [self.universitiesToCompare objectAtIndex:indexPath.row];
     
 	// Text: Rank. University
