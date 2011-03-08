@@ -18,4 +18,6 @@
 
 @property (nonatomic, retain) NSMutableSet *selectedUniversities;
 
+- (void)doneButtonPressed;
+
 @end

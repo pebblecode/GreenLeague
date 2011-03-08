@@ -27,7 +27,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"Universities";
+	UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneButtonPressed)];
+	self.navigationItem.rightBarButtonItem = doneButton;
+	[doneButton release];
 }
 
 #pragma mark -
@@ -100,6 +102,10 @@
     [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];  
    
 
+}
+
+- (void)doneButtonPressed {
+    [self.parentViewController dismissModalViewControllerAnimated:YES];
 }
 
 @end

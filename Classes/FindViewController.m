@@ -40,7 +40,7 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 	if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {			
-		self.title = @"Find Universities";
+		self.title = @"Universities";
 		self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Find" image:[UIImage imageNamed:@"06-magnify.png"] tag:1];	
 	}
 	return self;
@@ -68,7 +68,7 @@
 	
 	// Add sort control to nav bar
 	UIBarButtonItem *segmentBarItem = [[UIBarButtonItem alloc] initWithCustomView:sortControl];    
-	self.navigationItem.rightBarButtonItem = segmentBarItem;
+	self.navigationItem.leftBarButtonItem = segmentBarItem;
 	[segmentBarItem release];
 
 }
