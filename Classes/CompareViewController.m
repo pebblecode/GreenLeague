@@ -141,7 +141,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSLog(@"unis to compare: %d", [self.universitiesToCompare count]);
+    //NSLog(@"unis to compare: %d", [self.universitiesToCompare count]);
     return [self.universitiesToCompare count];
 }
 
