@@ -305,12 +305,40 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Classes/FindSelectorViewController.m"
-         timestampString = "321300577.572248"
+         timestampString = "321357697.033795"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "114"
-         endingLineNumber = "114"
+         startingLineNumber = "120"
+         endingLineNumber = "120"
          landmarkName = "-doneButtonPressed"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "Classes/FindSelectorViewController.m"
+         timestampString = "321357864.582448"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "46"
+         endingLineNumber = "46"
+         landmarkName = "-selectedUniversities"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "Classes/FindSelectorViewController.m"
+         timestampString = "321357868.714276"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "18"
+         endingLineNumber = "18"
+         landmarkName = "-initWithUniversitiesModel:selectedUniversities:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

@@ -13,6 +13,12 @@
 
 @synthesize selectedUniversities;
 
+- (id)initWithUniversitiesModel:(UniversitiesModel *)unisModel selectedUniversities:(NSArray *)selectedUnis {
+    if ((self = [self initWithUniversitiesModel:unisModel])) {
+        selectedUniversities = [[NSMutableSet alloc] initWithArray:selectedUnis];
+    }
+    return self;
+}
 
 - (void)dealloc {
     [selectedUniversities release];
