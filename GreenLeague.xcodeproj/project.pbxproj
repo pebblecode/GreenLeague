@@ -49,6 +49,10 @@
 		3DB0D9F01317BD4F006FC601 /* University.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB0D9EF1317BD4F006FC601 /* University.m */; };
 		3DCA7326132659E6009D3505 /* FindSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCA7324132659E5009D3505 /* FindSelectorViewController.m */; };
 		3DCA7327132659E6009D3505 /* FindSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DCA7325132659E6009D3505 /* FindSelectorViewController.xib */; };
+		3DCA733813279F65009D3505 /* 07-arrow-north.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DCA733413279F65009D3505 /* 07-arrow-north.png */; };
+		3DCA733913279F65009D3505 /* 07-arrow-north@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DCA733513279F65009D3505 /* 07-arrow-north@2x.png */; };
+		3DCA733A13279F65009D3505 /* 08-arrow-northeast.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DCA733613279F65009D3505 /* 08-arrow-northeast.png */; };
+		3DCA733B13279F65009D3505 /* 08-arrow-northeast@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DCA733713279F65009D3505 /* 08-arrow-northeast@2x.png */; };
 		3DF051C2131FA15700AC430F /* AwardClassHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF051C1131FA15700AC430F /* AwardClassHelper.m */; };
 		3DF052E5132010C300AC430F /* pnpgl2011_64px_square_avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DF052E4132010C300AC430F /* pnpgl2011_64px_square_avatar.png */; };
 		3DF052EA1320113000AC430F /* pnpgl2011_400px.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DF052E91320113000AC430F /* pnpgl2011_400px.png */; };
@@ -112,6 +116,10 @@
 		3DCA7323132659E5009D3505 /* FindSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindSelectorViewController.h; sourceTree = "<group>"; };
 		3DCA7324132659E5009D3505 /* FindSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindSelectorViewController.m; sourceTree = "<group>"; };
 		3DCA7325132659E6009D3505 /* FindSelectorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindSelectorViewController.xib; sourceTree = "<group>"; };
+		3DCA733413279F65009D3505 /* 07-arrow-north.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "07-arrow-north.png"; sourceTree = "<group>"; };
+		3DCA733513279F65009D3505 /* 07-arrow-north@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "07-arrow-north@2x.png"; sourceTree = "<group>"; };
+		3DCA733613279F65009D3505 /* 08-arrow-northeast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "08-arrow-northeast.png"; sourceTree = "<group>"; };
+		3DCA733713279F65009D3505 /* 08-arrow-northeast@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "08-arrow-northeast@2x.png"; sourceTree = "<group>"; };
 		3DF051C0131FA15700AC430F /* AwardClassHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwardClassHelper.h; sourceTree = "<group>"; };
 		3DF051C1131FA15700AC430F /* AwardClassHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwardClassHelper.m; sourceTree = "<group>"; };
 		3DF052E4132010C300AC430F /* pnpgl2011_64px_square_avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pnpgl2011_64px_square_avatar.png; sourceTree = "<group>"; };
@@ -254,6 +262,10 @@
 		3DB0D95213152221006FC601 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3DCA733413279F65009D3505 /* 07-arrow-north.png */,
+				3DCA733513279F65009D3505 /* 07-arrow-north@2x.png */,
+				3DCA733613279F65009D3505 /* 08-arrow-northeast.png */,
+				3DCA733713279F65009D3505 /* 08-arrow-northeast@2x.png */,
 				3D03ACA813212D6100F6B225 /* star4_awful.png */,
 				3D03ACA913212D6100F6B225 /* star4_excellent.png */,
 				3D03ACAA13212D6100F6B225 /* star4_ok.png */,
@@ -358,6 +370,10 @@
 				3D03ACAE13212D6100F6B225 /* star4_ok.png in Resources */,
 				3D03ACAF13212D6100F6B225 /* star4_poor.png in Resources */,
 				3DCA7327132659E6009D3505 /* FindSelectorViewController.xib in Resources */,
+				3DCA733813279F65009D3505 /* 07-arrow-north.png in Resources */,
+				3DCA733913279F65009D3505 /* 07-arrow-north@2x.png in Resources */,
+				3DCA733A13279F65009D3505 /* 08-arrow-northeast.png in Resources */,
+				3DCA733B13279F65009D3505 /* 08-arrow-northeast@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
