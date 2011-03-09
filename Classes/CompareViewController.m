@@ -165,11 +165,14 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
 		
 	if (editingStyle == UITableViewCellEditingStyleDelete) {
-		// Delete the row from the data source.
-		[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-		
+        
+        // Remove from array
 		int rowToRemove = [indexPath row];
-		[self.universitiesToCompare removeObjectAtIndex:rowToRemove];
+		[self.universitiesToCompare removeObjectAtIndex:rowToRemove];        
+        
+		// Delete the row from table
+		[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];		
+        
 	} else if (editingStyle == UITableViewCellEditingStyleInsert) {
 		// Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
 	}   
