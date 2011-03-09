@@ -9,11 +9,18 @@
 #import "CompareViewController.h"
 #import "University.h"
 #import "FindSelectorViewController.h"
+#import "UniversityComparisonViewController.h"
+
+@interface CompareViewController()
+
+- (void)refreshScrollView;
+
+@end
 
 @implementation CompareViewController
 
 @dynamic universitiesToCompare;
-@synthesize universitiesModel, helpView;
+@synthesize universitiesModel, helpView, scrollView, universityViewControllers;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 	if ((self = [super initWithNibName:@"CompareViewController" bundle:nibBundleOrNil])) {
@@ -72,7 +79,7 @@
 	self.navigationItem.rightBarButtonItem = compareButton;
     
 	// Set editing mode
-	[self.tableView setEditing:YES animated:NO];
+	//[self.tableView setEditing:YES animated:NO];
     
     // Handle universities selected on modal form
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setUniversitiesToCompareWithNotification:) name:@"selectedUniversitiesSet" object:nil];
@@ -103,9 +110,11 @@
 
 
 - (void)dealloc {
+    [universityViewControllers release];
 	[universitiesToCompare release];
 	[universitiesModel release];
 	[helpView release];
+    [scrollView release];
     
     [super dealloc];
 }
@@ -129,7 +138,9 @@
         [descriptor release];
         
         // Reload table
-        [self.tableView reloadData];
+        //[self.tableView reloadData];
+        
+        [self refreshScrollView];
     }
 }
 
@@ -137,94 +148,135 @@
     [self setUniversitiesToCompare:[NSMutableArray arrayWithArray:[notification.object allObjects]]];
 }
 
-#pragma mark -
-#pragma mark Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+- (NSMutableArray *)universityViewControllers {    
+    if (!universityViewControllers) {
+        universityViewControllers = [[NSMutableArray alloc] init];
+    }
+    return universityViewControllers;
 }
 
-//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-//	return @"Universities:";
+#pragma mark -
+#pragma mark === Scroll view ===
+#pragma mark
+
+- (void)refreshScrollView {
+    // Clear scroll view
+    for (UIView *scrollSubview in self.scrollView.subviews) {        
+        [scrollSubview removeFromSuperview];
+    }
+    [universityViewControllers release]; universityViewControllers = nil;    
+    
+    // Figure out how big the scroll content size should be
+    CGFloat scrollHeight = [UniversityComparisonViewController height] * [self.universitiesToCompare count];
+    
+    // Set the content size of the scroll view
+    [self.scrollView setContentSize:CGSizeMake([UniversityComparisonViewController width], scrollHeight)];
+    
+    // Loop through universities to compare and create a UniversityComparisonView for each
+    for (int i = 0; i < [self.universitiesToCompare count]; i++) {
+        University *uni = [self.universitiesToCompare objectAtIndex:i];
+        
+        UniversityComparisonViewController *uniComparisonVC = [[UniversityComparisonViewController alloc] initWithUniversity:uni];
+        [self.universityViewControllers addObject:uniComparisonVC];
+        [uniComparisonVC release];
+        
+        // Set layout
+        uniComparisonVC.view.frame = CGRectMake(0, i * uniComparisonVC.view.frame.size.height, uniComparisonVC.view.frame.size.width, uniComparisonVC.view.frame.size.height);
+        
+        // Add to scroll view
+        [self.scrollView addSubview:uniComparisonVC.view];
+        
+    }
+}
+
+//#pragma mark -
+//#pragma mark Table view data source
+//
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+//    return 1;
 //}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
-    NSInteger numRows = [self.universitiesToCompare count];
-    //NSLog(@"unis to compare: %d", numRows);    
-    
-    if (numRows <= 0) { // No universities - add help view        
-
-        [self.view addSubview:self.helpView];
-        self.helpView.alpha = 0;
-        [UIView animateWithDuration:1
-                         animations:^{ 				 
-                             self.helpView.alpha = 1.0;
-                         }
-        ];
-        
-    } else { // Has universities - remove help view if it is present
-        if ([self.helpView isDescendantOfView:self.view]) {
-            [self.helpView removeFromSuperview];
-        }        
-    }
-    
-    return numRows;
-}
-
-
-// Customize the appearance of table view cells.
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    static NSString *CellIdentifier = @"Cell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-    }
-    
-    University *uni = [self.universitiesToCompare objectAtIndex:indexPath.row];
-    
-	// Text: Rank. University
-	NSString *rankString = ([[uni rank2010] intValue] == 0) ? @"(none) " : [NSString stringWithFormat:@"%@. ", uni.rank2010];
-	cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, uni.sortName];    
-	
-    return cell;
-}
-
-
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-		
-	if (editingStyle == UITableViewCellEditingStyleDelete) {
-        
-        // Remove from array
-		int rowToRemove = [indexPath row];
-		[self.universitiesToCompare removeObjectAtIndex:rowToRemove];        
-        
-		// Delete the row from table
-		[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];		
-        
-	} else if (editingStyle == UITableViewCellEditingStyleInsert) {
-		// Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-	}   
-}
-
-
-#pragma mark -
-#pragma mark Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-	 <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-	 // ...
-	 // Pass the selected object to the new view controller.
-	 [self.navigationController pushViewController:detailViewController animated:YES];
-	 [detailViewController release];
-	 */
-}
-
+//
+////- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+////	return @"Universities:";
+////}
+//
+//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+//    
+//    NSInteger numRows = [self.universitiesToCompare count];
+//    //NSLog(@"unis to compare: %d", numRows);    
+//    
+//    if (numRows <= 0) { // No universities - add help view        
+//
+//        [self.view addSubview:self.helpView];
+//        self.helpView.alpha = 0;
+//        [UIView animateWithDuration:1
+//                         animations:^{ 				 
+//                             self.helpView.alpha = 1.0;
+//                         }
+//        ];
+//        
+//    } else { // Has universities - remove help view if it is present
+//        if ([self.helpView isDescendantOfView:self.view]) {
+//            [self.helpView removeFromSuperview];
+//        }        
+//    }
+//    
+//    return numRows;
+//}
+//
+//
+//// Customize the appearance of table view cells.
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    
+//    static NSString *CellIdentifier = @"Cell";
+//    
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+//    if (cell == nil) {
+//        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+//    }
+//    
+//    University *uni = [self.universitiesToCompare objectAtIndex:indexPath.row];
+//    
+//	// Text: Rank. University
+//	NSString *rankString = ([[uni rank2010] intValue] == 0) ? @"(none) " : [NSString stringWithFormat:@"%@. ", uni.rank2010];
+//	cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, uni.sortName];    
+//	
+//    return cell;
+//}
+//
+//
+//// Override to support editing the table view.
+//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+//		
+//	if (editingStyle == UITableViewCellEditingStyleDelete) {
+//        
+//        // Remove from array
+//		int rowToRemove = [indexPath row];
+//		[self.universitiesToCompare removeObjectAtIndex:rowToRemove];        
+//        
+//		// Delete the row from table
+//		[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];		
+//        
+//	} else if (editingStyle == UITableViewCellEditingStyleInsert) {
+//		// Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+//	}   
+//}
+//
+//
+//#pragma mark -
+//#pragma mark Table view delegate
+//
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//    // Navigation logic may go here. Create and push another view controller.
+//    /*
+//	 <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+//	 // ...
+//	 // Pass the selected object to the new view controller.
+//	 [self.navigationController pushViewController:detailViewController animated:YES];
+//	 [detailViewController release];
+//	 */
+//}
+//
 
 #pragma mark -
 #pragma mark === Action methods ===
