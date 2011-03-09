@@ -49,37 +49,13 @@
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
-    [super viewDidLoad];	
-    
-	// Add button to the bottom of the table
-//	UIView *compareTableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
-//    {
-//        UIButton *compareButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-//        compareButton.frame = CGRectMake(80, 10, 200, 40);
-//        [compareButton setTitle:@"Compare" forState:UIControlStateNormal];
-//        [compareButton addTarget:self action:@selector(compareButtonPress) forControlEvents:UIControlEventTouchUpInside];	
-//        [compareTableFooterView addSubview:compareButton];		
-//	}
-//    {
-//        UIButton *addButton = [UIButton buttonWithType:UIButtonTypeContactAdd];
-//        addButton.frame = CGRectMake(30, 10, 40, 40);
-//        [addButton setTitle:@"Add University" forState:UIControlStateNormal];
-//        [addButton addTarget:self action:@selector(addButtonPress) forControlEvents:UIControlEventTouchUpInside];	
-//        [compareTableFooterView addSubview:addButton];		
-//	}
-//    
-//	self.tableView.tableFooterView = compareTableFooterView;
-//    
-//	[compareTableFooterView release];    
+    [super viewDidLoad];
     
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addButtonPress)];
     self.navigationItem.leftBarButtonItem = addButton;    
     
 //    UIBarButtonItem *compareButton = [[UIBarButtonItem alloc] initWithTitle:@"Compare" style:UIBarButtonItemStylePlain target:self action:@selector(compareButtonPress)];
 //	self.navigationItem.rightBarButtonItem = compareButton;
-    
-	// Set editing mode
-	//[self.tableView setEditing:YES animated:NO];
     
     // Handle universities selected on modal form
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setUniversitiesToCompareWithNotification:) name:@"selectedUniversitiesSet" object:nil];
@@ -137,9 +113,6 @@
         [universitiesToCompare sortUsingDescriptors:[NSArray arrayWithObject:descriptor]];
         [descriptor release];
         
-        // Reload table
-        //[self.tableView reloadData];
-        
         [self refreshScrollView];
     }
 }
@@ -189,94 +162,6 @@
     }
 }
 
-//#pragma mark -
-//#pragma mark Table view data source
-//
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//    return 1;
-//}
-//
-////- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-////	return @"Universities:";
-////}
-//
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//    
-//    NSInteger numRows = [self.universitiesToCompare count];
-//    //NSLog(@"unis to compare: %d", numRows);    
-//    
-//    if (numRows <= 0) { // No universities - add help view        
-//
-//        [self.view addSubview:self.helpView];
-//        self.helpView.alpha = 0;
-//        [UIView animateWithDuration:1
-//                         animations:^{ 				 
-//                             self.helpView.alpha = 1.0;
-//                         }
-//        ];
-//        
-//    } else { // Has universities - remove help view if it is present
-//        if ([self.helpView isDescendantOfView:self.view]) {
-//            [self.helpView removeFromSuperview];
-//        }        
-//    }
-//    
-//    return numRows;
-//}
-//
-//
-//// Customize the appearance of table view cells.
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    
-//    static NSString *CellIdentifier = @"Cell";
-//    
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-//    if (cell == nil) {
-//        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-//    }
-//    
-//    University *uni = [self.universitiesToCompare objectAtIndex:indexPath.row];
-//    
-//	// Text: Rank. University
-//	NSString *rankString = ([[uni rank2010] intValue] == 0) ? @"(none) " : [NSString stringWithFormat:@"%@. ", uni.rank2010];
-//	cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, uni.sortName];    
-//	
-//    return cell;
-//}
-//
-//
-//// Override to support editing the table view.
-//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-//		
-//	if (editingStyle == UITableViewCellEditingStyleDelete) {
-//        
-//        // Remove from array
-//		int rowToRemove = [indexPath row];
-//		[self.universitiesToCompare removeObjectAtIndex:rowToRemove];        
-//        
-//		// Delete the row from table
-//		[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];		
-//        
-//	} else if (editingStyle == UITableViewCellEditingStyleInsert) {
-//		// Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-//	}   
-//}
-//
-//
-//#pragma mark -
-//#pragma mark Table view delegate
-//
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    // Navigation logic may go here. Create and push another view controller.
-//    /*
-//	 <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-//	 // ...
-//	 // Pass the selected object to the new view controller.
-//	 [self.navigationController pushViewController:detailViewController animated:YES];
-//	 [detailViewController release];
-//	 */
-//}
-//
 
 #pragma mark -
 #pragma mark === Action methods ===

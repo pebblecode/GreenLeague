@@ -53,8 +53,6 @@
 		3DCA733913279F65009D3505 /* 07-arrow-north@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DCA733513279F65009D3505 /* 07-arrow-north@2x.png */; };
 		3DCA733A13279F65009D3505 /* 08-arrow-northeast.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DCA733613279F65009D3505 /* 08-arrow-northeast.png */; };
 		3DCA733B13279F65009D3505 /* 08-arrow-northeast@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DCA733713279F65009D3505 /* 08-arrow-northeast@2x.png */; };
-		3DE4280C1327BE12002C53CE /* UniversityComparisonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DE4280B1327BE12002C53CE /* UniversityComparisonView.xib */; };
-		3DE4280F1327D3C0002C53CE /* UniversityComparisonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE4280E1327D3C0002C53CE /* UniversityComparisonView.m */; };
 		3DE428191327E783002C53CE /* UniversityComparisonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE428171327E781002C53CE /* UniversityComparisonViewController.m */; };
 		3DE4281A1327E783002C53CE /* UniversityComparisonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DE428181327E782002C53CE /* UniversityComparisonViewController.xib */; };
 		3DF051C2131FA15700AC430F /* AwardClassHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF051C1131FA15700AC430F /* AwardClassHelper.m */; };
@@ -124,9 +122,6 @@
 		3DCA733513279F65009D3505 /* 07-arrow-north@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "07-arrow-north@2x.png"; sourceTree = "<group>"; };
 		3DCA733613279F65009D3505 /* 08-arrow-northeast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "08-arrow-northeast.png"; sourceTree = "<group>"; };
 		3DCA733713279F65009D3505 /* 08-arrow-northeast@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "08-arrow-northeast@2x.png"; sourceTree = "<group>"; };
-		3DE4280B1327BE12002C53CE /* UniversityComparisonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UniversityComparisonView.xib; sourceTree = "<group>"; };
-		3DE4280D1327D3C0002C53CE /* UniversityComparisonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniversityComparisonView.h; sourceTree = "<group>"; };
-		3DE4280E1327D3C0002C53CE /* UniversityComparisonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniversityComparisonView.m; sourceTree = "<group>"; };
 		3DE428161327E781002C53CE /* UniversityComparisonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniversityComparisonViewController.h; sourceTree = "<group>"; };
 		3DE428171327E781002C53CE /* UniversityComparisonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniversityComparisonViewController.m; sourceTree = "<group>"; };
 		3DE428181327E782002C53CE /* UniversityComparisonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UniversityComparisonViewController.xib; sourceTree = "<group>"; };
@@ -253,9 +248,6 @@
 				3D308E581316BB8C00D37010 /* CompareViewController.h */,
 				3D308E591316BB8C00D37010 /* CompareViewController.m */,
 				3D308E5A1316BB8C00D37010 /* CompareViewController.xib */,
-				3DE4280D1327D3C0002C53CE /* UniversityComparisonView.h */,
-				3DE4280E1327D3C0002C53CE /* UniversityComparisonView.m */,
-				3DE4280B1327BE12002C53CE /* UniversityComparisonView.xib */,
 				3DE428161327E781002C53CE /* UniversityComparisonViewController.h */,
 				3DE428171327E781002C53CE /* UniversityComparisonViewController.m */,
 				3DE428181327E782002C53CE /* UniversityComparisonViewController.xib */,
@@ -390,7 +382,6 @@
 				3DCA733913279F65009D3505 /* 07-arrow-north@2x.png in Resources */,
 				3DCA733A13279F65009D3505 /* 08-arrow-northeast.png in Resources */,
 				3DCA733B13279F65009D3505 /* 08-arrow-northeast@2x.png in Resources */,
-				3DE4280C1327BE12002C53CE /* UniversityComparisonView.xib in Resources */,
 				3DE4281A1327E783002C53CE /* UniversityComparisonViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,7 +408,6 @@
 				3DF051C2131FA15700AC430F /* AwardClassHelper.m in Sources */,
 				3D03AD511321676A00F6B225 /* UniversitiesModel.m in Sources */,
 				3DCA7326132659E6009D3505 /* FindSelectorViewController.m in Sources */,
-				3DE4280F1327D3C0002C53CE /* UniversityComparisonView.m in Sources */,
 				3DE428191327E783002C53CE /* UniversityComparisonViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
