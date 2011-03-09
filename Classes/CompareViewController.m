@@ -9,6 +9,7 @@
 #import "CompareViewController.h"
 #import "University.h"
 #import "FindSelectorViewController.h"
+#import "UniversityComparisonTitlesViewController.h"
 #import "UniversityComparisonViewController.h"
 
 @interface CompareViewController()
@@ -20,7 +21,7 @@
 @implementation CompareViewController
 
 @dynamic universitiesToCompare;
-@synthesize universitiesModel, helpView, scrollView, universityViewControllers;
+@synthesize universitiesModel, helpView, titlesScrollView, scrollView, universityViewControllers;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 	if ((self = [super initWithNibName:@"CompareViewController" bundle:nibBundleOrNil])) {
@@ -57,6 +58,17 @@
 //    UIBarButtonItem *compareButton = [[UIBarButtonItem alloc] initWithTitle:@"Compare" style:UIBarButtonItemStylePlain target:self action:@selector(compareButtonPress)];
 //	self.navigationItem.rightBarButtonItem = compareButton;
     
+    // Add titles to title scroll      
+    UniversityComparisonTitlesViewController *comparisonTitlesVC = [[UniversityComparisonTitlesViewController alloc] initWithNibName:@"UniversityComparisonTitlesViewController" bundle:nil];
+    
+    [self.titlesScrollView setContentSize:CGSizeMake(comparisonTitlesVC.view.frame.size.width, comparisonTitlesVC.view.frame.size.height)];    
+    comparisonTitlesVC.view.frame = CGRectMake(0, 0, comparisonTitlesVC.view.frame.size.width, comparisonTitlesVC.view.frame.size.height);
+    [self.titlesScrollView addSubview:comparisonTitlesVC.view];
+
+    // TODO: handle release
+    //[comparisonTitlesVC release];
+    
+    
     // Handle universities selected on modal form
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setUniversitiesToCompareWithNotification:) name:@"selectedUniversitiesSet" object:nil];
     
@@ -91,6 +103,7 @@
 	[universitiesModel release];
 	[helpView release];
     [scrollView release];
+    [titlesScrollView release];
     
     [super dealloc];
 }
