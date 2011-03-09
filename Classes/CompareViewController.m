@@ -76,7 +76,7 @@
     
     // Handle universities selected on modal form
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setUniversitiesToCompareWithNotification:) name:@"selectedUniversitiesSet" object:nil];
-
+    
 }
 
 
@@ -153,8 +153,16 @@
     NSInteger numRows = [self.universitiesToCompare count];
     //NSLog(@"unis to compare: %d", numRows);    
     
-    if (numRows <= 0) { // No universities - add help view
+    if (numRows <= 0) { // No universities - add help view        
+
         [self.view addSubview:self.helpView];
+        self.helpView.alpha = 0;
+        [UIView animateWithDuration:1
+                         animations:^{ 				 
+                             self.helpView.alpha = 1.0;
+                         }
+        ];
+        
     } else { // Has universities - remove help view if it is present
         if ([self.helpView isDescendantOfView:self.view]) {
             [self.helpView removeFromSuperview];
