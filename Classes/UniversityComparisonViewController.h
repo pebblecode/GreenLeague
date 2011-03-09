@@ -12,7 +12,6 @@
 @interface UniversityComparisonViewController : UIViewController {
     University *university;
     
-    UIView *containerView;
     UILabel *universityNameLabel;
     UILabel *totalScoreLabel;
     
@@ -33,7 +32,6 @@
 
 @property (nonatomic, retain) University *university;
 
-@property (nonatomic, retain) IBOutlet UIView *containerView;
 @property (nonatomic, retain) IBOutlet UILabel *universityNameLabel;
 @property (nonatomic, retain) IBOutlet UILabel *totalScoreLabel;
 
