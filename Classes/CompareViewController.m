@@ -17,8 +17,8 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 	if ((self = [super initWithNibName:@"CompareViewController" bundle:nibBundleOrNil])) {
+        self.title = @"Universities";
 		self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Compare" image:[UIImage imageNamed:@"12-eye.png"] tag:1];
-        
 	}
 	return self;
 } 
@@ -42,9 +42,7 @@
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
-    [super viewDidLoad];
-	
-    self.title = @"Universities";
+    [super viewDidLoad];	
     
 	// Add button to the bottom of the table
 //	UIView *compareTableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
