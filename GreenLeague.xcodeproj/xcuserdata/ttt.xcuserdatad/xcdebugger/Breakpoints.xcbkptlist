@@ -277,11 +277,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Classes/CompareViewController.m"
-         timestampString = "321359173.215136"
+         timestampString = "321360651.902192"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "283"
-         endingLineNumber = "283"
+         startingLineNumber = "289"
+         endingLineNumber = "289"
          landmarkName = "-pickerView:titleForRow:forComponent:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -291,11 +291,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Classes/CompareViewController.m"
-         timestampString = "321301743.367652"
+         timestampString = "321360651.902192"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "124"
-         endingLineNumber = "124"
+         startingLineNumber = "130"
+         endingLineNumber = "130"
          landmarkName = "-setUniversitiesToCompareWithNotification:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -339,6 +339,20 @@
          startingLineNumber = "19"
          endingLineNumber = "19"
          landmarkName = "-initWithUniversitiesModel:selectedUniversities:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "Classes/CompareViewController.m"
+         timestampString = "321360688.179558"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "120"
+         endingLineNumber = "120"
+         landmarkName = "-setUniversitiesToCompare:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
