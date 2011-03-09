@@ -13,7 +13,7 @@
 @implementation CompareViewController
 
 @dynamic universitiesToCompare;
-@synthesize universitiesModel;
+@synthesize universitiesModel, helpView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 	if ((self = [super initWithNibName:@"CompareViewController" bundle:nibBundleOrNil])) {
@@ -44,26 +44,35 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
+    self.title = @"Universities";
+    
 	// Add button to the bottom of the table
-	UIView *compareTableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
-    {
-        UIButton *compareButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        compareButton.frame = CGRectMake(80, 10, 200, 40);
-        [compareButton setTitle:@"Compare" forState:UIControlStateNormal];
-        [compareButton addTarget:self action:@selector(compareButtonPress) forControlEvents:UIControlEventTouchUpInside];	
-        [compareTableFooterView addSubview:compareButton];		
-	}
-    {
-        UIButton *addButton = [UIButton buttonWithType:UIButtonTypeContactAdd];
-        addButton.frame = CGRectMake(30, 10, 40, 40);
-        [addButton setTitle:@"Add University" forState:UIControlStateNormal];
-        [addButton addTarget:self action:@selector(addButtonPress) forControlEvents:UIControlEventTouchUpInside];	
-        [compareTableFooterView addSubview:addButton];		
-	}
-	self.tableView.tableFooterView = compareTableFooterView;
-
-	[compareTableFooterView release];
-	
+//	UIView *compareTableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
+//    {
+//        UIButton *compareButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//        compareButton.frame = CGRectMake(80, 10, 200, 40);
+//        [compareButton setTitle:@"Compare" forState:UIControlStateNormal];
+//        [compareButton addTarget:self action:@selector(compareButtonPress) forControlEvents:UIControlEventTouchUpInside];	
+//        [compareTableFooterView addSubview:compareButton];		
+//	}
+//    {
+//        UIButton *addButton = [UIButton buttonWithType:UIButtonTypeContactAdd];
+//        addButton.frame = CGRectMake(30, 10, 40, 40);
+//        [addButton setTitle:@"Add University" forState:UIControlStateNormal];
+//        [addButton addTarget:self action:@selector(addButtonPress) forControlEvents:UIControlEventTouchUpInside];	
+//        [compareTableFooterView addSubview:addButton];		
+//	}
+//    
+//	self.tableView.tableFooterView = compareTableFooterView;
+//    
+//	[compareTableFooterView release];    
+    
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addButtonPress)];
+    self.navigationItem.leftBarButtonItem = addButton;    
+    
+    UIBarButtonItem *compareButton = [[UIBarButtonItem alloc] initWithTitle:@"Compare" style:UIBarButtonItemStylePlain target:self action:@selector(compareButtonPress)];
+	self.navigationItem.rightBarButtonItem = compareButton;
+    
 	// Set editing mode
 	[self.tableView setEditing:YES animated:NO];
     
@@ -98,7 +107,8 @@
 - (void)dealloc {
 	[universitiesToCompare release];
 	[universitiesModel release];
-	
+	[helpView release];
+    
     [super dealloc];
 }
 
@@ -136,13 +146,24 @@
     return 1;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-	return @"Compare:";
-}
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+//	return @"Universities:";
+//}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    //NSLog(@"unis to compare: %d", [self.universitiesToCompare count]);
-    return [self.universitiesToCompare count];
+    
+    NSInteger numRows = [self.universitiesToCompare count];
+    //NSLog(@"unis to compare: %d", numRows);    
+    
+    if (numRows <= 0) { // No universities - add help view
+        [self.view addSubview:self.helpView];
+    } else { // Has universities - remove help view if it is present
+        if ([self.helpView isDescendantOfView:self.view]) {
+            [self.helpView removeFromSuperview];
+        }        
+    }
+    
+    return numRows;
 }
 
 

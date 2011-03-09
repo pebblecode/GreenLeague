@@ -12,10 +12,14 @@
 @interface CompareViewController : UITableViewController {
 	NSMutableArray *universitiesToCompare;
 	UniversitiesModel *universitiesModel;
+    
+    UIView *helpView;
 }
 
 @property (nonatomic, retain) NSMutableArray *universitiesToCompare;
 @property (nonatomic, retain) UniversitiesModel *universitiesModel;
+
+@property (nonatomic, retain) IBOutlet UIView *helpView;
 
 - (id)initWithUniversitiesModel:(UniversitiesModel *)unisModel;
 - (void)setUniversitiesToCompareWithNotification:(NSNotification *)notification;

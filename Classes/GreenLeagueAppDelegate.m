@@ -24,20 +24,25 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
 	UniversitiesModel *universitiesModel = [[UniversitiesModel alloc] init];
-	
+    
+    // Find view controller	
     FindViewController *findVC = [[FindViewController alloc] initWithUniversitiesModel:universitiesModel];
-	UINavigationController *findNavController = [[UINavigationController alloc] initWithRootViewController:findVC];
-	[findVC release];
-	
-	CompareViewController *compareVC = [[CompareViewController alloc] initWithUniversitiesModel:universitiesModel];    
+    UINavigationController *findNavController = [[UINavigationController alloc] initWithRootViewController:findVC];
+    [findVC release];
+
+    
+    // Compare view controller
+    CompareViewController *compareVC = [[CompareViewController alloc] initWithUniversitiesModel:universitiesModel];    
+    UINavigationController *compareNavController = [[UINavigationController alloc] initWithRootViewController:compareVC];
+    [compareVC release];
     
 	AboutViewController *aboutVC = [[AboutViewController alloc] init];    
     
-    NSArray *tabVCs = [NSArray arrayWithObjects:findNavController, compareVC, aboutVC, nil];
+    NSArray *tabVCs = [NSArray arrayWithObjects:findNavController, compareNavController, aboutVC, nil];
     [tabBarController setViewControllers:tabVCs animated:YES]; // Doesn't seem to animate	
 	
 	[findNavController release];
-	[compareVC release];
+	[compareNavController release];
 	[aboutVC release];
 	[universitiesModel release];
 
