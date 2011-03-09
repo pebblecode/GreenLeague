@@ -75,8 +75,8 @@
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addButtonPress)];
     self.navigationItem.leftBarButtonItem = addButton;    
     
-    UIBarButtonItem *compareButton = [[UIBarButtonItem alloc] initWithTitle:@"Compare" style:UIBarButtonItemStylePlain target:self action:@selector(compareButtonPress)];
-	self.navigationItem.rightBarButtonItem = compareButton;
+//    UIBarButtonItem *compareButton = [[UIBarButtonItem alloc] initWithTitle:@"Compare" style:UIBarButtonItemStylePlain target:self action:@selector(compareButtonPress)];
+//	self.navigationItem.rightBarButtonItem = compareButton;
     
 	// Set editing mode
 	//[self.tableView setEditing:YES animated:NO];
