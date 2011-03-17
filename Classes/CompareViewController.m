@@ -21,7 +21,7 @@
 @implementation CompareViewController
 
 @dynamic universitiesToCompare;
-@synthesize universitiesModel, helpView, titlesScrollView, scrollView, universityViewControllers;
+@synthesize universitiesModel, helpView, scrollView, universityViewControllers;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 	if ((self = [super initWithNibName:@"CompareViewController" bundle:nibBundleOrNil])) {
@@ -57,18 +57,7 @@
     
 //    UIBarButtonItem *compareButton = [[UIBarButtonItem alloc] initWithTitle:@"Compare" style:UIBarButtonItemStylePlain target:self action:@selector(compareButtonPress)];
 //	self.navigationItem.rightBarButtonItem = compareButton;
-    
-    // Add titles to title scroll      
-    UniversityComparisonTitlesViewController *comparisonTitlesVC = [[UniversityComparisonTitlesViewController alloc] initWithNibName:@"UniversityComparisonTitlesViewController" bundle:nil];
-    
-    [self.titlesScrollView setContentSize:CGSizeMake(comparisonTitlesVC.view.frame.size.width, comparisonTitlesVC.view.frame.size.height)];    
-    comparisonTitlesVC.view.frame = CGRectMake(0, 0, comparisonTitlesVC.view.frame.size.width, comparisonTitlesVC.view.frame.size.height);
-    [self.titlesScrollView addSubview:comparisonTitlesVC.view];
-
-    // TODO: handle release
-    //[comparisonTitlesVC release];
-    
-    
+            
     // Handle universities selected on modal form
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setUniversitiesToCompareWithNotification:) name:@"selectedUniversitiesSet" object:nil];
     
@@ -103,7 +92,6 @@
 	[universitiesModel release];
 	[helpView release];
     [scrollView release];
-    [titlesScrollView release];
     
     [super dealloc];
 }
@@ -167,12 +155,19 @@
         [uniComparisonVC release];
         
         // Set layout
-        uniComparisonVC.view.frame = CGRectMake(0, i * uniComparisonVC.view.frame.size.height, uniComparisonVC.view.frame.size.width, uniComparisonVC.view.frame.size.height);
+        uniComparisonVC.view.frame = CGRectMake(0, i * uniComparisonVC.view.frame.size.height + 60, uniComparisonVC.view.frame.size.width, uniComparisonVC.view.frame.size.height);
         
         // Add to scroll view
         [self.scrollView addSubview:uniComparisonVC.view];
         
     }
+    
+    // Add titles to title scroll      
+    UniversityComparisonTitlesViewController *comparisonTitlesVC = [[UniversityComparisonTitlesViewController alloc] initWithNibName:@"UniversityComparisonTitlesViewController" bundle:nil];
+    [self.scrollView addSubview:comparisonTitlesVC.view];
+    
+    // TODO: handle release
+    //[comparisonTitlesVC release];    
 }
 
 

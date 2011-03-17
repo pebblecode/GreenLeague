@@ -14,7 +14,6 @@
 	UniversitiesModel *universitiesModel;
     
     UIView *helpView;
-    UIScrollView *titlesScrollView;
     UIScrollView *scrollView;
     
     NSMutableArray *universityViewControllers;
@@ -24,7 +23,6 @@
 @property (nonatomic, retain) UniversitiesModel *universitiesModel;
 
 @property (nonatomic, retain) IBOutlet UIView *helpView;
-@property (nonatomic, retain) IBOutlet UIScrollView *titlesScrollView;
 @property (nonatomic, retain) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, retain) IBOutlet NSMutableArray *universityViewControllers;
 
