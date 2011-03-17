@@ -8,15 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import "UniversitiesModel.h"
+#import "UniversityComparisonTitlesViewController.h"
 
 @interface CompareViewController : UIViewController {
 	NSMutableArray *universitiesToCompare;
 	UniversitiesModel *universitiesModel;
     
+    
     UIView *helpView;
     UIScrollView *scrollView;
     
     NSMutableArray *universityViewControllers;
+    UniversityComparisonTitlesViewController *comparisonTitlesViewController;
 }
 
 @property (nonatomic, retain) NSMutableArray *universitiesToCompare;
@@ -25,6 +28,7 @@
 @property (nonatomic, retain) IBOutlet UIView *helpView;
 @property (nonatomic, retain) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, retain) IBOutlet NSMutableArray *universityViewControllers;
+@property (nonatomic, retain) UniversityComparisonTitlesViewController *comparisonTitlesViewController;
 
 - (id)initWithUniversitiesModel:(UniversitiesModel *)unisModel;
 - (void)setUniversitiesToCompareWithNotification:(NSNotification *)notification;

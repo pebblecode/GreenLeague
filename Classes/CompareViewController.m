@@ -21,7 +21,7 @@
 @implementation CompareViewController
 
 @dynamic universitiesToCompare;
-@synthesize universitiesModel, helpView, scrollView, universityViewControllers;
+@synthesize universitiesModel, helpView, scrollView, universityViewControllers, comparisonTitlesViewController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 	if ((self = [super initWithNibName:@"CompareViewController" bundle:nibBundleOrNil])) {
@@ -92,6 +92,7 @@
 	[universitiesModel release];
 	[helpView release];
     [scrollView release];
+    [comparisonTitlesViewController release];
     
     [super dealloc];
 }
@@ -129,6 +130,17 @@
     return universityViewControllers;
 }
 
+- (UniversityComparisonTitlesViewController *)comparisonTitlesViewController {
+    
+    if (!comparisonTitlesViewController) {
+        comparisonTitlesViewController = [[UniversityComparisonTitlesViewController alloc] initWithNibName:@"UniversityComparisonTitlesViewController" bundle:nil];
+        NSLog(@"comp titles: %@", comparisonTitlesViewController);
+    }
+    
+    return comparisonTitlesViewController;
+    
+}
+
 #pragma mark -
 #pragma mark === Scroll view ===
 #pragma mark
@@ -163,11 +175,7 @@
     }
     
     // Add titles to title scroll      
-    UniversityComparisonTitlesViewController *comparisonTitlesVC = [[UniversityComparisonTitlesViewController alloc] initWithNibName:@"UniversityComparisonTitlesViewController" bundle:nil];
-    [self.scrollView addSubview:comparisonTitlesVC.view];
-    
-    // TODO: handle release
-    //[comparisonTitlesVC release];    
+    [self.scrollView addSubview:[self.comparisonTitlesViewController view]];
 }
 
 
