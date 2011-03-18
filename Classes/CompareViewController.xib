@@ -46,8 +46,8 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<object class="IBUIScrollView" id="842447567">
 						<reference key="NSNextResponder" ref="888598328"/>
-						<int key="NSvFlags">256</int>
-						<string key="NSFrameSize">{320, 417}</string>
+						<int key="NSvFlags">288</int>
+						<string key="NSFrameSize">{320, 367}</string>
 						<reference key="NSSuperview" ref="888598328"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
@@ -56,10 +56,10 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
 				</object>
-				<string key="NSFrame">{{0, 64}, {320, 416}}</string>
+				<string key="NSFrame">{{0, 64}, {320, 367}}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView"/>
+				<reference key="NSNextKeyView" ref="842447567"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
 					<bytes key="NSWhite">MQA</bytes>
@@ -71,6 +71,7 @@
 				<object class="IBUISimulatedNavigationBarMetrics" key="IBUISimulatedTopBarMetrics">
 					<bool key="IBUIPrompted">NO</bool>
 				</object>
+				<object class="IBUISimulatedTabBarMetrics" key="IBUISimulatedBottomBarMetrics"/>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
 			<object class="IBUIView" id="869404991">
@@ -300,13 +301,11 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>helpView</string>
 							<string>scrollView</string>
-							<string>titlesScrollView</string>
 							<string>universityViewControllers</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>UIView</string>
-							<string>UIScrollView</string>
 							<string>UIScrollView</string>
 							<string>NSMutableArray</string>
 						</object>
@@ -317,7 +316,6 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>helpView</string>
 							<string>scrollView</string>
-							<string>titlesScrollView</string>
 							<string>universityViewControllers</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
@@ -328,10 +326,6 @@
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">scrollView</string>
-								<string key="candidateClassName">UIScrollView</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">titlesScrollView</string>
 								<string key="candidateClassName">UIScrollView</string>
 							</object>
 							<object class="IBToOneOutletInfo">

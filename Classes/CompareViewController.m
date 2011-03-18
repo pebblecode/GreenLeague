@@ -12,6 +12,8 @@
 #import "UniversityComparisonTitlesViewController.h"
 #import "UniversityComparisonViewController.h"
 
+#define kTitleHeight 60.0
+
 @interface CompareViewController()
 
 - (void)refreshScrollView;
@@ -153,7 +155,7 @@
     [universityViewControllers release]; universityViewControllers = nil;    
     
     // Figure out how big the scroll content size should be
-    CGFloat scrollHeight = [UniversityComparisonViewController height] * [self.universitiesToCompare count];
+    CGFloat scrollHeight = ([UniversityComparisonViewController height] * [self.universitiesToCompare count] + kTitleHeight);
     
     // Set the content size of the scroll view
     [self.scrollView setContentSize:CGSizeMake([UniversityComparisonViewController width], scrollHeight)];
@@ -167,7 +169,7 @@
         [uniComparisonVC release];
         
         // Set layout
-        uniComparisonVC.view.frame = CGRectMake(0, i * uniComparisonVC.view.frame.size.height + 60, uniComparisonVC.view.frame.size.width, uniComparisonVC.view.frame.size.height);
+        uniComparisonVC.view.frame = CGRectMake(0, i * uniComparisonVC.view.frame.size.height + kTitleHeight, uniComparisonVC.view.frame.size.width, uniComparisonVC.view.frame.size.height);
         
         // Add to scroll view
         [self.scrollView addSubview:uniComparisonVC.view];
