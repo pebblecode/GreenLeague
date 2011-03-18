@@ -61,8 +61,12 @@
 //	self.navigationItem.rightBarButtonItem = compareButton;
             
     // Handle universities selected on modal form
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setUniversitiesToCompareWithNotification:) name:@"selectedUniversitiesSet" object:nil];
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setUniversitiesToCompareWithNotification:) name:@"selectedUniversitiesSet" object:nil];    
+
+    // Add help view
+    if ([self.universitiesToCompare count] <= 0) {
+        [self.scrollView addSubview:self.helpView];
+    } 
 }
 
 
@@ -117,7 +121,7 @@
         [universitiesToCompare sortUsingDescriptors:[NSArray arrayWithObject:descriptor]];
         [descriptor release];
         
-        [self refreshScrollView];
+        [self refreshScrollView];                
     }
 }
 
@@ -177,7 +181,11 @@
     }
     
     // Add titles to title scroll      
-    [self.scrollView addSubview:[self.comparisonTitlesViewController view]];
+    if ([self.universitiesToCompare count] > 0) {        
+        [self.scrollView addSubview:[self.comparisonTitlesViewController view]];
+    } else {
+        [self.scrollView addSubview:self.helpView];
+    }        
 }
 
 
