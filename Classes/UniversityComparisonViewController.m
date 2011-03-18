@@ -17,6 +17,7 @@
 @interface UniversityComparisonViewController()
 
 - (NSNumber *)ratingImageIndexFromScore:(NSNumber *)score maxScore:(NSNumber *)maxScore;
+- (UIImage *)imageFromIndex:(NSNumber *)index;
 
 @end
 
@@ -99,7 +100,18 @@
                                  [self ratingImageIndexFromScore:self.university.performance11Score maxScore:self.university.performance11MaxScore],
                                   nil];
     
-    NSLog(@"%@", ratingImageIndex);
+    self.policy1ResultImage.image = [self imageFromIndex:[ratingImageIndex objectAtIndex:0]];
+    self.policy2ResultImage.image = [self imageFromIndex:[ratingImageIndex objectAtIndex:1]];
+    self.policy3ResultImage.image = [self imageFromIndex:[ratingImageIndex objectAtIndex:2]];
+    self.policy4ResultImage.image = [self imageFromIndex:[ratingImageIndex objectAtIndex:3]];
+    self.policy5ResultImage.image = [self imageFromIndex:[ratingImageIndex objectAtIndex:4]];
+    self.policy6ResultImage.image = [self imageFromIndex:[ratingImageIndex objectAtIndex:5]];
+    self.policy7ResultImage.image = [self imageFromIndex:[ratingImageIndex objectAtIndex:6]];
+    self.performance8ResultImage.image = [self imageFromIndex:[ratingImageIndex objectAtIndex:7]];
+    self.performance9ResultImage.image = [self imageFromIndex:[ratingImageIndex objectAtIndex:8]];
+    self.performance10ResultImage.image = [self imageFromIndex:[ratingImageIndex objectAtIndex:9]];
+    self.performance11ResultImage.image = [self imageFromIndex:[ratingImageIndex objectAtIndex:10]];
+    
     
 }
 
@@ -133,14 +145,41 @@
 #pragma mark === Helper ===
 #pragma mark
 
-- (NSNumber *)ratingImageIndexFromScore:(NSNumber *)score maxScore:(NSNumber *)maxScore {    
+- (NSNumber *)ratingImageIndexFromScore:(NSNumber *)score maxScore:(NSNumber *)maxScore {
     
     float scorePercentage = [score floatValue] / [maxScore floatValue];
     NSNumber *ratingImageIndex = [NSNumber numberWithFloat:round(scorePercentage * (kMaxNumRatingImages - 1))];
     
-    NSLog(@"(%f / %f) * 3 = %f", [score floatValue], [maxScore floatValue], [ratingImageIndex floatValue]);    
-    
     return ratingImageIndex;
+}
+
+// Get the image for a given index value
+// 0 = awful
+// 1 = poor
+// 2 = ok
+// 3 = excellent
+- (UIImage *)imageFromIndex:(NSNumber *)index {
+    UIImage *image = nil;
+    
+    switch ([index intValue]) {
+        case 0:
+            image = [UIImage imageNamed:@"star4_awful.png"];
+            break;
+        case 1:
+            image = [UIImage imageNamed:@"star4_poor.png"];
+            break;            
+        case 2:
+            image = [UIImage imageNamed:@"star4_ok.png"];
+            break; 
+        case 3:
+            image = [UIImage imageNamed:@"star4_excellent.png"];
+            break;             
+            
+        default:
+            break;
+    }
+    
+    return image;
 }
 
 @end
