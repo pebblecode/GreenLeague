@@ -54,6 +54,20 @@
 + (NSString *)entityName;
 + (void)addUniversityToDBWithManagedContext:(NSManagedObjectContext *)managedObjectContext fromRowArray:(NSArray *)rowArray;
 
+// Max score methods
+- (NSNumber *)policy1MaxScore;
+- (NSNumber *)policy2MaxScore;
+- (NSNumber *)policy3MaxScore;
+- (NSNumber *)policy4MaxScore;
+- (NSNumber *)policy5MaxScore;
+- (NSNumber *)policy6MaxScore;
+- (NSNumber *)policy7MaxScore;
+
+- (NSNumber *)performance8MaxScore;
+- (NSNumber *)performance9MaxScore;
+- (NSNumber *)performance10MaxScore;
+- (NSNumber *)performance11MaxScore;
+
 // Convenience methods
 - (Boolean)isValidAwardClass;
 - (NSString *)awardClassName;

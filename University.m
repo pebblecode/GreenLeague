@@ -196,6 +196,54 @@ static NSString *kUniversityEntityName = @"University";
 }
 
 #pragma mark -
+#pragma mark === Max score methods ===
+#pragma mark
+
+- (NSNumber *)policy1MaxScore {
+    return [NSNumber numberWithInt:6];
+}
+
+- (NSNumber *)policy2MaxScore {
+    return [NSNumber numberWithInt:8];    
+}
+
+- (NSNumber *)policy3MaxScore {
+    return [NSNumber numberWithInt:8];
+}
+
+- (NSNumber *)policy4MaxScore {
+    return [NSNumber numberWithInt:4];
+}
+
+- (NSNumber *)policy5MaxScore {
+    return [NSNumber numberWithInt:8];
+}
+
+- (NSNumber *)policy6MaxScore {
+    return [NSNumber numberWithInt:3];
+}
+
+- (NSNumber *)policy7MaxScore {
+    return [NSNumber numberWithInt:3];
+}
+
+- (NSNumber *)performance8MaxScore {
+    return [NSNumber numberWithInt:6];
+}
+
+- (NSNumber *)performance9MaxScore {
+    return [NSNumber numberWithInt:8];
+}
+
+- (NSNumber *)performance10MaxScore {
+    return [NSNumber numberWithInt:8];
+}
+
+- (NSNumber *)performance11MaxScore {
+    return [NSNumber numberWithInt:8];
+}
+
+#pragma mark -
 #pragma mark === Class methods ===
 #pragma mark
 

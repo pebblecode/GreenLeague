@@ -12,6 +12,16 @@
 #define kWidth 1250.0
 #define kHeight 50.0
 
+#define kMaxNumRatingImages 4
+
+@interface UniversityComparisonViewController()
+
+- (NSNumber *)ratingImageIndexFromScore:(NSNumber *)score maxScore:(NSNumber *)maxScore;
+
+@end
+
+
+
 @implementation UniversityComparisonViewController
 
 @synthesize university;
@@ -72,6 +82,25 @@
     
     universityNameLabel.text = self.university.sortName;
     totalScoreLabel.text = [NSString stringWithFormat:@"%.1f", [self.university.totalScore floatValue]];
+    
+    // Rating image
+    NSArray *ratingImageIndex = [NSArray arrayWithObjects:
+                                 [self ratingImageIndexFromScore:self.university.policy1Score maxScore:self.university.policy1MaxScore],
+                                 [self ratingImageIndexFromScore:self.university.policy2Score maxScore:self.university.policy2MaxScore],
+                                 [self ratingImageIndexFromScore:self.university.policy3Score maxScore:self.university.policy3MaxScore],
+                                 [self ratingImageIndexFromScore:self.university.policy4Score maxScore:self.university.policy4MaxScore],
+                                 [self ratingImageIndexFromScore:self.university.policy5Score maxScore:self.university.policy5MaxScore],
+                                 [self ratingImageIndexFromScore:self.university.policy6Score maxScore:self.university.policy6MaxScore],
+                                 [self ratingImageIndexFromScore:self.university.policy7Score maxScore:self.university.policy7MaxScore],
+                                 
+                                 [self ratingImageIndexFromScore:self.university.performance8Score maxScore:self.university.performance8MaxScore],
+                                 [self ratingImageIndexFromScore:self.university.performance9Score maxScore:self.university.performance9MaxScore],
+                                 [self ratingImageIndexFromScore:self.university.performance10Score maxScore:self.university.performance10MaxScore],
+                                 [self ratingImageIndexFromScore:self.university.performance11Score maxScore:self.university.performance11MaxScore],
+                                  nil];
+    
+    NSLog(@"%@", ratingImageIndex);
+    
 }
 
 - (void)viewDidUnload
@@ -97,6 +126,20 @@
 
 + (CGFloat)height {
     return kHeight;
+}
+
+
+#pragma mark -
+#pragma mark === Helper ===
+#pragma mark
+
+- (NSNumber *)ratingImageIndexFromScore:(NSNumber *)score maxScore:(NSNumber *)maxScore {    
+    
+    NSNumber *ratingImageIndex = [NSNumber numberWithFloat:round([score floatValue] / ([maxScore floatValue] * (kMaxNumRatingImages - 1))) + 1];
+    
+    NSLog(@"%f / %f = %f", [score floatValue], [maxScore floatValue], [ratingImageIndex floatValue]);    
+    
+    return ratingImageIndex;
 }
 
 @end
