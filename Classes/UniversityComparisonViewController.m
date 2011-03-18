@@ -135,9 +135,10 @@
 
 - (NSNumber *)ratingImageIndexFromScore:(NSNumber *)score maxScore:(NSNumber *)maxScore {    
     
-    NSNumber *ratingImageIndex = [NSNumber numberWithFloat:round([score floatValue] / ([maxScore floatValue] * (kMaxNumRatingImages - 1))) + 1];
+    float scorePercentage = [score floatValue] / [maxScore floatValue];
+    NSNumber *ratingImageIndex = [NSNumber numberWithFloat:round(scorePercentage * (kMaxNumRatingImages - 1))];
     
-    NSLog(@"%f / %f = %f", [score floatValue], [maxScore floatValue], [ratingImageIndex floatValue]);    
+    NSLog(@"(%f / %f) * 3 = %f", [score floatValue], [maxScore floatValue], [ratingImageIndex floatValue]);    
     
     return ratingImageIndex;
 }
