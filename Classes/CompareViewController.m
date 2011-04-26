@@ -197,13 +197,8 @@
         
     FindSelectorViewController *findVC = [[FindSelectorViewController alloc] initWithUniversitiesModel:universitiesModel selectedUniversities:self.universitiesToCompare];
     
-    // Navigation controller for the top bar
-	UINavigationController *findNavController = [[UINavigationController alloc] initWithRootViewController:findVC];
-	[findVC release];
-        
-    
-    [self presentModalViewController:findNavController animated:YES];        
-    [findNavController release];
+    // Using nav controller that CompareViewController should already be in
+    [self.navigationController pushViewController:findVC animated:YES];
     
 }
 

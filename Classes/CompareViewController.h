@@ -10,6 +10,7 @@
 #import "UniversitiesModel.h"
 #import "UniversityComparisonTitlesViewController.h"
 
+// Note: CompareViewController is handled by a navigation controller from the app delegate.
 @interface CompareViewController : UIViewController {
 	NSMutableArray *universitiesToCompare;
 	UniversitiesModel *universitiesModel;

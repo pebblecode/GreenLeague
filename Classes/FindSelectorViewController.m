@@ -123,11 +123,12 @@
 #pragma mark
 
 
+// Assumed to be in a navigation controller
 - (void)doneButtonPressed {
     // Send a retained object
     [[NSNotificationCenter defaultCenter] postNotificationName:@"selectedUniversitiesSet" object:self.selectedUniversities];
     
-    [self.parentViewController dismissModalViewControllerAnimated:YES];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end
