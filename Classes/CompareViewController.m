@@ -196,8 +196,11 @@
 - (IBAction)addButtonPress {
         
     FindSelectorViewController *findVC = [[FindSelectorViewController alloc] initWithUniversitiesModel:universitiesModel selectedUniversities:self.universitiesToCompare];
+    
+    // Navigation controller for the top bar
 	UINavigationController *findNavController = [[UINavigationController alloc] initWithRootViewController:findVC];
 	[findVC release];
+        
     
     [self presentModalViewController:findNavController animated:YES];        
     [findNavController release];
