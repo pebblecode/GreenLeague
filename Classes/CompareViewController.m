@@ -62,10 +62,13 @@
     // Handle universities selected on modal form
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setUniversitiesToCompareWithNotification:) name:@"selectedUniversitiesSet" object:nil];    
 
-    // Add help view
-    if ([self.universitiesToCompare count] <= 0) {
-        [self.scrollView addSubview:self.helpView];
-    } 
+//    // Add help view
+//    if ([self.universitiesToCompare count] <= 0) {
+//        [self.scrollView addSubview:self.helpView];
+//    } 
+    
+    // Show find selector 
+    [self.navigationController pushViewController:self.findSelectorViewController animated:NO];
 }
 
 
