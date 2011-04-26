@@ -21,4 +21,6 @@
 - (id)initWithUniversitiesModel:(UniversitiesModel *)unisModel selectedUniversities:(NSArray *)selectedUnis;
 - (void)doneButtonPressed;
 
+- (void)clearSelectedUniversities;
+
 @end

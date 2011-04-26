@@ -14,12 +14,15 @@
 @interface FindViewController : UITableViewController {
 	UniversitiesModel *universitiesModel;	
 	UISegmentedControl *sortControl;
+    UITableView *universitiesTableView;
 	
-	int universitySortIndex;	
+	int universitySortIndex;
 }
 
 @property (nonatomic, retain) UniversitiesModel *universitiesModel;
 @property (nonatomic, retain) UISegmentedControl *sortControl;
+@property (nonatomic, retain) IBOutlet UITableView *universitiesTableView;
+
 
 - (id)initWithUniversitiesModel:(UniversitiesModel *)unisModel;
 - (University *)universityFromIndexPath:(NSIndexPath *)indexPath;

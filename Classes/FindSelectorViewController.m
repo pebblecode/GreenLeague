@@ -53,6 +53,15 @@
 }
 
 #pragma mark -
+#pragma mark === Selected universities ===
+#pragma mark
+
+- (void)clearSelectedUniversities {
+    [self.selectedUniversities removeAllObjects];
+    [self.universitiesTableView reloadData];
+}
+
+#pragma mark -
 #pragma mark === Table view data source ===
 #pragma mark
 

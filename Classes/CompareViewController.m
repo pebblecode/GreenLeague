@@ -55,6 +55,9 @@
     
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(addButtonPress)];
     self.navigationItem.rightBarButtonItem = addButton;    
+
+    UIBarButtonItem *clearButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(clearButtonPress)];
+    self.navigationItem.leftBarButtonItem = clearButton;        
     
 //    UIBarButtonItem *compareButton = [[UIBarButtonItem alloc] initWithTitle:@"Compare" style:UIBarButtonItemStylePlain target:self action:@selector(compareButtonPress)];
 //	self.navigationItem.rightBarButtonItem = compareButton;
@@ -152,7 +155,7 @@
 
 - (FindSelectorViewController *) findSelectorViewController {
     if (!findSelectorViewController) {
-        findSelectorViewController = [[FindSelectorViewController alloc] initWithUniversitiesModel:universitiesModel selectedUniversities:self.universitiesToCompare];        
+        findSelectorViewController = [[FindSelectorViewController alloc] initWithUniversitiesModel:self.universitiesModel selectedUniversities:self.universitiesToCompare];        
     }
     
     return findSelectorViewController;
@@ -167,7 +170,7 @@
     for (UIView *scrollSubview in self.scrollView.subviews) {        
         [scrollSubview removeFromSuperview];
     }
-    [universityViewControllers release]; universityViewControllers = nil;    
+    [universityViewControllers release]; universityViewControllers = nil; 
     
     // Figure out how big the scroll content size should be
     CGFloat scrollHeight = ([UniversityComparisonViewController height] * [self.universitiesToCompare count] + kTitleHeight);
@@ -208,6 +211,13 @@
     
     // Using nav controller that CompareViewController should already be in
     [self.navigationController pushViewController:self.findSelectorViewController animated:NO];
+}
+
+- (IBAction)clearButtonPress {
+    [self.universitiesToCompare removeAllObjects];
+    [self refreshScrollView];
+    
+    [self.findSelectorViewController clearSelectedUniversities];
 }
 
 - (IBAction)compareButtonPress {

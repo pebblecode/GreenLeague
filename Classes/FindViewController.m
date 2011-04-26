@@ -33,7 +33,7 @@
 
 @implementation FindViewController
 
-@synthesize sortControl, universitiesModel;
+@synthesize sortControl, universitiesModel, universitiesTableView;
 
 #pragma mark -
 #pragma mark View lifecycle
