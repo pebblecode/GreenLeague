@@ -61,5 +61,10 @@
 	[[UIApplication sharedApplication] openURL:url];		
 }
 
+- (IBAction) pebbleLink:(UIButton *)sender {
+	NSString *urlAddress = @"http://pebbleit.com/";		
+	NSURL *url = [NSURL URLWithString:urlAddress];		
+	[[UIApplication sharedApplication] openURL:url];
+}
 
 @end

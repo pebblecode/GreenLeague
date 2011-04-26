@@ -14,5 +14,6 @@
 }
 
 - (IBAction)greenLeagueButtonPress;
+- (IBAction) pebbleLink:(UIButton *)sender;
 
 @end

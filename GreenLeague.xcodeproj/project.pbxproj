@@ -40,6 +40,7 @@
 		3D308E721316BCAA00D37010 /* 12-eye.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D308E701316BCAA00D37010 /* 12-eye.png */; };
 		3D308E731316BCAA00D37010 /* 12-eye@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D308E711316BCAA00D37010 /* 12-eye@2x.png */; };
 		3D308E891316C5BF00D37010 /* green_league.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 3D308E881316C5BF00D37010 /* green_league.xcdatamodel */; };
+		3D422DBA1366CC0200DA0F53 /* pebble-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D422DB91366CC0200DA0F53 /* pebble-logo.png */; };
 		3DB0D9491315206D006FC601 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB0D9471315206D006FC601 /* FindViewController.m */; };
 		3DB0D94A1315206D006FC601 /* FindViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DB0D9481315206D006FC601 /* FindViewController.xib */; };
 		3DB0D9551315222C006FC601 /* 06-magnify.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB0D9531315222C006FC601 /* 06-magnify.png */; };
@@ -108,6 +109,7 @@
 		3D308E701316BCAA00D37010 /* 12-eye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "12-eye.png"; sourceTree = "<group>"; };
 		3D308E711316BCAA00D37010 /* 12-eye@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "12-eye@2x.png"; sourceTree = "<group>"; };
 		3D308E881316C5BF00D37010 /* green_league.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; name = green_league.xcdatamodel; path = Classes/green_league.xcdatamodel; sourceTree = "<group>"; };
+		3D422DB91366CC0200DA0F53 /* pebble-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pebble-logo.png"; sourceTree = "<group>"; };
 		3DB0D9461315206D006FC601 /* FindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindViewController.h; sourceTree = "<group>"; };
 		3DB0D9471315206D006FC601 /* FindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindViewController.m; sourceTree = "<group>"; };
 		3DB0D9481315206D006FC601 /* FindViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FindViewController.xib; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 		3DB0D95213152221006FC601 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3D422DB91366CC0200DA0F53 /* pebble-logo.png */,
 				3DCA733413279F65009D3505 /* 07-arrow-north.png */,
 				3DCA733513279F65009D3505 /* 07-arrow-north@2x.png */,
 				3DCA733613279F65009D3505 /* 08-arrow-northeast.png */,
@@ -400,6 +403,7 @@
 				3DCA733B13279F65009D3505 /* 08-arrow-northeast@2x.png in Resources */,
 				3DE4281A1327E783002C53CE /* UniversityComparisonViewController.xib in Resources */,
 				3DE4281F1327F49C002C53CE /* UniversityComparisonTitlesViewController.xib in Resources */,
+				3D422DBA1366CC0200DA0F53 /* pebble-logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
