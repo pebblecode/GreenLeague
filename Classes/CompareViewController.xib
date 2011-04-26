@@ -2,10 +2,10 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="7.10">
 	<data>
 		<int key="IBDocument.SystemTarget">1056</int>
-		<string key="IBDocument.SystemVersion">10J567</string>
+		<string key="IBDocument.SystemVersion">10J869</string>
 		<string key="IBDocument.InterfaceBuilderVersion">1305</string>
 		<string key="IBDocument.AppKitVersion">1038.35</string>
-		<string key="IBDocument.HIToolboxVersion">462.00</string>
+		<string key="IBDocument.HIToolboxVersion">461.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			<string key="NS.object.0">300</string>
@@ -82,7 +82,7 @@
 					<object class="IBUILabel" id="142202316">
 						<reference key="NSNextResponder" ref="869404991"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{14, 32}, {215, 21}}</string>
+						<string key="NSFrame">{{86, 37}, {215, 21}}</string>
 						<reference key="NSSuperview" ref="869404991"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
@@ -108,7 +108,7 @@
 					<object class="IBUIImageView" id="805832678">
 						<reference key="NSNextResponder" ref="869404991"/>
 						<int key="NSvFlags">256</int>
-						<string key="NSFrame">{{14, 5}, {16, 19}}</string>
+						<string key="NSFrame">{{282, 11}, {16, 19}}</string>
 						<reference key="NSSuperview" ref="869404991"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="142202316"/>
@@ -267,8 +267,8 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>addButtonPress</string>
 							<string>compareButtonPress</string>
+							<string>editButtonPress</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -280,17 +280,17 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>addButtonPress</string>
 							<string>compareButtonPress</string>
+							<string>editButtonPress</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBActionInfo">
-								<string key="name">addButtonPress</string>
+								<string key="name">compareButtonPress</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
-								<string key="name">compareButtonPress</string>
+								<string key="name">editButtonPress</string>
 								<string key="candidateClassName">id</string>
 							</object>
 						</object>

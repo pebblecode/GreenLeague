@@ -16,6 +16,8 @@
 @interface CompareViewController()
 
 - (void)refreshScrollView;
+- (void)showFindSelectorView;
+- (void)showHelpMessage;
 
 @end
 
@@ -162,7 +164,7 @@
 }
 
 #pragma mark -
-#pragma mark === Scroll view ===
+#pragma mark === Private methods ===
 #pragma mark
 
 - (void)refreshScrollView {
@@ -197,11 +199,25 @@
     // Add titles to title scroll      
     if ([self.universitiesToCompare count] > 0) {        
         [self.scrollView addSubview:[self.comparisonTitlesViewController view]];
+        [self.scrollView setScrollEnabled:YES];
     } else {
-        [self.scrollView addSubview:self.helpView];
+        [self showHelpMessage];
     }        
 }
 
+- (void)showFindSelectorView {
+    // Using nav controller that CompareViewController should already be in
+    [self.navigationController pushViewController:self.findSelectorViewController animated:NO];
+}
+
+
+- (void)showHelpMessage {
+    [self.scrollView addSubview:self.helpView];
+    
+    // Scroll to top left and disable scrolling
+    self.scrollView.contentOffset = CGPointZero;
+    [self.scrollView setScrollEnabled:NO];
+}
 
 #pragma mark -
 #pragma mark === Action methods ===
@@ -212,27 +228,17 @@
 }
 
 - (IBAction)clearButtonPress {
+    
+    [self.findSelectorViewController clearSelectedUniversities];
+
     [self.universitiesToCompare removeAllObjects];
     [self refreshScrollView];
     
-    [self.findSelectorViewController clearSelectedUniversities];
-    // Scroll to top left
-    [self.scrollView scrollRectToVisible:CGRectMake(0, 0, 1, 1) animated:NO];
 }
 
 - (IBAction)compareButtonPress {
 	UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"TODO" message:@"Compare not implemented yet" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease];
 	[alert show];
-}
-
-#pragma mark -
-#pragma mark === Public methods ===
-#pragma mark
-
-
-- (void)showFindSelectorView {
-    // Using nav controller that CompareViewController should already be in
-    [self.navigationController pushViewController:self.findSelectorViewController animated:NO];
 }
 
 

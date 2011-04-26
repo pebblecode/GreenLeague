@@ -38,9 +38,7 @@
 - (id)initWithUniversitiesModel:(UniversitiesModel *)unisModel;
 - (void)setUniversitiesToCompareWithNotification:(NSNotification *)notification;
 
-- (IBAction)addButtonPress;
+- (IBAction)editButtonPress;
 - (IBAction)compareButtonPress;
-
-- (void)showFindSelectorView;
 
 @end
