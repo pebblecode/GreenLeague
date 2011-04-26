@@ -198,8 +198,8 @@
     FindSelectorViewController *findVC = [[FindSelectorViewController alloc] initWithUniversitiesModel:universitiesModel selectedUniversities:self.universitiesToCompare];
     
     // Using nav controller that CompareViewController should already be in
-    [self.navigationController pushViewController:findVC animated:YES];
-    
+    [self.navigationController pushViewController:findVC animated:NO];
+    [findVC release];
 }
 
 - (IBAction)compareButtonPress {
