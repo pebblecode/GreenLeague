@@ -41,4 +41,6 @@
 - (IBAction)addButtonPress;
 - (IBAction)compareButtonPress;
 
+- (void)showFindSelectorView;
+
 @end

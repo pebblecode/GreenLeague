@@ -53,8 +53,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(addButtonPress)];
-    self.navigationItem.rightBarButtonItem = addButton;    
+    UIBarButtonItem *editButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editButtonPress)];
+    self.navigationItem.rightBarButtonItem = editButton;    
 
     UIBarButtonItem *clearButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(clearButtonPress)];
     self.navigationItem.leftBarButtonItem = clearButton;        
@@ -207,10 +207,8 @@
 #pragma mark === Action methods ===
 #pragma mark
 
-- (IBAction)addButtonPress {
-    
-    // Using nav controller that CompareViewController should already be in
-    [self.navigationController pushViewController:self.findSelectorViewController animated:NO];
+- (IBAction)editButtonPress {    
+    [self showFindSelectorView];
 }
 
 - (IBAction)clearButtonPress {
@@ -218,11 +216,23 @@
     [self refreshScrollView];
     
     [self.findSelectorViewController clearSelectedUniversities];
+    // Scroll to top left
+    [self.scrollView scrollRectToVisible:CGRectMake(0, 0, 1, 1) animated:NO];
 }
 
 - (IBAction)compareButtonPress {
 	UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"TODO" message:@"Compare not implemented yet" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease];
 	[alert show];
+}
+
+#pragma mark -
+#pragma mark === Public methods ===
+#pragma mark
+
+
+- (void)showFindSelectorView {
+    // Using nav controller that CompareViewController should already be in
+    [self.navigationController pushViewController:self.findSelectorViewController animated:NO];
 }
 
 
