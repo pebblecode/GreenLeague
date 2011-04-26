@@ -8,7 +8,6 @@
 
 #import "CompareViewController.h"
 #import "University.h"
-#import "FindSelectorViewController.h"
 #import "UniversityComparisonTitlesViewController.h"
 #import "UniversityComparisonViewController.h"
 
@@ -23,7 +22,7 @@
 @implementation CompareViewController
 
 @dynamic universitiesToCompare;
-@synthesize universitiesModel, helpView, scrollView, universityViewControllers, comparisonTitlesViewController;
+@synthesize universitiesModel, helpView, scrollView, universityViewControllers, comparisonTitlesViewController, findSelectorViewController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 	if ((self = [super initWithNibName:@"CompareViewController" bundle:nibBundleOrNil])) {
@@ -99,6 +98,7 @@
 	[helpView release];
     [scrollView release];
     [comparisonTitlesViewController release];
+    [findSelectorViewController release];
     
     [super dealloc];
 }
@@ -145,6 +145,14 @@
     
     return comparisonTitlesViewController;
     
+}
+
+- (FindSelectorViewController *) findSelectorViewController {
+    if (!findSelectorViewController) {
+        findSelectorViewController = [[FindSelectorViewController alloc] initWithUniversitiesModel:universitiesModel selectedUniversities:self.universitiesToCompare];        
+    }
+    
+    return findSelectorViewController;
 }
 
 #pragma mark -
@@ -194,12 +202,9 @@
 #pragma mark
 
 - (IBAction)addButtonPress {
-        
-    FindSelectorViewController *findVC = [[FindSelectorViewController alloc] initWithUniversitiesModel:universitiesModel selectedUniversities:self.universitiesToCompare];
     
     // Using nav controller that CompareViewController should already be in
-    [self.navigationController pushViewController:findVC animated:NO];
-    [findVC release];
+    [self.navigationController pushViewController:self.findSelectorViewController animated:NO];
 }
 
 - (IBAction)compareButtonPress {

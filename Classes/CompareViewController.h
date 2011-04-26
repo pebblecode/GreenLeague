@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "UniversitiesModel.h"
 #import "UniversityComparisonTitlesViewController.h"
+#import "FindSelectorViewController.h"
 
 // Note: CompareViewController is handled by a navigation controller from the app delegate.
 @interface CompareViewController : UIViewController {
@@ -21,6 +22,8 @@
     
     NSMutableArray *universityViewControllers;
     UniversityComparisonTitlesViewController *comparisonTitlesViewController;
+    
+    FindSelectorViewController *findSelectorViewController;
 }
 
 @property (nonatomic, retain) NSMutableArray *universitiesToCompare;
@@ -30,6 +33,7 @@
 @property (nonatomic, retain) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, retain) IBOutlet NSMutableArray *universityViewControllers;
 @property (nonatomic, retain) UniversityComparisonTitlesViewController *comparisonTitlesViewController;
+@property (nonatomic, retain) FindSelectorViewController *findSelectorViewController;
 
 - (id)initWithUniversitiesModel:(UniversitiesModel *)unisModel;
 - (void)setUniversitiesToCompareWithNotification:(NSNotification *)notification;
