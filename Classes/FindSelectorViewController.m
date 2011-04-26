@@ -128,7 +128,7 @@
     // Send a retained object
     [[NSNotificationCenter defaultCenter] postNotificationName:@"selectedUniversitiesSet" object:self.selectedUniversities];
     
-    [self.navigationController popViewControllerAnimated:YES];
+    [self.navigationController popViewControllerAnimated:NO];
 }
 
 @end
