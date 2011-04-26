@@ -53,8 +53,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addButtonPress)];
-    self.navigationItem.leftBarButtonItem = addButton;    
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(addButtonPress)];
+    self.navigationItem.rightBarButtonItem = addButton;    
     
 //    UIBarButtonItem *compareButton = [[UIBarButtonItem alloc] initWithTitle:@"Compare" style:UIBarButtonItemStylePlain target:self action:@selector(compareButtonPress)];
 //	self.navigationItem.rightBarButtonItem = compareButton;
