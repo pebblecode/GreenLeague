@@ -82,7 +82,12 @@
     
     // Override colours for selected universities
     University *uni = [self universityFromIndexPath:indexPath];
+    
+    // Invert colours - show white if unselected, and uni colours if selected
     if ([self.selectedUniversities containsObject:uni]) {
+        cell.textLabel.textColor = [uni awardClassTextColour];
+        cell.backgroundColor = [uni awardClassBackgroundColour];
+    } else {
         cell.textLabel.textColor = [UIColor colorWithHexString:@"#cccccc"];
         cell.backgroundColor = [UIColor whiteColor];
     }    
