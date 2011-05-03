@@ -27,4 +27,7 @@
 - (id)initWithUniversitiesModel:(UniversitiesModel *)unisModel;
 - (University *)universityFromIndexPath:(NSIndexPath *)indexPath;
 
+- (Boolean)isRankSort;
+- (Boolean)isNameSort;
+
 @end

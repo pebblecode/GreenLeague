@@ -24,8 +24,6 @@
 @interface FindViewController()
 
 - (void)sortControlValueChange;
-- (Boolean)isRankSort;
-- (Boolean)isNameSort;
 
 @end
 

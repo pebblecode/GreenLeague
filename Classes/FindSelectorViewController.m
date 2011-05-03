@@ -80,7 +80,17 @@
 	// Text: Rank. University
 	NSString *rankString = ([[uni rank2010] intValue] == 0) ? @"(none) " : [NSString stringWithFormat:@"%@. ", uni.rank2010];
 	cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, uni.sortName];    
-    	
+    if ([self isRankSort]) {
+        // Text eg, 5. Aston University
+        NSString *rankString = ([[uni rank2010] intValue] == 0) ? @"(none) " : [NSString stringWithFormat:@"%@. ", uni.rank2010];
+        cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, uni.sortName];
+    } else {
+        // Text eg: Aston University
+        cell.textLabel.text = [NSString stringWithFormat:@"%@", uni.sortName]; 
+    }    	
+    
+    
+    
     return cell;
 }
 
