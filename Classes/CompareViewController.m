@@ -176,7 +176,8 @@
     [universityViewControllers release]; universityViewControllers = nil; 
     
     // Figure out how big the scroll content size should be
-    CGFloat scrollHeight = ([UniversityComparisonViewController height] * [self.universitiesToCompare count] + kTitleHeight);
+    // Include table key height too.
+    CGFloat scrollHeight = ([UniversityComparisonViewController height] * [self.universitiesToCompare count] + kTitleHeight) + self.tableKeyView.frame.size.height;
     
     // Set the content size of the scroll view
     [self.scrollView setContentSize:CGSizeMake([UniversityComparisonViewController width], scrollHeight)];
