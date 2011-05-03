@@ -149,7 +149,6 @@
     
     if (!comparisonTitlesViewController) {
         comparisonTitlesViewController = [[UniversityComparisonTitlesViewController alloc] initWithNibName:@"UniversityComparisonTitlesViewController" bundle:nil];
-        NSLog(@"comp titles: %@", comparisonTitlesViewController);
     }
     
     return comparisonTitlesViewController;

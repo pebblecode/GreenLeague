@@ -126,7 +126,7 @@ static NSString *kDBFieldAwardClass = @"awardClass";
 	//	NSLog(@"dbFilePath = %@", dbFilePath);
 	//	NSURL *storeUrl = [NSURL fileURLWithPath:dbFilePath];	
 	
-	NSLog(@"storeUrl(%@) exists = %@", storeUrl, ([[NSFileManager defaultManager] fileExistsAtPath:storeUrl.path] ? @"YES" : @"NO"));
+	//NSLog(@"storeUrl(%@) exists = %@", storeUrl, ([[NSFileManager defaultManager] fileExistsAtPath:storeUrl.path] ? @"YES" : @"NO"));
     
     NSError *error = nil;
     persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
@@ -146,7 +146,7 @@ static NSString *kDBFieldAwardClass = @"awardClass";
         abort();
     }    
 	
-	NSLog(@"storeUrl(%@) exists? %@", storeUrl, ([[NSFileManager defaultManager] fileExistsAtPath:storeUrl.path] ? @"YES" : @"NO"));
+	//NSLog(@"storeUrl(%@) exists? %@", storeUrl, ([[NSFileManager defaultManager] fileExistsAtPath:storeUrl.path] ? @"YES" : @"NO"));
 	
     return persistentStoreCoordinator;
 }
