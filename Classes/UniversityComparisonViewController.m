@@ -145,6 +145,8 @@
 #pragma mark === Helper ===
 #pragma mark
 
+// Find the rating based on the number of rating images there are.
+// Eg, if there are 4, then the ratings are 0-25%, 25-50%, 50-75% and 75-100% 
 - (NSNumber *)ratingImageIndexFromScore:(NSNumber *)score maxScore:(NSNumber *)maxScore {
     
     float scorePercentage = [score floatValue] / [maxScore floatValue];
