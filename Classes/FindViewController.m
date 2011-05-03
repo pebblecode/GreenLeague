@@ -171,12 +171,19 @@
     
 	University *uni = [self universityFromIndexPath:indexPath];
 	
-	// Text: Rank. University
-	NSString *rankString = ([[uni rank2010] intValue] == 0) ? @"(none) " : [NSString stringWithFormat:@"%@. ", uni.rank2010];
-	cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, uni.sortName];	
-	// Detailed text: Scored: Score
-	cell.detailTextLabel.text = [NSString stringWithFormat:@"Scored: %.1f", [uni.totalScore floatValue]];		
-		
+    if ([self isRankSort]) {
+        // Text eg, 5. Aston University
+        NSString *rankString = ([[uni rank2010] intValue] == 0) ? @"(none) " : [NSString stringWithFormat:@"%@. ", uni.rank2010];
+        cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, uni.sortName];	
+        // Detailed text eg, Scored: 44.5
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"Scored: %.1f", [uni.totalScore floatValue]];		
+    } else {
+        // Text eg: Aston University
+        cell.textLabel.text = [NSString stringWithFormat:@"%@", uni.sortName];	
+        // Detailed text eg, Ranked: 5, Scored: 44.5
+        NSString *rankString = ([[uni rank2010] intValue] == 0) ? @"(none)" : [NSString stringWithFormat:@"%@", uni.rank2010];        
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"Ranked: %@, Scored: %.1f", rankString,[uni.totalScore floatValue]];		        
+    }
 	
     return cell;
 }
