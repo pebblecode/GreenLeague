@@ -24,7 +24,7 @@
 @implementation CompareViewController
 
 @dynamic universitiesToCompare;
-@synthesize universitiesModel, helpView, scrollView, universityViewControllers, comparisonTitlesViewController, findSelectorViewController;
+@synthesize universitiesModel, helpView, scrollView, tableKeyView, universityViewControllers, comparisonTitlesViewController, findSelectorViewController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 	if ((self = [super initWithNibName:@"CompareViewController" bundle:nibBundleOrNil])) {
@@ -105,6 +105,7 @@
 	[universitiesModel release];
 	[helpView release];
     [scrollView release];
+    [tableKeyView release];
     [comparisonTitlesViewController release];
     [findSelectorViewController release];
     
@@ -200,6 +201,9 @@
     if ([self.universitiesToCompare count] > 0) {        
         [self.scrollView addSubview:[self.comparisonTitlesViewController view]];
         [self.scrollView setScrollEnabled:YES];
+        
+        self.tableKeyView.hidden = NO;
+        
     } else {
         [self showHelpMessage];
     }        
@@ -217,6 +221,8 @@
     // Scroll to top left and disable scrolling
     self.scrollView.contentOffset = CGPointZero;
     [self.scrollView setScrollEnabled:NO];
+    
+    self.tableKeyView.hidden = YES;
 }
 
 #pragma mark -

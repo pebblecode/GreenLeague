@@ -19,6 +19,7 @@
     
     UIView *helpView;
     UIScrollView *scrollView;
+    UIView *tableKeyView;
     
     NSMutableArray *universityViewControllers;
     UniversityComparisonTitlesViewController *comparisonTitlesViewController;
@@ -31,6 +32,7 @@
 
 @property (nonatomic, retain) IBOutlet UIView *helpView;
 @property (nonatomic, retain) IBOutlet UIScrollView *scrollView;
+@property (nonatomic, retain) IBOutlet UIView *tableKeyView;
 @property (nonatomic, retain) IBOutlet NSMutableArray *universityViewControllers;
 @property (nonatomic, retain) UniversityComparisonTitlesViewController *comparisonTitlesViewController;
 @property (nonatomic, retain) FindSelectorViewController *findSelectorViewController;
