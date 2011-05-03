@@ -50,12 +50,12 @@
 						<string key="NSFrameSize">{320, 367}</string>
 						<reference key="NSSuperview" ref="888598328"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="221492015"/>
+						<reference key="NSNextKeyView" ref="186691900"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
-					<object class="IBUIImageView" id="221492015">
+					<object class="IBUIImageView" id="186691900">
 						<reference key="NSNextResponder" ref="888598328"/>
 						<int key="NSvFlags">256</int>
 						<string key="NSFrame">{{0, 302}, {320, 65}}</string>
@@ -183,7 +183,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">tableKeyView</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="221492015"/>
+						<reference key="destination" ref="186691900"/>
 					</object>
 					<int key="connectionID">37</int>
 				</object>
@@ -234,7 +234,7 @@
 						<reference key="object" ref="888598328"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="221492015"/>
+							<reference ref="186691900"/>
 							<reference ref="842447567"/>
 						</object>
 						<reference key="parent" ref="0"/>
@@ -250,7 +250,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">33</int>
-						<reference key="object" ref="221492015"/>
+						<reference key="object" ref="186691900"/>
 						<reference key="parent" ref="888598328"/>
 					</object>
 				</object>
