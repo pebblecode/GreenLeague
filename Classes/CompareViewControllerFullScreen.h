@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CompareViewController.h"
 
-@interface CompareViewControllerFullScreen : CompareViewController {
-    
+@interface CompareViewControllerFullScreen : UIViewController {
+    UIScrollView *scrollView;
 }
+
+@property (nonatomic, retain) UIScrollView *scrollView;
+
+- (id)initWithScrollView:(UIScrollView *)sView;
 
 @end

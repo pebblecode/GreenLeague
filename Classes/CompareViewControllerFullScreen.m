@@ -13,17 +13,28 @@ static inline double degreesToRadians (double degrees) {return degrees * M_PI/18
 
 @implementation CompareViewControllerFullScreen
 
+@synthesize scrollView;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:@"CompareViewControllerFullScreen" bundle:nibBundleOrNil];
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
     }
     return self;
 }
 
-- (void)dealloc
-{
+- (id)initWithScrollView:(UIScrollView *)sView {
+    self = [self initWithNibName:@"CompareViewControllerFullScreen" bundle:nil];
+    if (self) {
+        self.scrollView = sView;
+    }
+    
+    return self;    
+}
+
+- (void)dealloc {
+    [scrollView release];
     [super dealloc];
 }
 
@@ -39,10 +50,13 @@ static inline double degreesToRadians (double degrees) {return degrees * M_PI/18
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-
+    [super viewDidLoad];    
+    
     // Rotate sideways
     self.view.transform = CGAffineTransformMakeRotation(degreesToRadians(90));
+    
+    [self.view addSubview:self.scrollView];    
+    self.scrollView.frame = self.view.bounds;    
 }
 
 - (void)viewDidUnload

@@ -259,7 +259,7 @@
 - (IBAction)fullScreenButtonPress {
     
     // TODO: store fullscreen view
-    CompareViewControllerFullScreen *compareVCFullScreen = [[CompareViewControllerFullScreen alloc] initWithNibName:@"CompareViewControllerFullScreen" bundle:nil];
+    CompareViewControllerFullScreen *compareVCFullScreen = [[CompareViewControllerFullScreen alloc] initWithScrollView:self.scrollView];
     
     self.hidesBottomBarWhenPushed = YES;    
     [self.navigationController pushViewController:compareVCFullScreen animated:YES];
