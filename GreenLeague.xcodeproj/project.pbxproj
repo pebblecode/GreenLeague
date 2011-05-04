@@ -42,6 +42,8 @@
 		3D308E891316C5BF00D37010 /* green_league.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 3D308E881316C5BF00D37010 /* green_league.xcdatamodel */; };
 		3D422DBA1366CC0200DA0F53 /* pebble-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D422DB91366CC0200DA0F53 /* pebble-logo.png */; };
 		3D5BFBE1137013A8004DFA0B /* table-key.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D5BFBE0137013A8004DFA0B /* table-key.png */; };
+		3D8EA16D1371AF9100321D71 /* CompareViewControllerFullScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8EA16B1371AF9000321D71 /* CompareViewControllerFullScreen.m */; };
+		3D8EA16E1371AF9100321D71 /* CompareViewControllerFullScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D8EA16C1371AF9000321D71 /* CompareViewControllerFullScreen.xib */; };
 		3DB0D9491315206D006FC601 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB0D9471315206D006FC601 /* FindViewController.m */; };
 		3DB0D94A1315206D006FC601 /* FindViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DB0D9481315206D006FC601 /* FindViewController.xib */; };
 		3DB0D9551315222C006FC601 /* 06-magnify.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB0D9531315222C006FC601 /* 06-magnify.png */; };
@@ -112,6 +114,9 @@
 		3D308E881316C5BF00D37010 /* green_league.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; name = green_league.xcdatamodel; path = Classes/green_league.xcdatamodel; sourceTree = "<group>"; };
 		3D422DB91366CC0200DA0F53 /* pebble-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pebble-logo.png"; sourceTree = "<group>"; };
 		3D5BFBE0137013A8004DFA0B /* table-key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-key.png"; sourceTree = "<group>"; };
+		3D8EA16A1371AF9000321D71 /* CompareViewControllerFullScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompareViewControllerFullScreen.h; sourceTree = "<group>"; };
+		3D8EA16B1371AF9000321D71 /* CompareViewControllerFullScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompareViewControllerFullScreen.m; sourceTree = "<group>"; };
+		3D8EA16C1371AF9000321D71 /* CompareViewControllerFullScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CompareViewControllerFullScreen.xib; sourceTree = "<group>"; };
 		3DB0D9461315206D006FC601 /* FindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindViewController.h; sourceTree = "<group>"; };
 		3DB0D9471315206D006FC601 /* FindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindViewController.m; sourceTree = "<group>"; };
 		3DB0D9481315206D006FC601 /* FindViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FindViewController.xib; sourceTree = "<group>"; };
@@ -255,6 +260,9 @@
 				3D308E581316BB8C00D37010 /* CompareViewController.h */,
 				3D308E591316BB8C00D37010 /* CompareViewController.m */,
 				3D308E5A1316BB8C00D37010 /* CompareViewController.xib */,
+				3D8EA16A1371AF9000321D71 /* CompareViewControllerFullScreen.h */,
+				3D8EA16B1371AF9000321D71 /* CompareViewControllerFullScreen.m */,
+				3D8EA16C1371AF9000321D71 /* CompareViewControllerFullScreen.xib */,
 				3DE428161327E781002C53CE /* UniversityComparisonViewController.h */,
 				3DE428171327E781002C53CE /* UniversityComparisonViewController.m */,
 				3DE428181327E782002C53CE /* UniversityComparisonViewController.xib */,
@@ -408,6 +416,7 @@
 				3DE4281F1327F49C002C53CE /* UniversityComparisonTitlesViewController.xib in Resources */,
 				3D422DBA1366CC0200DA0F53 /* pebble-logo.png in Resources */,
 				3D5BFBE1137013A8004DFA0B /* table-key.png in Resources */,
+				3D8EA16E1371AF9100321D71 /* CompareViewControllerFullScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +444,7 @@
 				3DCA7326132659E6009D3505 /* FindSelectorViewController.m in Sources */,
 				3DE428191327E783002C53CE /* UniversityComparisonViewController.m in Sources */,
 				3DE4281E1327F49C002C53CE /* UniversityComparisonTitlesViewController.m in Sources */,
+				3D8EA16D1371AF9100321D71 /* CompareViewControllerFullScreen.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

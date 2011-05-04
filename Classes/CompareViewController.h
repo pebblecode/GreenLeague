@@ -37,10 +37,13 @@
 @property (nonatomic, retain) UniversityComparisonTitlesViewController *comparisonTitlesViewController;
 @property (nonatomic, retain) FindSelectorViewController *findSelectorViewController;
 
+- (BOOL)shouldShowFindSelectorFirst;
+
 - (id)initWithUniversitiesModel:(UniversitiesModel *)unisModel;
 - (void)setUniversitiesToCompareWithNotification:(NSNotification *)notification;
 
 - (IBAction)editButtonPress;
+- (IBAction)fullScreenButtonPress;
 - (IBAction)compareButtonPress;
 
 @end

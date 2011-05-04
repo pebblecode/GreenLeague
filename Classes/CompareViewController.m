@@ -10,6 +10,7 @@
 #import "University.h"
 #import "UniversityComparisonTitlesViewController.h"
 #import "UniversityComparisonViewController.h"
+#import "CompareViewControllerFullScreen.h"
 
 #define kTitleHeight 60.0
 
@@ -27,7 +28,7 @@
 @synthesize universitiesModel, helpView, scrollView, tableKeyView, universityViewControllers, comparisonTitlesViewController, findSelectorViewController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-	if ((self = [super initWithNibName:@"CompareViewController" bundle:nibBundleOrNil])) {
+	if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
         self.title = @"Universities";
 		self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Compare" image:[UIImage imageNamed:@"12-eye.png"] tag:1];
 	}
@@ -72,8 +73,11 @@
 //        [self.scrollView addSubview:self.helpView];
 //    } 
     
-    // Show find selector 
-    [self.navigationController pushViewController:self.findSelectorViewController animated:NO];
+    if ([self shouldShowFindSelectorFirst]) {
+        // Show find selector 
+        [self.navigationController pushViewController:self.findSelectorViewController animated:NO];        
+    }
+
 }
 
 
@@ -164,6 +168,16 @@
 }
 
 #pragma mark -
+#pragma mark === Public methods ===
+#pragma mark
+
+// Returns whether to show the find selector at first or not
+// Should override this in subclasses
+- (BOOL)shouldShowFindSelectorFirst {
+    return YES;
+}
+
+#pragma mark -
 #pragma mark === Private methods ===
 #pragma mark
 
@@ -239,6 +253,21 @@
 
     [self.universitiesToCompare removeAllObjects];
     [self refreshScrollView];
+    
+}
+
+- (IBAction)fullScreenButtonPress {
+    
+    // TODO: store fullscreen view
+    CompareViewControllerFullScreen *compareVCFullScreen = [[CompareViewControllerFullScreen alloc] initWithNibName:@"CompareViewControllerFullScreen" bundle:nil];
+    
+    self.hidesBottomBarWhenPushed = YES;    
+    [self.navigationController pushViewController:compareVCFullScreen animated:YES];
+    [compareVCFullScreen release];
+    
+    // Hide status bar and nav bar
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];    
+    self.navigationController.navigationBarHidden = YES;
     
 }
 
