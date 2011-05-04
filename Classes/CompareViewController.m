@@ -68,6 +68,8 @@
     // Handle universities selected on modal form
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setUniversitiesToCompareWithNotification:) name:@"selectedUniversitiesSet" object:nil];    
 
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(exitFullScreen:) name:@"compareViewFullScreenExit" object:nil];
+    
 //    // Add help view
 //    if ([self.universitiesToCompare count] <= 0) {
 //        [self.scrollView addSubview:self.helpView];
@@ -237,6 +239,27 @@
     [self.scrollView setScrollEnabled:NO];
     
     self.tableKeyView.hidden = YES;
+}
+
+#pragma mark -
+#pragma mark === Notification handling ===
+#pragma mark
+
+- (void)exitFullScreen:(NSNotification *)notification {
+    // Show status bar and nav bar
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];    
+    self.navigationController.navigationBarHidden = NO;
+    self.hidesBottomBarWhenPushed = NO;
+    
+    NSLog(@"scrollview: %@", self.scrollView);
+    NSLog(@"notification object: %@", notification.object);
+    UIScrollView *notificationObjScrollView = ((CompareViewControllerFullScreen *)notification.object).scrollView;
+    NSLog(@"notification object scrollView: %@", notificationObjScrollView);
+    
+    // Need to re-add scroll view for some reason
+    [self.view addSubview:self.scrollView];
+    [self.view sendSubviewToBack:self.scrollView];
+    self.scrollView.frame = CGRectMake(0, 0, 320, 367);
 }
 
 #pragma mark -

@@ -57,7 +57,8 @@ static inline double degreesToRadians (double degrees) {return degrees * M_PI/18
     // Add scroll view and send it to the back and set the frame to be the size of the current view
     [self.view addSubview:self.scrollView];
     [self.view sendSubviewToBack:self.scrollView];
-    self.scrollView.frame = self.view.bounds;    
+    self.scrollView.frame = self.view.bounds;
+    [self.scrollView setContentOffset:CGPointMake(0, 0)];
 }
 
 - (void)viewDidUnload
@@ -78,8 +79,9 @@ static inline double degreesToRadians (double degrees) {return degrees * M_PI/18
 #pragma mark === Public methods ===
 #pragma mark
 
-- (IBAction)exitFullScreenButtonPress {
-    [self.navigationController popViewControllerAnimated:NO];
+- (IBAction)exitFullScreenButtonPress { 
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"compareViewFullScreenExit" object:self];    
+    [self.navigationController popViewControllerAnimated:NO];    
 }
 
 

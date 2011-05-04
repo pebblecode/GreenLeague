@@ -42,6 +42,8 @@
 - (id)initWithUniversitiesModel:(UniversitiesModel *)unisModel;
 - (void)setUniversitiesToCompareWithNotification:(NSNotification *)notification;
 
+- (void)exitFullScreen:(NSNotification *)notification;
+
 - (IBAction)editButtonPress;
 - (IBAction)fullScreenButtonPress;
 - (IBAction)compareButtonPress;

@@ -249,11 +249,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Classes/CompareViewController.m"
-         timestampString = "326219080.599207"
+         timestampString = "326226755.997518"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "94"
-         endingLineNumber = "94"
+         startingLineNumber = "96"
+         endingLineNumber = "96"
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
@@ -277,11 +277,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Classes/CompareViewController.m"
-         timestampString = "326219486.20017"
+         timestampString = "326230357.590379"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "351"
-         endingLineNumber = "351"
+         startingLineNumber = "374"
+         endingLineNumber = "374"
          landmarkName = "-pickerView:titleForRow:forComponent:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -291,11 +291,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Classes/CompareViewController.m"
-         timestampString = "326219080.599207"
+         timestampString = "326226755.997518"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "148"
-         endingLineNumber = "148"
+         startingLineNumber = "150"
+         endingLineNumber = "150"
          landmarkName = "-setUniversitiesToCompareWithNotification:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -347,11 +347,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Classes/CompareViewController.m"
-         timestampString = "326219080.599207"
+         timestampString = "326226755.997518"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "139"
-         endingLineNumber = "139"
+         startingLineNumber = "141"
+         endingLineNumber = "141"
          landmarkName = "-setUniversitiesToCompare:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -361,11 +361,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Classes/CompareViewController.m"
-         timestampString = "326219080.599207"
+         timestampString = "326226755.997518"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "202"
-         endingLineNumber = "202"
+         startingLineNumber = "204"
+         endingLineNumber = "204"
          landmarkName = "-refreshData"
          landmarkType = "5">
       </FileBreakpoint>
@@ -389,11 +389,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Classes/CompareViewController.m"
-         timestampString = "326219486.20017"
+         timestampString = "326230357.590379"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "277"
-         endingLineNumber = "277"
+         startingLineNumber = "300"
+         endingLineNumber = "300"
          landmarkName = "-clearButtonPress"
          landmarkType = "5">
       </FileBreakpoint>
@@ -410,6 +410,20 @@
          endingLineNumber = "11"
          landmarkName = "@interface CompareViewControllerFullScreen"
          landmarkType = "2">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "Classes/CompareViewController.m"
+         timestampString = "326226911.86423"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "248"
+         endingLineNumber = "248"
+         landmarkName = "-exitFullScreen:"
+         landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>
