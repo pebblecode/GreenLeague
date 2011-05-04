@@ -253,11 +253,6 @@
     self.navigationController.navigationBarHidden = NO;
     self.hidesBottomBarWhenPushed = NO;
     
-    NSLog(@"scrollview: %@", self.scrollView);
-    NSLog(@"notification object: %@", notification.object);
-    UIScrollView *notificationObjScrollView = ((CompareViewControllerFullScreen *)notification.object).scrollView;
-    NSLog(@"notification object scrollView: %@", notificationObjScrollView);
-    
     // Need to re-add scroll view for some reason
     [self.view addSubview:self.scrollView];
     [self.view sendSubviewToBack:self.scrollView];
