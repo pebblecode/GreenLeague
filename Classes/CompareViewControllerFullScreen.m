@@ -7,7 +7,9 @@
 //
 
 #import "CompareViewControllerFullScreen.h"
+#include <math.h>
 
+static inline double degreesToRadians (double degrees) {return degrees * M_PI/180;}
 
 @implementation CompareViewControllerFullScreen
 
@@ -38,7 +40,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+
+    // Rotate sideways
+    self.view.transform = CGAffineTransformMakeRotation(degreesToRadians(90));
 }
 
 - (void)viewDidUnload
