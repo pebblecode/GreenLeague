@@ -25,7 +25,7 @@
 @implementation CompareViewController
 
 @dynamic universitiesToCompare;
-@synthesize universitiesModel, helpView, scrollView, tableKeyView, universityViewControllers, comparisonTitlesViewController, findSelectorViewController;
+@synthesize universitiesModel, helpView, scrollView, tableKeyView, fullScreenButton, universityViewControllers, comparisonTitlesViewController, findSelectorViewController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 	if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
@@ -112,6 +112,7 @@
 	[helpView release];
     [scrollView release];
     [tableKeyView release];
+    [fullScreenButton release];
     [comparisonTitlesViewController release];
     [findSelectorViewController release];
     
@@ -219,7 +220,7 @@
         [self.scrollView setScrollEnabled:YES];
         
         self.tableKeyView.hidden = NO;
-        
+        self.fullScreenButton.hidden = NO;
     } else {
         [self showHelpMessage];
     }        
@@ -239,6 +240,7 @@
     [self.scrollView setScrollEnabled:NO];
     
     self.tableKeyView.hidden = YES;
+    self.fullScreenButton.hidden = YES;
 }
 
 #pragma mark -
