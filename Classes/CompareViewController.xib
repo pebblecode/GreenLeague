@@ -59,10 +59,10 @@
 					<object class="IBUIImageView" id="186691900">
 						<reference key="NSNextResponder" ref="888598328"/>
 						<int key="NSvFlags">256</int>
-						<string key="NSFrame">{{0, 302}, {320, 65}}</string>
+						<string key="NSFrame">{{0, 309}, {320, 65}}</string>
 						<reference key="NSSuperview" ref="888598328"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="986074718"/>
+						<reference key="NSNextKeyView" ref="501957667"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">4</int>
@@ -73,10 +73,10 @@
 							<string key="NSResourceName">table-key.png</string>
 						</object>
 					</object>
-					<object class="IBUIButton" id="986074718">
+					<object class="IBUIButton" id="501957667">
 						<reference key="NSNextResponder" ref="888598328"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{48, 307}, {260, 22}}</string>
+						<string key="NSFrame">{{269, 322}, {40, 40}}</string>
 						<reference key="NSSuperview" ref="888598328"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
@@ -90,7 +90,6 @@
 							<int key="NSfFlags">16</int>
 						</object>
 						<int key="IBUIButtonType">1</int>
-						<string key="IBUINormalTitle">Full screen</string>
 						<object class="NSColor" key="IBUIHighlightedTitleColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
@@ -102,6 +101,10 @@
 						<object class="NSColor" key="IBUINormalTitleShadowColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MC41AA</bytes>
+						</object>
+						<object class="NSCustomResource" key="IBUINormalImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">09-arrows-out.png</string>
 						</object>
 					</object>
 				</object>
@@ -222,7 +225,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">fullScreenButtonPress</string>
-						<reference key="source" ref="986074718"/>
+						<reference key="source" ref="501957667"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
@@ -277,7 +280,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="186691900"/>
 							<reference ref="842447567"/>
-							<reference ref="986074718"/>
+							<reference ref="501957667"/>
 						</object>
 						<reference key="parent" ref="0"/>
 						<string key="objectName">Main containter view</string>
@@ -297,7 +300,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">38</int>
-						<reference key="object" ref="986074718"/>
+						<reference key="object" ref="501957667"/>
 						<reference key="parent" ref="888598328"/>
 					</object>
 				</object>
@@ -462,12 +465,14 @@
 			<object class="NSArray" key="dict.sortedKeys">
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<string>07-arrow-north.png</string>
+				<string>09-arrows-out.png</string>
 				<string>table-key.png</string>
 			</object>
 			<object class="NSMutableArray" key="dict.values">
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<string>{16, 19}</string>
-				<string>{320, 65}</string>
+				<string>{23, 23}</string>
+				<string>{320, 52}</string>
 			</object>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">300</string>

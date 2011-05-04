@@ -262,7 +262,7 @@
     CompareViewControllerFullScreen *compareVCFullScreen = [[CompareViewControllerFullScreen alloc] initWithScrollView:self.scrollView];
     
     self.hidesBottomBarWhenPushed = YES;    
-    [self.navigationController pushViewController:compareVCFullScreen animated:YES];
+    [self.navigationController pushViewController:compareVCFullScreen animated:NO];
     [compareVCFullScreen release];
     
     // Hide status bar and nav bar
