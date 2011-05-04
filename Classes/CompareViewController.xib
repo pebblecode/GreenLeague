@@ -62,7 +62,7 @@
 						<string key="NSFrame">{{0, 309}, {320, 65}}</string>
 						<reference key="NSSuperview" ref="888598328"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="866317998"/>
+						<reference key="NSNextKeyView" ref="243784502"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">4</int>
@@ -73,10 +73,10 @@
 							<string key="NSResourceName">table-key.png</string>
 						</object>
 					</object>
-					<object class="IBUIButton" id="866317998">
+					<object class="IBUIButton" id="243784502">
 						<reference key="NSNextResponder" ref="888598328"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{269, 322}, {40, 40}}</string>
+						<string key="NSFrame">{{270, 324}, {35, 35}}</string>
 						<reference key="NSSuperview" ref="888598328"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
@@ -225,7 +225,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">fullScreenButtonPress</string>
-						<reference key="source" ref="866317998"/>
+						<reference key="source" ref="243784502"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
@@ -235,7 +235,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">fullScreenButton</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="866317998"/>
+						<reference key="destination" ref="243784502"/>
 					</object>
 					<int key="connectionID">40</int>
 				</object>
@@ -288,7 +288,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="186691900"/>
 							<reference ref="842447567"/>
-							<reference ref="866317998"/>
+							<reference ref="243784502"/>
 						</object>
 						<reference key="parent" ref="0"/>
 						<string key="objectName">Main containter view</string>
@@ -308,7 +308,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">38</int>
-						<reference key="object" ref="866317998"/>
+						<reference key="object" ref="243784502"/>
 						<reference key="parent" ref="888598328"/>
 					</object>
 				</object>
