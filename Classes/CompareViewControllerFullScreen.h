@@ -12,7 +12,8 @@
     UIScrollView *scrollView;
 }
 
-@property (nonatomic, retain) UIScrollView *scrollView;
+// Store the pointer only
+@property (nonatomic, assign) UIScrollView *scrollView;
 
 - (id)initWithScrollView:(UIScrollView *)sView;
 

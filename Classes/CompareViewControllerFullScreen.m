@@ -34,7 +34,6 @@ static inline double degreesToRadians (double degrees) {return degrees * M_PI/18
 }
 
 - (void)dealloc {
-    // Don't release scrollView (still used by CompareViewController)
     [super dealloc];
 }
 
