@@ -16,4 +16,6 @@
 
 - (id)initWithScrollView:(UIScrollView *)sView;
 
+- (IBAction)exitFullScreenButtonPress;
+
 @end

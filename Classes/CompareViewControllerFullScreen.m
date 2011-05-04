@@ -34,7 +34,7 @@ static inline double degreesToRadians (double degrees) {return degrees * M_PI/18
 }
 
 - (void)dealloc {
-    [scrollView release];
+    // Don't release scrollView (still used by CompareViewController)
     [super dealloc];
 }
 
@@ -55,7 +55,9 @@ static inline double degreesToRadians (double degrees) {return degrees * M_PI/18
     // Rotate sideways
     self.view.transform = CGAffineTransformMakeRotation(degreesToRadians(90));
     
-    [self.view addSubview:self.scrollView];    
+    // Add scroll view and send it to the back and set the frame to be the size of the current view
+    [self.view addSubview:self.scrollView];
+    [self.view sendSubviewToBack:self.scrollView];
     self.scrollView.frame = self.view.bounds;    
 }
 
@@ -74,13 +76,11 @@ static inline double degreesToRadians (double degrees) {return degrees * M_PI/18
 
 
 #pragma mark -
-#pragma mark === Overriding super methods ===
+#pragma mark === Public methods ===
 #pragma mark
 
-// Returns whether to show the find selector at first or not
-// Should override this in subclasses
-- (BOOL)shouldShowFindSelectorFirst {
-    return NO;
+- (IBAction)exitFullScreenButtonPress {
+    [self.navigationController popViewControllerAnimated:NO];
 }
 
 
