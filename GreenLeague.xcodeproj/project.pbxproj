@@ -46,6 +46,9 @@
 		3D7E78B41372B0E9009F4A35 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D7E78B01372B0E9009F4A35 /* Icon.png */; };
 		3D7E78B51372B0E9009F4A35 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D7E78B11372B0E9009F4A35 /* Icon@2x.png */; };
 		3D7E78B61372B0E9009F4A35 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D7E78B21372B0E9009F4A35 /* iTunesArtwork.png */; };
+		3D7E78B91372B74C009F4A35 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D7E78B71372B74C009F4A35 /* Default.png */; };
+		3D7E78BA1372B74C009F4A35 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D7E78B81372B74C009F4A35 /* Default@2x.png */; };
+		3D7E78EA1372BB97009F4A35 /* table-key@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D7E78E91372BB97009F4A35 /* table-key@2x.png */; };
 		3D8EA16D1371AF9100321D71 /* CompareViewControllerFullScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8EA16B1371AF9000321D71 /* CompareViewControllerFullScreen.m */; };
 		3D8EA16E1371AF9100321D71 /* CompareViewControllerFullScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D8EA16C1371AF9000321D71 /* CompareViewControllerFullScreen.xib */; };
 		3D8EA1731371C18000321D71 /* 09-arrows-out.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D8EA16F1371C18000321D71 /* 09-arrows-out.png */; };
@@ -127,6 +130,9 @@
 		3D7E78B01372B0E9009F4A35 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		3D7E78B11372B0E9009F4A35 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		3D7E78B21372B0E9009F4A35 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		3D7E78B71372B74C009F4A35 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		3D7E78B81372B74C009F4A35 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		3D7E78E91372BB97009F4A35 /* table-key@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-key@2x.png"; sourceTree = "<group>"; };
 		3D8EA16A1371AF9000321D71 /* CompareViewControllerFullScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompareViewControllerFullScreen.h; sourceTree = "<group>"; };
 		3D8EA16B1371AF9000321D71 /* CompareViewControllerFullScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompareViewControllerFullScreen.m; sourceTree = "<group>"; };
 		3D8EA16C1371AF9000321D71 /* CompareViewControllerFullScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CompareViewControllerFullScreen.xib; sourceTree = "<group>"; };
@@ -316,6 +322,8 @@
 		3DB0D95213152221006FC601 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3D7E78B71372B74C009F4A35 /* Default.png */,
+				3D7E78B81372B74C009F4A35 /* Default@2x.png */,
 				3D7E78AF1372B0E9009F4A35 /* Icon-72.png */,
 				3D7E78B01372B0E9009F4A35 /* Icon.png */,
 				3D7E78B11372B0E9009F4A35 /* Icon@2x.png */,
@@ -332,6 +340,7 @@
 				3DCA733613279F65009D3505 /* 08-arrow-northeast.png */,
 				3DCA733713279F65009D3505 /* 08-arrow-northeast@2x.png */,
 				3D5BFBE0137013A8004DFA0B /* table-key.png */,
+				3D7E78E91372BB97009F4A35 /* table-key@2x.png */,
 				3D03ACA813212D6100F6B225 /* star4_awful.png */,
 				3D03ACA913212D6100F6B225 /* star4_excellent.png */,
 				3D03ACAA13212D6100F6B225 /* star4_ok.png */,
@@ -453,6 +462,9 @@
 				3D7E78B41372B0E9009F4A35 /* Icon.png in Resources */,
 				3D7E78B51372B0E9009F4A35 /* Icon@2x.png in Resources */,
 				3D7E78B61372B0E9009F4A35 /* iTunesArtwork.png in Resources */,
+				3D7E78B91372B74C009F4A35 /* Default.png in Resources */,
+				3D7E78BA1372B74C009F4A35 /* Default@2x.png in Resources */,
+				3D7E78EA1372BB97009F4A35 /* table-key@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
