@@ -51,8 +51,12 @@ static inline double degreesToRadians (double degrees) {return degrees * M_PI/18
 {
     [super viewDidLoad];    
     
-    // Rotate sideways
-    self.view.transform = CGAffineTransformMakeRotation(degreesToRadians(90));
+    // Animate rotating sideways to the left
+    [UIView animateWithDuration:0.75
+         animations:^{ 				 
+             self.view.transform = CGAffineTransformMakeRotation(degreesToRadians(90));                       
+         }
+     ];
     
     // Add scroll view and send it to the back and set the frame to be the size of the current view
     [self.view addSubview:self.scrollView];
@@ -81,6 +85,7 @@ static inline double degreesToRadians (double degrees) {return degrees * M_PI/18
 
 - (IBAction)exitFullScreenButtonPress { 
     [[NSNotificationCenter defaultCenter] postNotificationName:@"compareViewFullScreenExit" object:self];    
+
     [self.navigationController popViewControllerAnimated:NO];    
 }
 
