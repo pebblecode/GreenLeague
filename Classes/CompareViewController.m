@@ -219,6 +219,7 @@
         [self.scrollView addSubview:[self.comparisonTitlesViewController view]];
         [self.scrollView setScrollEnabled:YES];
         
+        self.helpView.hidden = YES; // Hide help message
         self.tableKeyView.hidden = NO;
         self.fullScreenButton.hidden = NO;
     } else {
@@ -233,7 +234,7 @@
 
 
 - (void)showHelpMessage {
-    [self.scrollView addSubview:self.helpView];
+    self.helpView.hidden = NO;
     
     // Scroll to top left and disable scrolling
     self.scrollView.contentOffset = CGPointZero;
