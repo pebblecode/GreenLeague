@@ -46,6 +46,9 @@
 	[aboutVC release];
 	[universitiesModel release];
 
+    // Self as delegate
+    tabBarController.delegate = self;
+    
     // Add the tab bar controller's view to the window and display.
     [self.window addSubview:tabBarController.view];
     [self.window makeKeyAndVisible];
@@ -95,11 +98,26 @@
 #pragma mark -
 #pragma mark UITabBarControllerDelegate methods
 
-/*
-// Optional UITabBarControllerDelegate method.
+
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+    
+    // If the compare tab is selected and hte find selector view controller is shown, a tab press should be the same as pressing done
+    if (self.tabBarController.selectedIndex == 1) { // Selected compare view
+                
+        if ([viewController class] == [UINavigationController class]) {
+            UINavigationController *navController = (UINavigationController *)viewController;
+            
+            if ([[navController topViewController] class] == [CompareViewController class]) {
+                
+                CompareViewController *compareVC = (CompareViewController *)[navController topViewController];
+                
+                // It's as if you selected done
+                [compareVC.findSelectorViewController doneButtonPressed];                
+            }
+        }
+    }
 }
-*/
+
 
 /*
 // Optional UITabBarControllerDelegate method.
