@@ -165,16 +165,16 @@
     
     switch ([index intValue]) {
         case 0:
-            image = [UIImage imageNamed:@"star4_awful.png"];
+            image = [UIImage imageNamed:@"star_awful.png"];
             break;
         case 1:
-            image = [UIImage imageNamed:@"star4_poor.png"];
+            image = [UIImage imageNamed:@"star_poor.png"];
             break;            
         case 2:
-            image = [UIImage imageNamed:@"star4_ok.png"];
+            image = [UIImage imageNamed:@"star_ok.png"];
             break; 
         case 3:
-            image = [UIImage imageNamed:@"star4_excellent.png"];
+            image = [UIImage imageNamed:@"star_excellent.png"];
             break;             
             
         default:
