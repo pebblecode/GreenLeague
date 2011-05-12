@@ -69,6 +69,7 @@
 		3DB0D97213152B60006FC601 /* gl2010.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3DB0D97113152B60006FC601 /* gl2010.csv */; };
 		3DB0D9941315422C006FC601 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB0D9931315422C006FC601 /* CoreData.framework */; };
 		3DB0D9F01317BD4F006FC601 /* University.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB0D9EF1317BD4F006FC601 /* University.m */; };
+		3DC2E687137BE4A90017E939 /* description.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3DC2E686137BE4A90017E939 /* description.txt */; };
 		3DCA7326132659E6009D3505 /* FindSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCA7324132659E5009D3505 /* FindSelectorViewController.m */; };
 		3DCA7327132659E6009D3505 /* FindSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DCA7325132659E6009D3505 /* FindSelectorViewController.xib */; };
 		3DCA733813279F65009D3505 /* 07-arrow-north.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DCA733413279F65009D3505 /* 07-arrow-north.png */; };
@@ -161,6 +162,7 @@
 		3DB0D9931315422C006FC601 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3DB0D9EE1317BD4F006FC601 /* University.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = University.h; sourceTree = "<group>"; };
 		3DB0D9EF1317BD4F006FC601 /* University.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = University.m; sourceTree = "<group>"; };
+		3DC2E686137BE4A90017E939 /* description.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = description.txt; sourceTree = "<group>"; };
 		3DCA7323132659E5009D3505 /* FindSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindSelectorViewController.h; sourceTree = "<group>"; };
 		3DCA7324132659E5009D3505 /* FindSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindSelectorViewController.m; sourceTree = "<group>"; };
 		3DCA7325132659E6009D3505 /* FindSelectorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindSelectorViewController.xib; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 				28AD73870D9D96C1002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* GreenLeague-Info.plist */,
 				3D308E191316590100D37010 /* README.markdown */,
+				3DC2E686137BE4A90017E939 /* description.txt */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 				3D7E79041372C2DF009F4A35 /* star_ok@2x.png in Resources */,
 				3D7E79051372C2DF009F4A35 /* star_poor.png in Resources */,
 				3D7E79061372C2DF009F4A35 /* star_poor@2x.png in Resources */,
+				3DC2E687137BE4A90017E939 /* description.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

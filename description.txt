@@ -1,0 +1,32 @@
+## Description
+
+This useful, free app allows students and staff to find out how green their university is, and compare it to others.  The People & Planet Green League is the only UK ranking that compares over 140 institutions' environmental and ethical performance. It is produced by the UK's leading student campaigning network, People & Planet (http://peopleandplanet.org/).  
+
+The Green League use 14 criteria to assess universities greenness including:
+
+* carbon footprint per student
+* sustainable food provision
+* approach to ethical investment & Fairtrade
+* recycling and waste
+* curriculum
+* opportunities for staff and student engagement in making the university greener.
+* renewable energy
+
+Features: 
+
+* See how your current or potential institution ranks against all others in the UK 
+* Compare different universities to each other to help you decide where to apply or study
+* Detailed breakdown for each university allows you to see where improvements are needed
+
+To get involved in creating greener universities fit for the future, join your local People & Planet group.  See: http://peopleandplanet.org/get-involved
+
+## Keywords 
+
+universities, green league, student, university, green, climate, league, league table, sustainability, sustainable, transition, go green, people & planet, people, planet, environment, environmental, education, 
+
+## Meta
+
+Copyright: People & Planet Ltd 
+Contact email address: greenleague@peopleandplanet.org 
+Support URL: http://peopleandplanet.org/greenleague
+App URL: http://peopleandplanet.org/greenleague
