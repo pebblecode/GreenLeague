@@ -2,10 +2,10 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="7.10">
 	<data>
 		<int key="IBDocument.SystemTarget">1056</int>
-		<string key="IBDocument.SystemVersion">10J567</string>
+		<string key="IBDocument.SystemVersion">10J869</string>
 		<string key="IBDocument.InterfaceBuilderVersion">1305</string>
 		<string key="IBDocument.AppKitVersion">1038.35</string>
-		<string key="IBDocument.HIToolboxVersion">462.00</string>
+		<string key="IBDocument.HIToolboxVersion">461.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			<string key="NS.object.0">300</string>
@@ -47,10 +47,10 @@
 					<object class="IBUITextView" id="439672921">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">274</int>
-						<string key="NSFrame">{{20, 149}, {280, 168}}</string>
+						<string key="NSFrame">{{20, 149}, {280, 194}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="483908465"/>
+						<reference key="NSNextKeyView" ref="591367650"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MSAxIDEAA</bytes>
@@ -59,10 +59,23 @@
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<bool key="IBUIEditable">NO</bool>
-						<string key="IBUIText">The award-winning Green League is the only league table showing the environmental performance of Britain’s universities and is credited with putting climate change on the desk of every Vice-Chancellor in the UK. </string>
+						<string type="base64-UTF8" key="IBUIText">VGhlIGF3YXJkLXdpbm5pbmcgUGVvcGxlICYgUGxhbmV0IEdyZWVuIExlYWd1ZSBpcyB0aGUgb25seSBs
+ZWFndWUgdGFibGUgcmFua2luZyB0aGUgZW52aXJvbm1lbnRhbCBwZXJmb3JtYW5jZSBvZiBhbGwgVUsg
+dW5pdmVyc2l0aWVzLiAgSXQgaXMgcHJvZHVjZWQgYW5udWFsbHkgYnkgUGVvcGxlICYgUGxhbmV0LCB0
+aGUgVUsncyBsYXJnZXN0IHN0dWRlbnQgbmV0d29yayBjYW1wYWlnbmluZyB0byBlbmQgd29ybGQgcG92
+ZXJ0eSwgZGVmZW5kIGh1bWFuIHJpZ2h0IGFuZCBwcm90ZWN0IHRoZSBlbnZpcm9ubWVudC4gIFRoZSBH
+cmVlbiBMZWFndWUgaGFzIGJlZW4gY3JlZGl0ZWQgd2l0aCBwdXR0aW5nIGNsaW1hdGUgY2hhbmdlIG9u
+IHRoZSBhZ2VuZGEgb2YgZXZlcnkgVmljZS1DaGFuY2VsbG9yIGluIHRoZSBjb3VudHJ5IGFuZCBkcml2
+aW5nIGZvcndhcmRzIGltcHJvdmVtZW50cyBpbiBlbnZpcm9ubWVudGFsIGFuZCBldGhpY2FsIHBlcmZv
+cm1hbmNlLiAgDQ1GaW5kIG91dCBtb3JlIGFib3V0IHRoZSBQZW9wbGUgJiBQbGFuZXQgR3JlZW4gTGVh
+Z3VlOiBodHRwOi8vcGVvcGxlYW5kcGxhbmV0Lm9yZy9ncmVlbmxlYWd1ZSANDUdldCBpbnZvbHZlZCB3
+aXRoIFBlb3BsZSAmIFBsYW5ldCBhdCB5b3VyIGluc3RpdHV0aW9uOiBodHRwOi8vcGVvcGxlYW5kcGxh
+bmV0Lm9yZy9nZXQtaW52b2x2ZWQgDQ1TdXBwb3J0IHRoZSBQZW9wbGUgJiBQbGFuZXQgR3JlZW4gTGVh
+Z3VlIHdpdGggYSBkb25hdGlvbjogaHR0cDovL3Blb3BsZWFuZHBsYW5ldC5vcmcvZ3JlZW5sZWFndWUv
+ZG9uYXRlIA</string>
 						<object class="NSFont" key="IBUIFont">
 							<string key="NSName">Helvetica</string>
-							<double key="NSSize">17</double>
+							<double key="NSSize">14</double>
 							<int key="NSfFlags">16</int>
 						</object>
 						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
@@ -111,7 +124,7 @@
 						<string key="NSFrame">{{200, 366}, {100, 24}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="591367650"/>
+						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<int key="IBUIContentMode">1</int>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -135,7 +148,7 @@
 						<string key="NSFrame">{{131, 370}, {96, 21}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
+						<reference key="NSNextKeyView" ref="483908465"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
