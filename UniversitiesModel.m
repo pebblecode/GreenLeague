@@ -11,7 +11,7 @@
 #import "NSString+Helper.h"
 
 // Data source file minus the file extension
-static NSString *kDataSourceFile = @"gl2010";
+static NSString *kDataSourceFile = @"gl11-export-draft";
 static NSString *kDatabaseSqliteFile = @"green_league.sqlite";
 #define kDataCSVRowsToIgnore 4
 
