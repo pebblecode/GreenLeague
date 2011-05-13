@@ -27,6 +27,10 @@ To get involved in creating greener universities fit for the future, join your l
 
 universities, green league, student, UCAS, uni, university, green, climate, league, league table, sustainability, sustainable, transition, go green, people & planet, people, planet, environment, environmental, education
 
+Reduced list:
+
+green league,uni,university,green,climate,league,sustainability,people,planet,environment,UCAS
+
 ## Meta
 
 Copyright: People & Planet Ltd 
