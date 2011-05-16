@@ -34,15 +34,37 @@ static NSString *kScoreKeyEntityName = @"ScoreKey";
 // If a key is not found, then the nil object is stored in the array
 + (NSArray *)scoreKeyArrayFromKeyStringArray:(NSArray *)keyStringArray managedObjectContext:(NSManagedObjectContext *)managedObjectContext {
     
-    NSArray *dateKeyArray = [[NSArray alloc] init];
+    NSMutableArray *scoreKeyArray = [[NSArray alloc] init];
+    
     for (int i = 0; i < [keyStringArray count]; i++) {
         NSString *keyStr = [keyStringArray objectAtIndex:i];
         
         // Find string in ScoreKey table
 		NSEntityDescription *entity = [NSEntityDescription entityForName:[ScoreKey entityName] inManagedObjectContext: managedObjectContext];
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"key == '%@'", keyStr];
         
+		NSFetchRequest *request = [[NSFetchRequest alloc] init];
+		[request setEntity:entity]; 
+        [request setPredicate:predicate];        
         
+		// Fetch the records and handle an error
+		NSError *error;
+		NSMutableArray *scoreKeys = [[managedObjectContext executeFetchRequest:request error:&error] mutableCopy];
+		if (!scoreKeys) {
+			// Handle the error.
+			// This is a serious error and should advise the user to restart the application
+			NSLog(@"scoreKeys error: %@", error);
+		}
+        [request release];
+        
+        if ([scoreKeys count] == 1) {
+            [scoreKeyArray addObject:[scoreKeys objectAtIndex:0]]; // Just add the first match - should only be one
+        } else {
+            NSLog(@"scoreKeys error: Should have 1 item, but has %d item(s)", [scoreKeys count]);
+        }
     }
+    
+    return [scoreKeyArray autorelease];
 }
 
 + (void)addScoreKeyToDBWithManagedContext:(NSManagedObjectContext *)managedObjectContext fromRowArray:(NSArray *)rowArray {

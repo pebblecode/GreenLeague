@@ -319,6 +319,11 @@ static NSString *kDBFieldAwardClass = @"awardClass";
 	
     // Get header row
 	NSArray *headerRowArray = [ScoreKey scoreKeyArrayFromKeyStringArray:[[dataFileContents csvRows] objectAtIndex:0] managedObjectContext:[self managedObjectContext]];
+
+    for (ScoreKey *scoreKey in headerRowArray) {
+        
+        NSLog(@"%@", scoreKey);
+    }
     exit(0);
     
 	// Parse CSV file
