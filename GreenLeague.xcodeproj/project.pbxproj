@@ -38,8 +38,8 @@
 		3D308E891316C5BF00D37010 /* green_league.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 3D308E881316C5BF00D37010 /* green_league.xcdatamodel */; };
 		3D422DBA1366CC0200DA0F53 /* pebble-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D422DB91366CC0200DA0F53 /* pebble-logo.png */; };
 		3D5A78B11381299E0009858C /* gl11-export-draft-key.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3D5A78B01381299E0009858C /* gl11-export-draft-key.csv */; };
-		3D5A78B413812F270009858C /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5A78B313812F270009858C /* Data.m */; };
-		3D5A78BA13812F280009858C /* DataKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5A78B913812F280009858C /* DataKey.m */; };
+		3D5A78B413812F270009858C /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5A78B313812F270009858C /* Score.m */; };
+		3D5A78BA13812F280009858C /* ScoreKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5A78B913812F280009858C /* ScoreKey.m */; };
 		3D5A78BD13812F280009858C /* University.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5A78BC13812F280009858C /* University.m */; };
 		3D5BFBE1137013A8004DFA0B /* table-key.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D5BFBE0137013A8004DFA0B /* table-key.png */; };
 		3D7E78B31372B0E9009F4A35 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D7E78AF1372B0E9009F4A35 /* Icon-72.png */; };
@@ -132,10 +132,10 @@
 		3D308E881316C5BF00D37010 /* green_league.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; name = green_league.xcdatamodel; path = Classes/green_league.xcdatamodel; sourceTree = "<group>"; };
 		3D422DB91366CC0200DA0F53 /* pebble-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pebble-logo.png"; sourceTree = "<group>"; };
 		3D5A78B01381299E0009858C /* gl11-export-draft-key.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "gl11-export-draft-key.csv"; sourceTree = "<group>"; };
-		3D5A78B213812F270009858C /* Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
-		3D5A78B313812F270009858C /* Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Data.m; sourceTree = "<group>"; };
-		3D5A78B813812F270009858C /* DataKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataKey.h; sourceTree = "<group>"; };
-		3D5A78B913812F280009858C /* DataKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataKey.m; sourceTree = "<group>"; };
+		3D5A78B213812F270009858C /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; path = Score.h; sourceTree = "<group>"; };
+		3D5A78B313812F270009858C /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Score.m; sourceTree = "<group>"; };
+		3D5A78B813812F270009858C /* ScoreKey.h */ = {isa = PBXFileReference; fileEncoding = 4; path = ScoreKey.h; sourceTree = "<group>"; };
+		3D5A78B913812F280009858C /* ScoreKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreKey.m; sourceTree = "<group>"; };
 		3D5A78BB13812F280009858C /* University.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = University.h; sourceTree = "<group>"; };
 		3D5A78BC13812F280009858C /* University.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = University.m; sourceTree = "<group>"; };
 		3D5BFBE0137013A8004DFA0B /* table-key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-key.png"; sourceTree = "<group>"; };
@@ -327,10 +327,10 @@
 				3D03AD501321676A00F6B225 /* UniversitiesModel.m */,
 				3D5A78BB13812F280009858C /* University.h */,
 				3D5A78BC13812F280009858C /* University.m */,
-				3D5A78B813812F270009858C /* DataKey.h */,
-				3D5A78B913812F280009858C /* DataKey.m */,
-				3D5A78B213812F270009858C /* Data.h */,
-				3D5A78B313812F270009858C /* Data.m */,
+				3D5A78B813812F270009858C /* ScoreKey.h */,
+				3D5A78B913812F280009858C /* ScoreKey.m */,
+				3D5A78B213812F270009858C /* Score.h */,
+				3D5A78B313812F270009858C /* Score.m */,
 				3D308E881316C5BF00D37010 /* green_league.xcdatamodel */,
 			);
 			name = Models;
@@ -534,8 +534,8 @@
 				3DE428191327E783002C53CE /* UniversityComparisonViewController.m in Sources */,
 				3DE4281E1327F49C002C53CE /* UniversityComparisonTitlesViewController.m in Sources */,
 				3D8EA16D1371AF9100321D71 /* CompareViewControllerFullScreen.m in Sources */,
-				3D5A78B413812F270009858C /* Data.m in Sources */,
-				3D5A78BA13812F280009858C /* DataKey.m in Sources */,
+				3D5A78B413812F270009858C /* Score.m in Sources */,
+				3D5A78BA13812F280009858C /* ScoreKey.m in Sources */,
 				3D5A78BD13812F280009858C /* University.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

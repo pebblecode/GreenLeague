@@ -6,15 +6,15 @@
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "Data.h"
+#import "Score.h"
 #import "University.h"
 
-static NSString *kDataEntityName = @"Data";
+static NSString *kDataEntityName = @"Score";
 
-@implementation Data
+@implementation Score
 @dynamic value;
 @dynamic university;
-@dynamic criteriaKey;
+@dynamic key;
 
 + (NSString *)entityName {
 	return [NSString stringWithString:kDataEntityName];

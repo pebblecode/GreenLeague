@@ -9,11 +9,11 @@
 #import "UniversitiesModel.h"
 #import "AwardClassHelper.h"
 #import "NSString+Helper.h"
-#import "DataKey.h"
+#import "ScoreKey.h"
 
 // Data source file minus the file extension
 static NSString *kDataSourceFile = @"gl11-export-draft";
-static NSString *kDataKeySourceFile = @"gl11-export-draft-key";
+static NSString *kScoreKeySourceFile = @"gl11-export-draft-key";
 static NSString *kDatabaseSqliteFile = @"green_league.sqlite";
 #define kDataCSVRowsToIgnore 1
 
@@ -287,7 +287,7 @@ static NSString *kDBFieldAwardClass = @"awardClass";
 // Assume data to be first row header, and data after that
 - (void)loadKeysFromFileToDB {
     // Load keys file    
-	NSString *keyFilePath = [[NSBundle mainBundle] pathForResource:kDataKeySourceFile ofType:@"csv"];
+	NSString *keyFilePath = [[NSBundle mainBundle] pathForResource:kScoreKeySourceFile ofType:@"csv"];
 	NSString *keyFileContents = [NSString stringWithContentsOfFile:keyFilePath encoding:NSUTF8StringEncoding error:nil];
     
 	// Get csv rows as an array while ignoring kDataCSVRowsToIgnore rows
@@ -299,7 +299,7 @@ static NSString *kDBFieldAwardClass = @"awardClass";
     
 	// Parse CSV file
 	for (NSArray *row in csvRows) {		
-		[DataKey addDataKeyToDBWithManagedContext:[self managedObjectContext] fromRowArray:row];
+		[ScoreKey addScoreKeyToDBWithManagedContext:[self managedObjectContext] fromRowArray:row];
 	}    
 }
 
@@ -318,7 +318,7 @@ static NSString *kDBFieldAwardClass = @"awardClass";
 	csvRows = [csvRows subarrayWithRange:rowRangeExcludingIgnoredRows];
 	
     // Get header row
-	NSArray *headerRowArray = [DataKey dataKeyArrayFromKeyStringArray:[[dataFileContents csvRows] objectAtIndex:0] managedObjectContext:[self managedObjectContext]];
+	NSArray *headerRowArray = [ScoreKey scoreKeyArrayFromKeyStringArray:[[dataFileContents csvRows] objectAtIndex:0] managedObjectContext:[self managedObjectContext]];
     exit(0);
     
 	// Parse CSV file

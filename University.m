@@ -7,7 +7,7 @@
 //
 
 #import "University.h"
-#import "Data.h"
+#import "Score.h"
 #import "AwardClassHelper.h"
 
 #define kDataFieldIndexRank2010 0
@@ -21,7 +21,7 @@ static NSString *kUniversityEntityName = @"University";
 @dynamic rank;
 @dynamic rankLastYear;
 @dynamic awardClass;
-@dynamic dataItem;
+@dynamic score;
 
 #pragma mark -
 #pragma mark === Class methods ===
@@ -71,9 +71,9 @@ static NSString *kUniversityEntityName = @"University";
             int startingIndex = 1; // Ignore university
             for (int i = startingIndex; i < [rowArray count]; i++) {
                 
-                Data *data = (Data *)[NSEntityDescription insertNewObjectForEntityForName:[Data entityName] inManagedObjectContext:managedObjectContext];                
-                [data setValue:[rowArray objectAtIndex:i]];
-                [data setCriteriaKey:[headerRowArray objectAtIndex:i]];
+                Score *score = (Score *)[NSEntityDescription insertNewObjectForEntityForName:[Score entityName] inManagedObjectContext:managedObjectContext];                
+                [score setValue:[rowArray objectAtIndex:i]];
+                [score setKey:[headerRowArray objectAtIndex:i]];
             }
         }
     }

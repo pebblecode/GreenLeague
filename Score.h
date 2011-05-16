@@ -11,12 +11,12 @@
 
 @class University;
 
-@interface Data : NSManagedObject {
+@interface Score : NSManagedObject {
 @private
 }
 @property (nonatomic, retain) NSString * value;
 @property (nonatomic, retain) University * university;
-@property (nonatomic, retain) NSManagedObject * criteriaKey;
+@property (nonatomic, retain) NSManagedObject * key;
 
 + (NSString *)entityName;
 

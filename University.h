@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class Data, MetaData;
+@class Score;
 
 @interface University : NSManagedObject {
 @private
@@ -19,7 +19,7 @@
 @property (nonatomic, retain) NSNumber * rank;
 @property (nonatomic, retain) NSNumber * rankLastYear;
 @property (nonatomic, retain) NSString * awardClass;
-@property (nonatomic, retain) Data * dataItem;
+@property (nonatomic, retain) Score * score;
 
 + (NSString *)entityName;
 + (NSString *)getSortName:(NSString *)aName;
