@@ -9,7 +9,7 @@
 #import <CoreData/CoreData.h>
 #import <UIKit/UIKit.h>
 #import "UniversitiesModel.h"
-
+#import "University.h"
 
 @interface FindViewController : UITableViewController {
 	UniversitiesModel *universitiesModel;	

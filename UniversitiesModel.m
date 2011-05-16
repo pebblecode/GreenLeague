@@ -9,11 +9,13 @@
 #import "UniversitiesModel.h"
 #import "AwardClassHelper.h"
 #import "NSString+Helper.h"
+#import "DataKey.h"
 
 // Data source file minus the file extension
 static NSString *kDataSourceFile = @"gl11-export-draft";
+static NSString *kDataKeySourceFile = @"gl11-export-draft-key";
 static NSString *kDatabaseSqliteFile = @"green_league.sqlite";
-#define kDataCSVRowsToIgnore 4
+#define kDataCSVRowsToIgnore 1
 
 // Database field names
 static NSString *kDBFieldRank = @"rank2010";
@@ -28,6 +30,9 @@ static NSString *kDBFieldAwardClass = @"awardClass";
 - (void)fetchUniversitiesFromDBSortedByName;
 
 - (void)loadGreenLeagueDataFromFileToDB;
+- (void)loadKeysFromFileToDB;
+- (void)loadDataFromFileToDB;
+
 - (NSString *)dbPath;
 - (Boolean)dbExists;
 - (void)setupDB;
@@ -46,15 +51,16 @@ static NSString *kDBFieldAwardClass = @"awardClass";
 	if ((self = [super init])) {			
 		// --------------------------------------------------
 		// To remove the db all the time (for debugging only)
-		//[self deleteDB];		
+		[self deleteDB];		
 		// --------------------------------------------------
 		
 		[self setupDB];
 		
 		// Get both types of sort for the time being
 		// TODO: make this more elegant
-		[self fetchUniversitiesFromDBSortedByRank];
-		[self fetchUniversitiesFromDBSortedByName];
+        NSLog(@"TODO: fetch universities");
+//		[self fetchUniversitiesFromDBSortedByRank];
+//		[self fetchUniversitiesFromDBSortedByName];
 		
 	}
 	return self;		
@@ -265,28 +271,60 @@ static NSString *kDBFieldAwardClass = @"awardClass";
 		}
 		
 		self.sortedUniversities = newUniArray;
-		[newUniArray release];	
-		
+		[newUniArray release];		
 		
 	}
 }
 
-// Populate the database from kDataSourceFile csv file
-- (void)loadGreenLeagueDataFromFileToDB {	
-	NSString *filePath = [[NSBundle mainBundle] pathForResource:kDataSourceFile ofType:@"csv"];
-	NSString *fileContents = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
-	
+// Populate the database from csv files
+- (void)loadGreenLeagueDataFromFileToDB {	            
+    [self loadKeysFromFileToDB];
+    
+    [self loadDataFromFileToDB];
+}
+
+
+// Assume data to be first row header, and data after that
+- (void)loadKeysFromFileToDB {
+    // Load keys file    
+	NSString *keyFilePath = [[NSBundle mainBundle] pathForResource:kDataKeySourceFile ofType:@"csv"];
+	NSString *keyFileContents = [NSString stringWithContentsOfFile:keyFilePath encoding:NSUTF8StringEncoding error:nil];
+    
 	// Get csv rows as an array while ignoring kDataCSVRowsToIgnore rows
-	NSArray *csvRows = [fileContents csvRows];
+	NSArray *csvRows = [keyFileContents csvRows];
+	NSRange rowRangeExcludingIgnoredRows;
+	rowRangeExcludingIgnoredRows.location = kDataCSVRowsToIgnore; 
+	rowRangeExcludingIgnoredRows.length = [csvRows count] - kDataCSVRowsToIgnore;	
+	csvRows = [csvRows subarrayWithRange:rowRangeExcludingIgnoredRows];
+    
+	// Parse CSV file
+	for (NSArray *row in csvRows) {		
+		[DataKey addDataKeyToDBWithManagedContext:[self managedObjectContext] fromRowArray:row];
+	}    
+}
+
+// Assume data to be first row header, and data after that
+- (void)loadDataFromFileToDB {    
+
+    // Load data file    
+	NSString *dataFilePath = [[NSBundle mainBundle] pathForResource:kDataSourceFile ofType:@"csv"];
+	NSString *dataFileContents = [NSString stringWithContentsOfFile:dataFilePath encoding:NSUTF8StringEncoding error:nil];
+        	
+	// Get csv rows as an array while ignoring kDataCSVRowsToIgnore rows
+	NSArray *csvRows = [dataFileContents csvRows];
 	NSRange rowRangeExcludingIgnoredRows;
 	rowRangeExcludingIgnoredRows.location = kDataCSVRowsToIgnore; 
 	rowRangeExcludingIgnoredRows.length = [csvRows count] - kDataCSVRowsToIgnore;	
 	csvRows = [csvRows subarrayWithRange:rowRangeExcludingIgnoredRows];
 	
+    // Get header row
+	NSArray *headerRowArray = [DataKey dataKeyArrayFromKeyStringArray:[[dataFileContents csvRows] objectAtIndex:0] managedObjectContext:[self managedObjectContext]];
+    exit(0);
+    
 	// Parse CSV file
 	for (NSArray *row in csvRows) {		
-		[University addUniversityToDBWithManagedContext:[self managedObjectContext] fromRowArray:row];
-	}	
+		[University addUniversityToDBWithManagedContext:[self managedObjectContext] fromRowArray:row headerRowArray:headerRowArray];
+	}	    
 }
 
 #pragma mark -

@@ -37,6 +37,11 @@
 		3D308E731316BCAA00D37010 /* 12-eye@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D308E711316BCAA00D37010 /* 12-eye@2x.png */; };
 		3D308E891316C5BF00D37010 /* green_league.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 3D308E881316C5BF00D37010 /* green_league.xcdatamodel */; };
 		3D422DBA1366CC0200DA0F53 /* pebble-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D422DB91366CC0200DA0F53 /* pebble-logo.png */; };
+		3D5A78B11381299E0009858C /* gl11-export-draft-key.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3D5A78B01381299E0009858C /* gl11-export-draft-key.csv */; };
+		3D5A78B413812F270009858C /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5A78B313812F270009858C /* Data.m */; };
+		3D5A78B713812F270009858C /* MetaData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5A78B613812F270009858C /* MetaData.m */; };
+		3D5A78BA13812F280009858C /* DataKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5A78B913812F280009858C /* DataKey.m */; };
+		3D5A78BD13812F280009858C /* University.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5A78BC13812F280009858C /* University.m */; };
 		3D5BFBE1137013A8004DFA0B /* table-key.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D5BFBE0137013A8004DFA0B /* table-key.png */; };
 		3D7E78B31372B0E9009F4A35 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D7E78AF1372B0E9009F4A35 /* Icon-72.png */; };
 		3D7E78B41372B0E9009F4A35 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D7E78B01372B0E9009F4A35 /* Icon.png */; };
@@ -68,7 +73,6 @@
 		3DB0D9561315222C006FC601 /* 06-magnify@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB0D9541315222C006FC601 /* 06-magnify@2x.png */; };
 		3DB0D97213152B60006FC601 /* gl2010.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3DB0D97113152B60006FC601 /* gl2010.csv */; };
 		3DB0D9941315422C006FC601 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB0D9931315422C006FC601 /* CoreData.framework */; };
-		3DB0D9F01317BD4F006FC601 /* University.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB0D9EF1317BD4F006FC601 /* University.m */; };
 		3DC2E687137BE4A90017E939 /* description.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3DC2E686137BE4A90017E939 /* description.txt */; };
 		3DC2E689137D893F0017E939 /* gl11-export-draft.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3DC2E688137D893F0017E939 /* gl11-export-draft.csv */; };
 		3DCA7326132659E6009D3505 /* FindSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCA7324132659E5009D3505 /* FindSelectorViewController.m */; };
@@ -128,6 +132,15 @@
 		3D308E711316BCAA00D37010 /* 12-eye@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "12-eye@2x.png"; sourceTree = "<group>"; };
 		3D308E881316C5BF00D37010 /* green_league.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; name = green_league.xcdatamodel; path = Classes/green_league.xcdatamodel; sourceTree = "<group>"; };
 		3D422DB91366CC0200DA0F53 /* pebble-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pebble-logo.png"; sourceTree = "<group>"; };
+		3D5A78B01381299E0009858C /* gl11-export-draft-key.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "gl11-export-draft-key.csv"; sourceTree = "<group>"; };
+		3D5A78B213812F270009858C /* Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
+		3D5A78B313812F270009858C /* Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Data.m; sourceTree = "<group>"; };
+		3D5A78B513812F270009858C /* MetaData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetaData.h; sourceTree = "<group>"; };
+		3D5A78B613812F270009858C /* MetaData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetaData.m; sourceTree = "<group>"; };
+		3D5A78B813812F270009858C /* DataKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataKey.h; sourceTree = "<group>"; };
+		3D5A78B913812F280009858C /* DataKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataKey.m; sourceTree = "<group>"; };
+		3D5A78BB13812F280009858C /* University.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = University.h; sourceTree = "<group>"; };
+		3D5A78BC13812F280009858C /* University.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = University.m; sourceTree = "<group>"; };
 		3D5BFBE0137013A8004DFA0B /* table-key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-key.png"; sourceTree = "<group>"; };
 		3D7E78AF1372B0E9009F4A35 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		3D7E78B01372B0E9009F4A35 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
@@ -161,8 +174,6 @@
 		3DB0D9541315222C006FC601 /* 06-magnify@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "06-magnify@2x.png"; sourceTree = "<group>"; };
 		3DB0D97113152B60006FC601 /* gl2010.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gl2010.csv; sourceTree = "<group>"; };
 		3DB0D9931315422C006FC601 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		3DB0D9EE1317BD4F006FC601 /* University.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = University.h; sourceTree = "<group>"; };
-		3DB0D9EF1317BD4F006FC601 /* University.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = University.m; sourceTree = "<group>"; };
 		3DC2E686137BE4A90017E939 /* description.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = description.txt; sourceTree = "<group>"; };
 		3DC2E688137D893F0017E939 /* gl11-export-draft.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "gl11-export-draft.csv"; sourceTree = "<group>"; };
 		3DCA7323132659E5009D3505 /* FindSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindSelectorViewController.h; sourceTree = "<group>"; };
@@ -317,8 +328,14 @@
 			children = (
 				3D03AD4F1321676A00F6B225 /* UniversitiesModel.h */,
 				3D03AD501321676A00F6B225 /* UniversitiesModel.m */,
-				3DB0D9EE1317BD4F006FC601 /* University.h */,
-				3DB0D9EF1317BD4F006FC601 /* University.m */,
+				3D5A78BB13812F280009858C /* University.h */,
+				3D5A78BC13812F280009858C /* University.m */,
+				3D5A78B813812F270009858C /* DataKey.h */,
+				3D5A78B913812F280009858C /* DataKey.m */,
+				3D5A78B513812F270009858C /* MetaData.h */,
+				3D5A78B613812F270009858C /* MetaData.m */,
+				3D5A78B213812F270009858C /* Data.h */,
+				3D5A78B313812F270009858C /* Data.m */,
 				3D308E881316C5BF00D37010 /* green_league.xcdatamodel */,
 			);
 			name = Models;
@@ -385,6 +402,7 @@
 			isa = PBXGroup;
 			children = (
 				3DC2E688137D893F0017E939 /* gl11-export-draft.csv */,
+				3D5A78B01381299E0009858C /* gl11-export-draft-key.csv */,
 				3DB0D97113152B60006FC601 /* gl2010.csv */,
 			);
 			name = Data;
@@ -493,6 +511,7 @@
 				3D7E79061372C2DF009F4A35 /* star_poor@2x.png in Resources */,
 				3DC2E687137BE4A90017E939 /* description.txt in Resources */,
 				3DC2E689137D893F0017E939 /* gl11-export-draft.csv in Resources */,
+				3D5A78B11381299E0009858C /* gl11-export-draft-key.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,7 +529,6 @@
 				3D308E5B1316BB8C00D37010 /* CompareViewController.m in Sources */,
 				3D308E631316BBC600D37010 /* AboutViewController.m in Sources */,
 				3D308E891316C5BF00D37010 /* green_league.xcdatamodel in Sources */,
-				3DB0D9F01317BD4F006FC601 /* University.m in Sources */,
 				3D03A6AB131E457900F6B225 /* UniversityDetailViewController.m in Sources */,
 				3D03A6E6131E5A8B00F6B225 /* NSNumber+Helper.m in Sources */,
 				3D03A8FE131E8CA700F6B225 /* UIColor+Helper.m in Sources */,
@@ -521,6 +539,10 @@
 				3DE428191327E783002C53CE /* UniversityComparisonViewController.m in Sources */,
 				3DE4281E1327F49C002C53CE /* UniversityComparisonTitlesViewController.m in Sources */,
 				3D8EA16D1371AF9100321D71 /* CompareViewControllerFullScreen.m in Sources */,
+				3D5A78B413812F270009858C /* Data.m in Sources */,
+				3D5A78B713812F270009858C /* MetaData.m in Sources */,
+				3D5A78BA13812F280009858C /* DataKey.m in Sources */,
+				3D5A78BD13812F280009858C /* University.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

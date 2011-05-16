@@ -64,71 +64,72 @@ static NSString *kDataSourceTotalScoreKey = @"totalScore";
 	//					- [title] "8. Energy sources"
 	//					- ...
 	//				- ...	
-	self.dataSoruceArray = [NSArray arrayWithObjects:
-								// Policy
-								[NSArray arrayWithObjects:
-									 [NSDictionary dictionaryWithObjectsAndKeys:
-										@"1. Publicly Available Environmental Policy", kDataSourceTitleKey,
-										self.university.policy1Score, kDataSourceScoreKey,
-										[NSNumber numberWithInt:6], kDataSourceTotalScoreKey,
-									  nil],
-									 [NSDictionary dictionaryWithObjectsAndKeys:
-										  @"2. Staff", kDataSourceTitleKey,
-										  self.university.policy2Score, kDataSourceScoreKey,
-										  [NSNumber numberWithInt:8], kDataSourceTotalScoreKey,
-									  nil],
-									 [NSDictionary dictionaryWithObjectsAndKeys:
-										  @"3. Comprehensive Environmental Auditing", kDataSourceTitleKey,
-										  self.university.policy3Score, kDataSourceScoreKey,
-										  [NSNumber numberWithInt:8], kDataSourceTotalScoreKey,
-									  nil],
-									 [NSDictionary dictionaryWithObjectsAndKeys:
-										  @"4. Ethical Investment Policy", kDataSourceTitleKey,
-										  self.university.policy4Score, kDataSourceScoreKey,
-										  [NSNumber numberWithInt:4], kDataSourceTotalScoreKey,
-									  nil],
-									 [NSDictionary dictionaryWithObjectsAndKeys:
-										  @"5. Carbon Management", kDataSourceTitleKey,
-										  self.university.policy5Score, kDataSourceScoreKey,
-										  [NSNumber numberWithInt:8], kDataSourceTotalScoreKey,
-									  nil],
-									 [NSDictionary dictionaryWithObjectsAndKeys:
-										  @"6. Sustainable Procurement and Fairtrade accreditation", kDataSourceTitleKey,
-										  self.university.policy6Score, kDataSourceScoreKey,
-										  [NSNumber numberWithInt:3], kDataSourceTotalScoreKey,
-									  nil],
-									 [NSDictionary dictionaryWithObjectsAndKeys:
-										  @"7. Student and Staff Engagement", kDataSourceTitleKey,
-										  self.university.policy7Score, kDataSourceScoreKey,
-										  [NSNumber numberWithInt:3], kDataSourceTotalScoreKey,
-									  nil],								 
-								 nil],
-							 
-								// Performance
-								[NSArray arrayWithObjects:
-									 [NSDictionary dictionaryWithObjectsAndKeys:
-									  @"8. Energy sources", kDataSourceTitleKey,
-									  self.university.performance8Score, kDataSourceScoreKey,
-									  [NSNumber numberWithInt:6], kDataSourceTotalScoreKey,
-									  nil],
-									 [NSDictionary dictionaryWithObjectsAndKeys:
-									  @"9. Waste", kDataSourceTitleKey,
-									  self.university.performance9Score, kDataSourceScoreKey,
-									  [NSNumber numberWithInt:8], kDataSourceTotalScoreKey,
-									  nil],
-									 [NSDictionary dictionaryWithObjectsAndKeys:
-									  @"10. Carbon emissions per head", kDataSourceTitleKey,
-									  self.university.performance10Score, kDataSourceScoreKey,
-									  [NSNumber numberWithInt:8], kDataSourceTotalScoreKey,
-									  nil],
-									 [NSDictionary dictionaryWithObjectsAndKeys:								 
-									  @"11. Water consumption per head", kDataSourceTitleKey,
-									  self.university.performance11Score, kDataSourceScoreKey,
-									  [NSNumber numberWithInt:8], kDataSourceTotalScoreKey,
-									  nil],
-								 nil],							 
-							 nil];
-								
+    NSLog(@"TODO: UniversityMoreDetailView viewDidLoad");
+//	self.dataSoruceArray = [NSArray arrayWithObjects:
+//								// Policy
+//								[NSArray arrayWithObjects:
+//									 [NSDictionary dictionaryWithObjectsAndKeys:
+//										@"1. Publicly Available Environmental Policy", kDataSourceTitleKey,
+//										self.university.policy1Score, kDataSourceScoreKey,
+//										[NSNumber numberWithInt:6], kDataSourceTotalScoreKey,
+//									  nil],
+//									 [NSDictionary dictionaryWithObjectsAndKeys:
+//										  @"2. Staff", kDataSourceTitleKey,
+//										  self.university.policy2Score, kDataSourceScoreKey,
+//										  [NSNumber numberWithInt:8], kDataSourceTotalScoreKey,
+//									  nil],
+//									 [NSDictionary dictionaryWithObjectsAndKeys:
+//										  @"3. Comprehensive Environmental Auditing", kDataSourceTitleKey,
+//										  self.university.policy3Score, kDataSourceScoreKey,
+//										  [NSNumber numberWithInt:8], kDataSourceTotalScoreKey,
+//									  nil],
+//									 [NSDictionary dictionaryWithObjectsAndKeys:
+//										  @"4. Ethical Investment Policy", kDataSourceTitleKey,
+//										  self.university.policy4Score, kDataSourceScoreKey,
+//										  [NSNumber numberWithInt:4], kDataSourceTotalScoreKey,
+//									  nil],
+//									 [NSDictionary dictionaryWithObjectsAndKeys:
+//										  @"5. Carbon Management", kDataSourceTitleKey,
+//										  self.university.policy5Score, kDataSourceScoreKey,
+//										  [NSNumber numberWithInt:8], kDataSourceTotalScoreKey,
+//									  nil],
+//									 [NSDictionary dictionaryWithObjectsAndKeys:
+//										  @"6. Sustainable Procurement and Fairtrade accreditation", kDataSourceTitleKey,
+//										  self.university.policy6Score, kDataSourceScoreKey,
+//										  [NSNumber numberWithInt:3], kDataSourceTotalScoreKey,
+//									  nil],
+//									 [NSDictionary dictionaryWithObjectsAndKeys:
+//										  @"7. Student and Staff Engagement", kDataSourceTitleKey,
+//										  self.university.policy7Score, kDataSourceScoreKey,
+//										  [NSNumber numberWithInt:3], kDataSourceTotalScoreKey,
+//									  nil],								 
+//								 nil],
+//							 
+//								// Performance
+//								[NSArray arrayWithObjects:
+//									 [NSDictionary dictionaryWithObjectsAndKeys:
+//									  @"8. Energy sources", kDataSourceTitleKey,
+//									  self.university.performance8Score, kDataSourceScoreKey,
+//									  [NSNumber numberWithInt:6], kDataSourceTotalScoreKey,
+//									  nil],
+//									 [NSDictionary dictionaryWithObjectsAndKeys:
+//									  @"9. Waste", kDataSourceTitleKey,
+//									  self.university.performance9Score, kDataSourceScoreKey,
+//									  [NSNumber numberWithInt:8], kDataSourceTotalScoreKey,
+//									  nil],
+//									 [NSDictionary dictionaryWithObjectsAndKeys:
+//									  @"10. Carbon emissions per head", kDataSourceTitleKey,
+//									  self.university.performance10Score, kDataSourceScoreKey,
+//									  [NSNumber numberWithInt:8], kDataSourceTotalScoreKey,
+//									  nil],
+//									 [NSDictionary dictionaryWithObjectsAndKeys:								 
+//									  @"11. Water consumption per head", kDataSourceTitleKey,
+//									  self.university.performance11Score, kDataSourceScoreKey,
+//									  [NSNumber numberWithInt:8], kDataSourceTotalScoreKey,
+//									  nil],
+//								 nil],							 
+//							 nil];
+//								
 }
 
 

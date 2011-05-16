@@ -74,20 +74,21 @@
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
-    
-	University *uni = [self universityFromIndexPath:indexPath];
-	
-	// Text: Rank. University
-	NSString *rankString = ([[uni rank2010] intValue] == 0) ? @"(none) " : [NSString stringWithFormat:@"%@. ", uni.rank2010];
-	cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, uni.sortName];    
-    if ([self isRankSort]) {
-        // Text eg, 5. Aston University
-        NSString *rankString = ([[uni rank2010] intValue] == 0) ? @"(none) " : [NSString stringWithFormat:@"%@. ", uni.rank2010];
-        cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, uni.sortName];
-    } else {
-        // Text eg: Aston University
-        cell.textLabel.text = [NSString stringWithFormat:@"%@", uni.sortName]; 
-    }    	
+
+    NSLog(@"TODO: FindSelectorViewController tableView");
+//	University *uni = [self universityFromIndexPath:indexPath];
+//	
+//	// Text: Rank. University    
+//	NSString *rankString = ([[uni rank2010] intValue] == 0) ? @"(none) " : [NSString stringWithFormat:@"%@. ", uni.rank2010];
+//	cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, uni.sortName];    
+//    if ([self isRankSort]) {
+//        // Text eg, 5. Aston University
+//        NSString *rankString = ([[uni rank2010] intValue] == 0) ? @"(none) " : [NSString stringWithFormat:@"%@. ", uni.rank2010];
+//        cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, uni.sortName];
+//    } else {
+//        // Text eg: Aston University
+//        cell.textLabel.text = [NSString stringWithFormat:@"%@", uni.sortName]; 
+//    }    	
     
     
     
@@ -129,7 +130,7 @@
         }
 		
 	} else {
-		NSLog(@"Could not find award class for '%@' of award class '%@'", [uni name], [uni awardClass]);
+		NSLog(@"Could not find award class for '%@' of award class '%@'", [uni name], [uni awardClassName]);
 	}
 	
     [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];  

@@ -80,37 +80,38 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    universityNameLabel.text = self.university.sortName;
-    totalScoreLabel.text = [NSString stringWithFormat:@"%.1f", [self.university.totalScore floatValue]];
-    
-    // Rating image
-    NSArray *ratingImageIndex = [NSArray arrayWithObjects:
-                                 [self ratingImageIndexFromScore:self.university.policy1Score maxScore:self.university.policy1MaxScore],
-                                 [self ratingImageIndexFromScore:self.university.policy2Score maxScore:self.university.policy2MaxScore],
-                                 [self ratingImageIndexFromScore:self.university.policy3Score maxScore:self.university.policy3MaxScore],
-                                 [self ratingImageIndexFromScore:self.university.policy4Score maxScore:self.university.policy4MaxScore],
-                                 [self ratingImageIndexFromScore:self.university.policy5Score maxScore:self.university.policy5MaxScore],
-                                 [self ratingImageIndexFromScore:self.university.policy6Score maxScore:self.university.policy6MaxScore],
-                                 [self ratingImageIndexFromScore:self.university.policy7Score maxScore:self.university.policy7MaxScore],
-                                 
-                                 [self ratingImageIndexFromScore:self.university.performance8Score maxScore:self.university.performance8MaxScore],
-                                 [self ratingImageIndexFromScore:self.university.performance9Score maxScore:self.university.performance9MaxScore],
-                                 [self ratingImageIndexFromScore:self.university.performance10Score maxScore:self.university.performance10MaxScore],
-                                 [self ratingImageIndexFromScore:self.university.performance11Score maxScore:self.university.performance11MaxScore],
-                                  nil];
-    
-    self.policy1ResultImage.image = [self imageFromIndex:[ratingImageIndex objectAtIndex:0]];
-    self.policy2ResultImage.image = [self imageFromIndex:[ratingImageIndex objectAtIndex:1]];
-    self.policy3ResultImage.image = [self imageFromIndex:[ratingImageIndex objectAtIndex:2]];
-    self.policy4ResultImage.image = [self imageFromIndex:[ratingImageIndex objectAtIndex:3]];
-    self.policy5ResultImage.image = [self imageFromIndex:[ratingImageIndex objectAtIndex:4]];
-    self.policy6ResultImage.image = [self imageFromIndex:[ratingImageIndex objectAtIndex:5]];
-    self.policy7ResultImage.image = [self imageFromIndex:[ratingImageIndex objectAtIndex:6]];
-    self.performance8ResultImage.image = [self imageFromIndex:[ratingImageIndex objectAtIndex:7]];
-    self.performance9ResultImage.image = [self imageFromIndex:[ratingImageIndex objectAtIndex:8]];
-    self.performance10ResultImage.image = [self imageFromIndex:[ratingImageIndex objectAtIndex:9]];
-    self.performance11ResultImage.image = [self imageFromIndex:[ratingImageIndex objectAtIndex:10]];
+
+    NSLog(@"TODO: UniversityComparisonView viewDidLoad");
+//    universityNameLabel.text = self.university.sortName;
+//    totalScoreLabel.text = [NSString stringWithFormat:@"%.1f", [self.university.totalScore floatValue]];
+//    
+//    // Rating image
+//    NSArray *ratingImageIndex = [NSArray arrayWithObjects:
+//                                 [self ratingImageIndexFromScore:self.university.policy1Score maxScore:self.university.policy1MaxScore],
+//                                 [self ratingImageIndexFromScore:self.university.policy2Score maxScore:self.university.policy2MaxScore],
+//                                 [self ratingImageIndexFromScore:self.university.policy3Score maxScore:self.university.policy3MaxScore],
+//                                 [self ratingImageIndexFromScore:self.university.policy4Score maxScore:self.university.policy4MaxScore],
+//                                 [self ratingImageIndexFromScore:self.university.policy5Score maxScore:self.university.policy5MaxScore],
+//                                 [self ratingImageIndexFromScore:self.university.policy6Score maxScore:self.university.policy6MaxScore],
+//                                 [self ratingImageIndexFromScore:self.university.policy7Score maxScore:self.university.policy7MaxScore],
+//                                 
+//                                 [self ratingImageIndexFromScore:self.university.performance8Score maxScore:self.university.performance8MaxScore],
+//                                 [self ratingImageIndexFromScore:self.university.performance9Score maxScore:self.university.performance9MaxScore],
+//                                 [self ratingImageIndexFromScore:self.university.performance10Score maxScore:self.university.performance10MaxScore],
+//                                 [self ratingImageIndexFromScore:self.university.performance11Score maxScore:self.university.performance11MaxScore],
+//                                  nil];
+//    
+//    self.policy1ResultImage.image = [self imageFromIndex:[ratingImageIndex objectAtIndex:0]];
+//    self.policy2ResultImage.image = [self imageFromIndex:[ratingImageIndex objectAtIndex:1]];
+//    self.policy3ResultImage.image = [self imageFromIndex:[ratingImageIndex objectAtIndex:2]];
+//    self.policy4ResultImage.image = [self imageFromIndex:[ratingImageIndex objectAtIndex:3]];
+//    self.policy5ResultImage.image = [self imageFromIndex:[ratingImageIndex objectAtIndex:4]];
+//    self.policy6ResultImage.image = [self imageFromIndex:[ratingImageIndex objectAtIndex:5]];
+//    self.policy7ResultImage.image = [self imageFromIndex:[ratingImageIndex objectAtIndex:6]];
+//    self.performance8ResultImage.image = [self imageFromIndex:[ratingImageIndex objectAtIndex:7]];
+//    self.performance9ResultImage.image = [self imageFromIndex:[ratingImageIndex objectAtIndex:8]];
+//    self.performance10ResultImage.image = [self imageFromIndex:[ratingImageIndex objectAtIndex:9]];
+//    self.performance11ResultImage.image = [self imageFromIndex:[ratingImageIndex objectAtIndex:10]];
     
     
 }

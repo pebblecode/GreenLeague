@@ -84,18 +84,6 @@
          timestampString = "326114285.089971"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "194"
-         endingLineNumber = "194">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "Classes/FindViewController.m"
-         timestampString = "326114285.089971"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
          startingLineNumber = "201"
          endingLineNumber = "201">
       </FileBreakpoint>
@@ -129,11 +117,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Classes/UniversityMoreDetailViewController.m"
-         timestampString = "321207915.136502"
+         timestampString = "327253309.37495"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "206"
-         endingLineNumber = "206">
+         startingLineNumber = "207"
+         endingLineNumber = "207">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -201,11 +189,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "UniversitiesModel.m"
-         timestampString = "321190536.808899"
+         timestampString = "327253309.37495"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "52"
-         endingLineNumber = "52">
+         startingLineNumber = "57"
+         endingLineNumber = "57">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -263,11 +251,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "UniversitiesModel.m"
-         timestampString = "321276514.680524"
+         timestampString = "327253309.37495"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "378"
-         endingLineNumber = "378"
+         startingLineNumber = "416"
+         endingLineNumber = "416"
          landmarkName = "-topRankedUniversity"
          landmarkType = "5">
       </FileBreakpoint>
@@ -305,11 +293,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Classes/FindSelectorViewController.m"
-         timestampString = "326114285.089971"
+         timestampString = "327253309.37495"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "148"
-         endingLineNumber = "148"
+         startingLineNumber = "149"
+         endingLineNumber = "149"
          landmarkName = "-doneButtonPressed"
          landmarkType = "5">
       </FileBreakpoint>
