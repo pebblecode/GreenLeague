@@ -16,8 +16,10 @@
 }
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * sortName;
+@property (nonatomic, retain) NSNumber * rank;
+@property (nonatomic, retain) NSNumber * rankLastYear;
+@property (nonatomic, retain) NSString * awardClass;
 @property (nonatomic, retain) Data * dataItem;
-@property (nonatomic, retain) MetaData * metaDataItem;
 
 + (NSString *)entityName;
 + (NSString *)getSortName:(NSString *)aName;

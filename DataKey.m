@@ -8,7 +8,6 @@
 
 #import "DataKey.h"
 #import "Data.h"
-#import "MetaData.h"
 
 #define kKeyField 0
 #define kKeyValueField 1
@@ -18,7 +17,6 @@
 @dynamic value;
 @dynamic key;
 @dynamic data;
-@dynamic metaData;
 
 static NSString *kDataKeyEntityName = @"DataKey";
 

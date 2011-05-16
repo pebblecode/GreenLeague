@@ -8,7 +8,6 @@
 
 #import "University.h"
 #import "Data.h"
-#import "MetaData.h"
 #import "AwardClassHelper.h"
 
 #define kDataFieldIndexRank2010 0
@@ -19,8 +18,10 @@ static NSString *kUniversityEntityName = @"University";
 @implementation University
 @dynamic name;
 @dynamic sortName;
+@dynamic rank;
+@dynamic rankLastYear;
+@dynamic awardClass;
 @dynamic dataItem;
-@dynamic metaDataItem;
 
 #pragma mark -
 #pragma mark === Class methods ===

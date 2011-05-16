@@ -17,7 +17,6 @@
 @property (nonatomic, retain) NSString * value;
 @property (nonatomic, retain) NSString * key;
 @property (nonatomic, retain) Data * data;
-@property (nonatomic, retain) MetaData * metaData;
 
 + (NSString *)entityName;
 + (NSArray *)dataKeyArrayFromKeyStringArray:(NSArray *)keyStringArray managedObjectContext:(NSManagedObjectContext *)managedObjectContext;
