@@ -22,6 +22,14 @@ static NSString *kAwardClassHeaderField = @"gl11_class/singleChoice";
 
 static NSString *kUniversityEntityName = @"University";
 
+
+// Private methods
+@interface University()
+
+- (int)awardClassIndex;
+
+@end
+
 @implementation University
 @dynamic name;
 @dynamic sortName;
@@ -130,36 +138,27 @@ static NSString *kUniversityEntityName = @"University";
 #pragma mark
 
 - (Boolean)isValidAwardClass {
-    NSLog(@"TODO: isValidAwardClass");
-	//return ([self awardClassIndex] != NSNotFound);
-    return false;
+	return ([self awardClassIndex] != NSNotFound);
 }
 
 // Returns nil, if the award class is invalid
 - (NSString *)awardClassName {
-//	NSString *awardClassNameStr = nil;
-//	int awardClassNameIndex = [self awardClassIndex];
-//	if (awardClassNameIndex != NSNotFound) {	
-//		awardClassNameStr = [[AwardClassHelper awardClassNames] objectAtIndex:awardClassNameIndex];
-//	} else {
-//		NSLog(@"awardClassName: Could not find award class name for '%@' of award class '%@'", self.name, self.awardClass);
-//	}
-//	return awardClassNameStr;
-    
-    NSLog(@"TODO: awardClassName");
-    return @"TODO";
+	NSString *awardClassNameStr = nil;
+	int awardClassNameIndex = [self awardClassIndex];
+	if (awardClassNameIndex != NSNotFound) {	
+		awardClassNameStr = [[AwardClassHelper awardClassNames] objectAtIndex:awardClassNameIndex];
+	} else {
+		NSLog(@"awardClassName: Could not find award class name for '%@' of award class '%@'", self.name, self.awardClass);
+	}
+	return awardClassNameStr;
 }
 
 - (UIColor *)awardClassBackgroundColour {	
-//	return [AwardClassHelper backgroundColourForAwardClassDBName:self.awardClass];
-    NSLog(@"TODO: awardClassBackgroundColour");
-    return [UIColor blueColor];    
+	return [AwardClassHelper backgroundColourForAwardClassDBName:self.awardClass];
 }
 
 - (UIColor *)awardClassTextColour {
-//	return [AwardClassHelper textColourForAwardClassDBName:self.awardClass];	
-    NSLog(@"TODO: awardClassTextColour");
-    return [UIColor blueColor];        
+	return [AwardClassHelper textColourForAwardClassDBName:self.awardClass];
 }
 
 #pragma mark -
@@ -168,9 +167,7 @@ static NSString *kUniversityEntityName = @"University";
 
 // Get the award class index for award class arrays based on the database award class value
 - (int)awardClassIndex {
-//	return [[AwardClassHelper awardClassDBNames] indexOfObject:self.awardClass];
-    NSLog(@"TODO: awardClassIndex");
-    return 0;            
+	return [[AwardClassHelper awardClassDBNames] indexOfObject:self.awardClass];
 }
 
 @end
