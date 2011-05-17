@@ -19,6 +19,7 @@
 @property (nonatomic, retain) NSNumber * rank;
 @property (nonatomic, retain) NSNumber * rankLastYear;
 @property (nonatomic, retain) NSString * awardClass;
+@property (nonatomic, retain) NSNumber * totalScore;
 @property (nonatomic, retain) Score * score;
 
 + (NSString *)entityName;

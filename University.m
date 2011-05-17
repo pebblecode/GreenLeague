@@ -8,10 +8,17 @@
 
 #import "University.h"
 #import "Score.h"
+#import "ScoreKey.h"
 #import "AwardClassHelper.h"
+#import "NSString+Helper.h"
 
-#define kDataFieldIndexRank2010 0
-#define kDataFieldIndexUniversityName 1
+#define kUniversityNameHeaderFieldIndex 0
+
+static NSString *kRankHeaderField = @"gl11_rank/quantity";
+static NSString *kRankLastYearHeaderField = @"gl11_last_year_rank/quantity";
+
+static NSString *kTotalScoreHeaderField = @"gl11_total_score/quantity";
+static NSString *kAwardClassHeaderField = @"gl11_class/singleChoice";
 
 static NSString *kUniversityEntityName = @"University";
 
@@ -21,6 +28,7 @@ static NSString *kUniversityEntityName = @"University";
 @dynamic rank;
 @dynamic rankLastYear;
 @dynamic awardClass;
+@dynamic totalScore;
 @dynamic score;
 
 #pragma mark -
@@ -52,31 +60,69 @@ static NSString *kUniversityEntityName = @"University";
 
 // Returns nil if there is no name
 //
-// Assume database to be in the format:
+// Assume csv to be in the format:
 //
-// Organisation, key0, key1, ...
-// University of Somewhere, key0value, key1value, ...
+// Organisation, data keys, ..., meta data keys ...
+// University of Somewhere, data values, ..., meta data values ...
+//
 + (void)addUniversityToDBWithManagedContext:(NSManagedObjectContext *)managedObjectContext fromRowArray:(NSArray *)rowArray headerRowArray:(NSArray *)headerRowArray {
 	
-    University *uni;
-	
-	if ([rowArray count] > kDataFieldIndexUniversityName) {
-		NSString *uniName = [rowArray objectAtIndex:kDataFieldIndexUniversityName];
-		if (uniName.length > 0) {
-			uni = (University *)[NSEntityDescription insertNewObjectForEntityForName:[University entityName] inManagedObjectContext:managedObjectContext];
-			[uni setName:uniName];
-			[uni setSortName:[University getSortName:uniName]];
+    University *uni = (University *)[NSEntityDescription insertNewObjectForEntityForName:[University entityName] inManagedObjectContext:managedObjectContext];
+    
+    // Handle university name field    
+    NSString *uniName = [rowArray objectAtIndex:kUniversityNameHeaderFieldIndex];
+    if ([uniName length] > 0) {
+        
+        [uni setName:uniName];
+        [uni setSortName:[University getSortName:uniName]];        
+        NSLog(@"Adding: %@", uniName);
+        
+        // Handle the rest of the fields for fields after the university name field
+        for (int i = (kUniversityNameHeaderFieldIndex + 1); i < [rowArray count]; i++) {
             
-            // Store all other data fields
-            int startingIndex = 1; // Ignore university
-            for (int i = startingIndex; i < [rowArray count]; i++) {
+            // Use header value to determine what column it is
+            ScoreKey *headerValue = [headerRowArray objectAtIndex:i];
+            if (![headerValue isKindOfClass:[NSNull class]]) { // Not null
+                NSString *scoreKeyString = headerValue.key;
+                NSString *rowValue = [rowArray objectAtIndex:i];
                 
-                Score *score = (Score *)[NSEntityDescription insertNewObjectForEntityForName:[Score entityName] inManagedObjectContext:managedObjectContext];                
-                [score setValue:[rowArray objectAtIndex:i]];
-                [score setKey:[headerRowArray objectAtIndex:i]];
+                if ([scoreKeyString isEqualToString:kRankHeaderField]) {
+                    
+                    [uni setRank:[rowValue numberFromString]];             
+                    
+                } else if ([scoreKeyString isEqualToString:kRankLastYearHeaderField]) {
+                    
+                    [uni setRankLastYear:[rowValue numberFromString]];             
+                    
+                } else if ([scoreKeyString isEqualToString:kTotalScoreHeaderField]) {            
+                    
+                    [uni setTotalScore:[rowValue numberFromString]];             
+                    
+                } else if ([scoreKeyString isEqualToString:kAwardClassHeaderField]) { 
+                    
+                    [uni setAwardClass:rowValue];
+                } else {
+                    // Store as score with the header value
+                    Score *score = (Score *)[NSEntityDescription insertNewObjectForEntityForName:[Score entityName] inManagedObjectContext:managedObjectContext];
+                    [score setKey:headerValue];            
+                    [score setValue:rowValue];
+                    [score setUniversity:uni];
+                }
+            } else {
+                NSLog(@"Header value is null at index: %d", i);
             }
+            
+            // Save data
+            NSError *error;					
+            if(![managedObjectContext save:&error]) {
+                //This is a serious error saying the record  
+                //could not be saved. Advise the user to  
+                //try again or restart the application.   
+                NSLog(@"Error in saving the record: %@", error);
+            }       
         }
     }
+    
 }
 
 #pragma mark -

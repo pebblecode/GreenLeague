@@ -51,7 +51,7 @@ static NSString *kDBFieldAwardClass = @"awardClass";
 	if ((self = [super init])) {			
 		// --------------------------------------------------
 		// To remove the db all the time (for debugging only)
-		[self deleteDB];		
+		//[self deleteDB];		
 		// --------------------------------------------------
 		
 		[self setupDB];
@@ -300,7 +300,7 @@ static NSString *kDBFieldAwardClass = @"awardClass";
 	// Parse CSV file
 	for (NSArray *row in csvRows) {		
 		[ScoreKey addScoreKeyToDBWithManagedContext:[self managedObjectContext] fromRowArray:row];
-	}    
+	}
 }
 
 // Assume data to be first row header, and data after that
@@ -319,11 +319,12 @@ static NSString *kDBFieldAwardClass = @"awardClass";
 	
     // Get header row
 	NSArray *headerRowArray = [ScoreKey scoreKeyArrayFromKeyStringArray:[[dataFileContents csvRows] objectAtIndex:0] managedObjectContext:[self managedObjectContext]];
-    exit(0);
+    
 	// Parse CSV file
 	for (NSArray *row in csvRows) {		
 		[University addUniversityToDBWithManagedContext:[self managedObjectContext] fromRowArray:row headerRowArray:headerRowArray];
 	}
+    exit(0);    
 }
 
 #pragma mark -

@@ -14,7 +14,9 @@
 @interface Score : NSManagedObject {
 @private
 }
-@property (nonatomic, retain) NSString * value;
+
+
+@property (nonatomic, retain) NSString * value; // Stored as a string, for error values to be in string format
 @property (nonatomic, retain) University * university;
 @property (nonatomic, retain) NSManagedObject * key;
 
