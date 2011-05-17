@@ -34,15 +34,18 @@ static NSString *kScoreKeyEntityName = @"ScoreKey";
 // If a key is not found, then the nil object is stored in the array
 + (NSArray *)scoreKeyArrayFromKeyStringArray:(NSArray *)keyStringArray managedObjectContext:(NSManagedObjectContext *)managedObjectContext {
     
-    NSMutableArray *scoreKeyArray = [[NSArray alloc] init];
+    NSMutableArray *scoreKeyArray = [[NSMutableArray alloc] init];
     
     for (int i = 0; i < [keyStringArray count]; i++) {
         NSString *keyStr = [keyStringArray objectAtIndex:i];
         
         // Find string in ScoreKey table
 		NSEntityDescription *entity = [NSEntityDescription entityForName:[ScoreKey entityName] inManagedObjectContext: managedObjectContext];
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"key == '%@'", keyStr];
         
+        //NSPredicate *predicate = [NSPredicate predicateWithFormat:@"key == \"%@\"", keyStr]; // This doesn't work for some reason
+        NSString *predicateString = [NSString stringWithFormat:@"key == \"%@\"", keyStr];
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:predicateString];
+        //NSLog(@"predicate = '%@', keyStr = '%@'", predicate, keyStr);
 		NSFetchRequest *request = [[NSFetchRequest alloc] init];
 		[request setEntity:entity]; 
         [request setPredicate:predicate];        
@@ -57,10 +60,11 @@ static NSString *kScoreKeyEntityName = @"ScoreKey";
 		}
         [request release];
         
-        if ([scoreKeys count] == 1) {
+        if ([scoreKeys count] > 0) {
             [scoreKeyArray addObject:[scoreKeys objectAtIndex:0]]; // Just add the first match - should only be one
         } else {
-            NSLog(@"scoreKeys error: Should have 1 item, but has %d item(s)", [scoreKeys count]);
+            NSLog(@"Score key '%@' not found, adding null to array at index: %d.", keyStr, i);
+            [scoreKeyArray addObject:[NSNull null]];
         }
     }
     
@@ -79,8 +83,10 @@ static NSString *kScoreKeyEntityName = @"ScoreKey";
 			scoreKey = (ScoreKey *)[NSEntityDescription insertNewObjectForEntityForName:[ScoreKey entityName] inManagedObjectContext:managedObjectContext];
 			[scoreKey setKey:key];
 			[scoreKey setText:scoreText];
+            
+			//NSLog(@"Saving the record: %@", scoreKey);
 			
-			NSError *error;					
+            NSError *error;					
 			if(![managedObjectContext save:&error]) {
 				//This is a serious error saying the record  
 				//could not be saved. Advise the user to  
@@ -89,6 +95,9 @@ static NSString *kScoreKeyEntityName = @"ScoreKey";
 			}		
 			
 		} // Else, do nothing - shouldn't have an empty row
+        else {
+            NSLog(@"Couldn't save: %@:%@", key, scoreText);
+        }
 	}    
     
 }
