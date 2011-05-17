@@ -11,8 +11,8 @@
 
 @interface UniversityDetailViewController : UIViewController {	
 	UILabel *nameLabel;
-	UILabel *rank2010Label;
-	UILabel *rank2009Label;
+	UILabel *rankLabel;
+	UILabel *rankLastYearLabel;
 	UILabel *awardClassLabel;
 	UILabel *totalScoreLabel;
     
@@ -20,8 +20,8 @@
 }
 
 @property (nonatomic, retain) IBOutlet UILabel *nameLabel;
-@property (nonatomic, retain) IBOutlet UILabel *rank2010Label;
-@property (nonatomic, retain) IBOutlet UILabel *rank2009Label;
+@property (nonatomic, retain) IBOutlet UILabel *rankLabel;
+@property (nonatomic, retain) IBOutlet UILabel *rankLastYearLabel;
 @property (nonatomic, retain) IBOutlet UILabel *awardClassLabel;
 @property (nonatomic, retain) IBOutlet UILabel *totalScoreLabel;
 

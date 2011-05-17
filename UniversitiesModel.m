@@ -18,7 +18,7 @@ static NSString *kDatabaseSqliteFile = @"green_league.sqlite";
 #define kDataCSVRowsToIgnore 1
 
 // Database field names
-static NSString *kDBFieldRank = @"rank2010";
+static NSString *kDBFieldRank = @"rank";
 static NSString *kDBFieldName = @"name";
 //static NSString *kDBFieldSortName = @"sortName";
 //static NSString *kDBFieldScore = @"score";
@@ -58,9 +58,8 @@ static NSString *kDBFieldAwardClass = @"awardClass";
 		
 		// Get both types of sort for the time being
 		// TODO: make this more elegant
-        NSLog(@"TODO: fetch universities");
-//		[self fetchUniversitiesFromDBSortedByRank];
-//		[self fetchUniversitiesFromDBSortedByName];
+		[self fetchUniversitiesFromDBSortedByRank];
+		[self fetchUniversitiesFromDBSortedByName];
 		
 	}
 	return self;		

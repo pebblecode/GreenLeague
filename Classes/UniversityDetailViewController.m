@@ -20,7 +20,7 @@
 
 @implementation UniversityDetailViewController
 
-@synthesize university, nameLabel, rank2010Label, rank2009Label, awardClassLabel, totalScoreLabel;
+@synthesize university, nameLabel, rankLabel, rankLastYearLabel, awardClassLabel, totalScoreLabel;
 
 
 
@@ -37,8 +37,8 @@
 
     NSLog(@"TODO: UniversityDetailViewController viewDidLoad");
 //	self.nameLabel.text = [self.university name];
-//	self.rank2010Label.text = ([[self.university rank2010] intValue] == 0) ? @"(none)" : [NSString stringWithFormat:@"%@", [[self.university rank2010] ordinalString]];
-//	self.rank2009Label.text = ([[self.university rank2009] intValue] == 0) ? @"(none)" : [NSString stringWithFormat:@"%@", [[self.university rank2009] ordinalString]];
+//	self.rankLabel.text = ([[self.university rank] intValue] == 0) ? @"(none)" : [NSString stringWithFormat:@"%@", [[self.university rank] ordinalString]];
+//	self.rankLastYearLabel.text = ([[self.university rank] intValue] == 0) ? @"(none)" : [NSString stringWithFormat:@"%@", [[self.university rank] ordinalString]];
 //	self.awardClassLabel.text = [self.university awardClassName];
 //	self.totalScoreLabel.text = [NSString stringWithFormat:@"%.1f", [[self.university totalScore] floatValue]];
 //
@@ -46,7 +46,7 @@
 //	self.awardClassLabel.textColor = [self.university awardClassTextColour];
 //	
 //	self.awardClassLabel.backgroundColor = [self.university awardClassBackgroundColour];
-//	self.rank2010Label.backgroundColor = [self.university awardClassBackgroundColour];
+//	self.rankLabel.backgroundColor = [self.university awardClassBackgroundColour];
 	
 }
 
@@ -77,8 +77,8 @@
 	[university release];
 	
 	[nameLabel release];
-	[rank2010Label release];
-	[rank2009Label release];
+	[rankLabel release];
+	[rankLastYearLabel release];
 	[awardClassLabel release];
 	[totalScoreLabel release];
 	

@@ -133,7 +133,7 @@
         universitiesToCompare = [unisToCompare retain]; // Keep a retain of the new set
         
         // Sort universities by rank
-        NSSortDescriptor *descriptor = [[NSSortDescriptor alloc] initWithKey:@"rank2010" ascending:YES];
+        NSSortDescriptor *descriptor = [[NSSortDescriptor alloc] initWithKey:@"rank" ascending:YES];
         [universitiesToCompare sortUsingDescriptors:[NSArray arrayWithObject:descriptor]];
         [descriptor release];
         
