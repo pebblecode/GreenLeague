@@ -35,18 +35,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    NSLog(@"TODO: UniversityDetailViewController viewDidLoad");
-//	self.nameLabel.text = [self.university name];
-//	self.rankLabel.text = ([[self.university rank] intValue] == 0) ? @"(none)" : [NSString stringWithFormat:@"%@", [[self.university rank] ordinalString]];
-//	self.rankLastYearLabel.text = ([[self.university rank] intValue] == 0) ? @"(none)" : [NSString stringWithFormat:@"%@", [[self.university rank] ordinalString]];
-//	self.awardClassLabel.text = [self.university awardClassName];
-//	self.totalScoreLabel.text = [NSString stringWithFormat:@"%.1f", [[self.university totalScore] floatValue]];
-//
-//	// Change colours to award class colours
-//	self.awardClassLabel.textColor = [self.university awardClassTextColour];
-//	
-//	self.awardClassLabel.backgroundColor = [self.university awardClassBackgroundColour];
-//	self.rankLabel.backgroundColor = [self.university awardClassBackgroundColour];
+	self.nameLabel.text = [self.university name];
+	self.rankLabel.text = ([[self.university rank] intValue] == 0) ? @"(none)" : [NSString stringWithFormat:@"%@", [[self.university rank] ordinalString]];
+	self.rankLastYearLabel.text = ([[self.university rankLastYear] intValue] == 0) ? @"(none)" : [NSString stringWithFormat:@"%@", [[self.university rankLastYear] ordinalString]];
+	self.awardClassLabel.text = [self.university awardClassName];
+	self.totalScoreLabel.text = [NSString stringWithFormat:@"%.1f", [[self.university totalScore] floatValue]];
+
+	// Change colours to award class colours
+	self.awardClassLabel.textColor = [self.university awardClassTextColour];
+	
+	self.awardClassLabel.backgroundColor = [self.university awardClassBackgroundColour];
+	self.rankLabel.backgroundColor = [self.university awardClassBackgroundColour];
 	
 }
 
