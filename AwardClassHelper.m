@@ -18,8 +18,8 @@
 	if (!dbNames) {
 		dbNames = [[NSArray alloc] initWithObjects:
 					@"1st", 
-					@"02:01", 
-					@"02:02", 
+					@"2:1", 
+					@"2:2", 
 					@"3rd", 
 					@"Fail", 
 					@"Did not sit exam", 
