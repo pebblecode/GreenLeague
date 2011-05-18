@@ -75,20 +75,19 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
 
-    NSLog(@"TODO: FindSelectorViewController tableView");
-//	University *uni = [self universityFromIndexPath:indexPath];
-//	
-//	// Text: Rank. University    
-//	NSString *rankString = ([[uni rank] intValue] == 0) ? @"(none) " : [NSString stringWithFormat:@"%@. ", uni.rank];
-//	cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, uni.sortName];    
-//    if ([self isRankSort]) {
-//        // Text eg, 5. Aston University
-//        NSString *rankString = ([[uni rank] intValue] == 0) ? @"(none) " : [NSString stringWithFormat:@"%@. ", uni.rank];
-//        cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, uni.sortName];
-//    } else {
-//        // Text eg: Aston University
-//        cell.textLabel.text = [NSString stringWithFormat:@"%@", uni.sortName]; 
-//    }    	
+	University *uni = [self universityFromIndexPath:indexPath];
+	
+	// Text: Rank. University    
+	NSString *rankString = ([[uni rank] intValue] == 0) ? @"(none) " : [NSString stringWithFormat:@"%@. ", uni.rank];
+	cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, uni.sortName];    
+    if ([self isRankSort]) {
+        // Text eg, 5. Aston University
+        NSString *rankString = ([[uni rank] intValue] == 0) ? @"(none) " : [NSString stringWithFormat:@"%@. ", uni.rank];
+        cell.textLabel.text = [NSString stringWithFormat:@"%@%@", rankString, uni.sortName];
+    } else {
+        // Text eg: Aston University
+        cell.textLabel.text = [NSString stringWithFormat:@"%@", uni.sortName]; 
+    }    	
     
     
     
