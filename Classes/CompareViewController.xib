@@ -56,6 +56,7 @@
 								<string key="NSFrame">{{86, 37}, {215, 21}}</string>
 								<reference key="NSSuperview" ref="869404991"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<int key="IBUIContentMode">7</int>
@@ -110,18 +111,17 @@
 						<string key="NSFrameSize">{320, 367}</string>
 						<reference key="NSSuperview" ref="888598328"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="186691900"/>
+						<reference key="NSNextKeyView" ref="869404991"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
-					<object class="IBUIImageView" id="186691900">
+					<object class="IBUIImageView" id="472375252">
 						<reference key="NSNextResponder" ref="888598328"/>
 						<int key="NSvFlags">256</int>
-						<string key="NSFrame">{{0, 309}, {320, 65}}</string>
+						<string key="NSFrame">{{0, 335}, {320, 32}}</string>
 						<reference key="NSSuperview" ref="888598328"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="243784502"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">4</int>
@@ -135,7 +135,7 @@
 					<object class="IBUIButton" id="243784502">
 						<reference key="NSNextResponder" ref="888598328"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{270, 324}, {35, 35}}</string>
+						<string key="NSFrame">{{281, 337}, {28, 28}}</string>
 						<reference key="NSSuperview" ref="888598328"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
@@ -214,14 +214,6 @@
 					<int key="connectionID">36</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">tableKeyView</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="186691900"/>
-					</object>
-					<int key="connectionID">37</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">fullScreenButtonPress</string>
 						<reference key="source" ref="243784502"/>
@@ -264,10 +256,10 @@
 						<reference key="object" ref="888598328"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="186691900"/>
 							<reference ref="842447567"/>
-							<reference ref="243784502"/>
 							<reference ref="869404991"/>
+							<reference ref="472375252"/>
+							<reference ref="243784502"/>
 						</object>
 						<reference key="parent" ref="0"/>
 						<string key="objectName">Main containter view</string>
@@ -278,11 +270,6 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 						</object>
-						<reference key="parent" ref="888598328"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">33</int>
-						<reference key="object" ref="186691900"/>
 						<reference key="parent" ref="888598328"/>
 					</object>
 					<object class="IBObjectRecord">
@@ -310,6 +297,11 @@
 						<int key="objectID">12</int>
 						<reference key="object" ref="805832678"/>
 						<reference key="parent" ref="869404991"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">45</int>
+						<reference key="object" ref="472375252"/>
+						<reference key="parent" ref="888598328"/>
 					</object>
 				</object>
 			</object>
@@ -348,7 +340,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">40</int>
+			<int key="maxID">45</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -487,7 +479,7 @@
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<string>{16, 19}</string>
 				<string>{23, 23}</string>
-				<string>{320, 52}</string>
+				<string>{320, 32}</string>
 			</object>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">300</string>
