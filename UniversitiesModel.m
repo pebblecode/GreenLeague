@@ -323,7 +323,6 @@ static NSString *kDBFieldAwardClass = @"awardClass";
 	for (NSArray *row in csvRows) {		
 		[University addUniversityToDBWithManagedContext:[self managedObjectContext] fromRowArray:row headerRowArray:headerRowArray];
 	}
-    exit(0);    
 }
 
 #pragma mark -
