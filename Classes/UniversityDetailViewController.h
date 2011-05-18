@@ -13,7 +13,7 @@
 	UILabel *nameLabel;
 	UILabel *rankLabel;
 	UILabel *rankLastYearLabel;
-	UILabel *awardClassLabel;
+    UIImageView *awardClassImage;
 	UILabel *totalScoreLabel;
     
     University *university;
@@ -22,7 +22,7 @@
 @property (nonatomic, retain) IBOutlet UILabel *nameLabel;
 @property (nonatomic, retain) IBOutlet UILabel *rankLabel;
 @property (nonatomic, retain) IBOutlet UILabel *rankLastYearLabel;
-@property (nonatomic, retain) IBOutlet UILabel *awardClassLabel;
+@property (nonatomic, retain) IBOutlet UIImageView *awardClassImage;
 @property (nonatomic, retain) IBOutlet UILabel *totalScoreLabel;
 
 @property (nonatomic, retain) University *university;

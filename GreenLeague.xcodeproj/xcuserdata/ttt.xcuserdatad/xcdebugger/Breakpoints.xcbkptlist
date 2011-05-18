@@ -105,11 +105,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "AwardClassHelper.m"
-         timestampString = "321190515.537175"
+         timestampString = "327420130.413973"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "50"
-         endingLineNumber = "50">
+         startingLineNumber = "52"
+         endingLineNumber = "52">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"

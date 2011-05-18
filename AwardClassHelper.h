@@ -18,9 +18,11 @@
 + (NSArray *)awardClassDBNames;
 + (NSArray *)awardClassIndexTitles;
 + (NSArray *)awardClassNames;
++ (NSArray *)awardClassBadges;
 + (NSArray *)awardClassColours;
 
-+ (UIColor *)backgroundColourForAwardClassDBName:(NSString *)awardClass;
++ (UIImage *)badgeImageForAwardClassDBName:(NSString *)awardClassDBName;
++ (UIColor *)backgroundColourForAwardClassDBName:(NSString *)awardClassDBName;
 + (UIColor *)textColourForAwardClassDBName:(NSString *)awardClass;
 
 @end

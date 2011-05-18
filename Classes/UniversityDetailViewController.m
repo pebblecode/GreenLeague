@@ -20,7 +20,7 @@
 
 @implementation UniversityDetailViewController
 
-@synthesize university, nameLabel, rankLabel, rankLastYearLabel, awardClassLabel, totalScoreLabel;
+@synthesize university, nameLabel, rankLabel, rankLastYearLabel, awardClassImage, totalScoreLabel;
 
 
 
@@ -38,13 +38,10 @@
 	self.nameLabel.text = [self.university name];
 	self.rankLabel.text = ([[self.university rank] intValue] == 0) ? @"(none)" : [NSString stringWithFormat:@"%@", [[self.university rank] ordinalString]];
 	self.rankLastYearLabel.text = ([[self.university rankLastYear] intValue] == 0) ? @"(none)" : [NSString stringWithFormat:@"%@", [[self.university rankLastYear] ordinalString]];
-	self.awardClassLabel.text = [self.university awardClassName];
+	self.awardClassImage.image = [AwardClassHelper badgeImageForAwardClassDBName:[self.university awardClass]];
 	self.totalScoreLabel.text = [NSString stringWithFormat:@"%.1f", [[self.university totalScore] floatValue]];
 
 	// Change colours to award class colours
-	self.awardClassLabel.textColor = [self.university awardClassTextColour];
-	
-	self.awardClassLabel.backgroundColor = [self.university awardClassBackgroundColour];
 	self.rankLabel.backgroundColor = [self.university awardClassBackgroundColour];
 	
 }
@@ -78,7 +75,7 @@
 	[nameLabel release];
 	[rankLabel release];
 	[rankLastYearLabel release];
-	[awardClassLabel release];
+	[awardClassImage release];
 	[totalScoreLabel release];
 	
     [super dealloc];

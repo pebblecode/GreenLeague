@@ -9,6 +9,8 @@
 #import "AwardClassHelper.h"
 #import "UIColor+Helper.h"
 
+#define kErrorBadgeIndex 5 // Index of badge image to use for error
+
 @implementation AwardClassHelper
 
 
@@ -62,6 +64,23 @@
 	return classNames;
 }
 
++ (NSArray *)awardClassBadges {
+	static NSArray *classBadges = nil;
+	
+	if (!classBadges) {
+		classBadges = [[NSArray alloc] initWithObjects:
+					  [UIImage imageNamed:@"badge_1st.png"], 
+					  [UIImage imageNamed:@"badge_21.png"], 
+					  [UIImage imageNamed:@"badge_22.png"], 
+					  [UIImage imageNamed:@"badge_3rd.png"], 
+					  [UIImage imageNamed:@"badge_fail.png"], 
+					  [UIImage imageNamed:@"badge_fail.png"], // Did no sit exam is a fail
+                       nil];
+	}
+    
+	return classBadges;
+}
+
 // Colour code university based on award class
 + (NSArray *)awardClassColours {
 	static NSArray *colours = nil;
@@ -78,6 +97,20 @@
 	}
 	
 	return colours;
+}
+
+// Find badge image from awardClassBadges. If not found, then use fail.
++ (UIImage *)badgeImageForAwardClassDBName:(NSString *)awardClassDBName {
+    
+	UIImage *badgeImage = nil;
+	
+	int awardClassBadgeIndex = [[AwardClassHelper awardClassDBNames] indexOfObject:awardClassDBName];	
+	if (awardClassBadgeIndex != NSNotFound) {
+		badgeImage = [[AwardClassHelper awardClassBadges] objectAtIndex:awardClassBadgeIndex];
+	} else {
+		badgeImage = [[AwardClassHelper awardClassBadges] objectAtIndex:kErrorBadgeIndex];
+	}
+	return badgeImage;    
 }
 
 // Find colour from awardClassColours. If not found, then use white.
