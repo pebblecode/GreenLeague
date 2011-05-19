@@ -2,7 +2,7 @@
 //  University.m
 //  GreenLeague
 //
-//  Created by Tak Tran on 19/05/2011.
+//  Created by Tak Tran on 16/05/2011.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
@@ -22,6 +22,7 @@ static NSString *kAwardClassHeaderField = @"gl11_class/singleChoice";
 
 static NSString *kUniversityEntityName = @"University";
 
+
 // Private methods
 @interface University()
 
@@ -29,47 +30,14 @@ static NSString *kUniversityEntityName = @"University";
 
 @end
 
-
 @implementation University
+@dynamic name;
+@dynamic sortName;
+@dynamic rank;
 @dynamic rankLastYear;
 @dynamic awardClass;
 @dynamic totalScore;
-@dynamic rank;
-@dynamic name;
-@dynamic sortName;
 @dynamic score;
-
-#pragma mark -
-#pragma mark === Score methods ===
-#pragma mark
-
-- (void)addScoreObject:(Score *)value {    
-    NSSet *changedObjects = [[NSSet alloc] initWithObjects:&value count:1];
-    [self willChangeValueForKey:@"score" withSetMutation:NSKeyValueUnionSetMutation usingObjects:changedObjects];
-    [[self primitiveValueForKey:@"score"] addObject:value];
-    [self didChangeValueForKey:@"score" withSetMutation:NSKeyValueUnionSetMutation usingObjects:changedObjects];
-    [changedObjects release];
-}
-
-- (void)removeScoreObject:(Score *)value {
-    NSSet *changedObjects = [[NSSet alloc] initWithObjects:&value count:1];
-    [self willChangeValueForKey:@"score" withSetMutation:NSKeyValueMinusSetMutation usingObjects:changedObjects];
-    [[self primitiveValueForKey:@"score"] removeObject:value];
-    [self didChangeValueForKey:@"score" withSetMutation:NSKeyValueMinusSetMutation usingObjects:changedObjects];
-    [changedObjects release];
-}
-
-- (void)addScore:(NSSet *)value {    
-    [self willChangeValueForKey:@"score" withSetMutation:NSKeyValueUnionSetMutation usingObjects:value];
-    [[self primitiveValueForKey:@"score"] unionSet:value];
-    [self didChangeValueForKey:@"score" withSetMutation:NSKeyValueUnionSetMutation usingObjects:value];
-}
-
-- (void)removeScore:(NSSet *)value {
-    [self willChangeValueForKey:@"score" withSetMutation:NSKeyValueMinusSetMutation usingObjects:value];
-    [[self primitiveValueForKey:@"score"] minusSet:value];
-    [self didChangeValueForKey:@"score" withSetMutation:NSKeyValueMinusSetMutation usingObjects:value];
-}
 
 #pragma mark -
 #pragma mark === Class methods ===
@@ -201,7 +169,5 @@ static NSString *kUniversityEntityName = @"University";
 - (int)awardClassIndex {
 	return [[AwardClassHelper awardClassDBNames] indexOfObject:self.awardClass];
 }
-
-
 
 @end

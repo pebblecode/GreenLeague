@@ -2,7 +2,7 @@
 //  University.h
 //  GreenLeague
 //
-//  Created by Tak Tran on 19/05/2011.
+//  Created by Tak Tran on 16/05/2011.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
@@ -14,13 +14,13 @@
 @interface University : NSManagedObject {
 @private
 }
+@property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSString * sortName;
+@property (nonatomic, retain) NSNumber * rank;
 @property (nonatomic, retain) NSNumber * rankLastYear;
 @property (nonatomic, retain) NSString * awardClass;
 @property (nonatomic, retain) NSNumber * totalScore;
-@property (nonatomic, retain) NSNumber * rank;
-@property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSString * sortName;
-@property (nonatomic, retain) NSSet* score;
+@property (nonatomic, retain) Score * score;
 
 + (NSString *)entityName;
 + (NSString *)getSortName:(NSString *)aName;

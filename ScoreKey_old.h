@@ -2,7 +2,7 @@
 //  ScoreKey.h
 //  GreenLeague
 //
-//  Created by Tak Tran on 19/05/2011.
+//  Created by Tak Tran on 16/05/2011.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
@@ -14,8 +14,8 @@
 @interface ScoreKey : NSManagedObject {
 @private
 }
-@property (nonatomic, retain) NSString * key;
-@property (nonatomic, retain) NSString * text;
+@property (nonatomic, retain) NSString* text;
+@property (nonatomic, retain) NSString* key;
 @property (nonatomic, retain) NSSet* score;
 
 + (NSString *)entityName;

@@ -2,7 +2,7 @@
 //  ScoreKey.m
 //  GreenLeague
 //
-//  Created by Tak Tran on 19/05/2011.
+//  Created by Tak Tran on 16/05/2011.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
@@ -12,12 +12,14 @@
 #define kKeyField 0
 #define kKeyValueField 1
 
+
 @implementation ScoreKey
-@dynamic key;
 @dynamic text;
+@dynamic key;
 @dynamic score;
 
 static NSString *kScoreKeyEntityName = @"ScoreKey";
+
 
 #pragma mark -
 #pragma mark === Score methods ===
@@ -50,6 +52,7 @@ static NSString *kScoreKeyEntityName = @"ScoreKey";
     [[self primitiveValueForKey:@"score"] minusSet:value];
     [self didChangeValueForKey:@"score" withSetMutation:NSKeyValueMinusSetMutation usingObjects:value];
 }
+
 
 #pragma mark -
 #pragma mark === Class methods ===
@@ -132,6 +135,5 @@ static NSString *kScoreKeyEntityName = @"ScoreKey";
 	}    
     
 }
-
 
 @end
