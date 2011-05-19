@@ -12,7 +12,7 @@
 #import "ScoreKey.h"
 
 // Data source file minus the file extension
-static NSString *kDataSourceFile = @"gl11-export-draft";
+static NSString *kDataSourceFile = @"gl11-export-filtered";
 static NSString *kScoreKeySourceFile = @"gl11-export-draft-key";
 static NSString *kDatabaseSqliteFile = @"green_league.sqlite";
 #define kDataCSVRowsToIgnore 1
