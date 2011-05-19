@@ -9,7 +9,7 @@
 #import "CompareViewController.h"
 #import "University.h"
 #import "UniversityComparisonTitlesViewController.h"
-#import "UniversityComparisonViewController.h"
+#import "UniversityComparisonRowViewController.h"
 #import "CompareViewControllerFullScreen.h"
 
 #define kTitleHeight 60.0
@@ -191,27 +191,26 @@
     }
     [universityViewControllers release]; universityViewControllers = nil; 
     
-    // Figure out how big the scroll content size should be
+    // Figure out height of scroll view
     // Include table key height too.
-    CGFloat scrollHeight = ([UniversityComparisonViewController height] * [self.universitiesToCompare count] + kTitleHeight) + self.tableKeyView.frame.size.height;
-    
+    CGFloat scrollHeight = [UniversityComparisonRowViewController heightForNumberOfRows:[self.universitiesToCompare count]] + kTitleHeight + self.tableKeyView.frame.size.height;
+                            
     // Set the content size of the scroll view
-    [self.scrollView setContentSize:CGSizeMake([UniversityComparisonViewController width], scrollHeight)];
-    
-    // Loop through universities to compare and create a UniversityComparisonView for each
+    [self.scrollView setContentSize:CGSizeMake([UniversityComparisonRowViewController width], scrollHeight)];
+
+    // Loop through universities to compare and create a UniversityComparisonRowViewController for each
     for (int i = 0; i < [self.universitiesToCompare count]; i++) {
         University *uni = [self.universitiesToCompare objectAtIndex:i];
         
-        UniversityComparisonViewController *uniComparisonVC = [[UniversityComparisonViewController alloc] initWithUniversity:uni];
-        [self.universityViewControllers addObject:uniComparisonVC];
-        [uniComparisonVC release];
+        UniversityComparisonRowViewController *uniRowVC = [[UniversityComparisonRowViewController alloc] initWithUniversity:uni universitiesModel:self.universitiesModel];
+        [self.universityViewControllers addObject:uniRowVC];
+        [uniRowVC release];        
         
         // Set layout
-        uniComparisonVC.view.frame = CGRectMake(0, i * uniComparisonVC.view.frame.size.height + kTitleHeight, uniComparisonVC.view.frame.size.width, uniComparisonVC.view.frame.size.height);
-        
+        uniRowVC.view.frame = CGRectMake(0, i * [UniversityComparisonRowViewController height] + kTitleHeight, [UniversityComparisonRowViewController width], [UniversityComparisonRowViewController height]);
+                
         // Add to scroll view
-        [self.scrollView addSubview:uniComparisonVC.view];
-        
+        [self.scrollView addSubview:uniRowVC.view];
     }
     
     // Add titles to title scroll      

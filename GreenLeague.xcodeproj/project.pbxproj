@@ -25,6 +25,7 @@
 		3D03AC6A1321252900F6B225 /* badge_22.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D03AC651321252900F6B225 /* badge_22.png */; };
 		3D03AC6B1321252900F6B225 /* badge_fail.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D03AC661321252900F6B225 /* badge_fail.png */; };
 		3D03AD511321676A00F6B225 /* UniversitiesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D03AD501321676A00F6B225 /* UniversitiesModel.m */; };
+		3D125E53138575A80042E1A6 /* UniversityComparisonRowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D125E52138575A80042E1A6 /* UniversityComparisonRowViewController.m */; };
 		3D308E0B1316552A00D37010 /* NSString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D308E0A1316552A00D37010 /* NSString+Helper.m */; };
 		3D308E17131658B800D37010 /* Rakefile in Resources */ = {isa = PBXBuildFile; fileRef = 3D308E16131658B800D37010 /* Rakefile */; };
 		3D308E5B1316BB8C00D37010 /* CompareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D308E591316BB8C00D37010 /* CompareViewController.m */; };
@@ -115,6 +116,8 @@
 		3D03AC661321252900F6B225 /* badge_fail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = badge_fail.png; sourceTree = "<group>"; };
 		3D03AD4F1321676A00F6B225 /* UniversitiesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniversitiesModel.h; sourceTree = "<group>"; };
 		3D03AD501321676A00F6B225 /* UniversitiesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniversitiesModel.m; sourceTree = "<group>"; };
+		3D125E51138575A80042E1A6 /* UniversityComparisonRowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniversityComparisonRowViewController.h; sourceTree = "<group>"; };
+		3D125E52138575A80042E1A6 /* UniversityComparisonRowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniversityComparisonRowViewController.m; sourceTree = "<group>"; };
 		3D308E091316552A00D37010 /* NSString+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Helper.h"; sourceTree = "<group>"; };
 		3D308E0A1316552A00D37010 /* NSString+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Helper.m"; sourceTree = "<group>"; };
 		3D308E16131658B800D37010 /* Rakefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
@@ -310,6 +313,8 @@
 				3D8EA16A1371AF9000321D71 /* CompareViewControllerFullScreen.h */,
 				3D8EA16B1371AF9000321D71 /* CompareViewControllerFullScreen.m */,
 				3D8EA16C1371AF9000321D71 /* CompareViewControllerFullScreen.xib */,
+				3D125E51138575A80042E1A6 /* UniversityComparisonRowViewController.h */,
+				3D125E52138575A80042E1A6 /* UniversityComparisonRowViewController.m */,
 				3DE428161327E781002C53CE /* UniversityComparisonViewController.h */,
 				3DE428171327E781002C53CE /* UniversityComparisonViewController.m */,
 				3DE428181327E782002C53CE /* UniversityComparisonViewController.xib */,
@@ -537,6 +542,7 @@
 				3D7A333C13856AA4002551CB /* University.m in Sources */,
 				3D7A333F13856AA4002551CB /* ScoreKey.m in Sources */,
 				3D7A334213856AA5002551CB /* Score.m in Sources */,
+				3D125E53138575A80042E1A6 /* UniversityComparisonRowViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
