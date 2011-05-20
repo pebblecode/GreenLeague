@@ -39,9 +39,9 @@
 @synthesize university, universitiesModel;
 
 - (id)initWithUniversity:(University *)uni universitiesModel:(UniversitiesModel *)unisModel {
-    self = [self initWithNibName:@"UniversityComparisonRowViewController" bundle:nil];
+    self = [super initWithNibName:nil bundle:nil];
     if (self) {
-        self.university = [uni retain]; 
+        self.university = [uni retain];
         self.universitiesModel = [unisModel retain];
     }
     return self;
