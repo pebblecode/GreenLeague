@@ -37,38 +37,38 @@ static NSString *kUniversityEntityName = @"University";
 @dynamic rank;
 @dynamic name;
 @dynamic sortName;
-@dynamic score;
+@dynamic scores;
 
 #pragma mark -
 #pragma mark === Score methods ===
 #pragma mark
 
-- (void)addScoreObject:(Score *)value {    
+- (void)addScoresObject:(Score *)value {    
     NSSet *changedObjects = [[NSSet alloc] initWithObjects:&value count:1];
-    [self willChangeValueForKey:@"score" withSetMutation:NSKeyValueUnionSetMutation usingObjects:changedObjects];
-    [[self primitiveValueForKey:@"score"] addObject:value];
-    [self didChangeValueForKey:@"score" withSetMutation:NSKeyValueUnionSetMutation usingObjects:changedObjects];
+    [self willChangeValueForKey:@"scores" withSetMutation:NSKeyValueUnionSetMutation usingObjects:changedObjects];
+    [[self primitiveValueForKey:@"scores"] addObject:value];
+    [self didChangeValueForKey:@"scores" withSetMutation:NSKeyValueUnionSetMutation usingObjects:changedObjects];
     [changedObjects release];
 }
 
-- (void)removeScoreObject:(Score *)value {
+- (void)removeScoresObject:(Score *)value {
     NSSet *changedObjects = [[NSSet alloc] initWithObjects:&value count:1];
-    [self willChangeValueForKey:@"score" withSetMutation:NSKeyValueMinusSetMutation usingObjects:changedObjects];
-    [[self primitiveValueForKey:@"score"] removeObject:value];
-    [self didChangeValueForKey:@"score" withSetMutation:NSKeyValueMinusSetMutation usingObjects:changedObjects];
+    [self willChangeValueForKey:@"scores" withSetMutation:NSKeyValueMinusSetMutation usingObjects:changedObjects];
+    [[self primitiveValueForKey:@"scores"] removeObject:value];
+    [self didChangeValueForKey:@"scores" withSetMutation:NSKeyValueMinusSetMutation usingObjects:changedObjects];
     [changedObjects release];
 }
 
-- (void)addScore:(NSSet *)value {    
-    [self willChangeValueForKey:@"score" withSetMutation:NSKeyValueUnionSetMutation usingObjects:value];
-    [[self primitiveValueForKey:@"score"] unionSet:value];
-    [self didChangeValueForKey:@"score" withSetMutation:NSKeyValueUnionSetMutation usingObjects:value];
+- (void)addScores:(NSSet *)value {    
+    [self willChangeValueForKey:@"scores" withSetMutation:NSKeyValueUnionSetMutation usingObjects:value];
+    [[self primitiveValueForKey:@"scores"] unionSet:value];
+    [self didChangeValueForKey:@"scores" withSetMutation:NSKeyValueUnionSetMutation usingObjects:value];
 }
 
-- (void)removeScore:(NSSet *)value {
-    [self willChangeValueForKey:@"score" withSetMutation:NSKeyValueMinusSetMutation usingObjects:value];
-    [[self primitiveValueForKey:@"score"] minusSet:value];
-    [self didChangeValueForKey:@"score" withSetMutation:NSKeyValueMinusSetMutation usingObjects:value];
+- (void)removeScores:(NSSet *)value {
+    [self willChangeValueForKey:@"scores" withSetMutation:NSKeyValueMinusSetMutation usingObjects:value];
+    [[self primitiveValueForKey:@"scores"] minusSet:value];
+    [self didChangeValueForKey:@"scores" withSetMutation:NSKeyValueMinusSetMutation usingObjects:value];
 }
 
 #pragma mark -
