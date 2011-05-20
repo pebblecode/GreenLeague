@@ -56,7 +56,7 @@ static NSString *kDBFieldQuestionSuffix = @"_subtotal";
 	if ((self = [super init])) {			
 		// --------------------------------------------------
 		// To remove the db all the time (for debugging only)
-		[self deleteDB];		
+		//[self deleteDB];		
 		// --------------------------------------------------
 		
 		[self setupDB];
