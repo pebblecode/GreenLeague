@@ -196,7 +196,7 @@
     CGFloat scrollHeight = [UniversityComparisonRowViewController heightForNumberOfRows:[self.universitiesToCompare count]] + kTitleHeight + self.tableKeyView.frame.size.height;
                             
     // Set the content size of the scroll view
-    [self.scrollView setContentSize:CGSizeMake([UniversityComparisonRowViewController width], scrollHeight)];
+    [self.scrollView setContentSize:CGSizeMake([UniversityComparisonRowViewController widthFromUniversitiesModel:self.universitiesModel], scrollHeight)];
 
     // Loop through universities to compare and create a UniversityComparisonRowViewController for each
     for (int i = 0; i < [self.universitiesToCompare count]; i++) {
@@ -207,7 +207,7 @@
         [uniRowVC release];        
         
         // Set layout
-        uniRowVC.view.frame = CGRectMake(0, i * [UniversityComparisonRowViewController height] + kTitleHeight, [UniversityComparisonRowViewController width], [UniversityComparisonRowViewController height]);
+        uniRowVC.view.frame = CGRectMake(0, i * [UniversityComparisonRowViewController height] + kTitleHeight, [UniversityComparisonRowViewController widthFromUniversitiesModel:self.universitiesModel], [UniversityComparisonRowViewController height]);
                 
         // Add to scroll view
         [self.scrollView addSubview:uniRowVC.view];

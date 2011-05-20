@@ -21,7 +21,7 @@
 
 - (id)initWithUniversity:(University *)uni universitiesModel:(UniversitiesModel *)unisModel;
 
-+ (CGFloat)width;
++ (CGFloat)widthFromUniversitiesModel:(UniversitiesModel *)unisModel;
 + (CGFloat)height;
 
 + (CGFloat)heightForNumberOfRows:(NSUInteger)numRows;

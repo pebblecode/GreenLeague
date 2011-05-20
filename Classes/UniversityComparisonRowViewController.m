@@ -10,10 +10,17 @@
 #import "ScoreKey.h"
 #import "NSString+Helper.h"
 
-#define kViewHeight 50.0
-#define kUniLabelWidth 185.0
+#define kViewHeight                50.0
+#define kUniLabelWidth             185.0
+#define kUniLabelPadding           10.0
+#define kUniLabelFullWidth         (kUniLabelWidth + (2 * kUniLabelPadding))
 
-#define kMaxNumRatingImages 4
+#define kRatingImageWidth          50.0
+#define kRatingImageHeight         50.0
+#define kRatingImageRightPadding   20.0
+#define kRatingImageFullWidth      (kRatingImageWidth + kRatingImageRightPadding)
+
+#define kMaxNumRatingImages        4
 
 @interface UniversityComparisonRowViewController()
 
@@ -62,24 +69,26 @@
     self.view = [[UIView alloc] init];
     
     // Add university name label
-    UILabel *uniNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, kUniLabelWidth, [UniversityComparisonRowViewController height])];
+    UILabel *uniNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(kUniLabelPadding, 0, kUniLabelWidth, [UniversityComparisonRowViewController height])];
     uniNameLabel.text = university.sortName;
     [self.view addSubview:uniNameLabel];
     [uniNameLabel release];
     
-    // For each question add score
-    // Get questions as Score objects
-    NSArray *scoreKeys = self.universitiesModel.questionScoreKeys;;
-    for (ScoreKey *scoreKey in scoreKeys) {        
-        // Set the correct image
-        UIImage *ratingImage = [self imageFromUniScoreKey:scoreKey];
+    // For each question (from score keys), get the rating images and add to the view
+    NSArray *scoreKeys = self.universitiesModel.questionScoreKeys;
+    for (int i = 0; i < scoreKeys.count; i++) {
+        ScoreKey *scoreKey = [scoreKeys objectAtIndex:i];
         
-        UIImageView *scoreImageView = [[UIImageView alloc] initWithImage:ratingImage];
-        // Layout score image
-        //scoreImage.
+        // Get the correct image
+        UIImage *ratingImage = [self imageFromUniScoreKey:scoreKey];        
+        UIImageView *ratingImageView = [[UIImageView alloc] initWithImage:ratingImage];
+        [self.view addSubview:ratingImageView];
+        [ratingImageView release];
         
-        // Add it to the view
-        [self.view addSubview:scoreImageView];
+        // Layout image
+        // | kUniLabelFullWidth | kRatingImageFullWidth | kRatingImageFullWidth | ...
+        ratingImageView.frame = CGRectMake(kUniLabelFullWidth + (i * kRatingImageFullWidth), 0, kRatingImageWidth, kRatingImageHeight);
+        
     }
     
     // self.view.frame = CGRectMake();
@@ -109,9 +118,8 @@
 #pragma mark === Dimensions ===
 #pragma mark
 
-+ (CGFloat)width {
-    NSLog(@"TODO: width");
-    return 0;
++ (CGFloat)widthFromUniversitiesModel:(UniversitiesModel *)unisModel {
+    return (kUniLabelFullWidth + (unisModel.questionScoreKeys.count * kRatingImageFullWidth));
 }
 
 + (CGFloat)height {
