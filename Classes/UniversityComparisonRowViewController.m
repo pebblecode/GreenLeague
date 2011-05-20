@@ -7,6 +7,7 @@
 //
 
 #import "UniversityComparisonRowViewController.h"
+#import "ScoreKey.h"
 
 #define kViewHeight 50.0
 #define kUniLabelWidth 185.0
@@ -18,7 +19,7 @@
     self = [self initWithNibName:@"UniversityComparisonRowViewController" bundle:nil];
     if (self) {
         self.university = [uni retain]; 
-        universitiesModel = [universitiesModel retain];
+        self.universitiesModel = [unisModel retain];
     }
     return self;
 }
@@ -53,9 +54,10 @@
     
     // For each question add score
     // Get questions as Score objects
-    NSArray *scoreKeys = universitiesModel.questionScoreKeys;
-    for (NSString *scoreKey in scoreKeys) {
+    NSArray *scoreKeys = self.universitiesModel.questionScoreKeys;;
+    for (ScoreKey *scoreKey in scoreKeys) {
         // Get the score
+        NSLog(@"scoreKey: %@", scoreKey.key);
         //Find university score where university.scoreKey =- scoreKey
         
         // Set the correct image
@@ -71,8 +73,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    NSLog(@"TODO: UniversityComparisonView viewDidLoad");
 }
 
 

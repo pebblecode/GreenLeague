@@ -12,7 +12,8 @@
 
 @interface UniversitiesModel : NSObject {
 	NSMutableArray *sortedUniversities;	
-	NSMutableArray *awardClasses;	
+	NSMutableArray *awardClasses;
+    NSMutableArray *questionScoreKeys;
 	UILocalizedIndexedCollation *collation;
 			
     NSManagedObjectContext *managedObjectContext;
@@ -22,6 +23,7 @@
 
 @property (nonatomic, retain) NSMutableArray *sortedUniversities;
 @property (nonatomic, retain) NSMutableArray *awardClasses;
+@property (nonatomic, retain) NSMutableArray *questionScoreKeys;
 @property (nonatomic, retain) UILocalizedIndexedCollation *collation;
 
 @property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
@@ -29,5 +31,6 @@
 @property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 - (University *)topRankedUniversity;
+
 
 @end

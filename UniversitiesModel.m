@@ -24,6 +24,10 @@ static NSString *kDBFieldName = @"name";
 //static NSString *kDBFieldScore = @"score";
 static NSString *kDBFieldAwardClass = @"awardClass";
 
+static NSString *kDBFieldScoreKey = @"key";
+
+static NSString *kDBFieldQuestionSuffix = @"_subtotal";
+
 @interface UniversitiesModel()
 
 - (void)fetchUniversitiesFromDBSortedByRank;
@@ -45,7 +49,7 @@ static NSString *kDBFieldAwardClass = @"awardClass";
 
 @implementation UniversitiesModel
 
-@synthesize sortedUniversities, awardClasses, collation, managedObjectContext, managedObjectModel, persistentStoreCoordinator;
+@synthesize sortedUniversities, awardClasses, questionScoreKeys, collation, managedObjectContext, managedObjectModel, persistentStoreCoordinator;
 
 - (id)init {
 	if ((self = [super init])) {			
@@ -68,7 +72,8 @@ static NSString *kDBFieldAwardClass = @"awardClass";
 - (void)dealloc {
 	[sortedUniversities release];	
 	[awardClasses release];
-	[collation release];
+	[questionScoreKeys release];
+    [collation release];
 	
 	[managedObjectContext release];
 	[managedObjectModel release];
@@ -344,6 +349,36 @@ static NSString *kDBFieldAwardClass = @"awardClass";
 	}
 	
 	return sortedUniversities;
+}
+
+- (NSMutableArray *)questionScoreKeys {
+    if (!questionScoreKeys) {
+        
+        NSEntityDescription *entity = [NSEntityDescription entityForName:[ScoreKey entityName] inManagedObjectContext:[self managedObjectContext]];
+        
+        // Setup the fetch request
+        NSFetchRequest *request = [[NSFetchRequest alloc] init];
+        [request setEntity:entity]; 
+        
+        // Assuming it is sorted
+        
+        // Set predicate of university award class
+        NSString *predicate = [NSString stringWithFormat:@"%@ ENDSWITH '%@'", kDBFieldScoreKey, kDBFieldQuestionSuffix];
+        NSPredicate *rankPredicate = [NSPredicate predicateWithFormat:predicate];
+        [request setPredicate:rankPredicate];
+        
+        // Fetch the records and handle an error
+        NSError *error;
+        questionScoreKeys = [[[self managedObjectContext] executeFetchRequest:request error:&error] mutableCopy];        
+        
+        if (!questionScoreKeys) {
+            // Handle the error.
+            // This is a serious error and should advise the user to restart the application
+            NSLog(@"questionScoreKeys error: %@", error);
+        } 
+        
+    }
+    return questionScoreKeys;
 }
 
 - (Boolean)dbExists {

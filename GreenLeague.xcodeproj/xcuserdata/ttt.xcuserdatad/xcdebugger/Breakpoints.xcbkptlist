@@ -189,11 +189,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "UniversitiesModel.m"
-         timestampString = "327253309.37495"
+         timestampString = "327577702.554806"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "57"
-         endingLineNumber = "57">
+         startingLineNumber = "61"
+         endingLineNumber = "61">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -251,11 +251,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "UniversitiesModel.m"
-         timestampString = "327402319.699022"
+         timestampString = "327577702.554806"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "409"
-         endingLineNumber = "409"
+         startingLineNumber = "444"
+         endingLineNumber = "444"
          landmarkName = "-topRankedUniversity"
          landmarkType = "5">
       </FileBreakpoint>

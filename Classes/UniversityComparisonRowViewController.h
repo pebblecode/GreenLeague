@@ -17,7 +17,7 @@
 }
 
 @property (nonatomic, retain) University *university;
-@property (nonatomic, readonly) UniversitiesModel *universitiesModel;
+@property (nonatomic, retain) UniversitiesModel *universitiesModel;
 
 - (id)initWithUniversity:(University *)uni universitiesModel:(UniversitiesModel *)unisModel;
 
