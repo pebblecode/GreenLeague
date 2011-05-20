@@ -31,45 +31,7 @@ static NSString *kUniversityEntityName = @"University";
 
 
 @implementation University
-@dynamic rankLastYear;
-@dynamic awardClass;
-@dynamic totalScore;
-@dynamic rank;
-@dynamic name;
-@dynamic sortName;
-@dynamic scores;
 
-#pragma mark -
-#pragma mark === Score methods ===
-#pragma mark
-
-- (void)addScoresObject:(Score *)value {    
-    NSSet *changedObjects = [[NSSet alloc] initWithObjects:&value count:1];
-    [self willChangeValueForKey:@"scores" withSetMutation:NSKeyValueUnionSetMutation usingObjects:changedObjects];
-    [[self primitiveValueForKey:@"scores"] addObject:value];
-    [self didChangeValueForKey:@"scores" withSetMutation:NSKeyValueUnionSetMutation usingObjects:changedObjects];
-    [changedObjects release];
-}
-
-- (void)removeScoresObject:(Score *)value {
-    NSSet *changedObjects = [[NSSet alloc] initWithObjects:&value count:1];
-    [self willChangeValueForKey:@"scores" withSetMutation:NSKeyValueMinusSetMutation usingObjects:changedObjects];
-    [[self primitiveValueForKey:@"scores"] removeObject:value];
-    [self didChangeValueForKey:@"scores" withSetMutation:NSKeyValueMinusSetMutation usingObjects:changedObjects];
-    [changedObjects release];
-}
-
-- (void)addScores:(NSSet *)value {    
-    [self willChangeValueForKey:@"scores" withSetMutation:NSKeyValueUnionSetMutation usingObjects:value];
-    [[self primitiveValueForKey:@"scores"] unionSet:value];
-    [self didChangeValueForKey:@"scores" withSetMutation:NSKeyValueUnionSetMutation usingObjects:value];
-}
-
-- (void)removeScores:(NSSet *)value {
-    [self willChangeValueForKey:@"scores" withSetMutation:NSKeyValueMinusSetMutation usingObjects:value];
-    [[self primitiveValueForKey:@"scores"] minusSet:value];
-    [self didChangeValueForKey:@"scores" withSetMutation:NSKeyValueMinusSetMutation usingObjects:value];
-}
 
 #pragma mark -
 #pragma mark === Class methods ===

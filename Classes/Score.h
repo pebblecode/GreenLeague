@@ -8,15 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "_Score.h"
 
 @class ScoreKey, University;
 
-@interface Score : NSManagedObject {
+@interface Score : _Score {
 @private
 }
-@property (nonatomic, retain) NSString * value;
-@property (nonatomic, retain) University * university;
-@property (nonatomic, retain) ScoreKey * key;
 
 + (NSString *)entityName;
 

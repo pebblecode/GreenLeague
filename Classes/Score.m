@@ -13,9 +13,6 @@
 static NSString *kDataEntityName = @"Score";
 
 @implementation Score
-@dynamic value;
-@dynamic university;
-@dynamic key;
 
 + (NSString *)entityName {
 	return [NSString stringWithString:kDataEntityName];

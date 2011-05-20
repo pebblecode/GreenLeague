@@ -8,19 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "_University.h"
 
 @class Score;
 
-@interface University : NSManagedObject {
+@interface University : _University {
 @private
 }
-@property (nonatomic, retain) NSNumber * rankLastYear;
-@property (nonatomic, retain) NSString * awardClass;
-@property (nonatomic, retain) NSNumber * totalScore;
-@property (nonatomic, retain) NSNumber * rank;
-@property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSString * sortName;
-@property (nonatomic, retain) NSSet* scores;
 
 + (NSString *)entityName;
 + (NSString *)getSortName:(NSString *)aName;

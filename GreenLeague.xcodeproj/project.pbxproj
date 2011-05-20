@@ -41,9 +41,6 @@
 		3D422DBA1366CC0200DA0F53 /* pebble-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D422DB91366CC0200DA0F53 /* pebble-logo.png */; };
 		3D5A78B11381299E0009858C /* gl11-export-draft-key.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3D5A78B01381299E0009858C /* gl11-export-draft-key.csv */; };
 		3D5BFBE1137013A8004DFA0B /* table-key.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D5BFBE0137013A8004DFA0B /* table-key.png */; };
-		3D7A333C13856AA4002551CB /* University.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7A333B13856AA4002551CB /* University.m */; };
-		3D7A333F13856AA4002551CB /* ScoreKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7A333E13856AA4002551CB /* ScoreKey.m */; };
-		3D7A334213856AA5002551CB /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7A334113856AA5002551CB /* Score.m */; };
 		3D7E78B31372B0E9009F4A35 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D7E78AF1372B0E9009F4A35 /* Icon-72.png */; };
 		3D7E78B41372B0E9009F4A35 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D7E78B01372B0E9009F4A35 /* Icon.png */; };
 		3D7E78B51372B0E9009F4A35 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D7E78B11372B0E9009F4A35 /* Icon@2x.png */; };
@@ -68,6 +65,12 @@
 		3D8EA1761371C18000321D71 /* 10-arrows-in@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D8EA1721371C18000321D71 /* 10-arrows-in@2x.png */; };
 		3D8EA1781371C87C00321D71 /* table-key-fullscreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D8EA1771371C87C00321D71 /* table-key-fullscreen@2x.png */; };
 		3D8EA17A1371C93900321D71 /* table-key-fullscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D8EA1791371C93900321D71 /* table-key-fullscreen.png */; };
+		3DAF684A1386B0770042E84C /* _Score.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF68451386B0760042E84C /* _Score.m */; };
+		3DAF684B1386B0770042E84C /* _ScoreKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF68471386B0760042E84C /* _ScoreKey.m */; };
+		3DAF684C1386B0770042E84C /* _University.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF68491386B0760042E84C /* _University.m */; };
+		3DAF68531386B27B0042E84C /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF684E1386B27B0042E84C /* Score.m */; };
+		3DAF68541386B27B0042E84C /* ScoreKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF68501386B27B0042E84C /* ScoreKey.m */; };
+		3DAF68551386B27B0042E84C /* University.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAF68521386B27B0042E84C /* University.m */; };
 		3DB0D9491315206D006FC601 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB0D9471315206D006FC601 /* FindViewController.m */; };
 		3DB0D94A1315206D006FC601 /* FindViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DB0D9481315206D006FC601 /* FindViewController.xib */; };
 		3DB0D9551315222C006FC601 /* 06-magnify.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB0D9531315222C006FC601 /* 06-magnify.png */; };
@@ -137,12 +140,6 @@
 		3D422DB91366CC0200DA0F53 /* pebble-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pebble-logo.png"; sourceTree = "<group>"; };
 		3D5A78B01381299E0009858C /* gl11-export-draft-key.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "gl11-export-draft-key.csv"; sourceTree = "<group>"; };
 		3D5BFBE0137013A8004DFA0B /* table-key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-key.png"; sourceTree = "<group>"; };
-		3D7A333A13856AA4002551CB /* University.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = University.h; sourceTree = "<group>"; };
-		3D7A333B13856AA4002551CB /* University.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = University.m; sourceTree = "<group>"; };
-		3D7A333D13856AA4002551CB /* ScoreKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreKey.h; sourceTree = "<group>"; };
-		3D7A333E13856AA4002551CB /* ScoreKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreKey.m; sourceTree = "<group>"; };
-		3D7A334013856AA5002551CB /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Score.h; sourceTree = "<group>"; };
-		3D7A334113856AA5002551CB /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Score.m; sourceTree = "<group>"; };
 		3D7E78AF1372B0E9009F4A35 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		3D7E78B01372B0E9009F4A35 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		3D7E78B11372B0E9009F4A35 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
@@ -168,6 +165,18 @@
 		3D8EA1721371C18000321D71 /* 10-arrows-in@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "10-arrows-in@2x.png"; sourceTree = "<group>"; };
 		3D8EA1771371C87C00321D71 /* table-key-fullscreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-key-fullscreen@2x.png"; sourceTree = "<group>"; };
 		3D8EA1791371C93900321D71 /* table-key-fullscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-key-fullscreen.png"; sourceTree = "<group>"; };
+		3DAF68441386B0760042E84C /* _Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Score.h; path = Classes/_Score.h; sourceTree = "<group>"; };
+		3DAF68451386B0760042E84C /* _Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Score.m; path = Classes/_Score.m; sourceTree = "<group>"; };
+		3DAF68461386B0760042E84C /* _ScoreKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _ScoreKey.h; path = Classes/_ScoreKey.h; sourceTree = "<group>"; };
+		3DAF68471386B0760042E84C /* _ScoreKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _ScoreKey.m; path = Classes/_ScoreKey.m; sourceTree = "<group>"; };
+		3DAF68481386B0760042E84C /* _University.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _University.h; path = Classes/_University.h; sourceTree = "<group>"; };
+		3DAF68491386B0760042E84C /* _University.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _University.m; path = Classes/_University.m; sourceTree = "<group>"; };
+		3DAF684D1386B27B0042E84C /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Score.h; path = Classes/Score.h; sourceTree = "<group>"; };
+		3DAF684E1386B27B0042E84C /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Score.m; path = Classes/Score.m; sourceTree = "<group>"; };
+		3DAF684F1386B27B0042E84C /* ScoreKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScoreKey.h; path = Classes/ScoreKey.h; sourceTree = "<group>"; };
+		3DAF68501386B27B0042E84C /* ScoreKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScoreKey.m; path = Classes/ScoreKey.m; sourceTree = "<group>"; };
+		3DAF68511386B27B0042E84C /* University.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = University.h; path = Classes/University.h; sourceTree = "<group>"; };
+		3DAF68521386B27B0042E84C /* University.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = University.m; path = Classes/University.m; sourceTree = "<group>"; };
 		3DB0D9461315206D006FC601 /* FindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindViewController.h; sourceTree = "<group>"; };
 		3DB0D9471315206D006FC601 /* FindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindViewController.m; sourceTree = "<group>"; };
 		3DB0D9481315206D006FC601 /* FindViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FindViewController.xib; sourceTree = "<group>"; };
@@ -330,12 +339,18 @@
 			children = (
 				3D03AD4F1321676A00F6B225 /* UniversitiesModel.h */,
 				3D03AD501321676A00F6B225 /* UniversitiesModel.m */,
-				3D7A334013856AA5002551CB /* Score.h */,
-				3D7A334113856AA5002551CB /* Score.m */,
-				3D7A333D13856AA4002551CB /* ScoreKey.h */,
-				3D7A333E13856AA4002551CB /* ScoreKey.m */,
-				3D7A333A13856AA4002551CB /* University.h */,
-				3D7A333B13856AA4002551CB /* University.m */,
+				3DAF684D1386B27B0042E84C /* Score.h */,
+				3DAF684E1386B27B0042E84C /* Score.m */,
+				3DAF684F1386B27B0042E84C /* ScoreKey.h */,
+				3DAF68501386B27B0042E84C /* ScoreKey.m */,
+				3DAF68511386B27B0042E84C /* University.h */,
+				3DAF68521386B27B0042E84C /* University.m */,
+				3DAF68441386B0760042E84C /* _Score.h */,
+				3DAF68451386B0760042E84C /* _Score.m */,
+				3DAF68461386B0760042E84C /* _ScoreKey.h */,
+				3DAF68471386B0760042E84C /* _ScoreKey.m */,
+				3DAF68481386B0760042E84C /* _University.h */,
+				3DAF68491386B0760042E84C /* _University.m */,
 				3D308E881316C5BF00D37010 /* green_league.xcdatamodel */,
 			);
 			name = Models;
@@ -539,10 +554,13 @@
 				3DE428191327E783002C53CE /* UniversityComparisonViewController.m in Sources */,
 				3DE4281E1327F49C002C53CE /* UniversityComparisonTitlesViewController.m in Sources */,
 				3D8EA16D1371AF9100321D71 /* CompareViewControllerFullScreen.m in Sources */,
-				3D7A333C13856AA4002551CB /* University.m in Sources */,
-				3D7A333F13856AA4002551CB /* ScoreKey.m in Sources */,
-				3D7A334213856AA5002551CB /* Score.m in Sources */,
 				3D125E53138575A80042E1A6 /* UniversityComparisonRowViewController.m in Sources */,
+				3DAF684A1386B0770042E84C /* _Score.m in Sources */,
+				3DAF684B1386B0770042E84C /* _ScoreKey.m in Sources */,
+				3DAF684C1386B0770042E84C /* _University.m in Sources */,
+				3DAF68531386B27B0042E84C /* Score.m in Sources */,
+				3DAF68541386B27B0042E84C /* ScoreKey.m in Sources */,
+				3DAF68551386B27B0042E84C /* University.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

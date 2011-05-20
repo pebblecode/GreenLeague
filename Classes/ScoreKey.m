@@ -13,43 +13,9 @@
 #define kKeyValueField 1
 
 @implementation ScoreKey
-@dynamic key;
-@dynamic text;
-@dynamic score;
 
 static NSString *kScoreKeyEntityName = @"ScoreKey";
 
-#pragma mark -
-#pragma mark === Score methods ===
-#pragma mark
-
-- (void)addScoreObject:(Score *)value {    
-    NSSet *changedObjects = [[NSSet alloc] initWithObjects:&value count:1];
-    [self willChangeValueForKey:@"score" withSetMutation:NSKeyValueUnionSetMutation usingObjects:changedObjects];
-    [[self primitiveValueForKey:@"score"] addObject:value];
-    [self didChangeValueForKey:@"score" withSetMutation:NSKeyValueUnionSetMutation usingObjects:changedObjects];
-    [changedObjects release];
-}
-
-- (void)removeScoreObject:(Score *)value {
-    NSSet *changedObjects = [[NSSet alloc] initWithObjects:&value count:1];
-    [self willChangeValueForKey:@"score" withSetMutation:NSKeyValueMinusSetMutation usingObjects:changedObjects];
-    [[self primitiveValueForKey:@"score"] removeObject:value];
-    [self didChangeValueForKey:@"score" withSetMutation:NSKeyValueMinusSetMutation usingObjects:changedObjects];
-    [changedObjects release];
-}
-
-- (void)addScore:(NSSet *)value {    
-    [self willChangeValueForKey:@"score" withSetMutation:NSKeyValueUnionSetMutation usingObjects:value];
-    [[self primitiveValueForKey:@"score"] unionSet:value];
-    [self didChangeValueForKey:@"score" withSetMutation:NSKeyValueUnionSetMutation usingObjects:value];
-}
-
-- (void)removeScore:(NSSet *)value {
-    [self willChangeValueForKey:@"score" withSetMutation:NSKeyValueMinusSetMutation usingObjects:value];
-    [[self primitiveValueForKey:@"score"] minusSet:value];
-    [self didChangeValueForKey:@"score" withSetMutation:NSKeyValueMinusSetMutation usingObjects:value];
-}
 
 #pragma mark -
 #pragma mark === Class methods ===
