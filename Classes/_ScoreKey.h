@@ -9,6 +9,7 @@
 
 
 
+
 @interface ScoreKeyID : NSManagedObjectID {}
 @end
 
@@ -29,6 +30,16 @@
 @property (nonatomic, retain) NSString *text;
 
 //- (BOOL)validateText:(id*)value_ error:(NSError**)error_;
+
+
+
+@property (nonatomic, retain) NSNumber *maxScore;
+
+@property short maxScoreValue;
+- (short)maxScoreValue;
+- (void)setMaxScoreValue:(short)value_;
+
+//- (BOOL)validateMaxScore:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -61,6 +72,15 @@
 
 - (NSString*)primitiveText;
 - (void)setPrimitiveText:(NSString*)value;
+
+
+
+
+- (NSNumber*)primitiveMaxScore;
+- (void)setPrimitiveMaxScore:(NSNumber*)value;
+
+- (short)primitiveMaxScoreValue;
+- (void)setPrimitiveMaxScoreValue:(short)value_;
 
 
 

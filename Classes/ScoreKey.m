@@ -8,9 +8,11 @@
 
 #import "ScoreKey.h"
 #import "Score.h"
+#import "NSString+Helper.h"
 
 #define kKeyField 0
 #define kKeyValueField 1
+#define kMaxScoreField 2
 
 @implementation ScoreKey
 
@@ -75,11 +77,20 @@ static NSString *kScoreKeyEntityName = @"ScoreKey";
 	if ([rowArray count] > kKeyValueField) {
 		NSString *key = [rowArray objectAtIndex:kKeyField];
         NSString *scoreText = [rowArray objectAtIndex:kKeyValueField];
+        NSNumber *maxScore = nil;
+        if (rowArray.count > kMaxScoreField) {
+            NSString *maxScoreString = [rowArray objectAtIndex:kMaxScoreField];
+            maxScore = [maxScoreString numberFromString];
+        }
+        
         
 		if ((key.length > 0) && (scoreText.length > 0)) {
 			scoreKey = (ScoreKey *)[NSEntityDescription insertNewObjectForEntityForName:[ScoreKey entityName] inManagedObjectContext:managedObjectContext];
 			[scoreKey setKey:key];
 			[scoreKey setText:scoreText];
+            if (maxScore) {
+                [scoreKey setMaxScore:maxScore];
+            }
             
 			//NSLog(@"Saving the record: %@", scoreKey);
 			

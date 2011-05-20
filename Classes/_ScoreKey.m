@@ -29,6 +29,10 @@
 + (NSSet *)keyPathsForValuesAffectingValueForKey:(NSString *)key {
 	NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
 	
+	if ([key isEqualToString:@"maxScoreValue"]) {
+		NSSet *affectingKey = [NSSet setWithObject:@"maxScore"];
+		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
+	}
 
 	return keyPaths;
 }
@@ -45,6 +49,32 @@
 
 @dynamic text;
 
+
+
+
+
+
+@dynamic maxScore;
+
+
+
+- (short)maxScoreValue {
+	NSNumber *result = [self maxScore];
+	return [result shortValue];
+}
+
+- (void)setMaxScoreValue:(short)value_ {
+	[self setMaxScore:[NSNumber numberWithShort:value_]];
+}
+
+- (short)primitiveMaxScoreValue {
+	NSNumber *result = [self primitiveMaxScore];
+	return [result shortValue];
+}
+
+- (void)setPrimitiveMaxScoreValue:(short)value_ {
+	[self setPrimitiveMaxScore:[NSNumber numberWithShort:value_]];
+}
 
 
 
