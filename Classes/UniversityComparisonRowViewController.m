@@ -20,6 +20,8 @@
 #define kRatingImageRightPadding   20.0
 #define kRatingImageFullWidth      (kRatingImageWidth + kRatingImageRightPadding)
 
+#define kTotalScoreLabelWidth      60.0
+
 #define kMaxNumRatingImages        4
 
 @interface UniversityComparisonRowViewController()
@@ -91,7 +93,13 @@
         
     }
     
-    // self.view.frame = CGRectMake();
+    // Total score label
+    CGFloat totalScoreLabelXPos = kUniLabelPadding + kUniLabelFullWidth + (scoreKeys.count * kRatingImageFullWidth);
+    UILabel *totalScoreLabel = [[UILabel alloc] initWithFrame:CGRectMake(totalScoreLabelXPos , 0, kUniLabelWidth, [UniversityComparisonRowViewController height])];
+    totalScoreLabel.text = [NSString stringWithFormat:@"%.1f", [university.totalScore floatValue]];
+    [self.view addSubview:totalScoreLabel];
+    [totalScoreLabel release];    
+    
 }
 
 
@@ -119,7 +127,7 @@
 #pragma mark
 
 + (CGFloat)widthFromUniversitiesModel:(UniversitiesModel *)unisModel {
-    return (kUniLabelFullWidth + (unisModel.questionScoreKeys.count * kRatingImageFullWidth));
+    return (kUniLabelFullWidth + (unisModel.questionScoreKeys.count * kRatingImageFullWidth)) + kTotalScoreLabelWidth;
 }
 
 + (CGFloat)height {
