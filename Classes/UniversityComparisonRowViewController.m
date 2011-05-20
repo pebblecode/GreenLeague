@@ -57,8 +57,10 @@
     NSArray *scoreKeys = self.universitiesModel.questionScoreKeys;;
     for (ScoreKey *scoreKey in scoreKeys) {
         // Get the score
-        NSLog(@"scoreKey: %@", scoreKey.key);
         //Find university score where university.scoreKey =- scoreKey
+        Score *uniScore = [self.universitiesModel findScoreForUniversity:self.university scoreKey:scoreKey];
+        
+        NSLog(@"uniScore: %@", uniScore.value);
         
         // Set the correct image
         

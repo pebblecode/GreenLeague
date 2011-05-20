@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 #import "University.h"
+#import "Score.h"
+#import "ScoreKey.h"
 
 @interface UniversitiesModel : NSObject {
 	NSMutableArray *sortedUniversities;	
@@ -30,6 +32,7 @@
 @property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;
 @property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
+- (Score *)findScoreForUniversity:(University *)uni scoreKey:(ScoreKey *)scoreKey;
 - (University *)topRankedUniversity;
 
 

@@ -25,6 +25,7 @@ static NSString *kDBFieldName = @"name";
 static NSString *kDBFieldAwardClass = @"awardClass";
 
 static NSString *kDBFieldScoreKey = @"key";
+static NSString *kDBFieldScoreUniversity = @"university";
 
 static NSString *kDBFieldQuestionSuffix = @"_subtotal";
 
@@ -364,8 +365,8 @@ static NSString *kDBFieldQuestionSuffix = @"_subtotal";
         
         // Set predicate of university award class
         NSString *predicate = [NSString stringWithFormat:@"%@ ENDSWITH '%@'", kDBFieldScoreKey, kDBFieldQuestionSuffix];
-        NSPredicate *rankPredicate = [NSPredicate predicateWithFormat:predicate];
-        [request setPredicate:rankPredicate];
+        NSPredicate *questionPredicate = [NSPredicate predicateWithFormat:predicate];
+        [request setPredicate:questionPredicate];
         
         // Fetch the records and handle an error
         NSError *error;
@@ -379,6 +380,40 @@ static NSString *kDBFieldQuestionSuffix = @"_subtotal";
         
     }
     return questionScoreKeys;
+}
+
+- (Score *)findScoreForUniversity:(University *)uni scoreKey:(ScoreKey *)scoreKey {
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName:[Score entityName] inManagedObjectContext:[self managedObjectContext]];
+    
+    // Setup the fetch request
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:entity];
+    
+    // Set predicate of university award class
+    NSString *predicate = [NSString stringWithFormat:@"(%@.name == '%@') AND (%@.key == '%@')", kDBFieldScoreUniversity, uni.name, kDBFieldScoreKey, scoreKey.key];
+    NSPredicate *uniScorePredicate = [NSPredicate predicateWithFormat:predicate];
+    [request setPredicate:uniScorePredicate];
+    
+    // Fetch the records and handle an error
+    NSError *error;
+    NSMutableArray *mutableFetchResults = [[[self managedObjectContext] executeFetchRequest:request error:&error] mutableCopy];        
+    
+    if (!mutableFetchResults) {
+        // Handle the error.
+        // This is a serious error and should advise the user to restart the application
+        NSLog(@"uniScore error: %@", error);
+    } 
+    
+    Score *uniScore = nil;
+    if (mutableFetchResults.count == 1) {
+        uniScore = [mutableFetchResults objectAtIndex:0]; // Only take first result
+    } else {
+        NSLog(@"Uni score for '%@', score key '%@' didn't return 1 result. Returned %d result/s", uni.name, scoreKey.key, mutableFetchResults.count);        
+    }
+    
+    return uniScore;
+
 }
 
 - (Boolean)dbExists {
