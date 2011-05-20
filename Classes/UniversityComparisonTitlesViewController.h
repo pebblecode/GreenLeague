@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "UniversitiesModel.h"
 
 @interface UniversityComparisonTitlesViewController : UIViewController {
     
-    
+    UniversitiesModel *universitiesModel;    
 }
+
+@property (nonatomic, retain) UniversitiesModel *universitiesModel;
+
+- (id)initWithUniversitiesModel:(UniversitiesModel *)unisModel;
 
 @end

@@ -10,6 +10,21 @@
 #import "University.h"
 #import "UniversitiesModel.h"
 
+#define kViewHeight                50.0
+#define kUniLabelWidth             185.0
+#define kUniLabelPadding           10.0
+#define kUniLabelFullWidth         (kUniLabelWidth + (2 * kUniLabelPadding))
+
+#define kRatingImageWidth          50.0
+#define kRatingImageHeight         50.0
+#define kRatingImageRightPadding   20.0
+#define kRatingImageFullWidth      (kRatingImageWidth + kRatingImageRightPadding)
+
+#define kTotalScoreLabelWidth      120.0
+
+#define kMaxNumRatingImages        4
+
+
 @interface UniversityComparisonRowViewController : UIViewController {
     
     University *university;

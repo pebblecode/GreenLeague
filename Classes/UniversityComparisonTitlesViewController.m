@@ -7,15 +7,16 @@
 //
 
 #import "UniversityComparisonTitlesViewController.h"
-
+#import "UniversityComparisonRowViewController.h"
 
 @implementation UniversityComparisonTitlesViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+@synthesize universitiesModel;
+
+- (id)initWithUniversitiesModel:(UniversitiesModel *)unisModel {
+    self = [super initWithNibName:nil bundle:nil];
     if (self) {
-        // Custom initialization
+        self.universitiesModel = [unisModel retain];
     }
     return self;
 }
@@ -34,6 +35,36 @@
 }
 
 #pragma mark - View lifecycle
+
+// Programmatically, creat a view hierarchy
+- (void)loadView 
+{            
+    self.view = [[UIView alloc] init];
+    
+    // For each question add the title
+    NSArray *scoreKeys = self.universitiesModel.questionScoreKeys;
+    for (int i = 0; i < scoreKeys.count; i++) {
+        ScoreKey *scoreKey = [scoreKeys objectAtIndex:i];
+        
+        // Get the correct image
+        UILabel *questionTitle = [[UILabel alloc] init];
+        questionTitle.text = scoreKey.text;
+        [self.view addSubview:questionTitle];
+        [questionTitle release];
+        
+        // Layout label
+        // | kUniLabelFullWidth | kRatingImageFullWidth | kRatingImageFullWidth | ...
+        questionTitle.frame = CGRectMake(kUniLabelFullWidth + (i * kRatingImageFullWidth), 0, kRatingImageWidth, kRatingImageHeight);        
+    }
+    
+    // Add total label
+    CGFloat totalScoreLabelXPos = kUniLabelPadding + kUniLabelFullWidth + (scoreKeys.count * kRatingImageFullWidth);
+    UILabel *totalScoreLabel = [[UILabel alloc] initWithFrame:CGRectMake(totalScoreLabelXPos , 0, kUniLabelWidth, [UniversityComparisonRowViewController height])];
+    totalScoreLabel.text = @"Total Score";
+    [self.view addSubview:totalScoreLabel];
+    [totalScoreLabel release];       
+    
+}
 
 - (void)viewDidLoad
 {

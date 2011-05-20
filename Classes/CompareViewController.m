@@ -155,7 +155,7 @@
 - (UniversityComparisonTitlesViewController *)comparisonTitlesViewController {
     
     if (!comparisonTitlesViewController) {
-        comparisonTitlesViewController = [[UniversityComparisonTitlesViewController alloc] initWithNibName:@"UniversityComparisonTitlesViewController" bundle:nil];
+        comparisonTitlesViewController = [[UniversityComparisonTitlesViewController alloc] initWithUniversitiesModel:self.universitiesModel];
     }
     
     return comparisonTitlesViewController;
