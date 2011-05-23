@@ -172,7 +172,7 @@
     Score *uniScore = [self.universitiesModel findScoreForUniversity:self.university scoreKey:scoreKey];
     
     NSNumber *ratingImageIndex = [self ratingImageIndexFromScore:[uniScore.value numberFromString] maxScore:scoreKey.maxScore];
-    NSLog(@"uniScore: %@/%d", uniScore.value, [scoreKey.maxScore intValue]);
+//    NSLog(@"uniScore: %@/%d", uniScore.value, [scoreKey.maxScore intValue]);
     
     return [self imageFromIndex:ratingImageIndex];
 
