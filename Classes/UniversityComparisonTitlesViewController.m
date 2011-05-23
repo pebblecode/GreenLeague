@@ -66,9 +66,11 @@
     }
     
     // Add total label
-    CGFloat totalScoreLabelXPos = kUniLabelPadding + kUniLabelFullWidth + (scoreKeys.count * kRatingImageFullWidth);
-    UILabel *totalScoreLabel = [[UILabel alloc] initWithFrame:CGRectMake(totalScoreLabelXPos , 0, kUniLabelWidth, [UniversityComparisonRowViewController height])];
+    CGFloat totalScoreLabelXPos = kUniLabelFullWidth + (scoreKeys.count * kRatingImageFullWidth);
+    UILabel *totalScoreLabel = [[UILabel alloc] initWithFrame:CGRectMake(totalScoreLabelXPos , 0, kTotalScoreLabelWidth, [UniversityComparisonRowViewController height])];
     totalScoreLabel.text = @"Total Score";
+    totalScoreLabel.font = [UIFont boldSystemFontOfSize:15];
+    totalScoreLabel.textAlignment = UITextAlignmentRight;
     [self.view addSubview:totalScoreLabel];
     [totalScoreLabel release];       
     

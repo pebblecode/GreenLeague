@@ -80,9 +80,12 @@
     }
     
     // Total score label
-    CGFloat totalScoreLabelXPos = kUniLabelPadding + kUniLabelFullWidth + (scoreKeys.count * kRatingImageFullWidth);
-    UILabel *totalScoreLabel = [[UILabel alloc] initWithFrame:CGRectMake(totalScoreLabelXPos , 0, kUniLabelWidth, [UniversityComparisonRowViewController height])];
+    CGFloat totalScoreLabelXPos = kUniLabelFullWidth + (scoreKeys.count * kRatingImageFullWidth);
+    UILabel *totalScoreLabel = [[UILabel alloc] initWithFrame:CGRectMake(totalScoreLabelXPos , 0, kTotalScoreLabelWidth, [UniversityComparisonRowViewController height])];
+    
     totalScoreLabel.text = [NSString stringWithFormat:@"%.1f", [university.totalScore floatValue]];
+    totalScoreLabel.font = [UIFont boldSystemFontOfSize:20];
+    totalScoreLabel.textAlignment = UITextAlignmentRight;    
     [self.view addSubview:totalScoreLabel];
     [totalScoreLabel release];    
     
@@ -113,7 +116,7 @@
 #pragma mark
 
 + (CGFloat)widthFromUniversitiesModel:(UniversitiesModel *)unisModel {
-    return (kUniLabelFullWidth + (unisModel.questionScoreKeys.count * kRatingImageFullWidth)) + kTotalScoreLabelWidth;
+    return kUniLabelFullWidth + (unisModel.questionScoreKeys.count * kRatingImageFullWidth) + kTotalScoreLabelFullWidth;
 }
 
 + (CGFloat)height {
