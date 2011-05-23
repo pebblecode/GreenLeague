@@ -13,9 +13,6 @@
 #define kPolicySectionIndex 0
 #define kPerformaceSectionIndex 1
 
-// Policy and Performance sections
-#define kNumberSections 2 
-
 // Indexes are inclusive
 #define kPolicyStartIndex      0
 #define kPolicyLastIndex       8
@@ -134,8 +131,8 @@ static NSString *kDataSourceTotalScoreKey = @"totalScore";
 #pragma mark Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // Return the number of sections.
-    return kNumberSections;
+    
+    return self.dataSourceArray.count;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
@@ -151,14 +148,10 @@ static NSString *kDataSourceTotalScoreKey = @"totalScore";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    int numRows = 0;
-	
-	if (section == kPolicySectionIndex) {
-		numRows = self.policyArray.count;
-	} else if (section == kPerformaceSectionIndex) {
-		numRows = self.performanceArray.count;
-	}
-    return numRows;
+    // Find section array
+    NSArray *sectionArray = [self.dataSourceArray objectAtIndex:section];
+    
+    return sectionArray.count;
 }
 
 
