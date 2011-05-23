@@ -14,7 +14,7 @@
 // Data source file minus the file extension
 static NSString *kDataSourceFile = @"gl11-export-filtered";
 static NSString *kScoreKeySourceFile = @"gl11-export-draft-key";
-static NSString *kDatabaseSqliteFile = @"green_league.sqlite";
+static NSString *kDatabaseSqliteFile = @"green_league_2011";
 #define kDataCSVRowsToIgnore 1
 
 // Database field names
@@ -450,11 +450,14 @@ static NSString *kDBFieldQuestionSuffix = @"_subtotal";
  Returns the path to the application's Documents directory.
  */
 - (NSString *)applicationDocumentsDirectory {
-    return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    return [NSSearchPathForDirectoriesInDomains(NSApplicationDirectory, NSUserDomainMask, YES) lastObject];
 }
 
 - (NSString *)dbPath {
-	return [[self applicationDocumentsDirectory] stringByAppendingPathComponent:kDatabaseSqliteFile];
+	//return [[self applicationDocumentsDirectory] stringByAppendingPathComponent:kDatabaseSqliteFile];
+    
+    // Using sqlite file from the bundle instead of the application documents directory
+    return [[NSBundle mainBundle] pathForResource:kDatabaseSqliteFile ofType:@"sqlite"]; 
 }
 
 
