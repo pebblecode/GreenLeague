@@ -8,6 +8,7 @@
 
 #import "UniversityComparisonTitlesViewController.h"
 #import "UniversityComparisonRowViewController.h"
+#import "ComparisonViewDimensions.h"
 
 @implementation UniversityComparisonTitlesViewController
 

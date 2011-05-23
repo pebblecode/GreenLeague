@@ -119,6 +119,7 @@
 		3D03AC661321252900F6B225 /* badge_fail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = badge_fail.png; sourceTree = "<group>"; };
 		3D03AD4F1321676A00F6B225 /* UniversitiesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniversitiesModel.h; sourceTree = "<group>"; };
 		3D03AD501321676A00F6B225 /* UniversitiesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniversitiesModel.m; sourceTree = "<group>"; };
+		3D0EDAE8138A7D8600F7AAC7 /* ComparisonViewDimensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComparisonViewDimensions.h; sourceTree = "<group>"; };
 		3D125E51138575A80042E1A6 /* UniversityComparisonRowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniversityComparisonRowViewController.h; sourceTree = "<group>"; };
 		3D125E52138575A80042E1A6 /* UniversityComparisonRowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniversityComparisonRowViewController.m; sourceTree = "<group>"; };
 		3D308E091316552A00D37010 /* NSString+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Helper.h"; sourceTree = "<group>"; };
@@ -330,6 +331,7 @@
 				3DE4281B1327F498002C53CE /* UniversityComparisonTitlesViewController.h */,
 				3DE4281C1327F499002C53CE /* UniversityComparisonTitlesViewController.m */,
 				3DE4281D1327F49A002C53CE /* UniversityComparisonTitlesViewController.xib */,
+				3D0EDAE8138A7D8600F7AAC7 /* ComparisonViewDimensions.h */,
 			);
 			name = Compare;
 			sourceTree = "<group>";

@@ -9,6 +9,7 @@
 #import "UniversityComparisonRowViewController.h"
 #import "ScoreKey.h"
 #import "NSString+Helper.h"
+#import "ComparisonViewDimensions.h"
 
 @interface UniversityComparisonRowViewController()
 
