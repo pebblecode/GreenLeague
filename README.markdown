@@ -1,5 +1,14 @@
 # Green League app
 
+## Model files
+
+Using mogenerator (http://rentzsch.github.com/mogenerator/) to generate model files (/Models/_[model name] .h and .m files) from the .xcdatamodel files. These are inherited by the respective /Models/[model name] .h and .m files.
+
+To generate models, after the .xcdatamodel has changed, run:
+
+    mogenerator -m Classes/green_league.xcdatamodel -O Classes
+
+
 
 ## Deployment
 
