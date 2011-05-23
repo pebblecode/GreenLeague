@@ -78,12 +78,9 @@ static NSString *kDataSourceTotalScoreKey = @"totalScore";
                                        scoreKey.maxScore, kDataSourceTotalScoreKey,                  
                                        nil];
             
-            NSLog(@"scoreKey[%d]: %@", i, scoreKey);
             if ((i >= kPolicyStartIndex) && (i <= kPolicyLastIndex)) { // Policy scores
-                NSLog(@"policy");
                 [policyTempArray addObject:scoreData];            
             } else if ((i >= kPerformanceStartIndex) && (i <= kPerformanceLastIndex)) { // Performance scores
-                NSLog(@"performance");
                 [performanceTempArray addObject:scoreData];            
             } else {
                 NSLog(@"Error: invalid score id '%d'", i);
