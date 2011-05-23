@@ -1,126 +1,126 @@
-Column Name,Definition,Maximum score
-gl11_q1_a/singleChoice,1a score (0-1) for publicly available environmental policy,1
-gl11_q1_b/singleChoice,1b score (0-2) for policy reported on since April 2010,2
-gl11_q1_c_waste/singleChoice,1c policy covers Waste?,
-gl11_q1_c_transport/singleChoice,1c policy covers transport?,
-gl11_q1_c_procurement/singleChoice,1c policy covers sustainable procurement,
-gl11_q1_c_water/singleChoice,1c policy covers water,
-gl11_q1_c_construction/singleChoice,1c policy covers construction & refurbishment,
-gl11_q1_c_emissions/singleChoice,1c policy covers emissions & discharges,
-gl11_q1_c_community/singleChoice,1c policy covers community involvement ,
-gl11_q1_c_biodiversity/singleChoice,1c policy covers biodiversity,
-gl11_q1_c_summary/multiChoice,1c list of areas covered,
-gl11_q1_c/singleChoice,1c score (0-2) for policy coverage,2
-gl11_q2/singleChoice,2 score (0-8) for staffing per 5000 FTE students,8
-gl11_q2/quantity,2 ratio per 5000 FTE students,
-gl11_q2_a_pt_sole/quantity,2a pt sole,
-gl11_q2_b_ft_specific/quantity,2b ft specific,
-gl11_q2_c_ft_partial/quantity,2c ft partial,
-gl11_q2_d_ft_sole/quantity,2d ft sole,
-gl11_q3_a_waste/singleChoice,3a recent audit of Waste score (0-0.5),0.5
-gl11_q3_a_transport/singleChoice,3a recent audit of Transport score (0-0.5),0.5
-gl11_q3_a_procurement/singleChoice,3a recent audit of Sustainable Procurement score (0-0.5),0.5
-gl11_q3_a_energy/singleChoice,3a recent audit of Energy score (0-0.5),0.5
-gl11_q3_a_water/singleChoice,3a recent audit of Water score (0-0.5),0.5
-gl11_q3_a_construction/singleChoice,3a recent audit of Construction & Refurbishment score (0-0.5),0.5
-gl11_q3_a_emissions/singleChoice,3a recent audit of Emissions & Discharges score (0-0.5),0.5
-gl11_q3_a_biodiversity/singleChoice,3a recent audit of Biodiversity score (0-0.5),0.5
-gl11_q3_a_total/quantity,3a total,
-gl11_q3_b/singleChoice,3b score (0-4) environment management system in place,4
-gl11_q4_a/singleChoice,4a score (0-1) Ethical Investment policy publicly available,1
-gl11_q4_bc/singleChoice,4b and 4c score (0-1) ethical investment reported on and engaged with,1
-gl11_q4_d/singleChoice,4d score (0-1) demonstrated action resulting from policy,1
-gl11_q5_a/singleChoice,5a score (0-2) publicly available carbon mgmt plan in place,2
-gl11_q5_b/singleChoice,5b score (0-2) short term carbon reduction targets,2
-gl11_q5_c/singleChoice,5c score (0-1) carbon plan includes procurement,1
-gl11_q5_d/singleChoice,5d score (0-1) carbon plan includes student/staff trips,1
-gl11_q5_e/singleChoice,5e score (0-0.5) carbon plan includes commuting,0.5
-gl11_q5_f/singleChoice,5f score(0-0.5) carbon plan includes holiday-time student travel,0.5
-gl11_q6_a_fairtrade/gateway,6a has achieved Fairtrade status?,
-gl11_q6_a_fairtrade/singleChoice,6a score (0-1) has achieved Fairtrade status,1
-gl11_q6_a_fairtrade/multiChoice,6a data integrity,
-gl11_q6_b/singleChoice,6b score (0-0.5) joint staff/student steering group on procurement,0.5
-gl11_q6_c/singleChoice,6c score (0-0.5) WRC affiliation,0.5
-gl11_q7_a/singleChoice,7a score (0-0.5) has publicly available sustainable food policy,0.5
-gl11_q7_b/singleChoice,7b score (0-0.5) sustainable food policy reported on at senior level,0.5
-gl11_q7_c_i/singleChoice,7ci policy includes free range eggs?,
-gl11_q7_c_ii_fish/singleChoice,7cii policy includes fish?,
-gl11_q7_c_iii_veg/singleChoice,7ciii policy includes seasonal veg?,
-gl11_q7_c_iv_water/singleChoice,7civ policy includes water?,
-gl11_q7_c_v_award/singleChoice,7cv Food For Life award?,
-gl11_q7_c/singleChoice,7c score (0-1) policy coverage,1
-gl11_q8_a/singleChoice,8a Green Impact Union award?,
-gl11_q8_b/singleChoice,8b supports annual go green/environment week?,
-gl11_q8_c/singleChoice,8c staff engagement scheme?,
-gl11_q8_d/singleChoice,"8d energy saving in halls, e.g. student switch-off?",
-gl11_q8_e/singleChoice,8e increase recycling in halls?,
-gl11_q8_f/singleChoice,8f student representation on committees?,
-gl11_q8_g/singleChoice,8g awareness campaigns?,
-gl11_q8_h/singleChoice,8h course work linked to sustainability?,
-gl11_q8_i/singleChoice,8i funds available?,
-gl11_q8_j/singleChoice,8j students and staff monitor carbon mgmt plan?,
-gl11_q8_k/singleChoice,8k space for veg growing?,
-gl11_q8_l/singleChoice,8l staff inductions cover polciy?,
-gl11_q8_m/singleChoice,8m union-linked sustainability initiatives?,
-gl11_q8/singleChoice,8 score (0-3) staff and student engagement,3
-gl11_q9_a/singleChoice,9a uni strategy to promote sus dev. In curriculum?,
-gl11_q9_b/singleChoice,9b teaching and learning strategy promotes sus dev in curriculum?,
-gl11_q9_c/singleChoice,9c e&e policy promotes sus dev in curriculum?,
-gl11_q9_d/singleChoice,9d staff training for sus dev in curriculum?,
-gl11_q9_e/singleChoice,9e review process for efforts to include sus dev in curriculum?,
-gl11_q9/singleChoice,9 score (0-2) for sustainable development in the curriculum,2
-gl11_q10_energy_total/singleChoice,10 energy sub-total score (0-6),6
-gl11_q10_energy_total/multiChoice,10 energy,
-gl11_q10_1_energy_renewable_pc/singleChoice,10.1 score(0-3) % energy from renewable,3
-gl11_q10_1_energy_renewable_pc/multiChoice,10.1 Data Integrity,
-gl11_q10_1_energy_renewable_pc/quantity,10.1 % energy from renewable,
-gl11_q10_2_energy_chp/singleChoice,10.2 score (0-1) On-site CHP,1
-gl11_q10_2_energy_chp/multiChoice,10.2 Data Integrity,
-gl11_q10_2_energy_chp/quantity,10.2 Data (D72c.C01:  Energy generated on  site by CHP  Total HEI (kWh)),
-gl11_q10_3_energy_lzc/singleChoice,10.3 score (0-2) % total energy from on-site LZC,2
-gl11_q10_3_energy_lzc/multiChoice,10.3 Data Integrity,
-gl11_q10_3_energy_lzc/quantity,10.3 Data %,
-gl11_q11_waste_total/singleChoice,10 waste sub-total score (0-8),8
-gl11_q11_waste_total/multiChoice,10 Data Integrity,
-gl11_q11_1_waste_recycled/singleChoice,11.1 score (0-4) % waste recycled,4
-gl11_q11_1_waste_recycled/multiChoice,11.1 Data integrity,
-gl11_q11_1_waste_recycled/quantity,11.1 % waste recycled,
-gl11_q11_2_waste_kgph/singleChoice,11.2 score (0-4) Waste Mass Per Head,4
-gl11_q11_2_waste_kgph/multiChoice,11.2 Data integrity,
-gl11_q11_2_waste_kgph/quantity,11.2 Data,
-gl11_q12_carbon_total/singleChoice,12 Carbon Emmissions sub-total score (0-10),10
-gl11_q12_carbon_total/multiChoice,12 Data Integrity,
-gl11_q12_1_carbon_ph/singleChoice,12.1 score (0-6) Carbon emmissions per head,6
-gl11_q12_1_carbon_ph/multiChoice,12.1 Data integrity,
-gl11_q12_1_carbon_ph/quantity,12.1 data Kg CO2E per head,
-gl11_q12_2_carbon_reduction/singleChoice,12.2 score (0-4) emissions reduction compared to sector reduction target,4
-gl11_q12_2_carbon_reduction/multiChoice,12.2 Data integrity,
-gl11_q12_2_carbon_reduction/quantity,12.2 Data (reduction %),
-gl11_q13_water_total/singleChoice,13 Water usage sub-total score (0-6),6
-gl11_q13_water_total/multiChoice,13 Data Integrity,
-gl11_q13_1_water_ph/singleChoice,13.1 score (0-4) Water consumption per head,4
-gl11_q13_1_water_ph/multiChoice,13.1 Data integrity,
-gl11_q13_1_water_ph/quantity,13.1 Data,
-gl11_q13_2_water_grey/singleChoice,13.2 score (0-2) grey/rain water as percentage of use,2
-gl11_q13_2_water_grey/multiChoice,13.2 Data integrity,
-gl11_q13_2_water_grey/quantity,13.2 data (%),
-gl11_policy_total_score/quantity,subtotal policy score,40
-gl11_performance_total_score/quantity,subtotal performance score,30
-gl11_total_score/quantity,total score,70
-gl11_rank/quantity,Rank (Nb. 0 = not ranked),
-gl11_last_year_rank/quantity,2010 (last  year) Green League ranking,
-gl11_class/singleChoice,Award Class,
-university_name,University Name,
-q1_subtotal,1. Environmental Policy,5
-q2_subtotal,2. Environmental Management Staff,8
-q3_subtotal,3. Environmental Auditing and Management Systems,8
-q4_subtotal,4. Ethical Investment,3
-q5_subtotal,5. Carbon Management,7
-q6_subtotal,6. Fairtrade & Ethical Procurement,2
-q7_subtotal,7. Sustainable Food,2
-q8_subtotal,8. Staff and Student Engagement,3
-q9_subtotal,9. Cirriculum,2
-q10_subtotal,10. Energy Sources,6
-q11_subtotal,11. Waste & Recycling,8
-q12_subtotal,12. Carbon Reduction,10
-q13_subtotal,13. Water Reduction,6
+Column Name,Short name,Definition,Maximum score
+gl11_q1_a/singleChoice,,1a score (0-1) for publicly available environmental policy,1
+gl11_q1_b/singleChoice,,1b score (0-2) for policy reported on since April 2010,2
+gl11_q1_c_waste/singleChoice,,1c policy covers Waste?,
+gl11_q1_c_transport/singleChoice,,1c policy covers transport?,
+gl11_q1_c_procurement/singleChoice,,1c policy covers sustainable procurement,
+gl11_q1_c_water/singleChoice,,1c policy covers water,
+gl11_q1_c_construction/singleChoice,,1c policy covers construction & refurbishment,
+gl11_q1_c_emissions/singleChoice,,1c policy covers emissions & discharges,
+gl11_q1_c_community/singleChoice,,1c policy covers community involvement ,
+gl11_q1_c_biodiversity/singleChoice,,1c policy covers biodiversity,
+gl11_q1_c_summary/multiChoice,,1c list of areas covered,
+gl11_q1_c/singleChoice,,1c score (0-2) for policy coverage,2
+gl11_q2/singleChoice,,2 score (0-8) for staffing per 5000 FTE students,8
+gl11_q2/quantity,,2 ratio per 5000 FTE students,
+gl11_q2_a_pt_sole/quantity,,2a pt sole,
+gl11_q2_b_ft_specific/quantity,,2b ft specific,
+gl11_q2_c_ft_partial/quantity,,2c ft partial,
+gl11_q2_d_ft_sole/quantity,,2d ft sole,
+gl11_q3_a_waste/singleChoice,,3a recent audit of Waste score (0-0.5),0.5
+gl11_q3_a_transport/singleChoice,,3a recent audit of Transport score (0-0.5),0.5
+gl11_q3_a_procurement/singleChoice,,3a recent audit of Sustainable Procurement score (0-0.5),0.5
+gl11_q3_a_energy/singleChoice,,3a recent audit of Energy score (0-0.5),0.5
+gl11_q3_a_water/singleChoice,,3a recent audit of Water score (0-0.5),0.5
+gl11_q3_a_construction/singleChoice,,3a recent audit of Construction & Refurbishment score (0-0.5),0.5
+gl11_q3_a_emissions/singleChoice,,3a recent audit of Emissions & Discharges score (0-0.5),0.5
+gl11_q3_a_biodiversity/singleChoice,,3a recent audit of Biodiversity score (0-0.5),0.5
+gl11_q3_a_total/quantity,,3a total,
+gl11_q3_b/singleChoice,,3b score (0-4) environment management system in place,4
+gl11_q4_a/singleChoice,,4a score (0-1) Ethical Investment policy publicly available,1
+gl11_q4_bc/singleChoice,,4b and 4c score (0-1) ethical investment reported on and engaged with,1
+gl11_q4_d/singleChoice,,4d score (0-1) demonstrated action resulting from policy,1
+gl11_q5_a/singleChoice,,5a score (0-2) publicly available carbon mgmt plan in place,2
+gl11_q5_b/singleChoice,,5b score (0-2) short term carbon reduction targets,2
+gl11_q5_c/singleChoice,,5c score (0-1) carbon plan includes procurement,1
+gl11_q5_d/singleChoice,,5d score (0-1) carbon plan includes student/staff trips,1
+gl11_q5_e/singleChoice,,5e score (0-0.5) carbon plan includes commuting,0.5
+gl11_q5_f/singleChoice,,5f score(0-0.5) carbon plan includes holiday-time student travel,0.5
+gl11_q6_a_fairtrade/gateway,,6a has achieved Fairtrade status?,
+gl11_q6_a_fairtrade/singleChoice,,6a score (0-1) has achieved Fairtrade status,1
+gl11_q6_a_fairtrade/multiChoice,,6a data integrity,
+gl11_q6_b/singleChoice,,6b score (0-0.5) joint staff/student steering group on procurement,0.5
+gl11_q6_c/singleChoice,,6c score (0-0.5) WRC affiliation,0.5
+gl11_q7_a/singleChoice,,7a score (0-0.5) has publicly available sustainable food policy,0.5
+gl11_q7_b/singleChoice,,7b score (0-0.5) sustainable food policy reported on at senior level,0.5
+gl11_q7_c_i/singleChoice,,7ci policy includes free range eggs?,
+gl11_q7_c_ii_fish/singleChoice,,7cii policy includes fish?,
+gl11_q7_c_iii_veg/singleChoice,,7ciii policy includes seasonal veg?,
+gl11_q7_c_iv_water/singleChoice,,7civ policy includes water?,
+gl11_q7_c_v_award/singleChoice,,7cv Food For Life award?,
+gl11_q7_c/singleChoice,,7c score (0-1) policy coverage,1
+gl11_q8_a/singleChoice,,8a Green Impact Union award?,
+gl11_q8_b/singleChoice,,8b supports annual go green/environment week?,
+gl11_q8_c/singleChoice,,8c staff engagement scheme?,
+gl11_q8_d/singleChoice,,"8d energy saving in halls, e.g. student switch-off?",
+gl11_q8_e/singleChoice,,8e increase recycling in halls?,
+gl11_q8_f/singleChoice,,8f student representation on committees?,
+gl11_q8_g/singleChoice,,8g awareness campaigns?,
+gl11_q8_h/singleChoice,,8h course work linked to sustainability?,
+gl11_q8_i/singleChoice,,8i funds available?,
+gl11_q8_j/singleChoice,,8j students and staff monitor carbon mgmt plan?,
+gl11_q8_k/singleChoice,,8k space for veg growing?,
+gl11_q8_l/singleChoice,,8l staff inductions cover polciy?,
+gl11_q8_m/singleChoice,,8m union-linked sustainability initiatives?,
+gl11_q8/singleChoice,,8 score (0-3) staff and student engagement,3
+gl11_q9_a/singleChoice,,9a uni strategy to promote sus dev. In curriculum?,
+gl11_q9_b/singleChoice,,9b teaching and learning strategy promotes sus dev in curriculum?,
+gl11_q9_c/singleChoice,,9c e&e policy promotes sus dev in curriculum?,
+gl11_q9_d/singleChoice,,9d staff training for sus dev in curriculum?,
+gl11_q9_e/singleChoice,,9e review process for efforts to include sus dev in curriculum?,
+gl11_q9/singleChoice,,9 score (0-2) for sustainable development in the curriculum,2
+gl11_q10_energy_total/singleChoice,,10 energy sub-total score (0-6),6
+gl11_q10_energy_total/multiChoice,,10 energy,
+gl11_q10_1_energy_renewable_pc/singleChoice,,10.1 score(0-3) % energy from renewable,3
+gl11_q10_1_energy_renewable_pc/multiChoice,,10.1 Data Integrity,
+gl11_q10_1_energy_renewable_pc/quantity,,10.1 % energy from renewable,
+gl11_q10_2_energy_chp/singleChoice,,10.2 score (0-1) On-site CHP,1
+gl11_q10_2_energy_chp/multiChoice,,10.2 Data Integrity,
+gl11_q10_2_energy_chp/quantity,,10.2 Data (D72c.C01:  Energy generated on  site by CHP  Total HEI (kWh)),
+gl11_q10_3_energy_lzc/singleChoice,,10.3 score (0-2) % total energy from on-site LZC,2
+gl11_q10_3_energy_lzc/multiChoice,,10.3 Data Integrity,
+gl11_q10_3_energy_lzc/quantity,,10.3 Data %,
+gl11_q11_waste_total/singleChoice,,10 waste sub-total score (0-8),8
+gl11_q11_waste_total/multiChoice,,10 Data Integrity,
+gl11_q11_1_waste_recycled/singleChoice,,11.1 score (0-4) % waste recycled,4
+gl11_q11_1_waste_recycled/multiChoice,,11.1 Data integrity,
+gl11_q11_1_waste_recycled/quantity,,11.1 % waste recycled,
+gl11_q11_2_waste_kgph/singleChoice,,11.2 score (0-4) Waste Mass Per Head,4
+gl11_q11_2_waste_kgph/multiChoice,,11.2 Data integrity,
+gl11_q11_2_waste_kgph/quantity,,11.2 Data,
+gl11_q12_carbon_total/singleChoice,,12 Carbon Emmissions sub-total score (0-10),10
+gl11_q12_carbon_total/multiChoice,,12 Data Integrity,
+gl11_q12_1_carbon_ph/singleChoice,,12.1 score (0-6) Carbon emmissions per head,6
+gl11_q12_1_carbon_ph/multiChoice,,12.1 Data integrity,
+gl11_q12_1_carbon_ph/quantity,,12.1 data Kg CO2E per head,
+gl11_q12_2_carbon_reduction/singleChoice,,12.2 score (0-4) emissions reduction compared to sector reduction target,4
+gl11_q12_2_carbon_reduction/multiChoice,,12.2 Data integrity,
+gl11_q12_2_carbon_reduction/quantity,,12.2 Data (reduction %),
+gl11_q13_water_total/singleChoice,,13 Water usage sub-total score (0-6),6
+gl11_q13_water_total/multiChoice,,13 Data Integrity,
+gl11_q13_1_water_ph/singleChoice,,13.1 score (0-4) Water consumption per head,4
+gl11_q13_1_water_ph/multiChoice,,13.1 Data integrity,
+gl11_q13_1_water_ph/quantity,,13.1 Data,
+gl11_q13_2_water_grey/singleChoice,,13.2 score (0-2) grey/rain water as percentage of use,2
+gl11_q13_2_water_grey/multiChoice,,13.2 Data integrity,
+gl11_q13_2_water_grey/quantity,,13.2 data (%),
+gl11_policy_total_score/quantity,,subtotal policy score,40
+gl11_performance_total_score/quantity,,subtotal performance score,30
+gl11_total_score/quantity,,total score,70
+gl11_rank/quantity,,Rank (Nb. 0 = not ranked),
+gl11_last_year_rank/quantity,,2010 (last  year) Green League ranking,
+gl11_class/singleChoice,,Award Class,
+university_name,,University Name,
+q1_subtotal,Policy,1. Environmental Policy,5
+q2_subtotal,Staff,2. Environmental Management Staff,8
+q3_subtotal,Auditing,3. Environmental Auditing and Management Systems,8
+q4_subtotal,Ethical Investment,4. Ethical Investment,3
+q5_subtotal,Carbon Management,5. Carbon Management,7
+q6_subtotal,Fairtrade,6. Fairtrade & Ethical Procurement,2
+q7_subtotal,Food,7. Sustainable Food,2
+q8_subtotal,Engagement,8. Staff and Student Engagement,3
+q9_subtotal,Curriculum,9. Cirriculum,2
+q10_subtotal,Energy,10. Energy Sources,6
+q11_subtotal,Recycling,11. Waste & Recycling,8
+q12_subtotal,Carbon,12. Carbon Reduction,10
+q13_subtotal,Water,13. Water Reduction,6

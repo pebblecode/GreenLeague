@@ -10,6 +10,7 @@
 
 
 
+
 @interface ScoreKeyID : NSManagedObjectID {}
 @end
 
@@ -21,15 +22,9 @@
 
 
 
-@property (nonatomic, retain) NSString *key;
+@property (nonatomic, retain) NSString *shortName;
 
-//- (BOOL)validateKey:(id*)value_ error:(NSError**)error_;
-
-
-
-@property (nonatomic, retain) NSString *text;
-
-//- (BOOL)validateText:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateShortName:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -40,6 +35,18 @@
 - (void)setMaxScoreValue:(short)value_;
 
 //- (BOOL)validateMaxScore:(id*)value_ error:(NSError**)error_;
+
+
+
+@property (nonatomic, retain) NSString *text;
+
+//- (BOOL)validateText:(id*)value_ error:(NSError**)error_;
+
+
+
+@property (nonatomic, retain) NSString *key;
+
+//- (BOOL)validateKey:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -64,8 +71,17 @@
 @interface _ScoreKey (CoreDataGeneratedPrimitiveAccessors)
 
 
-- (NSString*)primitiveKey;
-- (void)setPrimitiveKey:(NSString*)value;
+- (NSString*)primitiveShortName;
+- (void)setPrimitiveShortName:(NSString*)value;
+
+
+
+
+- (NSNumber*)primitiveMaxScore;
+- (void)setPrimitiveMaxScore:(NSNumber*)value;
+
+- (short)primitiveMaxScoreValue;
+- (void)setPrimitiveMaxScoreValue:(short)value_;
 
 
 
@@ -76,11 +92,8 @@
 
 
 
-- (NSNumber*)primitiveMaxScore;
-- (void)setPrimitiveMaxScore:(NSNumber*)value;
-
-- (short)primitiveMaxScoreValue;
-- (void)setPrimitiveMaxScoreValue:(short)value_;
+- (NSString*)primitiveKey;
+- (void)setPrimitiveKey:(NSString*)value;
 
 
 

@@ -48,7 +48,15 @@
         
         // Get the correct image
         UILabel *questionTitle = [[UILabel alloc] init];
-        questionTitle.text = scoreKey.text;
+        questionTitle.font = [UIFont systemFontOfSize:12];
+        questionTitle.numberOfLines = 2;
+        questionTitle.textAlignment = UITextAlignmentCenter;
+        if (scoreKey.shortName.length > 0) {
+            questionTitle.text = scoreKey.shortName;
+        } else {
+            questionTitle.text = scoreKey.text;
+        }
+        
         [self.view addSubview:questionTitle];
         [questionTitle release];
         
