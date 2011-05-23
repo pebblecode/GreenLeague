@@ -62,12 +62,12 @@
         [questionTitle release];
         
         // Layout label
-        // | kUniLabelFullWidth | kRatingImageFullWidth | kRatingImageFullWidth | ...
-        questionTitle.frame = CGRectMake(kUniLabelFullWidth + (i * kRatingImageFullWidth), 0, kRatingImageWidth, kRatingImageHeight);        
+        // | kUniLabelFullWidth | kRatingImageContainerFullWidth | kRatingImageContainerFullWidth | ...
+        questionTitle.frame = CGRectMake(kUniLabelFullWidth + (i * kRatingImageContainerFullWidth), 0, kRatingImageContainerWidth, kRatingImageContainerHeight);        
     }
     
     // Add total label
-    CGFloat totalScoreLabelXPos = kUniLabelFullWidth + (scoreKeys.count * kRatingImageFullWidth);
+    CGFloat totalScoreLabelXPos = kUniLabelFullWidth + (scoreKeys.count * kRatingImageContainerFullWidth);
     UILabel *totalScoreLabel = [[UILabel alloc] initWithFrame:CGRectMake(totalScoreLabelXPos , 0, kTotalScoreLabelWidth, [UniversityComparisonRowViewController height])];
     totalScoreLabel.text = @"Total Score";
     totalScoreLabel.font = [UIFont boldSystemFontOfSize:15];

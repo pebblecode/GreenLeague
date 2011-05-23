@@ -75,13 +75,13 @@
         [ratingImageView release];
         
         // Layout image
-        // | kUniLabelFullWidth | kRatingImageFullWidth | kRatingImageFullWidth | ...
-        ratingImageView.frame = CGRectMake(kUniLabelFullWidth + (i * kRatingImageFullWidth), 0, kRatingImageWidth, kRatingImageHeight);
+        // | kUniLabelFullWidth | kRatingImageContainerFullWidth | kRatingImageContainerFullWidth | ...
+        ratingImageView.frame = CGRectMake(kUniLabelFullWidth + (i * kRatingImageContainerFullWidth) + (kRatingImageContainerWidth / 2) - (kRatingImageWidth / 2), (kRatingImageContainerHeight / 2) - (kRatingImageHeight / 2), kRatingImageWidth, kRatingImageHeight);
         
     }
     
     // Total score label
-    CGFloat totalScoreLabelXPos = kUniLabelFullWidth + (scoreKeys.count * kRatingImageFullWidth);
+    CGFloat totalScoreLabelXPos = kUniLabelFullWidth + (scoreKeys.count * kRatingImageContainerFullWidth);
     UILabel *totalScoreLabel = [[UILabel alloc] initWithFrame:CGRectMake(totalScoreLabelXPos , 0, kTotalScoreLabelWidth, [UniversityComparisonRowViewController height])];
     
     totalScoreLabel.text = [NSString stringWithFormat:@"%.1f", [university.totalScore floatValue]];
@@ -117,7 +117,7 @@
 #pragma mark
 
 + (CGFloat)widthFromUniversitiesModel:(UniversitiesModel *)unisModel {
-    return kUniLabelFullWidth + (unisModel.questionScoreKeys.count * kRatingImageFullWidth) + kTotalScoreLabelFullWidth;
+    return kUniLabelFullWidth + (unisModel.questionScoreKeys.count * kRatingImageContainerFullWidth) + kTotalScoreLabelFullWidth;
 }
 
 + (CGFloat)height {

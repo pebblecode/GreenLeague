@@ -110,7 +110,7 @@
 		3D03A8FC131E8CA700F6B225 /* UIColor+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Helper.h"; sourceTree = "<group>"; };
 		3D03A8FD131E8CA700F6B225 /* UIColor+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Helper.m"; sourceTree = "<group>"; };
 		3D03AA8A131EAA9400F6B225 /* UniversityMoreDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniversityMoreDetailViewController.h; sourceTree = "<group>"; };
-		3D03AA8B131EAA9400F6B225 /* UniversityMoreDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniversityMoreDetailViewController.m; sourceTree = "<group>"; };
+		3D03AA8B131EAA9400F6B225 /* UniversityMoreDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = UniversityMoreDetailViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		3D03AA8C131EAA9400F6B225 /* UniversityMoreDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UniversityMoreDetailViewController.xib; sourceTree = "<group>"; };
 		3D03AC621321252900F6B225 /* badge_1st.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = badge_1st.png; sourceTree = "<group>"; };
 		3D03AC631321252900F6B225 /* badge_3rd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = badge_3rd.png; sourceTree = "<group>"; };
@@ -118,10 +118,10 @@
 		3D03AC651321252900F6B225 /* badge_22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = badge_22.png; sourceTree = "<group>"; };
 		3D03AC661321252900F6B225 /* badge_fail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = badge_fail.png; sourceTree = "<group>"; };
 		3D03AD4F1321676A00F6B225 /* UniversitiesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniversitiesModel.h; sourceTree = "<group>"; };
-		3D03AD501321676A00F6B225 /* UniversitiesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniversitiesModel.m; sourceTree = "<group>"; };
+		3D03AD501321676A00F6B225 /* UniversitiesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = UniversitiesModel.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		3D0EDAE8138A7D8600F7AAC7 /* ComparisonViewDimensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComparisonViewDimensions.h; sourceTree = "<group>"; };
 		3D125E51138575A80042E1A6 /* UniversityComparisonRowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniversityComparisonRowViewController.h; sourceTree = "<group>"; };
-		3D125E52138575A80042E1A6 /* UniversityComparisonRowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniversityComparisonRowViewController.m; sourceTree = "<group>"; };
+		3D125E52138575A80042E1A6 /* UniversityComparisonRowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = UniversityComparisonRowViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		3D308E091316552A00D37010 /* NSString+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Helper.h"; sourceTree = "<group>"; };
 		3D308E0A1316552A00D37010 /* NSString+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Helper.m"; sourceTree = "<group>"; };
 		3D308E16131658B800D37010 /* Rakefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
