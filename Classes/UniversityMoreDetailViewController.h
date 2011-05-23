@@ -11,7 +11,7 @@
 #import "UniversitiesModel.h"
 
 @interface UniversityMoreDetailViewController : UITableViewController {
-	NSArray *dataSoruceArray;
+	NSArray *dataSourceArray;
     NSArray *policyArray;
     NSArray *performanceArray;
     
@@ -19,7 +19,7 @@
     UniversitiesModel *universitiesModel;
 }
 
-@property (nonatomic, retain) NSArray *dataSoruceArray;
+@property (nonatomic, retain) NSArray *dataSourceArray;
 @property (nonatomic, retain) NSArray *policyArray;
 @property (nonatomic, retain) NSArray *performanceArray;
 

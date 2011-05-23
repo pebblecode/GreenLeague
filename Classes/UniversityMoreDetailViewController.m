@@ -38,7 +38,7 @@ static NSString *kDataSourceTotalScoreKey = @"totalScore";
 
 @implementation UniversityMoreDetailViewController
 
-@synthesize university, dataSoruceArray, policyArray, performanceArray;
+@synthesize university, dataSourceArray, policyArray, performanceArray;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -51,7 +51,7 @@ static NSString *kDataSourceTotalScoreKey = @"totalScore";
 		self.title = uni.sortName;
         
         // Structure:
-        //		dataSoruceArray
+        //		dataSourceArray
         //			- [0] Policy
         //				- [0] Dictionary
         //					- [title] "1. Publicly Available Environmental Policy"
@@ -93,7 +93,7 @@ static NSString *kDataSourceTotalScoreKey = @"totalScore";
         // Using NSArray class for instance variable, so that it can't be changed once created.
         self.policyArray = [NSArray arrayWithArray:policyTempArray];
         self.performanceArray = [NSArray arrayWithArray:performanceTempArray];    
-        self.dataSoruceArray = [NSArray arrayWithObjects:self.policyArray, self.performanceArray, nil];          
+        self.dataSourceArray = [NSArray arrayWithObjects:self.policyArray, self.performanceArray, nil];          
         
     }
     return self;
@@ -246,7 +246,7 @@ static NSString *kDataSourceTotalScoreKey = @"totalScore";
 - (NSDictionary *)findDataForIndexPath:(NSIndexPath *)indexPath {
 	NSDictionary *dataDictionary = nil;
 	
-	NSArray *sectionDataDictionaries = [self.dataSoruceArray objectAtIndex:[indexPath section]];
+	NSArray *sectionDataDictionaries = [self.dataSourceArray objectAtIndex:[indexPath section]];
 	
 	if (sectionDataDictionaries) {
 		if ([indexPath row] < sectionDataDictionaries.count) { // Check if valid index
@@ -274,7 +274,7 @@ static NSString *kDataSourceTotalScoreKey = @"totalScore";
 
 
 - (void)dealloc {
-	[dataSoruceArray release];
+	[dataSourceArray release];
 	//[univerity release]; // TODO: Release?
     
 	[policyArray release];
