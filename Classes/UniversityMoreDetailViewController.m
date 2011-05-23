@@ -27,6 +27,7 @@ static NSString *kDataSourceTotalScoreKey = @"totalScore";
 // Private
 @interface UniversityMoreDetailViewController()
 
+- (void)storeDataSourceArrayWithUniversitiesModel:(UniversitiesModel *)unisModel;
 - (NSDictionary *)findDataForIndexPath:(NSIndexPath *)indexPath;
 
 @end
@@ -47,47 +48,7 @@ static NSString *kDataSourceTotalScoreKey = @"totalScore";
 		university = uni;
 		self.title = uni.sortName;
         
-        // Structure:
-        //		dataSourceArray
-        //			- [0] Policy
-        //				- [0] Dictionary
-        //					- [title] "1. Publicly Available Environmental Policy"
-        //					- [uniScore] 4
-        //					- [scoreTotal] 6
-        //				- [1] Dictionary
-        //				- ...
-        //			- [1] Performance
-        //				- [0] Dictionary
-        //					- [title] "8. Energy sources"
-        //					- ...
-        //				- ...
-        NSArray *scoreKeys = unisModel.questionScoreKeys;
-        
-        NSMutableArray *policyTempArray = [[NSMutableArray alloc] init];
-        NSMutableArray *performanceTempArray = [[NSMutableArray alloc] init];
-        for (int i = 0; i < scoreKeys.count; i++) {
-            ScoreKey *scoreKey = [scoreKeys objectAtIndex:i];        
-            Score *uniScore = [unisModel findScoreForUniversity:self.university scoreKey:scoreKey];
-            
-            NSDictionary *scoreData = [NSDictionary dictionaryWithObjectsAndKeys:
-                                       scoreKey.text, kDataSourceTitleKey, 
-                                       uniScore.value, kDataSourceScoreKey,
-                                       scoreKey.maxScore, kDataSourceTotalScoreKey,                  
-                                       nil];
-            
-            if ((i >= kPolicyStartIndex) && (i <= kPolicyLastIndex)) { // Policy scores
-                [policyTempArray addObject:scoreData];            
-            } else if ((i >= kPerformanceStartIndex) && (i <= kPerformanceLastIndex)) { // Performance scores
-                [performanceTempArray addObject:scoreData];            
-            } else {
-                NSLog(@"Error: invalid score id '%d'", i);
-            }
-        }
-        
-        // Using NSArray class for instance variable, so that it can't be changed once created.
-        self.policyArray = [NSArray arrayWithArray:policyTempArray];
-        self.performanceArray = [NSArray arrayWithArray:performanceTempArray];    
-        self.dataSourceArray = [NSArray arrayWithObjects:self.policyArray, self.performanceArray, nil];          
+        [self storeDataSourceArrayWithUniversitiesModel:unisModel];
         
     }
     return self;
@@ -245,6 +206,52 @@ static NSString *kDataSourceTotalScoreKey = @"totalScore";
 	}	
 	
 	return dataDictionary;
+}
+
+
+// Structure:
+//		dataSourceArray
+//			- [0] Policy
+//				- [0] Dictionary
+//					- [title] "1. Publicly Available Environmental Policy"
+//					- [uniScore] 4
+//					- [scoreTotal] 6
+//				- [1] Dictionary
+//				- ...
+//			- [1] Performance
+//				- [0] Dictionary
+//					- [title] "8. Energy sources"
+//					- ...
+//				- ...
+- (void)storeDataSourceArrayWithUniversitiesModel:(UniversitiesModel *)unisModel {
+
+    NSArray *scoreKeys = unisModel.questionScoreKeys;
+
+    NSMutableArray *policyTempArray = [[NSMutableArray alloc] init];
+    NSMutableArray *performanceTempArray = [[NSMutableArray alloc] init];
+    for (int i = 0; i < scoreKeys.count; i++) {
+        ScoreKey *scoreKey = [scoreKeys objectAtIndex:i];        
+        Score *uniScore = [unisModel findScoreForUniversity:self.university scoreKey:scoreKey];
+        
+        NSDictionary *scoreData = [NSDictionary dictionaryWithObjectsAndKeys:
+                                   scoreKey.text, kDataSourceTitleKey, 
+                                   uniScore.value, kDataSourceScoreKey,
+                                   scoreKey.maxScore, kDataSourceTotalScoreKey,                  
+                                   nil];
+        
+        if ((i >= kPolicyStartIndex) && (i <= kPolicyLastIndex)) { // Policy scores
+            [policyTempArray addObject:scoreData];            
+        } else if ((i >= kPerformanceStartIndex) && (i <= kPerformanceLastIndex)) { // Performance scores
+            [performanceTempArray addObject:scoreData];            
+        } else {
+            NSLog(@"Error: invalid score id '%d'", i);
+        }
+    }
+
+    // Using NSArray class for instance variable, so that it can't be changed once created.
+    self.policyArray = [NSArray arrayWithArray:policyTempArray];
+    self.performanceArray = [NSArray arrayWithArray:performanceTempArray];    
+    self.dataSourceArray = [NSArray arrayWithObjects:self.policyArray, self.performanceArray, nil];   
 }
 
 #pragma mark -
