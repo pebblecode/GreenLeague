@@ -13,7 +13,8 @@
 #define kPolicySectionIndex 0
 #define kPerformaceSectionIndex 1
 
-#define kNumberSections 2
+// Policy and Performance sections
+#define kNumberSections 2 
 
 // Indexes are inclusive
 #define kPolicyStartIndex      0
@@ -37,7 +38,7 @@ static NSString *kDataSourceTotalScoreKey = @"totalScore";
 
 @implementation UniversityMoreDetailViewController
 
-@synthesize university, universitiesModel, dataSoruceArray, policyArray, performanceArray;
+@synthesize university, dataSoruceArray, policyArray, performanceArray;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -48,8 +49,6 @@ static NSString *kDataSourceTotalScoreKey = @"totalScore";
     if (self) {
 		university = uni;
 		self.title = uni.sortName;
-        
-        universitiesModel = unisModel;
         
         // Structure:
         //		dataSoruceArray
@@ -277,7 +276,7 @@ static NSString *kDataSourceTotalScoreKey = @"totalScore";
 - (void)dealloc {
 	[dataSoruceArray release];
 	//[univerity release]; // TODO: Release?
-    [universitiesModel release];
+    
 	[policyArray release];
     [performanceArray release];
     

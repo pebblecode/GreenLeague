@@ -23,8 +23,7 @@
 @property (nonatomic, retain) NSArray *policyArray;
 @property (nonatomic, retain) NSArray *performanceArray;
 
-@property (nonatomic, retain) University *university;  
-@property (nonatomic, retain) UniversitiesModel *universitiesModel;
+@property (nonatomic, retain) University *university;
 
 - (id)initWithUniversity:(University *)uni universitiesModel:(UniversitiesModel *)unisModel;
 
