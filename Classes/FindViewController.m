@@ -276,7 +276,7 @@
 	University *uni = [self universityFromIndexPath:indexPath];
 
 	if ([uni isValidAwardClass]) {
-		UniversityDetailViewController *uniDetailVC = [[UniversityDetailViewController alloc] initWithUniversity:uni];
+		UniversityDetailViewController *uniDetailVC = [[UniversityDetailViewController alloc] initWithUniversity:uni universitiesModel:self.universitiesModel];
 		[self.navigationController pushViewController:uniDetailVC animated:YES];
 		[uniDetailVC release];
 	} else {

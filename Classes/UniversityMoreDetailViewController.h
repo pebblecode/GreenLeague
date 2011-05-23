@@ -8,15 +8,24 @@
 
 #import <UIKit/UIKit.h>
 #import "University.h"
+#import "UniversitiesModel.h"
 
 @interface UniversityMoreDetailViewController : UITableViewController {
-	NSArray *dataSoruceArray;    
+	NSArray *dataSoruceArray;
+    NSArray *policyArray;
+    NSArray *performanceArray;
+    
     University *university;
+    UniversitiesModel *universitiesModel;
 }
 
 @property (nonatomic, retain) NSArray *dataSoruceArray;
-@property (nonatomic, retain) University *university;    
+@property (nonatomic, retain) NSArray *policyArray;
+@property (nonatomic, retain) NSArray *performanceArray;
 
-- (id)initWithUniversity:(University *)uni;
+@property (nonatomic, retain) University *university;  
+@property (nonatomic, retain) UniversitiesModel *universitiesModel;
+
+- (id)initWithUniversity:(University *)uni universitiesModel:(UniversitiesModel *)unisModel;
 
 @end

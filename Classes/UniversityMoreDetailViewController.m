@@ -7,14 +7,19 @@
 //
 
 #import "UniversityMoreDetailViewController.h"
+#import "ScoreKey.h"
 
 // Global variables
 #define kPolicySectionIndex 0
 #define kPerformaceSectionIndex 1
 
 #define kNumberSections 2
-#define kNumberRowsForPolicy 7
-#define kNumberRowsForPerformance 4
+
+// Indexes are inclusive
+#define kPolicyStartIndex      0
+#define kPolicyLastIndex       8
+#define kPerformanceStartIndex 9 
+#define kPerformanceLastIndex  12
 
 // Data source keys
 static NSString *kDataSourceTitleKey = @"title";
@@ -32,104 +37,71 @@ static NSString *kDataSourceTotalScoreKey = @"totalScore";
 
 @implementation UniversityMoreDetailViewController
 
-@synthesize university, dataSoruceArray;
+@synthesize university, universitiesModel, dataSoruceArray, policyArray, performanceArray;
 
 #pragma mark -
 #pragma mark View lifecycle
 
 
-- (id)initWithUniversity:(University *)uni {
+- (id)initWithUniversity:(University *)uni universitiesModel:(UniversitiesModel *)unisModel {
     self = [super initWithNibName:@"UniversityMoreDetailViewController" bundle:nil];
     if (self) {
 		university = uni;
 		self.title = uni.sortName;
+        
+        universitiesModel = unisModel;
+        
+        // Structure:
+        //		dataSoruceArray
+        //			- [0] Policy
+        //				- [0] Dictionary
+        //					- [title] "1. Publicly Available Environmental Policy"
+        //					- [uniScore] 4
+        //					- [scoreTotal] 6
+        //				- [1] Dictionary
+        //				- ...
+        //			- [1] Performance
+        //				- [0] Dictionary
+        //					- [title] "8. Energy sources"
+        //					- ...
+        //				- ...
+        NSArray *scoreKeys = unisModel.questionScoreKeys;
+        
+        NSMutableArray *policyTempArray = [[NSMutableArray alloc] init];
+        NSMutableArray *performanceTempArray = [[NSMutableArray alloc] init];
+        for (int i = 0; i < scoreKeys.count; i++) {
+            ScoreKey *scoreKey = [scoreKeys objectAtIndex:i];        
+            Score *uniScore = [unisModel findScoreForUniversity:self.university scoreKey:scoreKey];
+            
+            NSDictionary *scoreData = [NSDictionary dictionaryWithObjectsAndKeys:
+                                       scoreKey.text, kDataSourceTitleKey, 
+                                       uniScore.value, kDataSourceScoreKey,
+                                       scoreKey.maxScore, kDataSourceTotalScoreKey,                  
+                                       nil];
+            
+            NSLog(@"scoreKey[%d]: %@", i, scoreKey);
+            if ((i >= kPolicyStartIndex) && (i <= kPolicyLastIndex)) { // Policy scores
+                NSLog(@"policy");
+                [policyTempArray addObject:scoreData];            
+            } else if ((i >= kPerformanceStartIndex) && (i <= kPerformanceLastIndex)) { // Performance scores
+                NSLog(@"performance");
+                [performanceTempArray addObject:scoreData];            
+            } else {
+                NSLog(@"Error: invalid score id '%d'", i);
+            }
+        }
+        
+        // Using NSArray class for instance variable, so that it can't be changed once created.
+        self.policyArray = [NSArray arrayWithArray:policyTempArray];
+        self.performanceArray = [NSArray arrayWithArray:performanceTempArray];    
+        self.dataSoruceArray = [NSArray arrayWithObjects:self.policyArray, self.performanceArray, nil];          
+        
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	
-	// Structure:
-	//		dataSoruceArray
-	//			- [0] Policy
-	//				- [0] Dictionary
-	//					- [title] "1. Publicly Available Environmental Policy"
-	//					- [uniScore] 4
-	//					- [scoreTotal] 6
-	//				- [1] Dictionary
-	//				- ...
-	//			- [1] Performance
-	//				- [0] Dictionary
-	//					- [title] "8. Energy sources"
-	//					- ...
-	//				- ...	
-    NSLog(@"TODO: UniversityMoreDetailView viewDidLoad");
-//	self.dataSoruceArray = [NSArray arrayWithObjects:
-//								// Policy
-//								[NSArray arrayWithObjects:
-//									 [NSDictionary dictionaryWithObjectsAndKeys:
-//										@"1. Publicly Available Environmental Policy", kDataSourceTitleKey,
-//										self.university.policy1Score, kDataSourceScoreKey,
-//										[NSNumber numberWithInt:6], kDataSourceTotalScoreKey,
-//									  nil],
-//									 [NSDictionary dictionaryWithObjectsAndKeys:
-//										  @"2. Staff", kDataSourceTitleKey,
-//										  self.university.policy2Score, kDataSourceScoreKey,
-//										  [NSNumber numberWithInt:8], kDataSourceTotalScoreKey,
-//									  nil],
-//									 [NSDictionary dictionaryWithObjectsAndKeys:
-//										  @"3. Comprehensive Environmental Auditing", kDataSourceTitleKey,
-//										  self.university.policy3Score, kDataSourceScoreKey,
-//										  [NSNumber numberWithInt:8], kDataSourceTotalScoreKey,
-//									  nil],
-//									 [NSDictionary dictionaryWithObjectsAndKeys:
-//										  @"4. Ethical Investment Policy", kDataSourceTitleKey,
-//										  self.university.policy4Score, kDataSourceScoreKey,
-//										  [NSNumber numberWithInt:4], kDataSourceTotalScoreKey,
-//									  nil],
-//									 [NSDictionary dictionaryWithObjectsAndKeys:
-//										  @"5. Carbon Management", kDataSourceTitleKey,
-//										  self.university.policy5Score, kDataSourceScoreKey,
-//										  [NSNumber numberWithInt:8], kDataSourceTotalScoreKey,
-//									  nil],
-//									 [NSDictionary dictionaryWithObjectsAndKeys:
-//										  @"6. Sustainable Procurement and Fairtrade accreditation", kDataSourceTitleKey,
-//										  self.university.policy6Score, kDataSourceScoreKey,
-//										  [NSNumber numberWithInt:3], kDataSourceTotalScoreKey,
-//									  nil],
-//									 [NSDictionary dictionaryWithObjectsAndKeys:
-//										  @"7. Student and Staff Engagement", kDataSourceTitleKey,
-//										  self.university.policy7Score, kDataSourceScoreKey,
-//										  [NSNumber numberWithInt:3], kDataSourceTotalScoreKey,
-//									  nil],								 
-//								 nil],
-//							 
-//								// Performance
-//								[NSArray arrayWithObjects:
-//									 [NSDictionary dictionaryWithObjectsAndKeys:
-//									  @"8. Energy sources", kDataSourceTitleKey,
-//									  self.university.performance8Score, kDataSourceScoreKey,
-//									  [NSNumber numberWithInt:6], kDataSourceTotalScoreKey,
-//									  nil],
-//									 [NSDictionary dictionaryWithObjectsAndKeys:
-//									  @"9. Waste", kDataSourceTitleKey,
-//									  self.university.performance9Score, kDataSourceScoreKey,
-//									  [NSNumber numberWithInt:8], kDataSourceTotalScoreKey,
-//									  nil],
-//									 [NSDictionary dictionaryWithObjectsAndKeys:
-//									  @"10. Carbon emissions per head", kDataSourceTitleKey,
-//									  self.university.performance10Score, kDataSourceScoreKey,
-//									  [NSNumber numberWithInt:8], kDataSourceTotalScoreKey,
-//									  nil],
-//									 [NSDictionary dictionaryWithObjectsAndKeys:								 
-//									  @"11. Water consumption per head", kDataSourceTitleKey,
-//									  self.university.performance11Score, kDataSourceScoreKey,
-//									  [NSNumber numberWithInt:8], kDataSourceTotalScoreKey,
-//									  nil],
-//								 nil],							 
-//							 nil];
-//								
 }
 
 
@@ -186,9 +158,9 @@ static NSString *kDataSourceTotalScoreKey = @"totalScore";
     int numRows = 0;
 	
 	if (section == kPolicySectionIndex) {
-		numRows = kNumberRowsForPolicy;
+		numRows = self.policyArray.count;
 	} else if (section == kPerformaceSectionIndex) {
-		numRows = kNumberRowsForPerformance;
+		numRows = self.performanceArray.count;
 	}
     return numRows;
 }
@@ -278,7 +250,7 @@ static NSString *kDataSourceTotalScoreKey = @"totalScore";
 	NSArray *sectionDataDictionaries = [self.dataSoruceArray objectAtIndex:[indexPath section]];
 	
 	if (sectionDataDictionaries) {
-		if ([indexPath row] < [sectionDataDictionaries count]) { // Check if valid index
+		if ([indexPath row] < sectionDataDictionaries.count) { // Check if valid index
 			dataDictionary = [sectionDataDictionaries objectAtIndex:[indexPath row]];
 		}		
 	}	
@@ -305,7 +277,10 @@ static NSString *kDataSourceTotalScoreKey = @"totalScore";
 - (void)dealloc {
 	[dataSoruceArray release];
 	//[univerity release]; // TODO: Release?
-	 	 
+    [universitiesModel release];
+	[policyArray release];
+    [performanceArray release];
+    
     [super dealloc];
 }
 

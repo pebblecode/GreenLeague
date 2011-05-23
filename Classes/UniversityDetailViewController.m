@@ -20,14 +20,15 @@
 
 @implementation UniversityDetailViewController
 
-@synthesize university, nameLabel, rankLabel, rankLastYearLabel, awardClassImage, totalScoreLabel;
+@synthesize university, universitiesModel, nameLabel, rankLabel, rankLastYearLabel, awardClassImage, totalScoreLabel;
 
 
 
-- (id)initWithUniversity:(University *)uni {
+- (id)initWithUniversity:(University *)uni universitiesModel:(UniversitiesModel *)unisModel {
     self = [super initWithNibName:nil bundle:nil]; // Load default nib
     if (self) {
 		university = [uni retain]; // Keep a reference to the university
+        universitiesModel = [unisModel retain];
     }
     return self;
 }
@@ -71,6 +72,7 @@
 
 - (void)dealloc {
 	[university release];
+    [universitiesModel release];
 	
 	[nameLabel release];
 	[rankLabel release];
@@ -86,7 +88,7 @@
 #pragma mark
 
 - (IBAction)detailButtonPressed {
-	UniversityMoreDetailViewController *uniMoreDetailVC = [[UniversityMoreDetailViewController alloc] initWithUniversity:self.university];
+	UniversityMoreDetailViewController *uniMoreDetailVC = [[UniversityMoreDetailViewController alloc] initWithUniversity:self.university universitiesModel:self.universitiesModel];
 	[self.navigationController pushViewController:uniMoreDetailVC animated:YES];
 	
 	[uniMoreDetailVC release];

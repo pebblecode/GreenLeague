@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "University.h"
+#import "UniversitiesModel.h"
 
 @interface UniversityDetailViewController : UIViewController {	
 	UILabel *nameLabel;
@@ -17,6 +18,7 @@
 	UILabel *totalScoreLabel;
     
     University *university;
+    UniversitiesModel *universitiesModel;
 }
 
 @property (nonatomic, retain) IBOutlet UILabel *nameLabel;
@@ -26,8 +28,9 @@
 @property (nonatomic, retain) IBOutlet UILabel *totalScoreLabel;
 
 @property (nonatomic, retain) University *university;
+@property (nonatomic, retain) UniversitiesModel *universitiesModel;
 
-- (id)initWithUniversity:(University *)uni;
+- (id)initWithUniversity:(University *)uni universitiesModel:(UniversitiesModel *)unisModel;
 - (IBAction)detailButtonPressed;
 
 @end
