@@ -37,10 +37,6 @@
 		NSSet *affectingKey = [NSSet setWithObject:@"rankLastYear"];
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
 	}
-	if ([key isEqualToString:@"totalScoreValue"]) {
-		NSSet *affectingKey = [NSSet setWithObject:@"totalScore"];
-		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
-	}
 
 	return keyPaths;
 }
@@ -116,25 +112,6 @@
 
 @dynamic totalScore;
 
-
-
-- (short)totalScoreValue {
-	NSNumber *result = [self totalScore];
-	return [result shortValue];
-}
-
-- (void)setTotalScoreValue:(short)value_ {
-	[self setTotalScore:[NSNumber numberWithShort:value_]];
-}
-
-- (short)primitiveTotalScoreValue {
-	NSNumber *result = [self primitiveTotalScore];
-	return [result shortValue];
-}
-
-- (void)setPrimitiveTotalScoreValue:(short)value_ {
-	[self setPrimitiveTotalScore:[NSNumber numberWithShort:value_]];
-}
 
 
 

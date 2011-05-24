@@ -56,11 +56,7 @@
 
 
 
-@property (nonatomic, retain) NSNumber *totalScore;
-
-@property short totalScoreValue;
-- (short)totalScoreValue;
-- (void)setTotalScoreValue:(short)value_;
+@property (nonatomic, retain) NSDecimalNumber *totalScore;
 
 //- (BOOL)validateTotalScore:(id*)value_ error:(NSError**)error_;
 
@@ -123,11 +119,8 @@
 
 
 
-- (NSNumber*)primitiveTotalScore;
-- (void)setPrimitiveTotalScore:(NSNumber*)value;
-
-- (short)primitiveTotalScoreValue;
-- (void)setPrimitiveTotalScoreValue:(short)value_;
+- (NSDecimalNumber*)primitiveTotalScore;
+- (void)setPrimitiveTotalScore:(NSDecimalNumber*)value;
 
 
 

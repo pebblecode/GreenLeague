@@ -15,6 +15,7 @@
 - (NSString *)stringByTrimmingSpaces;
 
 - (NSNumber *)numberFromString;
+- (NSDecimalNumber *)decimalNumberFromString;
 
 - (NSArray *)csvRows;
 

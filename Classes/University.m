@@ -64,8 +64,8 @@ static NSString *kUniversityEntityName = @"University";
 //
 // Assume csv to be in the format:
 //
-// Organisation, data keys, ..., meta data keys ...
-// University of Somewhere, data values, ..., meta data values ...
+// Organisation, data keys, ...
+// University of Somewhere, data values, ...
 //
 + (void)addUniversityToDBWithManagedContext:(NSManagedObjectContext *)managedObjectContext fromRowArray:(NSArray *)rowArray headerRowArray:(NSArray *)headerRowArray {
 	
@@ -100,7 +100,7 @@ static NSString *kUniversityEntityName = @"University";
                     
                 } else if ([scoreKeyString isEqualToString:kTotalScoreHeaderField]) {            
                     
-                    [uni setTotalScore:[rowValue numberFromString]];             
+                    [uni setTotalScore:[rowValue decimalNumberFromString]];             
                     
                 } else if ([scoreKeyString isEqualToString:kAwardClassHeaderField]) { 
                     

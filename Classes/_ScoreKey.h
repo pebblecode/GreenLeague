@@ -22,12 +22,6 @@
 
 
 
-@property (nonatomic, retain) NSString *shortName;
-
-//- (BOOL)validateShortName:(id*)value_ error:(NSError**)error_;
-
-
-
 @property (nonatomic, retain) NSNumber *maxScore;
 
 @property short maxScoreValue;
@@ -35,6 +29,12 @@
 - (void)setMaxScoreValue:(short)value_;
 
 //- (BOOL)validateMaxScore:(id*)value_ error:(NSError**)error_;
+
+
+
+@property (nonatomic, retain) NSString *shortName;
+
+//- (BOOL)validateShortName:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -71,17 +71,17 @@
 @interface _ScoreKey (CoreDataGeneratedPrimitiveAccessors)
 
 
-- (NSString*)primitiveShortName;
-- (void)setPrimitiveShortName:(NSString*)value;
-
-
-
-
 - (NSNumber*)primitiveMaxScore;
 - (void)setPrimitiveMaxScore:(NSNumber*)value;
 
 - (short)primitiveMaxScoreValue;
 - (void)setPrimitiveMaxScoreValue:(short)value_;
+
+
+
+
+- (NSString*)primitiveShortName;
+- (void)setPrimitiveShortName:(NSString*)value;
 
 
 

@@ -46,6 +46,19 @@
 	
 }
 
+- (NSDecimalNumber *)decimalNumberFromString {
+	
+	NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+	[formatter setNumberStyle:NSNumberFormatterDecimalStyle];
+    [formatter setGeneratesDecimalNumbers:YES];
+    
+	NSDecimalNumber *num = (NSDecimalNumber *)[formatter numberFromString:self];
+	[formatter release];
+	
+	return num;
+	
+}
+
 // Parse a string into rows and columns, under the assumption that it is in CSV format.
 // From http://www.macresearch.org/cocoa-scientists-part-xxvi-parsing-csv-data
 - (NSArray *)csvRows {

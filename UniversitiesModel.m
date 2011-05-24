@@ -57,7 +57,7 @@ static NSString *kDBFieldQuestionSuffix = @"_subtotal";
 	if ((self = [super init])) {			
 		// --------------------------------------------------
 		// To remove the db all the time (for debugging only)
-		//[self deleteDB];		
+		[self deleteDB];		
 		// --------------------------------------------------
 		
 		[self setupDB];
@@ -455,10 +455,10 @@ static NSString *kDBFieldQuestionSuffix = @"_subtotal";
 
 - (NSString *)dbPath {
     // For creating a new sqlite file
-//	return [[self applicationDocumentsDirectory] stringByAppendingPathComponent:kDatabaseSqliteFileWithExt];
+	return [[self applicationDocumentsDirectory] stringByAppendingPathComponent:kDatabaseSqliteFileWithExt];
     
     // Using sqlite file from the bundle instead of the application documents directory
-    return [[NSBundle mainBundle] pathForResource:kDatabaseSqliteFile ofType:@"sqlite"]; 
+    //return [[NSBundle mainBundle] pathForResource:kDatabaseSqliteFile ofType:@"sqlite"]; 
 }
 
 

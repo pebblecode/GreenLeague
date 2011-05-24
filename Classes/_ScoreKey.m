@@ -40,13 +40,6 @@
 
 
 
-@dynamic shortName;
-
-
-
-
-
-
 @dynamic maxScore;
 
 
@@ -68,6 +61,13 @@
 - (void)setPrimitiveMaxScoreValue:(short)value_ {
 	[self setPrimitiveMaxScore:[NSNumber numberWithShort:value_]];
 }
+
+
+
+
+
+@dynamic shortName;
+
 
 
 
