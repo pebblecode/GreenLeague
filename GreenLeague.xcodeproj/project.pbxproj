@@ -91,6 +91,8 @@
 		3DD5E8CA138BE4F200D968C2 /* badge_21@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DD5E8C5138BE4F100D968C2 /* badge_21@2x.png */; };
 		3DD5E8CB138BE4F200D968C2 /* badge_22@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DD5E8C6138BE4F100D968C2 /* badge_22@2x.png */; };
 		3DD5E8CC138BE4F200D968C2 /* badge_fail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DD5E8C7138BE4F200D968C2 /* badge_fail@2x.png */; };
+		3DD5E8CF138BEC1F00D968C2 /* background-leaf.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DD5E8CD138BEC1E00D968C2 /* background-leaf.png */; };
+		3DD5E8D0138BEC1F00D968C2 /* background-leaf@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DD5E8CE138BEC1F00D968C2 /* background-leaf@2x.png */; };
 		3DE4281E1327F49C002C53CE /* UniversityComparisonTitlesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE4281C1327F499002C53CE /* UniversityComparisonTitlesViewController.m */; };
 		3DE4281F1327F49C002C53CE /* UniversityComparisonTitlesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DE4281D1327F49A002C53CE /* UniversityComparisonTitlesViewController.xib */; };
 		3DF051C2131FA15700AC430F /* AwardClassHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF051C1131FA15700AC430F /* AwardClassHelper.m */; };
@@ -206,6 +208,8 @@
 		3DD5E8C5138BE4F100D968C2 /* badge_21@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "badge_21@2x.png"; sourceTree = "<group>"; };
 		3DD5E8C6138BE4F100D968C2 /* badge_22@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "badge_22@2x.png"; sourceTree = "<group>"; };
 		3DD5E8C7138BE4F200D968C2 /* badge_fail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "badge_fail@2x.png"; sourceTree = "<group>"; };
+		3DD5E8CD138BEC1E00D968C2 /* background-leaf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-leaf.png"; sourceTree = "<group>"; };
+		3DD5E8CE138BEC1F00D968C2 /* background-leaf@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-leaf@2x.png"; sourceTree = "<group>"; };
 		3DE4281B1327F498002C53CE /* UniversityComparisonTitlesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniversityComparisonTitlesViewController.h; sourceTree = "<group>"; };
 		3DE4281C1327F499002C53CE /* UniversityComparisonTitlesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniversityComparisonTitlesViewController.m; sourceTree = "<group>"; };
 		3DE4281D1327F49A002C53CE /* UniversityComparisonTitlesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UniversityComparisonTitlesViewController.xib; sourceTree = "<group>"; };
@@ -381,6 +385,8 @@
 		3DB0D95213152221006FC601 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3DD5E8CD138BEC1E00D968C2 /* background-leaf.png */,
+				3DD5E8CE138BEC1F00D968C2 /* background-leaf@2x.png */,
 				3D7E78B71372B74C009F4A35 /* Default.png */,
 				3D7E78B81372B74C009F4A35 /* Default@2x.png */,
 				3D7E78AF1372B0E9009F4A35 /* Icon-72.png */,
@@ -549,6 +555,8 @@
 				3DD5E8CA138BE4F200D968C2 /* badge_21@2x.png in Resources */,
 				3DD5E8CB138BE4F200D968C2 /* badge_22@2x.png in Resources */,
 				3DD5E8CC138BE4F200D968C2 /* badge_fail@2x.png in Resources */,
+				3DD5E8CF138BEC1F00D968C2 /* background-leaf.png in Resources */,
+				3DD5E8D0138BEC1F00D968C2 /* background-leaf@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
