@@ -115,7 +115,7 @@ ZG9uYXRlIA</string>
 						</object>
 						<object class="NSCustomResource" key="IBUINormalImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">pnpgl2011_400px.png</string>
+							<string key="NSResourceName">gl2011-about-page.png</string>
 						</object>
 					</object>
 					<object class="IBUIButton" id="483908465">
@@ -385,13 +385,13 @@ ZG9uYXRlIA</string>
 			<bool key="EncodedWithXMLCoder">YES</bool>
 			<object class="NSArray" key="dict.sortedKeys">
 				<bool key="EncodedWithXMLCoder">YES</bool>
+				<string>gl2011-about-page.png</string>
 				<string>pebble-logo.png</string>
-				<string>pnpgl2011_400px.png</string>
 			</object>
 			<object class="NSMutableArray" key="dict.values">
 				<bool key="EncodedWithXMLCoder">YES</bool>
+				<string>{300, 121}</string>
 				<string>{150, 36}</string>
-				<string>{400, 161}</string>
 			</object>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">300</string>
