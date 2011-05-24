@@ -10,8 +10,6 @@
 #import "University.h"
 #import "UniversitiesModel.h"
 
-#define kMaxNumRatingImages 4
-
 
 @interface UniversityComparisonRowViewController : UIViewController {
     

@@ -7,18 +7,8 @@
 //
 
 #import "UniversityComparisonRowViewController.h"
-#import "ScoreKey.h"
-#import "NSString+Helper.h"
 #import "ComparisonViewDimensions.h"
-
-@interface UniversityComparisonRowViewController()
-
-- (NSNumber *)ratingImageIndexFromScore:(NSNumber *)score maxScore:(NSNumber *)maxScore;
-- (UIImage *)imageFromIndex:(NSNumber *)index;
-- (UIImage *)imageFromUniScoreKey:(ScoreKey *)scoreKey;
-
-@end
-
+#import "ScoreClassHelper.h"
 
 
 @implementation UniversityComparisonRowViewController
@@ -69,7 +59,7 @@
         ScoreKey *scoreKey = [scoreKeys objectAtIndex:i];
         
         // Get the correct image
-        UIImage *ratingImage = [self imageFromUniScoreKey:scoreKey];        
+        UIImage *ratingImage = [ScoreClassHelper imageFromUniScoreKey:scoreKey university:self.university universitiesModel:self.universitiesModel];        
         UIImageView *ratingImageView = [[UIImageView alloc] initWithImage:ratingImage];
         [self.view addSubview:ratingImageView];
         [ratingImageView release];
@@ -128,59 +118,7 @@
     return self.height * numRows;
 }
 
-#pragma mark -
-#pragma mark === Helper ===
-#pragma mark
 
-// Find the rating based on the number of rating images there are.
-// Eg, if there are 4, then the ratings are 0-25%, 25-50%, 50-75% and 75-100% 
-- (NSNumber *)ratingImageIndexFromScore:(NSNumber *)score maxScore:(NSNumber *)maxScore {
-    
-    float scorePercentage = [score floatValue] / [maxScore floatValue];
-    NSNumber *ratingImageIndex = [NSNumber numberWithFloat:round(scorePercentage * (kMaxNumRatingImages - 1))];
-    
-    return ratingImageIndex;
-}
-
-// Get the image for a given index value
-// 0 = awful
-// 1 = poor
-// 2 = ok
-// 3 = excellent
-- (UIImage *)imageFromIndex:(NSNumber *)index {
-    UIImage *image = nil;
-    
-    switch ([index intValue]) {
-        case 0:
-            image = [UIImage imageNamed:@"star_awful.png"];
-            break;
-        case 1:
-            image = [UIImage imageNamed:@"star_poor.png"];
-            break;            
-        case 2:
-            image = [UIImage imageNamed:@"star_ok.png"];
-            break; 
-        case 3:
-            image = [UIImage imageNamed:@"star_excellent.png"];
-            break;             
-            
-        default:
-            break;
-    }
-    
-    return image;
-}
-
-- (UIImage *)imageFromUniScoreKey:(ScoreKey *)scoreKey {
-
-    Score *uniScore = [self.universitiesModel findScoreForUniversity:self.university scoreKey:scoreKey];
-    
-    NSNumber *ratingImageIndex = [self ratingImageIndexFromScore:[uniScore.value numberFromString] maxScore:scoreKey.maxScore];
-//    NSLog(@"uniScore: %@/%d", uniScore.value, [scoreKey.maxScore intValue]);
-    
-    return [self imageFromIndex:ratingImageIndex];
-
-}
 
 
 @end

@@ -130,6 +130,7 @@ static NSString *kDataSourceTotalScoreKey = @"totalScore";
 	if (cellData) {
 		cell.textLabel.text = [NSString stringWithFormat:@"%@", [cellData valueForKey:kDataSourceTitleKey]];
 		cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ / %@", [cellData valueForKey:kDataSourceScoreKey], [cellData valueForKey:kDataSourceTotalScoreKey]];
+        cell.imageView.image = [UIImage imageNamed:@"star_excellent.png"];
 	}
 	
     return cell;
