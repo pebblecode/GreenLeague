@@ -117,11 +117,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Classes/UniversityMoreDetailViewController.m"
-         timestampString = "327857935.19466"
+         timestampString = "327925372.900043"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "129"
-         endingLineNumber = "129">
+         startingLineNumber = "132"
+         endingLineNumber = "132">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"

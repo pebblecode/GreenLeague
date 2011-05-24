@@ -8,6 +8,7 @@
 
 #import "UniversityMoreDetailViewController.h"
 #import "ScoreKey.h"
+#import "ScoreClassHelper.h"
 
 // Global variables
 #define kPolicySectionIndex 0
@@ -27,8 +28,9 @@ static NSString *kDataSourceTotalScoreKey = @"totalScore";
 // Private
 @interface UniversityMoreDetailViewController()
 
-- (void)storeDataSourceArrayWithUniversitiesModel:(UniversitiesModel *)unisModel;
+- (void)storeDataSourceArray;
 - (NSDictionary *)findDataForIndexPath:(NSIndexPath *)indexPath;
+- (UIImage *)findRatingImageForIndexPath:(NSIndexPath *)indexPath;
 
 @end
 
@@ -36,7 +38,7 @@ static NSString *kDataSourceTotalScoreKey = @"totalScore";
 
 @implementation UniversityMoreDetailViewController
 
-@synthesize university, dataSourceArray, policyArray, performanceArray;
+@synthesize university, universitiesModel, dataSourceArray, policyArray, performanceArray;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -47,8 +49,9 @@ static NSString *kDataSourceTotalScoreKey = @"totalScore";
     if (self) {
 		university = uni;
 		self.title = uni.sortName;
+        universitiesModel = unisModel;
         
-        [self storeDataSourceArrayWithUniversitiesModel:unisModel];
+        [self storeDataSourceArray];
         
     }
     return self;
@@ -130,7 +133,7 @@ static NSString *kDataSourceTotalScoreKey = @"totalScore";
 	if (cellData) {
 		cell.textLabel.text = [NSString stringWithFormat:@"%@", [cellData valueForKey:kDataSourceTitleKey]];
 		cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ / %@", [cellData valueForKey:kDataSourceScoreKey], [cellData valueForKey:kDataSourceTotalScoreKey]];
-        cell.imageView.image = [UIImage imageNamed:@"star_excellent.png"];
+        cell.imageView.image = [self findRatingImageForIndexPath:indexPath];
 	}
 	
     return cell;
@@ -209,7 +212,34 @@ static NSString *kDataSourceTotalScoreKey = @"totalScore";
 	return dataDictionary;
 }
 
+// Reverses how storeDataSourceArrayWithUniversitiesModel stores the scores
+- (UIImage *)findRatingImageForIndexPath:(NSIndexPath *)indexPath {
+    
+    
+    // Calculate the score key index by looking at what array it is, and adding the sum of all the previous array counts
+    
+    NSArray *scoreKeys = self.universitiesModel.questionScoreKeys;
+    ScoreKey *scoreKey = nil;
+    // Hard coding section handling - will need to generalise if there are more than 2 sections
+    if ([indexPath section] == kPolicySectionIndex) {
+        
+        scoreKey = [scoreKeys objectAtIndex:[indexPath row]];
+    } else if ([indexPath section] == kPerformaceSectionIndex) {        
+        
+        NSArray *policyDictionariesArray = [self.dataSourceArray objectAtIndex:kPolicySectionIndex];
+        int performanceScoreIndex = ([indexPath section] * policyDictionariesArray.count) + [indexPath row];
+        scoreKey = [scoreKeys objectAtIndex:performanceScoreIndex];   
+        
+    } else {
+        NSLog(@"Error in finding: %@", indexPath);
+        return [UIImage imageNamed:@"star_poor"];
+    }
+    
+    return [ScoreClassHelper imageFromUniScoreKey:scoreKey university:self.university universitiesModel:self.universitiesModel];
 
+ }
+     
+     
 // Structure:
 //		dataSourceArray
 //			- [0] Policy
@@ -224,15 +254,15 @@ static NSString *kDataSourceTotalScoreKey = @"totalScore";
 //					- [title] "8. Energy sources"
 //					- ...
 //				- ...
-- (void)storeDataSourceArrayWithUniversitiesModel:(UniversitiesModel *)unisModel {
+- (void)storeDataSourceArray {
 
-    NSArray *scoreKeys = unisModel.questionScoreKeys;
+    NSArray *scoreKeys = self.universitiesModel.questionScoreKeys;
 
     NSMutableArray *policyTempArray = [[NSMutableArray alloc] init];
     NSMutableArray *performanceTempArray = [[NSMutableArray alloc] init];
     for (int i = 0; i < scoreKeys.count; i++) {
         ScoreKey *scoreKey = [scoreKeys objectAtIndex:i];        
-        Score *uniScore = [unisModel findScoreForUniversity:self.university scoreKey:scoreKey];
+        Score *uniScore = [self.universitiesModel findScoreForUniversity:self.university scoreKey:scoreKey];
         
         NSDictionary *scoreData = [NSDictionary dictionaryWithObjectsAndKeys:
                                    scoreKey.text, kDataSourceTitleKey, 
@@ -274,6 +304,7 @@ static NSString *kDataSourceTotalScoreKey = @"totalScore";
 - (void)dealloc {
 	[dataSourceArray release];
 	//[univerity release]; // TODO: Release?
+    [universitiesModel release];
     
 	[policyArray release];
     [performanceArray release];
