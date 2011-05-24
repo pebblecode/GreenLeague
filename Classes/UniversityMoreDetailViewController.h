@@ -17,6 +17,8 @@
     
     University *university;
     UniversitiesModel *universitiesModel;
+    
+    UITableView *detailTableView;
 }
 
 @property (nonatomic, retain) NSArray *dataSourceArray;
@@ -25,6 +27,8 @@
 
 @property (nonatomic, retain) University *university;
 @property (nonatomic, retain) UniversitiesModel *universitiesModel;
+
+@property (nonatomic, retain) IBOutlet UITableView *detailTableView;
 
 - (id)initWithUniversity:(University *)uni universitiesModel:(UniversitiesModel *)unisModel;
 

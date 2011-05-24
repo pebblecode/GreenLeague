@@ -38,7 +38,7 @@ static NSString *kDataSourceTotalScoreKey = @"totalScore";
 
 @implementation UniversityMoreDetailViewController
 
-@synthesize university, universitiesModel, dataSourceArray, policyArray, performanceArray;
+@synthesize university, universitiesModel, dataSourceArray, policyArray, performanceArray, detailTableView;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -59,6 +59,8 @@ static NSString *kDataSourceTotalScoreKey = @"totalScore";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.detailTableView.tableFooterView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"table-key.png"]];
 }
 
 
@@ -309,6 +311,7 @@ static NSString *kDataSourceTotalScoreKey = @"totalScore";
 	[policyArray release];
     [performanceArray release];
     
+    [detailTableView release];
     [super dealloc];
 }
 
