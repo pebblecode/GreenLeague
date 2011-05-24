@@ -306,7 +306,7 @@ static NSString *kDataSourceTotalScoreKey = @"totalScore";
 - (void)dealloc {
 	[dataSourceArray release];
 	//[univerity release]; // TODO: Release?
-    [universitiesModel release];
+    //[universitiesModel release]; // TODO: Release?
     
 	[policyArray release];
     [performanceArray release];
