@@ -95,6 +95,8 @@
 		3DD5E8D0138BEC1F00D968C2 /* background-leaf@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DD5E8CE138BEC1F00D968C2 /* background-leaf@2x.png */; };
 		3DD5E8D3138BF20500D968C2 /* gl2011-about-page.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DD5E8D1138BF20500D968C2 /* gl2011-about-page.png */; };
 		3DD5E8D4138BF20500D968C2 /* gl2011-about-page@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DD5E8D2138BF20500D968C2 /* gl2011-about-page@2x.png */; };
+		3DD5E8D6138BFB2200D968C2 /* gl11-export-final.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3DD5E8D5138BFB2200D968C2 /* gl11-export-final.csv */; };
+		3DD5E8D8138BFB5F00D968C2 /* gl11-raw-export-final-key.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3DD5E8D7138BFB5F00D968C2 /* gl11-raw-export-final-key.csv */; };
 		3DE4281E1327F49C002C53CE /* UniversityComparisonTitlesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE4281C1327F499002C53CE /* UniversityComparisonTitlesViewController.m */; };
 		3DE4281F1327F49C002C53CE /* UniversityComparisonTitlesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DE4281D1327F49A002C53CE /* UniversityComparisonTitlesViewController.xib */; };
 		3DF051C2131FA15700AC430F /* AwardClassHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF051C1131FA15700AC430F /* AwardClassHelper.m */; };
@@ -213,6 +215,8 @@
 		3DD5E8CE138BEC1F00D968C2 /* background-leaf@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-leaf@2x.png"; sourceTree = "<group>"; };
 		3DD5E8D1138BF20500D968C2 /* gl2011-about-page.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gl2011-about-page.png"; sourceTree = "<group>"; };
 		3DD5E8D2138BF20500D968C2 /* gl2011-about-page@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gl2011-about-page@2x.png"; sourceTree = "<group>"; };
+		3DD5E8D5138BFB2200D968C2 /* gl11-export-final.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "gl11-export-final.csv"; sourceTree = "<group>"; };
+		3DD5E8D7138BFB5F00D968C2 /* gl11-raw-export-final-key.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "gl11-raw-export-final-key.csv"; sourceTree = "<group>"; };
 		3DE4281B1327F498002C53CE /* UniversityComparisonTitlesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniversityComparisonTitlesViewController.h; sourceTree = "<group>"; };
 		3DE4281C1327F499002C53CE /* UniversityComparisonTitlesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniversityComparisonTitlesViewController.m; sourceTree = "<group>"; };
 		3DE4281D1327F49A002C53CE /* UniversityComparisonTitlesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UniversityComparisonTitlesViewController.xib; sourceTree = "<group>"; };
@@ -442,6 +446,8 @@
 		3DB0D97313152B63006FC601 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				3DD5E8D5138BFB2200D968C2 /* gl11-export-final.csv */,
+				3DD5E8D7138BFB5F00D968C2 /* gl11-raw-export-final-key.csv */,
 				3D32953E1385498D00B02A1D /* gl11-export-filtered.csv */,
 				3D5A78B01381299E0009858C /* gl11-export-draft-key.csv */,
 				3DB0D97113152B60006FC601 /* gl2010.csv */,
@@ -561,6 +567,8 @@
 				3DD5E8D0138BEC1F00D968C2 /* background-leaf@2x.png in Resources */,
 				3DD5E8D3138BF20500D968C2 /* gl2011-about-page.png in Resources */,
 				3DD5E8D4138BF20500D968C2 /* gl2011-about-page@2x.png in Resources */,
+				3DD5E8D6138BFB2200D968C2 /* gl11-export-final.csv in Resources */,
+				3DD5E8D8138BFB5F00D968C2 /* gl11-raw-export-final-key.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

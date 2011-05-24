@@ -90,7 +90,9 @@ static NSString *kUniversityEntityName = @"University";
                 
                 if ([scoreKeyString isEqualToString:kRankHeaderField]) {
                     
-                    [uni setRank:[rowValue numberFromString]];             
+                    // Remove '=' in rank string
+                    NSString *rankWithoutEquals = [rowValue stringByReplacingOccurrencesOfString:@"=" withString:@""];
+                    [uni setRank:[rankWithoutEquals numberFromString]];             
                     
                 } else if ([scoreKeyString isEqualToString:kRankLastYearHeaderField]) {
                     

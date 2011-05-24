@@ -12,9 +12,10 @@
 #import "ScoreKey.h"
 
 // Data source file minus the file extension
-static NSString *kDataSourceFile = @"gl11-export-filtered";
-static NSString *kScoreKeySourceFile = @"gl11-export-draft-key";
+static NSString *kDataSourceFile = @"gl11-export-final";
+static NSString *kScoreKeySourceFile = @"gl11-raw-export-final-key";
 static NSString *kDatabaseSqliteFile = @"green_league_2011";
+static NSString *kDatabaseSqliteFileWithExt = @"green_league_2011.sqlite";
 #define kDataCSVRowsToIgnore 1
 
 // Database field names
@@ -56,7 +57,7 @@ static NSString *kDBFieldQuestionSuffix = @"_subtotal";
 	if ((self = [super init])) {			
 		// --------------------------------------------------
 		// To remove the db all the time (for debugging only)
-		//[self deleteDB];		
+		[self deleteDB];		
 		// --------------------------------------------------
 		
 		[self setupDB];
@@ -138,7 +139,6 @@ static NSString *kDBFieldQuestionSuffix = @"_subtotal";
 	//	NSURL *storeUrl = [NSURL fileURLWithPath:dbFilePath];	
 	
 	//NSLog(@"storeUrl(%@) exists = %@", storeUrl, ([[NSFileManager defaultManager] fileExistsAtPath:storeUrl.path] ? @"YES" : @"NO"));
-    
     NSError *error = nil;
     persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
 	// Create file if it does not exist
@@ -450,14 +450,14 @@ static NSString *kDBFieldQuestionSuffix = @"_subtotal";
  Returns the path to the application's Documents directory.
  */
 - (NSString *)applicationDocumentsDirectory {
-    return [NSSearchPathForDirectoriesInDomains(NSApplicationDirectory, NSUserDomainMask, YES) lastObject];
+    return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
 }
 
 - (NSString *)dbPath {
-	//return [[self applicationDocumentsDirectory] stringByAppendingPathComponent:kDatabaseSqliteFile];
+	return [[self applicationDocumentsDirectory] stringByAppendingPathComponent:kDatabaseSqliteFileWithExt];
     
     // Using sqlite file from the bundle instead of the application documents directory
-    return [[NSBundle mainBundle] pathForResource:kDatabaseSqliteFile ofType:@"sqlite"]; 
+//    return [[NSBundle mainBundle] pathForResource:kDatabaseSqliteFile ofType:@"sqlite"]; 
 }
 
 
