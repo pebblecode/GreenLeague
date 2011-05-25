@@ -41,6 +41,10 @@
 		3D422DBA1366CC0200DA0F53 /* pebble-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D422DB91366CC0200DA0F53 /* pebble-logo.png */; };
 		3D5A78B11381299E0009858C /* gl11-export-draft-key.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3D5A78B01381299E0009858C /* gl11-export-draft-key.csv */; };
 		3D5BFBE1137013A8004DFA0B /* table-key.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D5BFBE0137013A8004DFA0B /* table-key.png */; };
+		3D6289C7138D1D65008B3C08 /* MethodologyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6289C5138D1D65008B3C08 /* MethodologyViewController.m */; };
+		3D6289C8138D1D65008B3C08 /* MethodologyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D6289C6138D1D65008B3C08 /* MethodologyViewController.xib */; };
+		3D6289CC138D25A0008B3C08 /* Methodology.html in Resources */ = {isa = PBXBuildFile; fileRef = 3D6289CB138D25A0008B3C08 /* Methodology.html */; };
+		3D6289E4138D4ED3008B3C08 /* jquery-1.6.1.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 3D6289E1138D4D0C008B3C08 /* jquery-1.6.1.min.js */; };
 		3D7E78B31372B0E9009F4A35 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D7E78AF1372B0E9009F4A35 /* Icon-72.png */; };
 		3D7E78B41372B0E9009F4A35 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D7E78B01372B0E9009F4A35 /* Icon.png */; };
 		3D7E78B51372B0E9009F4A35 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D7E78B11372B0E9009F4A35 /* Icon@2x.png */; };
@@ -154,6 +158,11 @@
 		3D422DB91366CC0200DA0F53 /* pebble-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pebble-logo.png"; sourceTree = "<group>"; };
 		3D5A78B01381299E0009858C /* gl11-export-draft-key.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "gl11-export-draft-key.csv"; sourceTree = "<group>"; };
 		3D5BFBE0137013A8004DFA0B /* table-key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-key.png"; sourceTree = "<group>"; };
+		3D6289C4138D1D65008B3C08 /* MethodologyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MethodologyViewController.h; sourceTree = "<group>"; };
+		3D6289C5138D1D65008B3C08 /* MethodologyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MethodologyViewController.m; sourceTree = "<group>"; };
+		3D6289C6138D1D65008B3C08 /* MethodologyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MethodologyViewController.xib; sourceTree = "<group>"; };
+		3D6289CB138D25A0008B3C08 /* Methodology.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = Methodology.html; path = Methodology/Methodology.html; sourceTree = "<group>"; };
+		3D6289E1138D4D0C008B3C08 /* jquery-1.6.1.min.js */ = {isa = PBXFileReference; explicitFileType = sourcecode.javascript; fileEncoding = 4; name = "jquery-1.6.1.min.js"; path = "Methodology/jquery-1.6.1.min.js"; sourceTree = "<group>"; };
 		3D7E78AF1372B0E9009F4A35 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		3D7E78B01372B0E9009F4A35 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		3D7E78B11372B0E9009F4A35 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
@@ -255,6 +264,9 @@
 				3D03AA81131EA8C100F6B225 /* Find */,
 				3D03ACCE13214BC800F6B225 /* Compare */,
 				3D422DAC1366C84A00DA0F53 /* About */,
+				3D6289C4138D1D65008B3C08 /* MethodologyViewController.h */,
+				3D6289C5138D1D65008B3C08 /* MethodologyViewController.m */,
+				3D6289C6138D1D65008B3C08 /* MethodologyViewController.xib */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -292,6 +304,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3D6289E3138D4D11008B3C08 /* Methodology */,
 				3DD5E8BE138AC8DC00D968C2 /* green_league_2011.sqlite */,
 				3D308E16131658B800D37010 /* Rakefile */,
 				3DF051C0131FA15700AC430F /* AwardClassHelper.h */,
@@ -395,6 +408,15 @@
 				3D308E621316BBC600D37010 /* AboutViewController.xib */,
 			);
 			name = About;
+			sourceTree = "<group>";
+		};
+		3D6289E3138D4D11008B3C08 /* Methodology */ = {
+			isa = PBXGroup;
+			children = (
+				3D6289CB138D25A0008B3C08 /* Methodology.html */,
+				3D6289E1138D4D0C008B3C08 /* jquery-1.6.1.min.js */,
+			);
+			name = Methodology;
 			sourceTree = "<group>";
 		};
 		3DB0D95213152221006FC601 /* Images */ = {
@@ -582,6 +604,9 @@
 				3DD5E8D8138BFB5F00D968C2 /* gl11-raw-export-final-key.csv in Resources */,
 				3DD5E8DB138CFD9E00D968C2 /* donate_button.jpg in Resources */,
 				3DD5E8DC138CFD9E00D968C2 /* donate_button@2x.jpg in Resources */,
+				3D6289C8138D1D65008B3C08 /* MethodologyViewController.xib in Resources */,
+				3D6289CC138D25A0008B3C08 /* Methodology.html in Resources */,
+				3D6289E4138D4ED3008B3C08 /* jquery-1.6.1.min.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,6 +642,7 @@
 				3DAF68551386B27B0042E84C /* University.m in Sources */,
 				3DD5E8C2138BB12C00D968C2 /* ScoreClassHelper.m in Sources */,
 				3DD5E8DF138D05E200D968C2 /* UIApplication+Helper.m in Sources */,
+				3D6289C7138D1D65008B3C08 /* MethodologyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

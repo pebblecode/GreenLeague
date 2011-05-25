@@ -9,6 +9,7 @@
 #import "UniversityMoreDetailViewController.h"
 #import "ScoreKey.h"
 #import "ScoreClassHelper.h"
+#import "MethodologyViewController.h"
 
 // Global variables
 #define kPolicySectionIndex 0
@@ -186,14 +187,11 @@ static NSString *kDataSourceTotalScoreKey = @"totalScore";
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-    // ...
-    // Pass the selected object to the new view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
-    [detailViewController release];
-    */
+
+    MethodologyViewController *methodologyViewController = [[MethodologyViewController alloc] initWithNibName:nil bundle:nil];
+
+    [self.navigationController pushViewController:methodologyViewController animated:YES];
+    [methodologyViewController release];
 }
 
 #pragma mark -
