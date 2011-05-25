@@ -99,6 +99,7 @@
 		3DD5E8D8138BFB5F00D968C2 /* gl11-raw-export-final-key.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3DD5E8D7138BFB5F00D968C2 /* gl11-raw-export-final-key.csv */; };
 		3DD5E8DB138CFD9E00D968C2 /* donate_button.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3DD5E8D9138CFD9D00D968C2 /* donate_button.jpg */; };
 		3DD5E8DC138CFD9E00D968C2 /* donate_button@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3DD5E8DA138CFD9D00D968C2 /* donate_button@2x.jpg */; };
+		3DD5E8DF138D05E200D968C2 /* UIApplication+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5E8DE138D05E000D968C2 /* UIApplication+Helper.m */; };
 		3DE4281E1327F49C002C53CE /* UniversityComparisonTitlesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE4281C1327F499002C53CE /* UniversityComparisonTitlesViewController.m */; };
 		3DE4281F1327F49C002C53CE /* UniversityComparisonTitlesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DE4281D1327F49A002C53CE /* UniversityComparisonTitlesViewController.xib */; };
 		3DF051C2131FA15700AC430F /* AwardClassHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF051C1131FA15700AC430F /* AwardClassHelper.m */; };
@@ -221,6 +222,8 @@
 		3DD5E8D7138BFB5F00D968C2 /* gl11-raw-export-final-key.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "gl11-raw-export-final-key.csv"; sourceTree = "<group>"; };
 		3DD5E8D9138CFD9D00D968C2 /* donate_button.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = donate_button.jpg; sourceTree = "<group>"; };
 		3DD5E8DA138CFD9D00D968C2 /* donate_button@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "donate_button@2x.jpg"; sourceTree = "<group>"; };
+		3DD5E8DD138D05DF00D968C2 /* UIApplication+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Helper.h"; sourceTree = "<group>"; };
+		3DD5E8DE138D05E000D968C2 /* UIApplication+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Helper.m"; sourceTree = "<group>"; };
 		3DE4281B1327F498002C53CE /* UniversityComparisonTitlesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniversityComparisonTitlesViewController.h; sourceTree = "<group>"; };
 		3DE4281C1327F499002C53CE /* UniversityComparisonTitlesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniversityComparisonTitlesViewController.m; sourceTree = "<group>"; };
 		3DE4281D1327F49A002C53CE /* UniversityComparisonTitlesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UniversityComparisonTitlesViewController.xib; sourceTree = "<group>"; };
@@ -295,6 +298,8 @@
 				3DF051C1131FA15700AC430F /* AwardClassHelper.m */,
 				3DD5E8C0138BB12C00D968C2 /* ScoreClassHelper.h */,
 				3DD5E8C1138BB12C00D968C2 /* ScoreClassHelper.m */,
+				3DD5E8DD138D05DF00D968C2 /* UIApplication+Helper.h */,
+				3DD5E8DE138D05E000D968C2 /* UIApplication+Helper.m */,
 				3D308E091316552A00D37010 /* NSString+Helper.h */,
 				3D308E0A1316552A00D37010 /* NSString+Helper.m */,
 				3D03A6E4131E5A8B00F6B225 /* NSNumber+Helper.h */,
@@ -611,6 +616,7 @@
 				3DAF68541386B27B0042E84C /* ScoreKey.m in Sources */,
 				3DAF68551386B27B0042E84C /* University.m in Sources */,
 				3DD5E8C2138BB12C00D968C2 /* ScoreClassHelper.m in Sources */,
+				3DD5E8DF138D05E200D968C2 /* UIApplication+Helper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

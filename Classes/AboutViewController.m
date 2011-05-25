@@ -7,7 +7,7 @@
 //
 
 #import "AboutViewController.h"
-
+#import "UIApplication+Helper.h"
 
 @implementation AboutViewController
 
@@ -56,21 +56,15 @@
 #pragma mark 
 
 - (IBAction)greenLeagueButtonPress {
-	NSString *urlAddress = @"http://peopleandplanet.org/greenleague";
-	NSURL *url = [NSURL URLWithString:urlAddress];		
-	[[UIApplication sharedApplication] openURL:url];		
+    [UIApplication openInApplicationWithURL:@"http://peopleandplanet.org/greenleague"];	
 }
 
 - (IBAction) pebbleLink:(UIButton *)sender {
-	NSString *urlAddress = @"http://pebbleit.com/";		
-	NSURL *url = [NSURL URLWithString:urlAddress];		
-	[[UIApplication sharedApplication] openURL:url];
+    [UIApplication openInApplicationWithURL:@"http://pebbleit.com/"];	    
 }
 
 - (IBAction) donateButtonPress:(UIButton *)sender {
-	NSString *urlAddress = @"http://peopleandplanet.org/greenleague/donate/";
-	NSURL *url = [NSURL URLWithString:urlAddress];		
-	[[UIApplication sharedApplication] openURL:url];
+    [UIApplication openInApplicationWithURL:@"http://peopleandplanet.org/greenleague/donate/"];    
 }
 
 @end
