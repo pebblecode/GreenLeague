@@ -12,7 +12,7 @@ static NSString *kMethodologyHtmlFile = @"Methodology";
 
 @implementation MethodologyViewController
 
-@synthesize webView;
+@synthesize webView, scoreKey;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -24,10 +24,20 @@ static NSString *kMethodologyHtmlFile = @"Methodology";
     return self;
 }
 
+- (id)initWithScoreKey:(ScoreKey *)sk {
+    self = [self initWithNibName:nil bundle:nil];
+    if (self) {
+        scoreKey = sk;
+    }
+    return self;    
+}
+
 - (void)dealloc
 {
-    [super dealloc];
     [webView release];
+    //[scoreKey release]; // Don't need to release?
+    
+    [super dealloc];    
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,8 +57,21 @@ static NSString *kMethodologyHtmlFile = @"Methodology";
 	NSString *methodologyFilePath = [[NSBundle mainBundle] pathForResource:kMethodologyHtmlFile ofType:@"html"];   
     
     // Load  file url into webview
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:methodologyFilePath]]];
+//    NSURL *fileUrl = [[NSURL fileURLWithPath:methodologyFilePath] URLByAppendingPathComponent:@"q5_subtotal"]; // Add /q5_subtotal
+//    NSURL *fileUrl = [NSURL fileURLWithPath:methodologyFilePath];    
+//    
+//    NSLog(@"fileUrl = %@", fileUrl);
+//    [self.webView loadRequest:[NSURLRequest requestWithURL:fileUrl]];
+    
+//    NSURL *fileUrl2 = [NSURL fileURLWithPath:[methodologyFilePath stringByAppendingFormat:@"#q5_subtotal"]];
+//    [self.webView loadRequest:[NSURLRequest requestWithURL:fileUrl2]];
+//    NSLog(@"fileUrl2 = %@, reachable? %d", fileUrl2, [fileUrl2 checkResourceIsReachableAndReturnError:nil]);
 
+    // Load file into a string first, then load into webview as a string
+    NSString *methodologyFileContents = [NSString stringWithContentsOfFile:methodologyFilePath encoding:NSUTF8StringEncoding error:nil];
+    NSString *baseUrl = [NSString stringWithFormat:@"http://greenleague.app/#%@", scoreKey.key];
+    [self.webView loadHTMLString:methodologyFileContents baseURL:[NSURL URLWithString:baseUrl]];
+    
 }
 
 - (void)viewDidUnload

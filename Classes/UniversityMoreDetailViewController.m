@@ -32,6 +32,7 @@ static NSString *kDataSourceTotalScoreKey = @"totalScore";
 - (void)storeDataSourceArray;
 - (NSDictionary *)findDataForIndexPath:(NSIndexPath *)indexPath;
 - (UIImage *)findRatingImageForIndexPath:(NSIndexPath *)indexPath;
+- (ScoreKey *)findScoreKeyFromIndexPath:(NSIndexPath *)indexPath;
 
 @end
 
@@ -188,7 +189,7 @@ static NSString *kDataSourceTotalScoreKey = @"totalScore";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    MethodologyViewController *methodologyViewController = [[MethodologyViewController alloc] initWithNibName:nil bundle:nil];
+    MethodologyViewController *methodologyViewController = [[MethodologyViewController alloc] initWithScoreKey:[self findScoreKeyFromIndexPath:indexPath]];
 
     [self.navigationController pushViewController:methodologyViewController animated:YES];
     [methodologyViewController release];
@@ -215,7 +216,13 @@ static NSString *kDataSourceTotalScoreKey = @"totalScore";
 // Reverses how storeDataSourceArrayWithUniversitiesModel stores the scores
 - (UIImage *)findRatingImageForIndexPath:(NSIndexPath *)indexPath {
     
+    ScoreKey *scoreKey = [self findScoreKeyFromIndexPath:indexPath];
     
+    return [ScoreClassHelper imageFromUniScoreKey:scoreKey university:self.university universitiesModel:self.universitiesModel];
+
+}
+
+- (ScoreKey *)findScoreKeyFromIndexPath:(NSIndexPath *)indexPath {
     // Calculate the score key index by looking at what array it is, and adding the sum of all the previous array counts
     
     NSArray *scoreKeys = self.universitiesModel.questionScoreKeys;
@@ -232,13 +239,10 @@ static NSString *kDataSourceTotalScoreKey = @"totalScore";
         
     } else {
         NSLog(@"Error in finding: %@", indexPath);
-        return [UIImage imageNamed:@"star_poor"];
     }
     
-    return [ScoreClassHelper imageFromUniScoreKey:scoreKey university:self.university universitiesModel:self.universitiesModel];
-
- }
-     
+    return scoreKey;
+}
      
 // Structure:
 //		dataSourceArray
