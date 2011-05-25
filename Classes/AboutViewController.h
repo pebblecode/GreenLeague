@@ -15,5 +15,6 @@
 
 - (IBAction)greenLeagueButtonPress;
 - (IBAction) pebbleLink:(UIButton *)sender;
+- (IBAction) donateButtonPress:(UIButton *)sender;
 
 @end

@@ -67,4 +67,10 @@
 	[[UIApplication sharedApplication] openURL:url];
 }
 
+- (IBAction) donateButtonPress:(UIButton *)sender {
+	NSString *urlAddress = @"http://peopleandplanet.org/greenleague/donate/";
+	NSURL *url = [NSURL URLWithString:urlAddress];		
+	[[UIApplication sharedApplication] openURL:url];
+}
+
 @end
