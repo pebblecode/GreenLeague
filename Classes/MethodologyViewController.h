@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "ScoreKey.h"
 
-@interface MethodologyViewController : UIViewController {
+@interface MethodologyViewController : UIViewController <UIWebViewDelegate> {
     UIWebView *webView;
     ScoreKey *scoreKey;
+    UIActivityIndicatorView *activityIndicator;
 }
 
+@property (nonatomic, retain) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (nonatomic, retain) IBOutlet UIWebView *webView;
 @property (nonatomic, retain) ScoreKey *scoreKey;
 

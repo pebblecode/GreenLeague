@@ -12,7 +12,7 @@ static NSString *kMethodologyHtmlFile = @"Methodology";
 
 @implementation MethodologyViewController
 
-@synthesize webView, scoreKey;
+@synthesize webView, scoreKey, activityIndicator;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -54,6 +54,11 @@ static NSString *kMethodologyHtmlFile = @"Methodology";
 {
     [super viewDidLoad];
     
+    // Set activity indicator
+    [self.webView setDelegate:self];
+    self.activityIndicator.hidesWhenStopped = YES;
+    [self.activityIndicator startAnimating];
+    
 	NSString *methodologyFilePath = [[NSBundle mainBundle] pathForResource:kMethodologyHtmlFile ofType:@"html"];   
     
     // Load  file url into webview
@@ -71,7 +76,7 @@ static NSString *kMethodologyHtmlFile = @"Methodology";
     NSString *methodologyFileContents = [NSString stringWithContentsOfFile:methodologyFilePath encoding:NSUTF8StringEncoding error:nil];
     NSString *baseUrl = [NSString stringWithFormat:@"http://greenleague.app/#%@", scoreKey.key];
     [self.webView loadHTMLString:methodologyFileContents baseURL:[NSURL URLWithString:baseUrl]];
-    
+
 }
 
 - (void)viewDidUnload
@@ -85,6 +90,15 @@ static NSString *kMethodologyHtmlFile = @"Methodology";
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+
+#pragma mark -
+#pragma mark === Web view delegate methods ===
+#pragma mark
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    [self.activityIndicator stopAnimating];
 }
 
 @end
