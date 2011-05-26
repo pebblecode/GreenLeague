@@ -29,6 +29,7 @@ static NSString *kMethodologyHtmlFile = @"Methodology";
     self = [self initWithNibName:nil bundle:nil];
     if (self) {
         scoreKey = sk;
+        self.title = sk.shortName;
     }
     return self;    
 }

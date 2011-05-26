@@ -269,7 +269,8 @@ static NSString *kDataSourceTotalScoreKey = @"totalScore";
         Score *uniScore = [self.universitiesModel findScoreForUniversity:self.university scoreKey:scoreKey];
         
         NSDictionary *scoreData = [NSDictionary dictionaryWithObjectsAndKeys:
-                                   scoreKey.text, kDataSourceTitleKey, 
+                                   ((scoreKey.shortName.length > 0) ? scoreKey.shortName :
+                                       scoreKey.text), kDataSourceTitleKey, 
                                    uniScore.value, kDataSourceScoreKey,
                                    scoreKey.maxScore, kDataSourceTotalScoreKey,                  
                                    nil];
