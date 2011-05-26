@@ -56,10 +56,11 @@ static NSString *kMethodologyHtmlFile = @"Methodology";
     [super viewDidLoad];
     
     // Set activity indicator
-    [self.webView setDelegate:self];
     self.activityIndicator.hidesWhenStopped = YES;
     [self.activityIndicator startAnimating];
     
+    // Set web view
+    [self.webView setDelegate:self];
 	NSString *methodologyFilePath = [[NSBundle mainBundle] pathForResource:kMethodologyHtmlFile ofType:@"html"];   
     
     if (scoreKey) { // Load the page with a #scorekey after the url - javascript in the html can process it
@@ -86,7 +87,6 @@ static NSString *kMethodologyHtmlFile = @"Methodology";
         NSURL *fileUrl = [NSURL fileURLWithPath:methodologyFilePath];
         [self.webView loadRequest:[NSURLRequest requestWithURL:fileUrl]];
     }
-
 }
 
 - (void)viewDidUnload
@@ -106,6 +106,17 @@ static NSString *kMethodologyHtmlFile = @"Methodology";
 #pragma mark -
 #pragma mark === Web view delegate methods ===
 #pragma mark
+
+
+-(BOOL) webView:(UIWebView *)inWeb shouldStartLoadWithRequest:(NSURLRequest *)inRequest navigationType:(UIWebViewNavigationType)inType {
+    
+    if (inType == UIWebViewNavigationTypeLinkClicked) {
+        [[UIApplication sharedApplication] openURL:[inRequest URL]];
+        return NO;
+    }
+    
+    return YES;
+}
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     [self.activityIndicator stopAnimating];
