@@ -21,6 +21,8 @@
 #define kPerformanceStartIndex 9 
 #define kPerformanceLastIndex  12
 
+#define kMaxTextLength         30 // The maximum text length before the short name is used
+
 // Data source keys
 static NSString *kDataSourceTitleKey = @"title";
 static NSString *kDataSourceScoreKey = @"score";
@@ -268,9 +270,17 @@ static NSString *kDataSourceTotalScoreKey = @"totalScore";
         ScoreKey *scoreKey = [scoreKeys objectAtIndex:i];        
         Score *uniScore = [self.universitiesModel findScoreForUniversity:self.university scoreKey:scoreKey];
         
+        // Use short name if score text is too long and short name exists, otherwise use score text        
+        NSString *title = nil;
+        if ((scoreKey.text.length > kMaxTextLength) &&
+                (scoreKey.shortName.length > 0)) {
+            title = scoreKey.shortName;
+        } else {
+            title = scoreKey.text;
+        }
+        
         NSDictionary *scoreData = [NSDictionary dictionaryWithObjectsAndKeys:
-                                   ((scoreKey.shortName.length > 0) ? scoreKey.shortName :
-                                       scoreKey.text), kDataSourceTitleKey, 
+                                   title, kDataSourceTitleKey, 
                                    uniScore.value, kDataSourceScoreKey,
                                    scoreKey.maxScore, kDataSourceTotalScoreKey,                  
                                    nil];
