@@ -5,7 +5,7 @@
 <style type="text/css"> 
 	body {
 		font-family: 'Helvetica Neue', Helvetica, sans-serif;
-		font-size: 17px;
+		font-size: 15px;
 	}
 	
 	ol {
@@ -15,12 +15,33 @@
 	#wrapper {
 		
 	}
+	h1, h2, h3, h4, h5, h6 {
+		color: #E60034;
+		margin: 1em 0 0.6em;
+		font-weight: normal;
+	}
+	h1 {
+		font-size: 24px;
+		line-height: 1em;
+		margin: 0 0 0.6em;
+	}
 	h2 {
-		font-size: 20px;
-		margin-bottom: 10px;
+		font-size: 17px;
+		line-height: 1em;		
+	}
+	h3 {
+		color: #6F8A00;
+		font-size: 15px;
+		line-height: 1em;
+	}
+	h4 {
+		font-size: 15px;
+		line-height: 1em;		
 	}
 	
-	p {
+	p, ol, ul {
+		font-size: 13px;
+		line-height: 1em;		
 		margin-top: 0;
 	}
 	
@@ -57,8 +78,9 @@
         
         if (urlHash.length > 0) {
 	        // Hide all 
-	        $("#wrapper li").hide();
-	        
+					$("#wrapper").children().not(".criteria-listing").hide();
+	        $(".criteria-listing li").hide();
+	
 	        // Show section that is in url hash
 	        $(window.location.hash).show();
         }
@@ -70,71 +92,86 @@
         
 
 <body>
-    <ol id="wrapper">
-        <li id="q1_subtotal">
-            <h2>1. Environmental Policy (5 points)</h2>
-            <p>Full points for a publicly-available environmental policy which sets clear time-bound targets for reducing key environmental impacts. Must be reported on annually at senior level.</p>
-        </li>
-        
-        <li id="q2_subtotal">
-            <h2>2. Environmental Management Staff (8 points)</h2>
-    				<p>Points for having between at least 0.5 and 2 full-time equivalent staff members devoted to environmental management.  Calculated based on number FTE staff per 5000 students.</p>
-				</li>
+	<div id="wrapper">		
+		<h1>Methodology</h1>
+		<h2>What is the People &amp; Planet Green League?</h2>
+		<p>The only comprehensive and independent league table of UK universities ranked by environmental and ethical performance. It is compiled annually by the UK's largest student campaigning network, People &amp; Planet. In 2011, 143 universities provided People &amp; Planet and <a href="http://www.hesa.ac.uk/">HESA</a> with enough information to be entered into the league table.</p>
+	
+		<h2>How are universities scored?</h2>
+		<p>The People &amp; Planet Green League 2011 ranks institutions according to 13 environmental and ethical criteria designed to assess their policy &amp; senior-level commitment to environmental management (40 points), as well as key indicators of their actual performance against policy commitments(30 points).</p>
+	
+		<h2>The Criteria:</h2>
+		<h3>Management &amp; Policy Section</h3>
+    <ol class="criteria-listing">
+      <li id="q1_subtotal">
+          <h4>1. Environmental Policy (5 points)</h4>
+          <p>Full points for a publicly-available environmental policy which sets clear time-bound targets for reducing key environmental impacts. Must be reported on annually at senior level.</p>
+      </li>
+      
+      <li id="q2_subtotal">
+          <h4>2. Environmental Management Staff (8 points)</h4>
+  				<p>Points for having between at least 0.5 and 2 full-time equivalent staff members devoted to environmental management.  Calculated based on number FTE staff per 5000 students.</p>
+		</li>
+		
+      <li id="q3_subtotal">
+          <h4>3. Environmental Auditing and Management Systems (8 points)</h4>
+  				<p>4 points for auditing procedures to establish environmental impacts in key areas such as waste, water, procurement and biodiversity. Additional points for using an externally-accredited environmental management system such as ISO14001.</p>
+		</li>
+		
+      <li id="q4_subtotal">
+          <h4>4. Ethical Investment (3 points)</h4>
+  				<p>Full points for an investment approach that takes into account the environmental and social impacts of investments.  Must include opportunities for students and staff to engage with policy and also clear evidence that ethical investment action has been taken as a result of the policy.</p>
+		</li>
+		
+      <li id="q5_subtotal">
+          <h4>5. Carbon Management (7 points)</h4>
+  				<p>How strong and ambitious are universities' Carbon Management Plans and carbon reduction targets? Bonus points for targets that include the full scope of climate emissions, including those from business flights, daily commuting, international student travel and procurement.</p>  
+		</li>
+		
+      <li id="q6_subtotal">
+          <h4>6. Fairtrade &amp; Ethical Procurement (2 points - NEW criteria)</h4>
+  				<p>One point for achieving Fairtrade University status, one point for considering human rights impacts in other supply chains such as garments and IT.</p>
+		</li>
+		
+      <li id="q7_subtotal">
+          <h4>7. Sustainable Food (2 points - NEW criteria)</h4>
+  				<p>Points awarded for having a publicly-available sustainable food policy, as well as key actions such as purchasing 100% free-range eggs and using seasonal ingredients.</p>
+		</li>
+		
+      <li id="q8_subtotal">
+          <h4>8. Staff and Student Engagement (3 points)</h4>
+  				<p>Rewards universities doing the most to engage staff and students in behaviour change in diverse and creative ways, from <a href="http://peopleandplanet.org/gogreenweek">Go Green Week</a> to formal student and staff union representation.</p>
+		</li>
+		
+      <li id="q9_subtotal">
+          <h4>9. Curriculum (2 points - NEW criteria)</h4>
+  				<p>Full points for taking key steps to integrate sustainability into all teaching and research activities. This is key to producing graduates who are able to understand and tackle the interlinked social and environmental problems that we face over the next century.</p>
+		</li>
+		</ol>
 				
-        <li id="q3_subtotal">
-            <h2>3. Environmental Auditing and Management Systems (8 points)</h2>
-    				<p>4 points for auditing procedures to establish environmental impacts in key areas such as waste, water, procurement and biodiversity. Additional points for using an externally-accredited environmental management system such as ISO14001.</p>
-				</li>
-				
-        <li id="q4_subtotal">
-            <h2>4. Ethical Investment (3 points)</h2>
-    				<p>Full points for an investment approach that takes into account the environmental and social impacts of investments.  Must include opportunities for students and staff to engage with policy and also clear evidence that ethical investment action has been taken as a result of the policy.</p>
-				</li>
-				
-        <li id="q5_subtotal">
-            <h2>5. Carbon Management (7 points)</h2>
-    				<p>How strong and ambitious are universities' Carbon Management Plans and carbon reduction targets? Bonus points for targets that include the full scope of climate emissions, including those from business flights, daily commuting, international student travel and procurement.</p>  
-				</li>
-				
-        <li id="q6_subtotal">
-            <h2>6. Fairtrade &amp; Ethical Procurement (2 points - NEW criteria)</h2>
-    				<p>One point for achieving Fairtrade University status, one point for considering human rights impacts in other supply chains such as garments and IT.</p>
-				</li>
-				
-        <li id="q7_subtotal">
-            <h2>7. Sustainable Food (2 points - NEW criteria)</h2>
-    				<p>Points awarded for having a publicly-available sustainable food policy, as well as key actions such as purchasing 100% free-range eggs and using seasonal ingredients.</p>
-				</li>
-				
-        <li id="q8_subtotal">
-            <h2>8. Staff and Student Engagement (3 points)</h2>
-    				<p>Rewards universities doing the most to engage staff and students in behaviour change in diverse and creative ways, from <a href="http://peopleandplanet.org/gogreenweek">Go Green Week</a> to formal student and staff union representation.</p>
-				</li>
-				
-        <li id="q9_subtotal">
-            <h2>9. Curriculum (2 points - NEW criteria)</h2>
-    				<p>Full points for taking key steps to integrate sustainability into all teaching and research activities. This is key to producing graduates who are able to understand and tackle the interlinked social and environmental problems that we face over the next century.</p>
-				</li>
-				
+		<h3>Performance Section</h3>
+		<ol class="criteria-listing">
         <li id="q10_subtotal">
-            <h2>10. Energy Sources (6 points)</h2>
+            <h4>10. Energy Sources (6 points)</h4>
     				<p>Compares the amount of renewable energy institutions' purchase and generate on-site against each other. Includes CHP.</p>
 				</li>
 				
         <li id="q11_subtotal">
-            <h2>11. Waste &amp; Recycling (8 points)</h2>
+            <h4>11. Waste &amp; Recycling (8 points)</h4>
     				<p>Compares the amount of waste mass per head each institutions generates and the percentage recycled.</p>
 				</li>
 				
         <li id="q12_subtotal">
-            <h2>12. Carbon reduction (10 points)</h2>
+            <h4>12. Carbon reduction (10 points)</h4>
     				<p>Compares the total carbon emissions per head and ranks institutions according to the actual level of carbon reductions achieved since 2005 compared to sector-wide targets.</p>
 				</li>
 				
         <li id="q13_subtotal">
-            <h2>13. Water Reduction (6 points)</h2>
+            <h4>13. Water Reduction (6 points)</h4>
     				<p>Compares institutions' water use per head and the percentage of grey or rainwater used.</p>
 				</li>				
-    </ol>
+    </ol>		
+		
+	</div>
 </body>
 </html>
