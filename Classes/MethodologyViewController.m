@@ -84,7 +84,6 @@ static NSString *kMethodologyHtmlFile = @"Methodology";
         
         // Load file url into webview
         NSURL *fileUrl = [NSURL fileURLWithPath:methodologyFilePath];
-        NSLog(@"fileUrl for whole page: %@", fileUrl);
         [self.webView loadRequest:[NSURLRequest requestWithURL:fileUrl]];
     }
 
