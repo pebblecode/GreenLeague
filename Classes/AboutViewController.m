@@ -9,7 +9,11 @@
 #import "AboutViewController.h"
 #import "UIApplication+Helper.h"
 
+static NSString *kAboutHtmlFile = @"About";
+
 @implementation AboutViewController
+
+@synthesize aboutWebView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 	if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
@@ -18,12 +22,20 @@
 	return self;
 }
 
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+     // Load file url into webview
+    NSString *aboutFilePath = [[NSBundle mainBundle] pathForResource:kAboutHtmlFile ofType:@"html"];   
+    NSURL *fileUrl = [NSURL fileURLWithPath:aboutFilePath];
+    [self.aboutWebView loadRequest:[NSURLRequest requestWithURL:fileUrl]];    
+    
+    self.aboutWebView.delegate = self;
+    // Make background transparent (see http://stackoverflow.com/questions/3646930/how-to-make-a-transparent-uiwebview/3935033#3935033)
+    self.aboutWebView.opaque = NO;
+    self.aboutWebView.backgroundColor = [UIColor clearColor];
 }
-*/
+
 
 /*
 // Override to allow orientations other than the default portrait orientation.
@@ -48,6 +60,7 @@
 
 
 - (void)dealloc {
+    [aboutWebView release]; aboutWebView = nil;
     [super dealloc];
 }
 
@@ -65,6 +78,21 @@
 
 - (IBAction) donateButtonPress:(UIButton *)sender {
     [UIApplication openInApplicationWithURL:@"http://peopleandplanet.org/greenleague/donate/"];    
+}
+
+#pragma mark -
+#pragma mark === Web view delegate methods ===
+#pragma mark
+
+
+-(BOOL) webView:(UIWebView *)inWeb shouldStartLoadWithRequest:(NSURLRequest *)inRequest navigationType:(UIWebViewNavigationType)inType {
+    
+    if (inType == UIWebViewNavigationTypeLinkClicked) {
+        [[UIApplication sharedApplication] openURL:[inRequest URL]];
+        return NO;
+    }
+    
+    return YES;
 }
 
 @end

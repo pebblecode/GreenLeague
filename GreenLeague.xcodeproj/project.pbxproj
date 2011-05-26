@@ -47,6 +47,7 @@
 		3D6289E4138D4ED3008B3C08 /* jquery-1.6.1.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 3D6289E1138D4D0C008B3C08 /* jquery-1.6.1.min.js */; };
 		3D73126B138E698B007F6962 /* 179-notepad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D731269138E698B007F6962 /* 179-notepad.png */; };
 		3D73126C138E698B007F6962 /* 179-notepad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D73126A138E698B007F6962 /* 179-notepad@2x.png */; };
+		3D73129E138E8C0F007F6962 /* About.html in Resources */ = {isa = PBXBuildFile; fileRef = 3D73129D138E8C0F007F6962 /* About.html */; };
 		3D7E78B31372B0E9009F4A35 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D7E78AF1372B0E9009F4A35 /* Icon-72.png */; };
 		3D7E78B41372B0E9009F4A35 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D7E78B01372B0E9009F4A35 /* Icon.png */; };
 		3D7E78B51372B0E9009F4A35 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D7E78B11372B0E9009F4A35 /* Icon@2x.png */; };
@@ -166,6 +167,7 @@
 		3D6289E1138D4D0C008B3C08 /* jquery-1.6.1.min.js */ = {isa = PBXFileReference; explicitFileType = sourcecode.javascript; fileEncoding = 4; name = "jquery-1.6.1.min.js"; path = "Methodology/jquery-1.6.1.min.js"; sourceTree = "<group>"; };
 		3D731269138E698B007F6962 /* 179-notepad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "179-notepad.png"; sourceTree = "<group>"; };
 		3D73126A138E698B007F6962 /* 179-notepad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "179-notepad@2x.png"; sourceTree = "<group>"; };
+		3D73129D138E8C0F007F6962 /* About.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = About.html; sourceTree = SOURCE_ROOT; };
 		3D7E78AF1372B0E9009F4A35 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		3D7E78B01372B0E9009F4A35 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		3D7E78B11372B0E9009F4A35 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
@@ -407,6 +409,7 @@
 				3D308E601316BBC600D37010 /* AboutViewController.h */,
 				3D308E611316BBC600D37010 /* AboutViewController.m */,
 				3D308E621316BBC600D37010 /* AboutViewController.xib */,
+				3D73129D138E8C0F007F6962 /* About.html */,
 			);
 			name = About;
 			sourceTree = "<group>";
@@ -611,6 +614,7 @@
 				3D6289E4138D4ED3008B3C08 /* jquery-1.6.1.min.js in Resources */,
 				3D73126B138E698B007F6962 /* 179-notepad.png in Resources */,
 				3D73126C138E698B007F6962 /* 179-notepad@2x.png in Resources */,
+				3D73129E138E8C0F007F6962 /* About.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

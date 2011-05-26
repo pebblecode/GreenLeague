@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 
 
-@interface AboutViewController : UIViewController {
-
+@interface AboutViewController : UIViewController <UIWebViewDelegate> {
+    UIWebView *aboutWebView;    
 }
+
+@property (nonatomic, retain) IBOutlet UIWebView *aboutWebView;
 
 - (IBAction)greenLeagueButtonPress;
 - (IBAction) pebbleLink:(UIButton *)sender;
