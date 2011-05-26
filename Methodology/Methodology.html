@@ -53,11 +53,15 @@
 <script  type="text/javascript">
 	
     $(document).ready(function(){
-        // Hide all 
-        $("#wrapper li").hide();
+        var urlHash = window.location.hash;
         
-        // Show section that is in url hash
-        $(window.location.hash).show();
+        if (urlHash.length > 0) {
+	        // Hide all 
+	        $("#wrapper li").hide();
+	        
+	        // Show section that is in url hash
+	        $(window.location.hash).show();
+        }
     });
                       
 </script>

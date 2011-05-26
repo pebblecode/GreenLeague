@@ -20,6 +20,7 @@ static NSString *kMethodologyHtmlFile = @"Methodology";
     if (self) {
         // Custom initialization
         self.title = @"Methodology";
+		self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Methodology" image:[UIImage imageNamed:@"179-notepad.png"] tag:1];	        
     }
     return self;
 }
@@ -61,21 +62,31 @@ static NSString *kMethodologyHtmlFile = @"Methodology";
     
 	NSString *methodologyFilePath = [[NSBundle mainBundle] pathForResource:kMethodologyHtmlFile ofType:@"html"];   
     
-    // Load  file url into webview
-//    NSURL *fileUrl = [[NSURL fileURLWithPath:methodologyFilePath] URLByAppendingPathComponent:@"q5_subtotal"]; // Add /q5_subtotal
-//    NSURL *fileUrl = [NSURL fileURLWithPath:methodologyFilePath];    
-//    
-//    NSLog(@"fileUrl = %@", fileUrl);
-//    [self.webView loadRequest:[NSURLRequest requestWithURL:fileUrl]];
+    if (scoreKey) { // Load the page with a #scorekey after the url - javascript in the html can process it
     
-//    NSURL *fileUrl2 = [NSURL fileURLWithPath:[methodologyFilePath stringByAppendingFormat:@"#q5_subtotal"]];
-//    [self.webView loadRequest:[NSURLRequest requestWithURL:fileUrl2]];
-//    NSLog(@"fileUrl2 = %@, reachable? %d", fileUrl2, [fileUrl2 checkResourceIsReachableAndReturnError:nil]);
+//        // Load  file url into webview
+//        NSURL *fileUrl = [[NSURL fileURLWithPath:methodologyFilePath] URLByAppendingPathComponent:@"q5_subtotal"]; // Add /q5_subtotal
+//        NSURL *fileUrl = [NSURL fileURLWithPath:methodologyFilePath];    
+//
+//        NSLog(@"fileUrl = %@", fileUrl);
+//        [self.webView loadRequest:[NSURLRequest requestWithURL:fileUrl]];
+//    
+//        NSURL *fileUrl2 = [NSURL fileURLWithPath:[methodologyFilePath stringByAppendingFormat:@"#q5_subtotal"]];
+//        [self.webView loadRequest:[NSURLRequest requestWithURL:fileUrl2]];
+//        NSLog(@"fileUrl2 = %@, reachable? %d", fileUrl2, [fileUrl2 checkResourceIsReachableAndReturnError:nil]);
 
-    // Load file into a string first, then load into webview as a string
-    NSString *methodologyFileContents = [NSString stringWithContentsOfFile:methodologyFilePath encoding:NSUTF8StringEncoding error:nil];
-    NSString *baseUrl = [NSString stringWithFormat:@"http://greenleague.app/#%@", scoreKey.key];
-    [self.webView loadHTMLString:methodologyFileContents baseURL:[NSURL URLWithString:baseUrl]];
+        // Load file into a string first, then load into webview as a string
+        NSString *methodologyFileContents = [NSString stringWithContentsOfFile:methodologyFilePath encoding:NSUTF8StringEncoding error:nil];    
+        NSString *baseUrl = [NSString stringWithFormat:@"http://greenleague.app/#%@", scoreKey.key];
+        [self.webView loadHTMLString:methodologyFileContents baseURL:[NSURL URLWithString:baseUrl]];
+
+    } else { // Just load the whole page
+        
+        // Load file url into webview
+        NSURL *fileUrl = [NSURL fileURLWithPath:methodologyFilePath];
+        NSLog(@"fileUrl for whole page: %@", fileUrl);
+        [self.webView loadRequest:[NSURLRequest requestWithURL:fileUrl]];
+    }
 
 }
 

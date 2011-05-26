@@ -9,6 +9,7 @@
 #import "GreenLeagueAppDelegate.h"
 #import "FindViewController.h"
 #import "CompareViewController.h"
+#import "MethodologyViewController.h"
 #import "AboutViewController.h"
 #import	"UniversitiesModel.h"
 
@@ -35,14 +36,18 @@
     CompareViewController *compareVC = [[CompareViewController alloc] initWithUniversitiesModel:universitiesModel];    
     UINavigationController *compareNavController = [[UINavigationController alloc] initWithRootViewController:compareVC];
     [compareVC release];
+
+    // Compare view controller
+    MethodologyViewController *methodologyVC = [[MethodologyViewController alloc] init]; 
     
 	AboutViewController *aboutVC = [[AboutViewController alloc] init];    
     
-    NSArray *tabVCs = [NSArray arrayWithObjects:findNavController, compareNavController, aboutVC, nil];
+    NSArray *tabVCs = [NSArray arrayWithObjects:findNavController, compareNavController, methodologyVC, aboutVC, nil];
     [tabBarController setViewControllers:tabVCs animated:YES]; // Doesn't seem to animate	
 	
 	[findNavController release];
 	[compareNavController release];
+    [methodologyVC release];
 	[aboutVC release];
 	[universitiesModel release];
 
