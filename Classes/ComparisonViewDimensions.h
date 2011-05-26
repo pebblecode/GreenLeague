@@ -1,7 +1,7 @@
 // Comparison view table dimensions for objects
 
 // Note: padding is not included in view creations, it is used to lay out objects manually
-#define kViewHeight                  50.0
+#define kRowHeight                   50.0
 #define kUniLabelWidth               185.0
 #define kUniLabelPadding             10.0
 #define kUniLabelFullWidth           (kUniLabelWidth + (2 * kUniLabelPadding)) // Left and right padding

@@ -237,11 +237,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Classes/CompareViewController.m"
-         timestampString = "326226755.997518"
+         timestampString = "328121150.192899"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "96"
-         endingLineNumber = "96"
+         startingLineNumber = "95"
+         endingLineNumber = "95"
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
@@ -265,11 +265,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Classes/CompareViewController.m"
-         timestampString = "327842083.660146"
+         timestampString = "328121150.192899"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "372"
-         endingLineNumber = "372"
+         startingLineNumber = "371"
+         endingLineNumber = "371"
          landmarkName = "-pickerView:titleForRow:forComponent:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -279,11 +279,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Classes/CompareViewController.m"
-         timestampString = "326230573.952338"
+         timestampString = "328121150.192899"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "151"
-         endingLineNumber = "151"
+         startingLineNumber = "150"
+         endingLineNumber = "150"
          landmarkName = "-setUniversitiesToCompareWithNotification:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -335,11 +335,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Classes/CompareViewController.m"
-         timestampString = "326230573.952338"
+         timestampString = "328121150.192899"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "142"
-         endingLineNumber = "142"
+         startingLineNumber = "141"
+         endingLineNumber = "141"
          landmarkName = "-setUniversitiesToCompare:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -363,11 +363,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Classes/CompareViewController.m"
-         timestampString = "327842083.660146"
+         timestampString = "328121150.192899"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "298"
-         endingLineNumber = "298"
+         startingLineNumber = "297"
+         endingLineNumber = "297"
          landmarkName = "-clearButtonPress"
          landmarkType = "5">
       </FileBreakpoint>

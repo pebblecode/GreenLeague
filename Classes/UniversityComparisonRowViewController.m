@@ -111,7 +111,7 @@
 }
 
 + (CGFloat)height {
-    return kViewHeight;
+    return kRowHeight;
 }
 
 + (CGFloat)heightForNumberOfRows:(NSUInteger)numRows {

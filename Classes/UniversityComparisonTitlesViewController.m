@@ -63,7 +63,7 @@
         
         // Layout label
         // | kUniLabelFullWidth | kRatingImageContainerFullWidth | kRatingImageContainerFullWidth | ...
-        questionTitle.frame = CGRectMake(kUniLabelFullWidth + (i * kRatingImageContainerFullWidth), 0, kRatingImageContainerWidth, kRatingImageContainerHeight);        
+        questionTitle.frame = CGRectMake(kUniLabelFullWidth + (i * kRatingImageContainerFullWidth), 0, kRatingImageContainerWidth, [UniversityComparisonRowViewController height]);        
     }
     
     // Add total label

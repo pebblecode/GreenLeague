@@ -11,8 +11,7 @@
 #import "UniversityComparisonTitlesViewController.h"
 #import "UniversityComparisonRowViewController.h"
 #import "CompareViewControllerFullScreen.h"
-
-#define kTitleHeight 60.0
+#import "ComparisonViewDimensions.h"
 
 @interface CompareViewController()
 
@@ -193,8 +192,8 @@
     
     // Figure out height of scroll view
     // Include table key height too.
-    CGFloat scrollHeight = [UniversityComparisonRowViewController heightForNumberOfRows:[self.universitiesToCompare count]] + kTitleHeight + self.tableKeyView.frame.size.height;
-                            
+    CGFloat scrollHeight = [UniversityComparisonRowViewController heightForNumberOfRows:[self.universitiesToCompare count]] + kRowHeight + self.tableKeyView.frame.size.height + (0.5 * kRowHeight); // 0.5 row height footer padding
+
     // Set the content size of the scroll view
     [self.scrollView setContentSize:CGSizeMake([UniversityComparisonRowViewController widthFromUniversitiesModel:self.universitiesModel], scrollHeight)];
 
@@ -207,7 +206,7 @@
         [uniRowVC release];        
         
         // Set layout
-        uniRowVC.view.frame = CGRectMake(0, i * [UniversityComparisonRowViewController height] + kTitleHeight, [UniversityComparisonRowViewController widthFromUniversitiesModel:self.universitiesModel], [UniversityComparisonRowViewController height]);
+        uniRowVC.view.frame = CGRectMake(0, i * [UniversityComparisonRowViewController height] + kRowHeight, [UniversityComparisonRowViewController widthFromUniversitiesModel:self.universitiesModel], [UniversityComparisonRowViewController height]);
                 
         // Add to scroll view
         [self.scrollView addSubview:uniRowVC.view];
