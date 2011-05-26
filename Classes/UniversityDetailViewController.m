@@ -44,7 +44,10 @@
 
 	// Change colours to award class colours
 	self.rankLabel.backgroundColor = [self.university awardClassBackgroundColour];
-	
+	    
+    // Add more detail button
+    UIBarButtonItem *moreDetailButton = [[UIBarButtonItem alloc] initWithTitle:@"More details" style:UIBarButtonItemStylePlain target:self action:@selector(detailButtonPressed)];    
+    self.navigationItem.rightBarButtonItem = moreDetailButton; 
 }
 
 
