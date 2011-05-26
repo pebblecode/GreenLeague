@@ -661,6 +661,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tu Tak Tran (X3XB88X33V)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -669,6 +670,7 @@
 				INFOPLIST_FILE = "GreenLeague-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				PRODUCT_NAME = GreenLeague;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C06FDCCA-6CDD-40E9-843F-FC9BD167C668";
 			};
 			name = Debug;
 		};
@@ -676,12 +678,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tu Tak Tran (X3XB88X33V)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = GreenLeague_Prefix.pch;
 				INFOPLIST_FILE = "GreenLeague-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				PRODUCT_NAME = GreenLeague;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C06FDCCA-6CDD-40E9-843F-FC9BD167C668";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -706,12 +710,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tu Tak Tran (X3XB88X33V)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = GreenLeague_Prefix.pch;
 				INFOPLIST_FILE = "GreenLeague-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				PRODUCT_NAME = GreenLeague;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C06FDCCA-6CDD-40E9-843F-FC9BD167C668";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Adhoc;
