@@ -111,16 +111,16 @@ gl11_rank/quantity,,Rank (Nb. 0 = not ranked),
 gl11_last_year_rank/quantity,,2010 (last  year) Green League ranking,
 gl11_class/singleChoice,,Award Class,
 university_name,,University Name,
-q1_subtotal,Policy,1. Environmental Policy,5
-q2_subtotal,Staff,2. Environmental Management Staff,8
-q3_subtotal,Auditing,3. Environmental Auditing and Management Systems,8
-q4_subtotal,Ethical Investment,4. Ethical Investment,3
-q5_subtotal,Carbon Management,5. Carbon Management,7
-q6_subtotal,Fairtrade,6. Fairtrade & Ethical Procurement,2
-q7_subtotal,Food,7. Sustainable Food,2
-q8_subtotal,Engagement,8. Staff and Student Engagement,3
-q9_subtotal,Curriculum,9. Cirriculum,2
-q10_subtotal,Energy,10. Energy Sources,6
-q11_subtotal,Recycling,11. Waste & Recycling,8
-q12_subtotal,Carbon,12. Carbon Reduction,10
-q13_subtotal,Water,13. Water Reduction,6
+q1_subtotal,1. Policy,1. Environmental Policy,5
+q2_subtotal,2. Staff,2. Environmental Management Staff,8
+q3_subtotal,3. Auditing,3. Environmental Auditing and Management Systems,8
+q4_subtotal,4. Ethical Investment,4. Ethical Investment,3
+q5_subtotal,5. Carbon Management,5. Carbon Management,7
+q6_subtotal,6. Fairtrade,6. Fairtrade & Ethical Procurement,2
+q7_subtotal,7. Food,7. Sustainable Food,2
+q8_subtotal,8. Engagement,8. Staff and Student Engagement,3
+q9_subtotal,9. Curriculum,9. Cirriculum,2
+q10_subtotal,10. Energy,10. Energy Sources,6
+q11_subtotal,11. Recycling,11. Waste & Recycling,8
+q12_subtotal,12. Carbon,12. Carbon Reduction,10
+q13_subtotal,13. Water,13. Water Reduction,6
