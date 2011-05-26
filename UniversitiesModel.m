@@ -391,7 +391,7 @@ static NSString *kDBFieldQuestionSuffix = @"_subtotal";
     [request setEntity:entity];
     
     // Set predicate of university award class
-    NSString *predicate = [NSString stringWithFormat:@"(%@.name == '%@') AND (%@.key == '%@')", kDBFieldScoreUniversity, uni.name, kDBFieldScoreKey, scoreKey.key];
+    NSString *predicate = [NSString stringWithFormat:@"(%@.name == \"%@\") AND (%@.key == \"%@\")", kDBFieldScoreUniversity, uni.name, kDBFieldScoreKey, scoreKey.key];
     NSPredicate *uniScorePredicate = [NSPredicate predicateWithFormat:predicate];
     [request setPredicate:uniScorePredicate];
     
