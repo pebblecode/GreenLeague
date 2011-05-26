@@ -7002,7 +7002,7 @@
 				<integer>570</integer>
 			</dict>
 		</dict>
-		<real>328106214.21140403</real>
+		<real>328106426.77287799</real>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -13048,8 +13048,8 @@
 				</dict>
 			</array>
 		</dict>
-		<real>328106214.21108299</real>
-		<string>{16180, 262}</string>
+		<real>328106426.77272302</real>
+		<string>{16180, 1214}</string>
 		<string>{16802, 0}</string>
 		<dict>
 			<key>$class</key>
@@ -35260,7 +35260,7 @@
 				<integer>2302</integer>
 			</dict>
 			<key>NS.time</key>
-			<real>328106210.009718</real>
+			<real>328106416.21674502</real>
 		</dict>
 		<dict>
 			<key>$classes</key>
@@ -35271,7 +35271,7 @@
 			<key>$classname</key>
 			<string>NSDate</string>
 		</dict>
-		<string>Today at 13:36</string>
+		<string>Today at 13:40</string>
 		<integer>106</integer>
 		<dict>
 			<key>$class</key>
@@ -42119,7 +42119,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>2636</integer>
+					<integer>2634</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -42138,7 +42138,7 @@
 		<string>IDEActiveWorkspaceTabController</string>
 		<string>IDEWorkspaceTabController_E2610555-E191-43E8-BF31-D3D82D5C13A4</string>
 		<string>IDEWindowToolbarIsVisible</string>
-		<string>{{305, -852}, {1294, 852}}</string>
+		<string>{{305, -844}, {1294, 837}}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -45286,7 +45286,7 @@
 				<integer>2833</integer>
 			</dict>
 		</dict>
-		<real>328106214.213741</real>
+		<real>328106426.77481198</real>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -45362,7 +45362,7 @@
 				</dict>
 			</array>
 		</dict>
-		<string>{{0, 0}, {975, 546}}</string>
+		<string>{{0, 0}, {975, 531}}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -45660,7 +45660,7 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>93</integer>
+					<integer>146</integer>
 				</dict>
 			</array>
 		</dict>
@@ -45732,7 +45732,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>568</real>
+		<real>553</real>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -46880,7 +46880,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>220</real>
+		<real>205</real>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -47024,7 +47024,7 @@
 		<string>IDESCMStatusFilteringEnabled</string>
 		<string>IDESelectedObjects</string>
 		<string>IDEExpandedItemsSet</string>
-		<string>{{0, 331}, {303, 710}}</string>
+		<string>{{0, 331}, {303, 695}}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -47822,7 +47822,7 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>147</integer>
+					<integer>61</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -48515,7 +48515,7 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>146</integer>
+					<integer>93</integer>
 				</dict>
 			</array>
 		</dict>
@@ -49007,8 +49007,8 @@
 				</dict>
 			</array>
 		</dict>
-		<real>328106214.21273899</real>
-		<string>{0, 280}</string>
+		<real>328106426.774059</real>
+		<string>{0, 617}</string>
 		<string>{578, 16}</string>
 		<string>-initWithScoreKey:</string>
 		<dict>
@@ -49043,7 +49043,7 @@
 				</dict>
 			</array>
 		</dict>
-		<string>{{0, 0}, {472, 181}}</string>
+		<string>{{0, 0}, {472, 732}}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -49313,8 +49313,8 @@
 				</dict>
 			</array>
 		</dict>
-		<real>328106214.21255797</real>
-		<string>{16180, 262}</string>
+		<real>328106426.77392</real>
+		<string>{16180, 1214}</string>
 		<string>{16802, 0}</string>
 		<string>-dbPath</string>
 		<dict>
@@ -49349,7 +49349,7 @@
 				</dict>
 			</array>
 		</dict>
-		<string>{{0, 0}, {975, 181}}</string>
+		<string>{{0, 0}, {975, 732}}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
