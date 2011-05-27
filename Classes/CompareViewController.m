@@ -238,7 +238,7 @@
         
         self.helpView.hidden = YES; // Hide help message
         self.tableKeyView.hidden = NO;
-        self.fullScreenButton.hidden = NO;
+        //self.fullScreenButton.hidden = NO;
     } else {
         [self showHelpMessage];
     }        
@@ -258,7 +258,7 @@
     [self.scrollView setScrollEnabled:NO];
     
     self.tableKeyView.hidden = YES;
-    self.fullScreenButton.hidden = YES;
+    //self.fullScreenButton.hidden = YES;
 }
 
 #pragma mark -
