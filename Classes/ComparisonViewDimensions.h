@@ -17,3 +17,8 @@
 #define kTotalScoreLabelWidth        90.0
 #define kTotalScoreLabelRightPadding 20.0
 #define kTotalScoreLabelFullWidth    (kTotalScoreLabelWidth + kTotalScoreLabelRightPadding)
+
+
+// Full screen
+#define kFullScreenWidth  480
+#define kFullScreenHeight 320

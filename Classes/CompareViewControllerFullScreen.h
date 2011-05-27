@@ -8,14 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+@class CompareViewController;
+
 @interface CompareViewControllerFullScreen : UIViewController {
     UIScrollView *scrollView;
+    CompareViewController *compareViewController;
 }
 
-// Store the pointer only
-@property (nonatomic, assign) UIScrollView *scrollView;
+@property (nonatomic, retain) UIScrollView *scrollView;
+@property (nonatomic, retain) CompareViewController *compareViewController;
 
-- (id)initWithScrollView:(UIScrollView *)sView;
+
+- (id)initWithCompareViewController:(CompareViewController *)compareVC;
 
 - (IBAction)exitFullScreenButtonPress;
 

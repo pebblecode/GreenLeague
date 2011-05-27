@@ -11,6 +11,8 @@
 #import "UniversityComparisonTitlesViewController.h"
 #import "FindSelectorViewController.h"
 
+@class CompareViewControllerFullScreen;
+
 // Note: CompareViewController is handled by a navigation controller from the app delegate.
 @interface CompareViewController : UIViewController {
 	NSMutableArray *universitiesToCompare;
@@ -26,6 +28,7 @@
     UniversityComparisonTitlesViewController *comparisonTitlesViewController;
     
     FindSelectorViewController *findSelectorViewController;
+    CompareViewControllerFullScreen *fullScreenViewController;
 }
 
 @property (nonatomic, retain) NSMutableArray *universitiesToCompare;
@@ -38,6 +41,7 @@
 @property (nonatomic, retain) IBOutlet NSMutableArray *universityViewControllers;
 @property (nonatomic, retain) UniversityComparisonTitlesViewController *comparisonTitlesViewController;
 @property (nonatomic, retain) FindSelectorViewController *findSelectorViewController;
+@property (nonatomic, retain) CompareViewControllerFullScreen *fullScreenViewController;
 
 - (BOOL)shouldShowFindSelectorFirst;
 

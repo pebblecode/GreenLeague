@@ -8,12 +8,14 @@
 
 #import "CompareViewControllerFullScreen.h"
 #include <math.h>
+#import "CompareViewController.h"
+#import "ComparisonViewDimensions.h"
 
 static inline double degreesToRadians (double degrees) {return degrees * M_PI/180;}
 
 @implementation CompareViewControllerFullScreen
 
-@synthesize scrollView;
+@synthesize scrollView, compareViewController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -24,16 +26,20 @@ static inline double degreesToRadians (double degrees) {return degrees * M_PI/18
     return self;
 }
 
-- (id)initWithScrollView:(UIScrollView *)sView {
+- (id)initWithCompareViewController:(CompareViewController *)compareVC {
     self = [self initWithNibName:@"CompareViewControllerFullScreen" bundle:nil];
     if (self) {
-        self.scrollView = sView;
+        self.compareViewController = compareVC;
     }
     
     return self;    
 }
 
 - (void)dealloc {
+    
+    [compareViewController release]; compareViewController = nil;
+    [scrollView release]; scrollView = nil;
+    
     [super dealloc];
 }
 
@@ -50,19 +56,38 @@ static inline double degreesToRadians (double degrees) {return degrees * M_PI/18
 - (void)viewDidLoad
 {
     [super viewDidLoad];    
+    NSLog(@"viewDidLoad");
     
     // Animate rotating sideways to the left
     [UIView animateWithDuration:0.75
-         animations:^{ 				 
-             self.view.transform = CGAffineTransformMakeRotation(degreesToRadians(90));                       
-         }
-     ];
+                     animations:^{ 				 
+                         self.view.transform = CGAffineTransformMakeRotation(degreesToRadians(90));                       
+                     }
+     ];    
     
-    // Add scroll view and send it to the back and set the frame to be the size of the current view
+
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    NSLog(@"viewWillAppear");
+    
+    // Reload to new scroll view
+    self.scrollView = self.compareViewController.scrollView;
+    NSLog(@"viewWillAppear: self.scrollView: %@", self.scrollView);    
+    // Add scroll view and send it to the back
     [self.view addSubview:self.scrollView];
-    [self.view sendSubviewToBack:self.scrollView];
-    self.scrollView.frame = self.view.bounds;
-    [self.scrollView setContentOffset:CGPointMake(0, 0)];
+    [self.view sendSubviewToBack:self.compareViewController.scrollView];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    NSLog(@"viewDidAppear");
+    
+    // Set the frame to be the size of the current view
+    self.scrollView = self.compareViewController.scrollView;
+    self.scrollView.frame = CGRectMake(0, 0, kFullScreenWidth, kFullScreenHeight);
+    NSLog(@"self.scrollView: %@", self.scrollView);
+    
+    [self.scrollView setContentOffset:CGPointMake(0, 0)];    
 }
 
 - (void)viewDidUnload

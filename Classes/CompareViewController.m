@@ -10,21 +10,23 @@
 #import "University.h"
 #import "UniversityComparisonTitlesViewController.h"
 #import "UniversityComparisonRowViewController.h"
-#import "CompareViewControllerFullScreen.h"
 #import "ComparisonViewDimensions.h"
+#import "CompareViewControllerFullScreen.h"
 
 @interface CompareViewController()
 
 - (void)refreshScrollView;
 - (void)showFindSelectorView;
 - (void)showHelpMessage;
+- (void)clearInterface;
+- (void)rotateViewTo:(UIDeviceOrientation)orientation;
 
 @end
 
 @implementation CompareViewController
 
 @dynamic universitiesToCompare;
-@synthesize universitiesModel, helpView, scrollView, tableKeyView, fullScreenButton, universityViewControllers, comparisonTitlesViewController, findSelectorViewController;
+@synthesize universitiesModel, helpView, scrollView, tableKeyView, fullScreenButton, universityViewControllers, comparisonTitlesViewController, findSelectorViewController, fullScreenViewController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 	if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
@@ -78,6 +80,10 @@
         // Show find selector 
         [self.navigationController pushViewController:self.findSelectorViewController animated:NO];        
     }
+    
+    // Detect rotation
+    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:) name:@"UIDeviceOrientationDidChangeNotification" object:nil]; 
 
 }
 
@@ -99,21 +105,23 @@
 
 - (void)viewDidUnload {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+    
+    [[UIDevice currentDevice] endGeneratingDeviceOrientationNotifications];
+
 }
 
 
 - (void)dealloc {
-    [universityViewControllers release];
-	[universitiesToCompare release];
-	[universitiesModel release];
-	[helpView release];
-    [scrollView release];
-    [tableKeyView release];
-    [fullScreenButton release];
-    [comparisonTitlesViewController release];
-    [findSelectorViewController release];
+    [universityViewControllers release]; universityViewControllers = nil;
+	[universitiesToCompare release]; universitiesToCompare = nil;
+	[universitiesModel release]; universitiesModel = nil;
+	[helpView release]; helpView = nil;
+    [scrollView release]; scrollView = nil;
+    [tableKeyView release]; tableKeyView = nil;
+    [fullScreenButton release]; fullScreenButton = nil;
+    [comparisonTitlesViewController release]; comparisonTitlesViewController = nil;
+    [findSelectorViewController release]; findSelectorViewController = nil;
+    [fullScreenViewController release]; fullScreenViewController = nil;
     
     [super dealloc];
 }
@@ -167,6 +175,13 @@
     }
     
     return findSelectorViewController;
+}
+
+- (CompareViewControllerFullScreen *)fullScreenViewController {
+    if (!fullScreenViewController) {
+        fullScreenViewController = [[CompareViewControllerFullScreen alloc] initWithCompareViewController:self];
+    }
+    return fullScreenViewController;
 }
 
 #pragma mark -
@@ -258,6 +273,72 @@
     self.scrollView.frame = CGRectMake(0, 0, 320, 367);
 }
 
+
+- (void)orientationChanged:(NSNotification *)notification {
+    UIDeviceOrientation currentOrientation = [[UIDevice currentDevice] orientation];
+    NSString *orientationStr;
+    
+    switch (currentOrientation) {
+        case UIDeviceOrientationUnknown:
+            orientationStr = @"unknown";
+            break;
+        case UIDeviceOrientationPortrait:
+            orientationStr = @"portrait";
+            break;
+        case UIDeviceOrientationPortraitUpsideDown:
+            orientationStr = @"portrait upside down";
+            break;
+        case UIDeviceOrientationLandscapeLeft:
+            orientationStr = @"landscape left";
+            break;
+        case UIDeviceOrientationLandscapeRight:
+            orientationStr = @"landscape right";
+            break;
+            
+        default:
+            break;
+    }
+    
+    NSLog(@"Orienation changed: %@", orientationStr);
+    [self rotateViewTo:currentOrientation];
+}
+
+#pragma mark -
+#pragma mark === Rotation methods ===
+#pragma mark
+
+// Rotate view based on the orientation
+- (void)rotateViewTo:(UIDeviceOrientation)orientation {
+    
+//    switch (orientation) {
+//        case UIDeviceOrientationPortrait:
+//        case UIDeviceOrientationPortraitUpsideDown:
+//            // Do nothing
+//
+//            break;            
+//        case UIDeviceOrientationLandscapeLeft:
+//        case UIDeviceOrientationLandscapeRight:
+//            [self clearInterface];              
+//            [self.navigationController pushViewController:self.fullScreenViewController animated:NO];      
+//                        
+//            break;
+//        default:
+//            break;
+//    }
+}
+
+// Clear interface clutter from compare scroll view
+- (void)clearInterface {
+    // Hide tab bar
+    self.hidesBottomBarWhenPushed = YES; 
+    
+    // Hide status bar
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];    
+    
+    // Hide navigation bar
+    self.navigationController.navigationBarHidden = YES;   
+}
+
 #pragma mark -
 #pragma mark === Action methods ===
 #pragma mark
@@ -275,18 +356,11 @@
     
 }
 
-- (IBAction)fullScreenButtonPress {
+- (IBAction)fullScreenButtonPress {    
     
-    // TODO: store fullscreen view
-    CompareViewControllerFullScreen *compareVCFullScreen = [[CompareViewControllerFullScreen alloc] initWithScrollView:self.scrollView];
+    [self clearInterface];
     
-    self.hidesBottomBarWhenPushed = YES;    
-    [self.navigationController pushViewController:compareVCFullScreen animated:NO];
-    [compareVCFullScreen release];
-    
-    // Hide status bar and nav bar
-    [[UIApplication sharedApplication] setStatusBarHidden:YES];    
-    self.navigationController.navigationBarHidden = YES;
+    [self.navigationController pushViewController:self.fullScreenViewController animated:NO];
     
 }
 
