@@ -64,7 +64,7 @@ static NSString *kDataSourceTotalScoreKey = @"totalScore";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.detailTableView.tableFooterView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"table-key.png"]];
+    self.detailTableView.tableFooterView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"table-key-no-help.png"]];
 }
 
 
