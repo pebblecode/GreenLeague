@@ -18,8 +18,12 @@
 - (void)refreshScrollView;
 - (void)showFindSelectorView;
 - (void)showHelpMessage;
-- (void)clearInterface;
+
+- (void)showNavigation;
+- (void)hideNavigation;
+
 - (void)rotateViewTo:(UIDeviceOrientation)orientation;
+
 
 @end
 
@@ -262,15 +266,7 @@
 #pragma mark
 
 - (void)exitFullScreen:(NSNotification *)notification {
-    // Show status bar and nav bar
-    [[UIApplication sharedApplication] setStatusBarHidden:NO];    
-    self.navigationController.navigationBarHidden = NO;
-    self.hidesBottomBarWhenPushed = NO;
-    
-    // Need to re-add scroll view for some reason
-    [self.view addSubview:self.scrollView];
-    [self.view sendSubviewToBack:self.scrollView];
-    self.scrollView.frame = CGRectMake(0, 0, 320, 367);
+    [self showNavigation];
 }
 
 
@@ -310,25 +306,46 @@
 // Rotate view based on the orientation
 - (void)rotateViewTo:(UIDeviceOrientation)orientation {
     
-//    switch (orientation) {
-//        case UIDeviceOrientationPortrait:
-//        case UIDeviceOrientationPortraitUpsideDown:
-//            // Do nothing
-//
-//            break;            
-//        case UIDeviceOrientationLandscapeLeft:
-//        case UIDeviceOrientationLandscapeRight:
-//            [self clearInterface];              
-//            [self.navigationController pushViewController:self.fullScreenViewController animated:NO];      
-//                        
-//            break;
-//        default:
-//            break;
-//    }
+    switch (orientation) {
+        case UIDeviceOrientationPortrait:
+        case UIDeviceOrientationPortraitUpsideDown:
+            [self showNavigation];
+            
+            if (self.navigationController.topViewController == self.fullScreenViewController) {             
+                
+                [self.navigationController popViewControllerAnimated:NO]; 
+            }
+            break;            
+        case UIDeviceOrientationLandscapeLeft:
+        case UIDeviceOrientationLandscapeRight:
+            [self hideNavigation];
+            
+            if (self.navigationController.topViewController != self.fullScreenViewController) { 
+                
+                [self.navigationController pushViewController:self.fullScreenViewController animated:NO];      
+            }
+                        
+            break;
+        default:
+            break;
+    }
 }
 
 // Clear interface clutter from compare scroll view
-- (void)clearInterface {
+- (void)showNavigation {
+    // Show status bar and nav bar
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];    
+    self.navigationController.navigationBarHidden = NO;
+    self.hidesBottomBarWhenPushed = NO;
+    
+    // Need to re-add scroll view for some reason
+    [self.view addSubview:self.scrollView];
+    [self.view sendSubviewToBack:self.scrollView];
+    self.scrollView.frame = CGRectMake(0, 0, 320, 367);   
+}
+
+// Clear interface clutter from compare scroll view
+- (void)hideNavigation {
     // Hide tab bar
     self.hidesBottomBarWhenPushed = YES; 
     
@@ -358,7 +375,7 @@
 
 - (IBAction)fullScreenButtonPress {    
     
-    [self clearInterface];
+    [self hideNavigation];
     
     [self.navigationController pushViewController:self.fullScreenViewController animated:NO];
     
