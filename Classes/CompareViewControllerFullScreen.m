@@ -15,7 +15,7 @@ static inline double degreesToRadians (double degrees) {return degrees * M_PI/18
 
 @implementation CompareViewControllerFullScreen
 
-@synthesize scrollView, compareViewController;
+@synthesize compareViewController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,8 +37,7 @@ static inline double degreesToRadians (double degrees) {return degrees * M_PI/18
 
 - (void)dealloc {
     
-    [compareViewController release]; compareViewController = nil;
-    [scrollView release]; scrollView = nil;
+    [compareViewController release]; compareViewController = nil;    
     
     [super dealloc];
 }
@@ -72,22 +71,22 @@ static inline double degreesToRadians (double degrees) {return degrees * M_PI/18
     NSLog(@"viewWillAppear");
     
     // Reload to new scroll view
-    self.scrollView = self.compareViewController.scrollView;
-    NSLog(@"viewWillAppear: self.scrollView: %@", self.scrollView);    
+    UIScrollView *scrollView = self.compareViewController.scrollView;
+    NSLog(@"viewWillAppear: scrollView: %@", scrollView);    
     // Add scroll view and send it to the back
-    [self.view addSubview:self.scrollView];
-    [self.view sendSubviewToBack:self.compareViewController.scrollView];
+    [self.view addSubview:scrollView];
+    [self.view sendSubviewToBack:scrollView];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     NSLog(@"viewDidAppear");
     
     // Set the frame to be the size of the current view
-    self.scrollView = self.compareViewController.scrollView;
-    self.scrollView.frame = CGRectMake(0, 0, kFullScreenWidth, kFullScreenHeight);
-    NSLog(@"self.scrollView: %@", self.scrollView);
+    UIScrollView *scrollView = self.compareViewController.scrollView;
+    scrollView.frame = CGRectMake(0, 0, kFullScreenWidth, kFullScreenHeight);
+    NSLog(@"scrollView: %@", scrollView);
     
-    [self.scrollView setContentOffset:CGPointMake(0, 0)];    
+    [scrollView setContentOffset:CGPointMake(0, 0)];    
 }
 
 - (void)viewDidUnload

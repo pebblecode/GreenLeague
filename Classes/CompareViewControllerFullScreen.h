@@ -11,11 +11,9 @@
 @class CompareViewController;
 
 @interface CompareViewControllerFullScreen : UIViewController {
-    UIScrollView *scrollView;
     CompareViewController *compareViewController;
 }
 
-@property (nonatomic, retain) UIScrollView *scrollView;
 @property (nonatomic, retain) CompareViewController *compareViewController;
 
 
