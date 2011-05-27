@@ -14383,9 +14383,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>328191066.31859702</real>
-		<string>{11114, 884}</string>
-		<string>{11972, 0}</string>
+		<real>328191621.69154</real>
+		<string>{10133, 861}</string>
+		<string>{10971, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -18201,7 +18201,7 @@
 				<integer>1329</integer>
 			</dict>
 		</dict>
-		<real>328191066.31897599</real>
+		<real>328191621.69206798</real>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -18818,7 +18818,7 @@
 			</array>
 		</dict>
 		<string>IDENameString</string>
-		<string>GreenLeague</string>
+		<string>Distribution</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -35154,8 +35154,8 @@
 		</dict>
 		<string>IDEDeviceLocation</string>
 		<string>IDEDeviceArchitecture</string>
-		<string>dvtdevice-iphonesimulator:/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk-iPhone</string>
-		<string>i386</string>
+		<string>dvtdevice-iphone:7d07d6604cd803f41fa6b3d1557f96066a144aac</string>
+		<string>armv6</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -35189,7 +35189,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>2297</integer>
+					<integer>1334</integer>
 				</dict>
 			</array>
 		</dict>
@@ -35304,7 +35304,7 @@
 		</dict>
 		<real>4</real>
 		<string>: </string>
-		<string>GreenLeague</string>
+		<string>Distribution</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -35443,7 +35443,7 @@
 				<integer>2313</integer>
 			</dict>
 			<key>NS.time</key>
-			<real>328191053.63956499</real>
+			<real>328191617.05600297</real>
 		</dict>
 		<dict>
 			<key>$classes</key>
@@ -35454,7 +35454,7 @@
 			<key>$classname</key>
 			<string>NSDate</string>
 		</dict>
-		<string>Today at 13:10</string>
+		<string>Today at 13:20</string>
 		<integer>106</integer>
 		<dict>
 			<key>$class</key>
@@ -45726,7 +45726,7 @@
 				<integer>2874</integer>
 			</dict>
 		</dict>
-		<real>328191066.321666</real>
+		<real>328191621.69463599</real>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -50735,7 +50735,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>328191066.32031202</real>
+		<real>328191621.69332099</real>
 		<string>{0, 646}</string>
 		<string>{291, 0}</string>
 		<string>Xcode.IDEKit.EditorDocument.SourceCode</string>
@@ -51067,10 +51067,10 @@
 				</dict>
 			</array>
 		</dict>
-		<real>328191066.32013798</real>
-		<string>{11114, 884}</string>
-		<string>{11972, 0}</string>
-		<string>-rotateViewTo:</string>
+		<real>328191621.69316697</real>
+		<string>{10133, 861}</string>
+		<string>{10971, 0}</string>
+		<string>-orientationChanged:</string>
 		<dict>
 			<key>$class</key>
 			<dict>

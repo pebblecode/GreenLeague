@@ -292,6 +292,8 @@
             break;
             
         default:
+            // For upside/downside changes
+            orientationStr = @"unknown (up/down flip)";
             break;
     }
     
