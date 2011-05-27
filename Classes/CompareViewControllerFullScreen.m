@@ -64,31 +64,27 @@ static inline double degreesToRadians (double degrees) {return degrees * M_PI/18
 - (void)viewDidLoad
 {
     [super viewDidLoad];    
-    NSLog(@"viewDidLoad");
     
     [self animateRotation];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    NSLog(@"viewWillAppear");
     
     // Reload to new scroll view
     UIScrollView *scrollView = self.compareViewController.scrollView;
-    NSLog(@"viewWillAppear: scrollView: %@", scrollView);    
+
     // Add scroll view and send it to the back
     [self.view addSubview:scrollView];
     [self.view sendSubviewToBack:scrollView];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    NSLog(@"viewDidAppear");
     
     [self animateRotation];
     
     // Set the frame to be the size of the current view
     UIScrollView *scrollView = self.compareViewController.scrollView;
     scrollView.frame = self.view.bounds; 
-    NSLog(@"scrollView: %@", scrollView);
     
     [scrollView setContentOffset:CGPointMake(0, 0)];     
 }

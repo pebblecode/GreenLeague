@@ -297,7 +297,7 @@
             break;
     }
     
-    NSLog(@"Orienation changed: %@", orientationStr);
+    //NSLog(@"Orienation changed: %@", orientationStr);
     [self rotateViewTo:currentOrientation];
 }
 
