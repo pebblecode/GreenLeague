@@ -13,6 +13,15 @@
 
 static inline double degreesToRadians (double degrees) {return degrees * M_PI/180;}
 
+
+@interface CompareViewControllerFullScreen()
+    
+- (void)animateRotation;
+
+@end
+
+
+
 @implementation CompareViewControllerFullScreen
 
 @synthesize compareViewController;
@@ -57,14 +66,7 @@ static inline double degreesToRadians (double degrees) {return degrees * M_PI/18
     [super viewDidLoad];    
     NSLog(@"viewDidLoad");
     
-    // Animate rotating sideways to the left
-    [UIView animateWithDuration:0.75
-                     animations:^{ 				 
-                         self.view.transform = CGAffineTransformMakeRotation(degreesToRadians(90));                       
-                     }
-     ];    
-    
-
+    [self animateRotation];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -81,12 +83,38 @@ static inline double degreesToRadians (double degrees) {return degrees * M_PI/18
 - (void)viewDidAppear:(BOOL)animated {
     NSLog(@"viewDidAppear");
     
+    [self animateRotation];
+    
     // Set the frame to be the size of the current view
     UIScrollView *scrollView = self.compareViewController.scrollView;
     scrollView.frame = self.view.bounds; 
     NSLog(@"scrollView: %@", scrollView);
     
-    [scrollView setContentOffset:CGPointMake(0, 0)];    
+    [scrollView setContentOffset:CGPointMake(0, 0)];     
+}
+
+- (void)animateRotation {
+    // Animate view to rotate to the side
+    UIDeviceOrientation currentOrientation = [[UIDevice currentDevice] orientation];    
+    if (currentOrientation == UIDeviceOrientationLandscapeLeft) {
+        // Animate rotating sideways to the left
+        self.view.transform = CGAffineTransformMakeRotation(degreesToRadians(0));
+        [UIView animateWithDuration:0.75
+                         animations:^{ 				 
+                             self.view.transform = CGAffineTransformMakeRotation(degreesToRadians(90));                       
+                         }
+         ];    
+    } else if (currentOrientation == UIDeviceOrientationLandscapeRight) {
+        // Animate rotating sideways to the left
+        self.view.transform = CGAffineTransformMakeRotation(degreesToRadians(0));
+        [UIView animateWithDuration:0.75
+                         animations:^{ 				 
+                             self.view.transform = CGAffineTransformMakeRotation(degreesToRadians(270));                       
+                         }
+         ];         
+    } else {
+        NSLog(@"Rotation error: Shouldn't be here!");
+    }    
 }
 
 - (void)viewDidUnload
