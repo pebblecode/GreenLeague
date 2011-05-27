@@ -157,7 +157,7 @@ static NSString *kDBFieldQuestionSuffix = @"_subtotal";
         abort();
     }    
 	
-	NSLog(@"storeUrl(%@) exists? %@", storeUrl, ([[NSFileManager defaultManager] fileExistsAtPath:storeUrl.path] ? @"YES" : @"NO"));
+	//NSLog(@"storeUrl(%@) exists? %@", storeUrl, ([[NSFileManager defaultManager] fileExistsAtPath:storeUrl.path] ? @"YES" : @"NO"));
 	
     return persistentStoreCoordinator;
 }
