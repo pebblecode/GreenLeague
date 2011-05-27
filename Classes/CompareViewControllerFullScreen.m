@@ -83,7 +83,7 @@ static inline double degreesToRadians (double degrees) {return degrees * M_PI/18
     
     // Set the frame to be the size of the current view
     UIScrollView *scrollView = self.compareViewController.scrollView;
-    scrollView.frame = CGRectMake(0, 0, kFullScreenWidth, kFullScreenHeight);
+    scrollView.frame = self.view.bounds; 
     NSLog(@"scrollView: %@", scrollView);
     
     [scrollView setContentOffset:CGPointMake(0, 0)];    
