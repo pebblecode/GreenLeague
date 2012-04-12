@@ -70,3 +70,6 @@ Follow this to create an archive and submit to apple (http://www.weston-fl.com/b
  * Go to Organiser > Archives > Validate... (select the deployment provisioning profile)
  * Go to Organiser > Archives > Submit...
 
+## Copyright
+
+All data and images contained within this app are the property of People & Planet Student Activities Ltd and may not be reproduced without prior permission. Contact greenleague@peopleandplanet.org or 01865 264180 for further information and permissions.
