@@ -16,7 +16,7 @@ Using BetaBuilder (http://lukeredpath.co.uk/projects/betabuilder/) for deploymen
 
 To set it up:
 
- * Create an 'Adhoc' build (copying the 'Release' configuration). See http://support.testflightapp.com/kb/tutorials/how-to-create-an-ipa
+ * Create an 'Adhoc' build (copying the 'Release' configuration). See http://support.testflightapp.com/kb/tutorials/how-to-create-an-ipa-xcode-4
  * Install with
  
 	sudo gem install betabuilder
