@@ -20,12 +20,12 @@ More details about the files and how they work are on the top of the respective 
 
 ### Other noteworthy files
 
-About.html                    - The about page content.
-description.txt               - App store description.
-gl11-raw-export-final-key.csv - The keys used for associating the green league data with titles/definitions.
-gl11-export-final.csv         - The 2011 green league data.
-green_league.xcdatamodel      - The data model.
-Methodology.html              - The methodology page content.
+* About.html                    - The about page content.
+* description.txt               - App store description.
+* gl11-raw-export-final-key.csv - The keys used for associating the green league data with titles/definitions.
+* gl11-export-final.csv         - The 2011 green league data.
+* green_league.xcdatamodel      - The data model.
+* Methodology.html              - The methodology page content.
 
 ### Model files
 
