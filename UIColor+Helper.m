@@ -2,8 +2,7 @@
 //  UIColor+Helper.m
 //  Adapted from: http://stackoverflow.com/questions/4265161/how-to-convert-hexadecimal-to-rgb/4266390#4266390
 //
-//  Created by Tak Tran on 02/03/2011.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Created by Tak Tran (Pebble Code - http://pebblecode.com)
 //
 
 #import "UIColor+Helper.h"

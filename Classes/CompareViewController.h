@@ -2,8 +2,10 @@
 //  CompareViewController.h
 //  GreenLeague
 //
-//  Created by Tak on 24/02/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Loads the data from the univerities model and shows it in a table. Selecting
+//  universities allows it to be viewed in full screen.
+//
+//  Created by Tak Tran (Pebble Code - http://pebblecode.com)
 //
 
 #import <UIKit/UIKit.h>

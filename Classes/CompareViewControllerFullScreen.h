@@ -2,8 +2,9 @@
 //  CompareViewControllerFullScreen.h
 //  GreenLeague
 //
-//  Created by Tak Tran on 04/05/2011.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Full screen view of the compared universities
+//
+//  Created by Tak Tran (Pebble Code - http://pebblecode.com)
 //
 
 #import <UIKit/UIKit.h>

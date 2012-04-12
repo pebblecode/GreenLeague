@@ -4,8 +4,7 @@
 //
 //  Helper file to get award class static data
 //
-//  Created by Tak on 3/03/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Created by Tak Tran (Pebble Code - http://pebblecode.com)
 //
 
 #import <Foundation/Foundation.h>

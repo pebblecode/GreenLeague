@@ -1,8 +1,7 @@
 //
 //  NSNumber+Helper.m
 //
-//  Created by Tak Tran on 02/03/2011.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Created by Tak Tran (Pebble Code - http://pebblecode.com)
 //
 
 #import "NSNumber+Helper.h"

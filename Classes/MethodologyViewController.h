@@ -2,8 +2,11 @@
 //  MethodologyViewController.h
 //  GreenLeague
 //
-//  Created by Tak Tran on 25/05/2011.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Methodology screen that loads the Methodology.html file. If a score
+//  key exists, then only a section of the methodology is selected,
+//  otherwise the entire methodology is shown.
+//
+//  Created by Tak Tran (Pebble Code - http://pebblecode.com)
 //
 
 #import <UIKit/UIKit.h>

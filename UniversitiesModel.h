@@ -2,8 +2,11 @@
 //  UniversitiesModel.h
 //  GreenLeague
 //
-//  Created by Tak Tran on 04/03/2011.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Sets up the database. Loads data from the .csv file if required.
+//  Uses the csv file from `kDataSourceFile`, and title/heading keys 
+//  from `kScoreKeySourceFile`.
+//
+//  Created by Tak Tran (Pebble Code - http://pebblecode.com)
 //
 
 #import <Foundation/Foundation.h>

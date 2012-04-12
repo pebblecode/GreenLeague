@@ -2,8 +2,7 @@
 //  ScoreKey.h
 //  GreenLeague
 //
-//  Created by Tak Tran on 19/05/2011.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Created by Tak Tran (Pebble Code - http://pebblecode.com)
 //
 
 #import <Foundation/Foundation.h>

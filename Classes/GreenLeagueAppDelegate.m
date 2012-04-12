@@ -2,8 +2,7 @@
 //  GreenLeagueAppDelegate.m
 //  GreenLeague
 //
-//  Created by Tak Tran on 23/02/2011.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Created by Tak Tran (Pebble Code - http://pebblecode.com)
 //
 
 #import "GreenLeagueAppDelegate.h"
@@ -30,7 +29,6 @@
     FindViewController *findVC = [[FindViewController alloc] initWithUniversitiesModel:universitiesModel];
     UINavigationController *findNavController = [[UINavigationController alloc] initWithRootViewController:findVC];
     [findVC release];
-
     
     // Compare view controller
     CompareViewController *compareVC = [[CompareViewController alloc] initWithUniversitiesModel:universitiesModel];    
@@ -40,6 +38,7 @@
     // Compare view controller
     MethodologyViewController *methodologyVC = [[MethodologyViewController alloc] init]; 
     
+    // About view controller
 	AboutViewController *aboutVC = [[AboutViewController alloc] init];    
     
     NSArray *tabVCs = [NSArray arrayWithObjects:findNavController, compareNavController, methodologyVC, aboutVC, nil];

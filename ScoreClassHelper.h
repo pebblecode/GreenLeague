@@ -2,8 +2,7 @@
 //  ScoreClassHelper.h
 //  GreenLeague
 //
-//  Created by Tak Tran on 24/05/2011.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Created by Tak Tran (Pebble Code - http://pebblecode.com)
 //
 
 #import <Foundation/Foundation.h>

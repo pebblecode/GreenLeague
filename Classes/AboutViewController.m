@@ -2,8 +2,7 @@
 //  AboutViewController.m
 //  GreenLeague
 //
-//  Created by Tak on 24/02/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Created by Tak Tran (Pebble Code - http://pebblecode.com)
 //
 
 #import "AboutViewController.h"

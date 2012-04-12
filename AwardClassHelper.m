@@ -2,8 +2,7 @@
 //  AwardClassHelper.m
 //  GreenLeague
 //
-//  Created by Tak on 3/03/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Created by Tak Tran (Pebble Code - http://pebblecode.com)
 //
 
 #import "AwardClassHelper.h"

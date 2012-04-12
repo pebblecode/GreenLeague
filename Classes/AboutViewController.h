@@ -2,8 +2,9 @@
 //  AboutViewController.h
 //  GreenLeague
 //
-//  Created by Tak on 24/02/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  About screen that loads the About.html file.
+//
+//  Created by Tak Tran (Pebble Code - http://pebblecode.com)
 //
 
 #import <UIKit/UIKit.h>

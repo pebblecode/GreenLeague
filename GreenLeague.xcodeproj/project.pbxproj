@@ -272,9 +272,7 @@
 				3D03AA81131EA8C100F6B225 /* Find */,
 				3D03ACCE13214BC800F6B225 /* Compare */,
 				3D422DAC1366C84A00DA0F53 /* About */,
-				3D6289C4138D1D65008B3C08 /* MethodologyViewController.h */,
-				3D6289C5138D1D65008B3C08 /* MethodologyViewController.m */,
-				3D6289C6138D1D65008B3C08 /* MethodologyViewController.xib */,
+				3D54A74A1536E24800339081 /* Methodology */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -312,7 +310,6 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3D6289E3138D4D11008B3C08 /* Methodology */,
 				3DD5E8BE138AC8DC00D968C2 /* green_league_2011.sqlite */,
 				3D308E16131658B800D37010 /* Rakefile */,
 				3DF051C0131FA15700AC430F /* AwardClassHelper.h */,
@@ -418,13 +415,25 @@
 			name = About;
 			sourceTree = "<group>";
 		};
-		3D6289E3138D4D11008B3C08 /* Methodology */ = {
+		3D54A74A1536E24800339081 /* Methodology */ = {
+			isa = PBXGroup;
+			children = (
+				3D6289C4138D1D65008B3C08 /* MethodologyViewController.h */,
+				3D6289C5138D1D65008B3C08 /* MethodologyViewController.m */,
+				3D6289C6138D1D65008B3C08 /* MethodologyViewController.xib */,
+				3D6289E3138D4D11008B3C08 /* html */,
+			);
+			name = Methodology;
+			sourceTree = "<group>";
+		};
+		3D6289E3138D4D11008B3C08 /* html */ = {
 			isa = PBXGroup;
 			children = (
 				3D6289CB138D25A0008B3C08 /* Methodology.html */,
 				3D6289E1138D4D0C008B3C08 /* jquery-1.6.1.min.js */,
 			);
-			name = Methodology;
+			name = html;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		3DB0D95213152221006FC601 /* Images */ = {

@@ -1,8 +1,7 @@
 //
 //  NSString+Helper.m
 //
-//  Created by Tak Tran on 09/02/2011.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Created by Tak Tran (Pebble Code - http://pebblecode.com)
 //
 
 #import "NSString+Helper.h"

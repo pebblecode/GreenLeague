@@ -2,8 +2,9 @@
 //  UniversityComparisonRowViewController.h
 //  GreenLeague
 //
-//  Created by Tak Tran on 19/05/2011.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  The view for each row of the comparison view.
+//
+//  Created by Tak Tran (Pebble Code - http://pebblecode.com)
 //
 
 #import <UIKit/UIKit.h>
